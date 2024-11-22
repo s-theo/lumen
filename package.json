@@ -1,0 +1,39 @@
+{
+  "private": true,
+  "name": "lumen",
+  "repository": "Theo-Messi/lumen",
+  "homepage": "https://lumen.theojs.cn/",
+  "funding": "https://github.com/Theo-Messi/lumen?sponsor=1",
+  "author": "Theo-Messi",
+  "license": "MIT",
+  "scripts": {
+    "dev": "pnpm -F=docs dev",
+    "build": "pnpm -F=docs build",
+    "preview": "pnpm -F=docs preview",
+    "release:lumen": "pnpm -F=lumen release",
+    "change:lumen": "cd src/ && npx changelogithub --dry",
+    "format": "prettier --write .",
+    "format:cheak": "prettier --check ."
+  },
+  "devDependencies": {
+    "lint-staged": "^15.2.10",
+    "prettier": "3.3.3",
+    "simple-git-hooks": "^2.11.1",
+    "changelogithub": "^0.13.11"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 120,
+    "trailingComma": "none"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "packageManager": "pnpm@9.14.2"
+}

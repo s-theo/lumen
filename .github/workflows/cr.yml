@@ -1,0 +1,46 @@
+name: Publish Any Commit
+
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+  push:
+    branches:
+      - '**'
+    tags:
+      - '!**'
+    paths:
+      - 'src/**'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: >
+      (github.event_name == 'push' && 
+      github.event.head_commit != null && 
+      startsWith(github.event.head_commit.message, 'release:') == false) ||
+      github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - run: corepack enable
+
+      - name: Set node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install
+
+      - name: Release
+        run: pnpm dlx pkg-pr-new publish --compact --pnpm './src'
