@@ -42,8 +42,8 @@ importers:
         specifier: workspace:*
         version: link:../src
       vitepress-plugin-group-icons:
-        specifier: ^1.3.1
-        version: 1.3.1
+        specifier: ^1.3.2
+        version: 1.3.2
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.2)
@@ -1629,8 +1629,8 @@ packages:
       yaml:
         optional: true
 
-  vitepress-plugin-group-icons@1.3.1:
-    resolution: {integrity: sha512-KHw3vaSqobjePKGWVRchd3PIG9wKrfA9U43yFLp2hTxXxUOIJdTb+e/qj0dEQYGYbwdXFBeErPVYHYNVBDSqow==}
+  vitepress-plugin-group-icons@1.3.2:
+    resolution: {integrity: sha512-l7SMf8YZR3dTgnGSDvWwKHgv1K4DCtTFCxjXlo7cnYWoNT3kPRygnmSVf21azrXymRHHk0R6Lxkzjm65uBBKOQ==}
 
   vitepress@1.5.0:
     resolution: {integrity: sha512-q4Q/G2zjvynvizdB3/bupdYkCJe2umSAMv9Ju4d92E6/NXJ59z70xB0q5p/4lpRyAwflDsbwy1mLV9Q5+nlB+g==}
@@ -3196,7 +3196,7 @@ snapshots:
       jiti: 2.4.1
       yaml: 2.6.1
 
-  vitepress-plugin-group-icons@1.3.1:
+  vitepress-plugin-group-icons@1.3.2:
     dependencies:
       '@iconify-json/logos': 1.2.3
       '@iconify-json/vscode-icons': 1.2.3
