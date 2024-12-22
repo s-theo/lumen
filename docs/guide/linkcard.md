@@ -83,6 +83,45 @@ export default {
 | `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 [iconify](https://icon-sets.iconify.design/) 图标 |
 | `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 图片地址或包含 light 和 dark 模式的对象。                        |
 
+## Pill
+
+### 示例
+
+**输入**
+
+```vue
+//iconify图标
+<Pill name="Iconify" link="#" icon="line-md:iconify2-static" color="#1769AA" />
+//图片
+<Pill name="支付宝" link="https://i.theojs.cn/docs/202405201752089.jpg" image="https://i.theojs.cn/logo/alipay.svg" />
+//深浅模式的图片
+<Pill
+  name="GitHub"
+  link="#"
+  :image="{ light: 'https://i.theojs.cn/logo/github.svg', dark: 'https://i.theojs.cn/logo/github-dark.svg' }"
+/>
+```
+
+**输出**
+
+<Pill name="Iconify" link="#" icon="line-md:iconify2-static" color="#1769AA" />
+<Pill name="支付宝" link="https://i.theojs.cn/docs/202405201752089.jpg" image="https://i.theojs.cn/logo/alipay.svg" />
+<Pill 
+  name="GitHub"
+  link="#"
+  :image="{ light: 'https://i.theojs.cn/logo/github.svg', dark: 'https://i.theojs.cn/logo/github-dark.svg' }"
+/>
+
+### 参数说明
+
+|  字段   |                     类型                      | 描述                                                                                              |
+| :-----: | :-------------------------------------------: | ------------------------------------------------------------------------------------------------- |
+| `name`  |                   `string`                    | Pill 名称。                                                                                       |
+| `link`  |                   `string`                    | Pill 链接。                                                                                       |
+| `color` |                   `string`                    | <Badge type="tip" text="可选" /> 图标的颜色。                                                     |
+| `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 [iconify](https://icon-sets.iconify.design/) 图标 |
+| `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 图片地址或包含 light 和 dark 模式的对象。                        |
+
 ## Links
 
 ### 示例
