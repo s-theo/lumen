@@ -14,6 +14,20 @@ export interface BoxItem {
   image?: string | { light: string; dark: string }
 }
 
+/** DocBadge 接口 */
+export interface Pill {
+  /** Badge 名称。 */
+  name: string
+  /** Badge 链接。 */
+  link: string
+  /** 图标名称，支持 `iconify`。 */
+  icon?: string
+  /** 图标的颜色。 */
+  color?: string
+  /** 图片地址或包含 light 和 dark 模式的对象。 */
+  image?: string | { light: string; dark: string }
+}
+
 /** DocLinks 接口 */
 export interface LinkItem {
   /** DocLinks 名称。 */
