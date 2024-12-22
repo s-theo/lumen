@@ -27,7 +27,8 @@ export default defineConfig({
         customIcon: {
           所有主题: 'logos:typescript-icon',
           部分主题: 'logos:typescript-icon',
-          单独导入: 'logos:typescript-icon'
+          单独导入: 'logos:typescript-icon',
+          '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg'
         }
       })
     ]

@@ -6,9 +6,7 @@ title: 首页下划线
 
 ## 引入组件
 
-```ts
-// .vitepress/theme/index.ts
-
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { HomeUnderline } from '@theojs/lumen' // [!code ++]
 
@@ -23,7 +21,7 @@ export default {
 
 ## 使用
 
-```md
+```md [.vitepress/index.md]
 ---
 layout: home
 
