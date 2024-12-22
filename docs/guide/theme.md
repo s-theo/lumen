@@ -39,9 +39,7 @@ import '@theojs/lumen/pic'
 
 :::details 使用 Iconify 时报错 `[Vue warn]: Failed to resolve component: iconify-icon`
 
-```ts
-// .vitepress/config.mts
-
+```ts [.vitepress/config.mts]
 import { defineConfig } from 'vitepress'
 export default defineConfig({
   vue: {// [!code ++]
@@ -71,8 +69,7 @@ export default defineConfig({
 
 **如需切换至边框样式**，可以在 `theme/index.ts` 中按以下顺序引入
 
-```ts
-// theme/index.ts
+```ts [.vitepress/theme/index.ts]
 import '@theojs/lumen/doc-blocks-border'
 import '@theojs/lumen/theme' // [!code ++]
 ...

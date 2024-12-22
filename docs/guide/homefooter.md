@@ -10,8 +10,7 @@ title: 页脚配置
 
 在`.vitepress`目录下新建`data/footerData.ts`文件，并添加以下内容：
 
-```ts
-// .vitepress/data/footerData.ts
+```ts [.vitepress/data/footerData.ts]
 import type { FooterData } from '@theojs/lumen'
 
 export const Footer_Data: FooterData = {
@@ -47,8 +46,7 @@ export const Footer_Data: FooterData = {
 `.. /data/footerData` 可替换为存放数据的路径
 :::
 
-```ts
-//.vitepress/theme/index.ts
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'// [!code ++]
 
