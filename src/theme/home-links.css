@@ -4,27 +4,31 @@
 
 a.lumen {
   text-align: center;
-  border-radius: 24px;
-  padding: 0 24px;
   line-height: 46px;
   font-size: 16px;
-  background-color: var(--vp-c-default-3);
+  border-color: var(--vp-button-alt-border);
+  color: var(--vp-button-alt-text);
+  background-color: var(--vp-button-alt-bg);
 }
 
 a.lumen:hover {
-  background-color: var(--vp-c-default-2);
+  border-color: var(--vp-button-alt-hover-border);
+  color: var(--vp-button-alt-hover-text);
+  background-color: var(--vp-button-alt-hover-bg);
 }
 
 a.lumen:active {
-  background-color: var(--vp-c-default-1);
+  border-color: var(--vp-button-alt-active-border);
+  color: var(--vp-button-alt-active-text);
+  background-color: var(--vp-button-alt-active-bg);
 }
 
 a.lumen.theo::before {
   content: '';
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-size: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-size: 1.5rem;
   background-repeat: no-repeat;
   background-position: bottom;
   margin-right: 0.5em;
