@@ -38,12 +38,13 @@ const props = defineProps<Pill>()
   align-items: center;
   text-decoration: none !important;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  padding: 0 0.25rem;
+  padding: 0.75rem 0.25rem;
+  margin: 0 0.15rem;
+  height: 1rem;
   border-radius: 0.5rem;
   border: 1px solid var(--vp-c-bg-alt);
-  background-color: var(--vp-c-bg-alt); /* 半透明背景 */
+  background-color: var(--vp-c-bg-alt);
   white-space: nowrap;
-  margin-left: 0.25rem;
 }
 
 .pill:hover {
@@ -53,14 +54,14 @@ const props = defineProps<Pill>()
 }
 
 .icon {
-  height: 0.8em;
+  height: 0.875em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .iconify {
-  font-size: 0.8em;
+  font-size: 0.875em;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
