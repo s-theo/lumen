@@ -14,11 +14,11 @@ export interface BoxItem {
   image?: string | { light: string; dark: string }
 }
 
-/** DocBadge 接口 */
+/** DocPill 接口 */
 export interface Pill {
-  /** Badge 名称。 */
+  /** Pill 名称。 */
   name: string
-  /** Badge 链接。 */
+  /** Pill 链接。 */
   link: string
   /** 图标名称，支持 `iconify`。 */
   icon?: string
