@@ -4,9 +4,7 @@ title: 页面分享按钮
 
 ## 引入组件
 
-```ts
-// .vitepress/theme/index.ts
-
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { ShareButton } from '@theojs/lumen' // [!code ++]
 import { h } from 'vue'// [!code ++]
@@ -24,7 +22,7 @@ export default {
 
 ## 自定义按钮文本
 
-```ts
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { ShareButton } from '@theojs/lumen'
 import { h } from 'vue'

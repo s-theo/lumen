@@ -4,14 +4,16 @@ title: 链接卡片
 
 ## 引入组件
 
-```ts
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
-import { DocBox, DocLinks, DocBoxCube } from '@theojs/lumen'// [!code ++]
+import { DocBox, DocBoxCube, DocLinks, DocPill } from '@theojs/lumen'// [!code ++]
+
 export default {
   extends: DefaultTheme,
   enhanceApp: ({ app }) => {// [!code ++]
     app.component('Box', DocBox)// [!code ++]
+    app.component('Pill', DocPill)// [!code ++]
     app.component('Links', DocLinks)// [!code ++]
     app.component('BoxCube', DocBoxCube)// [!code ++]
   }// [!code ++]

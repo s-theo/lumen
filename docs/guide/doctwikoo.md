@@ -17,8 +17,7 @@ title: Twikoo 评论
 
 在`.vitepress`目录下新建`data/Twikoo.ts`文件，并添加以下内容：
 
-```ts
-// .vitepress/data/Twikoo.ts
+```ts [.vitepress/data/Twikoo.ts]
 import type { TwikooData } from '@theojs/lumen'
 
 export const Twikoo_Data: TwikooData = {
@@ -32,8 +31,7 @@ export const Twikoo_Data: TwikooData = {
 `.. /data/Twikoo.ts` 可替换为存放数据的路径
 :::
 
-```ts
-//.vitepress/theme/index.ts
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'// [!code ++]
 
@@ -53,9 +51,7 @@ export default {
 
 ## 在首页使用
 
-```ts
-//.vitepress/theme/index.ts
-
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'// [!code ++]
 
@@ -70,7 +66,7 @@ export default {
 }
 ```
 
-```md
+```md [.vitepress/index.md]
 ---
 layout: home
 

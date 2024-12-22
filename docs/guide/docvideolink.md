@@ -11,9 +11,7 @@ title: 视频组件
 
 ## 引入组件
 
-```ts
-// .vitepress/theme/index.ts
-
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { DocVideoLink } from '@theojs/lumen' // [!code ++]
 

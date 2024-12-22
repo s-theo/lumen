@@ -6,9 +6,7 @@ title: 首页公告栏
 
 ## 引入组件
 
-```ts
-// .vitepress/theme/index.ts
-
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { Announcement } from '@theojs/lumen' // [!code ++]
 import { h } from 'vue' // [!code ++]
@@ -28,7 +26,7 @@ export default {
 
 修改`index.md`
 
-```md
+```md [.vitepress/index.md]
 ---
 layout: home
 
