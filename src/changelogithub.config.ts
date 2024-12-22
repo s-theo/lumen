@@ -9,7 +9,7 @@ export default {
     perf: { title: 'Performance' },
     test: { title: 'Tests' },
     chore: { title: 'Chore', semver: 'patch' },
-    build: { title: 'Build', semver: 'patch' },
+    // build: { title: 'Build', semver: 'patch' },
     ci: { title: 'CI' }
   },
 
