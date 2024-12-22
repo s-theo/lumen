@@ -6,8 +6,7 @@ title: 站点统计
 
 ## 谷歌分析
 
-```ts
-// .vitepress/theme/index.ts
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
 import { googleAnalytics } from '@theojs/lumen' // [!code ++]
@@ -36,9 +35,7 @@ export default {
 
 ## 百度统计
 
-```ts
-// .vitepress/theme/index.ts
-
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { baiduAnalytics, trackPageview } from '@theojs/lumen' // [!code ++]
 
@@ -67,8 +64,7 @@ export default {
 
 ## Umami
 
-```ts
-// .vitepress/theme/index.ts
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
 import { umamiAnalytics } from '@theojs/lumen' // [!code ++]

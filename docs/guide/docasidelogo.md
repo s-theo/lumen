@@ -8,8 +8,7 @@ title: 侧边栏链接
 
 在`.vitepress`目录下新建`data/AsideData.ts`文件，并添加以下内容：
 
-```ts
-// .vitepress/data/AsideData.ts
+```ts [.vitepress/data/AsideData.ts]
 import type { AsideItem } from '@theojs/lumen'
 
 export const Aside_Data: AsideItem[] = [
@@ -37,9 +36,7 @@ export const Aside_Data: AsideItem[] = [
 
 ## 引入组件
 
-```ts
-//.vitepress/theme/index.ts
-
+```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue' // [!code ++]
 import { DocAsideLogo } from '@theojs/lumen' // [!code ++]
