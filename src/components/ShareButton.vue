@@ -98,9 +98,6 @@ const shareLink = computed(() => {
   justify-content: center;
   width: 100%;
   font-size: 0.875rem;
-  transition:
-    color 0.3s ease,
-    border 0.3s ease;
   z-index: 1;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
