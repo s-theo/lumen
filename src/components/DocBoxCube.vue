@@ -47,7 +47,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 .link {
   width: 8.2rem;
   height: 8.2rem;
-  border: 1px solid var(--vp-c-bg-alt);
+  border: 1px solid transparent;
   background-color: var(--vp-c-bg-alt);
   border-radius: 0.8rem;
   display: flex;
@@ -61,8 +61,9 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 
 .link:hover {
   border-color: var(--vp-c-brand-1);
-  transform: translateY(-1px);
+  transform: translateY(-1px) scale(101%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--vp-c-bg-alt-hover);
 }
 
 @media (max-width: 1024px) {
