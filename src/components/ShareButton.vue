@@ -88,7 +88,7 @@ const shareLink = computed(() => {
   overflow: hidden;
   background-color: var(--vp-c-bg-alt);
   color: var(--vp-c-brand-1);
-  border: 1px solid var(--vp-c-bg-alt);
+  border: 1px solid transparent;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   cursor: pointer;
@@ -102,6 +102,7 @@ const shareLink = computed(() => {
     color 0.3s ease,
     border 0.3s ease;
   z-index: 1;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .share-link-button::before {
@@ -117,7 +118,9 @@ const shareLink = computed(() => {
 }
 
 .share-link-button:hover {
-  border: 1px solid var(--vp-c-brand-3);
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-1px) scale(101%);
+  background-color: var(--vp-c-bg-alt-hover);
 }
 
 .share-link-button:focus {
