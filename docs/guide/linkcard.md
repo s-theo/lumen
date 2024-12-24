@@ -24,8 +24,6 @@ export default {
 
 ## Box
 
-### 示例
-
 **输入**
 
 ```vue
@@ -87,8 +85,6 @@ export default {
 
 ## Pill
 
-### 示例
-
 **输入**
 
 ```vue
@@ -108,7 +104,7 @@ export default {
 
 <Pill name="Iconify" link="#" icon="line-md:iconify2-static" color="#1769AA" />
 <Pill name="支付宝" link="https://i.theojs.cn/docs/202405201752089.jpg" image="https://i.theojs.cn/logo/alipay.svg" />
-<Pill 
+<Pill
   name="GitHub"
   link="#"
   :image="{ light: 'https://i.theojs.cn/logo/github.svg', dark: 'https://i.theojs.cn/logo/github-dark.svg' }"
@@ -125,8 +121,6 @@ export default {
 | `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 图片地址或包含 light 和 dark 模式的对象。                        |
 
 ## Links
-
-### 示例
 
 **输入**
 
@@ -154,6 +148,7 @@ export default {
 ```
 
 **输出**
+
 <Links
   :items="[
     //iconify图标
@@ -188,8 +183,6 @@ export default {
 
 ## BoxCube
 
-### 示例
-
 **输入**
 
 ```vue
@@ -216,6 +209,7 @@ export default {
 ```
 
 **输出**
+
 <BoxCube
   :items="[
     //iconify图标

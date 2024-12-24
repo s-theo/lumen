@@ -42,15 +42,16 @@ const props = defineProps<Pill>()
   margin: 0 0.15rem;
   height: 1rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--vp-c-bg-alt);
+  border: 1px solid transparent;
   background-color: var(--vp-c-bg-alt);
   white-space: nowrap;
 }
 
 .pill:hover {
   border-color: var(--vp-c-brand-1);
-  transform: translateY(-0.5px);
+  transform: translateY(-1px) scale(101%);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: var(--vp-c-bg-alt-hover);
 }
 
 .icon {
