@@ -46,7 +46,7 @@ const props = defineProps<{ items: BoxItem[] }>()
 
 .box {
   position: relative;
-  border: 1px solid var(--vp-c-bg-alt);
+  border: 1px solid transparent;
   background-color: var(--vp-c-bg-alt);
   padding: 0 1.6rem;
   border-radius: 0.8rem;
@@ -60,8 +60,9 @@ const props = defineProps<{ items: BoxItem[] }>()
 
 .box:hover {
   border-color: var(--vp-c-brand-1);
-  transform: translateY(-1px);
+  transform: translateY(-1px) scale(101%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--vp-c-bg-alt-hover);
 }
 
 @media (max-width: 1024px) {
