@@ -54,6 +54,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   border: 1.5px solid transparent;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
+
 .aside-class:hover {
   background-color: var(--vp-c-bg-alt-hover);
   transform: translateY(-1px);
