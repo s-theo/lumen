@@ -51,8 +51,13 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   justify-content: center;
   gap: 1rem;
   background-color: var(--vp-c-bg-alt);
-  border: 1.5px solid var(--vp-c-bg-alt);
-  transition: border-color 0.5s;
+  border: 1.5px solid transparent;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.aside-class:hover {
+  background-color: var(--vp-c-bg-alt-hover);
+  transform: translateY(-1px);
 }
 
 .aside-class:last-of-type {
