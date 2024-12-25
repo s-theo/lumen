@@ -38,7 +38,7 @@ YouTube 视频
 <Vid to="youtube" id="dQw4w9WgXcQ" />
 
 Bilibili 视频
-<Vid to="bilibili" id="1205847484" />
+<Vid to="bilibili" id="BV1if421Q7mL" />
 
 腾讯视频
 <Vid to="tencent" id="y0035f2sc4s" />
