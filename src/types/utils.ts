@@ -100,7 +100,7 @@ export const useCopyLink = () => {
  */
 export const video = {
   bilibili: {
-    src: (id: string) => `https://player.bilibili.com/player.html?aid=${id}`,
+    src: (id: string) => `https://player.bilibili.com/player.html?bvid=${id}&autoplay=0`,
     title: 'Bilibili video player'
   },
   tencent: {
