@@ -78,8 +78,8 @@ const footer = props.Footer_Data
 <style scoped>
 .footer {
   background: var(--vp-c-bg-alt);
-  font-size: 0.75rem;
   width: 100%;
+  font-size: 0.75rem;
 }
 
 .footer a {
@@ -87,10 +87,10 @@ const footer = props.Footer_Data
 }
 
 .footer a:hover {
+  color: var(--vp-c-brand-1);
   -webkit-text-decoration: underline solid;
   text-decoration: underline solid;
   text-underline-offset: 4px;
-  color: var(--vp-c-brand-1);
 }
 
 .has-sidebar ~ .footer {
@@ -98,9 +98,9 @@ const footer = props.Footer_Data
 }
 
 .list-container {
-  margin: 1.25rem 10% 1.25rem 18%;
   display: flex;
   justify-content: space-evenly;
+  margin: 1.25rem 10% 1.25rem 18%;
 }
 
 .list-item {
@@ -113,21 +113,21 @@ const footer = props.Footer_Data
 }
 
 .list-links {
+  opacity: 0.9;
   margin: 0 0.5rem;
   line-height: 1.7rem;
-  opacity: 0.9;
 }
 
 .iconify {
-  position: relative;
   display: inline-block;
+  position: relative;
   margin: 0 0 -0.125rem -0.125rem;
   font-size: 1.2em;
 }
 
 .footer-info {
-  text-align: center;
   margin: 1.25rem 0 1.25rem 0;
+  text-align: center;
 }
 
 .info-item {
@@ -143,8 +143,8 @@ const footer = props.Footer_Data
 }
 
 .info-icon {
-  position: relative;
   display: inline-block;
+  position: relative;
   margin: -0.2em 0em;
   font-size: 1.2em;
 }
