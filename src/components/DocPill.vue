@@ -48,7 +48,7 @@ const props = defineProps<Pill>()
 }
 
 .pill:hover {
-  transform: translateY(-1px) scale(101%);
+  transform: translateY(-1px);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-1);
   background-color: var(--vp-c-bg-alt-hover);

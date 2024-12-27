@@ -115,7 +115,7 @@ const shareLink = computed(() => {
 }
 
 .share-link-button:hover {
-  transform: translateY(-1px) scale(101%);
+  transform: translateY(-1px);
   border-color: var(--vp-c-brand-1);
   background-color: var(--vp-c-bg-alt-hover);
 }
