@@ -36,44 +36,44 @@ const props = defineProps<Pill>()
 .pill {
   display: inline-flex;
   align-items: center;
-  text-decoration: none !important;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  padding: 0.75rem 0.25rem;
   margin: 0 0.15rem;
-  height: 1rem;
-  border-radius: 0.5rem;
   border: 1px solid transparent;
+  border-radius: 0.5rem;
   background-color: var(--vp-c-bg-alt);
+  padding: 0.75rem 0.25rem;
+  height: 1rem;
+  text-decoration: none !important;
   white-space: nowrap;
 }
 
 .pill:hover {
-  border-color: var(--vp-c-brand-1);
   transform: translateY(-1px) scale(101%);
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand-1);
   background-color: var(--vp-c-bg-alt-hover);
 }
 
 .icon {
-  height: 0.875em;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 0.875em;
 }
 
 .iconify {
-  font-size: 0.875em;
-  flex-shrink: 0;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   color: var(--vp-c-text-1);
+  font-size: 0.875em;
 }
 
 .name {
   margin-left: 0.2rem;
-  font-size: 0.875rem;
   overflow: hidden;
+  font-size: 0.875rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

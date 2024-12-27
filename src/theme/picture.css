@@ -24,8 +24,8 @@ figure img {
 figure figcaption {
   margin: 0.5rem 0;
   color: var(--vp-c-text-3);
-  font-size: 0.875rem;
   font-weight: 400;
+  font-size: 0.875rem;
 }
 
 figure figcaption a {

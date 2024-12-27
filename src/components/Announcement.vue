@@ -13,17 +13,17 @@ const prelink: Prelink | undefined = usePrelink()
 <style scoped>
 .prelink {
   display: inline-flex;
-  border-radius: 0.8rem;
-  padding: 0.3rem 1.5rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  background-color: var(--vp-button-alt-bg);
   transition: all 0.5s ease;
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+  background-color: var(--vp-button-alt-bg);
+  padding: 0.3rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.75rem;
 }
 
 .prelink:hover {
-  background-color: var(--vp-button-alt-hover-bg);
   transform: translateY(-1px);
+  background-color: var(--vp-button-alt-hover-bg);
 }
 </style>

@@ -39,25 +39,25 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 
 <style scoped>
 .aside-class {
-  margin: 0.25rem 0;
-  padding: 0.25rem 0;
-  border-radius: 0.8rem;
-  position: relative;
-  font-size: 0.875rem;
-  font-weight: 900;
-  line-height: 1rem;
   display: flex;
-  align-items: center;
+  position: relative;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
-  background-color: var(--vp-c-bg-alt);
-  border: 1.5px solid transparent;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 0.25rem 0;
+  border: 1.5px solid transparent;
+  border-radius: 0.8rem;
+  background-color: var(--vp-c-bg-alt);
+  padding: 0.25rem 0;
+  font-weight: 900;
+  font-size: 0.875rem;
+  line-height: 1rem;
 }
 
 .aside-class:hover {
-  background-color: var(--vp-c-bg-alt-hover);
   transform: translateY(-1px);
+  background-color: var(--vp-c-bg-alt-hover);
 }
 
 .aside-class:last-of-type {
@@ -81,16 +81,16 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 }
 
 .aside-class img {
-  transition: transform 0.5s;
   transform: scale(1.25);
+  transition: transform 0.5s;
 }
 
 .aside-class .hide {
-  color: var(--vp-c-text-2);
   opacity: 0;
-  font-size: 0.75rem;
-  font-weight: 600;
   transition: opacity 0.5s;
+  color: var(--vp-c-text-2);
+  font-weight: 600;
+  font-size: 0.75rem;
 }
 
 .aside-class .info {

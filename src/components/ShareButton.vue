@@ -84,39 +84,39 @@ const shareLink = computed(() => {
 }
 
 .share-link-button {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--vp-c-bg-alt);
-  color: var(--vp-c-brand-1);
-  border: 1px solid transparent;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  font-weight: 500;
   display: flex;
-  align-items: center;
+  position: relative;
   justify-content: center;
-  width: 100%;
-  font-size: 0.875rem;
+  align-items: center;
   z-index: 1;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  background-color: var(--vp-c-bg-alt);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  overflow: hidden;
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
 .share-link-button::before {
-  content: '';
   position: absolute;
   top: 0;
   left: -100%;
+  z-index: -1;
+  transition: left 0.6s ease;
+  background-color: var(--vp-c-brand-soft);
   width: 100%;
   height: 100%;
-  background-color: var(--vp-c-brand-soft);
-  transition: left 0.6s ease;
-  z-index: -1;
+  content: '';
 }
 
 .share-link-button:hover {
-  border-color: var(--vp-c-brand-1);
   transform: translateY(-1px) scale(101%);
+  border-color: var(--vp-c-brand-1);
   background-color: var(--vp-c-bg-alt-hover);
 }
 
@@ -136,8 +136,8 @@ const shareLink = computed(() => {
 
 .iconify {
   display: inline-block;
-  font-size: 1.2em;
   flex-shrink: 0;
   margin: 0 0 -0.2em 0;
+  font-size: 1.2em;
 }
 </style>
