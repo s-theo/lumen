@@ -52,38 +52,38 @@ const props = defineProps<{ items: LinkItem[] }>()
 }
 
 .link {
+  display: flex;
+  position: relative;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  background-color: var(--vp-c-bg-alt);
+  padding: 0 2rem;
   width: 100%;
   height: 5rem;
-  border: 1px solid transparent;
-  background-color: var(--vp-c-bg-alt);
-  border-radius: 0.8rem;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  position: relative;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   text-decoration: none !important;
 }
 
 .link:hover {
-  border-color: var(--vp-c-brand-1);
   transform: translateY(-1px) scale(101%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand-1);
   background-color: var(--vp-c-bg-alt-hover);
 }
 
 .icon,
 .iconify {
-  width: 2.5rem;
-  font-size: 2.5em;
-  color: var(--vp-c-text-1);
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
+  width: 2.5rem;
+  color: var(--vp-c-text-1);
+  font-size: 2.5em;
 }
 
 .default-icon {
+  flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
   width: 2rem;
   font-size: 1.5em;
-  flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
 }
 
 .text-content {
@@ -96,23 +96,23 @@ const props = defineProps<{ items: LinkItem[] }>()
 
 .name,
 .desc {
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 100%;
 }
 
 .name {
-  font-size: 0.875rem;
   font-weight: 600;
+  font-size: 0.875rem;
   line-height: 1.2;
 }
 
 .desc {
-  font-size: 0.75rem;
+  margin-top: 0.25rem;
   color: var(--vp-c-text-2);
   font-weight: 500;
-  margin-top: 0.25rem;
+  font-size: 0.75rem;
   line-height: 1.4;
 }
 </style>

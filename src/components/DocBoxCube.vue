@@ -45,24 +45,24 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 }
 
 .link {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid transparent;
+  border-radius: 0.8rem;
+  background-color: var(--vp-c-bg-alt);
   width: 8.2rem;
   height: 8.2rem;
-  border: 1px solid transparent;
-  background-color: var(--vp-c-bg-alt);
-  border-radius: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .link:hover {
-  border-color: var(--vp-c-brand-1);
   transform: translateY(-1px) scale(101%);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand-1);
   background-color: var(--vp-c-bg-alt-hover);
 }
 
@@ -86,30 +86,30 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 }
 
 .iconify {
-  margin-top: -1rem;
-  font-size: 3em;
-  color: var(--vp-c-text-1);
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩 */
+  margin-top: -1rem;
+  color: var(--vp-c-text-1);
+  font-size: 3em;
 }
 
 .name {
   position: absolute;
-  font-size: 0.875rem;
   bottom: 1.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   max-width: 80%;
+  overflow: hidden;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .desc {
   position: absolute;
-  font-size: 0.75rem;
   bottom: 0.15rem;
-  color: var(--vp-c-text-3);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   max-width: 80%;
+  overflow: hidden;
+  color: var(--vp-c-text-3);
+  font-size: 0.75rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 </style>
