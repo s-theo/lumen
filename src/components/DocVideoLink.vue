@@ -33,12 +33,12 @@ const videoConfig = computed(() => getVideoConfig(props))
 }
 
 .video-iframe {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 0.5rem;
   aspect-ratio: 16 / 9;
   width: 100%;
   max-width: 100%;
   height: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  border: none;
 }
 </style>
