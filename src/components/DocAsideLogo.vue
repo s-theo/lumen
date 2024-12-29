@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AsideItem } from '../types'
+import { AsideItem, isExternal } from '../types'
 
 const props = defineProps<{ Aside_Data: AsideItem[] }>()
 </script>
@@ -13,7 +13,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       :class="{ 'has-activity': aside.activity, 'has-name': aside.name }"
       :title="aside.activity || aside.name"
       class="aside-class"
-      target="_blank"
+      :target="isExternal(aside.link) ? '_blank' : '_self'"
       rel="noopener"
     >
       <img :src="aside.icon" width="22" height="22" :alt="aside.activity || aside.name" />
