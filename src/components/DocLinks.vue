@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon, LinkItem, isExternalLink } from '../types'
+import { Icon, LinkItem, isExternal } from '../types'
 
 const props = defineProps<{ items: LinkItem[] }>()
 </script>
@@ -11,7 +11,7 @@ const props = defineProps<{ items: LinkItem[] }>()
       :key="link.link + index"
       :href="link.link"
       :title="link.name"
-      :target="isExternalLink(link.link) ? '_blank' : '_self'"
+      :target="isExternal(link.link) ? '_blank' : '_self'"
       class="link"
       rel="noopener"
     >
