@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BoxItem, Icon, isExternalLink } from '../types'
+import { BoxItem, Icon, isExternal } from '../types'
 
 const props = defineProps<{ items: BoxItem[] }>()
 </script>
@@ -12,7 +12,7 @@ const props = defineProps<{ items: BoxItem[] }>()
       :href="box.link"
       :title="box.name"
       class="box"
-      :target="isExternalLink(box.link) ? '_blank' : '_self'"
+      :target="isExternal(box.link) ? '_blank' : '_self'"
       rel="noopener"
     >
       <template v-if="box.icon">
