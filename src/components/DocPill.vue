@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon, Pill, isExternalLink } from '../types'
+import { Icon, Pill, isExternal } from '../types'
 
 const props = defineProps<Pill>()
 </script>
@@ -9,7 +9,7 @@ const props = defineProps<Pill>()
     :href="props.link"
     :title="props.name"
     class="pill"
-    :target="isExternalLink(props.link) ? '_blank' : '_self'"
+    :target="isExternal(props.link) ? '_blank' : '_self'"
     rel="noopener"
   >
     <template v-if="props.icon">
