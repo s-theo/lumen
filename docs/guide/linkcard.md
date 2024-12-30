@@ -74,14 +74,14 @@ export default {
 
 ### 参数说明
 
-|  字段   |                     类型                      | 描述                                                                                              |
-| :-----: | :-------------------------------------------: | ------------------------------------------------------------------------------------------------- |
-| `name`  |                   `string`                    | DocBox 名称。                                                                                     |
-| `link`  |                   `string`                    | DocBox 链接。                                                                                     |
-|  `tag`  |                   `string`                    | <Badge type="tip" text="可选" /> DocBox 标签。                                                    |
-| `color` |                   `string`                    | <Badge type="tip" text="可选" /> 图标的颜色。                                                     |
-| `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 [iconify](https://icon-sets.iconify.design/) 图标 |
-| `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 图片地址或包含 light 和 dark 模式的对象。                        |
+|  字段   |                     类型                      | 描述                                                                                                                                                                 |
+| :-----: | :-------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`  |                   `string`                    | DocBox 名称。                                                                                                                                                        |
+| `link`  |                   `string`                    | DocBox 链接。                                                                                                                                                        |
+|  `tag`  |                   `string`                    | <Badge type="tip" text="可选" /> DocBox 标签。                                                                                                                       |
+| `color` |                   `string`                    | <Badge type="tip" text="可选" /> 图标的颜色。                                                                                                                        |
+| `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 <Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" /> |
+| `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 图片地址或包含 light 和 dark 模式的对象。                                                                                           |
 
 ## Pill
 
@@ -102,8 +102,8 @@ export default {
 
 **输出**
 
-<Pill name="Iconify" link="#" icon="line-md:iconify2-static" color="#1769AA" />
-<Pill name="支付宝" link="https://i.theojs.cn/docs/202405201752089.jpg" image="https://i.theojs.cn/logo/alipay.svg" />
+<Pill name="Iconify" link="#" icon="line-md:iconify2-static" color="#1769AA" /> 
+<Pill name="支付宝" link="https://i.theojs.cn/docs/202405201752089.jpg" image="https://i.theojs.cn/logo/alipay.svg" /> 
 <Pill
   name="GitHub"
   link="#"
@@ -112,13 +112,13 @@ export default {
 
 ### 参数说明
 
-|  字段   |                     类型                      | 描述                                                                                              |
-| :-----: | :-------------------------------------------: | ------------------------------------------------------------------------------------------------- |
-| `name`  |                   `string`                    | Pill 名称。                                                                                       |
-| `link`  |                   `string`                    | Pill 链接。                                                                                       |
-| `color` |                   `string`                    | <Badge type="tip" text="可选" /> 图标的颜色。                                                     |
-| `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 [iconify](https://icon-sets.iconify.design/) 图标 |
-| `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 图片地址或包含 light 和 dark 模式的对象。                        |
+|  字段   |                     类型                      | 描述                                                                                                                                                                 |
+| :-----: | :-------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`  |                   `string`                    | Pill 名称。                                                                                                                                                          |
+| `link`  |                   `string`                    | Pill 链接。                                                                                                                                                          |
+| `color` |                   `string`                    | <Badge type="tip" text="可选" /> 图标的颜色。                                                                                                                        |
+| `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 <Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" /> |
+| `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 图片地址或包含 light 和 dark 模式的对象。                                                                                           |
 
 ## Links
 
@@ -172,14 +172,14 @@ export default {
 
 ### 参数说明
 
-|  字段   |                     类型                      | 描述                                                                                                |
-| :-----: | :-------------------------------------------: | --------------------------------------------------------------------------------------------------- |
-| `name`  |                   `string`                    | DocLinks 名称。                                                                                     |
-| `desc`  |                   `string`                    | <Badge type="tip" text="可选" /> DocLinks 描述信息。                                                |
-| `link`  |                   `string`                    | DocLinks 链接。                                                                                     |
-| `color` |                   `string`                    | <Badge type="tip" text="可选" /> 图标的颜色。                                                       |
-| `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 [iconify](https://icon-sets.iconify.design/) 图标。 |
-| `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 支持单一图片地址或包含 light 和 dark 两种模式的对象。              |
+|  字段   |                     类型                      | 描述                                                                                                                                                                   |
+| :-----: | :-------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`  |                   `string`                    | DocLinks 名称。                                                                                                                                                        |
+| `desc`  |                   `string`                    | <Badge type="tip" text="可选" /> DocLinks 描述信息。                                                                                                                   |
+| `link`  |                   `string`                    | DocLinks 链接。                                                                                                                                                        |
+| `color` |                   `string`                    | <Badge type="tip" text="可选" /> 图标的颜色。                                                                                                                          |
+| `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 <Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" />。 |
+| `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 支持单一图片地址或包含 light 和 dark 两种模式的对象。                                                                                 |
 
 ## BoxCube
 
@@ -233,11 +233,11 @@ export default {
 
 ## 参数说明
 
-|  字段   |                     类型                      | 描述                                                                                                |
-| :-----: | :-------------------------------------------: | --------------------------------------------------------------------------------------------------- |
-| `name`  |                   `string`                    | BoxCube 名称。                                                                                      |
-| `link`  |                   `string`                    | BoxCube 链接。                                                                                      |
-| `desc`  |                   `string`                    | <Badge type="tip" text="可选" /> BoxCube 描述。                                                     |
-| `color` |                   `string`                    | <Badge type="tip" text="可选" /> 图标的颜色。                                                       |
-| `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 [iconify](https://icon-sets.iconify.design/) 图标。 |
-| `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 支持单一图片地址或包含 light 和 dark 模式的对象。                  |
+|  字段   |                     类型                      | 描述                                                                                                                                                                   |
+| :-----: | :-------------------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`  |                   `string`                    | BoxCube 名称。                                                                                                                                                         |
+| `link`  |                   `string`                    | BoxCube 链接。                                                                                                                                                         |
+| `desc`  |                   `string`                    | <Badge type="tip" text="可选" /> BoxCube 描述。                                                                                                                        |
+| `color` |                   `string`                    | <Badge type="tip" text="可选" /> 图标的颜色。                                                                                                                          |
+| `icon`  |                   `string`                    | <Badge type="tip" text="可选" /> 图标名称，支持 <Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" />。 |
+| `image` | `string` \| `{ light: string; dark: string }` | <Badge type="tip" text="可选" /> 支持单一图片地址或包含 light 和 dark 模式的对象。                                                                                     |
