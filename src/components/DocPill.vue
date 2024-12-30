@@ -37,10 +37,9 @@ const props = defineProps<Pill>()
   display: inline-flex;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  margin: 0 0.15rem;
   border: 1px solid transparent;
   border-radius: 0.5rem;
-  background-color: var(--vp-c-bg-alt);
+  background-color: var(--pill-bg);
   padding: 0.75rem 0.25rem;
   height: 1rem;
   text-decoration: none !important;
@@ -49,9 +48,9 @@ const props = defineProps<Pill>()
 
 .pill:hover {
   transform: translateY(-1px);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-bg-alt-hover);
+  background-color: var(--pill-bg-hover);
 }
 
 .icon {
