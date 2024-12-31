@@ -36,6 +36,7 @@ const props = defineProps<Pill>()
 .pill {
   display: inline-flex;
   align-items: center;
+  transform: translateY(1px);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid transparent;
   border-radius: 0.5rem;
@@ -71,9 +72,7 @@ const props = defineProps<Pill>()
 
 .name {
   margin-left: 0.2rem;
-  overflow: hidden;
   font-size: 0.875rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  letter-spacing: 0.05rem;
 }
 </style>
