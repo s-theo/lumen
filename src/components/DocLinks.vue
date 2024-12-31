@@ -24,12 +24,7 @@ const props = defineProps<{ items: LinkItem[] }>()
         <img v-else :src="link.image" alt="Icon" class="icon" />
       </template>
       <template v-else>
-        <Icon
-          class="default-icon"
-          icon="fa6-solid:arrow-up-right-from-square"
-          style="color: var(--vp-c-brand-1)"
-          alt="Icon"
-        />
+        <Icon class="default-icon" icon="fa6-solid:arrow-up-right-from-square" alt="Icon" />
       </template>
       <div class="text-content">
         <span class="name">{{ link.name }}</span>
@@ -47,21 +42,18 @@ const props = defineProps<{ items: LinkItem[] }>()
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.5rem;
 }
 
 .link {
   display: flex;
-  position: relative;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid transparent;
   border-radius: 0.8rem;
   background-color: var(--vp-c-bg-alt);
-  padding: 0 2rem;
-  width: 100%;
-  height: 5rem;
+  padding: 1rem;
   text-decoration: none !important;
 }
 
@@ -75,14 +67,14 @@ const props = defineProps<{ items: LinkItem[] }>()
 .icon,
 .iconify {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
-  width: 2.5rem;
-  color: var(--vp-c-text-1);
-  font-size: 2.5em;
+  height: 2rem;
+  color: var(--vp-c-text-2);
+  font-size: 2rem;
 }
 
 .default-icon {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
-  width: 2rem;
+  margin: 0 0.25rem 0 0.2rem;
   font-size: 1.5em;
 }
 
@@ -97,22 +89,21 @@ const props = defineProps<{ items: LinkItem[] }>()
 .name,
 .desc {
   max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .name {
-  font-weight: 600;
+  overflow: hidden;
   font-size: 0.875rem;
   line-height: 1.2;
+  letter-spacing: 0.05rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .desc {
   margin-top: 0.25rem;
   color: var(--vp-c-text-2);
-  font-weight: 500;
   font-size: 0.75rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 </style>
