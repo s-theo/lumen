@@ -16,7 +16,19 @@ const props = defineProps<{ items: BoxItem[] }>()
       rel="noopener"
     >
       <template v-if="box.icon">
-        <Icon :icon="box.icon" class="iconify" :style="{ color: box.color }" />
+        <Icon
+          v-if="typeof box.icon === 'object'"
+          :icon="box.icon.light"
+          class="iconify light-only"
+          :style="{ color: typeof box.color === 'object' ? box.color.light : box.color }"
+        />
+        <Icon
+          v-if="typeof box.icon === 'object'"
+          :icon="box.icon.dark"
+          class="iconify dark-only"
+          :style="{ color: typeof box.color === 'object' ? box.color.dark : box.color }"
+        />
+        <Icon v-else :icon="box.icon" class="iconify" :style="{ color: box.color }" />
       </template>
       <template v-else-if="box.image">
         <img v-if="typeof box.image === 'object'" :src="box.image.light" alt="Icon" class="icon light-only" />
