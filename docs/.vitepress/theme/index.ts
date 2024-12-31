@@ -30,7 +30,7 @@ export default {
       'home-hero-info-before': () => h(Announcement),
       'aside-ads-before': () => h(DocAsideLogo, { Aside_Data }),
       'aside-outline-before': () => h(ShareButton),
-      // 'layout-bottom': () => h(HomeFooter, { Footer_Data }),
+      'layout-bottom': () => h(HomeFooter, { Footer_Data }),
       'doc-after': () => h(Twikoo, { Twikoo_Data })
     })
   },
