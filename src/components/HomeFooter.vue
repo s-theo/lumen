@@ -40,7 +40,7 @@ const currentYear = new Date().getFullYear()
       </div>
     </div>
 
-    <div class="footer-info">
+    <!-- <div class="footer-info">
       <div v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
         <span v-if="footer.beian?.icp">
           <Icon
@@ -72,7 +72,7 @@ const currentYear = new Date().getFullYear()
           >.&nbsp;All Rights Reserved.
         </span>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
