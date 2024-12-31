@@ -113,6 +113,7 @@ const props = defineProps<{ items: BoxItem[] }>()
   margin-left: 1rem;
   overflow: hidden;
   font-size: 0.875rem;
+  letter-spacing: 0.05rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
