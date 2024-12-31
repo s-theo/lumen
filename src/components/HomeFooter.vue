@@ -10,7 +10,7 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="footer">
+  <div class="footer">
     <div class="list-container" v-if="footer.group?.length">
       <div class="list-item" v-for="(section, index) in footer.group" :key="`${section.title}-${index}`">
         <div class="list-title">
@@ -73,7 +73,7 @@ const currentYear = new Date().getFullYear()
         </span>
       </div>
     </div>
-  </footer>
+  </div>
 </template>
 
 <style scoped>
