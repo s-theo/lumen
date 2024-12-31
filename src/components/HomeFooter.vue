@@ -4,19 +4,22 @@ import { FooterData, Icon } from '../types'
 // 使用 defineProps 定义属性
 const props = defineProps<{ Footer_Data: FooterData }>()
 const footer = props.Footer_Data
+
+// 将动态时间提前计算，避免在模板中动态生成
+const currentYear = new Date().getFullYear()
 </script>
 
 <template>
   <footer class="footer">
-    <div class="list-container" v-show="footer.group">
-      <div class="list-item" v-for="(section, index) in footer.group || []" :key="section.title + index">
+    <div class="list-container" v-if="footer.group?.length">
+      <div class="list-item" v-for="(section, index) in footer.group" :key="`${section.title}-${index}`">
         <div class="list-title">
           <template v-if="section.icon">
             <Icon :icon="section.icon" class="iconify" :style="{ color: section.style }" />&nbsp;&nbsp;</template
           >{{ section.title }}
         </div>
         <ul class="list-links">
-          <li v-for="(link, idx) in section.links" :key="link.name + idx">
+          <li v-for="(link, idx) in section.links" :key="`${link.name}-${idx}`">
             <template v-if="link.icon"> <Icon :icon="link.icon" :style="{ color: link.style }" />&nbsp; </template>
             <a
               :name="link.name"
@@ -38,8 +41,8 @@ const footer = props.Footer_Data
     </div>
 
     <div class="footer-info">
-      <div v-show="footer.beian?.icp || footer.beian?.police" class="info-item">
-        <span v-show="footer.beian?.icp">
+      <div v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
+        <span v-if="footer.beian?.icp">
           <Icon
             v-if="footer.beian?.showIcon"
             :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
@@ -49,8 +52,8 @@ const footer = props.Footer_Data
             {{ footer.beian.icp }}
           </a>
         </span>
-        <span class="info-spacing"></span>
-        <span v-show="footer.beian?.police">
+        <span class="info-spacing" v-if="footer.beian?.icp && footer.beian?.police"></span>
+        <span v-if="footer.beian?.police">
           <Icon
             v-if="footer.beian?.showIcon"
             :icon="footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'"
@@ -61,12 +64,10 @@ const footer = props.Footer_Data
           </a>
         </span>
       </div>
-      <span class="info-spacing-copyright"></span>
-      <div v-show="footer.author?.name" class="info-item">
+      <span class="info-spacing-copyright" v-if="footer.author?.name"></span>
+      <div v-if="footer.author?.name" class="info-item">
         <span>
-          <Icon icon="ri:copyright-line" class="info-icon" style="font-size: 1em" />&nbsp;{{
-            new Date().getFullYear()
-          }}
+          <Icon icon="ri:copyright-line" class="info-icon" style="font-size: 1em" />&nbsp;{{ currentYear }}
           <a target="_blank" rel="noopener" title="GitHub" :href="footer.author?.link">{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
         </span>
