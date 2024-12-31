@@ -98,6 +98,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   max-width: 80%;
   overflow: hidden;
   font-size: 0.875rem;
+  letter-spacing: 0.05rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
