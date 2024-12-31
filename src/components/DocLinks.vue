@@ -16,7 +16,19 @@ const props = defineProps<{ items: LinkItem[] }>()
       rel="noopener"
     >
       <template v-if="link.icon">
-        <Icon :icon="link.icon" class="iconify" :style="{ color: link.color }" />
+        <Icon
+          v-if="typeof link.icon === 'object'"
+          :icon="link.icon.light"
+          class="iconify light-only"
+          :style="{ color: typeof link.color === 'object' ? link.color.light : link.color }"
+        />
+        <Icon
+          v-if="typeof link.icon === 'object'"
+          :icon="link.icon.dark"
+          class="iconify dark-only"
+          :style="{ color: typeof link.color === 'object' ? link.color.dark : link.color }"
+        />
+        <Icon v-else :icon="link.icon" class="iconify" :style="{ color: link.color }" />
       </template>
       <template v-else-if="link.image">
         <img v-if="typeof link.image === 'object'" :src="link.image.light" alt="Icon" class="icon light-only" />
