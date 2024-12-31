@@ -24,10 +24,10 @@
   --vp-button-sponsor-active-bg: var(--vp-c-sponsor);
 }
 
-.VPButton.medium {
+/* .VPButton.medium {
   border-radius: 12px !important;
 }
 
 .VPButton.big {
   border-radius: 12px !important;
-}
+} */
