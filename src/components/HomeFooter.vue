@@ -64,13 +64,13 @@ const currentYear = new Date().getFullYear()
         </span>
       </div>
       <span class="info-spacing-copyright" v-if="footer.author?.name"></span>
-      <div v-if="footer.author?.name" class="info-item">
+      <!-- <div v-if="footer.author?.name" class="info-item">
         <span>
           <Icon icon="ri:copyright-line" class="info-icon" style="font-size: 1em" />&nbsp;{{ currentYear }}
           <a target="_blank" rel="noopener" title="GitHub" :href="footer.author?.link">{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
         </span>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>
