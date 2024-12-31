@@ -13,7 +13,19 @@ const props = defineProps<Pill>()
     rel="noopener"
   >
     <template v-if="props.icon">
-      <Icon :icon="props.icon" class="iconify" :style="{ color: props.color }" />
+      <Icon
+        v-if="typeof props.icon === 'object'"
+        :icon="props.icon.light"
+        class="iconify light-only"
+        :style="{ color: typeof props.color === 'object' ? props.color.light : props.color }"
+      />
+      <Icon
+        v-if="typeof props.icon === 'object'"
+        :icon="props.icon.dark"
+        class="iconify dark-only"
+        :style="{ color: typeof props.color === 'object' ? props.color.dark : props.color }"
+      />
+      <Icon v-else :icon="props.icon" class="iconify" :style="{ color: props.color }" />
     </template>
     <template v-else-if="props.image">
       <img v-if="typeof props.image === 'object'" :src="props.image.light" alt="Icon" class="icon light-only" />

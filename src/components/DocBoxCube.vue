@@ -16,7 +16,19 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
       rel="noopener"
     >
       <template v-if="boxcube.icon">
-        <Icon :icon="boxcube.icon" class="iconify" :style="{ color: boxcube.color }" />
+        <Icon
+          v-if="typeof boxcube.icon === 'object'"
+          :icon="boxcube.icon.light"
+          class="iconify light-only"
+          :style="{ color: typeof boxcube.color === 'object' ? boxcube.color.light : boxcube.color }"
+        />
+        <Icon
+          v-if="typeof boxcube.icon === 'object'"
+          :icon="boxcube.icon.dark"
+          class="iconify dark-only"
+          :style="{ color: typeof boxcube.color === 'object' ? boxcube.color.dark : boxcube.color }"
+        />
+        <Icon v-else :icon="boxcube.icon" class="iconify" :style="{ color: boxcube.color }" />
       </template>
       <template v-else-if="boxcube.image">
         <img v-if="typeof boxcube.image === 'object'" :src="boxcube.image.light" alt="Icon" class="icon light-only" />
