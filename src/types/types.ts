@@ -7,9 +7,9 @@ export interface BoxItem {
   /** DocBox 标签。 */
   tag?: string
   /** 图标的颜色。 */
-  color?: string
+  color?: string | { light: string; dark: string }
   /** 图标名称，支持 `iconify`。 */
-  icon?: string
+  icon?: string | { light: string; dark: string }
   /** 图片地址或包含 light 和 dark 模式的对象。 */
   image?: string | { light: string; dark: string }
 }
@@ -21,9 +21,9 @@ export interface Pill {
   /** Pill 链接。 */
   link: string
   /** 图标名称，支持 `iconify`。 */
-  icon?: string
+  icon?: string | { light: string; dark: string }
   /** 图标的颜色。 */
-  color?: string
+  color?: string | { light: string; dark: string }
   /** 图片地址或包含 light 和 dark 模式的对象。 */
   image?: string | { light: string; dark: string }
 }
@@ -37,9 +37,9 @@ export interface LinkItem {
   /** DocLinks 链接。 */
   link: string
   /** 图标的颜色。 */
-  color?: string | null
+  color?: string | { light: string; dark: string }
   /** 图标名称，支持 `iconify`。 */
-  icon?: string | null
+  icon?: string | { light: string; dark: string }
   /** 支持单一图片地址或包含 light 和 dark 模式的对象。 */
   image?: string | { light: string; dark: string }
 }
@@ -53,9 +53,9 @@ export interface BoxCubeItem {
   /** BoxCube 描述。 */
   desc?: string
   /** 图标的颜色。 */
-  color?: string
+  color?: string | { light: string; dark: string }
   /** 图标名称，支持 `iconify`。 */
-  icon?: string | null
+  icon?: string | { light: string; dark: string }
   /** 图片地址或包含 light 和 dark 模式的对象。 */
   image?: string | { light: string; dark: string }
 }
