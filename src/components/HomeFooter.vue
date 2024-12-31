@@ -4,6 +4,8 @@ import { FooterData, Icon } from '../types'
 // 使用 defineProps 定义属性
 const props = defineProps<{ Footer_Data: FooterData }>()
 const footer = props.Footer_Data
+// 将当前年份提前计算
+const currentYear = new Date().getFullYear()
 </script>
 
 <template>
@@ -49,7 +51,7 @@ const footer = props.Footer_Data
             {{ footer.beian.icp }}
           </a>
         </span>
-        <span class="info-spacing"></span>
+        <span class="info-spacing" v-if="footer.beian?.icp && footer.beian?.police"></span>
         <span v-if="footer.beian?.police">
           <Icon
             v-if="footer.beian?.showIcon"
@@ -61,12 +63,10 @@ const footer = props.Footer_Data
           </a>
         </span>
       </div>
-      <span class="info-spacing-copyright"></span>
+      <span class="info-spacing-copyright" v-if="footer.author?.name"></span>
       <div v-if="footer.author?.name" class="info-item">
         <span>
-          <Icon icon="ri:copyright-line" class="info-icon" style="font-size: 1em" />&nbsp;{{
-            new Date().getFullYear()
-          }}
+          <Icon icon="ri:copyright-line" class="info-icon" style="font-size: 1em" />&nbsp;{{ currentYear }}
           <a target="_blank" rel="noopener" title="GitHub" :href="footer.author?.link">{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
         </span>
