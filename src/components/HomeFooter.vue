@@ -8,7 +8,7 @@ const props = defineProps<{ Footer_Data: FooterData }>()
 const footer = props.Footer_Data
 
 // 使用 dayjs 获取当前年份
-const currentYear = dayjs().year()
+const Year = dayjs().year()
 </script>
 
 <template>
@@ -69,7 +69,7 @@ const currentYear = dayjs().year()
       <span class="info-spacing-copyright"></span>
       <div v-if="footer.author?.name" class="info-item">
         <span>
-          <Icon icon="ri:copyright-line" class="info-icon" style="font-size: 1em" />&nbsp;{{ currentYear }}
+          <Icon icon="ri:copyright-line" class="info-icon" style="font-size: 1em" />&nbsp;{{ Year }}
           <a target="_blank" rel="noopener" title="GitHub" :href="footer.author?.link">{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
         </span>
