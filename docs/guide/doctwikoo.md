@@ -66,7 +66,7 @@ export default {
 }
 ```
 
-```md [.vitepress/index.md]
+```yaml [.vitepress/index.md]
 ---
 layout: home
 
