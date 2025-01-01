@@ -21,7 +21,7 @@ export default {
 
 ## 使用
 
-```md [.vitepress/index.md]
+```yaml [.vitepress/index.md]
 ---
 layout: home
 
