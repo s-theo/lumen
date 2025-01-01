@@ -1,38 +1,38 @@
 <script setup lang="ts">
 import { Icon, Pill, isExternal } from '../types'
 
-const props = defineProps<Pill>()
+const pill = defineProps<Pill>()
 </script>
 
 <template>
   <a
-    :href="props.link"
-    :title="props.name"
+    :href="pill.link"
+    :title="pill.name"
     class="pill"
-    :target="isExternal(props.link) ? '_blank' : '_self'"
+    :target="isExternal(pill.link) ? '_blank' : '_self'"
     rel="noopener"
   >
-    <template v-if="props.icon">
+    <template v-if="pill.icon">
       <Icon
-        v-if="typeof props.icon === 'object'"
-        :icon="props.icon.light"
+        v-if="typeof pill.icon === 'object'"
+        :icon="pill.icon.light"
         class="iconify light-only"
-        :style="{ color: typeof props.color === 'object' ? props.color.light : props.color }"
+        :style="{ color: typeof pill.color === 'object' ? pill.color.light : pill.color }"
       />
       <Icon
-        v-if="typeof props.icon === 'object'"
-        :icon="props.icon.dark"
+        v-if="typeof pill.icon === 'object'"
+        :icon="pill.icon.dark"
         class="iconify dark-only"
-        :style="{ color: typeof props.color === 'object' ? props.color.dark : props.color }"
+        :style="{ color: typeof pill.color === 'object' ? pill.color.dark : pill.color }"
       />
-      <Icon v-else :icon="props.icon" class="iconify" :style="{ color: props.color }" />
+      <Icon v-else :icon="pill.icon" class="iconify" :style="{ color: pill.color }" />
     </template>
-    <template v-else-if="props.image">
-      <img v-if="typeof props.image === 'object'" :src="props.image.light" alt="Icon" class="icon light-only" />
-      <img v-if="typeof props.image === 'object'" :src="props.image.dark" alt="Icon" class="icon dark-only" />
-      <img v-else :src="props.image" alt="Icon" class="icon" />
+    <template v-else-if="pill.image">
+      <img v-if="typeof pill.image === 'object'" :src="pill.image.light" alt="Icon" class="icon light-only" />
+      <img v-if="typeof pill.image === 'object'" :src="pill.image.dark" alt="Icon" class="icon dark-only" />
+      <img v-else :src="pill.image" alt="Icon" class="icon" />
     </template>
-    <span class="name">{{ props.name }}</span>
+    <span class="name">{{ pill.name }}</span>
   </a>
 </template>
 
