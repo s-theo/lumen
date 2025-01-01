@@ -64,6 +64,7 @@
     "@iconify/vue": "^4.2.0",
     "@types/node": "^22.10.2",
     "bumpp": "^9.9.2",
+    "dayjs": "^1.11.13",
     "iconify-icon": "^2.2.0",
     "twikoo": "^1.6.40",
     "typescript": "^5.7.2",
