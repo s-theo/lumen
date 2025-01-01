@@ -1,4 +1,4 @@
-import { useData } from 'vitepress'
+import { useData, useRouter } from 'vitepress'
 
 import { computed, nextTick, onMounted, ref } from 'vue'
 
@@ -168,4 +168,18 @@ export const getVideoConfig = (props: VideoProps) => {
     src: props.src || '',
     title: 'Custom video player'
   }
+}
+
+/**
+ * 用于生成当前 VitePress 页面分享链接的工具函数。
+ *
+ * 使用 VitePress 的 `useRouter` 获取当前路由，并根据路径生成完整的分享链接。 自动去除语言前缀（如 `/en/` 或 `/zh/`）。
+ *
+ * @returns 当前页面的分享链接。
+ */
+export function useShareLink(): import('vue').ComputedRef<string> {
+  const router = useRouter()
+  return computed(() => {
+    return `${window.location.origin}${router.route.path.replace(/^\/[a-z]{2}\//, '/')}`
+  })
 }
