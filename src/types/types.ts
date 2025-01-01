@@ -181,3 +181,34 @@ export interface VideoConfig {
   /** 视频播放器的标题 */
   title: string
 }
+
+/** ShareButton 接口。 */
+export interface ShareButtonItem {
+  /**
+   * 按钮图标的类名，支持 Iconify 图标库。
+   *
+   * @default 'solar:share-bold'
+   */
+  buttonIcon?: string
+
+  /**
+   * 按钮显示的文本内容。
+   *
+   * @default '分享此页面'
+   */
+  buttonText?: string
+
+  /**
+   * 复制成功后显示的图标的类名，支持 Iconify 图标库。
+   *
+   * @default 'mdi:thumbs-up'
+   */
+  copiedIcon?: string
+
+  /**
+   * 复制成功后显示的文本信息。
+   *
+   * @default '链接已复制!'
+   */
+  copiedText?: string
+}
