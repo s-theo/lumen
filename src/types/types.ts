@@ -88,6 +88,14 @@ export interface Prelink {
   target?: string
   /** 链接的标题。 */
   title: string
+  /** 链接的内容。 */
+  content: string
+  /** 日期 */
+  date?: string
+  /** 日期文本 */
+  dateText?: string
+  /** 日期图标 */
+  dateIcon?: string
 }
 
 /** Twikoo 配置数据类型接口。 */
