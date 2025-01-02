@@ -33,13 +33,13 @@ export default {
     { name: 'iconify', link: '#', icon: 'line-md:iconify2-static', color: '#1769AA' },
     //深浅模式的iconify图标
     {
-      name: 'Chrome',
+      name: 'Vercel',
       link: '#',
-      icon: { light: 'mdi:google-chrome', dark: 'mdi:google-chrome' },
-      color: { light: '#161614', dark: '#f4f2ed' }
+      icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel' },
+      color: { light: '#000000', dark: '#FFFFFF' }
     },
     {
-      name: 'Vite js',
+      name: 'Vite',
       link: '#',
       icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' }
     },
@@ -69,15 +69,15 @@ export default {
     { name: 'iconify', link: '#', icon: 'line-md:iconify2-static', color: '#1769AA' },
     //深浅模式的iconify图标
     {
-      name: 'Chrome',
+      name: 'Vercel',
       link: '#',
-      icon: { light: 'mdi:google-chrome', dark: 'mdi:google-chrome' },
-      color: { light: '#161614', dark: '#f4f2ed' }
+      icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel' },
+      color: { light: '#000000', dark: '#FFFFFF' }
     },
     {
-      name: 'Vite js',
+      name: 'Vite',
       link: '#',
-      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' }
+      icon: { light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' }
     },
     //图片
     {
@@ -114,33 +114,37 @@ export default {
 ```vue-html
 //iconify图标
 <Pill name="Iconify" link="#" icon="line-md:iconify2-static" color="#1769AA" />
+<Pill name="Vue" link="#" icon="vscode-icons:file-type-vue" />
+//深浅模式的iconify图标
+<Pill
+  name="Vercel"
+  link="#"
+  :icon="{ light: 'ion:logo-vercel', dark: 'ion:logo-vercel' }"
+  :color="{ light: '#000000', dark: '#FFFFFF' }"
+/>
+<Pill name="Vite" link="#" :icon="{ light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' }" />
 //图片
 <Pill name="支付宝" link="https://i.theojs.cn/docs/202405201752089.jpg" image="https://i.theojs.cn/logo/alipay.svg" />
-//深浅模式的iconify图标
-<Pill name="Vite js" link="#" :icon="{ light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' }" />
-<Pill
-  name="Chrome"
-  link="#"
-  :icon="{ light: 'mdi:google-chrome', dark: 'mdi:google-chrome' }"
-  :color="{ light: '#161614', dark: '#f4f2ed' }"
-/>
 //深浅模式的图片
 <Pill
   name="GitHub"
   link="#"
   :image="{ light: 'https://i.theojs.cn/logo/github.svg', dark: 'https://i.theojs.cn/logo/github-dark.svg' }"
 />
-<Pill name="Vue" link="#" icon="vscode-icons:file-type-vue" />
 ```
 
 **输出**
 
 <Pill name="Iconify" link="#" icon="line-md:iconify2-static" color="#1769AA" /> 
-<Pill name="Chrome" link="#" :icon="{ light: 'mdi:google-chrome', dark: 'mdi:google-chrome' }" :color="{ light: '#161614', dark: '#f4f2ed' }" /> 
-<Pill name="Vite js" link="#" :icon="{ light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' }"  /> 
-<Pill name="支付宝" link="https://i.theojs.cn/docs/202405201752089.jpg" image="https://i.theojs.cn/logo/alipay.svg" />  
-<Pill name="GitHub" link="#" :image="{ light: 'https://i.theojs.cn/logo/github.svg', dark: 'https://i.theojs.cn/logo/github-dark.svg' }" /> 
-<Pill name="Vue" link="#" icon="vscode-icons:file-type-vue" />
+<Pill name="Vue" link="#" icon="vscode-icons:file-type-vue" /> 
+<Pill name="Vercel" link="#" :icon="{ light: 'ion:logo-vercel', dark: 'ion:logo-vercel' }" :color="{ light: '#000000', dark: '#FFFFFF' }" /> 
+<Pill name="Vite" link="#" :icon="{ light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' }" /> 
+<Pill name="支付宝" link="https://i.theojs.cn/docs/202405201752089.jpg" image="https://i.theojs.cn/logo/alipay.svg" /> 
+<Pill
+  name="GitHub"
+  link="#"
+  :image="{ light: 'https://i.theojs.cn/logo/github.svg', dark: 'https://i.theojs.cn/logo/github-dark.svg' }"
+/>
 
 ### 参数说明
 
@@ -163,15 +167,15 @@ export default {
     { name: 'iconify', link: '#', icon: 'line-md:iconify2-static', color: '#1769AA' },
     //深浅模式的iconify图标
     {
-      name: 'Chrome',
+      name: 'Vercel',
       link: '#',
-      icon: { light: 'mdi:google-chrome', dark: 'mdi:google-chrome' },
-      color: { light: '#161614', dark: '#f4f2ed' }
+      icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel' },
+      color: { light: '#000000', dark: '#FFFFFF' }
     },
     {
-      name: 'Vite js',
+      name: 'Vite',
       link: '#',
-      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' }
+      icon: { light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' }
     },
     //图片
     {
@@ -206,15 +210,15 @@ export default {
     { name: 'iconify', link: '#', icon: 'line-md:iconify2-static', color: '#1769AA' },
     //深浅模式的iconify图标
     {
-      name: 'Chrome',
+      name: 'Vercel',
       link: '#',
-      icon: { light: 'mdi:google-chrome', dark: 'mdi:google-chrome' },
-      color: { light: '#161614', dark: '#f4f2ed' }
+      icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel' },
+      color: { light: '#000000', dark: '#FFFFFF' }
     },
     {
-      name: 'Vite js',
+      name: 'Vite',
       link: '#',
-      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' }
+      icon: { light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' }
     },
     //图片
     {
@@ -262,15 +266,15 @@ export default {
     { name: 'iconify', link: '#', icon: 'line-md:iconify2-static', color: '#1769AA' },
     //深浅模式的iconify图标
     {
-      name: 'Chrome',
+      name: 'Vercel',
       link: '#',
-      icon: { light: 'mdi:google-chrome', dark: 'mdi:google-chrome' },
-      color: { light: '#161614', dark: '#f4f2ed' }
+      icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel' },
+      color: { light: '#000000', dark: '#FFFFFF' }
     },
     {
-      name: 'Vite js',
+      name: 'Vite',
       link: '#',
-      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' }
+      icon: { light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' }
     },
     //图片
     {
@@ -298,15 +302,15 @@ export default {
     { name: 'iconify', link: '#', icon: 'line-md:iconify2-static', color: '#1769AA' },
     //深浅模式的iconify图标
     {
-      name: 'Chrome',
+      name: 'Vercel',
       link: '#',
-      icon: { light: 'mdi:google-chrome', dark: 'mdi:google-chrome' },
-      color: { light: '#161614', dark: '#f4f2ed' }
+      icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel' },
+      color: { light: '#000000', dark: '#FFFFFF' }
     },
     {
-      name: 'Vite js',
+      name: 'Vite',
       link: '#',
-      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' }
+      icon: { light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' }
     },
     //图片
     {
