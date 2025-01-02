@@ -12,9 +12,10 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       :href="aside.link"
       :class="{ 'has-activity': aside.activity, 'has-name': aside.name }"
       :title="aside.activity || aside.name"
-      class="aside-class"
+      :aria-label="aside.activity || aside.name"
       :target="isExternal(aside.link) ? '_blank' : '_self'"
       rel="noopener"
+      class="aside-class"
     >
       <img :src="aside.icon" width="22" height="22" :alt="aside.activity || aside.name" />
       <span>

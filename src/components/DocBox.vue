@@ -10,30 +10,33 @@ const props = defineProps<{ items: BoxItem[] }>()
       v-for="(box, index) in props.items"
       :key="box.link + index"
       :href="box.link"
-      :title="box.name"
       class="box"
       :target="isExternal(box.link) ? '_blank' : '_self'"
       rel="noopener"
+      :title="box.name"
+      :aria-label="box.name"
     >
       <template v-if="box.icon">
         <Icon
           v-if="typeof box.icon === 'object'"
           :icon="box.icon.light"
-          class="iconify light-only"
           :style="{ color: typeof box.color === 'object' ? box.color.light : box.color }"
+          :alt="box.name"
+          class="iconify light-only"
         />
         <Icon
           v-if="typeof box.icon === 'object'"
           :icon="box.icon.dark"
-          class="iconify dark-only"
           :style="{ color: typeof box.color === 'object' ? box.color.dark : box.color }"
+          :alt="box.name"
+          class="iconify dark-only"
         />
-        <Icon v-else :icon="box.icon" class="iconify" :style="{ color: box.color }" />
+        <Icon v-else :icon="box.icon" :style="{ color: box.color }" :alt="box.name" class="iconify" />
       </template>
       <template v-else-if="box.image">
-        <img v-if="typeof box.image === 'object'" :src="box.image.light" alt="Icon" class="icon light-only" />
-        <img v-if="typeof box.image === 'object'" :src="box.image.dark" alt="Icon" class="icon dark-only" />
-        <img v-else :src="box.image" alt="Icon" class="icon" />
+        <img v-if="typeof box.image === 'object'" :src="box.image.light" :alt="box.name" class="icon light-only" />
+        <img v-if="typeof box.image === 'object'" :src="box.image.dark" :alt="box.name" class="icon dark-only" />
+        <img v-else :src="box.image" :alt="box.name" class="icon" />
       </template>
       <span class="name">{{ box.name }}</span>
       <span v-if="box.tag" class="tag">{{ box.tag }}</span>
