@@ -11,29 +11,32 @@ const props = defineProps<{ items: LinkItem[] }>()
       :key="link.link + index"
       :href="link.link"
       :title="link.name"
+      :aria-label="link.name"
       :target="isExternal(link.link) ? '_blank' : '_self'"
-      class="link"
       rel="noopener"
+      class="link"
     >
       <template v-if="link.icon">
         <Icon
           v-if="typeof link.icon === 'object'"
           :icon="link.icon.light"
-          class="iconify light-only"
           :style="{ color: typeof link.color === 'object' ? link.color.light : link.color }"
+          :alt="link.name"
+          class="iconify light-only"
         />
         <Icon
           v-if="typeof link.icon === 'object'"
           :icon="link.icon.dark"
-          class="iconify dark-only"
           :style="{ color: typeof link.color === 'object' ? link.color.dark : link.color }"
+          :alt="link.name"
+          class="iconify dark-only"
         />
-        <Icon v-else :icon="link.icon" class="iconify" :style="{ color: link.color }" />
+        <Icon v-else :icon="link.icon" :style="{ color: link.color }" :alt="link.name" class="iconify" />
       </template>
       <template v-else-if="link.image">
-        <img v-if="typeof link.image === 'object'" :src="link.image.light" alt="Icon" class="icon light-only" />
-        <img v-if="typeof link.image === 'object'" :src="link.image.dark" alt="Icon" class="icon dark-only" />
-        <img v-else :src="link.image" alt="Icon" class="icon" />
+        <img v-if="typeof link.image === 'object'" :src="link.image.light" :alt="link.name" class="icon light-only" />
+        <img v-if="typeof link.image === 'object'" :src="link.image.dark" :alt="link.name" class="icon dark-only" />
+        <img v-else :src="link.image" :alt="link.name" class="icon" />
       </template>
       <template v-else>
         <Icon class="default-icon" icon="fa6-solid:arrow-up-right-from-square" alt="Icon" />

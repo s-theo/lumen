@@ -5,12 +5,20 @@ const prelink: Prelink | undefined = usePrelink()
 </script>
 
 <template>
-  <a v-if="prelink" :href="prelink.link" :target="prelink.target" rel="noopener" class="prelink">
+  <a
+    v-if="prelink"
+    :href="prelink.link"
+    :target="prelink.target"
+    rel="noopener"
+    class="prelink"
+    :title="prelink.title"
+    :aria-label="prelink.title"
+  >
     <div class="prelink-content">
       <span class="title" v-html="prelink.title"></span>
       <span v-if="prelink.content" class="content" v-html="prelink.content"></span>
       <span v-if="prelink.date" class="time-info">
-        <Icon :icon="prelink.dateIcon || 'line-md:calendar'" class="iconify"></Icon>
+        <Icon :icon="prelink.dateIcon || 'line-md:calendar'" alt="Icon" class="iconify"></Icon>
         <span v-html="prelink.dateText || '活动时间: 即日至'"></span>
         <span class="date">{{ prelink.date }}</span>
       </span>
