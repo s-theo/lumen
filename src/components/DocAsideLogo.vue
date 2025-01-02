@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AsideItem, isExternal } from '../types'
+import { AsideItem, Icon, isExternal } from '../types'
 
 const props = defineProps<{ Aside_Data: AsideItem[] }>()
 </script>
@@ -17,7 +17,33 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       rel="noopener"
       class="aside-class"
     >
-      <img :src="aside.icon" width="22" height="22" :alt="aside.activity || aside.name" />
+      <template v-if="aside.icon">
+        <Icon
+          v-if="typeof aside.icon === 'object'"
+          :icon="aside.icon.light"
+          :style="{ color: typeof aside.color === 'object' ? aside.color.light : aside.color }"
+          :alt="aside.name"
+          class="iconify light-only"
+        />
+        <Icon
+          v-if="typeof aside.icon === 'object'"
+          :icon="aside.icon.dark"
+          :style="{ color: typeof aside.color === 'object' ? aside.color.dark : aside.color }"
+          :alt="aside.name"
+          class="iconify dark-only"
+        />
+        <Icon v-else :icon="aside.icon" :style="{ color: aside.color }" :alt="aside.name" class="iconify" />
+      </template>
+      <template v-else-if="aside.image">
+        <img
+          v-if="typeof aside.image === 'object'"
+          :src="aside.image.light"
+          :alt="aside.name"
+          class="icon light-only"
+        />
+        <img v-if="typeof aside.image === 'object'" :src="aside.image.dark" :alt="aside.name" class="icon dark-only" />
+        <img v-else :src="aside.image" :alt="aside.name" class="icon" />
+      </template>
       <span>
         <template v-if="aside.activity">
           <p class="activity" v-html="aside.activity"></p>
@@ -39,6 +65,14 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 </template>
 
 <style scoped>
+/**
+ * 处理不同模式下的图标显示：暗色模式下隐藏浅色图标，浅色模式下隐藏暗色图标。
+ */
+:root:not(.dark) .dark-only,
+:root:is(.dark) .light-only {
+  display: none;
+}
+
 .aside-class {
   display: flex;
   position: relative;
@@ -65,7 +99,8 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   margin-bottom: 1rem;
 }
 
-.aside-class:hover img {
+.aside-class:hover .icon,
+.aside-class:hover .iconify {
   transform: scale(1.75);
 }
 
@@ -81,9 +116,17 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   border-color: var(--vp-c-brand-1);
 }
 
-.aside-class img {
+.aside-class .icon {
   transform: scale(1.25);
   transition: transform 0.5s;
+  width: 1.5em;
+}
+
+.aside-class .iconify {
+  flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
+  transform: scale(1.25);
+  transition: transform 0.5s;
+  font-size: 1.5em;
 }
 
 .aside-class .hide {

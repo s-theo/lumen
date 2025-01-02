@@ -64,8 +64,12 @@ export interface BoxCubeItem {
 export interface AsideItem {
   /** 链接地址。 */
   link: string
-  /** 图标地址。 */
-  icon: string
+  /** 图标的颜色。 */
+  color?: string | { light: string; dark: string }
+  /** 图标名称，支持 `iconify`。 */
+  icon?: string | { light: string; dark: string }
+  /** 图片地址或包含 light 和 dark 模式的对象。 */
+  image?: string | { light: string; dark: string }
   /** 名称。 */
   name?: string
   /** 活动名称。 */
