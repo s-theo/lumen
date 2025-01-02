@@ -44,8 +44,8 @@ export const Aside_Data: AsideItem[] = [
   },
   {
     link: 'https://doc.theojs.cn/serve/sharing/Account-sharing-guide',
-    icon: { light: 'simple-icons:netflix', dark: 'simple-icons:youtube' },
-    color: { light: '#E50914', dark: '#FF0000' },
+    icon: 'cbi:netflix-alt',
+    color: '#E50914',
     name: '流媒体帐号合租',
     hide1: '流媒体账号合租',
     hide2: '共享车位'
