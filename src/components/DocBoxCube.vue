@@ -11,29 +11,42 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
       :key="boxcube.link + index"
       class="link"
       :href="boxcube.link"
-      :title="boxcube.name"
       :target="isExternal(boxcube.link) ? '_blank' : '_self'"
       rel="noopener"
+      :title="boxcube.name"
+      :aria-label="boxcube.name"
     >
       <template v-if="boxcube.icon">
         <Icon
           v-if="typeof boxcube.icon === 'object'"
           :icon="boxcube.icon.light"
-          class="iconify light-only"
           :style="{ color: typeof boxcube.color === 'object' ? boxcube.color.light : boxcube.color }"
+          :alt="boxcube.name"
+          class="iconify light-only"
         />
         <Icon
           v-if="typeof boxcube.icon === 'object'"
           :icon="boxcube.icon.dark"
-          class="iconify dark-only"
           :style="{ color: typeof boxcube.color === 'object' ? boxcube.color.dark : boxcube.color }"
+          :alt="boxcube.name"
+          class="iconify dark-only"
         />
-        <Icon v-else :icon="boxcube.icon" class="iconify" :style="{ color: boxcube.color }" />
+        <Icon v-else :icon="boxcube.icon" :style="{ color: boxcube.color }" :alt="boxcube.name" class="iconify" />
       </template>
       <template v-else-if="boxcube.image">
-        <img v-if="typeof boxcube.image === 'object'" :src="boxcube.image.light" alt="Icon" class="icon light-only" />
-        <img v-if="typeof boxcube.image === 'object'" :src="boxcube.image.dark" alt="Icon" class="icon dark-only" />
-        <img v-else :src="boxcube.image" alt="Icon" class="icon" />
+        <img
+          v-if="typeof boxcube.image === 'object'"
+          :src="boxcube.image.light"
+          :alt="boxcube.name"
+          class="icon light-only"
+        />
+        <img
+          v-if="typeof boxcube.image === 'object'"
+          :src="boxcube.image.dark"
+          :alt="boxcube.name"
+          class="icon dark-only"
+        />
+        <img v-else :src="boxcube.image" :alt="boxcube.name" class="icon" />
       </template>
       <span class="name">{{ boxcube.name }}</span>
       <span class="desc">{{ boxcube.desc }}</span>

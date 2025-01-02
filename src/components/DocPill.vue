@@ -8,29 +8,32 @@ const pill = defineProps<Pill>()
   <a
     :href="pill.link"
     :title="pill.name"
-    class="pill"
+    :aria-label="pill.name"
     :target="isExternal(pill.link) ? '_blank' : '_self'"
     rel="noopener"
+    class="pill"
   >
     <template v-if="pill.icon">
       <Icon
         v-if="typeof pill.icon === 'object'"
         :icon="pill.icon.light"
-        class="iconify light-only"
         :style="{ color: typeof pill.color === 'object' ? pill.color.light : pill.color }"
+        :alt="pill.name"
+        class="iconify light-only"
       />
       <Icon
         v-if="typeof pill.icon === 'object'"
         :icon="pill.icon.dark"
-        class="iconify dark-only"
         :style="{ color: typeof pill.color === 'object' ? pill.color.dark : pill.color }"
+        :alt="pill.name"
+        class="iconify dark-only"
       />
-      <Icon v-else :icon="pill.icon" class="iconify" :style="{ color: pill.color }" />
+      <Icon v-else :icon="pill.icon" :style="{ color: pill.color }" :alt="pill.name" class="iconify" />
     </template>
     <template v-else-if="pill.image">
-      <img v-if="typeof pill.image === 'object'" :src="pill.image.light" alt="Icon" class="icon light-only" />
-      <img v-if="typeof pill.image === 'object'" :src="pill.image.dark" alt="Icon" class="icon dark-only" />
-      <img v-else :src="pill.image" alt="Icon" class="icon" />
+      <img v-if="typeof pill.image === 'object'" :src="pill.image.light" :alt="pill.name" class="icon light-only" />
+      <img v-if="typeof pill.image === 'object'" :src="pill.image.dark" :alt="pill.name" class="icon dark-only" />
+      <img v-else :src="pill.image" :alt="pill.name" class="icon" />
     </template>
     <span class="name">{{ pill.name }}</span>
   </a>
