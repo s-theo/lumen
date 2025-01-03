@@ -88,14 +88,15 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 .link {
   display: flex;
   position: relative;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid transparent;
   border-radius: 0.8rem;
   background-color: var(--vp-c-bg-alt);
-  width: 8.2rem;
-  height: 8.2rem;
+  width: 7.5rem;
+  height: 7.5rem;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
 }
@@ -104,7 +105,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   transform: translateY(-1px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-bg-alt-hover);
+  background-color: var(--vp-c-brand-soft);
 }
 
 .link:active {
@@ -126,36 +127,34 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 }
 
 .icon {
-  margin-top: -1rem;
-  height: 2.5rem;
+  height: 2.5em;
 }
 
 .iconify {
-  flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩 */
-  margin-top: -1rem;
+  flex-shrink: 0;
   color: var(--vp-c-text-1);
-  font-size: 3em;
+  font-size: 2.5em;
+}
+
+.name,
+.desc {
+  transform: translateY(0.5rem);
+  max-width: 80%;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .name {
-  position: absolute;
-  bottom: 1.25rem;
-  max-width: 80%;
-  overflow: hidden;
   font-size: 0.875rem;
+  line-height: 1.25rem;
   letter-spacing: 0.05rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .desc {
-  position: absolute;
-  bottom: 0.15rem;
-  max-width: 80%;
-  overflow: hidden;
   color: var(--vp-c-text-3);
   font-size: 0.75rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  line-height: 1rem;
 }
 </style>
