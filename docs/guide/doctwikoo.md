@@ -33,18 +33,20 @@ export const Twikoo_Data: TwikooData = {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-import { h } from 'vue'// [!code ++]
 
-import { Twikoo } from '@theojs/lumen'// [!code ++]
-import { Twikoo_Data } from '../data'// [!code ++]
+import { h } from 'vue' // [!code ++]
+
+import { Twikoo } from '@theojs/lumen' // [!code ++]
+
+import { Twikoo_Data } from '../data' // [!code ++]
 
 export default {
   extends: DefaultTheme,
-  Layout() {// [!code ++]
-    return h(DefaultTheme.Layout, null, {// [!code ++]
-       'doc-after': () => h(Twikoo, { Twikoo_Data }) // [!code ++]
+  Layout() { // [!code ++]
+    return h(DefaultTheme.Layout, null, { // [!code ++]
+      'doc-after': () => h(Twikoo, { Twikoo_Data }) // [!code ++]
     }) // [!code ++]
-  }// [!code ++]
+  } // [!code ++]
   ...
 }
 ```
@@ -53,15 +55,16 @@ export default {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-import { h } from 'vue'// [!code ++]
 
-import { Twikoo } from '@theojs/lumen'// [!code ++]
+import { h } from 'vue' // [!code ++]
+
+import { Twikoo } from '@theojs/lumen' // [!code ++]
 
 export default {
   extends: DefaultTheme,
-  enhanceApp: ({ app }) => {// [!code ++]
-    app.component('Twikoo', Twikoo)// [!code ++]
-  }// [!code ++]
+  enhanceApp: ({ app }) => { // [!code ++]
+    app.component('Twikoo', Twikoo) // [!code ++]
+  } // [!code ++]
   ...
 }
 ```

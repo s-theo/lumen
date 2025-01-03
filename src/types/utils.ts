@@ -20,7 +20,8 @@ export const usePrelink = (): Prelink | undefined => {
  * @param link - 要判断的链接字符串。
  * @returns 如果链接是外部链接，则返回 `true`，否则返回 `false`。
  */
-export const isExternal = (link: string): boolean => /^(?:[a-z]+:|\/\/)/i.test(link)
+export const isExternal = (link: string): boolean =>
+  /^(?:[a-z]+:|\/\/)/i.test(link)
 
 /**
  * 初始化 Twikoo 评论系统。
@@ -58,8 +59,12 @@ export const initTwikoo = async (envId: string): Promise<void> => {
  */
 export const moveDomElements = () => {
   onMounted(() => {
-    const targetElement = document.querySelector('.VPHero .text') as HTMLElement | null
-    const sourceElement = document.querySelector('#hero-text') as HTMLElement | null
+    const targetElement = document.querySelector(
+      '.VPHero .text'
+    ) as HTMLElement | null
+    const sourceElement = document.querySelector(
+      '#hero-text'
+    ) as HTMLElement | null
 
     if (targetElement && sourceElement) {
       targetElement.innerHTML = ''
@@ -100,7 +105,8 @@ export const useCopyLink = () => {
  */
 export const video = {
   bilibili: {
-    src: (id: string) => `https://player.bilibili.com/player.html?bvid=${id}&autoplay=0`,
+    src: (id: string) =>
+      `https://player.bilibili.com/player.html?bvid=${id}&autoplay=0`,
     title: 'Bilibili video player'
   },
   tencent: {
@@ -173,7 +179,8 @@ export const getVideoConfig = (props: VideoProps) => {
 /**
  * 用于生成当前 VitePress 页面分享链接的工具函数。
  *
- * 使用 VitePress 的 `useRouter` 获取当前路由，并根据路径生成完整的分享链接。 自动去除语言前缀（如 `/en/` 或 `/zh/`）。
+ * 使用 VitePress 的 `useRouter` 获取当前路由，并根据路径生成完整的分享链接。 自动去除语言前缀（如 `/en/` 或
+ * `/zh/`）。
  *
  * @returns 当前页面的分享链接。
  */

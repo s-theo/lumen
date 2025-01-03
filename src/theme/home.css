@@ -4,8 +4,16 @@
 
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(225deg, var(--c-yellow-2) 30%, var(--c-green-1));
-  --vp-home-hero-image-background-image: -webkit-linear-gradient(45deg, var(--c-yellow-2) 65%, var(--c-green-1) 30%);
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    225deg,
+    var(--c-yellow-2) 30%,
+    var(--c-green-1)
+  );
+  --vp-home-hero-image-background-image: -webkit-linear-gradient(
+    45deg,
+    var(--c-yellow-2) 65%,
+    var(--c-green-1) 30%
+  );
   --vp-home-hero-image-filter: blur(40px);
 }
 
@@ -22,5 +30,9 @@
 }
 
 html.dark:root {
-  --vp-home-hero-name-background: -webkit-linear-gradient(45deg, var(--c-yellow-2) 30%, var(--c-green-1));
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    45deg,
+    var(--c-yellow-2) 30%,
+    var(--c-green-1)
+  );
 }

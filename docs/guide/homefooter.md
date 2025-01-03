@@ -48,18 +48,20 @@ export const Footer_Data: FooterData = {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-import { h } from 'vue'// [!code ++]
 
-import { HomeFooter } from '@theojs/lumen'// [!code ++]
-import { Footer_Data } from '../data/footerData'// [!code ++]
+import { h } from 'vue' // [!code ++]
+
+import { HomeFooter } from '@theojs/lumen' // [!code ++]
+
+import { Footer_Data } from '../data/footerData' // [!code ++]
 
 export default {
   extends: DefaultTheme,
-  Layout() {// [!code ++]
-    return h(DefaultTheme.Layout, null, {// [!code ++]
+  Layout() { // [!code ++]
+    return h(DefaultTheme.Layout, null, { // [!code ++]
       'layout-bottom': () => h(HomeFooter, { Footer_Data }) // [!code ++]
     }) // [!code ++]
-  }// [!code ++]
+  } // [!code ++]
   ...
 }
 ```

@@ -13,13 +13,15 @@ title: 视频组件
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
+
 import { DocVideoLink } from '@theojs/lumen' // [!code ++]
 
 export default {
-  ...
+  extends: DefaultTheme,
   enhanceApp: ({ app }) => { // [!code ++]
     app.component('Vid', DocVideoLink) // [!code ++]
   } // [!code ++]
+  ...
 }
 ```
 
@@ -57,7 +59,9 @@ vimeo 视频
 
 ```vue
 <Vid src="https://geo.dailymotion.com/player.html?video=x7z0ovx" />
-<Vid src="https://download.blender.org/durian/trailer/sintel_trailer-720p.mp4" />
+<Vid
+  src="https://download.blender.org/durian/trailer/sintel_trailer-720p.mp4"
+/>
 ```
 
 ## 数据接口说明
