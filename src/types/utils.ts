@@ -59,12 +59,8 @@ export const initTwikoo = async (envId: string): Promise<void> => {
  */
 export const moveDomElements = () => {
   onMounted(() => {
-    const targetElement = document.querySelector(
-      '.VPHero .text'
-    ) as HTMLElement | null
-    const sourceElement = document.querySelector(
-      '#hero-text'
-    ) as HTMLElement | null
+    const targetElement = document.querySelector('.VPHero .text')
+    const sourceElement = document.querySelector('#hero-text')
 
     if (targetElement && sourceElement) {
       targetElement.innerHTML = ''
