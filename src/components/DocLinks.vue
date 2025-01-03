@@ -104,6 +104,10 @@ const props = defineProps<{ items: LinkItem[] }>()
   background-color: var(--vp-c-bg-alt-hover);
 }
 
+.link:active {
+  transform: scale(0.9);
+}
+
 .icon,
 .iconify {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */

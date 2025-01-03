@@ -11,7 +11,7 @@ const pill = defineProps<Pill>()
     :aria-label="pill.name"
     :target="isExternal(pill.link) ? '_blank' : '_self'"
     rel="noopener"
-    class="pill"
+    class="link"
   >
     <template v-if="pill.icon">
       <Icon
@@ -68,7 +68,7 @@ const pill = defineProps<Pill>()
   display: none;
 }
 
-.pill {
+.link {
   display: inline-flex;
   align-items: center;
   transform: translateY(1px);
@@ -82,11 +82,15 @@ const pill = defineProps<Pill>()
   white-space: nowrap;
 }
 
-.pill:hover {
+.link:hover {
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-1);
   background-color: var(--pill-bg-hover);
+}
+
+.link:active {
+  transform: scale(0.9);
 }
 
 .icon {

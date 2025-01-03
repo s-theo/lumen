@@ -5,12 +5,12 @@ const props = defineProps<{ items: BoxItem[] }>()
 </script>
 
 <template>
-  <div class="box-container">
+  <div class="container">
     <a
       v-for="(box, index) in props.items"
       :key="box.link + index"
       :href="box.link"
-      class="box"
+      class="link"
       :target="isExternal(box.link) ? '_blank' : '_self'"
       rel="noopener"
       :title="box.name"
@@ -73,13 +73,13 @@ const props = defineProps<{ items: BoxItem[] }>()
   display: none;
 }
 
-.box-container {
+.container {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-.box {
+.link {
   display: flex;
   position: relative;
   align-items: center;
@@ -93,22 +93,26 @@ const props = defineProps<{ items: BoxItem[] }>()
   text-decoration: none !important;
 }
 
-.box:hover {
+.link:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-1);
   background-color: var(--vp-c-bg-alt-hover);
 }
 
+.link:active {
+  transform: scale(0.9);
+}
+
 @media (max-width: 1024px) {
-  .box {
+  .link {
     flex: 1 1 calc(50% - 0.5rem);
     max-width: calc(50% - 0.5rem);
   }
 }
 
 @media (max-width: 768px) {
-  .box {
+  .link {
     flex: 1 1 calc(50% - 0.5rem);
     max-width: calc(50% - 0.5rem);
   }
@@ -136,7 +140,7 @@ const props = defineProps<{ items: BoxItem[] }>()
 
 .iconify {
   display: flex;
-  flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   margin: 0 -0.1em 0 -0.1em;
