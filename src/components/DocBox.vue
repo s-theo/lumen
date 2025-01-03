@@ -49,14 +49,22 @@ const props = defineProps<{ items: BoxItem[] }>()
           :src="box.image.light"
           :alt="box.name"
           class="icon light-only"
+          loading="lazy"
         />
         <img
           v-if="typeof box.image === 'object'"
           :src="box.image.dark"
           :alt="box.name"
           class="icon dark-only"
+          loading="lazy"
         />
-        <img v-else :src="box.image" :alt="box.name" class="icon" />
+        <img
+          v-else
+          :src="box.image"
+          :alt="box.name"
+          class="icon"
+          loading="lazy"
+        />
       </template>
       <span class="name">{{ box.name }}</span>
       <span v-if="box.tag" class="tag">{{ box.tag }}</span>
