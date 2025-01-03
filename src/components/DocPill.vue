@@ -11,7 +11,7 @@ const pill = defineProps<Pill>()
     :title="pill.name"
     :aria-label="pill.name"
     :target="isExternal(pill.link) ? '_blank' : '_self'"
-    rel="noopener"
+    rel="noopener noreferrer"
   >
     <template v-if="pill.icon">
       <Icon
@@ -22,6 +22,7 @@ const pill = defineProps<Pill>()
           color: typeof pill.color === 'object' ? pill.color.light : pill.color
         }"
         :alt="pill.name"
+        aria-hidden="true"
       />
       <Icon
         v-if="typeof pill.icon === 'object'"
@@ -31,6 +32,7 @@ const pill = defineProps<Pill>()
           color: typeof pill.color === 'object' ? pill.color.dark : pill.color
         }"
         :alt="pill.name"
+        aria-hidden="true"
       />
       <Icon
         v-else
@@ -38,6 +40,7 @@ const pill = defineProps<Pill>()
         :icon="pill.icon"
         :style="{ color: pill.color }"
         :alt="pill.name"
+        aria-hidden="true"
       />
     </template>
     <template v-else-if="pill.image">
@@ -47,6 +50,7 @@ const pill = defineProps<Pill>()
         :src="pill.image.light"
         :alt="pill.name"
         loading="lazy"
+        aria-hidden="true"
       />
       <img
         v-if="typeof pill.image === 'object'"
@@ -54,6 +58,7 @@ const pill = defineProps<Pill>()
         :src="pill.image.dark"
         :alt="pill.name"
         loading="lazy"
+        aria-hidden="true"
       />
       <img
         v-else
@@ -61,6 +66,7 @@ const pill = defineProps<Pill>()
         :src="pill.image"
         :alt="pill.name"
         loading="lazy"
+        aria-hidden="true"
       />
     </template>
     <span class="name">{{ pill.name }}</span>

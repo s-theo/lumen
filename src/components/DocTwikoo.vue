@@ -37,5 +37,10 @@ watch(
 </script>
 
 <template>
-  <div id="twikoo" class="comment-container vp-raw"></div>
+  <div
+    id="twikoo"
+    class="comment-container vp-raw"
+    role="region"
+    aria-label="用户评论区域"
+  ></div>
 </template>

@@ -15,6 +15,7 @@ const videoConfig = computed(() => getVideoConfig(props))
       class="video-iframe"
       loading="lazy"
       v-bind="{
+        'aria-label': videoConfig.title,
         src:
           typeof videoConfig.src === 'function'
             ? videoConfig.src(props.id)

@@ -12,9 +12,9 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
       class="link"
       :href="boxcube.link"
       :target="isExternal(boxcube.link) ? '_blank' : '_self'"
-      rel="noopener"
       :title="boxcube.name"
       :aria-label="boxcube.name"
+      rel="noopener noreferrer"
     >
       <template v-if="boxcube.icon">
         <Icon
@@ -28,6 +28,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
                 : boxcube.color
           }"
           :alt="boxcube.name"
+          aria-hidden="true"
         />
         <Icon
           v-if="typeof boxcube.icon === 'object'"
@@ -40,6 +41,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
                 : boxcube.color
           }"
           :alt="boxcube.name"
+          aria-hidden="true"
         />
         <Icon
           v-else
@@ -47,6 +49,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           :icon="boxcube.icon"
           :style="{ color: boxcube.color }"
           :alt="boxcube.name"
+          aria-hidden="true"
         />
       </template>
       <template v-else-if="boxcube.image">
@@ -56,6 +59,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           :src="boxcube.image.light"
           :alt="boxcube.name"
           loading="lazy"
+          aria-hidden="true"
         />
         <img
           v-if="typeof boxcube.image === 'object'"
@@ -63,6 +67,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           :src="boxcube.image.dark"
           :alt="boxcube.name"
           loading="lazy"
+          aria-hidden="true"
         />
         <img
           v-else
@@ -70,10 +75,11 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           :src="boxcube.image"
           :alt="boxcube.name"
           loading="lazy"
+          aria-hidden="true"
         />
       </template>
       <span class="name">{{ boxcube.name }}</span>
-      <span class="desc">{{ boxcube.desc }}</span>
+      <span v-if="boxcube.desc" class="desc">{{ boxcube.desc }}</span>
     </a>
   </div>
 </template>

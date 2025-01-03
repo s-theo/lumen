@@ -16,12 +16,19 @@ const shareLink = useShareLink()
     <button
       class="share-link-button"
       :class="{ copied }"
+      :aria-label="
+        copied
+          ? ShareButton.copiedText || '链接已复制!'
+          : ShareButton.buttonText || '分享此页面'
+      "
+      aria-live="polite"
       @click="copyLink(shareLink)"
     >
       <span v-if="!copied">
         <Icon
           class="iconify"
           :icon="ShareButton.buttonIcon || 'solar:share-bold'"
+          aria-hidden="true"
         />
         {{ ShareButton.buttonText || '分享此页面' }}
       </span>
@@ -30,6 +37,7 @@ const shareLink = useShareLink()
         <Icon
           class="iconify"
           :icon="ShareButton.copiedIcon || 'mdi:thumbs-up'"
+          aria-hidden="true"
         />
         {{ ShareButton.copiedText || '链接已复制!' }}
       </span>
