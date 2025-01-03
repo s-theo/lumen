@@ -50,14 +50,22 @@ const props = defineProps<{ items: LinkItem[] }>()
           :src="link.image.light"
           :alt="link.name"
           class="icon light-only"
+          loading="lazy"
         />
         <img
           v-if="typeof link.image === 'object'"
           :src="link.image.dark"
           :alt="link.name"
           class="icon dark-only"
+          loading="lazy"
         />
-        <img v-else :src="link.image" :alt="link.name" class="icon" />
+        <img
+          v-else
+          :src="link.image"
+          :alt="link.name"
+          class="icon"
+          loading="lazy"
+        />
       </template>
       <template v-else>
         <Icon

@@ -55,14 +55,22 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           :src="boxcube.image.light"
           :alt="boxcube.name"
           class="icon light-only"
+          loading="lazy"
         />
         <img
           v-if="typeof boxcube.image === 'object'"
           :src="boxcube.image.dark"
           :alt="boxcube.name"
           class="icon dark-only"
+          loading="lazy"
         />
-        <img v-else :src="boxcube.image" :alt="boxcube.name" class="icon" />
+        <img
+          v-else
+          :src="boxcube.image"
+          :alt="boxcube.name"
+          class="icon"
+          loading="lazy"
+        />
       </template>
       <span class="name">{{ boxcube.name }}</span>
       <span class="desc">{{ boxcube.desc }}</span>
