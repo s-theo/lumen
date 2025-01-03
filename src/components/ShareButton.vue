@@ -14,22 +14,22 @@ const shareLink = useShareLink()
 <template>
   <div class="share-link-container">
     <button
-      @click="copyLink(shareLink)"
       class="share-link-button"
       :class="{ copied }"
+      @click="copyLink(shareLink)"
     >
       <span v-if="!copied">
         <Icon
-          :icon="ShareButton.buttonIcon || 'solar:share-bold'"
           class="iconify"
+          :icon="ShareButton.buttonIcon || 'solar:share-bold'"
         />
         {{ ShareButton.buttonText || '分享此页面' }}
       </span>
 
       <span v-else>
         <Icon
-          :icon="ShareButton.copiedIcon || 'mdi:thumbs-up'"
           class="iconify"
+          :icon="ShareButton.copiedIcon || 'mdi:thumbs-up'"
         />
         {{ ShareButton.copiedText || '链接已复制!' }}
       </span>
