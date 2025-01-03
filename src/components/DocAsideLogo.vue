@@ -15,7 +15,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       :aria-label="aside.activity || aside.name"
       :target="isExternal(aside.link) ? '_blank' : '_self'"
       rel="noopener"
-      class="aside-class"
+      class="link"
     >
       <template v-if="aside.icon">
         <Icon
@@ -90,7 +90,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   display: none;
 }
 
-.aside-class {
+.link {
   display: flex;
   position: relative;
   justify-content: center;
@@ -107,46 +107,50 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   line-height: 1rem;
 }
 
-.aside-class:hover {
+.link:hover {
   transform: translateY(-1px);
   background-color: var(--vp-c-bg-alt-hover);
 }
 
-.aside-class:last-of-type {
+.link:active {
+  transform: scale(0.9);
+}
+
+.link:last-of-type {
   margin-bottom: 1rem;
 }
 
-.aside-class:hover .icon,
-.aside-class:hover .iconify {
+.link:hover .icon,
+.link:hover .iconify {
   transform: scale(1.75);
 }
 
-.aside-class:hover .hide {
+.link:hover .hide {
   opacity: 0.9;
 }
 
-.aside-class:hover.has-activity {
+.link:hover.has-activity {
   border-color: rgba(100, 108, 255, 1);
 }
 
-.aside-class:hover.has-name {
+.link:hover.has-name {
   border-color: var(--vp-c-brand-1);
 }
 
-.aside-class .icon {
+.link .icon {
   transform: scale(1.25);
   transition: transform 0.5s;
   width: 1.5em;
 }
 
-.aside-class .iconify {
+.link .iconify {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
   transform: scale(1.25);
   transition: transform 0.5s;
   font-size: 1.5em;
 }
 
-.aside-class .hide {
+.link .hide {
   opacity: 0;
   transition: opacity 0.5s;
   color: var(--vp-c-text-2);
@@ -154,12 +158,12 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   font-size: 0.75rem;
 }
 
-.aside-class .info {
+.link .info {
   color: var(--vp-c-text-2);
   font-size: 0.75rem;
 }
 
-.aside-class .name {
+.link .name {
   background-image: linear-gradient(
     292deg,
     var(--vp-c-brand-3) 16%,
@@ -171,7 +175,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   -webkit-text-fill-color: transparent;
 }
 
-.aside-class .activity {
+.link .activity {
   background-image: linear-gradient(
     292deg,
     rgba(176, 71, 255, 1) 16%,
