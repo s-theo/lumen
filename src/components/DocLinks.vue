@@ -14,7 +14,7 @@ const props = defineProps<{ items: LinkItem[] }>()
       :title="link.name"
       :aria-label="link.name"
       :target="isExternal(link.link) ? '_blank' : '_self'"
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       <template v-if="link.icon">
         <Icon
@@ -26,6 +26,7 @@ const props = defineProps<{ items: LinkItem[] }>()
               typeof link.color === 'object' ? link.color.light : link.color
           }"
           :alt="link.name"
+          aria-hidden="true"
         />
         <Icon
           v-if="typeof link.icon === 'object'"
@@ -35,6 +36,7 @@ const props = defineProps<{ items: LinkItem[] }>()
             color: typeof link.color === 'object' ? link.color.dark : link.color
           }"
           :alt="link.name"
+          aria-hidden="true"
         />
         <Icon
           v-else
@@ -42,6 +44,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           :icon="link.icon"
           :style="{ color: link.color }"
           :alt="link.name"
+          aria-hidden="true"
         />
       </template>
       <template v-else-if="link.image">
@@ -51,6 +54,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           :src="link.image.light"
           :alt="link.name"
           loading="lazy"
+          aria-hidden="true"
         />
         <img
           v-if="typeof link.image === 'object'"
@@ -58,6 +62,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           :src="link.image.dark"
           :alt="link.name"
           loading="lazy"
+          aria-hidden="true"
         />
         <img
           v-else
@@ -65,13 +70,15 @@ const props = defineProps<{ items: LinkItem[] }>()
           :src="link.image"
           :alt="link.name"
           loading="lazy"
+          aria-hidden="true"
         />
       </template>
       <template v-else>
         <Icon
           class="default-icon"
-          alt="Icon"
+          alt="Default Icon"
           icon="fa6-solid:arrow-up-right-from-square"
+          aria-hidden="true"
         />
       </template>
       <div class="text-content">
