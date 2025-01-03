@@ -9,69 +9,69 @@ const props = defineProps<{ items: LinkItem[] }>()
     <a
       v-for="(link, index) in props.items"
       :key="link.link + index"
+      class="link"
       :href="link.link"
       :title="link.name"
       :aria-label="link.name"
       :target="isExternal(link.link) ? '_blank' : '_self'"
       rel="noopener"
-      class="link"
     >
       <template v-if="link.icon">
         <Icon
           v-if="typeof link.icon === 'object'"
+          class="iconify light-only"
           :icon="link.icon.light"
           :style="{
             color:
               typeof link.color === 'object' ? link.color.light : link.color
           }"
           :alt="link.name"
-          class="iconify light-only"
         />
         <Icon
           v-if="typeof link.icon === 'object'"
+          class="iconify dark-only"
           :icon="link.icon.dark"
           :style="{
             color: typeof link.color === 'object' ? link.color.dark : link.color
           }"
           :alt="link.name"
-          class="iconify dark-only"
         />
         <Icon
           v-else
+          class="iconify"
           :icon="link.icon"
           :style="{ color: link.color }"
           :alt="link.name"
-          class="iconify"
         />
       </template>
       <template v-else-if="link.image">
         <img
           v-if="typeof link.image === 'object'"
+          class="icon light-only"
           :src="link.image.light"
           :alt="link.name"
-          class="icon light-only"
           loading="lazy"
         />
         <img
           v-if="typeof link.image === 'object'"
+          class="icon dark-only"
           :src="link.image.dark"
           :alt="link.name"
-          class="icon dark-only"
           loading="lazy"
         />
         <img
           v-else
+          class="icon"
           :src="link.image"
           :alt="link.name"
-          class="icon"
           loading="lazy"
         />
       </template>
       <template v-else>
         <Icon
           class="default-icon"
-          icon="fa6-solid:arrow-up-right-from-square"
           alt="Icon"
+          icon="fa6-solid:arrow-up-right-from-square"
         />
       </template>
       <div class="text-content">
