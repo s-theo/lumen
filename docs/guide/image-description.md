@@ -27,16 +27,16 @@ yarn add -D @mdit/plugin-figure
 
 ```ts [.vitepress/config.mts]
 import { defineConfig } from 'vitepress'
-import { fileURLToPath, URL } from 'node:url'
+
 import { figure } from '@mdit/plugin-figure' // [!code ++]
 
 export default defineConfig({
-  markdown: {// [!code ++]
+  markdown: { // [!code ++]
     config: (md) => { // [!code ++]
       md.use(figure, { figcaption: 'alt', copyAttrs: '^class$', lazy: true }) // [!code ++]
     } // [!code ++]
   } // [!code ++]
- ...
+  ...
 })
 ```
 
