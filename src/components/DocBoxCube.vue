@@ -107,6 +107,10 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   background-color: var(--vp-c-bg-alt-hover);
 }
 
+.link:active {
+  transform: scale(0.9);
+}
+
 @media (max-width: 1024px) {
   .link {
     flex: 1 1 calc(25% - 0.5rem);

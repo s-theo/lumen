@@ -79,6 +79,10 @@ const shareLink = useShareLink()
   background-color: var(--vp-c-bg-alt-hover);
 }
 
+.share-link-button:active {
+  transform: scale(0.9);
+}
+
 .share-link-button:focus {
   outline: 2px solid var(--vp-c-brand-2);
   outline-offset: 2px;
