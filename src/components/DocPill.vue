@@ -46,14 +46,22 @@ const pill = defineProps<Pill>()
         :src="pill.image.light"
         :alt="pill.name"
         class="icon light-only"
+        loading="lazy"
       />
       <img
         v-if="typeof pill.image === 'object'"
         :src="pill.image.dark"
         :alt="pill.name"
         class="icon dark-only"
+        loading="lazy"
       />
-      <img v-else :src="pill.image" :alt="pill.name" class="icon" />
+      <img
+        v-else
+        :src="pill.image"
+        :alt="pill.name"
+        class="icon"
+        loading="lazy"
+      />
     </template>
     <span class="name">{{ pill.name }}</span>
   </a>

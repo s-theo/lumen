@@ -52,14 +52,22 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :src="aside.image.light"
           :alt="aside.name"
           class="icon light-only"
+          loading="lazy"
         />
         <img
           v-if="typeof aside.image === 'object'"
           :src="aside.image.dark"
           :alt="aside.name"
           class="icon dark-only"
+          loading="lazy"
         />
-        <img v-else :src="aside.image" :alt="aside.name" class="icon" />
+        <img
+          v-else
+          :src="aside.image"
+          :alt="aside.name"
+          class="icon"
+          loading="lazy"
+        />
       </template>
       <span>
         <template v-if="aside.activity">
