@@ -76,7 +76,7 @@ const shareLink = useShareLink()
 .share-link-button:hover {
   transform: translateY(-1px);
   border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-bg-alt-hover);
+  background-color: var(--vp-c-brand-soft);
 }
 
 .share-link-button:active {

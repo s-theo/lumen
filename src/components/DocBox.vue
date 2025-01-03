@@ -83,6 +83,7 @@ const props = defineProps<{ items: BoxItem[] }>()
   display: flex;
   position: relative;
   align-items: center;
+  gap: 1rem;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid transparent;
   border-radius: 0.8rem;
@@ -97,7 +98,7 @@ const props = defineProps<{ items: BoxItem[] }>()
   transform: translateY(-1px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-bg-alt-hover);
+  background-color: var(--vp-c-brand-soft);
 }
 
 .link:active {
@@ -132,24 +133,16 @@ const props = defineProps<{ items: BoxItem[] }>()
 }
 
 .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 2em;
+  height: 2.4em;
 }
 
 .iconify {
-  display: flex;
   flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  margin: 0 -0.1em 0 -0.1em;
   color: var(--vp-c-text-1);
   font-size: 2.4em;
 }
 
 .name {
-  margin-left: 1rem;
   overflow: hidden;
   font-size: 0.875rem;
   letter-spacing: 0.05rem;

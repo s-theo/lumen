@@ -109,7 +109,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 
 .link:hover {
   transform: translateY(-1px);
-  background-color: var(--vp-c-bg-alt-hover);
+  background-color: var(--vp-c-brand-soft);
 }
 
 .link:active {
