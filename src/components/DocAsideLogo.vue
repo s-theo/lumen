@@ -15,7 +15,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       :title="aside.activity || aside.name"
       :aria-label="aside.activity || aside.name"
       :target="isExternal(aside.link) ? '_blank' : '_self'"
-      rel="noopener"
+      rel="noopener noreferrer"
     >
       <template v-if="aside.icon">
         <Icon
@@ -27,6 +27,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               typeof aside.color === 'object' ? aside.color.light : aside.color
           }"
           :alt="aside.name"
+          aria-hidden="true"
         />
         <Icon
           v-if="typeof aside.icon === 'object'"
@@ -37,6 +38,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               typeof aside.color === 'object' ? aside.color.dark : aside.color
           }"
           :alt="aside.name"
+          aria-hidden="true"
         />
         <Icon
           v-else
@@ -44,6 +46,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :icon="aside.icon"
           :style="{ color: aside.color }"
           :alt="aside.name"
+          aria-hidden="true"
         />
       </template>
       <template v-else-if="aside.image">
@@ -53,6 +56,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :src="aside.image.light"
           :alt="aside.name"
           loading="lazy"
+          aria-hidden="true"
         />
         <img
           v-if="typeof aside.image === 'object'"
@@ -60,6 +64,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :src="aside.image.dark"
           :alt="aside.name"
           loading="lazy"
+          aria-hidden="true"
         />
         <img
           v-else
@@ -67,6 +72,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :src="aside.image"
           :alt="aside.name"
           loading="lazy"
+          aria-hidden="true"
         />
       </template>
       <span>

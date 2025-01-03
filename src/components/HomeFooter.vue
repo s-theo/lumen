@@ -26,6 +26,7 @@ const Year = dayjs().year()
               :icon="section.icon"
               :style="{ color: section.style }"
               :alt="section.title"
+              aria-hidden="true"
             />&nbsp;&nbsp;</template
           >{{ section.title }}
         </div>
@@ -36,6 +37,7 @@ const Year = dayjs().year()
                 :icon="link.icon"
                 :style="{ color: link.style }"
                 :alt="link.name"
+                aria-hidden="true"
               />&nbsp;
             </template>
             <a
@@ -44,7 +46,8 @@ const Year = dayjs().year()
               :title="link.name"
               :aria-label="link.name"
               :target="link.target || section.target || '_blank'"
-              rel="noopener"
+              rel="noopener noreferrer"
+              :aria-describedby="link.name ? link.name : null"
             >
               {{ link.name }}
               <Icon
@@ -56,6 +59,7 @@ const Year = dayjs().year()
                   transform: rotate(45deg);
                   font-size: 1em;
                 "
+                aria-hidden="true"
               />
             </a>
           </li>
@@ -71,12 +75,14 @@ const Year = dayjs().year()
             class="info-icon"
             alt="ICP备案"
             :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
+            aria-hidden="true"
           />&nbsp;
           <a
             href="https://beian.miit.gov.cn/"
             title="ICP备案"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
+            aria-label="ICP备案"
           >
             {{ footer.beian.icp }}
           </a>
@@ -90,12 +96,14 @@ const Year = dayjs().year()
             :icon="
               footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'
             "
+            aria-hidden="true"
           />&nbsp;
           <a
             href="https://beian.mps.gov.cn/"
             title="公安备案"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
+            aria-label="公安备案"
           >
             {{ footer.beian.police }}
           </a>
@@ -109,12 +117,14 @@ const Year = dayjs().year()
             alt="版权"
             icon="ri:copyright-line"
             style="font-size: 1em"
+            aria-hidden="true"
           />&nbsp;{{ Year }}
           <a
             title="GitHub"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             :href="footer.author?.link"
+            aria-label="GitHub"
             >{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
         </span>
