@@ -18,7 +18,9 @@ export default defineConfig({
   markdown,
 
   vue: {
-    template: { compilerOptions: { isCustomElement: (tag) => tag === 'iconify-icon' } }
+    template: {
+      compilerOptions: { isCustomElement: (tag) => tag === 'iconify-icon' }
+    }
   },
 
   vite: {
