@@ -9,63 +9,63 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
     <a
       v-for="(aside, index) in props.Aside_Data"
       :key="index"
-      :href="aside.link"
+      class="link"
       :class="{ 'has-activity': aside.activity, 'has-name': aside.name }"
+      :href="aside.link"
       :title="aside.activity || aside.name"
       :aria-label="aside.activity || aside.name"
       :target="isExternal(aside.link) ? '_blank' : '_self'"
       rel="noopener"
-      class="link"
     >
       <template v-if="aside.icon">
         <Icon
           v-if="typeof aside.icon === 'object'"
+          class="iconify light-only"
           :icon="aside.icon.light"
           :style="{
             color:
               typeof aside.color === 'object' ? aside.color.light : aside.color
           }"
           :alt="aside.name"
-          class="iconify light-only"
         />
         <Icon
           v-if="typeof aside.icon === 'object'"
+          class="iconify dark-only"
           :icon="aside.icon.dark"
           :style="{
             color:
               typeof aside.color === 'object' ? aside.color.dark : aside.color
           }"
           :alt="aside.name"
-          class="iconify dark-only"
         />
         <Icon
           v-else
+          class="iconify"
           :icon="aside.icon"
           :style="{ color: aside.color }"
           :alt="aside.name"
-          class="iconify"
         />
       </template>
       <template v-else-if="aside.image">
         <img
           v-if="typeof aside.image === 'object'"
+          class="icon light-only"
           :src="aside.image.light"
           :alt="aside.name"
-          class="icon light-only"
           loading="lazy"
         />
         <img
           v-if="typeof aside.image === 'object'"
+          class="icon dark-only"
           :src="aside.image.dark"
           :alt="aside.name"
-          class="icon dark-only"
           loading="lazy"
         />
         <img
           v-else
+          class="icon"
           :src="aside.image"
           :alt="aside.name"
-          class="icon"
           loading="lazy"
         />
       </template>

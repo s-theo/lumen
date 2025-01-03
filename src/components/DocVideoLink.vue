@@ -12,6 +12,7 @@ const videoConfig = computed(() => getVideoConfig(props))
 <template>
   <div class="video-container">
     <iframe
+      class="video-iframe"
       loading="lazy"
       v-bind="{
         src:
@@ -23,7 +24,6 @@ const videoConfig = computed(() => getVideoConfig(props))
           'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;',
         allowfullscreen: true
       }"
-      class="video-iframe"
     />
   </div>
 </template>
