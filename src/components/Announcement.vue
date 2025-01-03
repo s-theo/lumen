@@ -40,6 +40,7 @@ const prelink: Prelink | undefined = usePrelink()
   flex-direction: column;
   transition: all 0.5s ease;
   margin-bottom: 1rem;
+  border: 1px solid transparent;
   border-radius: 0.8rem;
   background-color: var(--vp-button-alt-bg);
   padding: 0.3rem 1.5rem;
@@ -47,6 +48,7 @@ const prelink: Prelink | undefined = usePrelink()
 
 .prelink:hover {
   transform: translateY(-1px);
+  border-color: var(--vp-c-brand-1);
   background-color: var(--vp-c-brand-soft);
 }
 

@@ -71,6 +71,7 @@ const pill = defineProps<Pill>()
 .link {
   display: inline-flex;
   align-items: center;
+  gap: 0.25rem;
   transform: translateY(1px);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   border: 1px solid transparent;
@@ -86,7 +87,7 @@ const pill = defineProps<Pill>()
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-1);
-  background-color: var(--pill-bg-hover);
+  background-color: var(--vp-c-brand-soft);
 }
 
 .link:active {
@@ -94,23 +95,16 @@ const pill = defineProps<Pill>()
 }
 
 .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 0.875em;
 }
 
 .iconify {
-  display: flex;
   flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
   color: var(--vp-c-text-1);
   font-size: 0.875em;
 }
 
 .name {
-  margin-left: 0.2rem;
   font-size: 0.875rem;
   letter-spacing: 0.05rem;
 }

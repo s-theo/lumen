@@ -101,7 +101,7 @@ const props = defineProps<{ items: LinkItem[] }>()
   transform: translateY(-1px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-bg-alt-hover);
+  background-color: var(--vp-c-brand-soft);
 }
 
 .link:active {
