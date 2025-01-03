@@ -5,7 +5,7 @@ plugins:
   - 'prettier-plugin-sort-json'
   - 'prettier-plugin-css-order'
 
-printWidth: 120
+printWidth: 80
 semi: false
 singleQuote: true
 trailingComma: 'none'

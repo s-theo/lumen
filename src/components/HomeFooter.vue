@@ -14,7 +14,11 @@ const Year = dayjs().year()
 <template>
   <footer class="footer">
     <div class="list-container" v-if="footer.group">
-      <div class="list-item" v-for="(section, index) in footer.group || []" :key="section.title + index">
+      <div
+        class="list-item"
+        v-for="(section, index) in footer.group || []"
+        :key="section.title + index"
+      >
         <div class="list-title">
           <template v-if="section.icon">
             <Icon
@@ -28,7 +32,11 @@ const Year = dayjs().year()
         <ul class="list-links">
           <li v-for="(link, idx) in section.links" :key="link.name + idx">
             <template v-if="link.icon">
-              <Icon :icon="link.icon" :style="{ color: link.style }" :alt="link.name" />&nbsp;
+              <Icon
+                :icon="link.icon"
+                :style="{ color: link.style }"
+                :alt="link.name"
+              />&nbsp;
             </template>
             <a
               :name="link.name"
@@ -42,7 +50,11 @@ const Year = dayjs().year()
               <Icon
                 v-if="(link.target || section.target || '_blank') === '_blank'"
                 icon="heroicons-outline:arrow-sm-up"
-                style="color: var(--vp-c-text-3); transform: rotate(45deg); font-size: 1em"
+                style="
+                  color: var(--vp-c-text-3);
+                  transform: rotate(45deg);
+                  font-size: 1em;
+                "
                 alt="External Link"
               />
             </a>
@@ -60,7 +72,12 @@ const Year = dayjs().year()
             alt="ICP备案"
             class="info-icon"
           />&nbsp;
-          <a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/" title="ICP备案">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://beian.miit.gov.cn/"
+            title="ICP备案"
+          >
             {{ footer.beian.icp }}
           </a>
         </span>
@@ -68,11 +85,18 @@ const Year = dayjs().year()
         <span v-if="footer.beian?.police">
           <Icon
             v-if="footer.beian?.showIcon"
-            :icon="footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'"
+            :icon="
+              footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'
+            "
             alt="公安备案"
             class="info-icon"
           />&nbsp;
-          <a target="_blank" rel="noopener" href="https://beian.mps.gov.cn/" title="公安备案">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://beian.mps.gov.cn/"
+            title="公安备案"
+          >
             {{ footer.beian.police }}
           </a>
         </span>
@@ -80,8 +104,18 @@ const Year = dayjs().year()
       <span class="info-spacing-copyright"></span>
       <div v-if="footer.author?.name" class="info-item">
         <span>
-          <Icon icon="ri:copyright-line" style="font-size: 1em" alt="版权" class="info-icon" />&nbsp;{{ Year }}
-          <a target="_blank" rel="noopener" title="GitHub" :href="footer.author?.link">{{ footer.author?.name }}</a
+          <Icon
+            icon="ri:copyright-line"
+            style="font-size: 1em"
+            alt="版权"
+            class="info-icon"
+          />&nbsp;{{ Year }}
+          <a
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+            :href="footer.author?.link"
+            >{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
         </span>
       </div>
@@ -128,7 +162,6 @@ const Year = dayjs().year()
 
 .list-links {
   opacity: 0.9;
-  margin: 0 0.5rem;
   line-height: 1.7rem;
 }
 

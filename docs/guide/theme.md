@@ -41,10 +41,13 @@ import '@theojs/lumen/pic'
 
 ```ts [.vitepress/config.mts]
 import { defineConfig } from 'vitepress'
+
 export default defineConfig({
-  vue: {// [!code ++]
-    template: { compilerOptions: { isCustomElement: (tag) => tag === 'iconify-icon' } }// [!code ++]
-  }// [!code ++]
+  vue: { // [!code ++]
+    template: { // [!code ++]
+      compilerOptions: { isCustomElement: (tag) => tag === 'iconify-icon' } // [!code ++]
+    } // [!code ++]
+  } // [!code ++]
   ...
 })
 ```
@@ -52,14 +55,14 @@ export default defineConfig({
 :::
 
 ```md
-<!-- 使用方法查看:https://iconify.design/docs/iconify-icon/ -->
-
 <iconify-icon icon="simple-icons:fontawesome"></iconify-icon>
 <iconify-icon icon="line-md:iconify2-static"></iconify-icon>
 <iconify-icon icon="cil:locomotive" height="36"></iconify-icon>
 <iconify-icon icon="cil:paper-plane" width="36"></iconify-icon>
 <iconify-icon icon="cil:truck" style="font-size: 18px" height="2em"></iconify-icon>
 ```
+
+<Pill name="使用方法查看: https://iconify.design/docs/iconify-icon/" link="https://iconify.design/docs/iconify-icon/" icon="line-md:iconify2-static" color="#1769AA" />
 
 ## 示例
 
@@ -249,12 +252,14 @@ console.log('Hello, VitePress!')
 <Badge type="tip" text="^1.9.0" />
 <Badge type="warning" text="beta" />
 <Badge type="danger" text="caution" />
+<Badge type="info">custom element</Badge>
 ```
 
 <Badge type="info" text="default" />
 <Badge type="tip" text="^1.9.0" />
 <Badge type="warning" text="beta" />
 <Badge type="danger" text="caution" />
+<Badge type="info">custom element</Badge>
 
 ### 图片浅色与深色模式
 

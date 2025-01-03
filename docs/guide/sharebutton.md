@@ -5,18 +5,20 @@ title: 页面分享按钮
 ## 引入组件
 
 ```ts [.vitepress/theme/index.ts]
-import DefaultTheme from 'vitepress/theme'
-import { ShareButton } from '@theojs/lumen' // [!code ++]
-import { h } from 'vue'// [!code ++]
+import DefaultTheme from 'vitepress/theme' // [!code ++]
+
+import { h } from 'vue' // [!code ++]
+
+import { ShareButton } from '@theojs/lumen'// [!code ++]
 
 export default {
   extends: DefaultTheme,
-  Layout() {// [!code ++]
-    return h(DefaultTheme.Layout, null, {// [!code ++]
-      'aside-outline-before': () => h(ShareButton),// [!code ++]
-    })// [!code ++]
-  },// [!code ++]
- ...
+  Layout() { // [!code ++]
+    return h(DefaultTheme.Layout, null, { // [!code ++]
+      'aside-outline-before': () => h(ShareButton) // [!code ++]
+    }) // [!code ++]
+  } // [!code ++]
+  ...
 }
 ```
 
@@ -24,22 +26,24 @@ export default {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-import { ShareButton } from '@theojs/lumen'
-import { h } from 'vue'
+
+import { h } from 'vue' // [!code ++]
+
+import { ShareButton } from '@theojs/lumen' // [!code ++]
 
 export default {
   extends: DefaultTheme,
-  Layout() {// [!code ++]
-    return h(DefaultTheme.Layout, null, {// [!code ++]
-      'aside-outline-before': () =>// [!code ++]
-        h(ShareButton, {// [!code ++]
+  Layout() { // [!code ++]
+    return h(DefaultTheme.Layout, null, { // [!code ++]
+      'aside-outline-before': () => // [!code ++]
+        h(ShareButton, { // [!code ++]
           buttonIcon: 'fa6-solid:share-nodes', // 自定义图标 // [!code ++]
-          buttonText: '分享此页面', // 自定义按钮文本// [!code ++]
-          copiedIcon: 'mdi:thumbs-up', // 自定义复制成功后的图标// [!code ++]
-          copiedText: '链接已复制！' // 自定义复制成功后的文本// [!code ++]
-        })// [!code ++]
-    })// [!code ++]
-  }// [!code ++]
+          buttonText: '分享此页面', // 自定义按钮文本 // [!code ++]
+          copiedIcon: 'mdi:thumbs-up', // 自定义复制成功后的图标 // [!code ++]
+          copiedText: '链接已复制！' // 自定义复制成功后的文本 // [!code ++]
+        }) // [!code ++]
+    }) // [!code ++]
+  } // [!code ++]
   ...
 }
 ```

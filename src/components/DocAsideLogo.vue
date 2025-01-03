@@ -21,18 +21,30 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
         <Icon
           v-if="typeof aside.icon === 'object'"
           :icon="aside.icon.light"
-          :style="{ color: typeof aside.color === 'object' ? aside.color.light : aside.color }"
+          :style="{
+            color:
+              typeof aside.color === 'object' ? aside.color.light : aside.color
+          }"
           :alt="aside.name"
           class="iconify light-only"
         />
         <Icon
           v-if="typeof aside.icon === 'object'"
           :icon="aside.icon.dark"
-          :style="{ color: typeof aside.color === 'object' ? aside.color.dark : aside.color }"
+          :style="{
+            color:
+              typeof aside.color === 'object' ? aside.color.dark : aside.color
+          }"
           :alt="aside.name"
           class="iconify dark-only"
         />
-        <Icon v-else :icon="aside.icon" :style="{ color: aside.color }" :alt="aside.name" class="iconify" />
+        <Icon
+          v-else
+          :icon="aside.icon"
+          :style="{ color: aside.color }"
+          :alt="aside.name"
+          class="iconify"
+        />
       </template>
       <template v-else-if="aside.image">
         <img
@@ -41,7 +53,12 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :alt="aside.name"
           class="icon light-only"
         />
-        <img v-if="typeof aside.image === 'object'" :src="aside.image.dark" :alt="aside.name" class="icon dark-only" />
+        <img
+          v-if="typeof aside.image === 'object'"
+          :src="aside.image.dark"
+          :alt="aside.name"
+          class="icon dark-only"
+        />
         <img v-else :src="aside.image" :alt="aside.name" class="icon" />
       </template>
       <span>
@@ -143,14 +160,24 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 }
 
 .aside-class .name {
-  background-image: linear-gradient(292deg, var(--vp-c-brand-3) 16%, var(--vp-c-brand-2), var(--vp-c-brand-1));
+  background-image: linear-gradient(
+    292deg,
+    var(--vp-c-brand-3) 16%,
+    var(--vp-c-brand-2),
+    var(--vp-c-brand-1)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .aside-class .activity {
-  background-image: linear-gradient(292deg, rgba(176, 71, 255, 1) 16%, rgba(100, 108, 255, 1), rgba(116, 123, 255, 1));
+  background-image: linear-gradient(
+    292deg,
+    rgba(176, 71, 255, 1) 16%,
+    rgba(100, 108, 255, 1),
+    rgba(116, 123, 255, 1)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

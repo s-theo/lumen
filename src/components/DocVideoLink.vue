@@ -14,9 +14,13 @@ const videoConfig = computed(() => getVideoConfig(props))
     <iframe
       loading="lazy"
       v-bind="{
-        src: typeof videoConfig.src === 'function' ? videoConfig.src(props.id) : videoConfig.src,
+        src:
+          typeof videoConfig.src === 'function'
+            ? videoConfig.src(props.id)
+            : videoConfig.src,
         title: videoConfig.title,
-        allow: 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;',
+        allow:
+          'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;',
         allowfullscreen: true
       }"
       class="video-iframe"

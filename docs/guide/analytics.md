@@ -37,6 +37,7 @@ export default {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
+
 import { baiduAnalytics, trackPageview } from '@theojs/lumen' // [!code ++]
 
 export default {
