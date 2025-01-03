@@ -19,6 +19,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
       <template v-if="boxcube.icon">
         <Icon
           v-if="typeof boxcube.icon === 'object'"
+          class="iconify light-only"
           :icon="boxcube.icon.light"
           :style="{
             color:
@@ -27,10 +28,10 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
                 : boxcube.color
           }"
           :alt="boxcube.name"
-          class="iconify light-only"
         />
         <Icon
           v-if="typeof boxcube.icon === 'object'"
+          class="iconify dark-only"
           :icon="boxcube.icon.dark"
           :style="{
             color:
@@ -39,36 +40,35 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
                 : boxcube.color
           }"
           :alt="boxcube.name"
-          class="iconify dark-only"
         />
         <Icon
           v-else
+          class="iconify"
           :icon="boxcube.icon"
           :style="{ color: boxcube.color }"
           :alt="boxcube.name"
-          class="iconify"
         />
       </template>
       <template v-else-if="boxcube.image">
         <img
           v-if="typeof boxcube.image === 'object'"
+          class="icon light-only"
           :src="boxcube.image.light"
           :alt="boxcube.name"
-          class="icon light-only"
           loading="lazy"
         />
         <img
           v-if="typeof boxcube.image === 'object'"
+          class="icon dark-only"
           :src="boxcube.image.dark"
           :alt="boxcube.name"
-          class="icon dark-only"
           loading="lazy"
         />
         <img
           v-else
+          class="icon"
           :src="boxcube.image"
           :alt="boxcube.name"
-          class="icon"
           loading="lazy"
         />
       </template>

@@ -37,5 +37,5 @@ watch(
 </script>
 
 <template>
-  <div class="comment-container vp-raw" id="twikoo"></div>
+  <div id="twikoo" class="comment-container vp-raw"></div>
 </template>

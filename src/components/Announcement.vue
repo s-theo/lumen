@@ -7,10 +7,10 @@ const prelink: Prelink | undefined = usePrelink()
 <template>
   <a
     v-if="prelink"
+    class="prelink"
     :href="prelink.link"
     :target="prelink.target"
     rel="noopener"
-    class="prelink"
     :title="prelink.title"
     :aria-label="prelink.title"
   >
@@ -23,9 +23,9 @@ const prelink: Prelink | undefined = usePrelink()
       ></span>
       <span v-if="prelink.date" class="time-info">
         <Icon
-          :icon="prelink.dateIcon || 'line-md:calendar'"
-          alt="Icon"
           class="iconify"
+          alt="Icon"
+          :icon="prelink.dateIcon || 'line-md:calendar'"
         ></Icon>
         <span v-html="prelink.dateText || '活动时间: 即日至'"></span>
         <span class="date">{{ prelink.date }}</span>
