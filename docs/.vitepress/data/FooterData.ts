@@ -35,7 +35,7 @@ export const Footer_Data: FooterData = {
     },
     {
       title: '合作伙伴',
-      icon: 'mdi:partnership',
+      icon: 'mdi:account-group',
       links: [
         {
           name: '青云梯',
@@ -61,7 +61,7 @@ export const Footer_Data: FooterData = {
     },
     {
       title: '观影指南',
-      icon: 'mdi:local-movies',
+      icon: 'mdi:movie',
       links: [
         {
           name: 'Netflix',
@@ -85,7 +85,7 @@ export const Footer_Data: FooterData = {
     },
     {
       title: '相关链接',
-      icon: 'mdi:link-variant',
+      icon: 'mdi:link',
       links: [
         { name: 'Theo-Docs', href: 'https://doc.theojs.cn/' },
         { name: '玄学宝典', href: 'https://xx.theojs.cn/' },

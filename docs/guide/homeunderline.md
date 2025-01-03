@@ -8,14 +8,15 @@ title: 首页下划线
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
+
 import { HomeUnderline } from '@theojs/lumen' // [!code ++]
 
 export default {
   extends: DefaultTheme,
-  enhanceApp: ({ app }) => {    // [!code ++]
+  enhanceApp: ({ app }) => { // [!code ++]
     app.component('Home', HomeUnderline) // [!code ++]
   } // [!code ++]
- ...
+  ...
 }
 ```
 
