@@ -12,9 +12,9 @@ const props = defineProps<{ items: BoxItem[] }>()
       class="link"
       :href="box.link"
       :target="isExternal(box.link) ? '_blank' : '_self'"
-      rel="noopener"
       :title="box.name"
       :aria-label="box.name"
+      rel="noopener noreferrer"
     >
       <template v-if="box.icon">
         <Icon
@@ -25,6 +25,7 @@ const props = defineProps<{ items: BoxItem[] }>()
             color: typeof box.color === 'object' ? box.color.light : box.color
           }"
           :alt="box.name"
+          aria-hidden="true"
         />
         <Icon
           v-if="typeof box.icon === 'object'"
@@ -34,6 +35,7 @@ const props = defineProps<{ items: BoxItem[] }>()
             color: typeof box.color === 'object' ? box.color.dark : box.color
           }"
           :alt="box.name"
+          aria-hidden="true"
         />
         <Icon
           v-else
@@ -41,6 +43,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           :icon="box.icon"
           :style="{ color: box.color }"
           :alt="box.name"
+          aria-hidden="true"
         />
       </template>
       <template v-else-if="box.image">
@@ -50,6 +53,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           :src="box.image.light"
           :alt="box.name"
           loading="lazy"
+          aria-hidden="true"
         />
         <img
           v-if="typeof box.image === 'object'"
@@ -57,6 +61,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           :src="box.image.dark"
           :alt="box.name"
           loading="lazy"
+          aria-hidden="true"
         />
         <img
           v-else
@@ -64,6 +69,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           :src="box.image"
           :alt="box.name"
           loading="lazy"
+          aria-hidden="true"
         />
       </template>
       <span class="name">{{ box.name }}</span>
