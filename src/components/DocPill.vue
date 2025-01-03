@@ -6,60 +6,60 @@ const pill = defineProps<Pill>()
 
 <template>
   <a
+    class="link"
     :href="pill.link"
     :title="pill.name"
     :aria-label="pill.name"
     :target="isExternal(pill.link) ? '_blank' : '_self'"
     rel="noopener"
-    class="link"
   >
     <template v-if="pill.icon">
       <Icon
         v-if="typeof pill.icon === 'object'"
+        class="iconify light-only"
         :icon="pill.icon.light"
         :style="{
           color: typeof pill.color === 'object' ? pill.color.light : pill.color
         }"
         :alt="pill.name"
-        class="iconify light-only"
       />
       <Icon
         v-if="typeof pill.icon === 'object'"
+        class="iconify dark-only"
         :icon="pill.icon.dark"
         :style="{
           color: typeof pill.color === 'object' ? pill.color.dark : pill.color
         }"
         :alt="pill.name"
-        class="iconify dark-only"
       />
       <Icon
         v-else
+        class="iconify"
         :icon="pill.icon"
         :style="{ color: pill.color }"
         :alt="pill.name"
-        class="iconify"
       />
     </template>
     <template v-else-if="pill.image">
       <img
         v-if="typeof pill.image === 'object'"
+        class="icon light-only"
         :src="pill.image.light"
         :alt="pill.name"
-        class="icon light-only"
         loading="lazy"
       />
       <img
         v-if="typeof pill.image === 'object'"
+        class="icon dark-only"
         :src="pill.image.dark"
         :alt="pill.name"
-        class="icon dark-only"
         loading="lazy"
       />
       <img
         v-else
+        class="icon"
         :src="pill.image"
         :alt="pill.name"
-        class="icon"
         loading="lazy"
       />
     </template>

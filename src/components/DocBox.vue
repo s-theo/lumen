@@ -9,8 +9,8 @@ const props = defineProps<{ items: BoxItem[] }>()
     <a
       v-for="(box, index) in props.items"
       :key="box.link + index"
-      :href="box.link"
       class="link"
+      :href="box.link"
       :target="isExternal(box.link) ? '_blank' : '_self'"
       rel="noopener"
       :title="box.name"
@@ -19,50 +19,50 @@ const props = defineProps<{ items: BoxItem[] }>()
       <template v-if="box.icon">
         <Icon
           v-if="typeof box.icon === 'object'"
+          class="iconify light-only"
           :icon="box.icon.light"
           :style="{
             color: typeof box.color === 'object' ? box.color.light : box.color
           }"
           :alt="box.name"
-          class="iconify light-only"
         />
         <Icon
           v-if="typeof box.icon === 'object'"
+          class="iconify dark-only"
           :icon="box.icon.dark"
           :style="{
             color: typeof box.color === 'object' ? box.color.dark : box.color
           }"
           :alt="box.name"
-          class="iconify dark-only"
         />
         <Icon
           v-else
+          class="iconify"
           :icon="box.icon"
           :style="{ color: box.color }"
           :alt="box.name"
-          class="iconify"
         />
       </template>
       <template v-else-if="box.image">
         <img
           v-if="typeof box.image === 'object'"
+          class="icon light-only"
           :src="box.image.light"
           :alt="box.name"
-          class="icon light-only"
           loading="lazy"
         />
         <img
           v-if="typeof box.image === 'object'"
+          class="icon dark-only"
           :src="box.image.dark"
           :alt="box.name"
-          class="icon dark-only"
           loading="lazy"
         />
         <img
           v-else
+          class="icon"
           :src="box.image"
           :alt="box.name"
-          class="icon"
           loading="lazy"
         />
       </template>

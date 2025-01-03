@@ -13,19 +13,19 @@ const Year = dayjs().year()
 
 <template>
   <footer class="footer">
-    <div class="list-container" v-if="footer.group">
+    <div v-if="footer.group" class="list-container">
       <div
-        class="list-item"
         v-for="(section, index) in footer.group || []"
         :key="section.title + index"
+        class="list-item"
       >
         <div class="list-title">
           <template v-if="section.icon">
             <Icon
+              class="iconify"
               :icon="section.icon"
               :style="{ color: section.style }"
               :alt="section.title"
-              class="iconify"
             />&nbsp;&nbsp;</template
           >{{ section.title }}
         </div>
@@ -49,13 +49,13 @@ const Year = dayjs().year()
               {{ link.name }}
               <Icon
                 v-if="(link.target || section.target || '_blank') === '_blank'"
+                alt="External Link"
                 icon="heroicons-outline:arrow-sm-up"
                 style="
                   color: var(--vp-c-text-3);
                   transform: rotate(45deg);
                   font-size: 1em;
                 "
-                alt="External Link"
               />
             </a>
           </li>
@@ -68,15 +68,15 @@ const Year = dayjs().year()
         <span v-if="footer.beian?.icp">
           <Icon
             v-if="footer.beian?.showIcon"
-            :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
-            alt="ICP备案"
             class="info-icon"
+            alt="ICP备案"
+            :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
           />&nbsp;
           <a
-            target="_blank"
-            rel="noopener"
             href="https://beian.miit.gov.cn/"
             title="ICP备案"
+            target="_blank"
+            rel="noopener"
           >
             {{ footer.beian.icp }}
           </a>
@@ -85,17 +85,17 @@ const Year = dayjs().year()
         <span v-if="footer.beian?.police">
           <Icon
             v-if="footer.beian?.showIcon"
+            class="info-icon"
+            alt="公安备案"
             :icon="
               footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'
             "
-            alt="公安备案"
-            class="info-icon"
           />&nbsp;
           <a
-            target="_blank"
-            rel="noopener"
             href="https://beian.mps.gov.cn/"
             title="公安备案"
+            target="_blank"
+            rel="noopener"
           >
             {{ footer.beian.police }}
           </a>
@@ -105,15 +105,15 @@ const Year = dayjs().year()
       <div v-if="footer.author?.name" class="info-item">
         <span>
           <Icon
+            class="info-icon"
+            alt="版权"
             icon="ri:copyright-line"
             style="font-size: 1em"
-            alt="版权"
-            class="info-icon"
           />&nbsp;{{ Year }}
           <a
+            title="GitHub"
             target="_blank"
             rel="noopener"
-            title="GitHub"
             :href="footer.author?.link"
             >{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
