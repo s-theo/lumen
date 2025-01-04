@@ -186,3 +186,34 @@ export function useShareLink(): import('vue').ComputedRef<string> {
     return `${window.location.origin}${router.route.path.replace(/^\/[a-z]{2}\//, '/')}`
   })
 }
+/**
+ * 处理点击事件，执行复制操作或者跳转。
+ *
+ * 当 `prelink.copy` 为 `true` 时，阻止默认行为并将 `prelink.install` 的内容复制到剪贴板。
+ * 如果复制操作成功，则在控制台打印成功消息。如果失败，则打印错误信息。 如果 `prelink.copy` 为 `false`
+ * 或未设置，函数不会执行复制操作，而是按正常流程进行跳转。
+ *
+ * @param event - 触发事件的鼠标事件对象。
+ * @param prelink - 包含链接信息的 `Prelink` 对象。它包含了跳转链接、复制内容等信息。
+ * @returns Void
+ */
+export function handleClick(
+  event: MouseEvent,
+  prelink: Prelink | undefined
+): void {
+  if (!prelink) return
+
+  const textToCopy = prelink.install || '没有提供可复制的内容'
+
+  if (prelink.copy) {
+    event.preventDefault()
+    navigator.clipboard
+      .writeText(prelink.install)
+      .then(() => {
+        console.log('已复制到剪贴板:', textToCopy)
+      })
+      .catch((err) => {
+        console.error('复制失败', err)
+      })
+  }
+}
