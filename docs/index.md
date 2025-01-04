@@ -22,8 +22,10 @@ hero:
     target: _blank
 
   # prelink:
-  #   title: '<iconify-icon icon="fa6-solid:bolt" style="margin-right:0.25rem;color:#63E6BE;"></iconify-icon> 快速开始 <p>pnpm add @theojs/lumen</p>'
-  #   link: /guide/getting-started
+  #   copy: true
+  #   install: 'pnpm add @theojs/lumen'
+  #   title: '<iconify-icon icon="fa6-solid:bolt" style="margin-right:0.25rem;color:#63E6BE;"></iconify-icon> 快速开始'
+  #   content: '<span style="color: var(--vp-c-brand-3); font-weight: bold;">pnpm add @theojs/lumen</span>'
 
   actions:
     - theme: brand
