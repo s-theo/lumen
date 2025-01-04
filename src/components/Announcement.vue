@@ -58,10 +58,13 @@ const prelink: Prelink | undefined = usePrelink()
   background-color: var(--vp-c-brand-soft);
 }
 
+.prelink:active {
+  transform: scale(0.98);
+}
+
 .prelink-content {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
 }
 
 .title {
