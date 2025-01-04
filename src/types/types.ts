@@ -1,3 +1,10 @@
+export interface IconImageMode {
+  /** 浅色模式下的图标和图片 */
+  light: string
+  /** 深色模式下的图标和图片 */
+  dark: string
+}
+
 /** DocBox 接口 */
 export interface BoxItem {
   /** DocBox 名称。 */
@@ -7,11 +14,11 @@ export interface BoxItem {
   /** DocBox 标签。 */
   tag?: string
   /** 图标的颜色。 */
-  color?: string | { light: string; dark: string }
-  /** 图标名称，支持 `iconify`。 */
-  icon?: string | { light: string; dark: string }
-  /** 图片地址或包含 light 和 dark 模式的对象。 */
-  image?: string | { light: string; dark: string }
+  color?: string | IconImageMode
+  /** 图标名称（支持 iconify） */
+  icon?: string | IconImageMode
+  /** 图片路径（支持 light 和 dark 模式） */
+  image?: string | IconImageMode
 }
 
 /** DocPill 接口 */
@@ -20,12 +27,12 @@ export interface Pill {
   name: string
   /** Pill 链接。 */
   link: string
-  /** 图标名称，支持 `iconify`。 */
-  icon?: string | { light: string; dark: string }
+  /** 图标名称（支持 iconify） */
+  icon?: string | IconImageMode
   /** 图标的颜色。 */
-  color?: string | { light: string; dark: string }
-  /** 图片地址或包含 light 和 dark 模式的对象。 */
-  image?: string | { light: string; dark: string }
+  color?: string | IconImageMode
+  /** 图片路径（支持 light 和 dark 模式） */
+  image?: string | IconImageMode
 }
 
 /** DocLinks 接口 */
@@ -37,11 +44,11 @@ export interface LinkItem {
   /** DocLinks 链接。 */
   link: string
   /** 图标的颜色。 */
-  color?: string | { light: string; dark: string }
-  /** 图标名称，支持 `iconify`。 */
-  icon?: string | { light: string; dark: string }
-  /** 支持单一图片地址或包含 light 和 dark 模式的对象。 */
-  image?: string | { light: string; dark: string }
+  color?: string | IconImageMode
+  /** 图标名称（支持 iconify） */
+  icon?: string | IconImageMode
+  /** 图片路径（支持 light 和 dark 模式） */
+  image?: string | IconImageMode
 }
 
 /** BoxCube 接口 */
@@ -53,11 +60,11 @@ export interface BoxCubeItem {
   /** BoxCube 描述。 */
   desc?: string
   /** 图标的颜色。 */
-  color?: string | { light: string; dark: string }
-  /** 图标名称，支持 `iconify`。 */
-  icon?: string | { light: string; dark: string }
-  /** 图片地址或包含 light 和 dark 模式的对象。 */
-  image?: string | { light: string; dark: string }
+  color?: string | IconImageMode
+  /** 图标名称（支持 iconify） */
+  icon?: string | IconImageMode
+  /** 图片路径（支持 light 和 dark 模式） */
+  image?: string | IconImageMode
 }
 
 /** DocAsideLogo 接口 */
@@ -65,11 +72,11 @@ export interface AsideItem {
   /** 链接地址。 */
   link: string
   /** 图标的颜色。 */
-  color?: string | { light: string; dark: string }
-  /** 图标名称，支持 `iconify`。 */
-  icon?: string | { light: string; dark: string }
-  /** 图片地址或包含 light 和 dark 模式的对象。 */
-  image?: string | { light: string; dark: string }
+  color?: string | IconImageMode
+  /** 图标名称（支持 iconify） */
+  icon?: string | IconImageMode
+  /** 图片路径（支持 light 和 dark 模式） */
+  image?: string | IconImageMode
   /** 名称。 */
   name?: string
   /** 活动名称。 */
@@ -120,51 +127,51 @@ export interface FooterData {
 
 /** HomeFooter Group 接口 */
 export interface Group {
-  /** 图标。 */
+  /** 图标名称（支持 iconify） */
   icon?: string
-  /** 图标样式。 */
+  /** 图标样式 */
   style?: string
-  /** 分组标题。 */
+  /** 分组标题 */
   title: string
-  /** 链接打开方式，默认 '_blank'。 */
+  /** 链接打开方式，默认 '_blank' */
   target?: string
-  /** 链接数组。 */
+  /** 链接数组 */
   links: Link[]
 }
 
 /** HomeFooter Beian 接口 */
 export interface Beian {
-  /** ICP 备案号。 */
+  /** ICP 备案号 */
   icp?: string
-  /** ICP 图标，默认为 'fluent:globe-shield-48-filled'。 */
+  /** ICP 图标，默认为 'fluent:globe-shield-48-filled' */
   icpIcon?: string
-  /** 公安备案号。 */
+  /** 公安备案号 */
   police?: string
-  /** 公安备案图标，默认为 'fluent:shield-checkmark-48-filled'。 */
+  /** 公安备案图标，默认为 'fluent:shield-checkmark-48-filled' */
   policeIcon?: string
-  /** 是否显示图标。 */
+  /** 是否显示图标 */
   showIcon?: boolean
 }
 
 /** HomeFooter Author 接口 */
 export interface Author {
-  /** 作者姓名。 */
+  /** 作者姓名 */
   name?: string
-  /** 作者链接。 */
+  /** 作者链接 */
   link?: string
 }
 
 /** HomeFooter Link 接口 */
 export interface Link {
-  /** 链接图标。 */
+  /** 链接图标 */
   icon?: string
-  /** 链接样式。 */
+  /** 链接样式 */
   style?: string
-  /** 链接名称。 */
+  /** 链接名称 */
   name: string
-  /** 链接地址。 */
+  /** 链接地址 */
   href: string
-  /** 链接打开方式，默认 '_blank'。 */
+  /** 链接打开方式，默认 '_blank' */
   target?: string
 }
 
