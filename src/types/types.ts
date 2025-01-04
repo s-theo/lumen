@@ -94,19 +94,23 @@ export interface AsideItem {
 /** Announcement 接口 */
 export interface Prelink {
   /** 链接的 URL。 */
-  link: string
+  link?: string
   /** 链接的目标。 */
   target?: string
   /** 链接的标题。 */
   title: string
   /** 链接的内容。 */
-  content: string
+  content?: string
   /** 日期 */
   date?: string
   /** 日期文本 */
   dateText?: string
   /** 日期图标 */
   dateIcon?: string
+  /** 复制开关 */
+  copy?: boolean
+  /** 复制的内容 */
+  install?: string
 }
 
 /** Twikoo 配置数据类型接口。 */

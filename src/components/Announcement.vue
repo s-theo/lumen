@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon, Prelink, usePrelink } from '../types'
+import { Icon, Prelink, usePrelink, handleClick } from '../types'
 
 const prelink: Prelink | undefined = usePrelink()
 </script>
@@ -8,11 +8,12 @@ const prelink: Prelink | undefined = usePrelink()
   <a
     v-if="prelink"
     class="prelink"
-    :href="prelink.link"
+    :href="prelink.copy ? 'javascript:void(0)' : prelink.link"
     :target="prelink.target"
     :title="prelink.title"
     :aria-label="prelink.title"
     rel="noopener noreferrer"
+    @click="handleClick($event, prelink)"
   >
     <div class="prelink-content">
       <span class="title" aria-hidden="true" v-html="prelink.title"></span>
