@@ -9,6 +9,11 @@
   display: none;
 }
 
+:root:not(.dark) img[src$='#dark'] + figcaption,
+:root:is(.dark) img[src$='#light'] + figcaption {
+  display: none;
+}
+
 /* image subtitle */
 figure {
   display: flex;
