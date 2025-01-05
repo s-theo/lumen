@@ -61,8 +61,8 @@
     "release": "bumpp && pnpm publish --registry=https://registry.npmjs.org"
   },
   "dependencies": {
-    "@iconify/vue": "^4.2.0",
-    "@types/node": "^22.10.4",
+    "@iconify/vue": "^4.3.0",
+    "@types/node": "^22.10.5",
     "bumpp": "^9.9.2",
     "dayjs": "^1.11.13",
     "iconify-icon": "^2.3.0",
