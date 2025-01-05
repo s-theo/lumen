@@ -24,6 +24,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           :style="{
             color: typeof box.color === 'object' ? box.color.light : box.color
           }"
+          :ssr="true"
           :alt="box.name"
           aria-hidden="true"
         />
@@ -34,6 +35,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           :style="{
             color: typeof box.color === 'object' ? box.color.dark : box.color
           }"
+          :ssr="true"
           :alt="box.name"
           aria-hidden="true"
         />
@@ -42,6 +44,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           class="iconify"
           :icon="box.icon"
           :style="{ color: box.color }"
+          :ssr="true"
           :alt="box.name"
           aria-hidden="true"
         />

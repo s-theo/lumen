@@ -25,6 +25,7 @@ const props = defineProps<{ items: LinkItem[] }>()
             color:
               typeof link.color === 'object' ? link.color.light : link.color
           }"
+          :ssr="true"
           :alt="link.name"
           aria-hidden="true"
         />
@@ -35,6 +36,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           :style="{
             color: typeof link.color === 'object' ? link.color.dark : link.color
           }"
+          :ssr="true"
           :alt="link.name"
           aria-hidden="true"
         />
@@ -43,6 +45,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           class="iconify"
           :icon="link.icon"
           :style="{ color: link.color }"
+          :ssr="true"
           :alt="link.name"
           aria-hidden="true"
         />

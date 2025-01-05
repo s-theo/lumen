@@ -27,6 +27,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
                 ? boxcube.color.light
                 : boxcube.color
           }"
+          :ssr="true"
           :alt="boxcube.name"
           aria-hidden="true"
         />
@@ -40,6 +41,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
                 ? boxcube.color.dark
                 : boxcube.color
           }"
+          :ssr="true"
           :alt="boxcube.name"
           aria-hidden="true"
         />
@@ -48,6 +50,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           class="iconify"
           :icon="boxcube.icon"
           :style="{ color: boxcube.color }"
+          :ssr="true"
           :alt="boxcube.name"
           aria-hidden="true"
         />
