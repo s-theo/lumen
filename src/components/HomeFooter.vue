@@ -24,7 +24,7 @@ const Year = dayjs().year()
             <Icon
               class="iconify"
               :icon="section.icon"
-              :style="{ color: section.style }"
+              :color="section.color"
               :ssr="true"
               :alt="section.title"
               aria-hidden="true"
@@ -36,7 +36,7 @@ const Year = dayjs().year()
             <template v-if="link.icon">
               <Icon
                 :icon="link.icon"
-                :style="{ color: link.style }"
+                :color="link.color"
                 :ssr="true"
                 :alt="link.name"
                 aria-hidden="true"
@@ -121,7 +121,6 @@ const Year = dayjs().year()
             class="info-icon"
             alt="版权"
             icon="ri:copyright-line"
-            style="font-size: 1em"
             :ssr="true"
             aria-hidden="true"
           />&nbsp;{{ Year }}

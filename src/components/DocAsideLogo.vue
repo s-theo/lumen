@@ -22,10 +22,9 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           v-if="typeof aside.icon === 'object'"
           class="iconify light-only"
           :icon="aside.icon.light"
-          :style="{
-            color:
-              typeof aside.color === 'object' ? aside.color.light : aside.color
-          }"
+          :color="
+            typeof aside.color === 'object' ? aside.color.light : aside.color
+          "
           :alt="aside.name"
           :ssr="true"
           aria-hidden="true"
@@ -34,10 +33,9 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           v-if="typeof aside.icon === 'object'"
           class="iconify dark-only"
           :icon="aside.icon.dark"
-          :style="{
-            color:
-              typeof aside.color === 'object' ? aside.color.dark : aside.color
-          }"
+          :color="
+            typeof aside.color === 'object' ? aside.color.dark : aside.color
+          "
           :ssr="true"
           :alt="aside.name"
           aria-hidden="true"
@@ -46,7 +44,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           v-else
           class="iconify"
           :icon="aside.icon"
-          :style="{ color: aside.color }"
+          :color="typeof aside.color === 'string' ? aside.color : ''"
           :ssr="true"
           :alt="aside.name"
           aria-hidden="true"
