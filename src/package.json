@@ -65,7 +65,7 @@
     "@types/node": "^22.10.5",
     "bumpp": "^9.9.2",
     "dayjs": "^1.11.13",
-    "iconify-icon": "^2.2.0",
+    "iconify-icon": "^2.3.0",
     "twikoo": "^1.6.40",
     "typescript": "^5.7.2",
     "vite": "^6.0.7",
