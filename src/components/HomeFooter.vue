@@ -25,6 +25,7 @@ const Year = dayjs().year()
               class="iconify"
               :icon="section.icon"
               :style="{ color: section.style }"
+              :ssr="true"
               :alt="section.title"
               aria-hidden="true"
             />&nbsp;&nbsp;</template
@@ -36,6 +37,7 @@ const Year = dayjs().year()
               <Icon
                 :icon="link.icon"
                 :style="{ color: link.style }"
+                :ssr="true"
                 :alt="link.name"
                 aria-hidden="true"
               />&nbsp;
@@ -52,13 +54,14 @@ const Year = dayjs().year()
               {{ link.name }}
               <Icon
                 v-if="(link.target || section.target || '_blank') === '_blank'"
-                alt="External Link"
                 icon="heroicons-outline:arrow-sm-up"
                 style="
                   color: var(--vp-c-text-3);
                   transform: rotate(45deg);
                   font-size: 1em;
                 "
+                :ssr="true"
+                alt="External Link"
                 aria-hidden="true"
               />
             </a>
@@ -75,6 +78,7 @@ const Year = dayjs().year()
             class="info-icon"
             alt="ICP备案"
             :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
+            :ssr="true"
             aria-hidden="true"
           />&nbsp;
           <a
@@ -96,6 +100,7 @@ const Year = dayjs().year()
             :icon="
               footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'
             "
+            :ssr="true"
             aria-hidden="true"
           />&nbsp;
           <a
@@ -117,6 +122,7 @@ const Year = dayjs().year()
             alt="版权"
             icon="ri:copyright-line"
             style="font-size: 1em"
+            :ssr="true"
             aria-hidden="true"
           />&nbsp;{{ Year }}
           <a
