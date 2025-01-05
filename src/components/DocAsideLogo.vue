@@ -27,6 +27,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               typeof aside.color === 'object' ? aside.color.light : aside.color
           }"
           :alt="aside.name"
+          :ssr="true"
           aria-hidden="true"
         />
         <Icon
@@ -37,6 +38,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
             color:
               typeof aside.color === 'object' ? aside.color.dark : aside.color
           }"
+          :ssr="true"
           :alt="aside.name"
           aria-hidden="true"
         />
@@ -45,6 +47,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           class="iconify"
           :icon="aside.icon"
           :style="{ color: aside.color }"
+          :ssr="true"
           :alt="aside.name"
           aria-hidden="true"
         />

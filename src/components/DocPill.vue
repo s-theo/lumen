@@ -22,6 +22,7 @@ const pill = defineProps<Pill>()
           color: typeof pill.color === 'object' ? pill.color.light : pill.color
         }"
         :alt="pill.name"
+        :ssr="true"
         aria-hidden="true"
       />
       <Icon
@@ -32,6 +33,7 @@ const pill = defineProps<Pill>()
           color: typeof pill.color === 'object' ? pill.color.dark : pill.color
         }"
         :alt="pill.name"
+        :ssr="true"
         aria-hidden="true"
       />
       <Icon
@@ -40,6 +42,7 @@ const pill = defineProps<Pill>()
         :icon="pill.icon"
         :style="{ color: pill.color }"
         :alt="pill.name"
+        :ssr="true"
         aria-hidden="true"
       />
     </template>
