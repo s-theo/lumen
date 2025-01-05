@@ -28,6 +28,8 @@ const shareLink = useShareLink()
         <Icon
           class="iconify"
           :icon="ShareButton.buttonIcon || 'solar:share-bold'"
+          :ssr="true"
+          alt="Icon"
           aria-hidden="true"
         />
         {{ ShareButton.buttonText || '分享此页面' }}
@@ -37,6 +39,8 @@ const shareLink = useShareLink()
         <Icon
           class="iconify"
           :icon="ShareButton.copiedIcon || 'mdi:thumbs-up'"
+          :ssr="true"
+          alt="Icon"
           aria-hidden="true"
         />
         {{ ShareButton.copiedText || '链接已复制!' }}
