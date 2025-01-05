@@ -21,10 +21,9 @@ const props = defineProps<{ items: LinkItem[] }>()
           v-if="typeof link.icon === 'object'"
           class="iconify light-only"
           :icon="link.icon.light"
-          :style="{
-            color:
-              typeof link.color === 'object' ? link.color.light : link.color
-          }"
+          :color="
+            typeof link.color === 'object' ? link.color.light : link.color
+          "
           :ssr="true"
           :alt="link.name"
           aria-hidden="true"
@@ -33,9 +32,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           v-if="typeof link.icon === 'object'"
           class="iconify dark-only"
           :icon="link.icon.dark"
-          :style="{
-            color: typeof link.color === 'object' ? link.color.dark : link.color
-          }"
+          :color="typeof link.color === 'object' ? link.color.dark : link.color"
           :ssr="true"
           :alt="link.name"
           aria-hidden="true"
@@ -44,7 +41,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           v-else
           class="iconify"
           :icon="link.icon"
-          :style="{ color: link.color }"
+          :color="typeof link.color === 'string' ? link.color : ''"
           :ssr="true"
           :alt="link.name"
           aria-hidden="true"

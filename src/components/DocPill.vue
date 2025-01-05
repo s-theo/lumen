@@ -18,9 +18,7 @@ const pill = defineProps<Pill>()
         v-if="typeof pill.icon === 'object'"
         class="iconify light-only"
         :icon="pill.icon.light"
-        :style="{
-          color: typeof pill.color === 'object' ? pill.color.light : pill.color
-        }"
+        :color="typeof pill.color === 'object' ? pill.color.light : pill.color"
         :alt="pill.name"
         :ssr="true"
         aria-hidden="true"
@@ -29,9 +27,7 @@ const pill = defineProps<Pill>()
         v-if="typeof pill.icon === 'object'"
         class="iconify dark-only"
         :icon="pill.icon.dark"
-        :style="{
-          color: typeof pill.color === 'object' ? pill.color.dark : pill.color
-        }"
+        :color="typeof pill.color === 'object' ? pill.color.dark : pill.color"
         :alt="pill.name"
         :ssr="true"
         aria-hidden="true"
@@ -40,7 +36,7 @@ const pill = defineProps<Pill>()
         v-else
         class="iconify"
         :icon="pill.icon"
-        :style="{ color: pill.color }"
+        :color="typeof pill.color === 'string' ? pill.color : ''"
         :alt="pill.name"
         :ssr="true"
         aria-hidden="true"
