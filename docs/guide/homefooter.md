@@ -20,7 +20,7 @@ export const Footer_Data: FooterData = {
     {
       title: '外部链接',
       icon: 'bx:link', // `iconify`图标
-      style: 'rgba(255, 87, 51, 1)',
+      color: 'rgba(255, 87, 51, 1)',
       links: [
         { name: '示例1', href: 'https://', icon: 'solar:book-bold' },
         { name: '示例2', href: 'https://' }
@@ -30,7 +30,7 @@ export const Footer_Data: FooterData = {
       title: '内部链接',
       target: '_self', // `target`默认打开方式为 _blank , 为 _self 时不会显示外部链接图标
       icon: 'bx:link',
-      style: 'rgba(255, 87, 51, 1)',
+      color: 'rgba(255, 87, 51, 1)',
       links: [
         { name: '示例1', icon: 'solar:book-bold', href: '/docs' },
         { name: '示例2', href: '/page' }
@@ -85,7 +85,7 @@ export default {
 |   字段   |   类型   | 描述                                                                                                                                                                     |
 | :------: | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  `icon`  | `string` | <Badge type="tip" text="可选" /> 分组图标名称，支持 <Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" /> |
-| `style`  | `string` | <Badge type="tip" text="可选" /> 图标样式。                                                                                                                              |
+| `color`  | `string` | <Badge type="tip" text="可选" /> 图标样式。                                                                                                                              |
 | `title`  | `string` | 分组的标题。                                                                                                                                                             |
 | `target` | `string` | <Badge type="tip" text="可选" /> 链接打开方式，默认 `_blank`。                                                                                                           |
 | `links`  | `Array`  | 该分组包含的链接数组，每个链接是一个 `Link` 对象。                                                                                                                       |
@@ -97,7 +97,7 @@ export default {
 |   字段   |   类型   | 描述                                                                                                                                                                     |
 | :------: | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 |  `icon`  | `string` | <Badge type="tip" text="可选" /> 链接图标名称，支持 <Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" /> |
-| `style`  | `string` | <Badge type="tip" text="可选" /> 图标样式。                                                                                                                              |
+| `color`  | `string` | <Badge type="tip" text="可选" /> 图标样式。                                                                                                                              |
 |  `name`  | `string` | 链接的名称。                                                                                                                                                             |
 |  `href`  | `string` | 链接的地址。                                                                                                                                                             |
 | `target` | `string` | <Badge type="tip" text="可选" /> 链接的打开方式，默认 `_blank`。                                                                                                         |

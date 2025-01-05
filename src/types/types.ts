@@ -134,7 +134,7 @@ export interface Group {
   /** 图标名称（支持 iconify） */
   icon?: string
   /** 图标样式 */
-  style?: string
+  color?: string
   /** 分组标题 */
   title: string
   /** 链接打开方式，默认 '_blank' */
@@ -170,7 +170,7 @@ export interface Link {
   /** 链接图标 */
   icon?: string
   /** 链接样式 */
-  style?: string
+  color?: string
   /** 链接名称 */
   name: string
   /** 链接地址 */

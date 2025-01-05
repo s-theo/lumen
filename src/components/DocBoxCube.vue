@@ -21,12 +21,11 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           v-if="typeof boxcube.icon === 'object'"
           class="iconify light-only"
           :icon="boxcube.icon.light"
-          :style="{
-            color:
-              typeof boxcube.color === 'object'
-                ? boxcube.color.light
-                : boxcube.color
-          }"
+          :color="
+            typeof boxcube.color === 'object'
+              ? boxcube.color.light
+              : boxcube.color
+          "
           :ssr="true"
           :alt="boxcube.name"
           aria-hidden="true"
@@ -35,12 +34,11 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           v-if="typeof boxcube.icon === 'object'"
           class="iconify dark-only"
           :icon="boxcube.icon.dark"
-          :style="{
-            color:
-              typeof boxcube.color === 'object'
-                ? boxcube.color.dark
-                : boxcube.color
-          }"
+          :color="
+            typeof boxcube.color === 'object'
+              ? boxcube.color.dark
+              : boxcube.color
+          "
           :ssr="true"
           :alt="boxcube.name"
           aria-hidden="true"
@@ -49,7 +47,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           v-else
           class="iconify"
           :icon="boxcube.icon"
-          :style="{ color: boxcube.color }"
+          :color="typeof boxcube.color === 'string' ? boxcube.color : ''"
           :ssr="true"
           :alt="boxcube.name"
           aria-hidden="true"
