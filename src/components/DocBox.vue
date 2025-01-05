@@ -21,9 +21,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           v-if="typeof box.icon === 'object'"
           class="iconify light-only"
           :icon="box.icon.light"
-          :style="{
-            color: typeof box.color === 'object' ? box.color.light : box.color
-          }"
+          :color="typeof box.color === 'object' ? box.color.light : box.color"
           :ssr="true"
           :alt="box.name"
           aria-hidden="true"
@@ -32,9 +30,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           v-if="typeof box.icon === 'object'"
           class="iconify dark-only"
           :icon="box.icon.dark"
-          :style="{
-            color: typeof box.color === 'object' ? box.color.dark : box.color
-          }"
+          :color="typeof box.color === 'object' ? box.color.dark : box.color"
           :ssr="true"
           :alt="box.name"
           aria-hidden="true"
@@ -43,7 +39,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           v-else
           class="iconify"
           :icon="box.icon"
-          :style="{ color: box.color }"
+          :color="typeof box.color === 'string' ? box.color : ''"
           :ssr="true"
           :alt="box.name"
           aria-hidden="true"
