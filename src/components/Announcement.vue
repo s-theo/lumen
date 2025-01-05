@@ -26,8 +26,9 @@ const prelink: Prelink | undefined = usePrelink()
       <span v-if="prelink.date" class="time-info">
         <Icon
           class="iconify"
-          alt="Icon"
           :icon="prelink.dateIcon || 'line-md:calendar'"
+          :ssr="true"
+          alt="Icon"
           aria-hidden="true"
         ></Icon>
         <span
