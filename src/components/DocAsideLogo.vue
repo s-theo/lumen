@@ -165,6 +165,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
   transform: scale(1.25);
   transition: transform 0.5s;
+  color: var(--vp-c-text-2);
   font-size: 1.5em;
 }
 

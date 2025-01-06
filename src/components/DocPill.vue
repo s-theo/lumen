@@ -116,7 +116,7 @@ const pill = defineProps<Pill>()
 
 .iconify {
   flex-shrink: 0;
-  color: var(--vp-c-text-1);
+  color: var(--vp-c-text-2);
   font-size: 0.875em;
 }
 
