@@ -1,3 +1,5 @@
+import '../theme/components-var.css'
+
 import 'iconify-icon'
 
 export { default as Announcement } from '../components/Announcement.vue'

@@ -116,9 +116,9 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   gap: 1rem;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 0.25rem 0;
-  border: 1.5px solid transparent;
+  border: 1.5px solid var(--AsideLogo-border);
   border-radius: 0.8rem;
-  background-color: var(--vp-c-bg-alt);
+  background-color: var(--AsideLogo-bg);
   padding: 0.25rem 0;
   font-weight: 900;
   font-size: 0.875rem;
@@ -127,7 +127,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 
 .link:hover {
   transform: translateY(-1px);
-  background-color: var(--vp-c-brand-soft);
+  background-color: var(--AsideLogo-bg-hover);
 }
 
 .link:active {
@@ -148,11 +148,11 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 }
 
 .link:hover.has-activity {
-  border-color: rgba(100, 108, 255, 1);
+  border-color: var(--AsideLogo-activity-border-hover);
 }
 
 .link:hover.has-name {
-  border-color: var(--vp-c-brand-1);
+  border-color: var(--AsideLogo-name-border-hover);
 }
 
 .link .icon {
@@ -165,42 +165,32 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
   transform: scale(1.25);
   transition: transform 0.5s;
-  color: var(--vp-c-text-2);
+  color: var(--iconify-defaultcolor);
   font-size: 1.5em;
 }
 
 .link .hide {
   opacity: 0;
   transition: opacity 0.5s;
-  color: var(--vp-c-text-2);
+  color: var(--AsideLogo-hide);
   font-weight: 600;
   font-size: 0.75rem;
 }
 
 .link .info {
-  color: var(--vp-c-text-2);
+  color: var(--AsideLogo-info);
   font-size: 0.75rem;
 }
 
 .link .name {
-  background-image: linear-gradient(
-    292deg,
-    var(--vp-c-brand-3) 16%,
-    var(--vp-c-brand-2),
-    var(--vp-c-brand-1)
-  );
+  background-image: var(--AsideLogo-name);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .link .activity {
-  background-image: linear-gradient(
-    292deg,
-    rgba(176, 71, 255, 1) 16%,
-    rgba(100, 108, 255, 1),
-    rgba(116, 123, 255, 1)
-  );
+  background-image: var(--AsideLogo-activity);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

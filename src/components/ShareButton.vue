@@ -62,13 +62,13 @@ const shareLink = useShareLink()
   z-index: 1;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid var(--ShareButton-border);
   border-radius: 1rem;
-  background-color: var(--vp-c-bg-alt);
+  background-color: var(--ShareButton-bg);
   padding: 0.5rem 1rem;
   width: 100%;
   overflow: hidden;
-  color: var(--vp-c-brand-1);
+  color: var(--ShareButton-text);
   font-weight: 500;
   font-size: 0.875rem;
 }
@@ -79,40 +79,36 @@ const shareLink = useShareLink()
   left: -100%;
   z-index: -1;
   transition: left 0.6s ease;
-  background-color: var(--vp-c-brand-soft);
+  background-color: var(--ShareButton-transition);
   width: 100%;
   height: 100%;
   content: '';
 }
 
+.share-link-button.copied::before {
+  left: 0;
+  background-color: var(--ShareButton-transition);
+}
+
 .share-link-button:hover {
   transform: translateY(-1px);
-  border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-brand-soft);
+  border-color: var(--ShareButton-border-hover);
+  background-color: var(--ShareButton-bg-hover);
 }
 
 .share-link-button:active {
   transform: scale(0.9);
 }
 
-.share-link-button:focus {
-  outline: 2px solid var(--vp-c-brand-2);
-  outline-offset: 2px;
-}
-
 .share-link-button.copied {
-  color: var(--vp-c-brand-1);
-}
-
-.share-link-button.copied::before {
-  left: 0;
-  background-color: var(--vp-c-brand-soft);
+  color: var(--ShareButton-copied-text);
 }
 
 .iconify {
   display: inline-block;
   flex-shrink: 0;
   margin: 0 0 -0.2em 0;
+  color: var(--ShareButton-icon);
   font-size: 1.2em;
 }
 </style>

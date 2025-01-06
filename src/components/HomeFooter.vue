@@ -144,7 +144,7 @@ const Year = dayjs().year()
 
 <style scoped>
 .footer {
-  background: var(--vp-c-bg-alt);
+  background: var(--HomeFooter-bg);
   width: 100%;
   font-size: 0.75rem;
 }
@@ -154,7 +154,7 @@ const Year = dayjs().year()
 }
 
 .footer a:hover {
-  color: var(--vp-c-brand-1);
+  color: var(--HomeFooter-link-hover);
   -webkit-text-decoration: underline solid;
   text-decoration: underline solid;
   text-underline-offset: 4px;
