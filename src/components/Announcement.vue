@@ -28,6 +28,7 @@ const prelink: Prelink | undefined = usePrelink()
           class="iconify"
           :icon="prelink.dateIcon || 'line-md:calendar'"
           :ssr="true"
+          :inline="true"
           alt="Icon"
           aria-hidden="true"
         ></Icon>
