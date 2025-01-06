@@ -40,7 +40,7 @@ export const Footer_Data: FooterData = {
         {
           name: '青云梯',
           icon: 'el:fire',
-          color: 'rgba(255, 87, 51, 1)',
+          color: '#FF5733',
           href: 'https://qytcc01.qingyunti.pro/register?aff=jjgD79Jd'
         },
         { name: '银河录像局', href: 'https://nf.video/kaIuE' },
