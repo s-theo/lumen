@@ -44,6 +44,7 @@
     "./pic": "./theme/picture.css",
     "./badge": "./theme/badge.css",
     "./doc-blocks-border": "./theme/doc-blocks-border.css",
+    "./components-var": "./theme/components-var.css",
     "./package.json": "./package.json"
   },
   "main": "types/index.ts",

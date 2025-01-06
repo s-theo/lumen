@@ -29,7 +29,7 @@
   }
 }
 
-html.dark:root {
+.dark {
   --vp-home-hero-name-background: -webkit-linear-gradient(
     45deg,
     var(--c-yellow-2) 30%,

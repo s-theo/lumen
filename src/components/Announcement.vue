@@ -48,16 +48,16 @@ const prelink: Prelink | undefined = usePrelink()
   flex-direction: column;
   transition: all 0.5s ease;
   margin-bottom: 1rem;
-  border: 1px solid transparent;
+  border: 1px solid var(--Announcement-border);
   border-radius: 0.8rem;
-  background-color: var(--vp-button-alt-bg);
+  background-color: var(--Announcement-bg);
   padding: 0.3rem 1.5rem;
 }
 
 .prelink:hover {
   transform: translateY(-1px);
-  border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-brand-soft);
+  border-color: var(--Announcement-border-hover);
+  background-color: var(--Announcement-bg-hover);
 }
 
 .prelink:active {
@@ -92,7 +92,7 @@ const prelink: Prelink | undefined = usePrelink()
 }
 
 .date {
-  color: var(--vp-c-brand-3);
+  color: var(--Announcement-data);
   font-weight: bold;
 }
 

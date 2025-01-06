@@ -37,7 +37,7 @@ import '@theojs/lumen/pic'
 
 ## 图标支持
 
-:::details 使用 Iconify 时报错 `[Vue warn]: Failed to resolve component: iconify-icon`
+:::details 使用 `iconify-icon` 时报错 `[Vue warn]: Failed to resolve component: iconify-icon`
 
 ```ts [.vitepress/config.mts]
 import { defineConfig } from 'vitepress'
@@ -63,6 +63,31 @@ export default defineConfig({
 ```
 
 <Pill name="使用方法查看: https://iconify.design/docs/iconify-icon/" link="https://iconify.design/docs/iconify-icon/" icon="line-md:iconify2-static" color="#1769AA" />
+
+## 自定义组件 CSS
+
+可以通过覆盖根级别的 CSS 变量来自定义默认主题的 CSS：
+
+```ts
+// .vitepress/theme/index.ts
+import DefaultTheme from 'vitepress/theme'
+
+import '@theojs/lumen/theme'
+import './var.css' // [!code ++]
+
+export default DefaultTheme
+..
+```
+
+```css
+/* .vitepress/theme/var.css */
+:root {
+  --Announcement-bg: var(--vp-button-alt-bg);
+  --Announcement-bg-hover: var(--vp-c-brand-soft);
+}
+```
+
+查看<Pill name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/theme/components-var.css" icon="unjs:theme-colors" />内容来获取可以被覆盖的变量。
 
 ## 示例
 
