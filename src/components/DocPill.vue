@@ -90,6 +90,7 @@ const pill = defineProps<Pill>()
   gap: 0.25rem;
   transform: translateY(1px);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 0 0.125em;
   border: 1px solid transparent;
   border-radius: 0.5rem;
   background-color: var(--pill-bg);
