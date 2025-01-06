@@ -108,9 +108,9 @@ const props = defineProps<{ items: LinkItem[] }>()
   display: flex;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid transparent;
+  border: 1px solid var(--Links-bg-border);
   border-radius: 0.8rem;
-  background-color: var(--vp-c-bg-alt);
+  background-color: var(--Links-bg);
   padding: 1rem;
   text-decoration: none !important;
 }
@@ -118,8 +118,8 @@ const props = defineProps<{ items: LinkItem[] }>()
 .link:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-brand-soft);
+  border-color: var(--Links-border-hover);
+  background-color: var(--Links-bg-hover);
 }
 
 .link:active {
@@ -130,7 +130,7 @@ const props = defineProps<{ items: LinkItem[] }>()
 .iconify {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
   height: 2rem;
-  color: var(--vp-c-text-2);
+  color: var(--iconify-defaultcolor);
   font-size: 2rem;
 }
 
@@ -155,6 +155,7 @@ const props = defineProps<{ items: LinkItem[] }>()
 
 .name {
   overflow: hidden;
+  color: var(--Links-name);
   font-size: 0.875rem;
   line-height: 1.2;
   letter-spacing: 0.05rem;
@@ -164,7 +165,7 @@ const props = defineProps<{ items: LinkItem[] }>()
 
 .desc {
   margin-top: 0.25rem;
-  color: var(--vp-c-text-2);
+  color: var(--Links-desc);
   font-size: 0.75rem;
   line-height: 1.5;
 }

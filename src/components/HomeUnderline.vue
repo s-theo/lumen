@@ -45,6 +45,6 @@ moveDomElements()
   z-index: -1;
   width: calc(100% - 0.7em);
   height: auto;
-  color: var(--vp-c-brand);
+  color: var(--HomeUnderline-bg);
 }
 </style>
