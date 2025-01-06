@@ -26,10 +26,12 @@ const Year = dayjs().year()
               :icon="section.icon"
               :color="section.color"
               :ssr="true"
+              :inline="true"
               :alt="section.title"
               aria-hidden="true"
-            />&nbsp;&nbsp;</template
-          >{{ section.title }}
+            />&nbsp;
+          </template>
+          {{ section.title }}
         </div>
         <ul class="list-links">
           <li v-for="(link, idx) in section.links" :key="link.name + idx">
@@ -38,10 +40,11 @@ const Year = dayjs().year()
                 :icon="link.icon"
                 :color="link.color"
                 :ssr="true"
+                :inline="true"
                 :alt="link.name"
                 aria-hidden="true"
-              />&nbsp;
-            </template>
+              />&nbsp;</template
+            >
             <a
               :name="link.name"
               :href="link.href"
@@ -50,9 +53,8 @@ const Year = dayjs().year()
               :target="link.target || section.target || '_blank'"
               rel="noopener noreferrer"
               :aria-describedby="link.name ? link.name : null"
-            >
-              {{ link.name }}
-              <Icon
+              >{{ link.name
+              }}<Icon
                 v-if="(link.target || section.target || '_blank') === '_blank'"
                 icon="heroicons-outline:arrow-sm-up"
                 style="
@@ -61,6 +63,7 @@ const Year = dayjs().year()
                   font-size: 1em;
                 "
                 :ssr="true"
+                :inline="true"
                 alt="External Link"
                 aria-hidden="true"
               />
@@ -79,9 +82,9 @@ const Year = dayjs().year()
             alt="ICP备案"
             :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
             :ssr="true"
+            :inline="true"
             aria-hidden="true"
-          />&nbsp;
-          <a
+          />&nbsp;<a
             href="https://beian.miit.gov.cn/"
             title="ICP备案"
             target="_blank"
@@ -101,9 +104,9 @@ const Year = dayjs().year()
               footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'
             "
             :ssr="true"
+            :inline="true"
             aria-hidden="true"
-          />&nbsp;
-          <a
+          />&nbsp;<a
             href="https://beian.mps.gov.cn/"
             title="公安备案"
             target="_blank"
@@ -122,6 +125,7 @@ const Year = dayjs().year()
             alt="版权"
             icon="ri:copyright-line"
             :ssr="true"
+            :inline="true"
             aria-hidden="true"
           />&nbsp;{{ Year }}
           <a
@@ -182,8 +186,6 @@ const Year = dayjs().year()
 
 .iconify {
   display: inline-block;
-  position: relative;
-  margin: 0 0 -0.125rem -0.125rem;
   font-size: 1.2em;
 }
 
@@ -206,9 +208,7 @@ const Year = dayjs().year()
 
 .info-icon {
   display: inline-block;
-  position: relative;
-  margin: -0.2em 0em;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 @media (max-width: 768px) {

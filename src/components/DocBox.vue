@@ -23,6 +23,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           :icon="box.icon.light"
           :color="typeof box.color === 'object' ? box.color.light : box.color"
           :ssr="true"
+          :inline="true"
           :alt="box.name"
           aria-hidden="true"
         />
@@ -32,6 +33,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           :icon="box.icon.dark"
           :color="typeof box.color === 'object' ? box.color.dark : box.color"
           :ssr="true"
+          :inline="true"
           :alt="box.name"
           aria-hidden="true"
         />
@@ -41,6 +43,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           :icon="box.icon"
           :color="typeof box.color === 'string' ? box.color : ''"
           :ssr="true"
+          :inline="true"
           :alt="box.name"
           aria-hidden="true"
         />
