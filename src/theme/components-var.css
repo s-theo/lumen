@@ -1,0 +1,120 @@
+:root {
+  /**
+  * Default
+  * -------------------------------------------------------------------------- */
+
+  --iconify-defaultcolor: var(--vp-c-text-2);
+  --component-pill-bg: rgba(0, 0, 0, 0.05);
+  --component-bg: var(--vp-c-bg-alt);
+
+  /**
+  * Component: Announcement
+  * -------------------------------------------------------------------------- */
+  --Announcement-bg: var(--vp-button-alt-bg);
+  --Announcement-bg-hover: var(--vp-c-brand-soft);
+  --Announcement-border: transparent;
+  --Announcement-border-hover: var(--vp-c-brand-1);
+  --Announcement-data: var(--vp-c-brand-3);
+
+  /**
+  * Component: AsideLogo
+  * -------------------------------------------------------------------------- */
+
+  --AsideLogo-bg: var(--component-bg);
+  --AsideLogo-bg-hover: var(--vp-c-brand-soft);
+  --AsideLogo-border: transparent;
+  --AsideLogo-name: linear-gradient(
+    292deg,
+    var(--vp-c-brand-3) 16%,
+    var(--vp-c-brand-2),
+    var(--vp-c-brand-1)
+  );
+  --AsideLogo-activity: linear-gradient(
+    292deg,
+    rgba(176, 71, 255, 1) 16%,
+    rgba(100, 108, 255, 1),
+    rgba(116, 123, 255, 1)
+  );
+  --AsideLogo-name-border-hover: var(--vp-c-brand-1);
+  --AsideLogo-activity-border-hover: rgba(100, 108, 255, 1);
+  --AsideLogo-hide: var(--vp-c-text-2);
+  --AsideLogo-info: var(--vp-c-text-2);
+
+  /**
+  * Component: Box
+  * -------------------------------------------------------------------------- */
+
+  --Box-bg: var(--component-bg);
+  --Box-bg-hover: var(--vp-c-brand-soft);
+  --Box-bg-border: transparent;
+  --Box-bg-border-hover: var(--vp-c-brand-1);
+  --Box-name: inherit;
+  --Box-tag: var(--vp-c-brand-text);
+  --Box-tag-bg: var(--vp-c-brand-3);
+
+  /**
+  * Component: BoxCube
+  * -------------------------------------------------------------------------- */
+
+  --Boxcube-bg: var(--component-bg);
+  --Boxcube-bg-hover: var(--vp-c-brand-soft);
+  --Boxcube-bg-border: transparent;
+  --Boxcube-bg-border-hover: var(--vp-c-brand-1);
+  --Boxcube-name: inherit;
+  --Boxcube-desc: var(--vp-c-text-3);
+
+  /**
+  * Component: Links
+  * -------------------------------------------------------------------------- */
+
+  --Links-bg: var(--component-bg);
+  --Links-bg-hover: var(--vp-c-brand-soft);
+  --Links-bg-border: transparent;
+  --Links-bg-border-hover: var(--vp-c-brand-1);
+  --Links-name: inherit;
+  --Links-desc: var(--vp-c-text-2);
+
+  /**
+  * Component: Pill
+  * -------------------------------------------------------------------------- */
+
+  --Pill-bg: var(--component-pill-bg);
+  --Pill-bg-hover: var(--vp-c-brand-soft);
+  --Pill-border: transparent;
+  --Pill-border-hover: var(--vp-c-brand-1);
+  --Pill-name: inherit;
+
+  /**
+  * Component: HomeFooter
+  * -------------------------------------------------------------------------- */
+
+  --HomeFooter-bg: var(--vp-c-bg-alt);
+  --HomeFooter-link-hover: var(--vp-c-brand-1);
+
+  /**
+  * Component: HomeUnderline
+  * -------------------------------------------------------------------------- */
+
+  --HomeUnderline-bg: var(--vp-c-brand-1);
+
+  /**
+  * Component: ShareButton
+  * -------------------------------------------------------------------------- */
+
+  --ShareButton-bg: var(--component-bg);
+  --ShareButton-border: transparent;
+  --ShareButton-text: var(--vp-c-brand-1);
+  --ShareButton-copied-text: var(--vp-c-brand-1);
+  --ShareButton-transition: var(--vp-c-brand-soft);
+  --ShareButton-bg-hover: var(--vp-c-brand-soft);
+  --ShareButton-border-hover: var(--vp-c-brand-1);
+  --ShareButton-icon: var(--vp-c-brand-1);
+}
+
+.dark {
+  /**
+  * Component Default
+  * -------------------------------------------------------------------------- */
+
+  --component-pill-bg: rgba(255, 255, 255, 0.05);
+}

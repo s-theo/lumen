@@ -101,9 +101,9 @@ const props = defineProps<{ items: BoxItem[] }>()
   align-items: center;
   gap: 1rem;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid transparent;
+  border: 1px solid var(--Box-bg-border);
   border-radius: 0.8rem;
-  background-color: var(--vp-c-bg-alt);
+  background-color: var(--Box-bg);
   padding: 0 1.6rem;
   width: 14rem;
   height: 3.5rem;
@@ -113,8 +113,8 @@ const props = defineProps<{ items: BoxItem[] }>()
 .link:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-brand-soft);
+  border-color: var(--Box-bg-border-hover);
+  background-color: var(--Box-bg-hover);
 }
 
 .link:active {
@@ -141,9 +141,9 @@ const props = defineProps<{ items: BoxItem[] }>()
   right: 0;
   z-index: 1;
   border-radius: 0 0.7rem 0 0.7rem;
-  background-color: var(--vp-c-brand-3);
+  background-color: var(--Box-tag-bg);
   padding: 0.25rem 0.5rem;
-  color: var(--vp-c-brand-text);
+  color: var(--Box-tag);
   font-size: 0.625rem;
   line-height: 1;
 }
@@ -154,12 +154,13 @@ const props = defineProps<{ items: BoxItem[] }>()
 
 .iconify {
   flex-shrink: 0;
-  color: var(--vp-c-text-2);
+  color: var(--iconify-defaultcolor);
   font-size: 2.4em;
 }
 
 .name {
   overflow: hidden;
+  color: var(--Box-name);
   font-size: 0.875rem;
   letter-spacing: 0.05rem;
   text-overflow: ellipsis;
