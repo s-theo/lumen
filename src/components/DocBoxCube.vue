@@ -110,9 +110,9 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   justify-content: center;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid transparent;
+  border: 1px solid var(--Boxcube-bg-border);
   border-radius: 0.8rem;
-  background-color: var(--vp-c-bg-alt);
+  background-color: var(--Boxcube-bg);
   width: 7.5rem;
   height: 7.5rem;
   -webkit-text-decoration: none !important;
@@ -122,8 +122,8 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 .link:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-color: var(--vp-c-brand-1);
-  background-color: var(--vp-c-brand-soft);
+  border-color: var(--Boxcube-bg-border-hover);
+  background-color: var(--Boxcube-bg-hover);
 }
 
 .link:active {
@@ -150,7 +150,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 
 .iconify {
   flex-shrink: 0;
-  color: var(--vp-c-text-2);
+  color: var(--iconify-defaultcolor);
   font-size: 2.5em;
 }
 
@@ -165,13 +165,14 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 }
 
 .name {
+  color: var(--Boxcube-name);
   font-size: 0.875rem;
   line-height: 1.25rem;
   letter-spacing: 0.05rem;
 }
 
 .desc {
-  color: var(--vp-c-text-3);
+  color: var(--Boxcube-desc);
   font-size: 0.75rem;
   line-height: 1rem;
 }
