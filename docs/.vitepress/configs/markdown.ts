@@ -10,7 +10,7 @@ export const markdown: MarkdownOptions = {
   image: { lazyLoading: true },
   config: (md) => {
     md.use(imgSize)
-    md.use(groupIconMdPlugin, { titleBar: { includeSnippet: true } })
+    md.use(groupIconMdPlugin, { titleBar: { includeSnippet: false } })
     md.use(figure, { figcaption: 'alt', copyAttrs: '^class$', lazy: true })
   }
 }
