@@ -154,7 +154,7 @@ const props = defineProps<{ items: BoxItem[] }>()
 
 .iconify {
   flex-shrink: 0;
-  color: var(--vp-c-text-1);
+  color: var(--vp-c-text-2);
   font-size: 2.4em;
 }
 
