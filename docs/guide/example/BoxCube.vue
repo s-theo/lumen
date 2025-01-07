@@ -35,6 +35,13 @@
       }
     },
     //描述
-    { name: 'Vue.js', link: '#', icon: 'devicon:vuejs', desc: 'v3.4.31' }
+    { name: 'Vue.js', link: '#', icon: 'devicon:vuejs', desc: 'v3.4.31' },
+    //标签
+    {
+      name: 'Typescript',
+      link: '#',
+      icon: 'logos:typescript-icon',
+      tag: 'new'
+    }
   ]"
 />
