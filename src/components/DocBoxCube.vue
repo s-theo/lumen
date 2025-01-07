@@ -84,6 +84,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
       </template>
       <span class="name">{{ boxcube.name }}</span>
       <span v-if="boxcube.desc" class="desc">{{ boxcube.desc }}</span>
+      <span v-if="boxcube.tag" class="tag">{{ boxcube.tag }}</span>
     </a>
   </div>
 </template>
@@ -115,6 +116,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   background-color: var(--Boxcube-bg);
   width: 7.5rem;
   height: 7.5rem;
+  overflow: hidden;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
 }
@@ -175,5 +177,27 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   color: var(--Boxcube-desc);
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.tag {
+  display: flex;
+  position: absolute;
+  top: 0.25rem;
+  right: -2.25rem;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(25deg);
+  z-index: 1;
+  border-radius: 0.7rem;
+  background-color: var(--Boxcube-tag-bg);
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  color: var(--Boxcube-tag);
+  font-weight: 600;
+  font-size: 0.625rem;
+  line-height: 1;
+  text-transform: uppercase;
 }
 </style>

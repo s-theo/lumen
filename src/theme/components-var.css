@@ -63,6 +63,8 @@
   --Boxcube-bg-border-hover: var(--vp-c-brand-1);
   --Boxcube-name: inherit;
   --Boxcube-desc: var(--vp-c-text-3);
+  --Boxcube-tag: var(--vp-c-brand-text);
+  --Boxcube-tag-bg: var(--vp-c-brand-3);
 
   /**
   * Component: Links
@@ -124,4 +126,9 @@
   * -------------------------------------------------------------------------- */
 
   --Box-tag-bg: var(--vp-c-brand-1);
+
+  /**
+  * Component: BoxCube
+  * -------------------------------------------------------------------------- */
+  --Boxcube-tag-bg: var(--vp-c-brand-1);
 }
