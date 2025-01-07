@@ -5,6 +5,10 @@
 **输入**
 
 ```md
+> [这是一个链接](https://doc.theojs.cn/)
+>
+> 这是一段文字
+
 ::: info
 [这是一个链接](https://doc.theojs.cn/)
 
@@ -37,6 +41,11 @@
 ```
 
 **输出**
+
+> [这是一个链接](https://doc.theojs.cn/)
+>
+> 这是一段文字
+
 ::: info
 [这是一个链接](https://doc.theojs.cn/)
 
