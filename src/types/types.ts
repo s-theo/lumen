@@ -59,6 +59,8 @@ export interface BoxCubeItem {
   link: string
   /** BoxCube 描述。 */
   desc?: string
+  /** BoxCube 标签。 */
+  tag?: string
   /** 图标的颜色。 */
   color?: string | IconImageMode
   /** 图标名称（支持 iconify） */
