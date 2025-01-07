@@ -149,6 +149,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 
 .link:hover.has-activity {
   border-color: var(--AsideLogo-activity-border-hover);
+  background-color: var(--AsideLogo-activity-bg-hover);
 }
 
 .link:hover.has-name {

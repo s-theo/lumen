@@ -143,9 +143,12 @@ const props = defineProps<{ items: BoxItem[] }>()
   border-radius: 0 0.7rem 0 0.7rem;
   background-color: var(--Box-tag-bg);
   padding: 0.25rem 0.5rem;
+  pointer-events: none;
   color: var(--Box-tag);
+  font-weight: 600;
   font-size: 0.625rem;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .icon {
