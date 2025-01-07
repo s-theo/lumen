@@ -35,6 +35,6 @@
       }
     },
     //标签
-    { name: 'Vue', link: '#', icon: 'vscode-icons:file-type-vue', tag: 'vuejs' }
+    { name: 'Vue', link: '#', icon: 'vscode-icons:file-type-vue', tag: 'new' }
   ]"
 />
