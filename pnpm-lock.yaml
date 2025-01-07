@@ -76,8 +76,8 @@ importers:
         specifier: ^2.3.0
         version: 2.3.0
       twikoo:
-        specifier: ^1.6.40
-        version: 1.6.40
+        specifier: ^1.6.41
+        version: 1.6.41
       typescript:
         specifier: ^5.7.2
         version: 5.7.2
@@ -1584,8 +1584,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  twikoo@1.6.40:
-    resolution: {integrity: sha512-Rl1OZAij95/czD1oiwmTi4Om5yZeKNENqIR7Kq0SygEztV6w2423ac9PHbOXDZPYnvTJB9wqBapS2+AlKFWcfg==}
+  twikoo@1.6.41:
+    resolution: {integrity: sha512-Hrp/fvk2N5oqin+9bkFVULstL+YMwQjn/vVL8r5FPIhyRBA0zWAgUri4hhCji4FsXegKR6+ihyMPTXBRENjnnA==}
 
   typescript@5.7.2:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
@@ -3247,7 +3247,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  twikoo@1.6.40: {}
+  twikoo@1.6.41: {}
 
   typescript@5.7.2: {}
 
