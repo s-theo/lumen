@@ -24,19 +24,20 @@
   --AsideLogo-bg-hover: var(--vp-c-brand-soft);
   --AsideLogo-border: transparent;
   --AsideLogo-name: linear-gradient(
-    292deg,
-    var(--vp-c-brand-3) 16%,
-    var(--vp-c-brand-2),
+    225deg,
+    var(--vp-c-brand-1),
+    var(--vp-c-brand-3),
     var(--vp-c-brand-1)
   );
   --AsideLogo-activity: linear-gradient(
-    292deg,
-    rgba(176, 71, 255, 1) 16%,
+    225deg,
     rgba(100, 108, 255, 1),
-    rgba(116, 123, 255, 1)
+    rgba(176, 71, 255, 1),
+    rgba(100, 108, 255, 1)
   );
   --AsideLogo-name-border-hover: var(--vp-c-brand-1);
   --AsideLogo-activity-border-hover: rgba(100, 108, 255, 1);
+  --AsideLogo-activity-bg-hover: rgba(100, 108, 255, 0.16);
   --AsideLogo-hide: var(--vp-c-text-2);
   --AsideLogo-info: var(--vp-c-text-2);
 
@@ -72,7 +73,7 @@
   --Links-bg-border: transparent;
   --Links-bg-border-hover: var(--vp-c-brand-1);
   --Links-name: inherit;
-  --Links-desc: var(--vp-c-text-2);
+  --Links-desc: var(--vp-c-text-3);
 
   /**
   * Component: Pill
@@ -117,4 +118,10 @@
   * -------------------------------------------------------------------------- */
 
   --component-pill-bg: rgba(255, 255, 255, 0.05);
+
+  /**
+  * Component: Box
+  * -------------------------------------------------------------------------- */
+
+  --Box-tag-bg: var(--vp-c-brand-1);
 }
