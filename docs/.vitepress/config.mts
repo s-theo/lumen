@@ -12,6 +12,7 @@ export default defineConfig({
   description: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件',
   lang: 'zh-CN',
   cleanUrls: true,
+  metaChunk: true,
   lastUpdated: true,
   sitemap: { hostname: 'https://lumen.theojs.cn' },
   head,
