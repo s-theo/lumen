@@ -47,15 +47,15 @@ const Year = dayjs().year()
             >
             <a
               :name="link.name"
-              :href="link.href"
+              :href="link.link"
               :title="link.name"
               :aria-label="link.name"
-              :target="isExternal(link.href) ? '_blank' : '_self'"
+              :target="isExternal(link.link) ? '_blank' : '_self'"
               rel="noopener noreferrer"
               :aria-describedby="link.name ? link.name : null"
               >{{ link.name
               }}<Icon
-                v-if="isExternal(link.href)"
+                v-if="isExternal(link.link)"
                 icon="heroicons-outline:arrow-sm-up"
                 style="
                   color: var(--vp-c-text-3);
