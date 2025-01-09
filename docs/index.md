@@ -20,7 +20,6 @@ hero:
     # dateIcon: 'mdi:calendar-star'
     # dateText: '活动截止日期'
     link: https://qytcc01.qingyunti.pro/register?aff=jjgD79Jd
-    target: _blank
 
   # prelink:
   #   copy: true
