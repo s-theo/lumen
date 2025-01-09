@@ -97,8 +97,6 @@ export interface AsideItem {
 export interface Prelink {
   /** 链接的 URL。 */
   link?: string
-  /** 链接的目标。 */
-  target?: string
   /** 链接的标题。 */
   title: string
   /** 链接的内容。 */
@@ -139,8 +137,6 @@ export interface Group {
   color?: string
   /** 分组标题 */
   title: string
-  /** 链接打开方式，默认 '_blank' */
-  target?: string
   /** 链接数组 */
   links: Link[]
 }
@@ -177,8 +173,6 @@ export interface Link {
   name: string
   /** 链接地址 */
   href: string
-  /** 链接打开方式，默认 '_blank' */
-  target?: string
 }
 
 /** DocVideoLink 接口 */

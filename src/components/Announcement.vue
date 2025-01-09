@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon, usePrelink, handleClick } from '../types'
+import { Icon, usePrelink, handleClick, isExternal } from '../types'
 
 const prelink = usePrelink()
 </script>
@@ -9,7 +9,7 @@ const prelink = usePrelink()
     v-if="prelink"
     class="prelink"
     :href="prelink.copy ? 'javascript:void(0)' : prelink.link"
-    :target="prelink.target"
+    :target="isExternal(prelink.link) ? '_blank' : '_self'"
     :title="prelink.title"
     :aria-label="prelink.title"
     rel="noopener noreferrer"
