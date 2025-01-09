@@ -172,7 +172,7 @@ export interface Link {
   /** 链接名称 */
   name: string
   /** 链接地址 */
-  href: string
+  link: string
 }
 
 /** DocVideoLink 接口 */
