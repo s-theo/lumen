@@ -17,19 +17,19 @@ export const Footer_Data: FooterData = {
       links: [
         {
           name: 'Theo-Docs',
-          href: 'https://github.com/Theo-Messi/Theo-Docs'
+          link: 'https://github.com/Theo-Messi/Theo-Docs'
         },
         {
           name: '玄学宝典',
-          href: 'https://github.com/Theo-Messi/xx.theojs.cn'
+          link: 'https://github.com/Theo-Messi/xx.theojs.cn'
         },
         {
           name: '常用配置文件',
-          href: 'https://github.com/Theo-Messi/dotfiles'
+          link: 'https://github.com/Theo-Messi/dotfiles'
         },
         {
           name: 'Lumen',
-          href: 'https://github.com/Theo-Messi/lumen'
+          link: 'https://github.com/Theo-Messi/lumen'
         }
       ]
     },
@@ -41,21 +41,21 @@ export const Footer_Data: FooterData = {
           name: '青云梯',
           icon: 'el:fire',
           color: '#FF5733',
-          href: 'https://qytcc01.qingyunti.pro/register?aff=jjgD79Jd'
+          link: 'https://qytcc01.qingyunti.pro/register?aff=jjgD79Jd'
         },
-        { name: '银河录像局', href: 'https://nf.video/kaIuE' },
-        { name: '奈飞小铺', href: 'https://ihezu.love/UKTer6' },
+        { name: '银河录像局', link: 'https://nf.video/kaIuE' },
+        { name: '奈飞小铺', link: 'https://ihezu.love/UKTer6' },
         {
           name: 'FlyingBird',
-          href: 'https://fbinv02.fbaff.cc/auth/register?code=RZP3'
+          link: 'https://fbinv02.fbaff.cc/auth/register?code=RZP3'
         },
         {
           name: '飞兔云',
-          href: 'https://feitu.im/index.html?register=2cFF8mg4'
+          link: 'https://feitu.im/index.html?register=2cFF8mg4'
         },
         {
           name: 'SMS-Activate',
-          href: 'https://sms-activate.io/?ref=8170513'
+          link: 'https://sms-activate.io/?ref=8170513'
         }
       ]
     },
@@ -65,31 +65,31 @@ export const Footer_Data: FooterData = {
       links: [
         {
           name: 'Netflix',
-          href: 'https://doc.theojs.cn/streaming/Netflix-guide'
+          link: 'https://doc.theojs.cn/streaming/Netflix-guide'
         },
         {
           name: 'Disney+',
-          href: 'https://doc.theojs.cn/streaming/Disney-introduce'
+          link: 'https://doc.theojs.cn/streaming/Disney-introduce'
         },
         {
           name: 'Spotify Premium',
-          href: 'https://doc.theojs.cn/streaming/Spotify'
+          link: 'https://doc.theojs.cn/streaming/Spotify'
         },
         {
           name: 'YouTube Premium',
-          href: 'https://doc.theojs.cn/streaming/YouTube'
+          link: 'https://doc.theojs.cn/streaming/YouTube'
         },
-        { name: 'Hulu', href: 'https://doc.theojs.cn/streaming/Hulu' },
-        { name: 'HBO Max', href: 'https://doc.theojs.cn/streaming/HBO-Max' }
+        { name: 'Hulu', link: 'https://doc.theojs.cn/streaming/Hulu' },
+        { name: 'HBO Max', link: 'https://doc.theojs.cn/streaming/HBO-Max' }
       ]
     },
     {
       title: '相关链接',
       icon: 'mdi:link',
       links: [
-        { name: 'Theo-Docs', href: 'https://doc.theojs.cn/' },
-        { name: '玄学宝典', href: 'https://xx.theojs.cn/' },
-        { name: 'VitePress', href: 'https://vitepress.dev/' }
+        { name: 'Theo-Docs', link: 'https://doc.theojs.cn/' },
+        { name: '玄学宝典', link: 'https://xx.theojs.cn/' },
+        { name: 'VitePress', link: 'https://vitepress.dev/' }
       ]
     }
   ]
