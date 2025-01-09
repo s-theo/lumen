@@ -22,8 +22,8 @@ export const Footer_Data: FooterData = {
       icon: 'bx:link', // `iconify`图标
       color: 'rgba(255, 87, 51, 1)',
       links: [
-        { name: '示例1', href: 'https://', icon: 'solar:book-bold' },
-        { name: '示例2', href: 'https://' }
+        { name: '示例1', link: 'https://', icon: 'solar:book-bold' },
+        { name: '示例2', link: 'https://' }
       ]
     },
     {
@@ -31,8 +31,8 @@ export const Footer_Data: FooterData = {
       icon: 'bx:link',
       color: 'rgba(255, 87, 51, 1)',
       links: [
-        { name: '示例1', icon: 'solar:book-bold', href: '/docs' },
-        { name: '示例2', href: '/page' }
+        { name: '示例1', icon: 'solar:book-bold', link: '/docs' },
+        { name: '示例2', link: '/page' }
       ]
     }
   ]
@@ -97,7 +97,7 @@ export default {
 | `icon`  | `string` | <Badge type="tip" text="可选" /> 链接图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" /> |
 | `color` | `string` | <Badge type="tip" text="可选" /> 图标样式。                                                                                                                             |
 | `name`  | `string` | 链接的名称。                                                                                                                                                            |
-| `href`  | `string` | 链接的地址。                                                                                                                                                            |
+| `link`  | `string` | 链接的地址。                                                                                                                                                            |
 
 ### `Beian` 接口
 
