@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FooterData, Icon } from '../types'
+import { FooterData, Icon, isExternal } from '../types'
 
 import dayjs from 'dayjs/esm'
 
@@ -50,12 +50,12 @@ const Year = dayjs().year()
               :href="link.href"
               :title="link.name"
               :aria-label="link.name"
-              :target="link.target || section.target || '_blank'"
+              :target="isExternal(link.href) ? '_blank' : '_self'"
               rel="noopener noreferrer"
               :aria-describedby="link.name ? link.name : null"
               >{{ link.name
               }}<Icon
-                v-if="(link.target || section.target || '_blank') === '_blank'"
+                v-if="isExternal(link.href)"
                 icon="heroicons-outline:arrow-sm-up"
                 style="
                   color: var(--vp-c-text-3);
