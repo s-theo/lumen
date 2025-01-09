@@ -1,6 +1,6 @@
 import { useData, useRouter } from 'vitepress'
 
-import { computed, nextTick, onMounted, ref } from 'vue'
+import { ComputedRef, computed, nextTick, onMounted, ref } from 'vue'
 
 import { Prelink, VideoProps } from './types'
 
@@ -9,9 +9,9 @@ import { Prelink, VideoProps } from './types'
  *
  * @returns 返回 `frontmatter` 中 `hero` 对象的 `prelink` 属性值，如果不存在则返回 `undefined`。
  */
-export const usePrelink = (): Prelink | undefined => {
+export const usePrelink = (): ComputedRef<Prelink | undefined> => {
   const { frontmatter } = useData()
-  return computed(() => frontmatter.value.hero?.prelink).value
+  return computed(() => frontmatter.value.hero?.prelink)
 }
 
 /**
