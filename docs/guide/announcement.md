@@ -43,7 +43,6 @@ hero:
     dateIcon: 'mdi:calendar-star' // [!code ++]
     dateText: '活动截止日期'// [!code ++]
     link: https://qytcc01.qingyunti.pro/register?aff=jjgD79Jd // [!code ++]
-    target: _blank// [!code ++]
 ---
 ```
 
@@ -71,7 +70,6 @@ hero:
 |    字段    |   类型    | 描述                                                                                                                                                                                                                                                    |
 | :--------: | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |   `link`   | `string`  | <Badge type="tip" text="可选" /> 链接的 URL。                                                                                                                                                                                                           |
-|  `target`  | `string`  | <Badge type="tip" text="可选" /> 链接的目标。                                                                                                                                                                                                           |
 |  `title`   | `string`  | 链接的标题。                                                                                                                                                                                                                                            |
 | `content`  | `string`  | <Badge type="tip" text="可选" /> 链接的内容。                                                                                                                                                                                                           |
 |   `date`   | `string`  | <Badge type="tip" text="可选" /> 活动截止日期。                                                                                                                                                                                                         |
