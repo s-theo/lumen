@@ -30,8 +30,8 @@ importers:
         specifier: ^2.5.6
         version: 2.5.6(prettier@3.4.2)
       prettier-plugin-sort-json:
-        specifier: ^4.0.0
-        version: 4.0.0(prettier@3.4.2)
+        specifier: ^4.1.1
+        version: 4.1.1(prettier@3.4.2)
       simple-git-hooks:
         specifier: ^2.11.1
         version: 2.11.1
@@ -1428,8 +1428,8 @@ packages:
       prettier:
         optional: true
 
-  prettier-plugin-sort-json@4.0.0:
-    resolution: {integrity: sha512-zV5g+bWFD2zAqyQ8gCkwUTC49o9FxslaUdirwivt5GZHcf57hCocavykuyYqbExoEsuBOg8IU36OY7zmVEMOWA==}
+  prettier-plugin-sort-json@4.1.1:
+    resolution: {integrity: sha512-uJ49wCzwJ/foKKV4tIPxqi4jFFvwUzw4oACMRG2dcmDhBKrxBv0L2wSKkAqHCmxKCvj0xcCZS4jO2kSJO/tRJw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       prettier: ^3.0.0
@@ -3066,7 +3066,7 @@ snapshots:
     optionalDependencies:
       prettier: 3.4.2
 
-  prettier-plugin-sort-json@4.0.0(prettier@3.4.2):
+  prettier-plugin-sort-json@4.1.1(prettier@3.4.2):
     dependencies:
       prettier: 3.4.2
 
