@@ -15,12 +15,17 @@ export const head: HeadConfig[] = [
       content: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件'
     }
   ],
+  [
+    'meta',
+    { name: 'keywords', content: 'Vue, VitePress, 插件, 功能组件, 主题美化' }
+  ],
   ['meta', { name: 'og:type', content: 'website' }],
   ['meta', { name: 'og:locale', content: 'zh-CN' }],
   ['meta', { name: 'og:site_name', content: 'Lumen' }],
   ['meta', { name: 'og:title', content: 'Lumen' }],
   ['meta', { name: 'og:url', content: 'https://lumen.theojs.cn/' }],
   ['meta', { name: 'og:image', content: 'https://lumen.theojs.cn/Logo.png' }],
+  ['meta', { name: 'og:image:alt', content: 'Lumen Logo' }],
   [
     'meta',
     {
@@ -42,6 +47,15 @@ export const head: HeadConfig[] = [
     'meta',
     { name: 'twitter:image', content: 'https://lumen.theojs.cn/Logo.png' }
   ],
+  ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
+  [
+    'meta',
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0'
+    }
+  ],
+  ['link', { rel: 'canonical', href: 'https://lumen.theojs.cn/' }],
   [
     'script',
     {
