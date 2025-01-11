@@ -177,11 +177,13 @@ const Year = dayjs().year()
 .list-title {
   margin-bottom: 0.5rem;
   font-weight: 600;
+  letter-spacing: 0.05rem;
 }
 
 .list-links {
   opacity: 0.9;
   line-height: 1.7rem;
+  letter-spacing: 0.025rem;
 }
 
 .iconify {
@@ -196,6 +198,7 @@ const Year = dayjs().year()
 
 .info-item {
   display: inline-block;
+  letter-spacing: 0.025rem;
 }
 
 .info-spacing {
