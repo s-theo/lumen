@@ -24,7 +24,7 @@ const shareLink = useShareLink()
       aria-live="polite"
       @click="copyLink(shareLink)"
     >
-      <span v-if="!copied">
+      <h1 v-if="!copied" class="buttonText">
         <Icon
           class="iconify"
           :icon="ShareButton.buttonIcon || 'solar:share-bold'"
@@ -33,9 +33,9 @@ const shareLink = useShareLink()
           aria-hidden="true"
         />
         {{ ShareButton.buttonText || '分享此页面' }}
-      </span>
+      </h1>
 
-      <span v-else>
+      <h1 v-else class="copiedText">
         <Icon
           class="iconify"
           :icon="ShareButton.copiedIcon || 'mdi:thumbs-up'"
@@ -44,7 +44,7 @@ const shareLink = useShareLink()
           aria-hidden="true"
         />
         {{ ShareButton.copiedText || '链接已复制!' }}
-      </span>
+      </h1>
     </button>
   </div>
 </template>
@@ -52,6 +52,12 @@ const shareLink = useShareLink()
 <style scoped>
 .share-link-container {
   padding: 1rem;
+}
+
+.buttonText,
+.copiedText {
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
 .share-link-button {
@@ -69,8 +75,6 @@ const shareLink = useShareLink()
   width: 100%;
   overflow: hidden;
   color: var(--ShareButton-text);
-  font-weight: 500;
-  font-size: 0.875rem;
 }
 
 .share-link-button::before {

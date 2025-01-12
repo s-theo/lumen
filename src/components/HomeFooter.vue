@@ -19,7 +19,7 @@ const Year = dayjs().year()
         :key="section.title + index"
         class="list-item"
       >
-        <div class="list-title">
+        <h1 class="list-title">
           <template v-if="section.icon">
             <Icon
               class="iconify"
@@ -32,50 +32,52 @@ const Year = dayjs().year()
             />&nbsp;
           </template>
           {{ section.title }}
-        </div>
-        <ul class="list-links">
-          <li v-for="(link, idx) in section.links" :key="link.name + idx">
-            <template v-if="link.icon">
-              <Icon
-                :icon="link.icon"
-                :color="link.color"
-                :ssr="true"
-                :inline="true"
-                :alt="link.name"
-                aria-hidden="true"
-              />&nbsp;</template
-            >
-            <a
-              :name="link.name"
-              :href="link.link"
-              :title="link.name"
-              :aria-label="link.name"
-              :target="isExternal(link.link) ? '_blank' : '_self'"
-              rel="noopener noreferrer"
-              :aria-describedby="link.name ? link.name : null"
-              >{{ link.name
-              }}<Icon
-                v-if="isExternal(link.link)"
-                icon="heroicons-outline:arrow-sm-up"
-                style="
-                  color: var(--vp-c-text-3);
-                  transform: rotate(45deg);
-                  font-size: 1em;
-                "
-                :ssr="true"
-                :inline="true"
-                alt="External Link"
-                aria-hidden="true"
-              />
-            </a>
-          </li>
-        </ul>
+        </h1>
+        <h2
+          v-for="(link, idx) in section.links"
+          :key="link.name + idx"
+          class="list-links"
+        >
+          <template v-if="link.icon">
+            <Icon
+              :icon="link.icon"
+              :color="link.color"
+              :ssr="true"
+              :inline="true"
+              :alt="link.name"
+              aria-hidden="true"
+            />&nbsp;</template
+          >
+          <a
+            :name="link.name"
+            :href="link.link"
+            :title="link.name"
+            :aria-label="link.name"
+            :target="isExternal(link.link) ? '_blank' : '_self'"
+            rel="noopener noreferrer"
+            :aria-describedby="link.name ? link.name : null"
+            >{{ link.name
+            }}<Icon
+              v-if="isExternal(link.link)"
+              icon="heroicons-outline:arrow-sm-up"
+              style="
+                color: var(--vp-c-text-3);
+                transform: rotate(45deg);
+                font-size: 1em;
+              "
+              :ssr="true"
+              :inline="true"
+              alt="External Link"
+              aria-hidden="true"
+            />
+          </a>
+        </h2>
       </div>
     </div>
 
     <div class="footer-info">
-      <div v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
-        <span v-if="footer.beian?.icp">
+      <h1 v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
+        <p v-if="footer.beian?.icp" class="footer-infotext">
           <Icon
             v-if="footer.beian?.showIcon"
             class="info-icon"
@@ -93,9 +95,9 @@ const Year = dayjs().year()
           >
             {{ footer.beian.icp }}
           </a>
-        </span>
-        <span class="info-spacing"></span>
-        <span v-if="footer.beian?.police">
+        </p>
+        <span class="info-spacing" aria-hidden="true"></span>
+        <p v-if="footer.beian?.police" class="footer-infotext">
           <Icon
             v-if="footer.beian?.showIcon"
             class="info-icon"
@@ -115,11 +117,11 @@ const Year = dayjs().year()
           >
             {{ footer.beian.police }}
           </a>
-        </span>
-      </div>
-      <span class="info-spacing-copyright"></span>
-      <div v-if="footer.author?.name" class="info-item">
-        <span>
+        </p>
+      </h1>
+      <span class="info-spacing-copyright" aria-hidden="true"></span>
+      <h1 v-if="footer.author?.name" class="info-item">
+        <p class="footer-infotext">
           <Icon
             class="info-icon"
             alt="版权"
@@ -136,8 +138,8 @@ const Year = dayjs().year()
             aria-label="GitHub"
             >{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
-        </span>
-      </div>
+        </p>
+      </h1>
     </div>
   </footer>
 </template>
@@ -146,7 +148,6 @@ const Year = dayjs().year()
 .footer {
   background: var(--HomeFooter-bg);
   width: 100%;
-  font-size: 0.75rem;
 }
 
 .footer a {
@@ -177,11 +178,13 @@ const Year = dayjs().year()
 .list-title {
   margin-bottom: 0.5rem;
   font-weight: 600;
+  font-size: 0.75rem;
   letter-spacing: 0.05rem;
 }
 
 .list-links {
   opacity: 0.9;
+  font-size: 0.75rem;
   line-height: 1.7rem;
   letter-spacing: 0.025rem;
 }
@@ -196,15 +199,19 @@ const Year = dayjs().year()
   text-align: center;
 }
 
+.footer-infotext {
+  display: inline-block;
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.75rem;
+}
+
 .info-item {
   display: inline-block;
   letter-spacing: 0.025rem;
 }
 
-.info-spacing {
-  margin-left: 1rem;
-}
-
+.info-spacing,
 .info-spacing-copyright {
   margin-left: 1rem;
 }
