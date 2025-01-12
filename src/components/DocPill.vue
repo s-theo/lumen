@@ -71,7 +71,7 @@ const pill = defineProps<Pill>()
         aria-hidden="true"
       />
     </template>
-    <span class="name">{{ pill.name }}</span>
+    <h1 class="name">{{ pill.name }}</h1>
   </a>
 </template>
 
@@ -123,6 +123,7 @@ const pill = defineProps<Pill>()
 
 .name {
   color: var(--Pill-name);
+  font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.05rem;
 }

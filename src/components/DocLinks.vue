@@ -85,8 +85,8 @@ const props = defineProps<{ items: LinkItem[] }>()
         />
       </template>
       <div class="text-content">
-        <span class="name">{{ link.name }}</span>
-        <span v-if="link.desc" class="desc">{{ link.desc }}</span>
+        <h1 class="name">{{ link.name }}</h1>
+        <p v-if="link.desc" class="desc">{{ link.desc }}</p>
       </div>
     </a>
   </div>
@@ -156,6 +156,7 @@ const props = defineProps<{ items: LinkItem[] }>()
 .name {
   overflow: hidden;
   color: var(--Links-name);
+  font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.2;
   letter-spacing: 0.05rem;
@@ -164,7 +165,7 @@ const props = defineProps<{ items: LinkItem[] }>()
 }
 
 .desc {
-  margin-top: 0.25rem;
+  margin: 0.25rem 0 0 0;
   color: var(--Links-desc);
   font-size: 0.75rem;
   line-height: 1.5;
