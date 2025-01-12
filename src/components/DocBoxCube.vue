@@ -175,6 +175,8 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 }
 
 .desc {
+  display: inline-block;
+  margin: 0;
   color: var(--Boxcube-desc);
   font-size: 0.75rem;
   line-height: 1rem;
@@ -189,6 +191,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   align-items: center;
   transform: rotate(25deg);
   z-index: 1;
+  margin: 0;
   border-radius: 0.7rem;
   background-color: var(--Boxcube-tag-bg);
   padding: 0.25rem 0.5rem;
