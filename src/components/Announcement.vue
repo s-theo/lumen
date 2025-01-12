@@ -16,13 +16,8 @@ const prelink = usePrelink()
     @click="handleClick($event, prelink)"
   >
     <div class="prelink-content">
-      <span class="title" aria-hidden="true" v-html="prelink.title"></span>
-      <span
-        v-if="prelink.content"
-        class="content"
-        aria-hidden="true"
-        v-html="prelink.content"
-      ></span>
+      <h1 class="title" v-html="prelink.title"></h1>
+      <p v-if="prelink.content" class="content" v-html="prelink.content"></p>
       <span v-if="prelink.date" class="time-info">
         <Icon
           class="iconify"
@@ -32,11 +27,11 @@ const prelink = usePrelink()
           alt="Icon"
           aria-hidden="true"
         ></Icon>
-        <span
+        <p
           aria-hidden="true"
           v-html="prelink.dateText || '活动时间: 即日至'"
-        ></span>
-        <span class="date" :aria-label="prelink.date">{{ prelink.date }}</span>
+        ></p>
+        <p class="date" :aria-label="prelink.date">{{ prelink.date }}</p>
       </span>
     </div>
   </a>

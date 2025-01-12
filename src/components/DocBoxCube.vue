@@ -82,9 +82,9 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           aria-hidden="true"
         />
       </template>
-      <span class="name">{{ boxcube.name }}</span>
-      <span v-if="boxcube.desc" class="desc">{{ boxcube.desc }}</span>
-      <span v-if="boxcube.tag" class="tag">{{ boxcube.tag }}</span>
+      <h1 class="name">{{ boxcube.name }}</h1>
+      <p v-if="boxcube.desc" class="desc">{{ boxcube.desc }}</p>
+      <p v-if="boxcube.tag" class="tag">{{ boxcube.tag }}</p>
     </a>
   </div>
 </template>
@@ -168,6 +168,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 
 .name {
   color: var(--Boxcube-name);
+  font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.25rem;
   letter-spacing: 0.05rem;
