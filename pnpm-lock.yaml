@@ -39,8 +39,8 @@ importers:
   docs:
     dependencies:
       '@mdit/plugin-figure':
-        specifier: ^0.14.0
-        version: 0.14.0
+        specifier: ^0.15.0
+        version: 0.15.0
       '@mdit/plugin-img-size':
         specifier: ^0.15.0
         version: 0.15.0
@@ -554,8 +554,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@mdit/plugin-figure@0.14.0':
-    resolution: {integrity: sha512-3/gyY1XUw5A+ZP/p6t/iQ36hmvHuAwQRBjFHxwEsFVVI7OLfoqaCEEkg/VAUeyNc4DN8vPhueZrbam5EIrBtPA==}
+  '@mdit/plugin-figure@0.15.0':
+    resolution: {integrity: sha512-cgvTess1cCV69bwKqSmqoKd4M15EquENTIM7CEmi4jwfNzhqSq7RCtjgNWKa2wjIk0FaZ04y0LD2mnD3k+QAaw==}
     engines: {node: '>= 18'}
     peerDependencies:
       markdown-it: ^14.1.0
@@ -2117,7 +2117,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@mdit/plugin-figure@0.14.0':
+  '@mdit/plugin-figure@0.15.0':
     dependencies:
       '@types/markdown-it': 14.1.2
 
