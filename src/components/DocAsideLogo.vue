@@ -81,16 +81,20 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       </template>
       <span>
         <template v-if="aside.activity">
-          <p class="activity" v-html="aside.activity"></p>
+          <h1 class="activity" v-html="aside.activity"></h1>
         </template>
-        <template v-if="aside.hide1 || aside.info1">
+        <template
+          v-if="
+            aside.hide1 ||
+            aside.info1 ||
+            aside.name ||
+            aside.hide2 ||
+            aside.info2
+          "
+        >
           <p v-if="aside.hide1" class="hide" v-html="aside.hide1"></p>
           <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
-        </template>
-        <template v-if="aside.name">
-          <p class="name" v-html="aside.name"></p>
-        </template>
-        <template v-if="aside.hide2 || aside.info2">
+          <h1 v-if="aside.name" class="name" v-html="aside.name"></h1>
           <p v-if="aside.hide2" class="hide" v-html="aside.hide2"></p>
           <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
         </template>
@@ -108,6 +112,11 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   display: none;
 }
 
+h1 {
+  font-weight: 900;
+  font-size: 0.875rem;
+}
+
 .link {
   display: flex;
   position: relative;
@@ -120,9 +129,6 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   border-radius: 0.8rem;
   background-color: var(--AsideLogo-bg);
   padding: 0.25rem 0;
-  font-weight: 900;
-  font-size: 0.875rem;
-  line-height: 1rem;
 }
 
 .link:hover {
@@ -176,11 +182,13 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   color: var(--AsideLogo-hide);
   font-weight: 600;
   font-size: 0.75rem;
+  line-height: 0.75rem;
 }
 
 .link .info {
   color: var(--AsideLogo-info);
   font-size: 0.75rem;
+  line-height: 0.75rem;
 }
 
 .link .name {
