@@ -1,6 +1,6 @@
 {
   "name": "@theojs/lumen",
-  "version": "5.3.0",
+  "version": "5.3.4",
   "description": "用于 VitePress 主题美化和集成 Vue 功能组件",
   "keywords": [
     "css",
