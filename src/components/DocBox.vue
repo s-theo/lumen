@@ -74,8 +74,8 @@ const props = defineProps<{ items: BoxItem[] }>()
           aria-hidden="true"
         />
       </template>
-      <span class="name">{{ box.name }}</span>
-      <span v-if="box.tag" class="tag">{{ box.tag }}</span>
+      <h1 class="name">{{ box.name }}</h1>
+      <p v-if="box.tag" class="tag">{{ box.tag }}</p>
     </a>
   </div>
 </template>
@@ -136,10 +136,12 @@ const props = defineProps<{ items: BoxItem[] }>()
 }
 
 .tag {
+  display: inline-block;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
+  margin: 0;
   border-radius: 0 0.7rem 0 0.7rem;
   background-color: var(--Box-tag-bg);
   padding: 0.25rem 0.5rem;
@@ -164,6 +166,7 @@ const props = defineProps<{ items: BoxItem[] }>()
 .name {
   overflow: hidden;
   color: var(--Box-name);
+  font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.05rem;
   text-overflow: ellipsis;
