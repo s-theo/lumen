@@ -27,7 +27,7 @@ a.lumen.theo::before {
   display: inline-block;
   transform: translateY(7px);
   margin-right: 0.5em;
-  background-image: url('https://i.theojs.cn/avatar.png');
+  background-image: url('https://i.theojs.cn/avatar.webp');
   background-position: bottom;
   background-size: 1.5rem;
   background-repeat: no-repeat;

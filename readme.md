@@ -2,7 +2,7 @@
 
 <div align="center">
     <p>
-        <img src="https://lumen.theojs.cn/Logo.png" alt="@theojs/lumen">
+        <img src="https://lumen.theojs.cn/Logo.webp" alt="@theojs/lumen">
     </p>
     <p>
         <img src="https://img.shields.io/npm/v/@theojs/lumen?style=flat&colorA=080f12&colorB=1fa669" alt="release">
