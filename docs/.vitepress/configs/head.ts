@@ -1,7 +1,7 @@
 import type { HeadConfig } from 'vitepress'
 
 export const head: HeadConfig[] = [
-  ['link', { rel: 'icon', type: 'icon', href: '/Logo.png' }],
+  ['link', { rel: 'icon', type: 'icon', href: '/Logo.webp' }],
   ['meta', { name: 'msapplication-TileColor', content: '#da532c' }],
   ['meta', { name: 'theme-color', content: '#ffffff' }],
   ['meta', { name: 'author', content: 'Theo-Messi' }],
@@ -24,7 +24,7 @@ export const head: HeadConfig[] = [
   ['meta', { name: 'og:site_name', content: 'Lumen' }],
   ['meta', { name: 'og:title', content: 'Lumen' }],
   ['meta', { name: 'og:url', content: 'https://lumen.theojs.cn/' }],
-  ['meta', { name: 'og:image', content: 'https://lumen.theojs.cn/Logo.png' }],
+  ['meta', { name: 'og:image', content: 'https://lumen.theojs.cn/Logo.webp' }],
   ['meta', { name: 'og:image:alt', content: 'Lumen Logo' }],
   [
     'meta',
@@ -45,7 +45,7 @@ export const head: HeadConfig[] = [
   ],
   [
     'meta',
-    { name: 'twitter:image', content: 'https://lumen.theojs.cn/Logo.png' }
+    { name: 'twitter:image', content: 'https://lumen.theojs.cn/Logo.webp' }
   ],
   ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
   [
