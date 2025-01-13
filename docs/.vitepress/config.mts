@@ -38,8 +38,13 @@ export default defineConfig({
   },
 
   themeConfig: {
+    // 站点标题
     siteTitle: `Lumen <code class="VPBadge tip">${Lumenversion}</code>`,
-    logo: { src: '/Logo.webp', width: 24, height: 24 },
+
+    // Logo
+    logo: { src: '/Logo.webp', width: 24, height: 24, alt: 'Lumen Logo' },
+
+    // 修改链接
     editLink: {
       pattern: 'https://github.com/Theo-Messi/lumen/edit/main/docs/:path',
       text: '为此页提供修改建议'
@@ -70,7 +75,8 @@ export default defineConfig({
     darkModeSwitchLabel: '主题模式',
 
     // markdown 外部链接图标
-    // externalLinkIcon: true,
+    externalLinkIcon: true,
+
     // 语言切换
     langMenuLabel: '切换语言',
 
