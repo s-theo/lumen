@@ -111,6 +111,10 @@ const pill = defineProps<Pill>()
   transform: scale(0.9);
 }
 
+.link::after {
+  display: none !important;
+}
+
 .icon {
   height: 0.875em;
 }

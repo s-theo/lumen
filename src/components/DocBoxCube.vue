@@ -132,6 +132,10 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   transform: scale(0.9);
 }
 
+.link::after {
+  display: none !important;
+}
+
 @media (max-width: 1024px) {
   .link {
     flex: 1 1 calc(25% - 0.5rem);
