@@ -1,33 +1,29 @@
 /**
  * Component: home-links
  * -------------------------------------------------------------------------- */
-
-a.lumen {
-  border-color: var(--vp-button-alt-border);
-  background-color: var(--vp-button-alt-bg);
-  color: var(--vp-button-alt-text);
-  font-size: 16px;
-  line-height: 46px;
-  text-align: center;
+a.custom-brand {
+  border-color: var(--vp-button-brand-border);
+  background-color: var(--vp-button-brand-bg);
+  color: var(--vp-button-brand-text);
 }
 
-a.lumen:hover {
-  border-color: var(--vp-button-alt-hover-border);
-  background-color: var(--vp-button-alt-hover-bg);
-  color: var(--vp-button-alt-hover-text);
+a.custom-brand:hover {
+  border-color: var(--vp-button-brand-hover-border);
+  background-color: var(--vp-button-brand-hover-bg);
+  color: var(--vp-button-brand-hover-text);
 }
 
-a.lumen:active {
-  border-color: var(--vp-button-alt-active-border);
-  background-color: var(--vp-button-alt-active-bg);
-  color: var(--vp-button-alt-active-text);
+a.custom-brand:active {
+  border-color: var(--vp-button-brand-active-border);
+  background-color: var(--vp-button-brand-active-bg);
+  color: var(--vp-button-brand-active-text);
 }
 
-a.lumen.theo::before {
+a.custom-brand::before {
   display: inline-block;
   transform: translateY(7px);
   margin-right: 0.5em;
-  background-image: url('https://i.theojs.cn/avatar.webp');
+  background-image: var(--Home-links-custom-brand);
   background-position: bottom;
   background-size: 1.5rem;
   background-repeat: no-repeat;
@@ -36,16 +32,40 @@ a.lumen.theo::before {
   content: '';
 }
 
-@keyframes ping {
-  15%,
-  to {
-    transform: scale(1.25, 2);
-    opacity: 0;
-  }
+a.custom-alt {
+  border-color: var(--vp-button-alt-border);
+  background-color: var(--vp-button-alt-bg);
+  color: var(--vp-button-alt-text);
+}
+
+a.custom-alt:hover {
+  border-color: var(--vp-button-alt-hover-border);
+  background-color: var(--vp-button-alt-hover-bg);
+  color: var(--vp-button-alt-hover-text);
+}
+
+a.custom-alt:active {
+  border-color: var(--vp-button-alt-active-border);
+  background-color: var(--vp-button-alt-active-bg);
+  color: var(--vp-button-alt-active-text);
+}
+
+a.custom-alt::before {
+  display: inline-block;
+  transform: translateY(7px);
+  margin-right: 0.5em;
+  background-image: var(--Home-links-custom-alt);
+  background-position: bottom;
+  background-size: 1.5rem;
+  background-repeat: no-repeat;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: '';
 }
 
 @media (max-width: 420px) {
-  a.lumen.theo {
+  a.custom-alt,
+  a.custom-brand {
     display: block;
     margin-right: 8px;
     margin-left: 8px;

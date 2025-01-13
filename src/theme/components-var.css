@@ -112,6 +112,13 @@
   --ShareButton-bg-hover: var(--vp-c-brand-soft);
   --ShareButton-border-hover: var(--vp-c-brand-1);
   --ShareButton-icon: var(--vp-c-brand-1);
+
+  /**
+  * Home-links
+  * -------------------------------------------------------------------------- */
+
+  --Home-links-custom-brand: url('https://i.theojs.cn/avatar.webp');
+  --Home-links-custom-alt: url('https://i.theojs.cn/avatar.webp');
 }
 
 .dark {
