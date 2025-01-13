@@ -9,7 +9,7 @@ hero:
   tagline: ✨ 集成 Vue 功能组件和主题美化的 VitePress 插件
 
   image:
-    src: '/Logo.png'
+    src: '/Logo.webp'
     alt: '@theojs/lumen'
 
   prelink:

@@ -2,7 +2,7 @@
 title: 图片描述
 ---
 
-![效果图](/Logo.png)
+![效果图](/Logo.webp)
 
 ## 安装 @mdit/plugin-figure 插件
 
@@ -63,7 +63,7 @@ import '@theojs/lumen/pic'
 ## 使用
 
 ```md
-![效果图](/Logo.png)
+![效果图](/Logo.webp)
 
 ![浅色模式{.light-only}](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU)
 
@@ -74,7 +74,7 @@ import '@theojs/lumen/pic'
 ![浅色模式](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU#light)
 ```
 
-![效果图](/Logo.png)
+![效果图](/Logo.webp)
 
 ![浅色模式{.light-only}](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU)
 

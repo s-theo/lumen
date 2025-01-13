@@ -18,7 +18,7 @@
 <!-- 图片 -->
 <Pill
   name="支付宝"
-  link="https://i.theojs.cn/docs/202405201752089.jpg"
+  link="https://i.theojs.cn/docs/202405201752089.webp"
   image="https://i.theojs.cn/logo/alipay.svg"
 />
 

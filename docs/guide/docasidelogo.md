@@ -2,7 +2,7 @@
 title: 侧边栏链接
 ---
 
-![侧边栏 - 效果图](https://i.theojs.cn/docs/202408081937401.png =400x)
+![侧边栏 - 效果图](https://i.theojs.cn/docs/202408081937401.webp =400x)
 
 ## 创建数据
 
@@ -14,14 +14,14 @@ import type { AsideItem } from '@theojs/lumen'
 export const Aside_Data: AsideItem[] = [
   {
     link: 'https://example.com/',
-    image: 'https://example.com/icon.png',
+    image: 'https://example.com/icon.webp',
     activity: '活动标题',
     info1: '简介1',
     info2: '简介2'
   },
   {
     link: 'https://example.com/',
-    image: 'https://example.com/icon.png',
+    image: 'https://example.com/icon.webp',
     name: '标题',
     hide1: '隐藏信息1',
     hide2: '隐藏信息2'
