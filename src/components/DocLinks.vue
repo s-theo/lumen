@@ -126,6 +126,10 @@ const props = defineProps<{ items: LinkItem[] }>()
   transform: scale(0.9);
 }
 
+.link::after {
+  display: none !important;
+}
+
 .icon,
 .iconify {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
