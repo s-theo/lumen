@@ -42,9 +42,9 @@ hero:
 
     - theme: sponsor
       text: ✨ 成为赞助商
-      link: https://github.com/sponsors/Theo-Messi
+      link: https://i.theojs.cn/docs/202405201759098.webp
 
-    - theme: lumen theo
+    - theme: custom-alt
       text: 玄学宝典
       link: https://xx.theojs.cn
 
