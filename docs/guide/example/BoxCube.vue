@@ -22,7 +22,7 @@
     //图片
     {
       name: '支付宝',
-      link: 'https://i.theojs.cn/docs/202405201752089.jpg',
+      link: 'https://i.theojs.cn/docs/202405201752089.webp',
       image: 'https://i.theojs.cn/logo/alipay.svg'
     },
     //深浅模式的图片

@@ -2,7 +2,7 @@
 title: 首页下划线
 ---
 
-![首页下划线 - 效果图](https://i.theojs.cn/docs/202411071153583.png)
+![首页下划线 - 效果图](https://i.theojs.cn/docs/202411071153583.webp)
 
 ## 引入组件
 

@@ -39,7 +39,7 @@ export default defineConfig({
 
   themeConfig: {
     siteTitle: `Lumen <code class="VPBadge tip">${Lumenversion}</code>`,
-    logo: { src: '/Logo.png', width: 24, height: 24 },
+    logo: { src: '/Logo.webp', width: 24, height: 24 },
     editLink: {
       pattern: 'https://github.com/Theo-Messi/lumen/edit/main/docs/:path',
       text: '为此页提供修改建议'
