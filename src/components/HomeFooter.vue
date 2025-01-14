@@ -59,15 +59,11 @@ const Year = dayjs().year()
             >{{ link.name
             }}<Icon
               v-if="isExternal(link.link)"
-              icon="heroicons-outline:arrow-sm-up"
-              style="
-                color: var(--vp-c-text-3);
-                transform: rotate(45deg);
-                font-size: 1em;
-              "
+              class="external-link-icon"
+              icon="basil:arrow-up-outline"
               :ssr="true"
               :inline="true"
-              alt="External Link"
+              alt="External Link Icon"
               aria-hidden="true"
             />
           </a>
@@ -151,6 +147,7 @@ const Year = dayjs().year()
 }
 
 .footer a {
+  position: relative;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -191,6 +188,7 @@ const Year = dayjs().year()
 
 .iconify {
   display: inline-block;
+  flex-shrink: 0;
   font-size: 1.2em;
 }
 
@@ -219,6 +217,15 @@ const Year = dayjs().year()
 .info-icon {
   display: inline-block;
   font-size: 1em;
+}
+
+.external-link-icon {
+  position: absolute;
+  top: 0;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+  color: var(--vp-c-text-3);
+  font-size: 1.2em;
 }
 
 @media (max-width: 768px) {
