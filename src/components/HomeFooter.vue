@@ -17,7 +17,6 @@ const Year = dayjs().year()
       <div
         v-for="(section, index) in footer.group || []"
         :key="section.title + index"
-        class="list-item"
       >
         <h1 class="list-title">
           <template v-if="section.icon">
@@ -165,11 +164,8 @@ const Year = dayjs().year()
 .list-container {
   display: flex;
   justify-content: space-evenly;
-  margin: 1.25rem 10% 1.25rem 18%;
-}
-
-.list-item {
-  flex-grow: 0.15;
+  margin: 1.25rem auto;
+  max-width: 75%;
 }
 
 .list-title {
@@ -193,14 +189,13 @@ const Year = dayjs().year()
 }
 
 .footer-info {
-  margin: 1.25rem 0 1.25rem 0;
+  margin-bottom: 0.875rem;
   text-align: center;
 }
 
 .footer-infotext {
   display: inline-block;
   margin: 0;
-  font-weight: normal;
   font-size: 0.75rem;
 }
 
@@ -232,11 +227,8 @@ const Year = dayjs().year()
   .list-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .list-title {
-    font-size: 0.875rem;
+    row-gap: 1.25rem;
+    justify-items: center;
   }
 
   .info-spacing-copyright {
