@@ -17,7 +17,6 @@ const Year = dayjs().year()
       <div
         v-for="(section, index) in footer.group || []"
         :key="section.title + index"
-        class="list-item"
       >
         <h1 class="list-title">
           <template v-if="section.icon">
@@ -59,15 +58,11 @@ const Year = dayjs().year()
             >{{ link.name
             }}<Icon
               v-if="isExternal(link.link)"
-              icon="heroicons-outline:arrow-sm-up"
-              style="
-                color: var(--vp-c-text-3);
-                transform: rotate(45deg);
-                font-size: 1em;
-              "
+              class="external-link-icon"
+              icon="basil:arrow-up-outline"
               :ssr="true"
               :inline="true"
-              alt="External Link"
+              alt="External Link Icon"
               aria-hidden="true"
             />
           </a>
@@ -151,6 +146,7 @@ const Year = dayjs().year()
 }
 
 .footer a {
+  position: relative;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -168,11 +164,8 @@ const Year = dayjs().year()
 .list-container {
   display: flex;
   justify-content: space-evenly;
-  margin: 1.25rem 10% 1.25rem 18%;
-}
-
-.list-item {
-  flex-grow: 0.15;
+  margin: 1.25rem auto;
+  max-width: 75%;
 }
 
 .list-title {
@@ -191,18 +184,18 @@ const Year = dayjs().year()
 
 .iconify {
   display: inline-block;
+  flex-shrink: 0;
   font-size: 1.2em;
 }
 
 .footer-info {
-  margin: 1.25rem 0 1.25rem 0;
+  margin-bottom: 0.875rem;
   text-align: center;
 }
 
 .footer-infotext {
   display: inline-block;
   margin: 0;
-  font-weight: normal;
   font-size: 0.75rem;
 }
 
@@ -221,15 +214,21 @@ const Year = dayjs().year()
   font-size: 1em;
 }
 
+.external-link-icon {
+  position: absolute;
+  top: 0;
+  flex-shrink: 0;
+  transform: rotate(45deg);
+  color: var(--vp-c-text-3);
+  font-size: 1.2em;
+}
+
 @media (max-width: 768px) {
   .list-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .list-title {
-    font-size: 0.875rem;
+    row-gap: 1.25rem;
+    justify-items: center;
   }
 
   .info-spacing-copyright {
