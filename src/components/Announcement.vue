@@ -26,7 +26,7 @@ const prelink = usePrelink()
           :inline="true"
           alt="Icon"
           aria-hidden="true"
-        ></Icon>
+        />
         <p
           aria-hidden="true"
           v-html="prelink.dateText || '活动时间: 即日至'"
