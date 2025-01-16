@@ -12,3 +12,7 @@
   -webkit-text-decoration: underline solid;
   text-decoration: underline solid;
 }
+
+.vp-doc a:has(.VPBadge)::after {
+  display: none !important;
+}
