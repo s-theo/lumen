@@ -48,8 +48,8 @@ importers:
         specifier: workspace:*
         version: link:../src
       vitepress-plugin-group-icons:
-        specifier: ^1.3.3
-        version: 1.3.3
+        specifier: ^1.3.4
+        version: 1.3.4
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.3)
@@ -1405,9 +1405,6 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  mlly@1.7.3:
-    resolution: {integrity: sha512-xUsx5n/mN0uQf4V548PKQ+YShA4/IW0KI1dZhrNrPCLG+xizETbHTkOa1f8/xut9JRPp8kQuMnz0oqwkTiLo/A==}
-
   mlly@1.7.4:
     resolution: {integrity: sha512-qmdSIPC4bDJXgZTCR7XosJiNKySV7O215tsPtDN9iEO/7q/76b/ijtgRu/+epFXSJhijtTCCGp3DWS549P3xKw==}
 
@@ -1793,8 +1790,8 @@ packages:
       yaml:
         optional: true
 
-  vitepress-plugin-group-icons@1.3.3:
-    resolution: {integrity: sha512-IcWMqwjyx/vC5+WUVDRnpAJgEEnHFiIatrmZ04YaigpXj+6G5LeXJusxzuhT6YQEDebS/QGUMRmoq3ITXvhwKg==}
+  vitepress-plugin-group-icons@1.3.4:
+    resolution: {integrity: sha512-lykQGXyalL7hnYY7NWr5+xFqgrNBbfXk2EB+dXojJ6KSAWvt9C39BwoJQ57BP0EykmcuDr/TVEouLa3ntjJbdQ==}
 
   vitepress@1.5.0:
     resolution: {integrity: sha512-q4Q/G2zjvynvizdB3/bupdYkCJe2umSAMv9Ju4d92E6/NXJ59z70xB0q5p/4lpRyAwflDsbwy1mLV9Q5+nlB+g==}
@@ -2197,7 +2194,7 @@ snapshots:
       globals: 15.14.0
       kolorist: 1.8.0
       local-pkg: 0.5.1
-      mlly: 1.7.3
+      mlly: 1.7.4
     transitivePeerDependencies:
       - supports-color
 
@@ -2905,7 +2902,7 @@ snapshots:
 
   local-pkg@0.5.1:
     dependencies:
-      mlly: 1.7.3
+      mlly: 1.7.4
       pkg-types: 1.3.0
 
   lodash@4.17.21: {}
@@ -3117,13 +3114,6 @@ snapshots:
   mitt@3.0.1: {}
 
   mkdirp@1.0.4: {}
-
-  mlly@1.7.3:
-    dependencies:
-      acorn: 8.14.0
-      pathe: 1.1.2
-      pkg-types: 1.3.0
-      ufo: 1.5.4
 
   mlly@1.7.4:
     dependencies:
@@ -3497,7 +3487,7 @@ snapshots:
       jiti: 2.4.2
       yaml: 2.6.1
 
-  vitepress-plugin-group-icons@1.3.3:
+  vitepress-plugin-group-icons@1.3.4:
     dependencies:
       '@iconify-json/logos': 1.2.4
       '@iconify-json/vscode-icons': 1.2.10
