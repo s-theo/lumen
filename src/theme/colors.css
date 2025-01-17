@@ -46,3 +46,9 @@
   --vp-c-bg-alt: rgba(13, 18, 27, 1);
   --vp-c-bg-elv: var(--vp-c-bg-soft);
 }
+
+/* style the activity information */
+.activity-text {
+  color: var(--vp-c-brand-3);
+  font-weight: bold;
+}
