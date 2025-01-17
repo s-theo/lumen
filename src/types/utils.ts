@@ -180,12 +180,13 @@ export const getVideoConfig = (props: VideoProps) => {
  *
  * @returns 当前页面的分享链接。
  */
-export function useShareLink(): import('vue').ComputedRef<string> {
+export function useShareLink(): ComputedRef<string> {
   const router = useRouter()
   return computed(() => {
     return `${window.location.origin}${router.route.path.replace(/^\/[a-z]{2}\//, '/')}`
   })
 }
+
 /**
  * 处理点击事件，执行复制操作或者跳转。
  *
