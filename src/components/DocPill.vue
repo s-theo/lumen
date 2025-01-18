@@ -52,6 +52,7 @@ const pill = defineProps<Pill>()
         :src="pill.image.light"
         :alt="pill.name"
         loading="lazy"
+        decoding="async"
         aria-hidden="true"
       />
       <img
@@ -60,6 +61,7 @@ const pill = defineProps<Pill>()
         :src="pill.image.dark"
         :alt="pill.name"
         loading="lazy"
+        decoding="async"
         aria-hidden="true"
       />
       <img
@@ -68,6 +70,7 @@ const pill = defineProps<Pill>()
         :src="pill.image"
         :alt="pill.name"
         loading="lazy"
+        decoding="async"
         aria-hidden="true"
       />
     </template>
