@@ -60,6 +60,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :src="aside.image.light"
           :alt="aside.name"
           loading="lazy"
+          decoding="async"
           aria-hidden="true"
         />
         <img
@@ -68,6 +69,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :src="aside.image.dark"
           :alt="aside.name"
           loading="lazy"
+          decoding="async"
           aria-hidden="true"
         />
         <img
@@ -76,6 +78,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :src="aside.image"
           :alt="aside.name"
           loading="lazy"
+          decoding="async"
           aria-hidden="true"
         />
       </template>

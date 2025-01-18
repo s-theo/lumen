@@ -57,6 +57,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           :src="link.image.light"
           :alt="link.name"
           loading="lazy"
+          decoding="async"
           aria-hidden="true"
         />
         <img
@@ -65,6 +66,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           :src="link.image.dark"
           :alt="link.name"
           loading="lazy"
+          decoding="async"
           aria-hidden="true"
         />
         <img
@@ -73,6 +75,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           :src="link.image"
           :alt="link.name"
           loading="lazy"
+          decoding="async"
           aria-hidden="true"
         />
       </template>
