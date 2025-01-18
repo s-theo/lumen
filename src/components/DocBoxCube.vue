@@ -63,6 +63,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           :src="boxcube.image.light"
           :alt="boxcube.name"
           loading="lazy"
+          decoding="async"
           aria-hidden="true"
         />
         <img
@@ -71,6 +72,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           :src="boxcube.image.dark"
           :alt="boxcube.name"
           loading="lazy"
+          decoding="async"
           aria-hidden="true"
         />
         <img
@@ -79,6 +81,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           :src="boxcube.image"
           :alt="boxcube.name"
           loading="lazy"
+          decoding="async"
           aria-hidden="true"
         />
       </template>
