@@ -29,6 +29,7 @@ const shareLink = useShareLink()
           class="iconify"
           :icon="ShareButton.buttonIcon || 'solar:share-bold'"
           :ssr="true"
+          :inline="true"
           alt="Icon"
           aria-hidden="true"
         />
@@ -40,6 +41,7 @@ const shareLink = useShareLink()
           class="iconify"
           :icon="ShareButton.copiedIcon || 'mdi:thumbs-up'"
           :ssr="true"
+          :inline="true"
           alt="Icon"
           aria-hidden="true"
         />
@@ -111,7 +113,7 @@ const shareLink = useShareLink()
 .iconify {
   display: inline-block;
   flex-shrink: 0;
-  margin: 0 0 -0.2em 0;
+  margin: 0 0 -0.1em 0;
   color: var(--ShareButton-icon);
   font-size: 1.2em;
 }
