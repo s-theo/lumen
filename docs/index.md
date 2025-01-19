@@ -13,7 +13,7 @@ hero:
     alt: '@theojs/lumen'
 
   prelink:
-    # content: '<span class="activity-text" style="display: inline-flex; align-items: center;"><img src="https://www.qingyunti.cc/images/qytlogo-144-49.png" style="height:0.65rem; "/>IPLC纯专线内网传输线路 最高2.5Gbps速率!</span>'
+    # content: '<span class="activity-text" style="display: inline-flex; align-items: center;"><img src="https://i.theojs.cn/logo/qyt.webp" style="height:0.65rem; "/>IPLC纯专线内网传输线路 最高2.5Gbps速率!</span>'
     title: '🎉 FlyingBird 新春活动开启咯！'
     content: '
     · 月/季/半年付<span class="activity-text"> 85折 </span>优惠码<span class="activity-text"> cny2585 </span></br>
