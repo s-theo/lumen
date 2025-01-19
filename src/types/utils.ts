@@ -101,28 +101,30 @@ export const useCopyLink = () => {
  */
 export const video = {
   bilibili: {
-    src: (id: string) =>
+    src: (id: VideoProps['id']) =>
       `https://player.bilibili.com/player.html?bvid=${id}&autoplay=0`,
     title: 'Bilibili video player'
   },
   tencent: {
-    src: (id: string) => `https://v.qq.com/txp/iframe/player.html?vid=${id}`,
+    src: (id: VideoProps['id']) =>
+      `https://v.qq.com/txp/iframe/player.html?vid=${id}`,
     title: 'Tencent Video player'
   },
   youku: {
-    src: (id: string) => `https://player.youku.com/embed/${id}`,
+    src: (id: VideoProps['id']) => `https://player.youku.com/embed/${id}`,
     title: 'Youku video player'
   },
   youtube: {
-    src: (id: string) => `https://www.youtube-nocookie.com/embed/${id}`,
+    src: (id: VideoProps['id']) =>
+      `https://www.youtube-nocookie.com/embed/${id}`,
     title: 'YouTube video player'
   },
   vimeo: {
-    src: (id: string) => `https://player.vimeo.com/video/${id}`,
+    src: (id: VideoProps['id']) => `https://player.vimeo.com/video/${id}`,
     title: 'Vimeo video player'
   },
   xigua: {
-    src: (id: string) => `https://www.ixigua.com/iframe/${id}`,
+    src: (id: VideoProps['id']) => `https://www.ixigua.com/iframe/${id}`,
     title: 'XiGua video player'
   }
 }
@@ -131,41 +133,23 @@ export const video = {
  * 动态返回对应的视频配置或自定义链接
  *
  * @param props - 包含视频相关参数的配置对象
- * @param props.to - 视频平台的名称（可选）
+ * @param props.is - 视频平台的名称（可选）
  * @param props.id - 视频的唯一标识符（可选）
  * @param props.src - 自定义视频链接（可选）
  * @returns 视频配置对象，包括 `src` 和 `title`
  */
-export const getVideoConfig = (props: VideoProps) => {
-  /**
-   * 如果同时传递了 `to` 和 `id`，返回对应视频平台的配置。
-   *
-   * @example
-   *   getVideoConfig({ to: 'bilibili', id: '12345' })
-   *   // 返回 { src: 'https://player.bilibili.com/player.html?aid=12345', title: 'Bilibili video player' }
-   */
-  if (props.to && props.id) {
-    return video[props.to]
+export const getVideo = (props: VideoProps) => {
+  /** 如果同时传递了 `is` 和 `id`，返回对应视频平台的配置。 */
+  if (props.is && props.id) {
+    return video[props.is]
   }
 
-  /**
-   * 如果只有 `id` 存在，则返回默认的 YouTube 视频配置。
-   *
-   * @example
-   *   getVideoConfig({ id: 'abcd1234' })
-   *   // 返回 { src: 'https://www.youtube-nocookie.com/embed/abcd1234', title: 'YouTube video player' }
-   */
+  /** 如果只有 `id` 存在，则返回默认的 YouTube 视频配置。 */
   if (props.id) {
     return video.youtube
   }
 
-  /**
-   * 如果没有 `to` 和 `id`，且提供了自定义的 `src`，返回自定义视频配置。 如果 `src` 为空，则返回空链接。
-   *
-   * @example
-   *   getVideoConfig({ src: 'https://example.com/custom-video.mp4' })
-   *   // 返回 { src: 'https://example.com/custom-video.mp4', title: 'Custom video player' }
-   */
+  /** 如果没有 `is` 和 `id`，且提供了自定义的 `src`，返回自定义视频配置。 如果 `src` 为空，则返回空链接。 */
   return {
     src: props.src || '',
     title: 'Custom video player'

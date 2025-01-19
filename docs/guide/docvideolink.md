@@ -28,31 +28,31 @@ export default {
 ## 使用示例
 
 :::tip
-只需要提供平台名称(`to`)和视频 ID（`id`），即可实现视频的嵌入。
+只需要提供平台名称(`is`)和视频 ID（`id`），即可实现视频的嵌入。
 
-当没有传递 `to` 时，默认会使用 YouTube 平台。例如：
+当没有传递 `is` 时，默认会使用 YouTube 平台。例如：
 :::
 
 ```vue
 YouTube 视频
 <Vid id="dQw4w9WgXcQ" />
 <!-- 或者 -->
-<Vid id="dQw4w9WgXcQ" to="youtube" />
+<Vid is="youtube" id="dQw4w9WgXcQ" />
 
 Bilibili 视频
-<Vid id="BV1if421Q7mL" to="bilibili" />
+<Vid is="bilibili" id="BV1if421Q7mL" />
 
 腾讯视频
-<Vid id="y0035f2sc4s" to="tencent" />
+<Vid is="tencent" id="y0035f2sc4s" />
 
 优酷视频
-<Vid id="XNTE5NTc3NjIwMA==" to="youku" />
+<Vid is="youku" id="XNTE5NTc3NjIwMA==" />
 
 vimeo 视频
-<Vid id="76979871" to="vimeo" />
+<Vid is="vimeo" id="76979871" />
 
 西瓜视频
-<Vid id="7421926380926927399" to="xigua" />
+<Vid is="xigua" id="7421926380926927399" />
 ```
 
 ### 其他平台视频
@@ -69,5 +69,5 @@ vimeo 视频
 | 属性名 | 类型                                                                  | 说明                                                                                     |
 | ------ | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `id`   | `string`                                                              | 视频的唯一标识符，只有在选择平台时才需要使用 `id`。                                      |
-| `to`   | `'youtube' \| 'bilibili' \| 'tencent' \| 'youku'\| 'xigua' \|'vimeo'` | 视频平台类型，值为 `youtube`、`bilibili`、`tencent` 、`youku` 、`xigua`或 `vimeo` 之一。 |
-| `src`  | `string`                                                              | 自定义视频链接，只有在 `to` 和`id` 不存在时才需要提供。                                  |
+| `is`   | `'youtube' \| 'bilibili' \| 'tencent' \| 'youku'\| 'xigua' \|'vimeo'` | 视频平台类型，值为 `youtube`、`bilibili`、`tencent` 、`youku` 、`xigua`或 `vimeo` 之一。 |
+| `src`  | `string`                                                              | 自定义视频链接，只有在 `is` 和`id` 不存在时才需要提供。                                  |
