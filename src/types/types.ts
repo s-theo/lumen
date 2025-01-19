@@ -145,11 +145,11 @@ export interface Group {
 export interface Beian {
   /** ICP 备案号 */
   icp?: string
-  /** ICP 图标，默认为 'fluent:globe-shield-48-filled' */
+  /** ICP 图标，@default 'fluent:globe-shield-48-filled' */
   icpIcon?: string
   /** 公安备案号 */
   police?: string
-  /** 公安备案图标，默认为 'fluent:shield-checkmark-48-filled' */
+  /** 公安备案图标，@default 'fluent:shield-checkmark-48-filled' */
   policeIcon?: string
   /** 是否显示图标 */
   showIcon?: boolean
@@ -180,46 +180,22 @@ export interface VideoProps {
   /** 可选的 id，当选择平台时需要使用 id */
   id?: string
   /** 可选的平台类型 */
-  to?: 'youtube' | 'bilibili' | 'tencent' | 'youku' | 'vimeo' | 'xigua'
-  /** 自定义视频链接，只有在 `to` 和`id` 不存在时才需要提供。 */
+  is?: 'youtube' | 'bilibili' | 'tencent' | 'youku' | 'vimeo' | 'xigua'
+  /** 自定义视频链接，只有在 `is` 和`id` 不存在时才需要提供。 */
   src?: string
-}
-
-/** VideoConfig 接口，用于保存平台的配置信息 */
-export interface VideoConfig {
-  /** 获取视频链接的方法，根据不同平台生成不同的链接 */
-  src: (id: string) => string
-  /** 视频播放器的标题 */
-  title: string
 }
 
 /** ShareButton 接口。 */
 export interface ShareButtonItem {
-  /**
-   * 按钮图标的类名，支持 Iconify 图标库。
-   *
-   * @default 'solar:share-bold'
-   */
+  /** 按钮图标的类名，支持 Iconify 图标库。 @default 'solar:share-bold' */
   buttonIcon?: string
 
-  /**
-   * 按钮显示的文本内容。
-   *
-   * @default '分享此页面'
-   */
+  /** 按钮显示的文本内容。@default '分享此页面' */
   buttonText?: string
 
-  /**
-   * 复制成功后显示的图标的类名，支持 Iconify 图标库。
-   *
-   * @default 'mdi:thumbs-up'
-   */
+  /** 复制成功后显示的图标的类名，支持 Iconify 图标库。 @default 'mdi:thumbs-up' */
   copiedIcon?: string
 
-  /**
-   * 复制成功后显示的文本信息。
-   *
-   * @default '链接已复制!'
-   */
+  /** 复制成功后显示的文本信息。@default '链接已复制!' */
   copiedText?: string
 }
