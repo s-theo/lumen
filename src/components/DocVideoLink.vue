@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-import { VideoProps, getVideoConfig } from '../types'
+import { VideoProps, getVideo } from '../types'
 
 const props = defineProps<VideoProps>()
 
-// 使用 getVideoConfig 来计算视频配置
-const videoConfig = computed(() => getVideoConfig(props))
+const Config = computed(() => getVideo(props))
 </script>
 
 <template>
@@ -15,12 +14,10 @@ const videoConfig = computed(() => getVideoConfig(props))
       class="video-iframe"
       loading="lazy"
       v-bind="{
-        'aria-label': videoConfig.title,
+        'aria-label': Config.title,
         src:
-          typeof videoConfig.src === 'function'
-            ? videoConfig.src(props.id)
-            : videoConfig.src,
-        title: videoConfig.title,
+          typeof Config.src === 'function' ? Config.src(props.id) : Config.src,
+        title: Config.title,
         allow:
           'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;',
         allowfullscreen: true
