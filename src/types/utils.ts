@@ -159,15 +159,14 @@ export const getVideo = (props: VideoProps) => {
 /**
  * 用于生成当前 VitePress 页面分享链接的工具函数。
  *
- * 使用 VitePress 的 `useRouter` 获取当前路由，并根据路径生成完整的分享链接。 自动去除语言前缀（如 `/en/` 或
- * `/zh/`）。
+ * 使用 VitePress 的 `useRouter` 获取当前路由，并根据路径生成完整的分享链接。
  *
  * @returns 当前页面的分享链接。
  */
 export function useShareLink(): ComputedRef<string> {
   const router = useRouter()
   return computed(() => {
-    return `${window.location.origin}${router.route.path.replace(/^\/[a-z]{2}\//, '/')}`
+    return `${window.location.origin}${router.route.path}`
   })
 }
 
