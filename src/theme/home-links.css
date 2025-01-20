@@ -25,10 +25,10 @@ a.custom-brand::before {
   margin-right: 0.5em;
   background-image: var(--Home-links-custom-brand);
   background-position: bottom;
-  background-size: 1.5rem;
+  background-size: 24px;
   background-repeat: no-repeat;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 24px;
+  height: 24px;
   content: '';
 }
 
@@ -56,10 +56,10 @@ a.custom-alt::before {
   margin-right: 0.5em;
   background-image: var(--Home-links-custom-alt);
   background-position: bottom;
-  background-size: 1.5rem;
+  background-size: 24px;
   background-repeat: no-repeat;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 24px;
+  height: 24px;
   content: '';
 }
 
