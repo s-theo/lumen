@@ -19,10 +19,8 @@ import '@theojs/lumen/button'
 import '@theojs/lumen/colors'
 /* 文档样式 */
 import '@theojs/lumen/doc'
-/* 容器(默认):左侧阴影样式 */
+/* 容器样式 */
 import '@theojs/lumen/doc-blocks'
-/* 容器:边框样式 */
-import '@theojs/lumen/doc-blocks-border'
 /* 首页样式 */
 import '@theojs/lumen/home'
 /* 首页按钮 */
@@ -93,19 +91,6 @@ export default DefaultTheme
 
 ### 容器
 
-::: info 容器分为 `左侧阴影样式(默认)` 和 [`边框样式`](./doc-blocks-border.md)
-
-**如需切换至边框样式**，可以在 `theme/index.ts` 中按以下顺序引入
-
-```ts [.vitepress/theme/index.ts]
-import '@theojs/lumen/doc-blocks-border'
-import '@theojs/lumen/theme' // [!code ++]
-...
-```
-
-**注意**: 引入 `doc-blocks-border` 时要放在 `@theojs/lumen/theme` 之后，以确保边框样式覆盖默认样式。**如果放在上方，可能会导致样式融合，不同效果相互影响**。
-
-:::
 **输入**
 
 ```md
