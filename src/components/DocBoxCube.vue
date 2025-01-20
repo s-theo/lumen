@@ -168,7 +168,6 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   transform: translateY(0.5em);
   max-width: 80%;
   overflow: hidden;
-  text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -177,16 +176,15 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   color: var(--Boxcube-name);
   font-weight: 500;
   font-size: 0.875em;
-  line-height: 1.25em;
+  line-height: 1.2;
   letter-spacing: 0.05em;
 }
 
 .desc {
-  display: inline-block;
   margin: 0;
   color: var(--Boxcube-desc);
   font-size: 0.75em;
-  line-height: 1em;
+  line-height: 1.5;
 }
 
 .tag {
