@@ -26,7 +26,7 @@ export interface Pill {
   /** Pill 名称。 */
   name: string
   /** Pill 链接。 */
-  link: string
+  link?: string
   /** 图标名称（支持 iconify） */
   icon?: string | IconImageMode
   /** 图标的颜色。 */

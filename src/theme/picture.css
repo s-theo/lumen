@@ -23,14 +23,14 @@ figure {
 }
 
 figure img {
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
 }
 
 figure figcaption {
-  margin: 0.5rem 0;
+  margin: 0.5em 0;
   color: var(--vp-c-text-3);
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 0.875em;
 }
 
 figure figcaption a {

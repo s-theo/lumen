@@ -117,7 +117,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 
 h1 {
   font-weight: 900;
-  font-size: 0.875rem;
+  font-size: 0.875em;
 }
 
 .link {
@@ -125,26 +125,25 @@ h1 {
   position: relative;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1em;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  margin: 0.25rem 0;
+  margin: 0.25em 0;
   border: 1.5px solid var(--AsideLogo-border);
-  border-radius: 0.8rem;
+  border-radius: 0.8em;
   background-color: var(--AsideLogo-bg);
-  padding: 0.25rem 0;
+  padding: 0.25em 0;
 }
 
 .link:hover {
-  transform: translateY(-1px);
-  background-color: var(--AsideLogo-bg-hover);
+  transform: var(--AsideLogo-transform-hover);
 }
 
 .link:active {
-  transform: scale(0.9);
+  transform: var(--AsideLogo-transform-active);
 }
 
 .link:last-of-type {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 
 .link:hover .icon,
@@ -163,6 +162,7 @@ h1 {
 
 .link:hover.has-name {
   border-color: var(--AsideLogo-name-border-hover);
+  background-color: var(--AsideLogo-name-bg-hover);
 }
 
 .link .icon {
@@ -184,15 +184,15 @@ h1 {
   transition: opacity 0.5s;
   color: var(--AsideLogo-hide);
   font-weight: 600;
-  font-size: 0.75rem;
-  line-height: 0.625rem;
+  font-size: 0.75em;
+  line-height: 0.625em;
 }
 
 .link .info {
   color: var(--AsideLogo-info);
   font-weight: 600;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 0.75em;
+  line-height: 1em;
 }
 
 .link .name {

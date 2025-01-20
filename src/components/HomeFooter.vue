@@ -164,22 +164,22 @@ const Year = dayjs().year()
 .list-container {
   display: flex;
   justify-content: space-evenly;
-  margin: 1.25rem auto;
+  margin: 1.25em auto;
   max-width: 75%;
 }
 
 .list-title {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
   font-weight: 600;
-  font-size: 0.75rem;
-  letter-spacing: 0.05rem;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
 }
 
 .list-links {
   opacity: 0.9;
-  font-size: 0.75rem;
-  line-height: 1.7rem;
-  letter-spacing: 0.025rem;
+  font-size: 0.75em;
+  line-height: 2.3;
+  letter-spacing: 0.025em;
 }
 
 .iconify {
@@ -189,24 +189,24 @@ const Year = dayjs().year()
 }
 
 .footer-info {
-  margin-bottom: 0.875rem;
+  margin-bottom: 0.875em;
   text-align: center;
 }
 
 .footer-infotext {
   display: inline-block;
   margin: 0;
-  font-size: 0.75rem;
+  font-size: 0.75em;
 }
 
 .info-item {
   display: inline-block;
-  letter-spacing: 0.025rem;
+  letter-spacing: 0.025em;
 }
 
 .info-spacing,
 .info-spacing-copyright {
-  margin-left: 1rem;
+  margin-left: 1em;
 }
 
 .info-icon {
@@ -227,12 +227,12 @@ const Year = dayjs().year()
   .list-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 1.25rem;
+    row-gap: 1.25em;
     justify-items: center;
   }
 
   .info-spacing-copyright {
-    margin-left: -1rem;
+    margin-left: -1em;
   }
 }
 </style>

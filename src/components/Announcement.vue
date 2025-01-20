@@ -42,21 +42,21 @@ const prelink = usePrelink()
   display: inline-flex;
   flex-direction: column;
   transition: all 0.5s ease;
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
   border: 1px solid var(--Announcement-border);
-  border-radius: 0.8rem;
+  border-radius: 0.8em;
   background-color: var(--Announcement-bg);
-  padding: 0.3rem 1.5rem;
+  padding: 0.3em 1.5em;
 }
 
 .prelink:hover {
-  transform: translateY(-1px);
+  transform: var(--Announcement-transform-hover);
   border-color: var(--Announcement-border-hover);
   background-color: var(--Announcement-bg-hover);
 }
 
 .prelink:active {
-  transform: scale(0.98);
+  transform: var(--Announcement-transform-active);
 }
 
 .prelink-content {
@@ -66,20 +66,20 @@ const prelink = usePrelink()
 
 .title {
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
 
 .content {
   font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 0.75em;
 }
 
 .time-info {
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.25em;
   font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 0.75em;
 }
 
 .iconify {
