@@ -53,13 +53,13 @@ const shareLink = useShareLink()
 
 <style scoped>
 .share-link-container {
-  padding: 1rem;
+  padding: 1em;
 }
 
 .buttonText,
 .copiedText {
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1em;
 }
 
 .share-link-button {
@@ -71,9 +71,9 @@ const shareLink = useShareLink()
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   cursor: pointer;
   border: 1px solid var(--ShareButton-border);
-  border-radius: 1rem;
+  border-radius: 1em;
   background-color: var(--ShareButton-bg);
-  padding: 0.5rem 1rem;
+  padding: 0.5em 1em;
   width: 100%;
   overflow: hidden;
   color: var(--ShareButton-text);
@@ -97,13 +97,13 @@ const shareLink = useShareLink()
 }
 
 .share-link-button:hover {
-  transform: translateY(-1px);
+  transform: var(--ShareButton-transform-hover);
   border-color: var(--ShareButton-border-hover);
   background-color: var(--ShareButton-bg-hover);
 }
 
 .share-link-button:active {
-  transform: scale(0.9);
+  transform: var(--ShareButton-transform-active);
 }
 
 .share-link-button.copied {
