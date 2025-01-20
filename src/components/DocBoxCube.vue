@@ -104,7 +104,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.5em;
 }
 
 .link {
@@ -114,25 +114,25 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   justify-content: center;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid var(--Boxcube-bg-border);
-  border-radius: 0.8rem;
+  border: 1px solid var(--Boxcube-border);
+  border-radius: 0.8em;
   background-color: var(--Boxcube-bg);
-  width: 7.5rem;
-  height: 7.5rem;
+  width: 7.5em;
+  height: 7.5em;
   overflow: hidden;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
 }
 
 .link:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-color: var(--Boxcube-bg-border-hover);
+  transform: var(--Boxcube-transform-hover);
+  box-shadow: var(--Boxcube-boxshadow-hover);
+  border-color: var(--Boxcube-border-hover);
   background-color: var(--Boxcube-bg-hover);
 }
 
 .link:active {
-  transform: scale(0.9);
+  transform: var(--Boxcube-transform-active);
 }
 
 .link::after {
@@ -141,15 +141,15 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 
 @media (max-width: 1024px) {
   .link {
-    flex: 1 1 calc(25% - 0.5rem);
-    max-width: calc(25% - 0.5rem);
+    flex: 1 1 calc(25% - 0.5em);
+    max-width: calc(25% - 0.5em);
   }
 }
 
 @media (max-width: 768px) {
   .link {
-    flex: 1 1 calc(33.33% - 0.5rem);
-    max-width: calc(33.33% - 0.5rem);
+    flex: 1 1 calc(33.33% - 0.5em);
+    max-width: calc(33.33% - 0.5em);
   }
 }
 
@@ -165,7 +165,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 
 .name,
 .desc {
-  transform: translateY(0.5rem);
+  transform: translateY(0.5em);
   max-width: 80%;
   overflow: hidden;
   text-align: center;
@@ -176,38 +176,38 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 .name {
   color: var(--Boxcube-name);
   font-weight: 500;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  letter-spacing: 0.05rem;
+  font-size: 0.875em;
+  line-height: 1.25em;
+  letter-spacing: 0.05em;
 }
 
 .desc {
   display: inline-block;
   margin: 0;
   color: var(--Boxcube-desc);
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 0.75em;
+  line-height: 1em;
 }
 
 .tag {
   display: flex;
   position: absolute;
-  top: 0.25rem;
-  right: -2.25rem;
+  top: 0.5em;
+  right: -3.75em;
   justify-content: center;
   align-items: center;
   transform: rotate(25deg);
   z-index: 1;
   margin: 0;
-  border-radius: 0.7rem;
+  border-radius: 0.7em;
   background-color: var(--Boxcube-tag-bg);
-  padding: 0.25rem 0.5rem;
+  padding: 0.25em 0.5em;
   width: 100%;
   overflow: hidden;
   pointer-events: none;
   color: var(--Boxcube-tag);
-  font-weight: 600;
-  font-size: 0.625rem;
+  font-weight: 500;
+  font-size: 0.625em;
   line-height: 1;
   text-transform: uppercase;
 }

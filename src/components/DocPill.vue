@@ -90,28 +90,27 @@ const pill = defineProps<Pill>()
 .link {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  transform: translateY(1px);
+  gap: 0.25em;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 0 0.125em;
   border: 1px solid var(--Pill-border);
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   background-color: var(--Pill-bg);
-  padding: 0.75rem 0.25rem;
-  height: 1rem;
+  padding: 0.75em 0.25em;
+  height: 1em;
   text-decoration: none !important;
   white-space: nowrap;
 }
 
 .link:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: var(--Pill-transform-hover);
+  box-shadow: var(--Pill-boxshadow-hover);
   border-color: var(--Pill-border-hover);
   background-color: var(--Pill-bg-hover);
 }
 
 .link:active {
-  transform: scale(0.9);
+  transform: var(--Pill-transform-active);
 }
 
 .link::after {
@@ -130,8 +129,8 @@ const pill = defineProps<Pill>()
 
 .name {
   color: var(--Pill-name);
-  font-weight: 500;
-  font-size: 0.875rem;
-  letter-spacing: 0.05rem;
+  font-weight: 450;
+  font-size: 0.875em;
+  letter-spacing: 0.05em;
 }
 </style>

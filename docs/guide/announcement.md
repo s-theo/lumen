@@ -60,20 +60,20 @@ hero:
   prelink:
     copy: true // [!code ++]
     install: 'pnpm add @theojs/lumen' // [!code ++]
-    title: '<iconify-icon icon="fa6-solid:bolt" style="margin-right:0.25rem;color:#63E6BE;"></iconify-icon> 快速开始' // [!code ++]
+    title: '<iconify-icon icon="fa6-solid:bolt" style="margin-right:0.25em;color:#63E6BE;"></iconify-icon> 快速开始' // [!code ++]
     content: '<span style="color: var(--vp-c-brand-3); font-weight: bold;">pnpm add @theojs/lumen</span>' // [!code ++]
 ---
 ```
 
 ## 数据接口说明
 
-|    字段    |   类型    | 描述                                                                                                                                                                                                                                                    |
-| :--------: | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   `link`   | `string`  | <Badge type="tip" text="可选" /> 链接的 URL。                                                                                                                                                                                                           |
-|  `title`   | `string`  | 链接的标题。                                                                                                                                                                                                                                            |
-| `content`  | `string`  | <Badge type="tip" text="可选" /> 链接的内容。                                                                                                                                                                                                           |
-|   `date`   | `string`  | <Badge type="tip" text="可选" /> 活动截止日期。                                                                                                                                                                                                         |
-| `dateText` | `string`  | <Badge type="tip" text="可选" /> 活动截止内容。默认为 `活动时间: 即日至;`                                                                                                                                                                               |
-| `dateIcon` | `string`  | <Badge type="tip" text="可选" /> 活动截止图标。默认为`line-md:calendar`<iconify-icon icon="line-md:calendar" ></iconify-icon>。支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" /> |
-|   `copy`   | `boolean` | <Badge type="tip" text="可选" /> 复制开关，默认为 `false`，设置为 `true` 时，点击链接将复制 `install` 字段中的内容，**并且链接将无任何跳转行为**                                                                                                        |
-| `install`  | `string`  | <Badge type="tip" text="可选" /> 复制的内容，当 `copy` 为 `true` 时，点击链接将复制该内容到剪贴板。                                                                                                                                                     |
+|    字段    |   类型    | 描述                                                                                                                                                                                                                                         |
+| :--------: | :-------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   `link`   | `string`  | <Badge text="可选" /> 链接的 URL。                                                                                                                                                                                                           |
+|  `title`   | `string`  | 链接的标题。                                                                                                                                                                                                                                 |
+| `content`  | `string`  | <Badge text="可选" /> 链接的内容。                                                                                                                                                                                                           |
+|   `date`   | `string`  | <Badge text="可选" /> 活动截止日期。                                                                                                                                                                                                         |
+| `dateText` | `string`  | <Badge text="可选" /> 活动截止内容。默认为 `活动时间: 即日至;`                                                                                                                                                                               |
+| `dateIcon` | `string`  | <Badge text="可选" /> 活动截止图标。默认为`line-md:calendar`<iconify-icon icon="line-md:calendar" ></iconify-icon>。支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" /> |
+|   `copy`   | `boolean` | <Badge text="可选" /> 复制开关，默认为 `false`，设置为 `true` 时，点击链接将复制 `install` 字段中的内容，**并且链接将无任何跳转行为**                                                                                                        |
+| `install`  | `string`  | <Badge text="可选" /> 复制的内容，当 `copy` 为 `true` 时，点击链接将复制该内容到剪贴板。                                                                                                                                                     |
