@@ -130,30 +130,20 @@ export const video = {
 }
 
 /**
- * 动态返回对应的视频配置或自定义链接
+ * 动态返回对应的视频配置或自定义链接。
  *
- * @param props - 包含视频相关参数的配置对象
- * @param props.is - 视频平台的名称（可选）
- * @param props.id - 视频的唯一标识符（可选）
- * @param props.src - 自定义视频链接（可选）
- * @returns 视频配置对象，包括 `src` 和 `title`
+ * @param VideoProps - 视频相关参数。
+ * @returns 视频配置对象，包括 `src` 和 `title`。
  */
 export const getVideo = (props: VideoProps) => {
   /** 如果同时传递了 `is` 和 `id`，返回对应视频平台的配置。 */
-  if (props.is && props.id) {
-    return video[props.is]
-  }
+  if (props.is && props.id) return video[props.is]
 
   /** 如果只有 `id` 存在，则返回默认的 YouTube 视频配置。 */
-  if (props.id) {
-    return video.youtube
-  }
+  if (props.id) return video.youtube
 
   /** 如果没有 `is` 和 `id`，且提供了自定义的 `src`，返回自定义视频配置。 如果 `src` 为空，则返回空链接。 */
-  return {
-    src: props.src || '',
-    title: 'Custom video player'
-  }
+  return { src: props.src || '', title: 'Custom video player' }
 }
 
 /**
