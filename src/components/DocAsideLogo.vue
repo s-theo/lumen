@@ -185,14 +185,14 @@ h1 {
   color: var(--AsideLogo-hide);
   font-weight: 600;
   font-size: 0.75em;
-  line-height: 0.625em;
+  line-height: 1;
 }
 
 .link .info {
   color: var(--AsideLogo-info);
   font-weight: 600;
   font-size: 0.75em;
-  line-height: 1em;
+  line-height: 1.2;
 }
 
 .link .name {

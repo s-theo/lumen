@@ -178,7 +178,7 @@ const Year = dayjs().year()
 .list-links {
   opacity: 0.9;
   font-size: 0.75em;
-  line-height: 2.3;
+  line-height: 2.4;
   letter-spacing: 0.025em;
 }
 
