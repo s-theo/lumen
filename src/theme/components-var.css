@@ -99,7 +99,7 @@
   --Pill-bg-hover: var(--vp-c-brand-soft);
   --Pill-border-hover: var(--vp-c-brand-soft);
   --Pill-boxshadow-hover: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --Pill-transform-hover: translateY(-1px);
+  --Pill-transform-hover: translateY(0px);
   --Pill-transform-active: scale(0.95);
 
   /**
