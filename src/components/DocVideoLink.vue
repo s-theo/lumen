@@ -31,13 +31,13 @@ const Config = computed(() => getVideo(props))
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 
 .video-iframe {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.5em;
   aspect-ratio: 16 / 9;
   width: 100%;
   max-width: 100%;

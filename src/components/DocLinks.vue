@@ -104,46 +104,48 @@ const props = defineProps<{ items: LinkItem[] }>()
 .container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.5em;
 }
 
 .link {
   display: flex;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid var(--Links-bg-border);
-  border-radius: 0.8rem;
+  border: 1px solid var(--Links-border);
+  border-radius: 0.8em;
   background-color: var(--Links-bg);
-  padding: 1rem;
+  padding: 1em;
   text-decoration: none !important;
 }
 
 .link:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: var(--Links-transform-hover);
+  box-shadow: var(--Links-boxshadow-hover);
   border-color: var(--Links-border-hover);
   background-color: var(--Links-bg-hover);
 }
 
 .link:active {
-  transform: scale(0.9);
+  transform: var(--Links-transform-active);
 }
 
 .link::after {
   display: none !important;
 }
 
-.icon,
+.icon {
+  height: 2em;
+}
 .iconify {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
-  height: 2rem;
+
   color: var(--iconify-defaultcolor);
-  font-size: 2rem;
+  font-size: 2em;
 }
 
 .default-icon {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
-  margin: 0 0.25rem 0 0.2rem;
+  margin: 0 0.25em 0 0.2em;
   font-size: 1.5em;
 }
 
@@ -151,7 +153,7 @@ const props = defineProps<{ items: LinkItem[] }>()
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 1rem;
+  margin-left: 1em;
   overflow: hidden;
 }
 
@@ -164,17 +166,17 @@ const props = defineProps<{ items: LinkItem[] }>()
   overflow: hidden;
   color: var(--Links-name);
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   line-height: 1.2;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.05em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .desc {
-  margin: 0.25rem 0 0 0;
+  margin: 0.25em 0 0 0;
   color: var(--Links-desc);
-  font-size: 0.75rem;
+  font-size: 0.75em;
   line-height: 1.5;
 }
 </style>

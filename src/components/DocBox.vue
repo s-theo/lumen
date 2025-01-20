@@ -95,33 +95,33 @@ const props = defineProps<{ items: BoxItem[] }>()
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.5em;
 }
 
 .link {
   display: flex;
   position: relative;
   align-items: center;
-  gap: 1rem;
+  gap: 1em;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  border: 1px solid var(--Box-bg-border);
-  border-radius: 0.8rem;
+  border: 1px solid var(--Box-border);
+  border-radius: 0.8em;
   background-color: var(--Box-bg);
-  padding: 0 1.6rem;
-  width: 14rem;
-  height: 3.5rem;
+  padding: 0 1.6em;
+  width: 14em;
+  height: 3.5em;
   text-decoration: none !important;
 }
 
 .link:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-color: var(--Box-bg-border-hover);
+  transform: var(--Box-transform-hover);
+  box-shadow: var(--Box-boxshadow-hover);
+  border-color: var(--Box-border-hover);
   background-color: var(--Box-bg-hover);
 }
 
 .link:active {
-  transform: scale(0.9);
+  transform: var(--Box-transform-active);
 }
 
 .link::after {
@@ -130,15 +130,15 @@ const props = defineProps<{ items: BoxItem[] }>()
 
 @media (max-width: 1024px) {
   .link {
-    flex: 1 1 calc(50% - 0.5rem);
-    max-width: calc(50% - 0.5rem);
+    flex: 1 1 calc(50% - 0.5em);
+    max-width: calc(50% - 0.5em);
   }
 }
 
 @media (max-width: 768px) {
   .link {
-    flex: 1 1 calc(50% - 0.5rem);
-    max-width: calc(50% - 0.5rem);
+    flex: 1 1 calc(50% - 0.5em);
+    max-width: calc(50% - 0.5em);
   }
 }
 
@@ -149,13 +149,13 @@ const props = defineProps<{ items: BoxItem[] }>()
   right: 0;
   z-index: 1;
   margin: 0;
-  border-radius: 0 0.7rem 0 0.7rem;
+  border-radius: 0 0.7em 0 0.7em;
   background-color: var(--Box-tag-bg);
-  padding: 0.25rem 0.5rem;
+  padding: 0.25em 0.5em;
   pointer-events: none;
   color: var(--Box-tag);
-  font-weight: 600;
-  font-size: 0.625rem;
+  font-weight: 500;
+  font-size: 0.625em;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -174,8 +174,8 @@ const props = defineProps<{ items: BoxItem[] }>()
   overflow: hidden;
   color: var(--Box-name);
   font-weight: 500;
-  font-size: 0.875rem;
-  letter-spacing: 0.05rem;
+  font-size: 0.875em;
+  letter-spacing: 0.05em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
