@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "types": ["vite/client", "vue"]
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "types": ["vue"]
   }
 }
