@@ -13,7 +13,7 @@ updates:
         patterns:
           - '*'
     commit-message:
-      prefix: 'build(deps)'
+      prefix: 'build: bump deps.'
 
   - package-ecosystem: 'github-actions'
     directory: /
