@@ -4,13 +4,16 @@ updates:
   - package-ecosystem: 'npm'
     directories:
       - '/'
-
     schedule:
       interval: 'daily'
       timezone: 'Asia/Shanghai'
       time: '09:00'
+    groups:
+      deps:
+        patterns:
+          - '*'
     commit-message:
-      prefix: 'build(deps)'
+      prefix: 'build: bump deps.'
 
   - package-ecosystem: 'github-actions'
     directory: /
