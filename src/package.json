@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "@iconify/vue": "^4.3.0",
-    "bumpp": "^9.10.1",
+    "bumpp": "^10.0.2",
     "dayjs": "^1.11.13",
     "iconify-icon": "^2.3.0",
     "twikoo": "^1.6.41",
@@ -70,7 +70,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "vitepress": "^1.5.0"
+    "vitepress": "^1.6.3"
   },
   "packageManager": "pnpm@10.0.0"
 }
