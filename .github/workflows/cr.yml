@@ -31,7 +31,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - run: corepack enable
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Set node
         uses: actions/setup-node@v4
