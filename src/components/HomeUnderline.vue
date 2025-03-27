@@ -16,7 +16,7 @@ moveDomElements()
 <template>
   <div id="hero-text">
     <span class="hero-text">
-      {{ fm.hero.text
+      {{ fm.hero?.text
       }}<svg
         class="hero-svg"
         xmlns="http://www.w3.org/2000/svg"
