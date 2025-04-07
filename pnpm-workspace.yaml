@@ -1,3 +1,5 @@
 packages:
   - src
   - docs
+ignoredBuiltDependencies:
+  - simple-git-hooks

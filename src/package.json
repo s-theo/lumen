@@ -65,12 +65,12 @@
     "bumpp": "^10.1.0",
     "dayjs": "^1.11.13",
     "iconify-icon": "^2.3.0",
-    "twikoo": "^1.6.41",
-    "typescript": "^5.8.2",
+    "twikoo": "^1.6.42",
+    "typescript": "^5.8.3",
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "vitepress": "^1.6.3"
+    "vitepress": "2.0.0-alpha.4"
   },
-  "packageManager": "pnpm@10.6.5"
+  "packageManager": "pnpm@10.8.1"
 }
