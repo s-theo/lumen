@@ -14,12 +14,6 @@ cache-control = '''
     immutable'''
 
 [[redirects]]
-from = "https://tools.theovan.cn/*"
-to = "https://lumen.theojs.cn/:splat"
-status = 301
-force = true
-
-[[redirects]]
 from = "https://tools.theojs.cn/*"
 to = "https://lumen.theojs.cn/:splat"
 status = 301
