@@ -44,14 +44,12 @@ export const Footer_Data: FooterData = {
           link: 'https://qytcc01.qingyunti.pro/register?aff=jjgD79Jd'
         },
         {
+          name: 'Totoro Cloud - 龙猫云',
+          link: 'https://inv03.lmaff01.cc/register?aff=UOk2VSk8'
+        },
+        {
           name: 'TNT Cloud',
           link: 'https://w05.tntyunb01.cc/#/register?code=lN1ybwM8'
-        },
-        { name: '银河录像局', link: 'https://nf.video/kaIuE' },
-        { name: '奈飞小铺', link: 'https://ihezu.love/UKTer6' },
-        {
-          name: '蜜糖商店',
-          link: 'https://metshop.cn?referrerUserNo=MTU51076'
         },
         {
           name: 'FlyingBird',
@@ -60,6 +58,12 @@ export const Footer_Data: FooterData = {
         {
           name: '飞兔云',
           link: 'https://feitu.im/index.html?register=2cFF8mg4'
+        },
+        { name: '银河录像局', link: 'https://nf.video/kaIuE' },
+        { name: '奈飞小铺', link: 'https://ihezu.love/UKTer6' },
+        {
+          name: '蜜糖商店',
+          link: 'https://metshop.cn?referrerUserNo=MTU51076'
         },
         {
           name: 'SMS-Activate',
