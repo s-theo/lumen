@@ -23,7 +23,7 @@ hero:
     date: '2025年5月7号23点59分'
     # dateIcon: 'mdi:calendar-star'
     dateText: '活动截止日期'
-    link: https://inv03.lmaff01.cc/register?aff=UOk2VSk8
+    link: https://sho.theojs.cn/totoro
 
   # prelink:
   #   copy: true

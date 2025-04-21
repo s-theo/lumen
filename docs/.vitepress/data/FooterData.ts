@@ -41,34 +41,16 @@ export const Footer_Data: FooterData = {
           name: '青云梯',
           icon: 'el:fire',
           color: '#FF5733',
-          link: 'https://qytcc01.qingyunti.pro/register?aff=jjgD79Jd'
+          link: 'https://sho.theojs.cn/qyt'
         },
-        {
-          name: 'Totoro Cloud - 龙猫云',
-          link: 'https://inv03.lmaff01.cc/register?aff=UOk2VSk8'
-        },
-        {
-          name: 'TNT Cloud',
-          link: 'https://w05.tntyunb01.cc/#/register?code=lN1ybwM8'
-        },
-        {
-          name: 'FlyingBird',
-          link: 'https://fbinv02.fbaff.cc/auth/register?code=RZP3'
-        },
-        {
-          name: '飞兔云',
-          link: 'https://feitu.im/index.html?register=2cFF8mg4'
-        },
-        { name: '银河录像局', link: 'https://nf.video/kaIuE' },
-        { name: '奈飞小铺', link: 'https://ihezu.love/UKTer6' },
-        {
-          name: '蜜糖商店',
-          link: 'https://metshop.cn?referrerUserNo=MTU51076'
-        },
-        {
-          name: 'SMS-Activate',
-          link: 'https://sms-activate.io/?ref=8170513'
-        }
+        { name: 'Totoro Cloud - 龙猫云', link: 'https://sho.theojs.cn/totoro' },
+        { name: 'TNT Cloud', link: 'https://sho.theojs.cn/tnt' },
+        { name: 'FlyingBird', link: 'https://sho.theojs.cn/flyingbird' },
+        { name: '飞兔云', link: 'https://sho.theojs.cn/feitu' },
+        { name: '银河录像局', link: 'https://sho.theojs.cn/yh' },
+        { name: '奈飞小铺', link: 'https://sho.theojs.cn/ihezu' },
+        { name: '蜜糖商店', link: 'https://sho.theojs.cn/metshop' },
+        { name: 'SMS-Activate', link: 'https://sho.theojs.cn/sms' }
       ]
     },
     {

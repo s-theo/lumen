@@ -2,7 +2,7 @@ import type { AsideItem } from '@theojs/lumen'
 
 export const Aside_Data: AsideItem[] = [
   {
-    link: 'https://inv03.lmaff01.cc/register?aff=UOk2VSk8',
+    link: 'https://sho.theojs.cn/totoro',
     image: 'https://i.theojs.cn/docs/20250419234613466.webp',
     activity: '龙猫云51大促-低至48折！',
     info1:
@@ -11,21 +11,21 @@ export const Aside_Data: AsideItem[] = [
       '年付 <span class="activity-text"> 8折 </span>优惠码 <span class="activity-text"> spring80 </span>'
   },
   {
-    link: 'https://qytcc01.qingyunti.pro/register?aff=jjgD79Jd',
+    link: 'https://sho.theojs.cn/qyt',
     image: 'https://i.theojs.cn/logo/qyt.webp',
     activity: '青云梯 85折 特惠开启',
     info1:
       '全场 <span class="activity-text"> 85折 </span>优惠码 <span class="activity-text"> qyt85 </span>'
   },
   {
-    link: 'https://w05.tntyunb01.cc/#/register?code=lN1ybwM8',
+    link: 'https://sho.theojs.cn/tnt',
     image: 'https://i.theojs.cn/docs/TNT.webp',
     activity: 'TNT Cloud 五一特惠!',
     info1:
       '全场 <span class="activity-text"> 8折 </span>优惠码 <span class="activity-text"> MayDay80 </span>'
   },
   {
-    link: 'https://fbinv02.fbaff.cc/auth/register?code=RZP3',
+    link: 'https://sho.theojs.cn/flyingbird',
     image: 'https://i.theojs.cn/docs/202409111237242.webp',
     activity: 'FlyingBird 五一活动开启咯',
     info1:
@@ -34,12 +34,12 @@ export const Aside_Data: AsideItem[] = [
       '年付 <span class="activity-text"> 64折 </span>优惠码 <span class="activity-text"> fb255180 </span>'
   },
   // {
-  //   link: 'https://inv03.lmaff01.cc/register?aff=UOk2VSk8',
+  //   link: 'https://sho.theojs.cn/totoro',
   //   image: 'https://i.theojs.cn/docs/20250419234613466.webp',
   //   activity: 'Totoro Cloud - 龙猫云'
   // },
   // {
-  //   link: 'https://feitu.im/index.html?register=2cFF8mg4',
+  //   link: 'https://sho.theojs.cn/feitu',
   //   image: 'https://飞兔.com/img/logo.png',
   //   activity: '飞兔云 双11 狂欢来袭！',
   //   info1:
@@ -47,22 +47,22 @@ export const Aside_Data: AsideItem[] = [
   //   info2: '优惠码 <span style="color: var(--vp-c-brand-3)"> 1111@88 </span>全场打折'
   // },
   // {
-  //   link: 'https://qytcc01.qingyunti.pro/register?aff=jjgD79Jd',
+  //   link: 'https://sho.theojs.cn/qyt',
   //   image: 'https://i.theojs.cn/logo/qyt.webp',
   //   activity: '青云梯'
   // },
   // {
-  //   link: 'https://w05.tntyunb01.cc/#/register?code=lN1ybwM8',
+  //   link: 'https://sho.theojs.cn/tnt',
   //   image: 'https://i.theojs.cn/docs/TNT.webp',
   //   activity: 'TNT Cloud'
   // },
   // {
-  //   link: 'https://fbinv02.fbaff.cc/auth/register?code=RZP3',
+  //   link: 'https://sho.theojs.cn/flyingbird',
   //   image: 'https://i.theojs.cn/docs/202409111237242.webp',
   //   activity: 'FlyingBird'
   // },
   {
-    link: 'https://feitu.im/index.html?register=2cFF8mg4',
+    link: 'https://sho.theojs.cn/feitu',
     image: 'https://飞兔.com/img/logo.png',
     activity: '飞兔云'
   },
