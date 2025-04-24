@@ -1,5 +1,7 @@
 packages:
   - src
   - docs
+
 ignoredBuiltDependencies:
+  - esbuild
   - simple-git-hooks
