@@ -18,3 +18,13 @@ from = "https://tools.theojs.cn/*"
 to = "https://lumen.theojs.cn/:splat"
 status = 301
 force = true
+
+[[redirects]]
+  from = "/llms.md"
+  status = 301
+  to = "/llms.txt"
+
+[[redirects]]
+  from = "/llms-full.md"
+  status = 301
+  to = "/llms-full.txt"
