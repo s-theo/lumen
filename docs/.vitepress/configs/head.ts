@@ -1,7 +1,7 @@
 import type { HeadConfig } from 'vitepress'
 
 export const head: HeadConfig[] = [
-  ['link', { rel: 'icon', type: 'icon', href: '/Logo.webp' }],
+  ['link', { rel: 'icon', type: 'image/webp', href: '/Logo.webp' }],
   ['meta', { name: 'msapplication-TileColor', content: '#da532c' }],
   ['meta', { name: 'theme-color', content: '#ffffff' }],
   ['meta', { name: 'author', content: 'Theo-Messi' }],
@@ -19,23 +19,26 @@ export const head: HeadConfig[] = [
     'meta',
     { name: 'keywords', content: 'Vue, VitePress, 插件, 功能组件, 主题美化' }
   ],
-  ['meta', { name: 'og:type', content: 'website' }],
-  ['meta', { name: 'og:locale', content: 'zh-CN' }],
-  ['meta', { name: 'og:site_name', content: 'Lumen' }],
-  ['meta', { name: 'og:title', content: 'Lumen' }],
-  ['meta', { name: 'og:url', content: 'https://lumen.theojs.cn/' }],
-  ['meta', { name: 'og:image', content: 'https://lumen.theojs.cn/Logo.webp' }],
-  ['meta', { name: 'og:image:alt', content: 'Lumen Logo' }],
+  ['meta', { property: 'og:type', content: 'website' }],
+  ['meta', { property: 'og:locale', content: 'zh-CN' }],
+  ['meta', { property: 'og:site_name', content: 'Lumen' }],
+  ['meta', { property: 'og:title', content: 'Lumen - VitePress 插件库' }],
+  ['meta', { property: 'og:url', content: 'https://lumen.theojs.cn/' }],
+  [
+    'meta',
+    { property: 'og:image', content: 'https://lumen.theojs.cn/Logo.webp' }
+  ],
+  ['meta', { property: 'og:image:alt', content: 'Lumen Logo' }],
   [
     'meta',
     {
-      name: 'og:description',
+      property: 'og:description',
       content: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件'
     }
   ],
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ['meta', { name: 'twitter:site', content: '@TheoMessi_' }],
-  ['meta', { name: 'twitter:title', content: '@theojs/lumen' }],
+  ['meta', { name: 'twitter:title', content: 'Lumen - VitePress 插件库' }],
   [
     'meta',
     {
@@ -48,13 +51,6 @@ export const head: HeadConfig[] = [
     { name: 'twitter:image', content: 'https://lumen.theojs.cn/Logo.webp' }
   ],
   ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
-  [
-    'meta',
-    {
-      name: 'viewport',
-      content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0'
-    }
-  ],
   ['link', { rel: 'canonical', href: 'https://lumen.theojs.cn/' }],
   [
     'script',
@@ -66,7 +62,16 @@ export const head: HeadConfig[] = [
         url: 'https://lumen.theojs.cn/',
         name: '@theojs/lumen',
         description: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件',
-        author: { '@type': 'Person', name: 'Theo-Messi' }
+        author: { '@type': 'Person', name: 'Theo-Messi' },
+        image: 'https://lumen.theojs.cn/Logo.webp',
+        publisher: {
+          '@type': 'Organization',
+          name: 'Theo-Messi',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://lumen.theojs.cn/Logo.webp'
+          }
+        }
       })
     }
   ]
