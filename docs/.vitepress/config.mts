@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import llmstxt from 'vitepress-plugin-llms'
 
 import Lumenpkg from '../../src/package.json'
 import { head, markdown, nav, search, sidebar, socialLinks } from './configs'
@@ -33,7 +34,8 @@ export default defineConfig({
           单独导入: 'logos:typescript-icon',
           '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg'
         }
-      })
+      }),
+      llmstxt({})
     ]
   },
 
