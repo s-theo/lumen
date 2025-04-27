@@ -40,6 +40,23 @@ watch(
   <section
     id="twikoo"
     class="comment-container vp-raw"
+    role="region"
     aria-label="用户评论区域"
-  ></section>
+  >
+    <h2 class="visually-hidden">评论区</h2>
+  </section>
 </template>
+
+<style scoped>
+.visually-hidden {
+  position: absolute !important;
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+</style>

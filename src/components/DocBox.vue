@@ -5,7 +5,7 @@ const props = defineProps<{ items: BoxItem[] }>()
 </script>
 
 <template>
-  <div class="container">
+  <section class="container" role="region" aria-label="Open link">
     <a
       v-for="(box, index) in props.items"
       :key="box.link + index"
@@ -80,7 +80,7 @@ const props = defineProps<{ items: BoxItem[] }>()
       <h1 class="name">{{ box.name }}</h1>
       <p v-if="box.tag" class="tag">{{ box.tag }}</p>
     </a>
-  </div>
+  </section>
 </template>
 
 <style scoped>
