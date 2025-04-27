@@ -91,6 +91,14 @@ const pill = defineProps<Pill>()
   display: none;
 }
 
+section.container {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  font-size: 1rem;
+}
+
 .link {
   display: inline-flex;
   align-items: center;
