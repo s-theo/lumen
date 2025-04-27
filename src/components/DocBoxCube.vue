@@ -5,91 +5,94 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 </script>
 
 <template>
-  <div class="container">
-    <a
+  <section class="container" role="region" aria-label="Open link">
+    <article
       v-for="(boxcube, index) in props.items"
       :key="boxcube.link + index"
-      class="link"
-      :href="boxcube.link"
-      :target="isExternal(boxcube.link) ? '_blank' : '_self'"
-      :title="boxcube.name"
-      :aria-label="boxcube.name"
-      rel="noopener noreferrer"
     >
-      <template v-if="boxcube.icon">
-        <Icon
-          v-if="typeof boxcube.icon === 'object'"
-          class="iconify light-only"
-          :icon="boxcube.icon.light"
-          :color="
-            typeof boxcube.color === 'object'
-              ? boxcube.color.light
-              : boxcube.color
-          "
-          :ssr="true"
-          :inline="true"
-          :alt="boxcube.name"
-          aria-hidden="true"
-        />
-        <Icon
-          v-if="typeof boxcube.icon === 'object'"
-          class="iconify dark-only"
-          :icon="boxcube.icon.dark"
-          :color="
-            typeof boxcube.color === 'object'
-              ? boxcube.color.dark
-              : boxcube.color
-          "
-          :ssr="true"
-          :inline="true"
-          :alt="boxcube.name"
-          aria-hidden="true"
-        />
-        <Icon
-          v-else
-          class="iconify"
-          :icon="boxcube.icon"
-          :color="typeof boxcube.color === 'string' ? boxcube.color : ''"
-          :ssr="true"
-          :inline="true"
-          :alt="boxcube.name"
-          aria-hidden="true"
-        />
-      </template>
-      <template v-else-if="boxcube.image">
-        <img
-          v-if="typeof boxcube.image === 'object'"
-          class="icon light-only"
-          :src="boxcube.image.light"
-          :alt="boxcube.name"
-          loading="lazy"
-          decoding="async"
-          aria-hidden="true"
-        />
-        <img
-          v-if="typeof boxcube.image === 'object'"
-          class="icon dark-only"
-          :src="boxcube.image.dark"
-          :alt="boxcube.name"
-          loading="lazy"
-          decoding="async"
-          aria-hidden="true"
-        />
-        <img
-          v-else
-          class="icon"
-          :src="boxcube.image"
-          :alt="boxcube.name"
-          loading="lazy"
-          decoding="async"
-          aria-hidden="true"
-        />
-      </template>
-      <h1 class="name">{{ boxcube.name }}</h1>
-      <p v-if="boxcube.desc" class="desc">{{ boxcube.desc }}</p>
-      <p v-if="boxcube.tag" class="tag">{{ boxcube.tag }}</p>
-    </a>
-  </div>
+      <a
+        class="link"
+        :href="boxcube.link"
+        :target="isExternal(boxcube.link) ? '_blank' : '_self'"
+        :title="boxcube.name"
+        :aria-label="boxcube.name"
+        rel="noopener noreferrer"
+      >
+        <template v-if="boxcube.icon">
+          <Icon
+            v-if="typeof boxcube.icon === 'object'"
+            class="iconify light-only"
+            :icon="boxcube.icon.light"
+            :color="
+              typeof boxcube.color === 'object'
+                ? boxcube.color.light
+                : boxcube.color
+            "
+            :ssr="true"
+            :inline="true"
+            :alt="boxcube.name"
+            aria-hidden="true"
+          />
+          <Icon
+            v-if="typeof boxcube.icon === 'object'"
+            class="iconify dark-only"
+            :icon="boxcube.icon.dark"
+            :color="
+              typeof boxcube.color === 'object'
+                ? boxcube.color.dark
+                : boxcube.color
+            "
+            :ssr="true"
+            :inline="true"
+            :alt="boxcube.name"
+            aria-hidden="true"
+          />
+          <Icon
+            v-else
+            class="iconify"
+            :icon="boxcube.icon"
+            :color="typeof boxcube.color === 'string' ? boxcube.color : ''"
+            :ssr="true"
+            :inline="true"
+            :alt="boxcube.name"
+            aria-hidden="true"
+          />
+        </template>
+        <template v-else-if="boxcube.image">
+          <img
+            v-if="typeof boxcube.image === 'object'"
+            class="icon light-only"
+            :src="boxcube.image.light"
+            :alt="boxcube.name"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+          <img
+            v-if="typeof boxcube.image === 'object'"
+            class="icon dark-only"
+            :src="boxcube.image.dark"
+            :alt="boxcube.name"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+          <img
+            v-else
+            class="icon"
+            :src="boxcube.image"
+            :alt="boxcube.name"
+            loading="lazy"
+            decoding="async"
+            aria-hidden="true"
+          />
+        </template>
+        <h1 class="name">{{ boxcube.name }}</h1>
+        <p v-if="boxcube.desc" class="desc">{{ boxcube.desc }}</p>
+        <p v-if="boxcube.tag" class="tag">{{ boxcube.tag }}</p>
+      </a>
+    </article>
+  </section>
 </template>
 
 <style scoped>
