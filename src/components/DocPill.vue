@@ -5,77 +5,81 @@ const pill = defineProps<Pill>()
 </script>
 
 <template>
-  <a
-    class="link"
-    :href="pill.link"
-    :title="pill.name"
-    :aria-label="pill.name"
-    :target="isExternal(pill.link) ? '_blank' : '_self'"
-    rel="noopener noreferrer"
-  >
-    <template v-if="pill.icon">
-      <Icon
-        v-if="typeof pill.icon === 'object'"
-        class="iconify light-only"
-        :icon="pill.icon.light"
-        :color="typeof pill.color === 'object' ? pill.color.light : pill.color"
-        :alt="pill.name"
-        :ssr="true"
-        :inline="true"
-        aria-hidden="true"
-      />
-      <Icon
-        v-if="typeof pill.icon === 'object'"
-        class="iconify dark-only"
-        :icon="pill.icon.dark"
-        :color="typeof pill.color === 'object' ? pill.color.dark : pill.color"
-        :alt="pill.name"
-        :ssr="true"
-        :inline="true"
-        aria-hidden="true"
-      />
-      <Icon
-        v-else
-        class="iconify"
-        :icon="pill.icon"
-        :color="typeof pill.color === 'string' ? pill.color : ''"
-        :alt="pill.name"
-        :ssr="true"
-        :inline="true"
-        aria-hidden="true"
-      />
-    </template>
-    <template v-else-if="pill.image">
-      <img
-        v-if="typeof pill.image === 'object'"
-        class="icon light-only"
-        :src="pill.image.light"
-        :alt="pill.name"
-        loading="lazy"
-        decoding="async"
-        aria-hidden="true"
-      />
-      <img
-        v-if="typeof pill.image === 'object'"
-        class="icon dark-only"
-        :src="pill.image.dark"
-        :alt="pill.name"
-        loading="lazy"
-        decoding="async"
-        aria-hidden="true"
-      />
-      <img
-        v-else
-        class="icon"
-        :src="pill.image"
-        :alt="pill.name"
-        loading="lazy"
-        decoding="async"
-        aria-hidden="true"
-      />
-    </template>
-    <h1 class="name">{{ pill.name }}</h1>
-  </a>
+  <section class="container" role="region" aria-label="Open link">
+    <a
+      class="link"
+      :href="pill.link"
+      :title="pill.name"
+      :aria-label="pill.name"
+      :target="isExternal(pill.link) ? '_blank' : '_self'"
+      rel="noopener noreferrer"
+    >
+      <template v-if="pill.icon">
+        <Icon
+          v-if="typeof pill.icon === 'object'"
+          class="iconify light-only"
+          :icon="pill.icon.light"
+          :color="
+            typeof pill.color === 'object' ? pill.color.light : pill.color
+          "
+          :alt="pill.name"
+          :ssr="true"
+          :inline="true"
+          aria-hidden="true"
+        />
+        <Icon
+          v-if="typeof pill.icon === 'object'"
+          class="iconify dark-only"
+          :icon="pill.icon.dark"
+          :color="typeof pill.color === 'object' ? pill.color.dark : pill.color"
+          :alt="pill.name"
+          :ssr="true"
+          :inline="true"
+          aria-hidden="true"
+        />
+        <Icon
+          v-else
+          class="iconify"
+          :icon="pill.icon"
+          :color="typeof pill.color === 'string' ? pill.color : ''"
+          :alt="pill.name"
+          :ssr="true"
+          :inline="true"
+          aria-hidden="true"
+        />
+      </template>
+      <template v-else-if="pill.image">
+        <img
+          v-if="typeof pill.image === 'object'"
+          class="icon light-only"
+          :src="pill.image.light"
+          :alt="pill.name"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+        <img
+          v-if="typeof pill.image === 'object'"
+          class="icon dark-only"
+          :src="pill.image.dark"
+          :alt="pill.name"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+        <img
+          v-else
+          class="icon"
+          :src="pill.image"
+          :alt="pill.name"
+          loading="lazy"
+          decoding="async"
+          aria-hidden="true"
+        />
+      </template>
+      <h1 class="name">{{ pill.name }}</h1>
+    </a>
+  </section>
 </template>
 
 <style scoped>
