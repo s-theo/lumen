@@ -12,13 +12,13 @@ const Year = dayjs().year()
 </script>
 
 <template>
-  <footer class="footer">
+  <footer class="footer" itemscope itemtype="https://schema.org/CreativeWork">
     <div v-if="footer.group" class="list-container">
       <div
         v-for="(section, index) in footer.group || []"
         :key="section.title + index"
       >
-        <h1 class="list-title">
+        <h2 class="list-title" itemprop="headline">
           <template v-if="section.icon">
             <Icon
               class="iconify"
@@ -31,8 +31,8 @@ const Year = dayjs().year()
             />&nbsp;
           </template>
           {{ section.title }}
-        </h1>
-        <h2
+        </h2>
+        <div
           v-for="(link, idx) in section.links"
           :key="link.name + idx"
           class="list-links"
@@ -55,6 +55,7 @@ const Year = dayjs().year()
             :target="isExternal(link.link) ? '_blank' : '_self'"
             rel="noopener noreferrer"
             :aria-describedby="link.name ? link.name : null"
+            itemprop="url"
             >{{ link.name
             }}<Icon
               v-if="isExternal(link.link)"
@@ -66,12 +67,12 @@ const Year = dayjs().year()
               aria-hidden="true"
             />
           </a>
-        </h2>
+        </div>
       </div>
     </div>
 
     <div class="footer-info">
-      <h1 v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
+      <h2 v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
         <p v-if="footer.beian?.icp" class="footer-infotext">
           <Icon
             v-if="footer.beian?.showIcon"
@@ -87,6 +88,7 @@ const Year = dayjs().year()
             target="_blank"
             rel="noopener noreferrer"
             aria-label="ICP备案"
+            itemprop="legalName"
           >
             {{ footer.beian.icp }}
           </a>
@@ -109,13 +111,16 @@ const Year = dayjs().year()
             target="_blank"
             rel="noopener noreferrer"
             aria-label="公安备案"
+            itemprop="legalName"
           >
             {{ footer.beian.police }}
           </a>
         </p>
-      </h1>
+      </h2>
+
       <span class="info-spacing-copyright" aria-hidden="true"></span>
-      <h1 v-if="footer.author?.name" class="info-item">
+
+      <h2 v-if="footer.author?.name" class="info-item">
         <p class="footer-infotext">
           <Icon
             class="info-icon"
@@ -131,10 +136,11 @@ const Year = dayjs().year()
             rel="noopener noreferrer"
             :href="footer.author?.link"
             aria-label="GitHub"
+            itemprop="author"
             >{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
         </p>
-      </h1>
+      </h2>
     </div>
   </footer>
 </template>
