@@ -9,29 +9,29 @@ const Config = computed(() => getVideo(props))
 </script>
 
 <template>
-  <div class="video-container">
+  <figure class="video-container">
     <iframe
       class="video-iframe"
       loading="lazy"
-      v-bind="{
-        'aria-label': Config.title,
-        src:
-          typeof Config.src === 'function' ? Config.src(props.id) : Config.src,
-        title: Config.title,
-        allow:
-          'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;',
-        allowfullscreen: true
-      }"
+      :title="Config.title"
+      :aria-label="`视频播放器：${Config.title}`"
+      :src="
+        typeof Config.src === 'function' ? Config.src(props.id) : Config.src
+      "
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
+      allowfullscreen
     />
-  </div>
+  </figure>
 </template>
 
 <style scoped>
 .video-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 0.5em;
+  border-radius: 0.75em;
+  padding: 0.75em 0.5em;
+  overflow: hidden;
 }
 
 .video-iframe {
