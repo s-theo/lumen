@@ -32,7 +32,7 @@
     "prettier-plugin-organize-attributes": "^1.0.0",
     "prettier-plugin-packagejson": "^2.5.10",
     "prettier-plugin-sort-json": "^4.1.1",
-    "simple-git-hooks": "^2.12.1"
+    "simple-git-hooks": "^2.13.0"
   },
   "packageManager": "pnpm@10.9.0"
 }
