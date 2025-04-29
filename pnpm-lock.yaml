@@ -33,8 +33,8 @@ importers:
         specifier: ^4.1.1
         version: 4.1.1(prettier@3.5.3)
       simple-git-hooks:
-        specifier: ^2.12.1
-        version: 2.12.1
+        specifier: ^2.13.0
+        version: 2.13.0
 
   docs:
     dependencies:
@@ -52,7 +52,7 @@ importers:
         version: 1.5.2
       vitepress-plugin-llms:
         specifier: ^1.1.0
-        version: 1.1.0
+        version: 1.1.1
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.3)
@@ -1480,8 +1480,8 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  simple-git-hooks@2.12.1:
-    resolution: {integrity: sha512-NB3V4XyCOrWTIhjh85DyEoVlM3adHWwqQXKYHmuegy/108bJPP6YxuPGm4ZKBq1+GVKRbKJuzNY//09cMJYp+A==}
+  simple-git-hooks@2.13.0:
+    resolution: {integrity: sha512-N+goiLxlkHJlyaYEglFypzVNMaNplPAk5syu0+OPp/Bk6dwVoXF6FfOw2vO0Dp+JHsBaI+w6cm8TnFl2Hw6tDA==}
     hasBin: true
 
   slice-ansi@5.0.0:
@@ -1659,8 +1659,8 @@ packages:
   vitepress-plugin-group-icons@1.5.2:
     resolution: {integrity: sha512-zen07KxZ83y3eecou4EraaEgwIriwHaB5Q0cHAmS4yO1UZEQvbljTylHPqiJ7LNkV39U8VehfcyquAJXg/26LA==}
 
-  vitepress-plugin-llms@1.1.0:
-    resolution: {integrity: sha512-nb7bG/lBDihlcFTzqxRxQIyzeBWQW9F6OwuUWQ7PFUNK5kVbybxXGISU4wvAV8osQmfrD9xNIGJQfuOLj5CzHg==}
+  vitepress-plugin-llms@1.1.1:
+    resolution: {integrity: sha512-QuMXQVlGvXOnF2G3Rr/32Jebl9tdy/Gg9p4Rx52YMo+e7tasWW/m6LHwW2kqJQR39bOe/SDO0fEtRXOCCuSbbQ==}
 
   vitepress@2.0.0-alpha.5:
     resolution: {integrity: sha512-fhuGpJ4CETS/lrAHjKu3m88HwesZvAjZLFeIRr9Jejmewyogn1tm2L6lsVg7PWxPmOGoMfihzl3+L6jg6hrTnA==}
@@ -3167,7 +3167,7 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  simple-git-hooks@2.12.1: {}
+  simple-git-hooks@2.13.0: {}
 
   slice-ansi@5.0.0:
     dependencies:
@@ -3337,7 +3337,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  vitepress-plugin-llms@1.1.0:
+  vitepress-plugin-llms@1.1.1:
     dependencies:
       byte-size: 9.0.1
       gray-matter: 4.0.3
