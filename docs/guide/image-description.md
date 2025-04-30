@@ -33,7 +33,7 @@ import { figure } from '@mdit/plugin-figure' // [!code ++]
 export default defineConfig({
   markdown: { // [!code ++]
     config: (md) => { // [!code ++]
-      md.use(figure, { figcaption: 'alt', copyAttrs: '^class$', lazy: true }) // [!code ++]
+      md.use(figure) // [!code ++]
     } // [!code ++]
   } // [!code ++]
   ...
