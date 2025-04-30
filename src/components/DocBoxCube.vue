@@ -110,6 +110,13 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   gap: 0.5em;
 }
 
+.container > article {
+  flex: 1 1 calc(20% - 0.5em);
+  width: 8em;
+  max-width: calc(20% - 0.5em);
+  height: 8em;
+}
+
 .link {
   display: flex;
   position: relative;
@@ -120,8 +127,8 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   border: 1px solid var(--Boxcube-border);
   border-radius: 0.8em;
   background-color: var(--Boxcube-bg);
-  width: 7.5em;
-  height: 7.5em;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -143,16 +150,23 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 }
 
 @media (max-width: 1024px) {
-  .link {
+  .container > article {
     flex: 1 1 calc(25% - 0.5em);
     max-width: calc(25% - 0.5em);
   }
 }
 
 @media (max-width: 768px) {
-  .link {
+  .container > article {
     flex: 1 1 calc(33.33% - 0.5em);
     max-width: calc(33.33% - 0.5em);
+  }
+}
+
+@media (max-width: 480px) {
+  .container > article {
+    flex: 1 1 calc(50% - 0.5em);
+    max-width: calc(50% - 0.5em);
   }
 }
 
