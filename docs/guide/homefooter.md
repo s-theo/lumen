@@ -4,7 +4,7 @@ title: 页脚配置
 
 ![桌面端效果图](https://i.theojs.cn/docs/202411071146149.webp)
 
-![移动端效果图](https://i.theojs.cn/docs/202411071155536.webp =300x)
+![移动端效果图|300](https://i.theojs.cn/docs/202411071155536.webp '移动端效果图')
 
 ## 创建数据
 
