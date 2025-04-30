@@ -30,7 +30,6 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :ssr="true"
               :inline="true"
               :alt="aside.name"
-              aria-hidden="true"
             />
             <Icon
               v-if="typeof aside.icon === 'object'"
@@ -42,7 +41,6 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :ssr="true"
               :inline="true"
               :alt="aside.name"
-              aria-hidden="true"
             />
             <Icon
               v-else
@@ -52,7 +50,6 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :ssr="true"
               :inline="true"
               :alt="aside.name"
-              aria-hidden="true"
             />
           </template>
           <template v-else-if="aside.image">
