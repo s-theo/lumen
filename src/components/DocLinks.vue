@@ -26,7 +26,6 @@ const props = defineProps<{ items: LinkItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="link.name"
-            aria-hidden="true"
           />
           <Icon
             v-if="typeof link.icon === 'object'"
@@ -38,7 +37,6 @@ const props = defineProps<{ items: LinkItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="link.name"
-            aria-hidden="true"
           />
           <Icon
             v-else
@@ -48,7 +46,6 @@ const props = defineProps<{ items: LinkItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="link.name"
-            aria-hidden="true"
           />
         </template>
         <template v-else-if="link.image">
@@ -85,7 +82,6 @@ const props = defineProps<{ items: LinkItem[] }>()
             class="default-icon"
             alt="Default Icon"
             icon="fa6-solid:arrow-up-right-from-square"
-            aria-hidden="true"
           />
         </template>
 
