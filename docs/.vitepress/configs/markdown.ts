@@ -11,6 +11,6 @@ export const markdown: MarkdownOptions = {
   config: (md) => {
     md.use(imgSize)
     md.use(groupIconMdPlugin, { titleBar: { includeSnippet: false } })
-    md.use(figure, { figcaption: 'alt', copyAttrs: '^class$', lazy: true })
+    md.use(figure)
   }
 }
