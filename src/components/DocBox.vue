@@ -25,7 +25,6 @@ const props = defineProps<{ items: BoxItem[] }>()
           :ssr="true"
           :inline="true"
           :alt="box.name"
-          aria-hidden="true"
         />
         <Icon
           v-if="typeof box.icon === 'object'"
@@ -35,7 +34,6 @@ const props = defineProps<{ items: BoxItem[] }>()
           :ssr="true"
           :inline="true"
           :alt="box.name"
-          aria-hidden="true"
         />
         <Icon
           v-else
@@ -45,7 +43,6 @@ const props = defineProps<{ items: BoxItem[] }>()
           :ssr="true"
           :inline="true"
           :alt="box.name"
-          aria-hidden="true"
         />
       </template>
       <template v-else-if="box.image">
