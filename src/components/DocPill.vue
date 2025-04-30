@@ -25,7 +25,6 @@ const pill = defineProps<Pill>()
           :alt="pill.name"
           :ssr="true"
           :inline="true"
-          aria-hidden="true"
         />
         <Icon
           v-if="typeof pill.icon === 'object'"
@@ -35,7 +34,6 @@ const pill = defineProps<Pill>()
           :alt="pill.name"
           :ssr="true"
           :inline="true"
-          aria-hidden="true"
         />
         <Icon
           v-else
@@ -45,7 +43,6 @@ const pill = defineProps<Pill>()
           :alt="pill.name"
           :ssr="true"
           :inline="true"
-          aria-hidden="true"
         />
       </template>
       <template v-else-if="pill.image">

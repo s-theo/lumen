@@ -27,7 +27,6 @@ const Year = dayjs().year()
               :ssr="true"
               :inline="true"
               :alt="section.title"
-              aria-hidden="true"
             />&nbsp;
           </template>
           {{ section.title }}
@@ -44,7 +43,6 @@ const Year = dayjs().year()
               :ssr="true"
               :inline="true"
               :alt="link.name"
-              aria-hidden="true"
             />&nbsp;</template
           >
           <a
@@ -64,7 +62,6 @@ const Year = dayjs().year()
               :ssr="true"
               :inline="true"
               alt="External Link Icon"
-              aria-hidden="true"
             />
           </a>
         </div>
@@ -81,7 +78,6 @@ const Year = dayjs().year()
             :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
             :ssr="true"
             :inline="true"
-            aria-hidden="true"
           />&nbsp;<a
             href="https://beian.miit.gov.cn/"
             title="ICP备案"
@@ -93,7 +89,7 @@ const Year = dayjs().year()
             {{ footer.beian.icp }}
           </a>
         </p>
-        <span class="info-spacing" aria-hidden="true"></span>
+        <span class="info-spacing"></span>
         <p v-if="footer.beian?.police" class="footer-infotext">
           <Icon
             v-if="footer.beian?.showIcon"
@@ -104,7 +100,6 @@ const Year = dayjs().year()
             "
             :ssr="true"
             :inline="true"
-            aria-hidden="true"
           />&nbsp;<a
             href="https://beian.mps.gov.cn/"
             title="公安备案"
@@ -118,7 +113,7 @@ const Year = dayjs().year()
         </p>
       </h2>
 
-      <span class="info-spacing-copyright" aria-hidden="true"></span>
+      <span class="info-spacing-copyright"></span>
 
       <h2 v-if="footer.author?.name" class="info-item">
         <p class="footer-infotext">
@@ -128,7 +123,6 @@ const Year = dayjs().year()
             icon="ri:copyright-line"
             :ssr="true"
             :inline="true"
-            aria-hidden="true"
           />&nbsp;{{ Year }}
           <a
             title="GitHub"

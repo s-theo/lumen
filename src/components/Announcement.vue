@@ -25,13 +25,8 @@ const prelink = usePrelink()
           :ssr="true"
           :inline="true"
           alt="Icon"
-          aria-hidden="true"
         />
-        <time
-          aria-hidden="true"
-          v-html="prelink.dateText || '活动时间: 即日至'"
-        >
-        </time>
+        <time v-html="prelink.dateText || '活动时间: 即日至'"> </time>
         <time class="date" :aria-label="prelink.date">{{ prelink.date }}</time>
       </div>
     </article>

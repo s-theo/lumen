@@ -31,7 +31,6 @@ const shareLink = useShareLink()
           :ssr="true"
           :inline="true"
           alt="分享此页面的图标"
-          aria-hidden="true"
         />
         {{ ShareButton.buttonText || '点击分享此页面' }}
       </h1>
@@ -43,7 +42,6 @@ const shareLink = useShareLink()
           :ssr="true"
           :inline="true"
           alt="复制成功图标"
-          aria-hidden="true"
         />
         {{ ShareButton.copiedText || '链接已复制!' }}
       </h1>

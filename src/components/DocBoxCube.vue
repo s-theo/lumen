@@ -31,7 +31,6 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="boxcube.name"
-            aria-hidden="true"
           />
           <Icon
             v-if="typeof boxcube.icon === 'object'"
@@ -45,7 +44,6 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="boxcube.name"
-            aria-hidden="true"
           />
           <Icon
             v-else
@@ -55,7 +53,6 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="boxcube.name"
-            aria-hidden="true"
           />
         </template>
         <template v-else-if="boxcube.image">
