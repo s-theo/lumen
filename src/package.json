@@ -61,9 +61,9 @@
     "release": "bumpp && pnpm publish --registry=https://registry.npmjs.org"
   },
   "dependencies": {
-    "@iconify/vue": "^4.3.0",
+    "@iconify/vue": "^5.0.0",
     "bumpp": "^10.1.0",
-    "iconify-icon": "^2.3.0",
+    "iconify-icon": "^3.0.0",
     "twikoo": "^1.6.42",
     "typescript": "^5.8.3",
     "vue": "^3.5.13"
