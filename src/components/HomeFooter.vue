@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import { FooterData, Icon, isExternal } from '../types'
-
-import dayjs from 'dayjs/esm'
+import { ref, onMounted } from 'vue'
 
 // 使用 defineProps 定义属性
 const props = defineProps<{ Footer_Data: FooterData }>()
 const footer = props.Footer_Data
 
-// 使用 dayjs 获取当前年份
-const Year = dayjs().year()
+// 获取当前年份
+const Year = ref('')
+
+onMounted(() => {
+  Year.value = new Date().getFullYear().toString()
+})
 </script>
 
 <template>
