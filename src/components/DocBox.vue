@@ -5,7 +5,7 @@ const props = defineProps<{ items: BoxItem[] }>()
 </script>
 
 <template>
-  <section class="container" role="region" aria-label="Open link">
+  <section class="container" aria-label="Open link">
     <a
       v-for="(box, index) in props.items"
       :key="box.link + index"
