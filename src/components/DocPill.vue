@@ -5,7 +5,7 @@ const pill = defineProps<Pill>()
 </script>
 
 <template>
-  <section class="container" role="region" aria-label="Open link">
+  <section class="container" aria-label="Open link">
     <a
       class="link"
       :href="pill.link"
