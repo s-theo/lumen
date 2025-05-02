@@ -3,13 +3,13 @@ import type { MarkdownOptions } from 'vitepress'
 import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 
 import { figure } from '@mdit/plugin-figure'
-import { imgSize } from '@mdit/plugin-img-size'
+import { imgSize, obsidianImgSize } from '@mdit/plugin-img-size'
 
 export const markdown: MarkdownOptions = {
   theme: { light: 'one-light', dark: 'one-dark-pro' },
   image: { lazyLoading: true },
   config: (md) => {
-    md.use(imgSize)
+    md.use(imgSize), md.use(obsidianImgSize)
     md.use(groupIconMdPlugin, { titleBar: { includeSnippet: false } })
     md.use(figure)
   }
