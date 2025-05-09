@@ -3,7 +3,6 @@
   "private": true,
   "homepage": "https://lumen.theojs.cn/",
   "repository": "Theo-Messi/lumen",
-  "funding": "https://github.com/Theo-Messi/lumen?sponsor=1",
   "license": "MIT",
   "author": "Theo-Messi",
   "scripts": {
