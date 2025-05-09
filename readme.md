@@ -37,3 +37,7 @@ npm install @theojs/lumen
 ```sh [yarn]
 yarn add @theojs/lumen
 ```
+
+## 赞助
+
+<img src="https://i.theojs.cn/sponsor.webp" alt='Sponsors'></a>
