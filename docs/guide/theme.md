@@ -51,8 +51,9 @@ export default defineConfig({
 ```
 
 :::
+<Pill name="使用方法查看: https://iconify.design/docs/iconify-icon/" link="https://iconify.design/docs/iconify-icon/" icon="line-md:iconify2-static" color="#1769AA" />
 
-```md
+```vue-html
 <iconify-icon icon="simple-icons:fontawesome"></iconify-icon>
 <iconify-icon icon="line-md:iconify2-static"></iconify-icon>
 <iconify-icon icon="cil:locomotive" height="36"></iconify-icon>
@@ -60,7 +61,11 @@ export default defineConfig({
 <iconify-icon icon="cil:truck" style="font-size: 18px" height="2em"></iconify-icon>
 ```
 
-<Pill name="使用方法查看: https://iconify.design/docs/iconify-icon/" link="https://iconify.design/docs/iconify-icon/" icon="line-md:iconify2-static" color="#1769AA" />
+<iconify-icon icon="simple-icons:fontawesome"></iconify-icon>
+<iconify-icon icon="line-md:iconify2-static"></iconify-icon>
+<iconify-icon icon="cil:locomotive" height="36"></iconify-icon>
+<iconify-icon icon="cil:paper-plane" width="36"></iconify-icon>
+<iconify-icon icon="cil:truck" style="font-size: 18px" height="2em"></iconify-icon>
 
 ## 自定义组件 CSS
 
