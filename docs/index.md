@@ -13,11 +13,11 @@ hero:
     alt: '@theojs/lumen'
 
   prelink:
-    # content: '<span class="activity-text" style="display: inline-flex; align-items: center"><img src="https://i.theojs.cn/logo/qyt.webp" style="height:0.65em; "/>IPLC纯专线内网传输线路 最高2.5Gbps速率!</span>'
+    # content: '<span class="promo-text" style="display: inline-flex; align-items: center"><img src="https://i.theojs.cn/logo/qyt.webp" style="height:0.65em; "/>IPLC纯专线内网传输线路 最高2.5Gbps速率!</span>'
     title: '🎉 TNT 五一特惠来了-低至48折起！'
     content: '
-    · 全套餐 <span class="activity-text"> 8折 </span>优惠码 <span class="activity-text"> MayDay80 </span></br>
-    · <span class="activity-text">3年付</span> 更可享受<span class="activity-text"> 4.8折优惠 </span>，非常划算哦</br>'
+    · 全套餐 <span class="promo-text"> 8折 </span>优惠码 <span class="promo-text"> MayDay80 </span></br>
+    · <span class="promo-text">3年付</span> 更可享受<span class="promo-text"> 4.8折优惠 </span>，非常划算哦</br>'
     date: '2025年5月10号23点59分'
     # dateIcon: 'mdi:calendar-star'
     dateText: '活动截止日期'
@@ -27,7 +27,7 @@ hero:
   #   copy: true
   #   install: 'pnpm add @theojs/lumen'
   #   title: '<iconify-icon class="i-mr" icon="fa6-solid:bolt" style="color:#63E6BE"></iconify-icon> 快速开始'
-  #   content: '<span class="activity-text">pnpm add @theojs/lumen</span>'
+  #   content: '<span class="promo-text">pnpm add @theojs/lumen</span>'
 
   actions:
     - theme: brand
