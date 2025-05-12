@@ -86,7 +86,7 @@ const props = defineProps<{ items: LinkItem[] }>()
         </template>
 
         <div class="text-content">
-          <h1 class="name">{{ link.name }}</h1>
+          <span class="name">{{ link.name }}</span>
           <p v-if="link.desc" class="desc">{{ link.desc }}</p>
         </div>
       </a>

@@ -74,7 +74,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           aria-hidden="true"
         />
       </template>
-      <h1 class="name">{{ box.name }}</h1>
+      <span class="name">{{ box.name }}</span>
       <p v-if="box.tag" class="tag">{{ box.tag }}</p>
     </a>
   </section>

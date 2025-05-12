@@ -24,7 +24,7 @@ const shareLink = useShareLink()
       aria-live="assertive"
       @click="copyLink(shareLink)"
     >
-      <h1 v-if="!copied" class="buttonText">
+      <span v-if="!copied" class="buttonText">
         <Icon
           class="iconify"
           :icon="ShareButton.buttonIcon || 'solar:share-bold'"
@@ -33,9 +33,9 @@ const shareLink = useShareLink()
           alt="分享此页面的图标"
         />
         {{ ShareButton.buttonText || '点击分享此页面' }}
-      </h1>
+      </span>
 
-      <h1 v-else class="copiedText">
+      <span v-else class="copiedText">
         <Icon
           class="iconify"
           :icon="ShareButton.copiedIcon || 'mdi:thumbs-up'"
@@ -44,7 +44,7 @@ const shareLink = useShareLink()
           alt="复制成功图标"
         />
         {{ ShareButton.copiedText || '链接已复制!' }}
-      </h1>
+      </span>
     </button>
   </div>
 </template>
