@@ -82,7 +82,7 @@ export interface AsideItem {
   /** 名称。 */
   name?: string
   /** 活动名称。 */
-  activity?: string
+  promo?: string
   /** 隐藏信息 1。 */
   hide1?: string
   /** 信息 1。 */
