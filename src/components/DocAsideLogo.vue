@@ -10,10 +10,10 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       <li v-for="(aside, index) in props.Aside_Data" :key="index">
         <a
           class="link"
-          :class="{ 'has-activity': aside.activity, 'has-name': aside.name }"
+          :class="{ 'has-promo': aside.promo, 'has-name': aside.name }"
           :href="aside.link"
-          :title="aside.activity || aside.name"
-          :aria-label="aside.activity || aside.name"
+          :title="aside.promo || aside.name"
+          :aria-label="aside.promo || aside.name"
           :target="isExternal(aside.link) ? '_blank' : '_self'"
           rel="noopener noreferrer"
         >
@@ -82,8 +82,8 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
             />
           </template>
           <span>
-            <template v-if="aside.activity">
-              <h1 class="activity" v-html="aside.activity"></h1>
+            <template v-if="aside.promo">
+              <h1 class="promo" v-html="aside.promo"></h1>
             </template>
             <template
               v-if="
@@ -156,9 +156,9 @@ ul:last-of-type {
   opacity: 0.9;
 }
 
-.link:hover.has-activity {
-  border-color: var(--AsideLogo-activity-border-hover);
-  background-color: var(--AsideLogo-activity-bg-hover);
+.link:hover.has-promo {
+  border-color: var(--AsideLogo-promo-border-hover);
+  background-color: var(--AsideLogo-promo-bg-hover);
 }
 
 .link:hover.has-name {
@@ -203,8 +203,8 @@ ul:last-of-type {
   -webkit-text-fill-color: transparent;
 }
 
-.link .activity {
-  background-image: var(--AsideLogo-activity);
+.link .promo {
+  background-image: var(--AsideLogo-promo);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
