@@ -192,7 +192,7 @@ onMounted(() => {
 }
 
 .footer-info {
-  margin-bottom: 0.875em;
+  margin: 0.875em 0;
   text-align: center;
 }
 
