@@ -14,7 +14,7 @@ const props = defineProps<{ items: BoxItem[] }>()
       :target="isExternal(box.link) ? '_blank' : '_self'"
       :title="box.name"
       :aria-label="box.name"
-      rel="noopener noreferrer"
+      rel="noreferrer"
     >
       <template v-if="box.icon">
         <Icon
@@ -74,7 +74,7 @@ const props = defineProps<{ items: BoxItem[] }>()
           aria-hidden="true"
         />
       </template>
-      <h1 class="name">{{ box.name }}</h1>
+      <span class="name">{{ box.name }}</span>
       <p v-if="box.tag" class="tag">{{ box.tag }}</p>
     </a>
   </section>

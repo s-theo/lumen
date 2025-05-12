@@ -15,7 +15,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :title="aside.promo || aside.name"
           :aria-label="aside.promo || aside.name"
           :target="isExternal(aside.link) ? '_blank' : '_self'"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           <template v-if="aside.icon">
             <Icon
@@ -83,7 +83,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           </template>
           <span>
             <template v-if="aside.promo">
-              <h1 class="promo" v-html="aside.promo"></h1>
+              <span class="promo" v-html="aside.promo"></span>
             </template>
             <template
               v-if="
@@ -96,7 +96,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
             >
               <p v-if="aside.hide1" class="hide" v-html="aside.hide1"></p>
               <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
-              <h1 v-if="aside.name" class="name" v-html="aside.name"></h1>
+              <span v-if="aside.name" class="name" v-html="aside.name"></span>
               <p v-if="aside.hide2" class="hide" v-html="aside.hide2"></p>
               <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
             </template>
@@ -114,11 +114,6 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 :root:not(.dark) .dark-only,
 :root:is(.dark) .light-only {
   display: none;
-}
-
-h1 {
-  font-weight: 900;
-  font-size: 0.875em;
 }
 
 .link {
@@ -201,6 +196,8 @@ ul:last-of-type {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 0.875em;
 }
 
 .link .promo {
@@ -208,5 +205,7 @@ ul:last-of-type {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 0.875em;
 }
 </style>

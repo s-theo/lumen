@@ -42,7 +42,7 @@ watch(
     class="comment-container vp-raw"
     aria-label="用户评论区域"
   >
-    <h2 class="visually-hidden">评论区</h2>
+    <span class="visually-hidden">评论区</span>
   </section>
 </template>
 

@@ -21,7 +21,7 @@ onMounted(() => {
         v-for="(section, index) in footer.group || []"
         :key="section.title + index"
       >
-        <h2 class="list-title" itemprop="headline">
+        <span class="list-title" itemprop="headline">
           <template v-if="section.icon">
             <Icon
               class="iconify"
@@ -33,7 +33,7 @@ onMounted(() => {
             />&nbsp;
           </template>
           {{ section.title }}
-        </h2>
+        </span>
         <div
           v-for="(link, idx) in section.links"
           :key="link.name + idx"
@@ -54,7 +54,7 @@ onMounted(() => {
             :title="link.name"
             :aria-label="link.name"
             :target="isExternal(link.link) ? '_blank' : '_self'"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             :aria-describedby="link.name ? link.name : null"
             itemprop="url"
             >{{ link.name
@@ -72,7 +72,7 @@ onMounted(() => {
     </div>
 
     <div class="footer-info">
-      <h2 v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
+      <span v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
         <p v-if="footer.beian?.icp" class="footer-infotext">
           <Icon
             v-if="footer.beian?.showIcon"
@@ -85,7 +85,7 @@ onMounted(() => {
             href="https://beian.miit.gov.cn/"
             title="ICP备案"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             aria-label="ICP备案"
             itemprop="legalName"
           >
@@ -107,18 +107,18 @@ onMounted(() => {
             href="https://beian.mps.gov.cn/"
             title="公安备案"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             aria-label="公安备案"
             itemprop="legalName"
           >
             {{ footer.beian.police }}
           </a>
         </p>
-      </h2>
+      </span>
 
       <span class="info-spacing-copyright"></span>
 
-      <h2 v-if="footer.author?.name" class="info-item">
+      <span v-if="footer.author?.name" class="info-item">
         <p class="footer-infotext">
           <Icon
             class="info-icon"
@@ -130,14 +130,14 @@ onMounted(() => {
           <a
             title="GitHub"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             :href="footer.author?.link"
             aria-label="GitHub"
             itemprop="author"
             >{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
         </p>
-      </h2>
+      </span>
     </div>
   </footer>
 </template>

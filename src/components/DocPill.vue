@@ -12,7 +12,7 @@ const pill = defineProps<Pill>()
       :title="pill.name"
       :aria-label="pill.name"
       :target="isExternal(pill.link) ? '_blank' : '_self'"
-      rel="noopener noreferrer"
+      rel="noreferrer"
     >
       <template v-if="pill.icon">
         <Icon
@@ -74,7 +74,7 @@ const pill = defineProps<Pill>()
           aria-hidden="true"
         />
       </template>
-      <h1 class="name">{{ pill.name }}</h1>
+      <span class="name">{{ pill.name }}</span>
     </a>
   </section>
 </template>
