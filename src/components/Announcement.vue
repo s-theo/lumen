@@ -12,7 +12,7 @@ const prelink = usePrelink()
     :target="isExternal(prelink.link) ? '_blank' : '_self'"
     :title="prelink.title"
     :aria-label="prelink.title"
-    rel="noopener noreferrer"
+    rel="noreferrer"
     @click="handleClick($event, prelink)"
   >
     <article ref="root" class="prelink-content">
