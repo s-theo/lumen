@@ -74,7 +74,7 @@ const pill = defineProps<Pill>()
           aria-hidden="true"
         />
       </template>
-      <h1 class="name">{{ pill.name }}</h1>
+      <span class="name">{{ pill.name }}</span>
     </a>
   </section>
 </template>
