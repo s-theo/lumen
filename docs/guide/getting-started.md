@@ -27,68 +27,68 @@ yarn add @theojs/lumen
     {
       name: '导入主题',
       link: 'theme',
-      icon: 'mdi:palette',
-      color: '#f39c12'
+      icon: 'heroicons:puzzle-piece-solid',
+      color: '#ff9800'
     },
     {
       name: '首页公告栏',
       link: 'Announcement',
-      icon: 'mdi:bullhorn',
+      icon: 'heroicons-solid:megaphone',
       color: '#e74c3c'
     },
     {
       name: '首页下划线',
       link: 'HomeUnderline',
-      icon: 'mdi:format-underline',
+      icon: 'heroicons:paint-brush-solid',
       color: '#3498db'
     },
     {
       name: '页脚配置',
       link: 'HomeFooter',
-      icon: 'mdi:cog',
+      icon: 'heroicons-solid:template',
       color: '#2ecc71'
     },
     {
       name: '侧边栏链接',
       link: 'DocAsideLogo',
-      icon: 'mdi:view-list',
+      icon: 'heroicons:bars-3-16-solid',
       color: '#9b59b6'
     },
     {
       name: '视频组件',
       link: 'DocVideoLink',
-      icon: 'mdi:video',
-      color: '#e67e22'
+      icon: 'heroicons-solid:video-camera',
+      color: '#f39c12'
     },
     {
       name: '链接卡片',
       link: 'LinkCard',
-      icon: 'mdi:credit-card',
+      icon: 'heroicons-solid:rectangle-group',
       color: '#1abc9c'
     },
     {
       name: '页面分享按钮',
       link: 'ShareButton',
-      icon: 'fa6-solid:share-nodes',
-      color: '#3498db'
+      icon: 'heroicons-solid:share',
+      color: '#007bff'
     },
     {
       name: '图片描述',
       link: 'Image-description',
-      icon: 'mdi:image-filter',
+      icon: 'heroicons-solid:photo',
       color: '#2ecc71'
     },
     {
       name: 'Twikoo 评论',
       link: 'DocTwikoo',
-      icon: 'mdi:comment-text-multiple',
+      icon: 'heroicons-solid:chat',
       color: '#3498db'
     },
     {
       name: '站点统计',
       link: 'analytics',
-      icon: 'mdi:chart-box',
-      color: '#3498db'
+      icon: 'heroicons:chart-bar-square-solid',
+      color: '#007bff'
     }
   ]"
 />
