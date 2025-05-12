@@ -54,7 +54,7 @@ onMounted(() => {
             :title="link.name"
             :aria-label="link.name"
             :target="isExternal(link.link) ? '_blank' : '_self'"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             :aria-describedby="link.name ? link.name : null"
             itemprop="url"
             >{{ link.name
@@ -85,7 +85,7 @@ onMounted(() => {
             href="https://beian.miit.gov.cn/"
             title="ICP备案"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             aria-label="ICP备案"
             itemprop="legalName"
           >
@@ -107,7 +107,7 @@ onMounted(() => {
             href="https://beian.mps.gov.cn/"
             title="公安备案"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             aria-label="公安备案"
             itemprop="legalName"
           >
@@ -130,7 +130,7 @@ onMounted(() => {
           <a
             title="GitHub"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
             :href="footer.author?.link"
             aria-label="GitHub"
             itemprop="author"

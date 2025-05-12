@@ -15,7 +15,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
           :title="aside.promo || aside.name"
           :aria-label="aside.promo || aside.name"
           :target="isExternal(aside.link) ? '_blank' : '_self'"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
           <template v-if="aside.icon">
             <Icon

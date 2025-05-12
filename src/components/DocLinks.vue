@@ -13,7 +13,7 @@ const props = defineProps<{ items: LinkItem[] }>()
         :title="link.name"
         :aria-label="link.name"
         :target="isExternal(link.link) ? '_blank' : '_self'"
-        rel="noopener noreferrer"
+        rel="noreferrer"
       >
         <template v-if="link.icon">
           <Icon
