@@ -60,7 +60,7 @@ hero:
   prelink:
     copy: true // [!code ++]
     install: 'pnpm add @theojs/lumen' // [!code ++]
-    title: '<iconify-icon icon="fa6-solid:bolt" style="margin-right:0.25em;color:#63E6BE;"></iconify-icon> 快速开始' // [!code ++]
+    title: '<iconify-icon class="i-mr" icon="fa6-solid:bolt" style="color:#63E6BE"></iconify-icon> 快速开始' // [!code ++]
     content: '<span style="color: var(--vp-c-brand-3); font-weight: bold;">pnpm add @theojs/lumen</span>' // [!code ++]
 ---
 ```
