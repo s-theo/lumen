@@ -29,7 +29,7 @@
     var(--vp-c-brand-3),
     var(--vp-c-brand-1)
   );
-  --AsideLogo-activity: linear-gradient(
+  --AsideLogo-promo: linear-gradient(
     225deg,
     rgba(100, 108, 255, 1),
     rgba(176, 71, 255, 1),
@@ -39,8 +39,8 @@
   --AsideLogo-info: var(--vp-c-text-2);
   --AsideLogo-name-bg-hover: var(--vp-c-brand-soft);
   --AsideLogo-name-border-hover: var(--vp-c-brand-soft);
-  --AsideLogo-activity-bg-hover: rgba(100, 108, 255, 0.16);
-  --AsideLogo-activity-border-hover: rgba(100, 108, 255, 0.16);
+  --AsideLogo-promo-bg-hover: rgba(100, 108, 255, 0.16);
+  --AsideLogo-promo-border-hover: rgba(100, 108, 255, 0.16);
   --AsideLogo-transform-hover: translateY(-1px);
   --AsideLogo-transform-active: scale(0.9);
 

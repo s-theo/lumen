@@ -47,8 +47,8 @@
   --vp-c-bg-elv: var(--vp-c-bg-soft);
 }
 
-/* style the activity information */
-.activity-text {
+/* style the promo information */
+.promo-text {
   color: var(--vp-c-brand-3);
   font-weight: bold;
 }
