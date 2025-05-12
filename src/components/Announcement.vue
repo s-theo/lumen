@@ -16,7 +16,7 @@ const prelink = usePrelink()
     @click="handleClick($event, prelink)"
   >
     <article ref="root" class="prelink-content">
-      <h2 class="title" v-html="prelink.title"></h2>
+      <span class="title" v-html="prelink.title"></span>
       <p v-if="prelink.content" class="content" v-html="prelink.content"></p>
       <div v-if="prelink.date" class="time-info">
         <Icon
