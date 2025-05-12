@@ -16,7 +16,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
         :target="isExternal(boxcube.link) ? '_blank' : '_self'"
         :title="boxcube.name"
         :aria-label="boxcube.name"
-        rel="noopener noreferrer"
+        rel="noreferrer"
       >
         <template v-if="boxcube.icon">
           <Icon
