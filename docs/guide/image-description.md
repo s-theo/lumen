@@ -2,7 +2,7 @@
 title: 图片描述
 ---
 
-![效果图](/Logo.webp)
+![效果图|300x0](/Logo.webp '效果图')
 
 ## 安装 @mdit/plugin-figure 插件
 
