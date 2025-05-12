@@ -21,7 +21,7 @@ onMounted(() => {
         v-for="(section, index) in footer.group || []"
         :key="section.title + index"
       >
-        <h2 class="list-title" itemprop="headline">
+        <span class="list-title" itemprop="headline">
           <template v-if="section.icon">
             <Icon
               class="iconify"
@@ -33,7 +33,7 @@ onMounted(() => {
             />&nbsp;
           </template>
           {{ section.title }}
-        </h2>
+        </span>
         <div
           v-for="(link, idx) in section.links"
           :key="link.name + idx"
@@ -72,7 +72,7 @@ onMounted(() => {
     </div>
 
     <div class="footer-info">
-      <h2 v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
+      <span v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
         <p v-if="footer.beian?.icp" class="footer-infotext">
           <Icon
             v-if="footer.beian?.showIcon"
@@ -114,11 +114,11 @@ onMounted(() => {
             {{ footer.beian.police }}
           </a>
         </p>
-      </h2>
+      </span>
 
       <span class="info-spacing-copyright"></span>
 
-      <h2 v-if="footer.author?.name" class="info-item">
+      <span v-if="footer.author?.name" class="info-item">
         <p class="footer-infotext">
           <Icon
             class="info-icon"
@@ -137,7 +137,7 @@ onMounted(() => {
             >{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.
         </p>
-      </h2>
+      </span>
     </div>
   </footer>
 </template>
