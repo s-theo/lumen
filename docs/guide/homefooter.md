@@ -1,5 +1,15 @@
 ---
 title: 页脚配置
+head:
+  - - meta
+    - name: description
+      content: 了解如何使用 @theojs/lumen 插件的 HomeFooter 组件自定义 VitePress 网站的页脚。本指南包含数据配置（链接分组、备案信息、作者）和组件集成步骤，助你打造个性化且信息丰富的网站底部。
+  - - meta
+    - name: keywords
+      content: VitePress 页脚配置 @theojs/lumen Lumen HomeFooter 自定义页脚 备案信息 作者信息 链接分组 网站底部 theojs VitePress插件 Iconify 网站信息
+  - - meta
+    - property: og:image
+      content: https://i.theojs.cn/docs/202411071146149.webp
 ---
 
 ![桌面端效果图](https://i.theojs.cn/docs/202411071146149.webp)
