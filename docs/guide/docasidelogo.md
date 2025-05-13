@@ -1,5 +1,15 @@
 ---
 title: 侧边栏链接
+head:
+  - - meta
+    - name: description
+      content: 学习如何使用 @theojs/lumen 插件的 DocAsideLogo 组件，在 VitePress 站点的侧边栏添加自定义链接、推广信息或品牌Logo。本指南将引导你配置数据并集成组件，以丰富侧边栏内容和提升用户体验。
+  - - meta
+    - name: keywords
+      content: VitePress 侧边栏 侧边栏链接 自定义链接 DocAsideLogo @theojs/lumen Lumen Vue组件 主题插件 网站定制 推广信息 品牌Logo theojs VitePress插件 Iconify light/dark模式
+  - - meta
+    - property: og:image
+      content: https://i.theojs.cn/docs/202408081937401.webp
 ---
 
 ![侧边栏 - 效果图|300x0](https://i.theojs.cn/docs/202408081937401.webp '侧边栏 - 效果图')

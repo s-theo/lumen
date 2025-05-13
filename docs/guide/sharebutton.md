@@ -1,5 +1,12 @@
 ---
 title: 页面分享按钮
+head:
+  - - meta
+    - name: description
+      content: 了解如何在 VitePress 站点中集成 @theojs/lumen 插件提供的页面分享按钮 (ShareButton)。本指南包括组件引入、自定义按钮图标与文本，以及参数说明，方便用户快速复制和分享页面链接。
+  - - meta
+    - name: keywords
+      content: VitePress 页面分享 分享按钮 @theojs/lumen Lumen ShareButton 复制链接 剪贴板 Iconify theojs VitePress插件 社交分享 链接分享 用户体验
 ---
 
 ## 引入组件

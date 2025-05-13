@@ -1,5 +1,12 @@
 ---
 title: 视频组件
+head:
+  - - meta
+    - name: description
+      content: 了解如何使用 @theojs/lumen 插件提供的视频组件 (Vid)，轻松在 VitePress 页面中嵌入来自 YouTube、Bilibili、腾讯视频、优酷等多个主流平台或自定义链接的视频。该组件支持响应式设计，配置简单易用，提升用户观看体验。
+  - - meta
+    - name: keywords
+      content: VitePress 视频组件 @theojs/lumen Lumen DocVideoLink Vid 嵌入视频 YouTube Bilibili 腾讯视频 优酷 西瓜视频 Vimeo 响应式视频 theojs VitePress插件 多平台视频 自定义视频
 ---
 
 支持多种主流视频平台，还允许用户通过自定义链接嵌入其他视频源。通过简单的配置，可以轻松将各种视频嵌入到您的页面中，提升用户的观看体验。
