@@ -42,7 +42,7 @@ hero:
     date: '2025年1月7日23时59分'// [!code ++]
     dateIcon: 'mdi:calendar-star' // [!code ++]
     dateText: '活动截止日期'// [!code ++]
-    link: https://s.theojs.cn/qyt // [!code ++]
+    link: https://itheo.top/qyt // [!code ++]
 ---
 ```
 
