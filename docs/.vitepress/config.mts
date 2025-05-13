@@ -36,7 +36,10 @@ export default defineConfig({
         }
       }),
       llmstxt({})
-    ]
+    ],
+    build: {
+      chunkSizeWarningLimit: 1000
+    }
   },
 
   themeConfig: {
