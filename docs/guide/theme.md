@@ -1,5 +1,12 @@
 ---
 title: 主题配置文件
+head:
+  - - meta
+    - name: description
+      content: 了解如何配置和自定义 @theojs/lumen VitePress 主题。本指南包括主题CSS导入（全部或部分）、Iconify图标支持配置、CSS变量覆盖方法，并展示了容器、徽章和明暗模式图片等内置样式示例。
+  - - meta
+    - name: keywords
+      content: VitePress 主题配置 @theojs/lumen Lumen CSS导入 Iconify 自定义CSS CSS变量 容器样式 徽章 明暗模式 light/dark模式 theojs VitePress插件 主题美化 UI组件 样式定制
 ---
 
 ::: code-group

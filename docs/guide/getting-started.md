@@ -1,5 +1,12 @@
 ---
 title: 快速开始
+head:
+  - - meta
+    - name: description
+      content: 快速了解如何安装和开始使用 @theojs/lumen 插件。本指南提供 pnpm、npm 和 yarn 安装命令，并概述了主题导入、首页定制、内容组件如公告栏、视频、评论等核心功能模块的入口。
+  - - meta
+    - name: keywords
+      content: '@theojs/lumen 快速开始 安装教程 VitePress 主题插件 Vue组件 功能模块 pnpm npm yarn 导入主题 首页公告栏 侧边栏链接 视频组件 Twikoo评论 站点统计 theojs Lumen'
 ---
 
 ## 安装
