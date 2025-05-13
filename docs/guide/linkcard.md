@@ -1,5 +1,12 @@
 ---
 title: 链接卡片
+head:
+  - - meta
+    - name: description
+      content: 了解如何使用 @theojs/lumen 插件提供的多种链接卡片组件（Box, Pill, Links, BoxCube）在 VitePress 站点中创建美观且信息丰富的链接展示。本指南包含各组件的引入、使用示例和参数说明，支持 Iconify 图标和明暗模式。
+  - - meta
+    - name: keywords
+      content: VitePress 链接卡片 @theojs/lumen Lumen DocBox DocPill DocLinks DocBoxCube UI组件 Vue组件 卡片组件 信息展示 Iconify theojs VitePress插件 light/dark模式 自定义链接
 ---
 
 ## 引入组件
