@@ -5,13 +5,11 @@ const props = defineProps<{ items: LinkItem[] }>()
 </script>
 
 <template>
-  <section class="container" aria-label="Open link">
+  <section class="container">
     <article v-for="(link, index) in props.items" :key="link.link + index">
       <a
         class="link"
         :href="link.link"
-        :title="link.name"
-        :aria-label="link.name"
         :target="isExternal(link.link) ? '_blank' : '_self'"
         rel="noreferrer"
       >
@@ -62,7 +60,6 @@ const props = defineProps<{ items: LinkItem[] }>()
             :alt="link.name"
             loading="lazy"
             decoding="async"
-            aria-hidden="true"
             width="32"
             height="32"
           />
@@ -73,7 +70,6 @@ const props = defineProps<{ items: LinkItem[] }>()
             :alt="link.name"
             loading="lazy"
             decoding="async"
-            aria-hidden="true"
             width="32"
             height="32"
           />
@@ -83,7 +79,6 @@ const props = defineProps<{ items: LinkItem[] }>()
             :alt="link.name"
             loading="lazy"
             decoding="async"
-            aria-hidden="true"
             width="32"
             height="32"
           />

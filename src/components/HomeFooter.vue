@@ -55,8 +55,6 @@ onMounted(() => {
           <a
             :name="link.name"
             :href="link.link"
-            :title="link.name"
-            :aria-label="link.name"
             :target="isExternal(link.link) ? '_blank' : '_self'"
             rel="noreferrer"
             :aria-describedby="link.name ? link.name : null"
@@ -94,7 +92,6 @@ onMounted(() => {
             title="ICP备案"
             target="_blank"
             rel="noreferrer"
-            aria-label="ICP备案"
             itemprop="legalName"
           >
             {{ footer.beian.icp }}
@@ -118,7 +115,6 @@ onMounted(() => {
             title="公安备案"
             target="_blank"
             rel="noreferrer"
-            aria-label="公安备案"
             itemprop="legalName"
           >
             {{ footer.beian.police }}
@@ -144,7 +140,6 @@ onMounted(() => {
             target="_blank"
             rel="noreferrer"
             :href="footer.author?.link"
-            aria-label="GitHub"
             itemprop="author"
             >{{ footer.author?.name }}</a
           >.&nbsp;All Rights Reserved.

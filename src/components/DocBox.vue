@@ -5,15 +5,13 @@ const props = defineProps<{ items: BoxItem[] }>()
 </script>
 
 <template>
-  <section class="container" aria-label="Open link">
+  <section class="container">
     <a
       v-for="(box, index) in props.items"
       :key="box.link + index"
       class="link"
       :href="box.link"
       :target="isExternal(box.link) ? '_blank' : '_self'"
-      :title="box.name"
-      :aria-label="box.name"
       rel="noreferrer"
     >
       <template v-if="box.icon">
@@ -59,7 +57,6 @@ const props = defineProps<{ items: BoxItem[] }>()
           :alt="box.name"
           loading="lazy"
           decoding="async"
-          aria-hidden="true"
           width="38"
           height="38"
         />
@@ -70,7 +67,6 @@ const props = defineProps<{ items: BoxItem[] }>()
           :alt="box.name"
           loading="lazy"
           decoding="async"
-          aria-hidden="true"
           width="38"
           height="38"
         />
@@ -80,7 +76,6 @@ const props = defineProps<{ items: BoxItem[] }>()
           :alt="box.name"
           loading="lazy"
           decoding="async"
-          aria-hidden="true"
           width="38"
           height="38"
         />
