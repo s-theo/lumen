@@ -37,11 +37,7 @@ watch(
 </script>
 
 <template>
-  <section
-    id="twikoo"
-    class="comment-container vp-raw"
-    aria-label="用户评论区域"
-  >
+  <section id="twikoo" class="comment-container vp-raw">
     <span class="visually-hidden">评论区</span>
   </section>
 </template>
