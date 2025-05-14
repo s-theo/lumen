@@ -30,6 +30,8 @@ onMounted(() => {
               :ssr="true"
               :inline="true"
               :alt="section.title"
+              width="14"
+              height="14"
             />&nbsp;
           </template>
           {{ section.title }}
@@ -46,6 +48,8 @@ onMounted(() => {
               :ssr="true"
               :inline="true"
               :alt="link.name"
+              width="14"
+              height="14"
             />&nbsp;</template
           >
           <a
@@ -65,6 +69,8 @@ onMounted(() => {
               :ssr="true"
               :inline="true"
               alt="External Link Icon"
+              width="14"
+              height="14"
             />
           </a>
         </div>
@@ -81,6 +87,8 @@ onMounted(() => {
             :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
             :ssr="true"
             :inline="true"
+            width="12"
+            height="12"
           />&nbsp;<a
             href="https://beian.miit.gov.cn/"
             title="ICP备案"
@@ -103,6 +111,8 @@ onMounted(() => {
             "
             :ssr="true"
             :inline="true"
+            width="12"
+            height="12"
           />&nbsp;<a
             href="https://beian.mps.gov.cn/"
             title="公安备案"
@@ -126,6 +136,8 @@ onMounted(() => {
             icon="ri:copyright-line"
             :ssr="true"
             :inline="true"
+            width="12"
+            height="12"
           />&nbsp;{{ Year }}
           <a
             title="GitHub"
@@ -188,7 +200,6 @@ onMounted(() => {
 .iconify {
   display: inline-block;
   flex-shrink: 0;
-  font-size: 1.2em;
 }
 
 .footer-info {
@@ -214,7 +225,6 @@ onMounted(() => {
 
 .info-icon {
   display: inline-block;
-  font-size: 1em;
 }
 
 .external-link-icon {
@@ -223,7 +233,6 @@ onMounted(() => {
   flex-shrink: 0;
   transform: rotate(45deg);
   color: var(--vp-c-text-3);
-  font-size: 1.2em;
 }
 
 @media (max-width: 768px) {

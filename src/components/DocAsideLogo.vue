@@ -30,6 +30,8 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :ssr="true"
               :inline="true"
               :alt="aside.name"
+              width="24"
+              height="24"
             />
             <Icon
               v-if="typeof aside.icon === 'object'"
@@ -40,6 +42,8 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               "
               :ssr="true"
               :inline="true"
+              width="24"
+              height="24"
               :alt="aside.name"
             />
             <Icon
@@ -50,6 +54,8 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :ssr="true"
               :inline="true"
               :alt="aside.name"
+              width="24"
+              height="24"
             />
           </template>
           <template v-else-if="aside.image">
@@ -61,6 +67,8 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               loading="lazy"
               decoding="async"
               aria-hidden="true"
+              width="24"
+              height="24"
             />
             <img
               v-if="typeof aside.image === 'object'"
@@ -70,6 +78,8 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               loading="lazy"
               decoding="async"
               aria-hidden="true"
+              width="24"
+              height="24"
             />
             <img
               v-else
@@ -79,6 +89,8 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               loading="lazy"
               decoding="async"
               aria-hidden="true"
+              width="24"
+              height="24"
             />
           </template>
           <span>
@@ -164,7 +176,6 @@ ul:last-of-type {
 .link .icon {
   transform: scale(1.25);
   transition: transform 0.5s;
-  width: 1.5em;
 }
 
 .link .iconify {
@@ -172,7 +183,6 @@ ul:last-of-type {
   transform: scale(1.25);
   transition: transform 0.5s;
   color: var(--iconify-defaultcolor);
-  font-size: 1.5em;
 }
 
 .link .hide {
