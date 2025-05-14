@@ -5,7 +5,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 </script>
 
 <template>
-  <section class="container" aria-label="Open link">
+  <section class="container">
     <article
       v-for="(boxcube, index) in props.items"
       :key="boxcube.link + index"
@@ -14,8 +14,6 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
         class="link"
         :href="boxcube.link"
         :target="isExternal(boxcube.link) ? '_blank' : '_self'"
-        :title="boxcube.name"
-        :aria-label="boxcube.name"
         rel="noreferrer"
       >
         <template v-if="boxcube.icon">
@@ -69,7 +67,6 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :alt="boxcube.name"
             loading="lazy"
             decoding="async"
-            aria-hidden="true"
             width="38"
             height="38"
           />
@@ -80,7 +77,6 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :alt="boxcube.name"
             loading="lazy"
             decoding="async"
-            aria-hidden="true"
             width="38"
             height="38"
           />
@@ -90,7 +86,6 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :alt="boxcube.name"
             loading="lazy"
             decoding="async"
-            aria-hidden="true"
             width="38"
             height="38"
           />
