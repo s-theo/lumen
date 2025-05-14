@@ -31,6 +31,8 @@ const shareLink = useShareLink()
           :ssr="true"
           :inline="true"
           alt="分享此页面的图标"
+          width="16"
+          height="16"
         />
         {{ ShareButton.buttonText || '点击分享此页面' }}
       </span>
@@ -42,6 +44,8 @@ const shareLink = useShareLink()
           :ssr="true"
           :inline="true"
           alt="复制成功图标"
+          width="16"
+          height="16"
         />
         {{ ShareButton.copiedText || '链接已复制!' }}
       </span>
@@ -113,6 +117,5 @@ const shareLink = useShareLink()
   flex-shrink: 0;
   margin: 0 0 -0.1em 0;
   color: var(--ShareButton-icon);
-  font-size: 1.2em;
 }
 </style>

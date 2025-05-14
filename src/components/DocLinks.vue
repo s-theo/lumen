@@ -26,6 +26,8 @@ const props = defineProps<{ items: LinkItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="link.name"
+            width="32"
+            height="32"
           />
           <Icon
             v-if="typeof link.icon === 'object'"
@@ -37,6 +39,8 @@ const props = defineProps<{ items: LinkItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="link.name"
+            width="32"
+            height="32"
           />
           <Icon
             v-else
@@ -46,35 +50,42 @@ const props = defineProps<{ items: LinkItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="link.name"
+            width="32"
+            height="32"
           />
         </template>
         <template v-else-if="link.image">
           <img
             v-if="typeof link.image === 'object'"
-            class="icon light-only"
+            class="light-only"
             :src="link.image.light"
             :alt="link.name"
             loading="lazy"
             decoding="async"
             aria-hidden="true"
+            width="32"
+            height="32"
           />
           <img
             v-if="typeof link.image === 'object'"
-            class="icon dark-only"
+            class="dark-only"
             :src="link.image.dark"
             :alt="link.name"
             loading="lazy"
             decoding="async"
             aria-hidden="true"
+            width="32"
+            height="32"
           />
           <img
             v-else
-            class="icon"
             :src="link.image"
             :alt="link.name"
             loading="lazy"
             decoding="async"
             aria-hidden="true"
+            width="32"
+            height="32"
           />
         </template>
         <template v-else>
@@ -82,6 +93,8 @@ const props = defineProps<{ items: LinkItem[] }>()
             class="default-icon"
             alt="Default Icon"
             icon="fa6-solid:arrow-up-right-from-square"
+            width="24"
+            height="24"
           />
         </template>
 
@@ -132,20 +145,14 @@ const props = defineProps<{ items: LinkItem[] }>()
   display: none !important;
 }
 
-.icon {
-  height: 2em;
-}
 .iconify {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
-
   color: var(--iconify-defaultcolor);
-  font-size: 2em;
 }
 
 .default-icon {
   flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
   margin: 0 0.25em 0 0.2em;
-  font-size: 1.5em;
 }
 
 .text-content {
