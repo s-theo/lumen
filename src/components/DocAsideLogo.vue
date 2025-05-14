@@ -5,15 +5,13 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 </script>
 
 <template>
-  <aside aria-label="Open link">
+  <aside>
     <ul>
       <li v-for="(aside, index) in props.Aside_Data" :key="index">
         <a
           class="link"
           :class="{ 'has-promo': aside.promo, 'has-name': aside.name }"
           :href="aside.link"
-          :title="aside.promo || aside.name"
-          :aria-label="aside.promo || aside.name"
           :target="isExternal(aside.link) ? '_blank' : '_self'"
           rel="noreferrer"
         >
@@ -66,7 +64,6 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :alt="aside.name"
               loading="lazy"
               decoding="async"
-              aria-hidden="true"
               width="24"
               height="24"
             />
@@ -77,7 +74,6 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :alt="aside.name"
               loading="lazy"
               decoding="async"
-              aria-hidden="true"
               width="24"
               height="24"
             />
@@ -88,7 +84,6 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :alt="aside.name"
               loading="lazy"
               decoding="async"
-              aria-hidden="true"
               width="24"
               height="24"
             />

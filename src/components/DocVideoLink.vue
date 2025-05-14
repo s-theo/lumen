@@ -14,7 +14,6 @@ const Config = computed(() => getVideo(props))
       class="video-iframe"
       loading="lazy"
       :title="Config.title"
-      :aria-label="`视频播放器：${Config.title}`"
       :src="
         typeof Config.src === 'function' ? Config.src(props.id) : Config.src
       "

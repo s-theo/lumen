@@ -5,12 +5,10 @@ const pill = defineProps<Pill>()
 </script>
 
 <template>
-  <section class="container" aria-label="Open link">
+  <section class="container">
     <a
       class="link"
       :href="pill.link"
-      :title="pill.name"
-      :aria-label="pill.name"
       :target="isExternal(pill.link) ? '_blank' : '_self'"
       rel="noreferrer"
     >
@@ -59,7 +57,6 @@ const pill = defineProps<Pill>()
           :alt="pill.name"
           loading="lazy"
           decoding="async"
-          aria-hidden="true"
           width="14"
           height="14"
         />
@@ -70,7 +67,6 @@ const pill = defineProps<Pill>()
           :alt="pill.name"
           loading="lazy"
           decoding="async"
-          aria-hidden="true"
           width="14"
           height="14"
         />
@@ -80,7 +76,6 @@ const pill = defineProps<Pill>()
           :alt="pill.name"
           loading="lazy"
           decoding="async"
-          aria-hidden="true"
           width="14"
           height="14"
         />
