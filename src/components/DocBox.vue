@@ -25,6 +25,8 @@ const props = defineProps<{ items: BoxItem[] }>()
           :ssr="true"
           :inline="true"
           :alt="box.name"
+          width="38"
+          height="38"
         />
         <Icon
           v-if="typeof box.icon === 'object'"
@@ -34,6 +36,8 @@ const props = defineProps<{ items: BoxItem[] }>()
           :ssr="true"
           :inline="true"
           :alt="box.name"
+          width="38"
+          height="38"
         />
         <Icon
           v-else
@@ -43,35 +47,42 @@ const props = defineProps<{ items: BoxItem[] }>()
           :ssr="true"
           :inline="true"
           :alt="box.name"
+          width="38"
+          height="38"
         />
       </template>
       <template v-else-if="box.image">
         <img
           v-if="typeof box.image === 'object'"
-          class="icon light-only"
+          class="light-only"
           :src="box.image.light"
           :alt="box.name"
           loading="lazy"
           decoding="async"
           aria-hidden="true"
+          width="38"
+          height="38"
         />
         <img
           v-if="typeof box.image === 'object'"
-          class="icon dark-only"
+          class="dark-only"
           :src="box.image.dark"
           :alt="box.name"
           loading="lazy"
           decoding="async"
           aria-hidden="true"
+          width="38"
+          height="38"
         />
         <img
           v-else
-          class="icon"
           :src="box.image"
           :alt="box.name"
           loading="lazy"
           decoding="async"
           aria-hidden="true"
+          width="38"
+          height="38"
         />
       </template>
       <span class="name">{{ box.name }}</span>
@@ -157,14 +168,9 @@ const props = defineProps<{ items: BoxItem[] }>()
   text-transform: uppercase;
 }
 
-.icon {
-  height: 2.4em;
-}
-
 .iconify {
   flex-shrink: 0;
   color: var(--iconify-defaultcolor);
-  font-size: 2.4em;
 }
 
 .name {

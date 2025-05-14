@@ -31,6 +31,8 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="boxcube.name"
+            width="38"
+            height="38"
           />
           <Icon
             v-if="typeof boxcube.icon === 'object'"
@@ -44,6 +46,8 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="boxcube.name"
+            width="38"
+            height="38"
           />
           <Icon
             v-else
@@ -53,35 +57,42 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :ssr="true"
             :inline="true"
             :alt="boxcube.name"
+            width="38"
+            height="38"
           />
         </template>
         <template v-else-if="boxcube.image">
           <img
             v-if="typeof boxcube.image === 'object'"
-            class="icon light-only"
+            class="light-only"
             :src="boxcube.image.light"
             :alt="boxcube.name"
             loading="lazy"
             decoding="async"
             aria-hidden="true"
+            width="38"
+            height="38"
           />
           <img
             v-if="typeof boxcube.image === 'object'"
-            class="icon dark-only"
+            class="dark-only"
             :src="boxcube.image.dark"
             :alt="boxcube.name"
             loading="lazy"
             decoding="async"
             aria-hidden="true"
+            width="38"
+            height="38"
           />
           <img
             v-else
-            class="icon"
             :src="boxcube.image"
             :alt="boxcube.name"
             loading="lazy"
             decoding="async"
             aria-hidden="true"
+            width="38"
+            height="38"
           />
         </template>
         <span class="name">{{ boxcube.name }}</span>
@@ -167,14 +178,9 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   }
 }
 
-.icon {
-  height: 2.5em;
-}
-
 .iconify {
   flex-shrink: 0;
   color: var(--iconify-defaultcolor);
-  font-size: 2.5em;
 }
 
 .name,

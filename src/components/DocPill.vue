@@ -25,6 +25,8 @@ const pill = defineProps<Pill>()
           :alt="pill.name"
           :ssr="true"
           :inline="true"
+          width="14"
+          height="14"
         />
         <Icon
           v-if="typeof pill.icon === 'object'"
@@ -34,6 +36,8 @@ const pill = defineProps<Pill>()
           :alt="pill.name"
           :ssr="true"
           :inline="true"
+          width="14"
+          height="14"
         />
         <Icon
           v-else
@@ -43,35 +47,42 @@ const pill = defineProps<Pill>()
           :alt="pill.name"
           :ssr="true"
           :inline="true"
+          width="14"
+          height="14"
         />
       </template>
       <template v-else-if="pill.image">
         <img
           v-if="typeof pill.image === 'object'"
-          class="icon light-only"
+          class="light-only"
           :src="pill.image.light"
           :alt="pill.name"
           loading="lazy"
           decoding="async"
           aria-hidden="true"
+          width="14"
+          height="14"
         />
         <img
           v-if="typeof pill.image === 'object'"
-          class="icon dark-only"
+          class="dark-only"
           :src="pill.image.dark"
           :alt="pill.name"
           loading="lazy"
           decoding="async"
           aria-hidden="true"
+          width="14"
+          height="14"
         />
         <img
           v-else
-          class="icon"
           :src="pill.image"
           :alt="pill.name"
           loading="lazy"
           decoding="async"
           aria-hidden="true"
+          width="14"
+          height="14"
         />
       </template>
       <span class="name">{{ pill.name }}</span>
@@ -127,14 +138,9 @@ section.container {
   display: none !important;
 }
 
-.icon {
-  height: 0.875em;
-}
-
 .iconify {
   flex-shrink: 0;
   color: var(--iconify-defaultcolor);
-  font-size: 0.875em;
 }
 
 .name {
