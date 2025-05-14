@@ -32,16 +32,15 @@ export default {
 
 ## 使用
 
-```markdown [.vitepress/index.md]
+```yaml [.vitepress/index.md]
 ---
 layout: home
 
 hero:
   name: Lumen
-  text: 'Enhanced ' <!-- [!code ++] -->
-  textsuffix: 'Theme' <!-- [!code ++] -->
+  text: 'Enhanced ' # [!code ++]
+  textsuffix: 'Theme' # [!code ++]
   tagline: ✨ 集成 Vue 功能组件和主题美化的 VitePress 插件
 ---
-
-<Home /> <!-- [!code ++] -->
+<Home /> # [!code ++]
 ```
