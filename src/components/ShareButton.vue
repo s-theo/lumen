@@ -16,11 +16,6 @@ const shareLink = useShareLink()
     <button
       class="share-link-button"
       :class="{ copied }"
-      :aria-label="
-        copied
-          ? ShareButton.copiedText || '链接已复制!'
-          : ShareButton.buttonText || '点击分享此页面'
-      "
       aria-live="assertive"
       @click="copyLink(shareLink)"
     >

@@ -10,8 +10,6 @@ const prelink = usePrelink()
     class="prelink"
     :href="prelink.copy ? 'javascript:void(0)' : prelink.link"
     :target="isExternal(prelink.link) ? '_blank' : '_self'"
-    :title="prelink.title"
-    :aria-label="prelink.title"
     rel="noreferrer"
     @click="handleClick($event, prelink)"
   >
@@ -24,10 +22,10 @@ const prelink = usePrelink()
           :icon="prelink.dateIcon || 'line-md:calendar'"
           :ssr="true"
           :inline="true"
-          alt="Icon"
+          alt="date"
         />
         <time v-html="prelink.dateText || '活动时间: 即日至'"> </time>
-        <time class="date" :aria-label="prelink.date">{{ prelink.date }}</time>
+        <time class="date">{{ prelink.date }}</time>
       </div>
     </article>
   </a>
