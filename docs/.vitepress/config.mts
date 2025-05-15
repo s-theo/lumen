@@ -98,5 +98,18 @@ export default defineConfig({
       linkText: '返回首页',
       code: '404'
     }
+  },
+
+  //添加 canonical URL
+  transformPageData(pageData) {
+    const canonicalUrl = `https://lumen.theojs.cn/${pageData.relativePath}`
+      .replace(/index\.md$/, '')
+      .replace(/\.md$/, '')
+
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push([
+      'link',
+      { rel: 'canonical', href: canonicalUrl }
+    ])
   }
 })

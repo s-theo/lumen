@@ -51,7 +51,6 @@ export const head: HeadConfig[] = [
     { name: 'twitter:image', content: 'https://lumen.theojs.cn/Logo.webp' }
   ],
   ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
-  ['link', { rel: 'canonical', href: 'https://lumen.theojs.cn/' }],
   [
     'script',
     {
