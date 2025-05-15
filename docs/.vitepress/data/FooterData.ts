@@ -9,7 +9,7 @@ export const Footer_Data: FooterData = {
     policealt: '公安备案'
   },
   author: {
-    name: 'Theo-Messi',
+    name: 'Theo',
     link: 'https://github.com/Theo-Messi',
     alt: '版权'
   },
