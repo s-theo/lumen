@@ -91,23 +91,25 @@ export default {
 
 `Group` 接口定义了一个链接分组，包括分组的图标、标题及其下的多个链接。
 
-|  字段   |   类型   | 描述                                                                                                                                                         |
-| :-----: | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `icon`  | `string` | <Badge text="可选" /> 分组图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" /> |
-| `color` | `string` | <Badge text="可选" /> 图标样式。                                                                                                                             |
-| `title` | `string` | 分组的标题。                                                                                                                                                 |
-| `links` | `Array`  | 该分组包含的链接数组，每个链接是一个 `Link` 对象。                                                                                                           |
+|  字段   |   类型   | 描述                                                                                                                                                                            |
+| :-----: | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `icon`  | `string` | <Badge text="可选" /> 分组图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> |
+| `color` | `string` | <Badge text="可选" /> 图标样式。                                                                                                                                                |
+| `title` | `string` | 分组的标题。                                                                                                                                                                    |
+| `links` | `Array`  | 该分组包含的链接数组，每个链接是一个 `Link` 对象。                                                                                                                              |
+|  `alt`  | `string` | 图标的alt文本                                                                                                                                                                   |
 
 ### `Link` 接口
 
 `Link` 接口用于描述具体的链接信息，包括链接的图标、样式、名称、地址及其打开方式。
 
-|  字段   |   类型   | 描述                                                                                                                                                         |
-| :-----: | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `icon`  | `string` | <Badge text="可选" /> 链接图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" /> |
-| `color` | `string` | <Badge text="可选" /> 图标样式。                                                                                                                             |
-| `name`  | `string` | 链接的名称。                                                                                                                                                 |
-| `link`  | `string` | 链接的地址。                                                                                                                                                 |
+|  字段   |   类型   | 描述                                                                                                                                                                            |
+| :-----: | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `icon`  | `string` | <Badge text="可选" /> 链接图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> |
+| `color` | `string` | <Badge text="可选" /> 图标样式。                                                                                                                                                |
+| `name`  | `string` | 链接的名称。                                                                                                                                                                    |
+| `link`  | `string` | 链接的地址。                                                                                                                                                                    |
+|  `alt`  | `string` | 图标的alt文本                                                                                                                                                                   |
 
 ### `Beian` 接口
 
@@ -117,8 +119,10 @@ export default {
 | :----------: | :-------: | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |    `icp`     | `string`  | <Badge text="可选" /> ICP 备案号。                                                                                                                       |
 |  `icpIcon`   | `string`  | <Badge text="可选" /> ICP 图标，默认为 `fluent:globe-shield-48-filled` : <iconify-icon icon="fluent:globe-shield-48-filled" ></iconify-icon>             |
+|   `icpalt`   | `string`  | 图标的alt文本                                                                                                                                            |
 |   `police`   | `string`  | <Badge text="可选" /> 公安备案号。                                                                                                                       |
 | `policeIcon` | `string`  | <Badge text="可选" /> 公安备案图标，默认为 `fluent:shield-checkmark-48-filled` : <iconify-icon icon="fluent:shield-checkmark-48-filled" ></iconify-icon> |
+| `policealt`  | `string`  | 图标的alt文本                                                                                                                                            |
 |  `showIcon`  | `boolean` | <Badge text="可选" /> 是否显示备案图标，默认 `false`。                                                                                                   |
 
 ### `Author` 接口
@@ -129,3 +133,4 @@ export default {
 | :----: | :------: | ---------------------------------- |
 | `name` | `string` | <Badge text="可选" /> 作者的姓名。 |
 | `link` | `string` | <Badge text="可选" /> 作者的链接。 |
+| `alt`  | `string` | 版权图标的alt文本                  |

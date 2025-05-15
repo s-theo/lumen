@@ -40,14 +40,15 @@ export default {
 
 ### 参数说明
 
-|  字段   |                     类型                      | 描述                                                                                                                                                                                                        |
-| :-----: | :-------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`  |                   `string`                    | DocBox 名称。                                                                                                                                                                                               |
-| `link`  |                   `string`                    | DocBox 链接。                                                                                                                                                                                               |
-|  `tag`  |                   `string`                    | <Badge text="可选" /> DocBox 标签。                                                                                                                                                                         |
-| `color` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标的颜色。 也可以是包含 `light` 和 `dark` 属性的对象                                                                                                                                |
-| `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
-| `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图片地址或包含 `light` 和 `dark` 模式的对象。                                                                                                                                         |
+|  字段   |                     类型                      | 描述                                                                                                                                                                                                                           |
+| :-----: | :-------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`  |                   `string`                    | DocBox 名称。                                                                                                                                                                                                                  |
+| `link`  |                   `string`                    | DocBox 链接。                                                                                                                                                                                                                  |
+|  `tag`  |                   `string`                    | <Badge text="可选" /> DocBox 标签。                                                                                                                                                                                            |
+| `color` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标的颜色。 也可以是包含 `light` 和 `dark` 属性的对象                                                                                                                                                   |
+| `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
+| `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图片地址或包含 `light` 和 `dark` 模式的对象。                                                                                                                                                            |
+|  `alt`  |                   `string`                    | <Badge text="可选" /> 图片/图标的 `alt` 文本                                                                                                                                                                                   |
 
 ## Pill
 
@@ -61,13 +62,14 @@ export default {
 
 ### 参数说明
 
-|  字段   |                     类型                      | 描述                                                                                                                                                                                                        |
-| :-----: | :-------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`  |                   `string`                    | Pill 名称。                                                                                                                                                                                                 |
-| `link`  |                   `string`                    | <Badge text="可选" />Pill 链接。                                                                                                                                                                            |
-| `color` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标的颜色。也可以是包含 `light` 和 `dark` 属性的对象                                                                                                                                 |
-| `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
-| `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图片地址或包含 `light` 和 `dark` 模式的对象。                                                                                                                                         |
+|  字段   |                     类型                      | 描述                                                                                                                                                                                                                           |
+| :-----: | :-------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`  |                   `string`                    | Pill 名称。                                                                                                                                                                                                                    |
+| `link`  |                   `string`                    | <Badge text="可选" />Pill 链接。                                                                                                                                                                                               |
+| `color` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标的颜色。也可以是包含 `light` 和 `dark` 属性的对象                                                                                                                                                    |
+| `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
+| `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图片地址或包含 `light` 和 `dark` 模式的对象。                                                                                                                                                            |
+|  `alt`  |                   `string`                    | <Badge text="可选" /> 图片/图标的 `alt` 文本                                                                                                                                                                                   |
 
 ## Links
 
@@ -81,14 +83,15 @@ export default {
 
 ### 参数说明
 
-|  字段   |                     类型                      | 描述                                                                                                                                                                                                        |
-| :-----: | :-------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`  |                   `string`                    | DocLinks 名称。                                                                                                                                                                                             |
-| `desc`  |                   `string`                    | <Badge text="可选" /> DocLinks 描述信息。                                                                                                                                                                   |
-| `link`  |                   `string`                    | DocLinks 链接。                                                                                                                                                                                             |
-| `color` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标的颜色。也可以是包含 `light` 和 `dark` 属性的对象                                                                                                                                 |
-| `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
-| `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 支持单一图片地址或包含 `light` 和 `dark` 两种模式的对象。                                                                                                                             |
+|  字段   |                     类型                      | 描述                                                                                                                                                                                                                           |
+| :-----: | :-------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`  |                   `string`                    | DocLinks 名称。                                                                                                                                                                                                                |
+| `desc`  |                   `string`                    | <Badge text="可选" /> DocLinks 描述信息。                                                                                                                                                                                      |
+| `link`  |                   `string`                    | DocLinks 链接。                                                                                                                                                                                                                |
+| `color` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标的颜色。也可以是包含 `light` 和 `dark` 属性的对象                                                                                                                                                    |
+| `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
+| `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 支持单一图片地址或包含 `light` 和 `dark` 两种模式的对象。                                                                                                                                                |
+|  `alt`  |                   `string`                    | <Badge text="可选" /> 图片/图标的 `alt` 文本                                                                                                                                                                                   |
 
 ## BoxCube
 
@@ -102,12 +105,13 @@ export default {
 
 ## 参数说明
 
-|  字段   |                     类型                      | 描述                                                                                                                                                                                                        |
-| :-----: | :-------------------------------------------: | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`  |                   `string`                    | BoxCube 名称。                                                                                                                                                                                              |
-| `link`  |                   `string`                    | BoxCube 链接。                                                                                                                                                                                              |
-| `desc`  |                   `string`                    | <Badge text="可选" /> BoxCube 描述。                                                                                                                                                                        |
-|  `tag`  |                   `string`                    | <Badge text="可选" /> BoxCube 标签。                                                                                                                                                                        |
-| `color` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标的颜色。也可以是包含 `light` 和 `dark` 属性的对象                                                                                                                                 |
-| `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
-| `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 支持单一图片地址或包含 `light` 和 `dark` 模式的对象。                                                                                                                                 |
+|  字段   |                     类型                      | 描述                                                                                                                                                                                                                           |
+| :-----: | :-------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`  |                   `string`                    | BoxCube 名称。                                                                                                                                                                                                                 |
+| `link`  |                   `string`                    | BoxCube 链接。                                                                                                                                                                                                                 |
+| `desc`  |                   `string`                    | <Badge text="可选" /> BoxCube 描述。                                                                                                                                                                                           |
+|  `tag`  |                   `string`                    | <Badge text="可选" /> BoxCube 标签。                                                                                                                                                                                           |
+| `color` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标的颜色。也可以是包含 `light` 和 `dark` 属性的对象                                                                                                                                                    |
+| `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
+| `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 支持单一图片地址或包含 `light` 和 `dark` 模式的对象。                                                                                                                                                    |
+|  `alt`  |                   `string`                    | <Badge text="可选" /> 图片/图标的 `alt` 文本                                                                                                                                                                                   |

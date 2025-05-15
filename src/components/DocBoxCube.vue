@@ -28,7 +28,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             "
             :ssr="true"
             :inline="true"
-            :alt="boxcube.name"
+            :aria-label="boxcube.alt"
             width="38"
             height="38"
           />
@@ -43,7 +43,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             "
             :ssr="true"
             :inline="true"
-            :alt="boxcube.name"
+            :aria-label="boxcube.alt"
             width="38"
             height="38"
           />
@@ -54,7 +54,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             :color="typeof boxcube.color === 'string' ? boxcube.color : ''"
             :ssr="true"
             :inline="true"
-            :alt="boxcube.name"
+            :aria-label="boxcube.alt"
             width="38"
             height="38"
           />
@@ -64,7 +64,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             v-if="typeof boxcube.image === 'object'"
             class="light-only"
             :src="boxcube.image.light"
-            :alt="boxcube.name"
+            :alt="boxcube.alt"
             loading="lazy"
             decoding="async"
             width="38"
@@ -74,7 +74,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
             v-if="typeof boxcube.image === 'object'"
             class="dark-only"
             :src="boxcube.image.dark"
-            :alt="boxcube.name"
+            :alt="boxcube.alt"
             loading="lazy"
             decoding="async"
             width="38"
@@ -83,7 +83,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
           <img
             v-else
             :src="boxcube.image"
-            :alt="boxcube.name"
+            :alt="boxcube.alt"
             loading="lazy"
             decoding="async"
             width="38"
