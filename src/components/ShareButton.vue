@@ -25,7 +25,7 @@ const shareLink = useShareLink()
           :icon="ShareButton.buttonIcon || 'solar:share-bold'"
           :ssr="true"
           :inline="true"
-          alt="分享此页面的图标"
+          ariaLabel="分享此页面的图标"
           width="16"
           height="16"
         />
@@ -38,7 +38,7 @@ const shareLink = useShareLink()
           :icon="ShareButton.copiedIcon || 'mdi:thumbs-up'"
           :ssr="true"
           :inline="true"
-          alt="复制成功图标"
+          ariaLabel="复制成功图标"
           width="16"
           height="16"
         />

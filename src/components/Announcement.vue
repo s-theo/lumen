@@ -22,7 +22,7 @@ const prelink = usePrelink()
           :icon="prelink.dateIcon || 'line-md:calendar'"
           :ssr="true"
           :inline="true"
-          alt="date"
+          :aria-label="prelink.alt || 'date'"
         />
         <time v-html="prelink.dateText || '活动时间: 即日至'"> </time>
         <time class="date">{{ prelink.date }}</time>
