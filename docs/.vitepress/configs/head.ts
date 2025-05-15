@@ -4,10 +4,8 @@ export const head: HeadConfig[] = [
   ['link', { rel: 'icon', type: 'image/webp', href: '/Logo.webp' }],
   ['meta', { name: 'msapplication-TileColor', content: '#da532c' }],
   ['meta', { name: 'theme-color', content: '#ffffff' }],
-  ['meta', { name: 'author', content: 'Theo-Messi' }],
-  ['meta', { name: 'copyright', content: 'Theo-Messi' }],
-  ['meta', { name: 'robots', content: 'index, follow' }],
-  ['meta', { name: 'evisit-after', content: '1 day' }],
+  ['meta', { name: 'author', content: 'Theo' }],
+  ['meta', { name: 'copyright', content: 'Theo' }],
   [
     'meta',
     {
@@ -20,7 +18,7 @@ export const head: HeadConfig[] = [
     { name: 'keywords', content: 'Vue, VitePress, 插件, 功能组件, 主题美化' }
   ],
   ['meta', { property: 'og:type', content: 'website' }],
-  ['meta', { property: 'og:locale', content: 'zh-CN' }],
+  ['meta', { property: 'og:locale', content: 'zh-Hans' }],
   ['meta', { property: 'og:site_name', content: 'Lumen' }],
   ['meta', { property: 'og:title', content: 'Lumen - VitePress 插件库' }],
   ['meta', { property: 'og:url', content: 'https://lumen.theojs.cn/' }],
@@ -51,28 +49,11 @@ export const head: HeadConfig[] = [
     { name: 'twitter:image', content: 'https://lumen.theojs.cn/Logo.webp' }
   ],
   ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
-  ['link', { rel: 'canonical', href: 'https://lumen.theojs.cn/' }],
   [
-    'script',
+    'meta',
     {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        url: 'https://lumen.theojs.cn/',
-        name: '@theojs/lumen',
-        description: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件',
-        author: { '@type': 'Person', name: 'Theo-Messi' },
-        image: 'https://lumen.theojs.cn/Logo.webp',
-        publisher: {
-          '@type': 'Organization',
-          name: 'Theo-Messi',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://lumen.theojs.cn/Logo.webp'
-          }
-        }
-      })
+      name: 'google-site-verification',
+      content: 'bOXLe1lrqePxxyksBSbMgqbELMkTX9Q_FkyEuVwTobI'
     }
   ]
 ]
