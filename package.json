@@ -8,6 +8,7 @@
   "scripts": {
     "build": "pnpm -F=docs build",
     "change": "cd src && pnpm dlx changelogithub --dry",
+    "cz": "git-cz",
     "dev": "pnpm -F=docs dev",
     "format": "prettier --write .",
     "format:cheak": "prettier --check .",
@@ -22,8 +23,15 @@
       "prettier --write --ignore-unknown"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-vinyl"
+    }
+  },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "commitizen": "^4.3.1",
+    "cz-vinyl": "^2.5.4",
     "lint-staged": "^16.0.0",
     "prettier": "3.5.3",
     "prettier-plugin-css-order": "^2.1.2",
