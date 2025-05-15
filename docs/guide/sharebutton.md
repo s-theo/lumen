@@ -57,9 +57,9 @@ export default {
 
 ## 参数说明
 
-|    参数名    |   类型   |                                   默认值                                   | 描述                                                                                                                                                   |
-| :----------: | :------: | :------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `buttonIcon` | `string` | `solar:share-bold` : <iconify-icon icon="solar:share-bold"></iconify-icon> | 按钮图标的类名，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" />。             |
-| `buttonText` | `string` |                                `分享此页面`                                | 按钮显示的文本。                                                                                                                                       |
-| `copiedIcon` | `string` |    `mdi:thumbs-up` : <iconify-icon icon="mdi:thumbs-up"></iconify-icon>    | 复制成功后显示的图标的类名，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" />。 |
-| `copiedText` | `string` |                               `链接已复制!`                                | 复制成功后显示的文本。                                                                                                                                 |
+|    参数名    |   类型   |                                   默认值                                   | 描述                                                                                                                                                                      |
+| :----------: | :------: | :------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `buttonIcon` | `string` | `solar:share-bold` : <iconify-icon icon="solar:share-bold"></iconify-icon> | 按钮图标的类名，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />。             |
+| `buttonText` | `string` |                                `分享此页面`                                | 按钮显示的文本。                                                                                                                                                          |
+| `copiedIcon` | `string` |    `mdi:thumbs-up` : <iconify-icon icon="mdi:thumbs-up"></iconify-icon>    | 复制成功后显示的图标的类名，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />。 |
+| `copiedText` | `string` |                               `链接已复制!`                                | 复制成功后显示的文本。                                                                                                                                                    |
