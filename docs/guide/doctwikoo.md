@@ -15,7 +15,8 @@ head:
       name: '如何部署请查看 Twikoo 文档',
       image: 'https://twikoo.js.org/twikoo-logo-home.png',
       desc: '一个简洁、安全、免费的静态网站评论系统。',
-      link: 'https://twikoo.js.org/quick-start.html'
+      link: 'https://twikoo.js.org/quick-start.html',
+      alt: 'twikoo icon'
     }
   ]"
 />

@@ -23,7 +23,7 @@ const props = defineProps<{ items: LinkItem[] }>()
             "
             :ssr="true"
             :inline="true"
-            :alt="link.name"
+            :aria-label="link.alt"
             width="32"
             height="32"
           />
@@ -36,7 +36,7 @@ const props = defineProps<{ items: LinkItem[] }>()
             "
             :ssr="true"
             :inline="true"
-            :alt="link.name"
+            :aria-label="link.alt"
             width="32"
             height="32"
           />
@@ -47,7 +47,7 @@ const props = defineProps<{ items: LinkItem[] }>()
             :color="typeof link.color === 'string' ? link.color : ''"
             :ssr="true"
             :inline="true"
-            :alt="link.name"
+            :aria-label="link.alt"
             width="32"
             height="32"
           />
@@ -57,7 +57,7 @@ const props = defineProps<{ items: LinkItem[] }>()
             v-if="typeof link.image === 'object'"
             class="light-only"
             :src="link.image.light"
-            :alt="link.name"
+            :alt="link.alt"
             loading="lazy"
             decoding="async"
             width="32"
@@ -76,7 +76,7 @@ const props = defineProps<{ items: LinkItem[] }>()
           <img
             v-else
             :src="link.image"
-            :alt="link.name"
+            :alt="link.alt"
             loading="lazy"
             decoding="async"
             width="32"
@@ -86,7 +86,7 @@ const props = defineProps<{ items: LinkItem[] }>()
         <template v-else>
           <Icon
             class="default-icon"
-            alt="Default Icon"
+            aria-label="external link icon"
             icon="fa6-solid:arrow-up-right-from-square"
             width="24"
             height="24"

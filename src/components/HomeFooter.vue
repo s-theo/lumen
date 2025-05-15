@@ -29,7 +29,7 @@ onMounted(() => {
               :color="section.color"
               :ssr="true"
               :inline="true"
-              :alt="section.title"
+              :aria-label="section.alt"
               width="14"
               height="14"
             />&nbsp;
@@ -47,7 +47,7 @@ onMounted(() => {
               :color="link.color"
               :ssr="true"
               :inline="true"
-              :alt="link.name"
+              :aria-label="link.alt"
               width="14"
               height="14"
             />&nbsp;</template
@@ -66,7 +66,7 @@ onMounted(() => {
               icon="basil:arrow-up-outline"
               :ssr="true"
               :inline="true"
-              alt="External Link Icon"
+              aria-label="External Link Icon"
               width="14"
               height="14"
             />
@@ -81,7 +81,7 @@ onMounted(() => {
           <Icon
             v-if="footer.beian?.showIcon"
             class="info-icon"
-            alt="ICP备案"
+            :aria-label="footer.beian.icpalt"
             :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
             :ssr="true"
             :inline="true"
@@ -102,7 +102,7 @@ onMounted(() => {
           <Icon
             v-if="footer.beian?.showIcon"
             class="info-icon"
-            alt="公安备案"
+            :aria-label="footer.beian.policealt"
             :icon="
               footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'
             "
@@ -128,7 +128,7 @@ onMounted(() => {
         <p class="footer-infotext">
           <Icon
             class="info-icon"
-            alt="版权"
+            :aria-label="footer.author.alt"
             icon="ri:copyright-line"
             :ssr="true"
             :inline="true"
