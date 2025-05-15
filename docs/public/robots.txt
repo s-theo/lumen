@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://lumen.theojs.cn/sitemap.xml

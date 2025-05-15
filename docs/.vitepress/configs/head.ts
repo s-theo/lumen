@@ -6,8 +6,6 @@ export const head: HeadConfig[] = [
   ['meta', { name: 'theme-color', content: '#ffffff' }],
   ['meta', { name: 'author', content: 'Theo-Messi' }],
   ['meta', { name: 'copyright', content: 'Theo-Messi' }],
-  ['meta', { name: 'robots', content: 'index, follow' }],
-  ['meta', { name: 'evisit-after', content: '1 day' }],
   [
     'meta',
     {
@@ -51,7 +49,6 @@ export const head: HeadConfig[] = [
     { name: 'twitter:image', content: 'https://lumen.theojs.cn/Logo.webp' }
   ],
   ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
-  ['link', { rel: 'canonical', href: 'https://lumen.theojs.cn/' }],
   [
     'script',
     {
