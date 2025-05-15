@@ -29,7 +29,7 @@
     "directory": "src"
   },
   "license": "MIT",
-  "author": "Theo-Messi",
+  "author": "Theo",
   "exports": {
     ".": "./types/index.ts",
     "./theme": "./theme/all.css",

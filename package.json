@@ -4,7 +4,7 @@
   "homepage": "https://lumen.theojs.cn/",
   "repository": "Theo-Messi/lumen",
   "license": "MIT",
-  "author": "Theo-Messi",
+  "author": "Theo",
   "scripts": {
     "build": "pnpm -F=docs build",
     "change": "cd src && pnpm dlx changelogithub --dry",
