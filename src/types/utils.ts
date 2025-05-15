@@ -1,13 +1,20 @@
 import { useData, useRouter } from 'vitepress'
 
-import { ComputedRef, computed, nextTick, onMounted, ref } from 'vue'
+import {
+  ComputedRef,
+  computed,
+  nextTick,
+  onMounted,
+  onUnmounted,
+  ref
+} from 'vue'
 
-import { Prelink, VideoProps } from './types'
+import type { Prelink, VideoProps } from './types'
 
 /**
- * 从 `frontmatter` 中提取 `prelink` 信息。
+ * 提取 frontmatter 中 hero 配置的 `prelink` 属性。
  *
- * @returns 返回 `frontmatter` 中 `hero` 对象的 `prelink` 属性值，如果不存在则返回 `undefined`。
+ * @returns 一个包含 `Prelink` 对象或 `undefined` 的计算属性。
  */
 export const usePrelink = (): ComputedRef<Prelink | undefined> => {
   const { frontmatter } = useData()
@@ -15,78 +22,78 @@ export const usePrelink = (): ComputedRef<Prelink | undefined> => {
 }
 
 /**
- * 检查链接是否为外部链接。
+ * 判断链接是否为外部链接（以协议或 `//` 开头）。
  *
- * @param link - 要判断的链接字符串。
- * @returns 如果链接是外部链接，则返回 `true`，否则返回 `false`。
+ * @param link - 要检测的链接字符串。
+ * @returns 如果为外部链接返回 `true`，否则返回 `false`。
  */
 export const isExternal = (link: string): boolean =>
   /^(?:[a-z]+:|\/\/)/i.test(link)
 
 /**
- * 初始化 Twikoo 评论系统。
- *
- * 动态加载 Twikoo 并初始化评论系统。
+ * 初始化 Twikoo 评论系统（仅在浏览器中生效）。
  *
  * @param envId - Twikoo 的环境 ID。
- * @returns 无返回值的 Promise。
  */
 export const initTwikoo = async (envId: string): Promise<void> => {
+  if (typeof window === 'undefined') return
+
   try {
     const twikoo = await import('twikoo')
-    console.log('Twikoo 加载成功')
-    if (typeof window !== 'undefined') {
-      await nextTick() // 等待 DOM 更新
-      const twikooElement = document.querySelector('#twikoo')
-      if (twikooElement) {
-        twikoo.init({
-          envId,
-          el: '#twikoo'
-        })
-      } else {
-        console.error('未找到 Twikoo 元素。')
-      }
+    await nextTick()
+    const el = document.querySelector('#twikoo')
+    if (el) {
+      twikoo.init({ envId, el: '#twikoo' })
+    } else {
+      console.error('未找到 Twikoo 元素。')
     }
   } catch (error) {
     console.error('初始化 Twikoo 失败：', error)
   }
 }
 
-/**
- * 将指定的 DOM 元素移动到目标位置。
- *
- * 当组件挂载时，将 `.VPHero .text` 内部的内容替换为 `#hero-text` 的内容。
- */
-export const moveDomElements = () => {
-  onMounted(() => {
-    const targetElement = document.querySelector('.VPHero .text')
-    const sourceElement = document.querySelector('#hero-text')
+/** 将 `#hero-text` 的 DOM 节点插入至 `.VPHero .text` 中，并在组件卸载时还原。 */
+export const moveDomElements = (): void => {
+  let sourceElement: Element | null = null
+  let placeholder: Comment | null = null
 
-    if (targetElement && sourceElement) {
-      targetElement.innerHTML = ''
-      targetElement.appendChild(sourceElement)
+  onMounted(() => {
+    const target = document.querySelector('.VPHero .text')
+    sourceElement = document.querySelector('#hero-text')
+
+    if (target && sourceElement) {
+      placeholder = document.createComment('hero-text-placeholder')
+      sourceElement.before(placeholder)
+      target.innerHTML = ''
+      target.appendChild(sourceElement)
     }
+  })
+
+  onUnmounted(() => {
+    placeholder?.parentNode?.replaceChild(sourceElement, placeholder)
   })
 }
 
 /**
- * 创建一个用于复制链接的功能。
+ * 提供复制文本到剪贴板的功能，并显示复制状态。
  *
- * @returns 包含 `copied` 状态和 `copyLink` 函数的对象。
+ * @returns 包含 `copied` 状态和 `copyLink` 函数的组合对象。
  */
 export const useCopyLink = () => {
   const copied = ref(false)
 
   const copyLink = async (text: string) => {
     try {
+      if (!navigator.clipboard) {
+        alert('当前浏览器不支持自动复制，请手动复制。')
+        return
+      }
       await navigator.clipboard.writeText(text)
       copied.value = true
-      setTimeout(() => {
-        copied.value = false
-      }, 2000)
+      setTimeout(() => (copied.value = false), 2000)
     } catch (error) {
-      console.error('复制链接失败：', error)
-      alert('复制链接失败，请手动复制。')
+      console.error('复制失败:', error)
+      alert('复制失败，请手动复制。')
     }
   }
 
@@ -94,10 +101,9 @@ export const useCopyLink = () => {
 }
 
 /**
- * 视频平台配置 每个平台包含以下属性：
+ * 支持的视频平台播放器配置。
  *
- * - `src`: 返回视频嵌入链接的函数，接受视频的唯一标识符 `id` 作为参数。
- * - `title`: 视频播放器的名称。
+ * 每个平台提供一个 `src` 函数用于生成嵌入链接，以及播放器名称。
  */
 export const video = {
   bilibili: {
@@ -130,46 +136,35 @@ export const video = {
 }
 
 /**
- * 动态返回对应的视频配置或自定义链接。
+ * 获取对应视频平台的嵌入配置或自定义视频信息。
  *
- * @param VideoProps - 视频相关参数。
- * @returns 视频配置对象，包括 `src` 和 `title`。
+ * @param props - 视频参数，包括平台标识 `is`、视频 ID、以及自定义 `src`。
+ * @returns 视频播放器配置对象。
  */
 export const getVideo = (props: VideoProps) => {
-  /** 如果同时传递了 `is` 和 `id`，返回对应视频平台的配置。 */
   if (props.is && props.id) return video[props.is]
-
-  /** 如果只有 `id` 存在，则返回默认的 YouTube 视频配置。 */
   if (props.id) return video.youtube
-
-  /** 如果没有 `is` 和 `id`，且提供了自定义的 `src`，返回自定义视频配置。 如果 `src` 为空，则返回空链接。 */
   return { src: props.src || '', title: 'Custom video player' }
 }
 
 /**
- * 用于生成当前 VitePress 页面分享链接的工具函数。
+ * 基于当前路由生成页面分享链接。
  *
- * 使用 VitePress 的 `useRouter` 获取当前路由，并根据路径生成完整的分享链接。
- *
- * @returns 当前页面的分享链接。
+ * @returns 当前页面完整的分享链接。
  */
 export function useShareLink(): ComputedRef<string> {
   const router = useRouter()
   return computed(() => {
+    if (typeof window === 'undefined') return ''
     return `${window.location.origin}${router.route.path}`
   })
 }
 
 /**
- * 处理点击事件，执行复制操作或者跳转。
+ * 处理预设链接点击事件：支持跳转或复制内容。
  *
- * 当 `prelink.copy` 为 `true` 时，阻止默认行为并将 `prelink.install` 的内容复制到剪贴板。
- * 如果复制操作成功，则在控制台打印成功消息。如果失败，则打印错误信息。 如果 `prelink.copy` 为 `false`
- * 或未设置，函数不会执行复制操作，而是按正常流程进行跳转。
- *
- * @param event - 触发事件的鼠标事件对象。
- * @param prelink - 包含链接信息的 `Prelink` 对象。它包含了跳转链接、复制内容等信息。
- * @returns Void
+ * @param event - 鼠标点击事件。
+ * @param prelink - `Prelink` 对象，包含跳转链接、复制文本等字段。
  */
 export function handleClick(
   event: MouseEvent,
@@ -181,8 +176,14 @@ export function handleClick(
 
   if (prelink.copy) {
     event.preventDefault()
+
+    if (!navigator.clipboard) {
+      alert('当前浏览器不支持复制，请手动复制。')
+      return
+    }
+
     navigator.clipboard
-      .writeText(prelink.install)
+      .writeText(textToCopy)
       .then(() => {
         console.log('已复制到剪贴板:', textToCopy)
       })
