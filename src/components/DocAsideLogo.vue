@@ -27,7 +27,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               "
               :ssr="true"
               :inline="true"
-              :alt="aside.name"
+              :aria-label="aside.alt"
               width="24"
               height="24"
             />
@@ -42,7 +42,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :inline="true"
               width="24"
               height="24"
-              :alt="aside.name"
+              :aria-label="aside.alt"
             />
             <Icon
               v-else
@@ -51,7 +51,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               :color="typeof aside.color === 'string' ? aside.color : ''"
               :ssr="true"
               :inline="true"
-              :alt="aside.name"
+              :aria-label="aside.alt"
               width="24"
               height="24"
             />
@@ -61,7 +61,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               v-if="typeof aside.image === 'object'"
               class="icon light-only"
               :src="aside.image.light"
-              :alt="aside.name"
+              :alt="aside.alt"
               loading="lazy"
               decoding="async"
               width="24"
@@ -71,7 +71,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               v-if="typeof aside.image === 'object'"
               class="icon dark-only"
               :src="aside.image.dark"
-              :alt="aside.name"
+              :alt="aside.alt"
               loading="lazy"
               decoding="async"
               width="24"
@@ -81,7 +81,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
               v-else
               class="icon"
               :src="aside.image"
-              :alt="aside.name"
+              :alt="aside.alt"
               loading="lazy"
               decoding="async"
               width="24"

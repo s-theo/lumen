@@ -58,7 +58,7 @@ export default defineConfig({
 ```
 
 :::
-<Pill name="使用方法查看: https://iconify.design/docs/iconify-icon/" link="https://iconify.design/docs/iconify-icon/" icon="line-md:iconify2-static" color="#1769AA" />
+<Pill name="使用方法查看: https://iconify.design/docs/iconify-icon/" link="https://iconify.design/docs/iconify-icon/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />
 
 ```vue-html
 <iconify-icon icon="simple-icons:fontawesome"></iconify-icon>
@@ -97,7 +97,7 @@ export default DefaultTheme
 }
 ```
 
-查看<Pill name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/theme/components-var.css" icon="unjs:theme-colors" />内容来获取可以被覆盖的变量。
+查看<Pill name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/theme/components-var.css" icon="unjs:theme-colors" alt="iconify icon" />内容来获取可以被覆盖的变量。
 
 ## 示例
 
