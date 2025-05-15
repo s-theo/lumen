@@ -4,20 +4,30 @@ import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import llmstxt from 'vitepress-plugin-llms'
 
 import Lumenpkg from '../../src/package.json'
-import { head, markdown, nav, search, sidebar, socialLinks } from './configs'
+import {
+  head,
+  markdown,
+  nav,
+  search,
+  sidebar,
+  socialLinks,
+  transformPageData
+} from './configs'
 
 const Lumenversion = `v` + Lumenpkg.version
+const baseUrl = 'https://lumen.theojs.cn'
 
 export default defineConfig({
   title: 'Lumen',
   description: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件',
-  lang: 'zh-CN',
+  lang: 'zh-Hans',
   cleanUrls: true,
   metaChunk: true,
   lastUpdated: true,
-  sitemap: { hostname: 'https://lumen.theojs.cn' },
+  sitemap: { hostname: baseUrl },
   head,
   markdown,
+  transformPageData,
 
   vue: {
     template: {
