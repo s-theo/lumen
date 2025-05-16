@@ -49,6 +49,6 @@
 
 /* style the promo information */
 .promo-text {
-  color: var(--vp-c-brand-3);
-  font-weight: bold;
+  color: var(--promo-text-color);
+  font-weight: var(--promo-text-weight);
 }
