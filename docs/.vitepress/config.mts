@@ -15,7 +15,7 @@ export default defineConfig({
   cleanUrls: true,
   metaChunk: true,
   lastUpdated: true,
-  sitemap: { hostname: 'https://lumen.theojs.cn' },
+  sitemap: { hostname: 'https://lumen.theojs.cn/' },
   head,
   markdown,
 

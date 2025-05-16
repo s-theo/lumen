@@ -71,5 +71,12 @@ export const head: HeadConfig[] = [
         }
       })
     }
+  ],
+  [
+    'meta',
+    {
+      name: 'google-site-verification',
+      content: 'bOXLe1lrqePxxyksBSbMgqbELMkTX9Q_FkyEuVwTobI'
+    }
   ]
 ]
