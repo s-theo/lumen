@@ -7,15 +7,16 @@ import Lumenpkg from '../../src/package.json'
 import { head, markdown, nav, search, sidebar, socialLinks } from './configs'
 
 const Lumenversion = `v` + Lumenpkg.version
+const baseUrl = 'https://lumen.theojs.cn'
 
 export default defineConfig({
   title: 'Lumen',
   description: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件',
-  lang: 'zh-CN',
+  lang: 'zh-Hans',
   cleanUrls: true,
   metaChunk: true,
   lastUpdated: true,
-  sitemap: { hostname: 'https://lumen.theojs.cn/' },
+  sitemap: { hostname: baseUrl },
   head,
   markdown,
 
@@ -107,7 +108,7 @@ export default defineConfig({
 
   //添加 canonical URL
   transformPageData(pageData) {
-    const canonicalUrl = `https://lumen.theojs.cn/${pageData.relativePath}`
+    const canonicalUrl = `${baseUrl}/${pageData.relativePath}`
       .replace(/index\.md$/, '')
       .replace(/\.md$/, '')
 
@@ -116,5 +117,70 @@ export default defineConfig({
       'link',
       { rel: 'canonical', href: canonicalUrl }
     ])
+
+    // Json-LD
+    return {
+      frontmatter: {
+        ...pageData.frontmatter,
+        head: [
+          [
+            'script',
+            { type: 'application/ld+json' },
+            pageData.relativePath === 'index.md'
+              ? JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'WebSite',
+                  url: baseUrl + '/',
+                  inLanguage: 'zh-Hans',
+                  author: {
+                    '@type': 'Person',
+                    name: 'Theo',
+                    url: baseUrl
+                  },
+                  publisher: {
+                    '@type': 'Organization',
+                    name: 'Theo',
+                    logo: {
+                      '@type': 'ImageObject',
+                      url: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+                    }
+                  },
+                  description:
+                    '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件',
+                  name: 'Lumen'
+                })
+              : JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'BlogPosting',
+                  headline: pageData.frontmatter.title || '',
+                  inLanguage: 'zh-Hans',
+                  author: {
+                    '@type': 'Person',
+                    name: 'Theo',
+                    url: baseUrl
+                  },
+                  publisher: {
+                    '@type': 'Organization',
+                    name: 'Theo',
+                    logo: {
+                      '@type': 'ImageObject',
+                      url: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+                    }
+                  },
+                  mainEntityOfPage: {
+                    '@type': 'WebPage',
+                    '@id': `${baseUrl}/${pageData.relativePath
+                      .replace(/\.md$/, '')
+                      .replace(/\/index$/, '')}`
+                  },
+                  description: pageData.description,
+                  url: `${baseUrl}/${pageData.relativePath
+                    .replace(/\.md$/, '')
+                    .replace(/\/index$/, '')}`
+                })
+          ]
+        ]
+      }
+    }
   }
 })
