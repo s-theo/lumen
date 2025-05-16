@@ -47,7 +47,7 @@ hero:
   tagline: ✨ 集成 Vue 功能组件和主题美化的 VitePress 插件
   prelink: # [!code ++]
     title: '🎉 活动不停歇，青云梯四周年双旦特惠' # [!code ++]
-    content: '· 月/季/半年付85折 优惠码<span style="color: var(--vp-c-brand-3); font-weight: bold;"> qyt85 </span></br>· 年付以及年付以上8折 优惠码<span style="color: var(--vp-c-brand-3); font-weight: bold;"> qyt80</span></br>· 年付8折/2年付7折/3年付6折 配合优惠码折上折，最高可达<span style="color: var(--vp-c-brand-3); font-weight: bold;"> 48 </span>折' # [!code ++]
+    content: '· 月/季/半年付85折 优惠码<span class="promo-text"> qyt85 </span></br>· 年付以及年付以上8折 优惠码<span class="promo-text"> qyt80</span></br>· 年付8折/2年付7折/3年付6折 配合优惠码折上折，最高可达<span class="promo-text"> 48 </span>折' # [!code ++]
     date: '2025年1月7日23时59分' # [!code ++]
     dateIcon: 'mdi:calendar-star' # [!code ++]
     dateText: '活动截止日期' # [!code ++]
@@ -70,7 +70,7 @@ hero:
     copy: true # [!code ++]
     install: 'pnpm add @theojs/lumen' # [!code ++]
     title: '<iconify-icon class="i-mr" icon="fa6-solid:bolt" style="color:#63E6BE"></iconify-icon> 快速开始' # [!code ++]
-    content: '<span style="color: var(--vp-c-brand-3); font-weight: bold;">pnpm add @theojs/lumen</span>' # [!code ++]
+    content: '<span class="promo-text">pnpm add @theojs/lumen</span>' # [!code ++]
 ---
 ```
 

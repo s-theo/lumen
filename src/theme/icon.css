@@ -5,5 +5,5 @@ iconify-icon {
 
 /* right margin for Iconify icons */
 .i-mr {
-  margin-right: 0.25em;
+  margin-right: var(--i-mr);
 }

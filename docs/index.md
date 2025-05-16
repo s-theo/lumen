@@ -42,8 +42,8 @@ hero:
       text: 专线推荐
       link: https://doc.theojs.cn/serve/airport/qingyunti
 
-    - theme: sponsor
-      text: ✨ 成为赞助商
+    - theme: brand
+      text: ❤️ 成为赞助商
       link: https://i.theojs.cn/sponsor.webp
 
     - theme: custom-alt
