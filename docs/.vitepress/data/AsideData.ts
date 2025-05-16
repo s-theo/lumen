@@ -51,8 +51,8 @@ export const Aside_Data: AsideItem[] = [
   // alt: '飞兔云 Logo',
   //   promo: '飞兔云 双11 狂欢来袭！',
   //   info1:
-  //     '全场<span style="color: var(--vp-c-brand-3)"> 88 </span>折！全场<span style="color: var(--vp-c-brand-3)"> 88 </span>折！',
-  //   info2: '优惠码 <span style="color: var(--vp-c-brand-3)"> 1111@88 </span>全场打折'
+  //     '全场 <span class="promo-text"> 88 </span>折！全场 <span class="promo-text"> 88 </span>折！',
+  //   info2: '优惠码 <span class="promo-text"> 1111@88 </span>全场打折'
   // },
   // {
   //   link: 'https://itheo.top/qyt',

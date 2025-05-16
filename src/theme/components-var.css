@@ -5,13 +5,16 @@
 
   --iconify-defaultcolor: var(--vp-c-text-2);
   --component-bg: var(--vp-c-bg-alt);
+  --i-mr: 0.25em;
+  --promo-text-color: var(--vp-c-brand-1);
+  --promo-text-weight: bold;
 
   /**
   * Component: Announcement
   * -------------------------------------------------------------------------- */
   --Announcement-bg: var(--vp-button-alt-bg);
   --Announcement-border: transparent;
-  --Announcement-data: var(--vp-c-brand-3);
+  --Announcement-data: var(--vp-c-brand-1);
   --Announcement-bg-hover: var(--vp-c-brand-soft);
   --Announcement-border-hover: var(--vp-c-brand-soft);
   --Announcement-transform-hover: translateY(-1px);
