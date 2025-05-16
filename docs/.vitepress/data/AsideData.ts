@@ -3,7 +3,7 @@ import type { AsideItem } from '@theojs/lumen'
 export const Aside_Data: AsideItem[] = [
   {
     link: 'https://itheo.top/totoro',
-    image: 'https://i.theojs.cn/docs/20250419234613466.webp',
+    image: 'https://i.theojs.cn/logo/totoro.webp',
     alt: '龙猫云 Logo',
     promo: '龙猫云51大促-低至48折！',
     info1:
@@ -31,7 +31,7 @@ export const Aside_Data: AsideItem[] = [
   },
   {
     link: 'https://itheo.top/flyingbird',
-    image: 'https://i.theojs.cn/docs/202409111237242.webp',
+    image: 'https://i.theojs.cn/logo/flyingbird.webp',
     alt: 'FlyingBird Logo',
     promo: 'FlyingBird 五一活动开启咯',
     info1:
@@ -41,13 +41,13 @@ export const Aside_Data: AsideItem[] = [
   },
   // {
   //   link: 'https://itheo.top/totoro',
-  //   image: 'https://i.theojs.cn/docs/20250419234613466.webp',
+  //   image: 'https://i.theojs.cn/logo/totoro.webp',
   // alt: '龙猫云 Logo',
   //   promo: 'Totoro Cloud - 龙猫云'
   // },
   // {
   //   link: 'https://itheo.top/feitu',
-  //   image: 'https://飞兔.com/img/logo.png',
+  //   image: 'https://i.theojs.cn/logo/feitu.webp',
   // alt: '飞兔云 Logo',
   //   promo: '飞兔云 双11 狂欢来袭！',
   //   info1:
@@ -68,13 +68,13 @@ export const Aside_Data: AsideItem[] = [
   // },
   // {
   //   link: 'https://itheo.top/flyingbird',
-  //   image: 'https://i.theojs.cn/docs/202409111237242.webp',
+  //   image: 'https://i.theojs.cn/logo/flyingbird.webp',
   //  alt: 'FlyingBird Logo'
   //   promo: 'FlyingBird'
   // },
   {
     link: 'https://itheo.top/feitu',
-    image: 'https://飞兔.com/img/logo.png',
+    image: 'https://i.theojs.cn/logo/feitu.webp',
     alt: '飞兔云 Logo',
     promo: '飞兔云'
   },
