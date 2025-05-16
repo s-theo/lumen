@@ -1,7 +1,14 @@
 import type { HeadConfig } from 'vitepress'
 
 export const head: HeadConfig[] = [
-  ['link', { rel: 'icon', type: 'image/webp', href: '/Logo.webp' }],
+  [
+    'link',
+    {
+      rel: 'icon',
+      type: 'image/webp',
+      href: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+    }
+  ],
   ['meta', { name: 'msapplication-TileColor', content: '#da532c' }],
   ['meta', { name: 'theme-color', content: '#ffffff' }],
   ['meta', { name: 'author', content: 'Theo-Messi' }],
@@ -24,7 +31,10 @@ export const head: HeadConfig[] = [
   ['meta', { property: 'og:url', content: 'https://lumen.theojs.cn/' }],
   [
     'meta',
-    { property: 'og:image', content: 'https://lumen.theojs.cn/Logo.webp' }
+    {
+      property: 'og:image',
+      content: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+    }
   ],
   ['meta', { property: 'og:image:alt', content: 'Lumen Logo' }],
   [
@@ -46,7 +56,10 @@ export const head: HeadConfig[] = [
   ],
   [
     'meta',
-    { name: 'twitter:image', content: 'https://lumen.theojs.cn/Logo.webp' }
+    {
+      name: 'twitter:image',
+      content: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+    }
   ],
   ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
   [
@@ -60,13 +73,13 @@ export const head: HeadConfig[] = [
         name: '@theojs/lumen',
         description: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件',
         author: { '@type': 'Person', name: 'Theo-Messi' },
-        image: 'https://lumen.theojs.cn/Logo.webp',
+        image: 'https://i.theojs.cn/logo/Lumen-Logo.webp',
         publisher: {
           '@type': 'Organization',
           name: 'Theo-Messi',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://lumen.theojs.cn/Logo.webp'
+            url: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
           }
         }
       })

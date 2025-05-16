@@ -9,8 +9,12 @@ hero:
   tagline: ✨ 集成 Vue 功能组件和主题美化的 VitePress 插件
 
   image:
-    src: '/Logo.webp'
+    src: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
     alt: '@theojs/lumen'
+    loading: eager
+    fetchpriority: high
+    width: 320
+    height: 320
 
   prelink:
     # content: '<span class="promo-text" style="display: inline-flex; align-items: center"><img src="https://i.theojs.cn/logo/qyt.webp" style="height:0.65em; "/>IPLC纯专线内网传输线路 最高2.5Gbps速率!</span>'

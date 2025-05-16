@@ -47,7 +47,12 @@ export default defineConfig({
     siteTitle: `Lumen <code class="VPBadge tip">${Lumenversion}</code>`,
 
     // Logo
-    logo: { src: '/Logo.webp', width: 24, height: 24, alt: 'Lumen Logo' },
+    logo: {
+      src: 'https://i.theojs.cn/logo/Lumen-Logo.webp',
+      width: 24,
+      height: 24,
+      alt: 'Lumen Logo'
+    },
 
     // 修改链接
     editLink: {
