@@ -9,7 +9,7 @@ head:
       content: VitePress 图片描述 Markdown 图片标题 figcaption @mdit/plugin-figure @theojs/lumen 图片样式 CSS light/dark模式 明暗模式 图片配置 theojs VitePress插件 图片注解
 ---
 
-![效果图|300x0](/Logo.webp '效果图')
+![效果图|300x0](https://i.theojs.cn/logo/Lumen-Logo.webp '效果图')
 
 ## 安装 @mdit/plugin-figure 插件
 
@@ -70,7 +70,7 @@ import '@theojs/lumen/pic'
 ## 使用
 
 ```md
-![效果图](/Logo.webp)
+![效果图](https://i.theojs.cn/logo/Lumen-Logo.webp)
 
 ![浅色模式{.light-only}](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU)
 
@@ -81,7 +81,7 @@ import '@theojs/lumen/pic'
 ![浅色模式](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU#light)
 ```
 
-![效果图](/Logo.webp)
+![效果图](https://i.theojs.cn/logo/Lumen-Logo.webp)
 
 ![浅色模式{.light-only}](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU)
 
