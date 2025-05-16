@@ -1,7 +1,14 @@
 import type { HeadConfig } from 'vitepress'
 
 export const head: HeadConfig[] = [
-  ['link', { rel: 'icon', type: 'image/webp', href: '/Logo.webp' }],
+  [
+    'link',
+    {
+      rel: 'icon',
+      type: 'image/webp',
+      href: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+    }
+  ],
   ['meta', { name: 'msapplication-TileColor', content: '#da532c' }],
   ['meta', { name: 'theme-color', content: '#ffffff' }],
   ['meta', { name: 'author', content: 'Theo' }],
@@ -24,7 +31,10 @@ export const head: HeadConfig[] = [
   ['meta', { property: 'og:url', content: 'https://lumen.theojs.cn/' }],
   [
     'meta',
-    { property: 'og:image', content: 'https://lumen.theojs.cn/Logo.webp' }
+    {
+      property: 'og:image',
+      content: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+    }
   ],
   ['meta', { property: 'og:image:alt', content: 'Lumen Logo' }],
   [
@@ -46,16 +56,12 @@ export const head: HeadConfig[] = [
   ],
   [
     'meta',
-    { name: 'twitter:image', content: 'https://lumen.theojs.cn/Logo.webp' }
-  ],
-  ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
-  [
-    'meta',
     {
-      name: 'google-site-verification',
-      content: 'bOXLe1lrqePxxyksBSbMgqbELMkTX9Q_FkyEuVwTobI'
+      name: 'twitter:image',
+      content: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
     }
   ],
+  ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
   [
     'meta',
     {

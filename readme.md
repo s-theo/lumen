@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <img src="https://lumen.theojs.cn/Logo.webp" alt="@theojs/lumen" />
+    <img src="https://i.theojs.cn/logo/Lumen-Logo.webp" alt="@theojs/lumen" />
   </p>
   <p>
     <img
