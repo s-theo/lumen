@@ -9,12 +9,16 @@ head:
       content: VitePress 页脚配置 @theojs/lumen Lumen HomeFooter 自定义页脚 备案信息 作者信息 链接分组 网站底部 theojs VitePress插件 Iconify 网站信息
   - - meta
     - property: og:image
-      content: https://i.theojs.cn/docs/202411071146149.webp
+      content: https://i.theojs.cn/docs/homefooter-desktop-light.webp
 ---
 
-![桌面端效果图](https://i.theojs.cn/docs/202411071146149.webp)
+![桌面端效果图](https://i.theojs.cn/docs/homefooter-desktop-light.webp#light '桌面端效果图')
 
-![移动端效果图|300x0](https://i.theojs.cn/docs/202411071155536.webp '移动端效果图')
+![桌面端效果图](https://i.theojs.cn/docs/homefooter-desktop-dark.webp#dark '桌面端效果图')
+
+![移动端效果图|300x0](https://i.theojs.cn/docs/homefooter-mobile-light.webp#light '移动端效果图')
+
+![移动端效果图|300x0](https://i.theojs.cn/docs/homefooter-mobile-dark.webp#dark '移动端效果图')
 
 ## 创建数据
 
