@@ -2,6 +2,6 @@ import { defineConfig } from 'bumpp'
 
 export default defineConfig({
   tag: 'v%s',
-  commit: 'release: v%s',
+  commit: 'chore: release v%s',
   sign: true
 })
