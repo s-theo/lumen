@@ -5,7 +5,7 @@ const pill = defineProps<Pill>()
 </script>
 
 <template>
-  <section class="container">
+  <span class="container">
     <a
       class="link"
       :href="pill.link"
@@ -82,7 +82,7 @@ const pill = defineProps<Pill>()
       </template>
       <span class="name">{{ pill.name }}</span>
     </a>
-  </section>
+  </span>
 </template>
 
 <style scoped>
@@ -94,7 +94,7 @@ const pill = defineProps<Pill>()
   display: none;
 }
 
-section.container {
+span.container {
   all: unset;
   display: inline-flex;
   align-items: center;
