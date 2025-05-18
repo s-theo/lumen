@@ -58,7 +58,7 @@ export default defineConfig({
 
     // Logo
     logo: {
-      src: 'https://i.theojs.cn/logo/Lumen-Logo.webp',
+      src: 'https://i.theojs.cn/logo/Lumen-Logo-mini.webp',
       width: 24,
       height: 24,
       alt: 'Lumen Logo'
