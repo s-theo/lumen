@@ -295,59 +295,61 @@ console.log('Hello, VitePress!')
 ### 图片浅色与深色模式
 
 **输入**
-::: code-group
 
 ```md [深浅模式图片]
 <!-- 浅色模式 -->
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU){.light-only}
+![](https://i.theojs.cn/logo/github.svg){.light-only}
 
 <!-- 深色模式 -->
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHxR2C_q8ugOMQzSmMovD3ni-z1QqTopSjg&usqp=CAU){.dark-only}
+![](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
 
 <!-- 深色模式 -->
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHxR2C_q8ugOMQzSmMovD3ni-z1QqTopSjg&usqp=CAU#dark)
+![](https://i.theojs.cn/logo/github-dark.svg#dark)
 
 <!-- 浅色模式 -->
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU#light)
+![](https://i.theojs.cn/logo/github.svg#light)
 ```
 
-```md [带描述的深浅模式图片]
-![浅色模式{.light-only}](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU)
-
-![深色模式{.dark-only}](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHxR2C_q8ugOMQzSmMovD3ni-z1QqTopSjg&usqp=CAU)
-
-![深色模式](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHxR2C_q8ugOMQzSmMovD3ni-z1QqTopSjg&usqp=CAU#dark)
-
-![浅色模式](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU#light)
-```
-
-:::
 **输出**
 
 <!-- 浅色模式 -->
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU){.light-only}
+![](https://i.theojs.cn/logo/github.svg){.light-only}
 
 <!-- 深色模式 -->
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHxR2C_q8ugOMQzSmMovD3ni-z1QqTopSjg&usqp=CAU){.dark-only}
+![](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
 
 <!-- 深色模式 -->
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHxR2C_q8ugOMQzSmMovD3ni-z1QqTopSjg&usqp=CAU#dark)
+![](https://i.theojs.cn/logo/github-dark.svg#dark)
 
 <!-- 浅色模式 -->
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU#light)
+![](https://i.theojs.cn/logo/github.svg#light)
 
-![浅色模式{.light-only}](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU)
+<!-- 浅色模式 -->
 
-![深色模式{.dark-only}](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHxR2C_q8ugOMQzSmMovD3ni-z1QqTopSjg&usqp=CAU)
+```md [带描述的深浅模式图片]
+![浅色模式{.light-only}](https://i.theojs.cn/logo/github.svg)
 
-![深色模式](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCHxR2C_q8ugOMQzSmMovD3ni-z1QqTopSjg&usqp=CAU#dark)
+![深色模式{.dark-only}](https://i.theojs.cn/logo/github-dark.svg)
 
-![浅色模式](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-w7jYJD-PBaozaH5WdubTPnBdi-XcQ4N96w&usqp=CAU#light)
+![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
+
+![浅色模式](https://i.theojs.cn/logo/github.svg#light)
+```
+
+**输出**
+
+![浅色模式{.light-only}](https://i.theojs.cn/logo/github.svg)
+
+![深色模式{.dark-only}](https://i.theojs.cn/logo/github-dark.svg)
+
+![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
+
+![浅色模式](https://i.theojs.cn/logo/github.svg#light)
