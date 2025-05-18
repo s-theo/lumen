@@ -14,6 +14,23 @@ export const head: HeadConfig[] = [
   ['meta', { name: 'author', content: 'Theo' }],
   ['meta', { name: 'copyright', content: 'Theo' }],
   [
+    'link',
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon-96x96.png',
+      sizes: '96x96'
+    }
+  ],
+  ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+  ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
+  [
+    'link',
+    { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
+  ],
+  ['meta', { name: 'apple-mobile-web-app-title', content: 'Lumen' }],
+  ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+  [
     'meta',
     {
       name: 'description',
@@ -33,7 +50,7 @@ export const head: HeadConfig[] = [
     'meta',
     {
       property: 'og:image',
-      content: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+      content: 'https://i.theojs.cn/logo/Lumen-og.webp'
     }
   ],
   ['meta', { property: 'og:image:alt', content: 'Lumen Logo' }],
@@ -58,7 +75,7 @@ export const head: HeadConfig[] = [
     'meta',
     {
       name: 'twitter:image',
-      content: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+      content: 'https://i.theojs.cn/logo/Lumen-og.webp'
     }
   ],
   ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
