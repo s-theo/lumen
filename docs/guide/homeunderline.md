@@ -9,10 +9,12 @@ head:
       content: VitePress 首页下划线 @theojs/lumen Lumen HomeUnderline 动态下划线 首页美化 标题效果 主题插件 theojs VitePress插件 Hero美化 文本装饰
   - - meta
     - property: og:image
-      content: https://i.theojs.cn/docs/202411071153583.webp
+      content: https://i.theojs.cn/docs/homeunderline-light.webp
 ---
 
-![首页下划线 - 效果图](https://i.theojs.cn/docs/202411071153583.webp)
+![首页下划线 - 效果图](https://i.theojs.cn/docs/homeunderline-light.webp#light '首页下划线 - 效果图')
+
+![首页下划线 - 效果图](https://i.theojs.cn/docs/homeunderline-dark.webp#dark '首页下划线 - 效果图')
 
 ## 引入组件
 
