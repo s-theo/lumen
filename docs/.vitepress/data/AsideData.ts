@@ -86,7 +86,7 @@ export const Aside_Data: AsideItem[] = [
   },
   {
     link: 'https://doc.theojs.cn/',
-    image: 'https://i.theojs.cn/avatar.webp',
+    image: 'https://i.theojs.cn/logo/avatar-mini.webp',
     alt: 'Theo-Docs Logo',
     name: 'Theo-Docs',
     hide1: '流媒体观影',
@@ -94,7 +94,7 @@ export const Aside_Data: AsideItem[] = [
   },
   {
     link: 'https://xx.theojs.cn/',
-    image: 'https://i.theojs.cn/avatar.webp',
+    image: 'https://i.theojs.cn/logo/avatar-mini.webp',
     alt: '玄学宝典 Logo',
     name: '玄学宝典',
     hide1: '传世经典著作',
