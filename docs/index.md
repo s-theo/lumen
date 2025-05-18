@@ -104,7 +104,6 @@ features:
   - title: '<iconify-icon class="i-mr" icon="line-md:iconify2-static" style="color:#1769AA"></iconify-icon>Iconify 图标集成'
     details: 轻松集成 Iconify 图标库，提供上千种矢量图标，支持多种平台，丰富站点的视觉表现和交互体验。
     link: '/guide/theme#图标支持'
-
 ---
 
 <Home />

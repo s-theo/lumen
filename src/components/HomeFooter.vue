@@ -15,13 +15,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <footer class="footer" itemscope itemtype="https://schema.org/CreativeWork">
+  <footer class="footer">
     <div v-if="footer.group" class="list-container">
       <div
         v-for="(section, index) in footer.group || []"
         :key="section.title + index"
       >
-        <span class="list-title" itemprop="headline">
+        <span class="list-title">
           <template v-if="section.icon">
             <Icon
               class="iconify"
@@ -58,7 +58,6 @@ onMounted(() => {
             :target="isExternal(link.link) ? '_blank' : '_self'"
             rel="noreferrer"
             :aria-describedby="link.name ? link.name : null"
-            itemprop="url"
             >{{ link.name
             }}<Icon
               v-if="isExternal(link.link)"
@@ -92,7 +91,6 @@ onMounted(() => {
             title="ICP备案"
             target="_blank"
             rel="noreferrer"
-            itemprop="legalName"
           >
             {{ footer.beian.icp }}
           </a>
@@ -115,7 +113,6 @@ onMounted(() => {
             title="公安备案"
             target="_blank"
             rel="noreferrer"
-            itemprop="legalName"
           >
             {{ footer.beian.police }}
           </a>
