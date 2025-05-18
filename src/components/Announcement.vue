@@ -8,12 +8,12 @@ const prelink = usePrelink()
   <a
     v-if="prelink"
     class="prelink"
-    :href="prelink.copy ? 'javascript:void(0)' : prelink.link"
+    :href="prelink.copy ? undefined : prelink.link"
     :target="isExternal(prelink.link) ? '_blank' : '_self'"
     rel="noreferrer"
-    @click="handleClick($event, prelink)"
+    @click="(e) => handleClick(e, prelink)"
   >
-    <article ref="root" class="prelink-content">
+    <div class="prelink-content">
       <span class="title" v-html="prelink.title"></span>
       <p v-if="prelink.content" class="content" v-html="prelink.content"></p>
       <div v-if="prelink.date" class="time-info">
@@ -27,7 +27,7 @@ const prelink = usePrelink()
         <time v-html="prelink.dateText || '活动时间: 即日至'"> </time>
         <time class="date">{{ prelink.date }}</time>
       </div>
-    </article>
+    </div>
   </a>
 </template>
 

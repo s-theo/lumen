@@ -170,25 +170,27 @@ export function handleClick(
   event: MouseEvent,
   prelink: Prelink | undefined
 ): void {
-  if (!prelink) return
+  if (!prelink?.copy) return // 非复制操作，直接 return
 
-  const textToCopy = prelink.install || '没有提供可复制的内容'
+  event.preventDefault()
 
-  if (prelink.copy) {
-    event.preventDefault()
-
-    if (!navigator.clipboard) {
-      alert('当前浏览器不支持复制，请手动复制。')
-      return
-    }
-
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        console.log('已复制到剪贴板:', textToCopy)
-      })
-      .catch((err) => {
-        console.error('复制失败', err)
-      })
+  const textToCopy = prelink.install?.trim()
+  if (!textToCopy) {
+    alert('没有提供可复制的内容')
+    return
   }
+
+  if (!navigator.clipboard) {
+    alert('当前浏览器不支持复制，请手动复制。')
+    return
+  }
+
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(() => {
+      console.log('[Announcement] 已复制到剪贴板:', textToCopy)
+    })
+    .catch((err) => {
+      console.error('[Announcement] 复制失败:', err)
+    })
 }
