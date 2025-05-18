@@ -5,113 +5,97 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 </script>
 
 <template>
-  <aside>
-    <ul>
-      <li v-for="(aside, index) in props.Aside_Data" :key="index">
-        <a
-          class="link"
-          :class="{ 'has-promo': aside.promo, 'has-name': aside.name }"
-          :href="aside.link"
-          :target="isExternal(aside.link) ? '_blank' : '_self'"
-          rel="noreferrer"
-        >
-          <template v-if="aside.icon">
-            <Icon
-              v-if="typeof aside.icon === 'object'"
-              class="iconify light-only"
-              :icon="aside.icon.light"
-              :color="
-                typeof aside.color === 'object'
-                  ? aside.color.light
-                  : aside.color
-              "
-              :ssr="true"
-              :inline="true"
-              :aria-label="aside.alt"
-              width="24"
-              height="24"
-            />
-            <Icon
-              v-if="typeof aside.icon === 'object'"
-              class="iconify dark-only"
-              :icon="aside.icon.dark"
-              :color="
-                typeof aside.color === 'object' ? aside.color.dark : aside.color
-              "
-              :ssr="true"
-              :inline="true"
-              width="24"
-              height="24"
-              :aria-label="aside.alt"
-            />
-            <Icon
-              v-else
-              class="iconify"
-              :icon="aside.icon"
-              :color="typeof aside.color === 'string' ? aside.color : ''"
-              :ssr="true"
-              :inline="true"
-              :aria-label="aside.alt"
-              width="24"
-              height="24"
-            />
-          </template>
-          <template v-else-if="aside.image">
-            <img
-              v-if="typeof aside.image === 'object'"
-              class="icon light-only"
-              :src="aside.image.light"
-              :alt="aside.alt"
-              loading="lazy"
-              decoding="async"
-              width="24"
-              height="24"
-            />
-            <img
-              v-if="typeof aside.image === 'object'"
-              class="icon dark-only"
-              :src="aside.image.dark"
-              :alt="aside.alt"
-              loading="lazy"
-              decoding="async"
-              width="24"
-              height="24"
-            />
-            <img
-              v-else
-              class="icon"
-              :src="aside.image"
-              :alt="aside.alt"
-              loading="lazy"
-              decoding="async"
-              width="24"
-              height="24"
-            />
-          </template>
-          <span>
-            <template v-if="aside.promo">
-              <span class="promo" v-html="aside.promo"></span>
-            </template>
-            <template
-              v-if="
-                aside.hide1 ||
-                aside.info1 ||
-                aside.name ||
-                aside.hide2 ||
-                aside.info2
-              "
-            >
-              <p v-if="aside.hide1" class="hide" v-html="aside.hide1"></p>
-              <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
-              <span v-if="aside.name" class="name" v-html="aside.name"></span>
-              <p v-if="aside.hide2" class="hide" v-html="aside.hide2"></p>
-              <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
-            </template>
-          </span>
-        </a>
-      </li>
-    </ul>
-  </aside>
+  <div>
+    <a
+      v-for="(aside, index) in props.Aside_Data"
+      :key="index"
+      class="link"
+      :class="{ 'has-promo': aside.promo, 'has-name': aside.name }"
+      :href="aside.link"
+      :target="isExternal(aside.link) ? '_blank' : '_self'"
+      rel="noreferrer"
+    >
+      <template v-if="aside.icon">
+        <Icon
+          v-if="typeof aside.icon === 'object'"
+          class="iconify light-only"
+          :icon="aside.icon.light"
+          :color="
+            typeof aside.color === 'object' ? aside.color.light : aside.color
+          "
+          :ssr="true"
+          :inline="true"
+          :aria-label="aside.alt"
+          width="24"
+          height="24"
+        />
+        <Icon
+          v-if="typeof aside.icon === 'object'"
+          class="iconify dark-only"
+          :icon="aside.icon.dark"
+          :color="
+            typeof aside.color === 'object' ? aside.color.dark : aside.color
+          "
+          :ssr="true"
+          :inline="true"
+          width="24"
+          height="24"
+          :aria-label="aside.alt"
+        />
+        <Icon
+          v-else
+          class="iconify"
+          :icon="aside.icon"
+          :color="typeof aside.color === 'string' ? aside.color : ''"
+          :ssr="true"
+          :inline="true"
+          :aria-label="aside.alt"
+          width="24"
+          height="24"
+        />
+      </template>
+      <template v-else-if="aside.image">
+        <img
+          v-if="typeof aside.image === 'object'"
+          class="icon light-only"
+          :src="aside.image.light"
+          :alt="aside.alt"
+          loading="lazy"
+          decoding="async"
+          width="24"
+          height="24"
+        />
+        <img
+          v-if="typeof aside.image === 'object'"
+          class="icon dark-only"
+          :src="aside.image.dark"
+          :alt="aside.alt"
+          loading="lazy"
+          decoding="async"
+          width="24"
+          height="24"
+        />
+        <img
+          v-else
+          class="icon"
+          :src="aside.image"
+          :alt="aside.alt"
+          loading="lazy"
+          decoding="async"
+          width="24"
+          height="24"
+        />
+      </template>
+      <div>
+        <span class="promo" v-html="aside.promo"></span>
+        <p v-if="aside.hide1" class="hide" v-html="aside.hide1"></p>
+        <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
+        <span v-if="aside.name" class="name" v-html="aside.name"></span>
+        <p v-if="aside.hide2" class="hide" v-html="aside.hide2"></p>
+        <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
+      </div>
+    </a>
+  </div>
 </template>
 
 <style scoped>
