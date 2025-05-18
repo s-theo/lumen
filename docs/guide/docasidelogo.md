@@ -9,10 +9,12 @@ head:
       content: VitePress 侧边栏 侧边栏链接 自定义链接 DocAsideLogo @theojs/lumen Lumen Vue组件 主题插件 网站定制 推广信息 品牌Logo theojs VitePress插件 Iconify light/dark模式
   - - meta
     - property: og:image
-      content: https://i.theojs.cn/docs/202408081937401.webp
+      content: https://i.theojs.cn/docs/docasidelogo-light.webp
 ---
 
-![侧边栏 - 效果图|300x0](https://i.theojs.cn/docs/202408081937401.webp '侧边栏 - 效果图')
+![侧边栏 - 效果图|300x0](https://i.theojs.cn/docs/docasidelogo-light.webp#light '侧边栏 - 效果图')
+
+![侧边栏 - 效果图|300x0](https://i.theojs.cn/docs/docasidelogo-dark.webp#dark '侧边栏 - 效果图')
 
 ## 创建数据
 
