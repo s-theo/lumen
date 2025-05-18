@@ -9,10 +9,12 @@ head:
       content: VitePress 首页公告栏 公告栏 @theojs/lumen Lumen Vue组件 主题插件 网站首页 通知栏 活动推广 快速安装 theojs VitePress插件 首页定制
   - - meta
     - property: og:image
-      content: https://i.theojs.cn/docs/202411071152313.webp
+      content: https://i.theojs.cn/docs/announcement-light.webp
 ---
 
-![首页公告栏 - 效果图](https://i.theojs.cn/docs/202411071152313.webp)
+![首页公告栏 - 效果图|550x0](https://i.theojs.cn/docs/announcement-light.webp#light '首页公告栏 - 效果图')
+
+![首页公告栏 - 效果图|550x0](https://i.theojs.cn/docs/announcement-dark.webp#dark '首页公告栏 - 效果图')
 
 ## 引入组件
 
