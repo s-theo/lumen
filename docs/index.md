@@ -46,7 +46,7 @@ hero:
 
     - theme: alt
       text: 专线推荐
-      link: https://doc.theojs.cn/serve/airport/qingyunti
+      link: https://doc.theojs.cn/serve/airport/flyingbird
 
     - theme: brand
       text: ❤️ 成为赞助商
