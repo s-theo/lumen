@@ -13,7 +13,7 @@ head:
 
 - **支持多平台**：内置对 <Pill name="YouTube" icon="logos:youtube-icon" link="https://www.youtube.com/" alt="youtube icon" />
   <Pill name="Bilibili" icon="simple-icons:bilibili" color="#00A1D6" link="https://www.bilibili.com/" alt="bilibili icon" />
-  <Pill name="腾讯视频" image="https://vfiles.gtimg.cn/wuji_dashboard/xy/starter/4ea79867.png" link="https://v.qq.com/" alt="腾讯视频 icon" />
+  <Pill name="腾讯视频" image="https://v.qq.com/favicon.ico" link="https://v.qq.com/" alt="腾讯视频 icon" />
   <Pill name="优酷视频" image="https://img.alicdn.com/imgextra/i2/O1CN01BeAcgL1ywY0G5nSn8_!!6000000006643-2-tps-195-195.png" link="https://www.youku.com/" alt="优酷视频 icon" />
   <Pill name="西瓜视频" icon="icon-park-solid:xigua" color="#F4464B" link="https://www.ixigua.com/" alt="西瓜视频 icon" />
   <Pill name="Vimeo" icon="logos:vimeo-icon" link="https://vimeo.com" alt="vimeo icon"/>的支持，只需要提供平台标识符和视频 ID 即可。
