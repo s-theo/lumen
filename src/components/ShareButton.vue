@@ -22,14 +22,14 @@ const shareLink = useShareLink()
       <span v-if="!copied" class="buttonText">
         <Icon
           class="iconify"
-          :icon="ShareButton.buttonIcon || 'solar:share-bold'"
+          :icon="ShareButton.buttonIcon || 'solar:copy-bold'"
           :ssr="true"
           :inline="true"
-          ariaLabel="分享此页面的图标"
+          aria-label="复制链接的图标"
           width="16"
           height="16"
         />
-        {{ ShareButton.buttonText || '点击分享此页面' }}
+        {{ ShareButton.buttonText || '复制页面链接' }}
       </span>
 
       <span v-else class="copiedText">
@@ -38,7 +38,7 @@ const shareLink = useShareLink()
           :icon="ShareButton.copiedIcon || 'mdi:thumbs-up'"
           :ssr="true"
           :inline="true"
-          ariaLabel="复制成功图标"
+          aria-label="复制成功图标"
           width="16"
           height="16"
         />
