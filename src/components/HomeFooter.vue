@@ -87,7 +87,7 @@ onMounted(() => {
             width="12"
             height="12"
           />&nbsp;<a
-            href="https://beian.miit.gov.cn/"
+            href="https://beian.miit.gov.cn/#/Integrated/index"
             title="ICP备案"
             target="_blank"
             rel="noreferrer"
