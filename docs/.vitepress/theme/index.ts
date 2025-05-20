@@ -34,10 +34,12 @@ export default {
     })
   },
   enhanceApp: ({ app }) => {
-    umamiAnalytics({
-      id: 'dbfb86cd-e9ff-4078-82e3-b2bad334d47f',
-      src: 'https://u.theojs.cn/script.js'
-    })
+    if ((import.meta as any).env.PROD) {
+      umamiAnalytics({
+        id: (import.meta as any).env.VITE_UMAMI_ID,
+        src: (import.meta as any).env.VITE_UMAMI_SRC
+      })
+    }
     app.component('Box', DocBox)
     app.component('Pill', DocPill)
     app.component('Links', DocLinks)
