@@ -1,5 +1,5 @@
 ---
-title: 页面分享按钮
+title: 页面分享按钮组件 - ShareButton
 head:
   - - meta
     - name: description
@@ -8,6 +8,8 @@ head:
     - name: keywords
       content: VitePress 页面分享 分享按钮 @theojs/lumen Lumen ShareButton 复制链接 剪贴板 Iconify theojs VitePress插件 社交分享 链接分享 用户体验
 ---
+
+# 页面分享按钮组件 - ShareButton
 
 ## 引入组件
 

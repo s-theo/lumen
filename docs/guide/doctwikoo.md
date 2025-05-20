@@ -1,5 +1,5 @@
 ---
-title: Twikoo 评论
+title: Twikoo 评论组件 - Twikoo
 head:
   - - meta
     - name: description
@@ -8,6 +8,8 @@ head:
     - name: keywords
       content: VitePress Twikoo 评论系统 @theojs/lumen Lumen Vue组件 主题插件 静态网站评论 博客评论 theojs VitePress插件 评论集成 互动评论
 ---
+
+# Twikoo 评论组件 - Twikoo
 
 <Links
   :items="[
