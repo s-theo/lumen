@@ -1,5 +1,5 @@
 ---
-title: 首页下划线
+title: 首页下划线组件 - HomeUnderline
 head:
   - - meta
     - name: description
@@ -11,6 +11,8 @@ head:
     - property: og:image
       content: https://i.theojs.cn/docs/homeunderline-light.webp
 ---
+
+# 首页下划线组件 - HomeUnderline
 
 ![首页下划线 - 效果图](https://i.theojs.cn/docs/homeunderline-light.webp#light '首页下划线 - 效果图')
 

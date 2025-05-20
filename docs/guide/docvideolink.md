@@ -1,5 +1,5 @@
 ---
-title: 视频组件
+title: 视频组件 - DocVideoLink
 head:
   - - meta
     - name: description
@@ -8,6 +8,8 @@ head:
     - name: keywords
       content: VitePress 视频组件 @theojs/lumen Lumen DocVideoLink Vid 嵌入视频 YouTube Bilibili 腾讯视频 优酷 西瓜视频 Vimeo 响应式视频 theojs VitePress插件 多平台视频 自定义视频
 ---
+
+# 视频组件 - DocVideoLink
 
 支持多种主流视频平台，还允许用户通过自定义链接嵌入其他视频源。通过简单的配置，可以轻松将各种视频嵌入到您的页面中，提升用户的观看体验。
 
@@ -69,7 +71,7 @@ vimeo 视频
 
 ### 其他平台视频
 
-```vue
+```vue-html
 <Vid src="https://geo.dailymotion.com/player.html?video=x7z0ovx" />
 <Vid
   src="https://download.blender.org/durian/trailer/sintel_trailer-720p.mp4"

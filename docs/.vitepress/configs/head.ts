@@ -85,5 +85,13 @@ export const head: HeadConfig[] = [
       name: 'google-site-verification',
       content: 'bOXLe1lrqePxxyksBSbMgqbELMkTX9Q_FkyEuVwTobI'
     }
+  ],
+  [
+    'meta',
+    {
+      name: 'robots',
+      content:
+        'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
+    }
   ]
 ]

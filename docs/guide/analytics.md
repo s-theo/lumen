@@ -1,5 +1,5 @@
 ---
-title: 站点统计
+title: 站点统计组件 - Analytics
 head:
   - - meta
     - name: description
@@ -9,9 +9,11 @@ head:
       content: VitePress 站点统计 谷歌分析 Google Analytics 百度统计 Baidu Analytics Umami Analytics 网站分析 数据追踪 @theojs/lumen 插件 流量统计 网站集成 theojs
 ---
 
+# 站点统计组件
+
 该插件集成了三种常见的站点统计工具：**谷歌分析 (Google Analytics)**、**百度统计 (Baidu Analytics)** 和 **Umami Analytics**，让你可以轻松地在 VitePress 网站中集成并管理这些分析工具。无论是谷歌分析的强大功能，还是百度统计对中国市场的适配，或者是 Umami 的隐私友好型方案，都可以通过这个插件快速集成并使用。
 
-## 谷歌分析
+## 谷歌分析 - googleAnalytics
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
@@ -40,7 +42,7 @@ export default {
 
 **参考链接：**[Google Analytics 帮助文档](https://support.google.com/analytics/answer/9304153?hl=zh-Hans)
 
-## 百度统计
+## 百度统计 - baiduAnalytics
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
@@ -70,7 +72,7 @@ export default {
 
 **参考链接：** [百度统计官方文档](https://tongji.baidu.com/web/help/article?id=175&type=0)
 
-## Umami
+## Umami - umamiAnalytics
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'

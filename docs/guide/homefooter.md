@@ -1,5 +1,5 @@
 ---
-title: 页脚配置
+title: 页脚组件 - HomeFooter
 head:
   - - meta
     - name: description
@@ -11,6 +11,8 @@ head:
     - property: og:image
       content: https://i.theojs.cn/docs/homefooter-desktop-light.webp
 ---
+
+# 页脚组件 - HomeFooter
 
 ![桌面端效果图](https://i.theojs.cn/docs/homefooter-desktop-light.webp#light '桌面端效果图')
 
