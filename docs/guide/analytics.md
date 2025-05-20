@@ -75,12 +75,16 @@ export default {
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
-import { umamiAnalytics } from '@theojs/lumen' // [!code ++]
+import { umamiAnalytics } from '@theojs/lumen'// [!code ++]
 
 export default {
   ...DefaultTheme,
   enhanceApp: ({ app }) => {
-    umamiAnalytics({ id: '***-***-***-***', src: 'https://*******' }) // [!code ++]
+    umamiAnalytics({// [!code ++]
+      id: '***-***-***-***',// [!code ++]
+      src: 'https://*******',// [!code ++]
+      domains: 'your.domain.com'// [!code ++] 详细信息查看 https://umami.is/docs/tracker-configuration#data-domains
+    }) // [!code ++]
   }
   ...
 }
