@@ -7,6 +7,7 @@ declare global {
 export interface Umami {
   id: string
   src: string
+  domains?: string
 }
 
 export type UmamiOption = Umami | Umami[]
@@ -38,6 +39,9 @@ function mountUmami(options: UmamiOption) {
     script.async = true
     script.defer = true
     script.setAttribute('data-website-id', property.id)
+    if (property.domains) {
+      script.setAttribute('data-domains', property.domains)
+    }
     script.src = property.src
     document.head.appendChild(script)
   }
