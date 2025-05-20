@@ -1,5 +1,5 @@
 ---
-title: 链接卡片
+title: 链接卡片组件
 head:
   - - meta
     - name: description
@@ -8,6 +8,8 @@ head:
     - name: keywords
       content: VitePress 链接卡片 @theojs/lumen Lumen DocBox DocPill DocLinks DocBoxCube UI组件 Vue组件 卡片组件 信息展示 Iconify theojs VitePress插件 light/dark模式 自定义链接
 ---
+
+# 链接卡片组件
 
 ## 引入组件
 
