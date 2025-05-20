@@ -1,5 +1,5 @@
 ---
-title: 侧边栏链接
+title: 侧边栏链接组件 - DocAsideLogo
 head:
   - - meta
     - name: description
@@ -11,6 +11,8 @@ head:
     - property: og:image
       content: https://i.theojs.cn/docs/docasidelogo-light.webp
 ---
+
+# 侧边栏链接组件 - DocAsideLogo
 
 ![侧边栏 - 效果图|300x0](https://i.theojs.cn/docs/docasidelogo-light.webp#light '侧边栏 - 效果图')
 

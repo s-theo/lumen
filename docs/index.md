@@ -53,6 +53,10 @@ hero:
       link: https://i.theojs.cn/sponsor.webp
 
     - theme: custom-alt
+      text: Theo-Docs
+      link: https://doc.theojs.cn
+
+    - theme: custom-alt
       text: 玄学宝典
       link: https://xx.theojs.cn
 
@@ -67,7 +71,7 @@ features:
 
   - title: '<iconify-icon class="i-mr" icon="heroicons:paint-brush-solid" style="color:#3498db"></iconify-icon>首页下划线'
     details: 实现页面元素的下划线动画，增加视觉层次感和动感效果。
-    link: '/guide/homeUnderline'
+    link: '/guide/homeunderline'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons-solid:template" style="color:#2ecc71"></iconify-icon>页脚配置'
     details: 灵活自定义页脚内容，展示版权信息、链接分组等，增强站点的专业感。

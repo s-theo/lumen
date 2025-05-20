@@ -1,5 +1,5 @@
 ---
-title: 图片描述
+title: 图片描述 - Markdown 图片标题
 head:
   - - meta
     - name: description
@@ -8,6 +8,8 @@ head:
     - name: keywords
       content: VitePress 图片描述 Markdown 图片标题 figcaption @mdit/plugin-figure @theojs/lumen 图片样式 CSS light/dark模式 明暗模式 图片配置 theojs VitePress插件 图片注解
 ---
+
+# 图片描述 - Markdown 图片标题
 
 ![效果图|300x0](https://i.theojs.cn/logo/Lumen-Logo.webp '效果图')
 

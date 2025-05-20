@@ -1,5 +1,5 @@
 ---
-title: 主题配置文件
+title: 配置主题
 head:
   - - meta
     - name: description
@@ -8,6 +8,8 @@ head:
     - name: keywords
       content: VitePress 主题配置 @theojs/lumen Lumen CSS导入 Iconify 自定义CSS CSS变量 容器样式 徽章 明暗模式 light/dark模式 theojs VitePress插件 主题美化 UI组件 样式定制
 ---
+
+# 配置主题
 
 ::: code-group
 
@@ -296,45 +298,7 @@ console.log('Hello, VitePress!')
 
 **输入**
 
-```md [深浅模式图片]
-<!-- 浅色模式 -->
-
-![](https://i.theojs.cn/logo/github.svg){.light-only}
-
-<!-- 深色模式 -->
-
-![](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
-
-<!-- 深色模式 -->
-
-![](https://i.theojs.cn/logo/github-dark.svg#dark)
-
-<!-- 浅色模式 -->
-
-![](https://i.theojs.cn/logo/github.svg#light)
-```
-
-**输出**
-
-<!-- 浅色模式 -->
-
-![](https://i.theojs.cn/logo/github.svg){.light-only}
-
-<!-- 深色模式 -->
-
-![](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
-
-<!-- 深色模式 -->
-
-![](https://i.theojs.cn/logo/github-dark.svg#dark)
-
-<!-- 浅色模式 -->
-
-![](https://i.theojs.cn/logo/github.svg#light)
-
-<!-- 浅色模式 -->
-
-```md [带描述的深浅模式图片]
+```md
 ![浅色模式{.light-only}](https://i.theojs.cn/logo/github.svg)
 
 ![深色模式{.dark-only}](https://i.theojs.cn/logo/github-dark.svg)

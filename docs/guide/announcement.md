@@ -1,5 +1,5 @@
 ---
-title: 首页公告栏
+title: 首页公告栏组件 - Announcement
 head:
   - - meta
     - name: description
@@ -11,6 +11,8 @@ head:
     - property: og:image
       content: https://i.theojs.cn/docs/announcement-light.webp
 ---
+
+# 首页公告栏组件 - Announcement
 
 ![首页公告栏 - 效果图|550x0](https://i.theojs.cn/docs/announcement-light.webp#light '首页公告栏 - 效果图')
 

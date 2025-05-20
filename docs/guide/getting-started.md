@@ -9,6 +9,8 @@ head:
       content: '@theojs/lumen 快速开始 安装教程 VitePress 主题插件 Vue组件 功能模块 pnpm npm yarn 导入主题 首页公告栏 侧边栏链接 视频组件 Twikoo评论 站点统计 theojs Lumen'
 ---
 
+# 快速开始
+
 ## 安装
 
 ::: code-group
@@ -27,7 +29,7 @@ yarn add @theojs/lumen
 
 :::
 
-## 快速开始
+## 页面导航
 
 <BoxCube
   :items="[
@@ -40,63 +42,63 @@ yarn add @theojs/lumen
     },
     {
       name: '首页公告栏',
-      link: 'Announcement',
+      link: 'announcement',
       icon: 'heroicons-solid:megaphone',
       color: '#e74c3c',
       alt: '首页公告栏图标'
     },
     {
       name: '首页下划线',
-      link: 'HomeUnderline',
+      link: 'homeunderline',
       icon: 'heroicons:paint-brush-solid',
       color: '#3498db',
       alt: '首页下划线图标'
     },
     {
-      name: '侧边栏链接',
-      link: 'HomeFooter',
+      name: '页脚配置',
+      link: 'homefooter',
       icon: 'heroicons-solid:template',
       color: '#2ecc71',
-      alt: '侧边栏链接图标'
+      alt: '页脚配置图标'
     },
     {
       name: '侧边栏链接',
-      link: 'DocAsideLogo',
+      link: 'docasidelogo',
       icon: 'heroicons:bars-3-16-solid',
       color: '#9b59b6',
       alt: '侧边栏链接图标'
     },
     {
       name: '视频组件',
-      link: 'DocVideoLink',
+      link: 'docvideolink',
       icon: 'heroicons-solid:video-camera',
       color: '#f39c12',
       alt: '视频组件图标'
     },
     {
       name: '链接卡片',
-      link: 'LinkCard',
+      link: 'linkcard',
       icon: 'heroicons-solid:rectangle-group',
       color: '#1abc9c',
       alt: '链接卡片图标'
     },
     {
       name: '页面分享按钮',
-      link: 'ShareButton',
+      link: 'sharebutton',
       icon: 'heroicons-solid:share',
       color: '#007bff',
       alt: '页面分享按钮图标'
     },
     {
       name: '图片描述',
-      link: 'Image-description',
+      link: 'image-description',
       icon: 'heroicons-solid:photo',
       color: '#2ecc71',
       alt: '图片描述图标'
     },
     {
       name: 'Twikoo 评论',
-      link: 'DocTwikoo',
+      link: 'doctwikoo',
       icon: 'heroicons-solid:chat',
       color: '#3498db',
       alt: 'Twikoo 评论图标'
