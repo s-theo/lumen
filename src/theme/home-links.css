@@ -1,64 +1,76 @@
 /**
  * Component: home-links
  * -------------------------------------------------------------------------- */
-a.custom-brand {
+
+a.custom-brand,
+a.custom-brand-lumen {
   border-color: var(--vp-button-brand-border);
   background-color: var(--vp-button-brand-bg);
   color: var(--vp-button-brand-text);
 }
 
-a.custom-brand:hover {
+a.custom-brand:hover,
+a.custom-brand-lumen:hover {
   border-color: var(--vp-button-brand-hover-border);
   background-color: var(--vp-button-brand-hover-bg);
   color: var(--vp-button-brand-hover-text);
 }
 
-a.custom-brand:active {
+a.custom-brand:active,
+a.custom-brand-lumen:active {
   border-color: var(--vp-button-brand-active-border);
   background-color: var(--vp-button-brand-active-bg);
   color: var(--vp-button-brand-active-text);
 }
 
-a.custom-brand::before {
-  display: inline-block;
-  transform: translateY(7px);
-  margin-right: 0.5em;
-  background-image: var(--Home-links-custom-brand);
-  background-position: bottom;
-  background-size: 24px;
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 24px;
-  content: '';
-}
-
-a.custom-alt {
+a.custom-alt,
+a.custom-alt-lumen {
   border-color: var(--vp-button-alt-border);
   background-color: var(--vp-button-alt-bg);
   color: var(--vp-button-alt-text);
 }
 
-a.custom-alt:hover {
+a.custom-alt:hover,
+a.custom-alt-lumen:hover {
   border-color: var(--vp-button-alt-hover-border);
   background-color: var(--vp-button-alt-hover-bg);
   color: var(--vp-button-alt-hover-text);
 }
 
-a.custom-alt:active {
+a.custom-alt:active,
+a.custom-alt-lumen:active {
   border-color: var(--vp-button-alt-active-border);
   background-color: var(--vp-button-alt-active-bg);
   color: var(--vp-button-alt-active-text);
 }
 
-a.custom-alt::before {
+a.custom-brand::before,
+a.custom-brand-lumen::before,
+a.custom-alt::before,
+a.custom-alt-lumen::before {
   display: inline-block;
   transform: translateY(7px);
   margin-right: 0.5em;
-  background-image: var(--Home-links-custom-alt);
   background-position: bottom;
   background-size: 24px;
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
   content: '';
+}
+
+a.custom-brand::before {
+  background-image: var(--Home-links-custom-brand);
+}
+
+a.custom-brand-lumen::before {
+  background-image: var(--Home-links-custom-brand-lumen);
+}
+
+a.custom-alt::before {
+  background-image: var(--Home-links-custom-alt);
+}
+
+a.custom-alt-lumen::before {
+  background-image: var(--Home-links-custom-alt-lumen);
 }
