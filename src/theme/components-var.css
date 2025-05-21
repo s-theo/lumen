@@ -146,6 +146,8 @@
 
   --Home-links-custom-brand: url('https://i.theojs.cn/logo/avatar-mini.webp');
   --Home-links-custom-alt: url('https://i.theojs.cn/logo/avatar-mini.webp');
+  --Home-links-custom-brand-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
+  --Home-links-custom-alt-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
 }
 
 .dark {
