@@ -13,7 +13,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       :class="{ 'has-promo': aside.promo, 'has-name': aside.name }"
       :href="aside.link"
       :target="isExternal(aside.link) ? '_blank' : '_self'"
-      rel="noreferrer"
+      :rel="isExternal(aside.link) ? 'noreferrer' : undefined"
     >
       <template v-if="aside.icon">
         <Icon
