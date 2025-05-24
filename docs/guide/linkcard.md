@@ -51,6 +51,7 @@ export default {
 | `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
 | `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图片地址或包含 `light` 和 `dark` 模式的对象。                                                                                                                                                            |
 |  `alt`  |                   `string`                    | <Badge text="可选" /> 图片/图标的 `alt` 文本                                                                                                                                                                                   |
+|  `rel`  |                   `string`                    | <Badge text="可选" /> 链接的 `rel` 属性。                                                                                                                                                                                      |
 
 ## Pill
 
@@ -72,6 +73,7 @@ export default {
 | `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
 | `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图片地址或包含 `light` 和 `dark` 模式的对象。                                                                                                                                                            |
 |  `alt`  |                   `string`                    | <Badge text="可选" /> 图片/图标的 `alt` 文本                                                                                                                                                                                   |
+|  `rel`  |                   `string`                    | <Badge text="可选" /> 链接的 `rel` 属性。                                                                                                                                                                                      |
 
 ## Links
 
@@ -94,6 +96,7 @@ export default {
 | `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
 | `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 支持单一图片地址或包含 `light` 和 `dark` 两种模式的对象。                                                                                                                                                |
 |  `alt`  |                   `string`                    | <Badge text="可选" /> 图片/图标的 `alt` 文本                                                                                                                                                                                   |
+|  `rel`  |                   `string`                    | <Badge text="可选" /> 链接的 `rel` 属性。                                                                                                                                                                                      |
 
 ## BoxCube
 
@@ -117,3 +120,4 @@ export default {
 | `icon`  | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
 | `image` | `string` \| `{ light: string; dark: string }` | <Badge text="可选" /> 支持单一图片地址或包含 `light` 和 `dark` 模式的对象。                                                                                                                                                    |
 |  `alt`  |                   `string`                    | <Badge text="可选" /> 图片/图标的 `alt` 文本                                                                                                                                                                                   |
+|  `rel`  |                   `string`                    | <Badge text="可选" /> 链接的 `rel` 属性。                                                                                                                                                                                      |

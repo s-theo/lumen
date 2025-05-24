@@ -12,7 +12,7 @@ const props = defineProps<{ items: LinkItem[] }>()
       class="link"
       :href="link.link"
       :target="isExternal(link.link) ? '_blank' : '_self'"
-      :rel="isExternal(link.link) ? 'noreferrer' : undefined"
+      :rel="link.rel || (isExternal(link.link) ? 'noreferrer' : undefined)"
     >
       <template v-if="link.icon">
         <Icon

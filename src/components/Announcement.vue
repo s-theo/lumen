@@ -10,7 +10,7 @@ const prelink = usePrelink()
     class="prelink"
     :href="prelink.copy ? undefined : prelink.link"
     :target="isExternal(prelink.link) ? '_blank' : '_self'"
-    :rel="isExternal(prelink.link) ? 'noreferrer' : undefined"
+    :rel="prelink.rel || (isExternal(prelink.link) ? 'noreferrer' : undefined)"
     @click="(e) => handleClick(e, prelink)"
   >
     <div class="prelink-content">
