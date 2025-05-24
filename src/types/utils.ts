@@ -133,10 +133,6 @@ export const video = {
   vimeo: {
     src: (id: VideoProps['id']) => `https://player.vimeo.com/video/${id}`,
     title: 'Vimeo video player'
-  },
-  xigua: {
-    src: (id: VideoProps['id']) => `https://www.ixigua.com/iframe/${id}`,
-    title: 'XiGua video player'
   }
 }
 
