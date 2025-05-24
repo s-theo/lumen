@@ -21,15 +21,20 @@ export const usePrelink = (): ComputedRef<Prelink | undefined> => {
   return computed(() => frontmatter.value.hero?.prelink)
 }
 
-/**
- * 判断链接是否为外部链接（以协议或 `//` 开头）。
- *
- * @param link - 要检测的链接字符串。
- * @returns 如果为外部链接返回 `true`，否则返回 `false`。
- */
-export const isExternal = (link: string): boolean =>
-  /^(?:[a-z]+:|\/\/)/i.test(link)
+/** 正则表达式：匹配外部链接。 规则：以协议（如 http:, https:, mailto: 等）或 `//` 开头。 */
+export const EXTERNAL_URL_RE = /^(?:[a-z]+:|\/\/)/i
 
+/**
+ * 判断给定路径是否为外部链接。
+ *
+ * 外部链接指以协议（如 `http:`, `mailto:`）或 `//` 开头的 URL。
+ *
+ * @param path - 要检测的链接路径字符串。
+ * @returns 如果是外部链接返回 `true`，否则返回 `false`。
+ */
+export function isExternal(path: string): boolean {
+  return EXTERNAL_URL_RE.test(path)
+}
 /**
  * 初始化 Twikoo 评论系统（仅在浏览器中生效）。
  *
@@ -141,7 +146,7 @@ export const video = {
  * @param props - 视频参数，包括平台标识 `is`、视频 ID、以及自定义 `src`。
  * @returns 视频播放器配置对象。
  */
-export const getVideo = (props: VideoProps) => {
+export function getVideo(props: VideoProps) {
   if (props.is && props.id) return video[props.is]
   if (props.id) return video.youtube
   return { src: props.src || '', title: 'Custom video player' }
