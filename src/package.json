@@ -63,7 +63,7 @@
     "@iconify/vue": "^5.0.0",
     "bumpp": "^10.1.1",
     "iconify-icon": "^3.0.0",
-    "twikoo": "^1.6.43",
+    "twikoo": "^1.6.44",
     "typescript": "^5.8.3",
     "vue": "^3.5.14"
   },
