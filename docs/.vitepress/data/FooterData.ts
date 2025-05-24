@@ -42,11 +42,19 @@ export const Footer_Data: FooterData = {
       icon: 'heroicons:globe-alt-solid',
       alt: '优质线路 icon',
       links: [
-        { name: '青云梯', link: 'https://itheo.top/qyt' },
-        { name: 'Totoro Cloud', link: 'https://itheo.top/totoro' },
-        { name: 'TNT Cloud', link: 'https://itheo.top/tnt' },
-        { name: 'FlyingBird', link: 'https://itheo.top/flyingbird' },
-        { name: '飞兔云', link: 'https://itheo.top/feitu' }
+        { name: '青云梯', link: 'https://itheo.top/qyt', rel: 'sponsored' },
+        {
+          name: 'Totoro Cloud',
+          link: 'https://itheo.top/totoro',
+          rel: 'sponsored'
+        },
+        { name: 'TNT Cloud', link: 'https://itheo.top/tnt', rel: 'sponsored' },
+        {
+          name: 'FlyingBird',
+          link: 'https://itheo.top/flyingbird',
+          rel: 'sponsored'
+        },
+        { name: '飞兔云', link: 'https://itheo.top/feitu', rel: 'sponsored' }
       ]
     },
     {
@@ -54,10 +62,18 @@ export const Footer_Data: FooterData = {
       icon: 'heroicons:tv-solid',
       alt: '流媒体合租 icon',
       links: [
-        { name: '银河录像局', link: 'https://itheo.top/yh' },
-        { name: '奈飞小铺', link: 'https://itheo.top/ihezu' },
-        { name: '蜜糖商店', link: 'https://itheo.top/metshop' },
-        { name: 'SMS-Activate', link: 'https://itheo.top/sms' }
+        { name: '银河录像局', link: 'https://itheo.top/yh', rel: 'sponsored' },
+        { name: '奈飞小铺', link: 'https://itheo.top/ihezu', rel: 'sponsored' },
+        {
+          name: '蜜糖商店',
+          link: 'https://itheo.top/metshop',
+          rel: 'sponsored'
+        },
+        {
+          name: 'SMS-Activate',
+          link: 'https://itheo.top/sms',
+          rel: 'sponsored'
+        }
       ]
     },
     {
