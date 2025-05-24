@@ -102,7 +102,7 @@ export default {
 | `icon`  | `string` | <Badge text="可选" /> 分组图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> |
 | `color` | `string` | <Badge text="可选" /> 图标样式。                                                                                                                                                |
 | `title` | `string` | 分组的标题。                                                                                                                                                                    |
-| `links` | `Array`  | 该分组包含的链接数组，每个链接是一个 `Link` 对象。                                                                                                                              |
+| `links` | `Array`  | 该分组包含的链接数组，每个链接是一个 [`Link`](#link-接口) 对象。                                                                                                                |
 |  `alt`  | `string` | 图标的alt文本                                                                                                                                                                   |
 
 ### `Link` 接口
@@ -116,6 +116,7 @@ export default {
 | `name`  | `string` | 链接的名称。                                                                                                                                                                    |
 | `link`  | `string` | 链接的地址。                                                                                                                                                                    |
 |  `alt`  | `string` | 图标的alt文本                                                                                                                                                                   |
+|  `rel`  | `string` | <Badge text="可选" /> 链接的 `rel` 属性。                                                                                                                                       |
 
 ### `Beian` 接口
 

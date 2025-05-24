@@ -12,7 +12,9 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
       class="link"
       :href="boxcube.link"
       :target="isExternal(boxcube.link) ? '_blank' : '_self'"
-      :rel="isExternal(boxcube.link) ? 'noreferrer' : undefined"
+      :rel="
+        boxcube.rel || (isExternal(boxcube.link) ? 'noreferrer' : undefined)
+      "
     >
       <template v-if="boxcube.icon">
         <Icon

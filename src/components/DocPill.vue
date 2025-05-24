@@ -10,7 +10,7 @@ const pill = defineProps<Pill>()
       class="link"
       :href="pill.link"
       :target="isExternal(pill.link) ? '_blank' : '_self'"
-      :rel="isExternal(pill.link) ? 'noreferrer' : undefined"
+      :rel="pill.rel || (isExternal(pill.link) ? 'noreferrer' : undefined)"
     >
       <template v-if="pill.icon">
         <Icon
