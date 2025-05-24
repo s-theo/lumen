@@ -6,7 +6,7 @@ head:
       content: 了解如何使用 @theojs/lumen 插件提供的视频组件 (Vid)，轻松在 VitePress 页面中嵌入来自 YouTube、Bilibili、腾讯视频、优酷等多个主流平台或自定义链接的视频。该组件支持响应式设计，配置简单易用，提升用户观看体验。
   - - meta
     - name: keywords
-      content: VitePress 视频组件 @theojs/lumen Lumen DocVideoLink Vid 嵌入视频 YouTube Bilibili 腾讯视频 优酷 西瓜视频 Vimeo 响应式视频 theojs VitePress插件 多平台视频 自定义视频
+      content: VitePress 视频组件 @theojs/lumen Lumen DocVideoLink Vid 嵌入视频 YouTube Bilibili 腾讯视频 优酷 Vimeo 响应式视频 theojs VitePress插件 多平台视频 自定义视频
 ---
 
 # 视频组件 - DocVideoLink
@@ -17,7 +17,6 @@ head:
   <Pill name="Bilibili" icon="simple-icons:bilibili" color="#00A1D6" link="https://www.bilibili.com/" alt="bilibili icon" />
   <Pill name="腾讯视频" image="https://v.qq.com/favicon.ico" link="https://v.qq.com/" alt="腾讯视频 icon" />
   <Pill name="优酷视频" image="https://img.alicdn.com/imgextra/i2/O1CN01BeAcgL1ywY0G5nSn8_!!6000000006643-2-tps-195-195.png" link="https://www.youku.com/" alt="优酷视频 icon" />
-  <Pill name="西瓜视频" icon="icon-park-solid:xigua" color="#F4464B" link="https://www.ixigua.com/" alt="西瓜视频 icon" />
   <Pill name="Vimeo" icon="logos:vimeo-icon" link="https://vimeo.com" alt="vimeo icon"/>的支持，只需要提供平台标识符和视频 ID 即可。
 - **自定义视频链接**：除了主流视频平台外，Vid 还支持直接嵌入 MP4 或其他格式的视频链接。
 - **响应式设计**：该组件自动适应不同屏幕尺寸，确保在桌面和移动设备上都能流畅播放。
@@ -64,9 +63,6 @@ Bilibili 视频
 
 vimeo 视频
 <Vid is="vimeo" id="76979871" />
-
-西瓜视频
-<Vid is="xigua" id="7421926380926927399" />
 ```
 
 ### 其他平台视频
@@ -80,8 +76,8 @@ vimeo 视频
 
 ## 数据接口说明
 
-| 属性名 | 类型                                                                  | 说明                                                                                     |
-| ------ | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `id`   | `string`                                                              | 视频的唯一标识符，只有在选择平台时才需要使用 `id`。                                      |
-| `is`   | `'youtube' \| 'bilibili' \| 'tencent' \| 'youku'\| 'xigua' \|'vimeo'` | 视频平台类型，值为 `youtube`、`bilibili`、`tencent` 、`youku` 、`xigua`或 `vimeo` 之一。 |
-| `src`  | `string`                                                              | 自定义视频链接，只有在 `is` 和`id` 不存在时才需要提供。                                  |
+| 属性名 | 类型                                                        | 说明                                                                            |
+| ------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `id`   | `string`                                                    | 视频的唯一标识符，只有在选择平台时才需要使用 `id`。                             |
+| `is`   | `'youtube' \| 'bilibili' \| 'tencent' \| 'youku'\| 'vimeo'` | 视频平台类型，值为 `youtube`、`bilibili`、`tencent` 、`youku` 或 `vimeo` 之一。 |
+| `src`  | `string`                                                    | 自定义视频链接，只有在 `is` 和`id` 不存在时才需要提供。                         |

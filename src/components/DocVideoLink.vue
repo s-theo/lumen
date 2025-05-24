@@ -5,7 +5,7 @@ import { VideoProps, getVideo } from '../types'
 
 const props = defineProps<VideoProps>()
 
-const Config = computed(() => getVideo(props))
+const config = computed(() => getVideo(props))
 </script>
 
 <template>
@@ -13,9 +13,9 @@ const Config = computed(() => getVideo(props))
     <iframe
       class="video-iframe"
       loading="lazy"
-      :title="Config.title"
+      :title="config.title"
       :src="
-        typeof Config.src === 'function' ? Config.src(props.id) : Config.src
+        typeof config.src === 'function' ? config.src(props.id) : config.src
       "
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
       allowfullscreen
