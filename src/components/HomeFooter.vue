@@ -56,7 +56,9 @@ onMounted(() => {
             :name="link.name"
             :href="link.link"
             :target="isExternal(link.link) ? '_blank' : '_self'"
-            :rel="isExternal(link.link) ? 'noreferrer' : undefined"
+            :rel="
+              link.rel || (isExternal(link.link) ? 'noreferrer' : undefined)
+            "
             :aria-describedby="link.name ? link.name : null"
             >{{ link.name
             }}<Icon

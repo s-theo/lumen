@@ -21,6 +21,8 @@ export interface BoxItem {
   image?: string | IconImageMode
   /** 图片的 alt 文本 */
   alt?: string
+  /** Rel 属性 */
+  rel: string
 }
 
 /** DocPill 接口 */
@@ -37,6 +39,8 @@ export interface Pill {
   image?: string | IconImageMode
   /** 图片的 alt 文本 */
   alt?: string
+  /** Rel 属性 */
+  rel?: string
 }
 
 /** DocLinks 接口 */
@@ -55,6 +59,8 @@ export interface LinkItem {
   image?: string | IconImageMode
   /** 图片的 alt 文本 */
   alt?: string
+  /** Rel 属性 */
+  rel?: string
 }
 
 /** BoxCube 接口 */
@@ -75,6 +81,8 @@ export interface BoxCubeItem {
   image?: string | IconImageMode
   /** 图片的 alt 文本 */
   alt?: string
+  /** Rel 属性 */
+  rel?: string
 }
 
 /** DocAsideLogo 接口 */
@@ -101,6 +109,8 @@ export interface AsideItem {
   info2?: string
   /** 图片的 alt 文本 */
   alt?: string
+  /** Rel 属性 */
+  rel?: string
 }
 
 /** Announcement 接口 */
@@ -123,6 +133,8 @@ export interface Prelink {
   install?: string
   /** 图片的 alt 文本 */
   alt?: string
+  /** Rel 属性 */
+  rel?: string
 }
 
 /** Twikoo 配置数据类型接口。 */
@@ -195,6 +207,8 @@ export interface Link {
   link: string
   /** 无障碍描述 */
   alt?: string
+  /** Rel 属性 */
+  rel?: string
 }
 
 /** DocVideoLink 接口 */
