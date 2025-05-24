@@ -38,49 +38,26 @@ export const Footer_Data: FooterData = {
       ]
     },
     {
-      title: '合作伙伴',
-      icon: 'heroicons:user-group-solid',
-      alt: '合作伙伴 icon',
+      title: '优质线路',
+      icon: 'heroicons:globe-alt-solid',
+      alt: '优质线路 icon',
       links: [
-        {
-          name: '青云梯',
-          icon: 'el:fire',
-          color: '#FF5733',
-          link: 'https://itheo.top/qyt'
-        },
-        { name: 'Totoro Cloud - 龙猫云', link: 'https://itheo.top/totoro' },
+        { name: '青云梯', link: 'https://itheo.top/qyt' },
+        { name: 'Totoro Cloud', link: 'https://itheo.top/totoro' },
         { name: 'TNT Cloud', link: 'https://itheo.top/tnt' },
         { name: 'FlyingBird', link: 'https://itheo.top/flyingbird' },
-        { name: '飞兔云', link: 'https://itheo.top/feitu' },
+        { name: '飞兔云', link: 'https://itheo.top/feitu' }
+      ]
+    },
+    {
+      title: '流媒体合租',
+      icon: 'heroicons:tv-solid',
+      alt: '流媒体合租 icon',
+      links: [
         { name: '银河录像局', link: 'https://itheo.top/yh' },
         { name: '奈飞小铺', link: 'https://itheo.top/ihezu' },
         { name: '蜜糖商店', link: 'https://itheo.top/metshop' },
         { name: 'SMS-Activate', link: 'https://itheo.top/sms' }
-      ]
-    },
-    {
-      title: '观影指南',
-      icon: 'heroicons:film-16-solid',
-      alt: '观影 icon',
-      links: [
-        {
-          name: 'Netflix',
-          link: 'https://doc.theojs.cn/streaming/Netflix-guide'
-        },
-        {
-          name: 'Disney+',
-          link: 'https://doc.theojs.cn/streaming/Disney-introduce'
-        },
-        {
-          name: 'Spotify Premium',
-          link: 'https://doc.theojs.cn/streaming/Spotify'
-        },
-        {
-          name: 'YouTube Premium',
-          link: 'https://doc.theojs.cn/streaming/YouTube'
-        },
-        { name: 'Hulu', link: 'https://doc.theojs.cn/streaming/Hulu' },
-        { name: 'HBO Max', link: 'https://doc.theojs.cn/streaming/HBO-Max' }
       ]
     },
     {
