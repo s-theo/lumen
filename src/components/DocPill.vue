@@ -5,7 +5,7 @@ const pill = defineProps<Pill>()
 </script>
 
 <template>
-  <span class="container">
+  <span class="container ignore-header">
     <a
       class="link"
       :href="pill.link"
