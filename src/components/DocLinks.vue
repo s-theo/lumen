@@ -5,98 +5,94 @@ const props = defineProps<{ items: LinkItem[] }>()
 </script>
 
 <template>
-  <div class="container">
-    <a
-      v-for="(link, index) in props.items"
-      :key="link.link + index"
-      class="link"
-      :href="link.link"
-      :target="isExternal(link.link) ? '_blank' : '_self'"
-      :rel="link.rel || (isExternal(link.link) ? 'noreferrer' : undefined)"
-    >
-      <template v-if="link.icon">
-        <Icon
-          v-if="typeof link.icon === 'object'"
-          class="iconify light-only"
-          :icon="link.icon.light"
-          :color="
-            typeof link.color === 'object' ? link.color.light : link.color
-          "
-          :ssr="true"
-          :inline="true"
-          :aria-label="link.alt"
-          width="32"
-          height="32"
-        />
-        <Icon
-          v-if="typeof link.icon === 'object'"
-          class="iconify dark-only"
-          :icon="link.icon.dark"
-          :color="typeof link.color === 'object' ? link.color.dark : link.color"
-          :ssr="true"
-          :inline="true"
-          :aria-label="link.alt"
-          width="32"
-          height="32"
-        />
-        <Icon
-          v-else
-          class="iconify"
-          :icon="link.icon"
-          :color="typeof link.color === 'string' ? link.color : ''"
-          :ssr="true"
-          :inline="true"
-          :aria-label="link.alt"
-          width="32"
-          height="32"
-        />
-      </template>
-      <template v-else-if="link.image">
-        <img
-          v-if="typeof link.image === 'object'"
-          class="light-only"
-          :src="link.image.light"
-          :alt="link.alt"
-          loading="lazy"
-          decoding="async"
-          width="32"
-          height="32"
-        />
-        <img
-          v-if="typeof link.image === 'object'"
-          class="dark-only"
-          :src="link.image.dark"
-          :alt="link.name"
-          loading="lazy"
-          decoding="async"
-          width="32"
-          height="32"
-        />
-        <img
-          v-else
-          :src="link.image"
-          :alt="link.alt"
-          loading="lazy"
-          decoding="async"
-          width="32"
-          height="32"
-        />
-      </template>
-      <template v-else>
-        <Icon
-          class="default-icon"
-          aria-label="external link icon"
-          icon="fa6-solid:arrow-up-right-from-square"
-          width="24"
-          height="24"
-        />
-      </template>
-      <div class="text-content">
-        <span class="name">{{ link.name }}</span>
-        <p v-if="link.desc" class="desc">{{ link.desc }}</p>
-      </div>
-    </a>
-  </div>
+  <a
+    v-for="(link, index) in props.items"
+    :key="link.link + index"
+    class="link ignore-header"
+    :href="link.link"
+    :target="isExternal(link.link) ? '_blank' : '_self'"
+    :rel="link.rel || (isExternal(link.link) ? 'noreferrer' : undefined)"
+  >
+    <template v-if="link.icon">
+      <Icon
+        v-if="typeof link.icon === 'object'"
+        class="iconify light-only"
+        :icon="link.icon.light"
+        :color="typeof link.color === 'object' ? link.color.light : link.color"
+        :ssr="true"
+        :inline="true"
+        :aria-label="link.alt"
+        width="32"
+        height="32"
+      />
+      <Icon
+        v-if="typeof link.icon === 'object'"
+        class="iconify dark-only"
+        :icon="link.icon.dark"
+        :color="typeof link.color === 'object' ? link.color.dark : link.color"
+        :ssr="true"
+        :inline="true"
+        :aria-label="link.alt"
+        width="32"
+        height="32"
+      />
+      <Icon
+        v-else
+        class="iconify"
+        :icon="link.icon"
+        :color="typeof link.color === 'string' ? link.color : ''"
+        :ssr="true"
+        :inline="true"
+        :aria-label="link.alt"
+        width="32"
+        height="32"
+      />
+    </template>
+    <template v-else-if="link.image">
+      <img
+        v-if="typeof link.image === 'object'"
+        class="light-only"
+        :src="link.image.light"
+        :alt="link.alt"
+        loading="lazy"
+        decoding="async"
+        width="32"
+        height="32"
+      />
+      <img
+        v-if="typeof link.image === 'object'"
+        class="dark-only"
+        :src="link.image.dark"
+        :alt="link.name"
+        loading="lazy"
+        decoding="async"
+        width="32"
+        height="32"
+      />
+      <img
+        v-else
+        :src="link.image"
+        :alt="link.alt"
+        loading="lazy"
+        decoding="async"
+        width="32"
+        height="32"
+      />
+    </template>
+    <template v-else>
+      <Icon
+        class="default-icon"
+        aria-label="external link icon"
+        icon="fa6-solid:arrow-up-right-from-square"
+        width="24"
+        height="24"
+      />
+    </template>
+    <div class="text-content">
+      <span class="name">{{ link.name }}</span>
+      <p v-if="link.desc" class="desc">{{ link.desc }}</p>
+    </div>
+  </a>
 </template>
 
 <style scoped>
@@ -105,16 +101,11 @@ const props = defineProps<{ items: LinkItem[] }>()
   display: none;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-
 .link {
   display: flex;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 0.5em 0;
   border: 1px solid var(--Links-border);
   border-radius: 0.8em;
   background-color: var(--Links-bg);
