@@ -102,6 +102,28 @@ span.container {
   font-size: 1rem;
 }
 
+.vp-doc h1 > span.container {
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+.vp-doc h2 > span.container {
+  vertical-align: top;
+  margin-top: 1px;
+}
+
+.vp-doc h3 > span.container {
+  vertical-align: top;
+  margin-top: 1px;
+}
+
+.vp-doc h4 > span.container,
+.vp-doc h5 > span.container,
+.vp-doc h6 > span.container {
+  vertical-align: top;
+  line-height: 18px;
+}
+
 .link {
   display: inline-flex;
   align-items: center;
@@ -112,8 +134,8 @@ span.container {
   border: 1px solid var(--Pill-border);
   border-radius: 0.5em;
   background-color: var(--Pill-bg);
-  padding: 0.75em 0.25em;
-  height: 1em;
+  padding: 0em 0.25em;
+  height: 1.375em;
   text-decoration: none !important;
   white-space: nowrap;
 }
@@ -140,8 +162,7 @@ span.container {
 
 .name {
   color: var(--Pill-name);
-  font-weight: 450;
-  font-size: 0.875em;
+  font-size: 0.75em;
   letter-spacing: 0.05em;
 }
 </style>
