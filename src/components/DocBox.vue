@@ -5,85 +5,83 @@ const props = defineProps<{ items: BoxItem[] }>()
 </script>
 
 <template>
-  <div class="container">
-    <a
-      v-for="(box, index) in props.items"
-      :key="box.link + index"
-      class="link"
-      :href="box.link"
-      :target="isExternal(box.link) ? '_blank' : '_self'"
-      :rel="box.rel || (isExternal(box.link) ? 'noreferrer' : undefined)"
-    >
-      <template v-if="box.icon">
-        <Icon
-          v-if="typeof box.icon === 'object'"
-          class="iconify light-only"
-          :icon="box.icon.light"
-          :color="typeof box.color === 'object' ? box.color.light : box.color"
-          :ssr="true"
-          :inline="true"
-          :aria-label="box.alt"
-          width="38"
-          height="38"
-        />
-        <Icon
-          v-if="typeof box.icon === 'object'"
-          class="iconify dark-only"
-          :icon="box.icon.dark"
-          :color="typeof box.color === 'object' ? box.color.dark : box.color"
-          :ssr="true"
-          :inline="true"
-          :aria-label="box.alt"
-          width="38"
-          height="38"
-        />
-        <Icon
-          v-else
-          class="iconify"
-          :icon="box.icon"
-          :color="typeof box.color === 'string' ? box.color : ''"
-          :ssr="true"
-          :inline="true"
-          :aria-label="box.alt"
-          width="38"
-          height="38"
-        />
-      </template>
-      <template v-else-if="box.image">
-        <img
-          v-if="typeof box.image === 'object'"
-          class="light-only"
-          :src="box.image.light"
-          :alt="box.alt"
-          loading="lazy"
-          decoding="async"
-          width="38"
-          height="38"
-        />
-        <img
-          v-if="typeof box.image === 'object'"
-          class="dark-only"
-          :src="box.image.dark"
-          :alt="box.alt"
-          loading="lazy"
-          decoding="async"
-          width="38"
-          height="38"
-        />
-        <img
-          v-else
-          :src="box.image"
-          :alt="box.alt"
-          loading="lazy"
-          decoding="async"
-          width="38"
-          height="38"
-        />
-      </template>
-      <span class="name">{{ box.name }}</span>
-      <p v-if="box.tag" class="tag">{{ box.tag }}</p>
-    </a>
-  </div>
+  <a
+    v-for="(box, index) in props.items"
+    :key="box.link + index"
+    class="link"
+    :href="box.link"
+    :target="isExternal(box.link) ? '_blank' : '_self'"
+    :rel="box.rel || (isExternal(box.link) ? 'noreferrer' : undefined)"
+  >
+    <template v-if="box.icon">
+      <Icon
+        v-if="typeof box.icon === 'object'"
+        class="iconify light-only"
+        :icon="box.icon.light"
+        :color="typeof box.color === 'object' ? box.color.light : box.color"
+        :ssr="true"
+        :inline="true"
+        :aria-label="box.alt"
+        width="38"
+        height="38"
+      />
+      <Icon
+        v-if="typeof box.icon === 'object'"
+        class="iconify dark-only"
+        :icon="box.icon.dark"
+        :color="typeof box.color === 'object' ? box.color.dark : box.color"
+        :ssr="true"
+        :inline="true"
+        :aria-label="box.alt"
+        width="38"
+        height="38"
+      />
+      <Icon
+        v-else
+        class="iconify"
+        :icon="box.icon"
+        :color="typeof box.color === 'string' ? box.color : ''"
+        :ssr="true"
+        :inline="true"
+        :aria-label="box.alt"
+        width="38"
+        height="38"
+      />
+    </template>
+    <template v-else-if="box.image">
+      <img
+        v-if="typeof box.image === 'object'"
+        class="light-only"
+        :src="box.image.light"
+        :alt="box.alt"
+        loading="lazy"
+        decoding="async"
+        width="38"
+        height="38"
+      />
+      <img
+        v-if="typeof box.image === 'object'"
+        class="dark-only"
+        :src="box.image.dark"
+        :alt="box.alt"
+        loading="lazy"
+        decoding="async"
+        width="38"
+        height="38"
+      />
+      <img
+        v-else
+        :src="box.image"
+        :alt="box.alt"
+        loading="lazy"
+        decoding="async"
+        width="38"
+        height="38"
+      />
+    </template>
+    <span class="name">{{ box.name }}</span>
+    <p v-if="box.tag" class="tag">{{ box.tag }}</p>
+  </a>
 </template>
 
 <style scoped>
@@ -95,18 +93,14 @@ const props = defineProps<{ items: BoxItem[] }>()
   display: none;
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-}
-
 .link {
-  display: flex;
+  display: inline-flex;
   position: relative;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1em;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 0.15em;
   border: 1px solid var(--Box-border);
   border-radius: 0.8em;
   background-color: var(--Box-bg);

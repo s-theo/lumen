@@ -5,97 +5,95 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
 </script>
 
 <template>
-  <div>
-    <a
-      v-for="(aside, index) in props.Aside_Data"
-      :key="index"
-      class="link"
-      :class="{ 'has-promo': aside.promo, 'has-name': aside.name }"
-      :href="aside.link"
-      :target="isExternal(aside.link) ? '_blank' : '_self'"
-      :rel="aside.rel || (isExternal(aside.link) ? 'noreferrer' : undefined)"
-    >
-      <template v-if="aside.icon">
-        <Icon
-          v-if="typeof aside.icon === 'object'"
-          class="iconify light-only"
-          :icon="aside.icon.light"
-          :color="
-            typeof aside.color === 'object' ? aside.color.light : aside.color
-          "
-          :ssr="true"
-          :inline="true"
-          :aria-label="aside.alt"
-          width="24"
-          height="24"
-        />
-        <Icon
-          v-if="typeof aside.icon === 'object'"
-          class="iconify dark-only"
-          :icon="aside.icon.dark"
-          :color="
-            typeof aside.color === 'object' ? aside.color.dark : aside.color
-          "
-          :ssr="true"
-          :inline="true"
-          width="24"
-          height="24"
-          :aria-label="aside.alt"
-        />
-        <Icon
-          v-else
-          class="iconify"
-          :icon="aside.icon"
-          :color="typeof aside.color === 'string' ? aside.color : ''"
-          :ssr="true"
-          :inline="true"
-          :aria-label="aside.alt"
-          width="24"
-          height="24"
-        />
-      </template>
-      <template v-else-if="aside.image">
-        <img
-          v-if="typeof aside.image === 'object'"
-          class="icon light-only"
-          :src="aside.image.light"
-          :alt="aside.alt"
-          loading="lazy"
-          decoding="async"
-          width="24"
-          height="24"
-        />
-        <img
-          v-if="typeof aside.image === 'object'"
-          class="icon dark-only"
-          :src="aside.image.dark"
-          :alt="aside.alt"
-          loading="lazy"
-          decoding="async"
-          width="24"
-          height="24"
-        />
-        <img
-          v-else
-          class="icon"
-          :src="aside.image"
-          :alt="aside.alt"
-          loading="lazy"
-          decoding="async"
-          width="24"
-          height="24"
-        />
-      </template>
-      <div>
-        <span class="promo" v-html="aside.promo"></span>
-        <p v-if="aside.hide1" class="hide" v-html="aside.hide1"></p>
-        <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
-        <span v-if="aside.name" class="name" v-html="aside.name"></span>
-        <p v-if="aside.hide2" class="hide" v-html="aside.hide2"></p>
-        <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
-      </div>
-    </a>
-  </div>
+  <a
+    v-for="(aside, index) in props.Aside_Data"
+    :key="index"
+    class="link"
+    :class="{ 'has-promo': aside.promo, 'has-name': aside.name }"
+    :href="aside.link"
+    :target="isExternal(aside.link) ? '_blank' : '_self'"
+    :rel="aside.rel || (isExternal(aside.link) ? 'noreferrer' : undefined)"
+  >
+    <template v-if="aside.icon">
+      <Icon
+        v-if="typeof aside.icon === 'object'"
+        class="iconify light-only"
+        :icon="aside.icon.light"
+        :color="
+          typeof aside.color === 'object' ? aside.color.light : aside.color
+        "
+        :ssr="true"
+        :inline="true"
+        :aria-label="aside.alt"
+        width="24"
+        height="24"
+      />
+      <Icon
+        v-if="typeof aside.icon === 'object'"
+        class="iconify dark-only"
+        :icon="aside.icon.dark"
+        :color="
+          typeof aside.color === 'object' ? aside.color.dark : aside.color
+        "
+        :ssr="true"
+        :inline="true"
+        width="24"
+        height="24"
+        :aria-label="aside.alt"
+      />
+      <Icon
+        v-else
+        class="iconify"
+        :icon="aside.icon"
+        :color="typeof aside.color === 'string' ? aside.color : ''"
+        :ssr="true"
+        :inline="true"
+        :aria-label="aside.alt"
+        width="24"
+        height="24"
+      />
+    </template>
+    <template v-else-if="aside.image">
+      <img
+        v-if="typeof aside.image === 'object'"
+        class="icon light-only"
+        :src="aside.image.light"
+        :alt="aside.alt"
+        loading="lazy"
+        decoding="async"
+        width="24"
+        height="24"
+      />
+      <img
+        v-if="typeof aside.image === 'object'"
+        class="icon dark-only"
+        :src="aside.image.dark"
+        :alt="aside.alt"
+        loading="lazy"
+        decoding="async"
+        width="24"
+        height="24"
+      />
+      <img
+        v-else
+        class="icon"
+        :src="aside.image"
+        :alt="aside.alt"
+        loading="lazy"
+        decoding="async"
+        width="24"
+        height="24"
+      />
+    </template>
+    <div>
+      <span class="promo" v-html="aside.promo"></span>
+      <p v-if="aside.hide1" class="hide" v-html="aside.hide1"></p>
+      <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
+      <span v-if="aside.name" class="name" v-html="aside.name"></span>
+      <p v-if="aside.hide2" class="hide" v-html="aside.hide2"></p>
+      <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
+    </div>
+  </a>
 </template>
 
 <style scoped>
@@ -114,7 +112,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
   align-items: center;
   gap: 1em;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  margin: 0.25em 0;
+  margin: 0.125em 0;
   border: 1.5px solid var(--AsideLogo-border);
   border-radius: 0.8em;
   background-color: var(--AsideLogo-bg);
