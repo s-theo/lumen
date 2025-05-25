@@ -5,84 +5,80 @@ const pill = defineProps<Pill>()
 </script>
 
 <template>
-  <span class="container">
-    <a
-      class="link"
-      :href="pill.link"
-      :target="isExternal(pill.link) ? '_blank' : '_self'"
-      :rel="pill.rel || (isExternal(pill.link) ? 'noreferrer' : undefined)"
-    >
-      <template v-if="pill.icon">
-        <Icon
-          v-if="typeof pill.icon === 'object'"
-          class="iconify light-only"
-          :icon="pill.icon.light"
-          :color="
-            typeof pill.color === 'object' ? pill.color.light : pill.color
-          "
-          :aria-label="pill.alt"
-          :ssr="true"
-          :inline="true"
-          width="14"
-          height="14"
-        />
-        <Icon
-          v-if="typeof pill.icon === 'object'"
-          class="iconify dark-only"
-          :icon="pill.icon.dark"
-          :color="typeof pill.color === 'object' ? pill.color.dark : pill.color"
-          :aria-label="pill.alt"
-          :ssr="true"
-          :inline="true"
-          width="14"
-          height="14"
-        />
-        <Icon
-          v-else
-          class="iconify"
-          :icon="pill.icon"
-          :color="typeof pill.color === 'string' ? pill.color : ''"
-          :aria-label="pill.alt"
-          :ssr="true"
-          :inline="true"
-          width="14"
-          height="14"
-        />
-      </template>
-      <template v-else-if="pill.image">
-        <img
-          v-if="typeof pill.image === 'object'"
-          class="light-only"
-          :src="pill.image.light"
-          :alt="pill.alt"
-          loading="lazy"
-          decoding="async"
-          width="14"
-          height="14"
-        />
-        <img
-          v-if="typeof pill.image === 'object'"
-          class="dark-only"
-          :src="pill.image.dark"
-          :alt="pill.alt"
-          loading="lazy"
-          decoding="async"
-          width="14"
-          height="14"
-        />
-        <img
-          v-else
-          :src="pill.image"
-          :alt="pill.alt"
-          loading="lazy"
-          decoding="async"
-          width="14"
-          height="14"
-        />
-      </template>
-      <span class="name">{{ pill.name }}</span>
-    </a>
-  </span>
+  <a
+    class="link ignore-header"
+    :href="pill.link"
+    :target="isExternal(pill.link) ? '_blank' : '_self'"
+    :rel="pill.rel || (isExternal(pill.link) ? 'noreferrer' : undefined)"
+  >
+    <template v-if="pill.icon">
+      <Icon
+        v-if="typeof pill.icon === 'object'"
+        class="iconify light-only"
+        :icon="pill.icon.light"
+        :color="typeof pill.color === 'object' ? pill.color.light : pill.color"
+        :aria-label="pill.alt"
+        :ssr="true"
+        :inline="true"
+        width="14"
+        height="14"
+      />
+      <Icon
+        v-if="typeof pill.icon === 'object'"
+        class="iconify dark-only"
+        :icon="pill.icon.dark"
+        :color="typeof pill.color === 'object' ? pill.color.dark : pill.color"
+        :aria-label="pill.alt"
+        :ssr="true"
+        :inline="true"
+        width="14"
+        height="14"
+      />
+      <Icon
+        v-else
+        class="iconify"
+        :icon="pill.icon"
+        :color="typeof pill.color === 'string' ? pill.color : ''"
+        :aria-label="pill.alt"
+        :ssr="true"
+        :inline="true"
+        width="14"
+        height="14"
+      />
+    </template>
+    <template v-else-if="pill.image">
+      <img
+        v-if="typeof pill.image === 'object'"
+        class="light-only"
+        :src="pill.image.light"
+        :alt="pill.alt"
+        loading="lazy"
+        decoding="async"
+        width="14"
+        height="14"
+      />
+      <img
+        v-if="typeof pill.image === 'object'"
+        class="dark-only"
+        :src="pill.image.dark"
+        :alt="pill.alt"
+        loading="lazy"
+        decoding="async"
+        width="14"
+        height="14"
+      />
+      <img
+        v-else
+        :src="pill.image"
+        :alt="pill.alt"
+        loading="lazy"
+        decoding="async"
+        width="14"
+        height="14"
+      />
+    </template>
+    <span class="name">{{ pill.name }}</span>
+  </a>
 </template>
 
 <style scoped>
@@ -94,32 +90,24 @@ const pill = defineProps<Pill>()
   display: none;
 }
 
-span.container {
-  all: unset;
-  display: inline-flex;
-  align-items: center;
-  color: inherit;
-  font-size: 1rem;
-}
-
-.vp-doc h1 > span.container {
+.vp-doc h1 > .link {
   vertical-align: top;
   margin-top: 2px;
 }
 
-.vp-doc h2 > span.container {
+.vp-doc h2 > .link {
   vertical-align: top;
   margin-top: 1px;
 }
 
-.vp-doc h3 > span.container {
+.vp-doc h3 > .link {
   vertical-align: top;
   margin-top: 1px;
 }
 
-.vp-doc h4 > span.container,
-.vp-doc h5 > span.container,
-.vp-doc h6 > span.container {
+.vp-doc h4 > .link,
+.vp-doc h5 > .link,
+.vp-doc h6 > .link {
   vertical-align: top;
   line-height: 18px;
 }
@@ -136,6 +124,7 @@ span.container {
   background-color: var(--Pill-bg);
   padding: 0em 0.25em;
   height: 1.375em;
+  font-size: 1rem;
   text-decoration: none !important;
   white-space: nowrap;
 }
