@@ -52,6 +52,7 @@
     "types/",
     "analytics/",
     "components/",
+    "composables/",
     "tsconfig.json",
     "readme.md",
     "License"
