@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { Icon, usePrelink, handleClick, isExternal } from '../types'
+import { Icon, usePrelink, handleClick } from '../types'
+import { Link } from '../composables'
 
 const prelink = usePrelink()
 </script>
 
 <template>
-  <a
+  <Link
     v-if="prelink"
-    class="prelink"
+    :classes="['prelink', prelink.copy ? 'copy-mode' : '']"
     :href="prelink.copy ? undefined : prelink.link"
-    :target="isExternal(prelink.link) ? '_blank' : '_self'"
-    :rel="prelink.rel || (isExternal(prelink.link) ? 'noreferrer' : undefined)"
+    :rel="prelink.rel"
     @click="(e) => handleClick(e, prelink)"
   >
     <div class="prelink-content">
@@ -28,7 +28,7 @@ const prelink = usePrelink()
         <time class="date">{{ prelink.date }}</time>
       </div>
     </div>
-  </a>
+  </Link>
 </template>
 
 <style scoped>
@@ -41,6 +41,10 @@ const prelink = usePrelink()
   border-radius: 0.8em;
   background-color: var(--Announcement-bg);
   padding: 0.3em 1.5em;
+}
+
+.prelink.copy-mode {
+  cursor: pointer;
 }
 
 .prelink:hover {

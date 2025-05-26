@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { FooterData, Icon, isExternal } from '../types'
+import { Link } from '../composables'
 import { ref, onMounted } from 'vue'
 
 // 使用 defineProps 定义属性
@@ -52,14 +53,7 @@ onMounted(() => {
               height="14"
             />&nbsp;</template
           >
-          <a
-            :name="link.name"
-            :href="link.link"
-            :target="isExternal(link.link) ? '_blank' : '_self'"
-            :rel="
-              link.rel || (isExternal(link.link) ? 'noreferrer' : undefined)
-            "
-            :aria-describedby="link.name ? link.name : null"
+          <Link :href="link.link" :rel="link.rel"
             >{{ link.name
             }}<Icon
               v-if="isExternal(link.link)"
@@ -71,7 +65,7 @@ onMounted(() => {
               width="14"
               height="14"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -88,14 +82,14 @@ onMounted(() => {
             :inline="true"
             width="12"
             height="12"
-          />&nbsp;<a
+          />&nbsp;<Link
             href="https://beian.miit.gov.cn/#/Integrated/index"
             title="ICP备案"
             target="_blank"
             rel="noreferrer"
           >
             {{ footer.beian.icp }}
-          </a>
+          </Link>
         </p>
         <span class="info-spacing"></span>
         <p v-if="footer.beian?.police" class="footer-infotext">
@@ -110,14 +104,14 @@ onMounted(() => {
             :inline="true"
             width="12"
             height="12"
-          />&nbsp;<a
+          />&nbsp;<Link
             href="https://beian.mps.gov.cn/"
             title="公安备案"
             target="_blank"
             rel="noreferrer"
           >
             {{ footer.beian.police }}
-          </a>
+          </Link>
         </p>
       </span>
 
@@ -134,13 +128,13 @@ onMounted(() => {
             width="12"
             height="12"
           />&nbsp;{{ Year }}
-          <a
+          <Link
+            :href="footer.author?.link"
             title="GitHub"
             target="_blank"
             rel="noreferrer"
-            :href="footer.author?.link"
             itemprop="author"
-            >{{ footer.author?.name }}</a
+            >{{ footer.author?.name }}</Link
           >.&nbsp;All Rights Reserved.
         </p>
       </span>
