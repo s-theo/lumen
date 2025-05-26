@@ -1,84 +1,31 @@
 <script setup lang="ts">
-import { Icon, Pill, isExternal } from '../types'
+import { Pill } from '../types'
+import { IconDisplay, ImageDisplay, Link } from '../composables'
 
 const pill = defineProps<Pill>()
 </script>
 
 <template>
-  <a
-    class="link ignore-header"
-    :href="pill.link"
-    :target="isExternal(pill.link) ? '_blank' : '_self'"
-    :rel="pill.rel || (isExternal(pill.link) ? 'noreferrer' : undefined)"
-  >
+  <Link :link="pill.link" :rel="pill.rel" :classes="'link'">
     <template v-if="pill.icon">
-      <Icon
-        v-if="typeof pill.icon === 'object'"
-        class="iconify light-only"
-        :icon="pill.icon.light"
-        :color="typeof pill.color === 'object' ? pill.color.light : pill.color"
-        :aria-label="pill.alt"
-        :ssr="true"
-        :inline="true"
-        width="14"
-        height="14"
-      />
-      <Icon
-        v-if="typeof pill.icon === 'object'"
-        class="iconify dark-only"
-        :icon="pill.icon.dark"
-        :color="typeof pill.color === 'object' ? pill.color.dark : pill.color"
-        :aria-label="pill.alt"
-        :ssr="true"
-        :inline="true"
-        width="14"
-        height="14"
-      />
-      <Icon
-        v-else
-        class="iconify"
+      <IconDisplay
         :icon="pill.icon"
-        :color="typeof pill.color === 'string' ? pill.color : ''"
-        :aria-label="pill.alt"
-        :ssr="true"
-        :inline="true"
+        :color="pill.color"
+        :alt="pill.alt"
         width="14"
         height="14"
       />
     </template>
     <template v-else-if="pill.image">
-      <img
-        v-if="typeof pill.image === 'object'"
-        class="light-only"
-        :src="pill.image.light"
+      <ImageDisplay
+        :image="pill.image"
         :alt="pill.alt"
-        loading="lazy"
-        decoding="async"
-        width="14"
-        height="14"
-      />
-      <img
-        v-if="typeof pill.image === 'object'"
-        class="dark-only"
-        :src="pill.image.dark"
-        :alt="pill.alt"
-        loading="lazy"
-        decoding="async"
-        width="14"
-        height="14"
-      />
-      <img
-        v-else
-        :src="pill.image"
-        :alt="pill.alt"
-        loading="lazy"
-        decoding="async"
         width="14"
         height="14"
       />
     </template>
     <span class="name">{{ pill.name }}</span>
-  </a>
+  </Link>
 </template>
 
 <style scoped>

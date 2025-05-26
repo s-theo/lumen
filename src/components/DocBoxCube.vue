@@ -1,86 +1,31 @@
 <script setup lang="ts">
-import { BoxCubeItem, Icon, isExternal } from '../types'
+import { BoxCubeItem } from '../types'
+import { IconDisplay, ImageDisplay, Link } from '../composables'
 
 const props = defineProps<{ items: BoxCubeItem[] }>()
 </script>
 
 <template>
-  <a
+  <Link
     v-for="(boxcube, index) in props.items"
     :key="boxcube.link + index"
-    class="link"
-    :href="boxcube.link"
-    :target="isExternal(boxcube.link) ? '_blank' : '_self'"
-    :rel="boxcube.rel || (isExternal(boxcube.link) ? 'noreferrer' : undefined)"
+    :link="boxcube.link"
+    :rel="boxcube.rel"
+    :classes="'link'"
   >
     <template v-if="boxcube.icon">
-      <Icon
-        v-if="typeof boxcube.icon === 'object'"
-        class="iconify light-only"
-        :icon="boxcube.icon.light"
-        :color="
-          typeof boxcube.color === 'object'
-            ? boxcube.color.light
-            : boxcube.color
-        "
-        :ssr="true"
-        :inline="true"
-        :aria-label="boxcube.alt"
-        width="38"
-        height="38"
-      />
-      <Icon
-        v-if="typeof boxcube.icon === 'object'"
-        class="iconify dark-only"
-        :icon="boxcube.icon.dark"
-        :color="
-          typeof boxcube.color === 'object' ? boxcube.color.dark : boxcube.color
-        "
-        :ssr="true"
-        :inline="true"
-        :aria-label="boxcube.alt"
-        width="38"
-        height="38"
-      />
-      <Icon
-        v-else
-        class="iconify"
+      <IconDisplay
         :icon="boxcube.icon"
-        :color="typeof boxcube.color === 'string' ? boxcube.color : ''"
-        :ssr="true"
-        :inline="true"
-        :aria-label="boxcube.alt"
+        :color="boxcube.color"
+        :alt="boxcube.alt"
         width="38"
         height="38"
       />
     </template>
     <template v-else-if="boxcube.image">
-      <img
-        v-if="typeof boxcube.image === 'object'"
-        class="light-only"
-        :src="boxcube.image.light"
+      <ImageDisplay
+        :image="boxcube.image"
         :alt="boxcube.alt"
-        loading="lazy"
-        decoding="async"
-        width="38"
-        height="38"
-      />
-      <img
-        v-if="typeof boxcube.image === 'object'"
-        class="dark-only"
-        :src="boxcube.image.dark"
-        :alt="boxcube.alt"
-        loading="lazy"
-        decoding="async"
-        width="38"
-        height="38"
-      />
-      <img
-        v-else
-        :src="boxcube.image"
-        :alt="boxcube.alt"
-        loading="lazy"
-        decoding="async"
         width="38"
         height="38"
       />
@@ -88,7 +33,7 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
     <span class="name">{{ boxcube.name }}</span>
     <p v-if="boxcube.desc" class="desc">{{ boxcube.desc }}</p>
     <p v-if="boxcube.tag" class="tag">{{ boxcube.tag }}</p>
-  </a>
+  </Link>
 </template>
 
 <style scoped>
@@ -159,14 +104,16 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 
 .name,
 .desc {
-  transform: translateY(0.5em);
   max-width: 80%;
   overflow: hidden;
+
+  text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .name {
+  transform: translateY(0.5em);
   color: var(--Boxcube-name);
   font-weight: 500;
   font-size: 0.875em;
@@ -175,7 +122,10 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 }
 
 .desc {
+  position: absolute;
+  bottom: 1em;
   margin: 0;
+  width: 80%;
   color: var(--Boxcube-desc);
   font-size: 0.75em;
   line-height: 1.5;

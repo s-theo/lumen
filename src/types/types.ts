@@ -1,3 +1,18 @@
+/** 图标和图片的类型 */
+export type IconImageType = string | IconImageMode
+/** Alt 文本类型 */
+export type AltType = string
+/** 宽度类型 */
+export type WidthType = string
+/** 高度类型 */
+export type HeightType = string
+/** 链接类型 */
+export type LinkType = string
+/** Rel 属性类型 */
+export type RelType = string
+/** 样式类类型 */
+export type ClassesType = string | string[]
+
 export interface IconImageMode {
   /** 浅色模式下的图标和图片 */
   light: string
@@ -10,19 +25,19 @@ export interface BoxItem {
   /** DocBox 名称。 */
   name: string
   /** DocBox 链接。 */
-  link: string
+  link: LinkType
   /** DocBox 标签。 */
   tag?: string
   /** 图标的颜色。 */
-  color?: string | IconImageMode
+  color?: IconImageType
   /** 图标名称（支持 iconify） */
-  icon?: string | IconImageMode
+  icon?: IconImageType
   /** 图片路径（支持 light 和 dark 模式） */
-  image?: string | IconImageMode
+  image?: IconImageType
   /** 图片的 alt 文本 */
-  alt?: string
+  alt?: AltType
   /** Rel 属性 */
-  rel: string
+  rel: RelType
 }
 
 /** DocPill 接口 */
@@ -30,17 +45,17 @@ export interface Pill {
   /** Pill 名称。 */
   name: string
   /** Pill 链接。 */
-  link?: string
+  link?: LinkType
   /** 图标名称（支持 iconify） */
-  icon?: string | IconImageMode
+  icon?: IconImageType
   /** 图标的颜色。 */
-  color?: string | IconImageMode
+  color?: IconImageType
   /** 图片路径（支持 light 和 dark 模式） */
-  image?: string | IconImageMode
+  image?: IconImageType
   /** 图片的 alt 文本 */
-  alt?: string
+  alt?: AltType
   /** Rel 属性 */
-  rel?: string
+  rel?: RelType
 }
 
 /** DocLinks 接口 */
@@ -50,17 +65,17 @@ export interface LinkItem {
   /** DocLinks 描述。 */
   desc?: string
   /** DocLinks 链接。 */
-  link: string
+  link: LinkType
   /** 图标的颜色。 */
-  color?: string | IconImageMode
+  color?: IconImageType
   /** 图标名称（支持 iconify） */
-  icon?: string | IconImageMode
+  icon?: IconImageType
   /** 图片路径（支持 light 和 dark 模式） */
-  image?: string | IconImageMode
+  image?: IconImageType
   /** 图片的 alt 文本 */
-  alt?: string
+  alt?: AltType
   /** Rel 属性 */
-  rel?: string
+  rel?: RelType
 }
 
 /** BoxCube 接口 */
@@ -68,33 +83,33 @@ export interface BoxCubeItem {
   /** BoxCube 名称。 */
   name: string
   /** BoxCube 链接。 */
-  link: string
+  link: LinkType
   /** BoxCube 描述。 */
   desc?: string
   /** BoxCube 标签。 */
   tag?: string
   /** 图标的颜色。 */
-  color?: string | IconImageMode
+  color?: IconImageType
   /** 图标名称（支持 iconify） */
-  icon?: string | IconImageMode
+  icon?: IconImageType
   /** 图片路径（支持 light 和 dark 模式） */
-  image?: string | IconImageMode
+  image?: IconImageType
   /** 图片的 alt 文本 */
-  alt?: string
+  alt?: AltType
   /** Rel 属性 */
-  rel?: string
+  rel?: RelType
 }
 
 /** DocAsideLogo 接口 */
 export interface AsideItem {
   /** 链接地址。 */
-  link: string
+  link: LinkType
   /** 图标的颜色。 */
-  color?: string | IconImageMode
+  color?: IconImageType
   /** 图标名称（支持 iconify） */
-  icon?: string | IconImageMode
+  icon?: IconImageType
   /** 图片路径（支持 light 和 dark 模式） */
-  image?: string | IconImageMode
+  image?: IconImageType
   /** 名称。 */
   name?: string
   /** 活动名称。 */
@@ -108,15 +123,15 @@ export interface AsideItem {
   /** 信息 2。 */
   info2?: string
   /** 图片的 alt 文本 */
-  alt?: string
+  alt?: AltType
   /** Rel 属性 */
-  rel?: string
+  rel?: RelType
 }
 
 /** Announcement 接口 */
 export interface Prelink {
   /** 链接的 URL。 */
-  link?: string
+  link?: LinkType
   /** 链接的标题。 */
   title: string
   /** 链接的内容。 */
@@ -132,9 +147,9 @@ export interface Prelink {
   /** 复制的内容 */
   install?: string
   /** 图片的 alt 文本 */
-  alt?: string
+  alt?: AltType
   /** Rel 属性 */
-  rel?: string
+  rel?: RelType
 }
 
 /** Twikoo 配置数据类型接口。 */
@@ -164,7 +179,7 @@ export interface Group {
   /** 链接数组 */
   links: Link[]
   /** 无障碍描述 */
-  alt?: string
+  alt?: AltType
 }
 
 /** HomeFooter Beian 接口 */
@@ -190,9 +205,9 @@ export interface Author {
   /** 作者姓名 */
   name?: string
   /** 作者链接 */
-  link?: string
+  link?: LinkType
   /** 无障碍描述 */
-  alt?: string
+  alt?: AltType
 }
 
 /** HomeFooter Link 接口 */
@@ -204,11 +219,11 @@ export interface Link {
   /** 链接名称 */
   name: string
   /** 链接地址 */
-  link: string
+  link: LinkType
   /** 无障碍描述 */
-  alt?: string
+  alt?: AltType
   /** Rel 属性 */
-  rel?: string
+  rel?: RelType
 }
 
 /** DocVideoLink 接口 */

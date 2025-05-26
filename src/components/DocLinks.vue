@@ -1,80 +1,31 @@
 <script setup lang="ts">
-import { Icon, LinkItem, isExternal } from '../types'
+import { LinkItem, Icon } from '../types'
+import { IconDisplay, ImageDisplay, Link } from '../composables'
 
 const props = defineProps<{ items: LinkItem[] }>()
 </script>
 
 <template>
-  <a
+  <Link
     v-for="(link, index) in props.items"
     :key="link.link + index"
-    class="link ignore-header"
-    :href="link.link"
-    :target="isExternal(link.link) ? '_blank' : '_self'"
-    :rel="link.rel || (isExternal(link.link) ? 'noreferrer' : undefined)"
+    :link="link.link"
+    :rel="link.rel"
+    :classes="'link'"
   >
     <template v-if="link.icon">
-      <Icon
-        v-if="typeof link.icon === 'object'"
-        class="iconify light-only"
-        :icon="link.icon.light"
-        :color="typeof link.color === 'object' ? link.color.light : link.color"
-        :ssr="true"
-        :inline="true"
-        :aria-label="link.alt"
-        width="32"
-        height="32"
-      />
-      <Icon
-        v-if="typeof link.icon === 'object'"
-        class="iconify dark-only"
-        :icon="link.icon.dark"
-        :color="typeof link.color === 'object' ? link.color.dark : link.color"
-        :ssr="true"
-        :inline="true"
-        :aria-label="link.alt"
-        width="32"
-        height="32"
-      />
-      <Icon
-        v-else
-        class="iconify"
+      <IconDisplay
         :icon="link.icon"
-        :color="typeof link.color === 'string' ? link.color : ''"
-        :ssr="true"
-        :inline="true"
-        :aria-label="link.alt"
+        :color="link.color"
+        :alt="link.alt"
         width="32"
         height="32"
       />
     </template>
     <template v-else-if="link.image">
-      <img
-        v-if="typeof link.image === 'object'"
-        class="light-only"
-        :src="link.image.light"
+      <ImageDisplay
+        :image="link.image"
         :alt="link.alt"
-        loading="lazy"
-        decoding="async"
-        width="32"
-        height="32"
-      />
-      <img
-        v-if="typeof link.image === 'object'"
-        class="dark-only"
-        :src="link.image.dark"
-        :alt="link.name"
-        loading="lazy"
-        decoding="async"
-        width="32"
-        height="32"
-      />
-      <img
-        v-else
-        :src="link.image"
-        :alt="link.alt"
-        loading="lazy"
-        decoding="async"
         width="32"
         height="32"
       />
@@ -92,7 +43,7 @@ const props = defineProps<{ items: LinkItem[] }>()
       <span class="name">{{ link.name }}</span>
       <p v-if="link.desc" class="desc">{{ link.desc }}</p>
     </div>
-  </a>
+  </Link>
 </template>
 
 <style scoped>
