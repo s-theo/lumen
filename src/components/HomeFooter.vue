@@ -18,14 +18,11 @@ onMounted(() => {
 <template>
   <footer class="footer">
     <div v-if="footer.group" class="list-container">
-      <div
-        v-for="(section, index) in footer.group || []"
-        :key="section.title + index"
-      >
+      <div v-for="(section, index) in footer.group || []" :key="section.title + index">
         <span class="list-title">
           <template v-if="section.icon">
             <Icon
-              class="iconify"
+              class="iconify icon-space"
               :icon="section.icon"
               :color="section.color"
               :ssr="true"
@@ -33,17 +30,14 @@ onMounted(() => {
               :aria-label="section.alt"
               width="14"
               height="14"
-            />&nbsp;
+            />
           </template>
           {{ section.title }}
         </span>
-        <div
-          v-for="(link, idx) in section.links"
-          :key="link.name + idx"
-          class="list-links"
-        >
+        <div v-for="(link, idx) in section.links" :key="link.name + idx" class="list-links">
           <template v-if="link.icon">
             <Icon
+              class="iconify icon-space"
               :icon="link.icon"
               :color="link.color"
               :ssr="true"
@@ -51,11 +45,11 @@ onMounted(() => {
               :aria-label="link.alt"
               width="14"
               height="14"
-            />&nbsp;</template
-          >
-          <Link :href="link.link" :rel="link.rel"
-            >{{ link.name
-            }}<Icon
+            />
+          </template>
+          <Link :href="link.link" :rel="link.rel">
+            {{ link.name }}
+            <Icon
               v-if="isExternal(link.link)"
               class="external-link-icon"
               icon="basil:arrow-up-outline"
@@ -75,19 +69,15 @@ onMounted(() => {
         <p v-if="footer.beian?.icp" class="footer-infotext">
           <Icon
             v-if="footer.beian?.showIcon"
-            class="info-icon"
+            class="info-icon icon-space"
             :aria-label="footer.beian.icpalt"
             :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
             :ssr="true"
             :inline="true"
             width="12"
             height="12"
-          />&nbsp;<Link
-            href="https://beian.miit.gov.cn/#/Integrated/index"
-            title="ICP备案"
-            target="_blank"
-            rel="noreferrer"
-          >
+          />
+          <Link href="https://beian.miit.gov.cn/#/Integrated/index" title="ICP备案" target="_blank" rel="noreferrer">
             {{ footer.beian.icp }}
           </Link>
         </p>
@@ -95,21 +85,15 @@ onMounted(() => {
         <p v-if="footer.beian?.police" class="footer-infotext">
           <Icon
             v-if="footer.beian?.showIcon"
-            class="info-icon"
+            class="info-icon icon-space"
             :aria-label="footer.beian.policealt"
-            :icon="
-              footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'
-            "
+            :icon="footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'"
             :ssr="true"
             :inline="true"
             width="12"
             height="12"
-          />&nbsp;<Link
-            href="https://beian.mps.gov.cn/"
-            title="公安备案"
-            target="_blank"
-            rel="noreferrer"
-          >
+          />
+          <Link href="https://beian.mps.gov.cn/" title="公安备案" target="_blank" rel="noreferrer">
             {{ footer.beian.police }}
           </Link>
         </p>
@@ -127,15 +111,12 @@ onMounted(() => {
             :inline="true"
             width="12"
             height="12"
-          />&nbsp;{{ Year }}
-          <Link
-            :href="footer.author?.link"
-            title="GitHub"
-            target="_blank"
-            rel="noreferrer"
-            itemprop="author"
-            >{{ footer.author?.name }}</Link
-          >.&nbsp;All Rights Reserved.
+          />
+          {{ Year }}
+          <Link :href="footer.author?.link" title="GitHub" target="_blank" rel="noreferrer" itemprop="author">
+            {{ footer.author?.name }}.
+          </Link>
+          All Rights Reserved.
         </p>
       </span>
     </div>
@@ -188,6 +169,10 @@ onMounted(() => {
 .iconify {
   display: inline-block;
   flex-shrink: 0;
+}
+
+.icon-space {
+  margin-right: 0.3em;
 }
 
 .footer-info {

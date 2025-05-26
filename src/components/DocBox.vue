@@ -6,21 +6,9 @@ const props = defineProps<{ items: BoxItem[] }>()
 </script>
 
 <template>
-  <Link
-    v-for="(box, index) in props.items"
-    :key="box.link + index"
-    :href="box.link"
-    :rel="box.rel"
-    :classes="'link'"
-  >
+  <Link v-for="(box, index) in props.items" :key="box.link + index" :href="box.link" :rel="box.rel" :classes="'link'">
     <template v-if="box.icon">
-      <IconDisplay
-        :icon="box.icon"
-        :color="box.color"
-        :alt="box.alt"
-        width="38"
-        height="38"
-      />
+      <IconDisplay :icon="box.icon" :color="box.color" :alt="box.alt" width="38" height="38" />
     </template>
     <template v-else-if="box.image">
       <ImageDisplay :image="box.image" :alt="box.alt" width="38" height="38" />

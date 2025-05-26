@@ -11,29 +11,13 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
     :key="index"
     :href="aside.link"
     :rel="aside.rel"
-    :classes="
-      'link' +
-      (aside.promo ? ' has-promo' : '') +
-      (aside.name ? ' has-name' : '')
-    "
+    :classes="'link' + (aside.promo ? ' has-promo' : '') + (aside.name ? ' has-name' : '')"
   >
     <template v-if="aside.icon">
-      <IconDisplay
-        :icon="aside.icon"
-        :color="aside.color"
-        :alt="aside.alt"
-        width="24"
-        height="24"
-      />
+      <IconDisplay :icon="aside.icon" :color="aside.color" :alt="aside.alt" width="24" height="24" />
     </template>
     <template v-else-if="aside.image">
-      <ImageDisplay
-        :classes="'icon'"
-        :image="aside.image"
-        :alt="aside.alt"
-        width="24"
-        height="24"
-      />
+      <ImageDisplay :classes="'icon'" :image="aside.image" :alt="aside.alt" width="24" height="24" />
     </template>
     <div>
       <span class="promo" v-html="aside.promo"></span>
