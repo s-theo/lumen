@@ -14,21 +14,10 @@ const props = defineProps<{ items: LinkItem[] }>()
     :classes="'link'"
   >
     <template v-if="link.icon">
-      <IconDisplay
-        :icon="link.icon"
-        :color="link.color"
-        :alt="link.alt"
-        width="32"
-        height="32"
-      />
+      <IconDisplay :icon="link.icon" :color="link.color" :alt="link.alt" width="32" height="32" />
     </template>
     <template v-else-if="link.image">
-      <ImageDisplay
-        :image="link.image"
-        :alt="link.alt"
-        width="32"
-        height="32"
-      />
+      <ImageDisplay :image="link.image" :alt="link.alt" width="32" height="32" />
     </template>
     <template v-else>
       <Icon

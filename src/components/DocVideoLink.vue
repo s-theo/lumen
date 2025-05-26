@@ -14,9 +14,7 @@ const config = computed(() => getVideo(props))
       class="video-iframe"
       loading="lazy"
       :title="config.title"
-      :src="
-        typeof config.src === 'function' ? config.src(props.id) : config.src
-      "
+      :src="typeof config.src === 'function' ? config.src(props.id) : config.src"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
       allowfullscreen
     />

@@ -1,17 +1,6 @@
 <!-- iconify图标 -->
-<Pill
-  name="Iconify"
-  link="https://iconify.design/"
-  icon="line-md:iconify2-static"
-  color="#1769AA"
-  alt="iconify icon"
-/>
-<Pill
-  name="Vue"
-  link="https://vuejs.org/"
-  icon="vscode-icons:file-type-vue"
-  alt="vue icon"
-/>
+<Pill name="Iconify" link="https://iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />
+<Pill name="Vue" link="https://vuejs.org/" icon="vscode-icons:file-type-vue" alt="vue icon" />
 
 <!-- 深浅模式的iconify图标 -->
 <Pill

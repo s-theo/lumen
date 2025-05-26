@@ -13,12 +13,7 @@ const shareLink = useShareLink()
 
 <template>
   <div class="share-link-container">
-    <button
-      class="share-link-button"
-      :class="{ copied }"
-      aria-live="assertive"
-      @click="copyLink(shareLink)"
-    >
+    <button class="share-link-button" :class="{ copied }" aria-live="assertive" @click="copyLink(shareLink)">
       <span v-if="!copied" class="buttonText">
         <Icon
           class="iconify"
