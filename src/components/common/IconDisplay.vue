@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { computed } from 'vue'
-import { Icon, IconImageType, AltType, WidthType, HeightType, ClassesType } from '../types'
+import { Icon, IconImageType, AltType, WidthType, HeightType, ClassesType } from '../../types'
 
 const props = defineProps<{
   icon: IconImageType
