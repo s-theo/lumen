@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon, usePrelink, handleClick, isExternal } from '../types'
+import { Icon, usePrelink, handleClick } from '../types'
 import { Link } from '../composables'
 
 const prelink = usePrelink()

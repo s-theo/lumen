@@ -1,15 +1,15 @@
 /** 图标和图片的类型 */
 export type IconImageType = string | IconImageMode
 /** Alt 文本类型 */
-export type AltType = string
+export type AltType = string | undefined
 /** 宽度类型 */
-export type WidthType = string
+export type WidthType = string | undefined
 /** 高度类型 */
-export type HeightType = string
+export type HeightType = string | undefined
 /** 链接类型 */
-export type LinkType = string
+export type LinkType = string | undefined
 /** Rel 属性类型 */
-export type RelType = string
+export type RelType = string | undefined
 /** 样式类类型 */
 export type ClassesType = string | string[]
 
