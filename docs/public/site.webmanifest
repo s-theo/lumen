@@ -1,6 +1,6 @@
 {
-  "name": "Lumen",
-  "short_name": "Lumen",
+  "background_color": "#ffffff",
+  "display": "standalone",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "name": "Lumen",
+  "short_name": "Lumen",
+  "theme_color": "#ffffff"
 }

@@ -28,6 +28,10 @@ overrides:
     options:
       jsonRecursiveSort: true
 
+  - files: ['*.vue']
+    options:
+      printWidth: 120
+
 attributeGroups:
   - '^((v-bind)?:?|v-)is$'
   - '^v-for$'
