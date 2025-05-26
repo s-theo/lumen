@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Pill } from '../types'
-import { IconDisplay, ImageDisplay, Link } from '../composables'
+import { IconDisplay, ImageDisplay, Link } from './common'
 
 const pill = defineProps<Pill>()
 </script>

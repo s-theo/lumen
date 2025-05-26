@@ -50,7 +50,6 @@
   "files": [
     "theme/",
     "types/",
-    "analytics/",
     "components/",
     "composables/",
     "tsconfig.json",
