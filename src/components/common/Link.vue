@@ -1,6 +1,6 @@
 您说：
 <script setup lang="ts">
-import { isExternal, LinkType, RelType, ClassesType } from '../types'
+import { isExternal, LinkType, RelType, ClassesType } from '../../types'
 
 const props = defineProps<{
   href: LinkType

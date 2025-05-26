@@ -15,6 +15,5 @@ export { default as HomeUnderline } from '../components/HomeUnderline.vue'
 export { default as ShareButton } from '../components/ShareButton.vue'
 
 export { Icon } from '@iconify/vue'
-export * from '../analytics'
+export * from '../composables'
 export * from './types'
-export * from './utils'

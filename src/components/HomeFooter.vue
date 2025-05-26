@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FooterData, Icon, isExternal } from '../types'
-import { Link } from '../composables'
+import { Link } from './common'
 import { ref, onMounted } from 'vue'
 
 // 使用 defineProps 定义属性
