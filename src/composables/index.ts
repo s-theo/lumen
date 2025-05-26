@@ -1,3 +1,4 @@
-export { default as IconDisplay } from './IconDisplay.vue'
-export { default as ImageDisplay } from './ImageDisplay.vue'
-export { default as Link } from './Link.vue'
+export { baiduAnalytics, trackPageview } from './baiduAnalytics'
+export { default as googleAnalytics } from './googleAnalytics'
+export { default as umamiAnalytics } from './umamiAnalytics'
+export * from './utils'

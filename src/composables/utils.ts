@@ -9,7 +9,7 @@ import {
   ref
 } from 'vue'
 
-import type { Prelink, VideoProps } from './types'
+import type { Prelink, VideoProps } from '../types'
 
 /**
  * 提取 frontmatter 中 hero 配置的 `prelink` 属性。
