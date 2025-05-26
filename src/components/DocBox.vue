@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { BoxItem } from '../types'
-import { IconDisplay, ImageDisplay, Link } from '../composables'
+import { IconDisplay, ImageDisplay, Link } from './common'
 
 const props = defineProps<{ items: BoxItem[] }>()
 </script>
