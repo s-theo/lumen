@@ -1,18 +1,12 @@
 <script setup lang="ts">
-import { LinkItem, Icon } from '../types'
+import { LinkItem } from '../types'
 import { IconDisplay, ImageDisplay, Link } from './common'
 
 const props = defineProps<{ items: LinkItem[] }>()
 </script>
 
 <template>
-  <Link
-    v-for="(link, index) in props.items"
-    :key="link.link + index"
-    :href="link.link"
-    :rel="link.rel"
-    :classes="'link'"
-  >
+  <Link v-for="(link, index) in props.items" :key="link.link + index" class="link" :href="link.link" :rel="link.rel">
     <template v-if="link.icon">
       <IconDisplay :icon="link.icon" :color="link.color" :alt="link.alt" width="32" height="32" />
     </template>
@@ -20,9 +14,9 @@ const props = defineProps<{ items: LinkItem[] }>()
       <ImageDisplay :image="link.image" :alt="link.alt" width="32" height="32" />
     </template>
     <template v-else>
-      <Icon
+      <IconDisplay
         class="default-icon"
-        aria-label="external link icon"
+        alt="external link icon"
         icon="fa6-solid:arrow-up-right-from-square"
         width="24"
         height="24"

@@ -11,18 +11,18 @@ head:
 
 # 视频组件 - DocVideoLink
 
-支持多种主流视频平台，还允许用户通过自定义链接嵌入其他视频源。通过简单的配置，可以轻松将各种视频嵌入到您的页面中，提升用户的观看体验。
+该组件支持多种主流视频平台的视频嵌入，并允许通过自定义链接插入任意视频源。通过简洁的属性配置，可以轻松集成 YouTube、Bilibili、腾讯视频、优酷、Vimeo 等平台的视频，保证响应式设计和优质的观看体验。
 
-- **支持多平台**：内置对 <Pill name="YouTube" icon="logos:youtube-icon" link="https://www.youtube.com/" alt="youtube icon" />
+- **支持多平台**：内置支持 <Pill name="YouTube" icon="logos:youtube-icon" link="https://www.youtube.com/" alt="youtube icon" />
   <Pill name="Bilibili" icon="simple-icons:bilibili" color="#00A1D6" link="https://www.bilibili.com/" alt="bilibili icon" />
   <Pill name="腾讯视频" image="https://v.qq.com/favicon.ico" link="https://v.qq.com/" alt="腾讯视频 icon" />
   <Pill name="优酷视频" image="https://img.alicdn.com/imgextra/i2/O1CN01BeAcgL1ywY0G5nSn8_!!6000000006643-2-tps-195-195.png" link="https://www.youku.com/" alt="优酷视频 icon" />
-  <Pill name="Vimeo" icon="logos:vimeo-icon" link="https://vimeo.com" alt="vimeo icon"/>的支持，只需要提供平台标识符和视频 ID 即可。
-- **自定义视频链接**：除了主流视频平台外，Vid 还支持直接嵌入 MP4 或其他格式的视频链接。
-- **响应式设计**：该组件自动适应不同屏幕尺寸，确保在桌面和移动设备上都能流畅播放。
-- **简便易用**：通过简单的配置项，您可以快速将视频内容集成到页面中，无需复杂的代码。
+  <Pill name="Vimeo" icon="logos:vimeo-icon" link="https://vimeo.com" alt="vimeo icon"/>，只需提供对应平台标识 `is` 和视频 ID `id` 即可。
+- **自定义视频链接**：也可直接通过 `src` 属性插入自定义视频链接，适用于 MP4 文件或其他视频源。
+- **响应式设计**：自动适配不同屏幕尺寸，兼容移动端与桌面端，保证视频比例和显示效果。
+- **使用简便**：清晰的属性接口，无需额外配置，快速嵌入视频。
 
-## 引入组件
+## 组件引入示例
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
@@ -41,43 +41,42 @@ export default {
 ## 使用示例
 
 :::tip
-只需要提供平台名称(`is`)和视频 ID（`id`），即可实现视频的嵌入。
-
-当没有传递 `is` 时，默认会使用 YouTube 平台。例如：
+只需传入平台标识 `is` 和视频 ID `id` 即可实现视频嵌入。未传 `is` 默认使用 YouTube。
 :::
 
 ```vue
-YouTube 视频
+<!-- YouTube 视频 -->
 <Vid id="dQw4w9WgXcQ" />
-<!-- 或者 -->
+<!-- 指定平台 -->
 <Vid is="youtube" id="dQw4w9WgXcQ" />
 
-Bilibili 视频
+<!-- Bilibili 视频 -->
 <Vid is="bilibili" id="BV1if421Q7mL" />
 
-腾讯视频
+<!-- 腾讯视频 -->
 <Vid is="tencent" id="y0035f2sc4s" />
 
-优酷视频
+<!-- 优酷视频 -->
 <Vid is="youku" id="XNTE5NTc3NjIwMA==" />
 
-vimeo 视频
+<!-- Vimeo 视频 -->
 <Vid is="vimeo" id="76979871" />
 ```
 
-### 其他平台视频
+### 自定义视频链接示例
 
 ```vue-html
+<!-- 其他视频平台嵌入 -->
 <Vid src="https://geo.dailymotion.com/player.html?video=x7z0ovx" />
-<Vid
-  src="https://download.blender.org/durian/trailer/sintel_trailer-720p.mp4"
-/>
+
+<!-- 直接嵌入 MP4 视频 -->
+<Vid src="https://download.blender.org/durian/trailer/sintel_trailer-720p.mp4" />
 ```
 
 ## 数据接口说明
 
-| 属性名 | 类型                                                        | 说明                                                                            |
-| ------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `id`   | `string`                                                    | 视频的唯一标识符，只有在选择平台时才需要使用 `id`。                             |
-| `is`   | `'youtube' \| 'bilibili' \| 'tencent' \| 'youku'\| 'vimeo'` | 视频平台类型，值为 `youtube`、`bilibili`、`tencent` 、`youku` 或 `vimeo` 之一。 |
-| `src`  | `string`                                                    | 自定义视频链接，只有在 `is` 和`id` 不存在时才需要提供。                         |
+| 属性  | 类型                                                         | 说明                                                    |
+| ----- | ------------------------------------------------------------ | ------------------------------------------------------- |
+| `id`  | `string`                                                     | 视频唯一标识符，仅在指定 `is` 时必需，表示平台视频 ID。 |
+| `is`  | `'youtube' \| 'bilibili' \| 'tencent' \| 'youku' \| 'vimeo'` | 视频平台类型，默认使用 YouTube。                        |
+| `src` | `string`                                                     | 自定义视频链接，未指定 `is` 和 `id` 时使用。            |
