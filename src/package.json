@@ -65,7 +65,7 @@
     "iconify-icon": "^3.0.0",
     "twikoo": "^1.6.44",
     "typescript": "^5.8.3",
-    "vue": "^3.5.14"
+    "vue": "^3.5.15"
   },
   "devDependencies": {
     "vite": "^6.3.5",
