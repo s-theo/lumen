@@ -9,9 +9,9 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   <Link
     v-for="(boxcube, index) in props.items"
     :key="boxcube.link + index"
+    class="link"
     :href="boxcube.link"
     :rel="boxcube.rel"
-    :classes="'link'"
   >
     <template v-if="boxcube.icon">
       <IconDisplay :icon="boxcube.icon" :color="boxcube.color" :alt="boxcube.alt" width="38" height="38" />
