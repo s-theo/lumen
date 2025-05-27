@@ -1,15 +1,12 @@
 <script setup lang="ts">
-import { FooterData, Icon, isExternal } from '../types'
-import { Link } from './common'
+import { FooterData, isExternal } from '../types'
+import { Link, IconDisplay } from './common'
 import { ref, onMounted } from 'vue'
 
-// 使用 defineProps 定义属性
 const props = defineProps<{ Footer_Data: FooterData }>()
 const footer = props.Footer_Data
 
-// 获取当前年份
 const Year = ref('')
-
 onMounted(() => {
   Year.value = new Date().getFullYear().toString()
 })
@@ -17,45 +14,37 @@ onMounted(() => {
 
 <template>
   <footer class="footer">
-    <div v-if="footer.group" class="list-container">
-      <div v-for="(section, index) in footer.group || []" :key="section.title + index">
+    <div v-if="footer.group?.length" class="list-container">
+      <div v-for="(section, index) in footer.group" :key="section.title + index">
         <span class="list-title">
-          <template v-if="section.icon">
-            <Icon
-              class="iconify icon-space"
-              :icon="section.icon"
-              :color="section.color"
-              :ssr="true"
-              :inline="true"
-              :aria-label="section.alt"
-              width="14"
-              height="14"
-            />
-          </template>
+          <IconDisplay
+            v-if="section.icon"
+            class="iconify icon-space"
+            :icon="section.icon"
+            :color="section.color"
+            :alt="section.alt"
+            width="14"
+            height="14"
+          />
           {{ section.title }}
         </span>
         <div v-for="(link, idx) in section.links" :key="link.name + idx" class="list-links">
-          <template v-if="link.icon">
-            <Icon
-              class="iconify icon-space"
-              :icon="link.icon"
-              :color="link.color"
-              :ssr="true"
-              :inline="true"
-              :aria-label="link.alt"
-              width="14"
-              height="14"
-            />
-          </template>
+          <IconDisplay
+            v-if="link.icon"
+            class="iconify icon-space"
+            :icon="link.icon"
+            :color="link.color"
+            :alt="link.alt"
+            width="14"
+            height="14"
+          />
           <Link :href="link.link" :rel="link.rel">
             {{ link.name }}
-            <Icon
+            <IconDisplay
               v-if="isExternal(link.link)"
               class="external-link-icon"
               icon="basil:arrow-up-outline"
-              :ssr="true"
-              :inline="true"
-              aria-label="External Link Icon"
+              alt="External Link Icon"
               width="14"
               height="14"
             />
@@ -66,35 +55,35 @@ onMounted(() => {
 
     <div class="footer-info">
       <span v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
-        <p v-if="footer.beian?.icp" class="footer-infotext">
-          <Icon
+        <p v-if="footer.beian?.icp?.number" class="footer-infotext">
+          <IconDisplay
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
-            :aria-label="footer.beian.icpalt"
-            :icon="footer.beian.icpIcon || 'fluent:globe-shield-48-filled'"
-            :ssr="true"
-            :inline="true"
+            :icon="footer.beian.icp.icon || 'fluent:globe-shield-48-filled'"
+            :color="footer.beian.icp.color"
+            :alt="footer.beian.icp.alt"
             width="12"
             height="12"
           />
-          <Link href="https://beian.miit.gov.cn/#/Integrated/index" title="ICP备案" target="_blank" rel="noreferrer">
-            {{ footer.beian.icp }}
+          <Link :rel="footer.beian.icp.rel" href="https://beian.miit.gov.cn/#/Integrated/index">
+            {{ footer.beian.icp.number }}
           </Link>
         </p>
+
         <span class="info-spacing"></span>
-        <p v-if="footer.beian?.police" class="footer-infotext">
-          <Icon
+
+        <p v-if="footer.beian?.police?.number" class="footer-infotext">
+          <IconDisplay
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
-            :aria-label="footer.beian.policealt"
-            :icon="footer.beian.policeIcon || 'fluent:shield-checkmark-48-filled'"
-            :ssr="true"
-            :inline="true"
+            :icon="footer.beian.police.icon || 'fluent:shield-checkmark-48-filled'"
+            :color="footer.beian.police.color"
+            :alt="footer.beian.police.alt"
             width="12"
             height="12"
           />
-          <Link href="https://beian.mps.gov.cn/" title="公安备案" target="_blank" rel="noreferrer">
-            {{ footer.beian.police }}
+          <Link :rel="footer.beian.police.rel" href="https://beian.mps.gov.cn/">
+            {{ footer.beian.police.number }}
           </Link>
         </p>
       </span>
@@ -103,19 +92,16 @@ onMounted(() => {
 
       <span v-if="footer.author?.name" class="info-item">
         <p class="footer-infotext">
-          <Icon
+          <IconDisplay
             class="info-icon"
-            :aria-label="footer.author.alt"
-            icon="ri:copyright-line"
-            :ssr="true"
-            :inline="true"
+            :icon="footer.author.icon || 'ri:copyright-line'"
+            :color="footer.author.color"
+            :alt="footer.author.alt"
             width="12"
             height="12"
           />
           {{ Year }}
-          <Link :href="footer.author?.link" title="GitHub" target="_blank" rel="noreferrer" itemprop="author">
-            {{ footer.author?.name }}.
-          </Link>
+          <Link :rel="footer.author.rel" :href="footer.author.link"> {{ footer.author.name }}. </Link>
           All Rights Reserved.
         </p>
       </span>
