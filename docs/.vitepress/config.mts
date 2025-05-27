@@ -39,8 +39,8 @@ export default defineConfig({
     plugins: [
       groupIconVitePlugin({
         customIcon: {
-          所有主题: 'logos:typescript-icon',
-          部分主题: 'logos:typescript-icon',
+          按需导入: 'logos:typescript-icon',
+          全量导入: 'logos:typescript-icon',
           单独导入: 'logos:typescript-icon',
           '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg'
         }

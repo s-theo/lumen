@@ -17,7 +17,7 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       <IconDisplay :icon="aside.icon" :color="aside.color" :alt="aside.alt" width="24" height="24" />
     </template>
     <template v-else-if="aside.image">
-      <ImageDisplay :classes="'icon'" :image="aside.image" :alt="aside.alt" width="24" height="24" />
+      <ImageDisplay class="icon" :image="aside.image" :alt="aside.alt" width="24" height="24" />
     </template>
     <div>
       <span class="promo" v-html="aside.promo"></span>
