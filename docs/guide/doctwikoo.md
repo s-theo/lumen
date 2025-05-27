@@ -25,30 +25,34 @@ head:
 
 ## 创建数据
 
-在`.vitepress`目录下新建`data/Twikoo.ts`文件，并添加以下内容：
+在 `.vitepress/data/Twikoo.ts` 文件中创建评论配置：
 
 ```ts [.vitepress/data/Twikoo.ts]
 import type { TwikooData } from '@theojs/lumen'
 
 export const Twikoo_Data: TwikooData = {
-  envId: 'https://xxxxxx' // 修改成部署的Twikoo地址
+  envId: 'https://xxxxxx' // 替换为你的 Twikoo 服务地址
 }
 ```
 
-## 引入组件
+## `TwikooData` 接口说明
 
-::: tip
-`.. /data/Twikoo.ts` 可替换为存放数据的路径
-:::
+| 字段    | 类型     | 描述                                   | 是否必填              |
+| ------- | -------- | -------------------------------------- | --------------------- |
+| `envId` | `string` | Twikoo 的环境 ID，通常是你的服务地址。 | <Badge text="必填" /> |
+
+## 引入评论组件
+
+### 文档页面使用
+
+在 `.vitepress/theme/index.ts` 中注册组件并插入评论区域
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
 import { h } from 'vue' // [!code ++]
-
 import { Twikoo } from '@theojs/lumen' // [!code ++]
-
-import { Twikoo_Data } from '../data' // [!code ++]
+import { Twikoo_Data } from '../data' // [!code ++] 或指定你存放数据的路径
 
 export default {
   extends: DefaultTheme,
@@ -61,11 +65,12 @@ export default {
 }
 ```
 
-## 在首页使用
+### 在首页使用
+
+你也可以在首页直接挂载 `Twikoo` 组件：
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 import { h } from 'vue' // [!code ++]
 
 import { Twikoo } from '@theojs/lumen' // [!code ++]
