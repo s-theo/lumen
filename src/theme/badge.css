@@ -19,3 +19,7 @@
   --vp-badge-danger-text: var(--vp-c-danger-1);
   --vp-badge-danger-bg: var(--vp-c-danger-soft);
 }
+
+.VPBadge {
+  white-space: nowrap !important;
+}
