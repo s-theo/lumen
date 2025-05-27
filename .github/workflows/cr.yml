@@ -22,7 +22,7 @@ jobs:
     if: >
       (github.event_name == 'push' && 
       github.event.head_commit != null && 
-      startsWith(github.event.head_commit.message, 'release:') == false) ||
+      startsWith(github.event.head_commit.message, 'chore: release') == false) ||
       github.event_name == 'pull_request'
 
     steps:
