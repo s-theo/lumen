@@ -13,7 +13,7 @@ head:
 
 ![效果图|300x0](https://i.theojs.cn/logo/Lumen-Logo.webp '效果图')
 
-## 安装 @mdit/plugin-figure 插件
+## 安装 `@mdit/plugin-figure` 插件
 
 ::: code-group
 
@@ -53,7 +53,7 @@ export default defineConfig({
 
 ::: code-group
 
-```ts [所有主题]
+```ts [全量导入]
 // theme/index.ts
 import '@theojs/lumen/theme'
 ```
@@ -69,7 +69,7 @@ import '@theojs/lumen/pic'
 
 <<< @/../src/theme/picture.css
 
-## 使用
+## 使用示例
 
 ```md
 ![效果图](https://i.theojs.cn/logo/Lumen-Logo.webp)

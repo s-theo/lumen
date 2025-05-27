@@ -31,7 +31,7 @@ export default {
 
 ### 获取 Google Analytics ID
 
-1. 访问 [Google Analytics](https://analytics.google.com/) 网站。
+1. 访问<Pill name="Google Analytics" link="https://analytics.google.com/" icon="logos:google-analytics" alt="Google Analytics icon" />网站。
 2. 登录到你的 Google Analytics 帐号。
 3. 创建一个新的 Google Analytics 账户，或者选择已有的账户。
 4. 在左下角点击 `Admin`（管理）。
@@ -40,7 +40,7 @@ export default {
 7. 在 `Property Settings`（属性设置）中，找到 `Tracking Info`（跟踪信息）。
 8. 点击 `Tracking Code`（跟踪代码），你会看到类似 `G-XXXXXXX` 的 ID。
 
-**参考链接：**[Google Analytics 帮助文档](https://support.google.com/analytics/answer/9304153?hl=zh-Hans)
+**详细操作见官方文档：** <Pill name="Google Analytics 帮助文档" link="https://support.google.com/analytics/answer/9304153?hl=zh-Hans" icon="logos:google-analytics" alt="Google Analytics icon" />
 
 ## 百度统计 - baiduAnalytics
 
@@ -63,14 +63,13 @@ export default {
 
 ### 获取 Baidu Analytics ID
 
-1. 访问 [百度统计](https://tongji.baidu.com/) 网站。
+1. 访问 <Pill name="百度统计" link="https://tongji.baidu.com/" icon="ri:baidu-fill" color="#2932E1" alt="百度统计图标" /> 网站。
 2. 使用百度账号登录或注册一个新账号。
 3. 登录后，点击页面上方的 `我的报告`-`使用设置`-`网站列表`。
-4. 输入你的网站 URL，选择适当的分类，然后点击 `保存`
-5. 保存后，点击获取代码。会看到类似于 `https://hm.baidu.com/hm.js?******` 的内容
-6. 复制链接中`******`部分
+4. 添加你的网站，选择分类并保存
+5. 获取统计代码，复制链接中 `hm.js?******` 的 ID 部分。
 
-**参考链接：** [百度统计官方文档](https://tongji.baidu.com/web/help/article?id=175&type=0)
+**详细操作见官方文档：** <Pill name="百度统计官方文档" link="https://tongji.baidu.com/web/help/article?id=175&type=0" icon="ri:baidu-fill" color="#2932E1" alt="百度统计图标" />
 
 ## Umami - umamiAnalytics
 
@@ -85,7 +84,7 @@ export default {
     umamiAnalytics({// [!code ++]
       id: '***-***-***-***',// [!code ++]
       src: 'https://*******',// [!code ++]
-      domains: 'your.domain.com'// [!code ++] 详细信息查看 https://umami.is/docs/tracker-configuration#data-domains
+      domains: 'your.domain.com'// [!code ++] 可选，参考官方配置 https://umami.is/docs/tracker-configuration#data-domains
     }) // [!code ++]
   }
   ...
@@ -96,19 +95,15 @@ export default {
 
 #### 自建 Umami
 
-1. 首先，你需要搭建 Umami 服务器。你可以参考 [Umami 文档](https://umami.is/docs/guides/hosting) 来进行安装。
-2. 在你搭建好的 Umami 实例中，登录到 Umami 仪表盘。
-3. 创建一个新的站点，并为其生成一个站点 ID。
-4. 获取该站点的 ID 后，就可以在你的网站代码中使用它进行跟踪。
+1. 参考 <Pill name="Umami 文档" link="https://umami.is/docs/guides/hosting" icon="simple-icons:umami" :color="{ light: '#000000', dark: '#ffffff' }" alt="umami图标" /> 搭建 Umami 服务器。
+2. 登录 Umami 仪表盘，创建新站点。
+3. 复制该站点的 ID 用于配置。
 
 #### 使用公共 Umami 服务
 
-1. 你也可以使用公共的 Umami 服务提供商。例如，Umami 提供了一些第三方的 Umami 实例，允许用户直接使用。
-2. 获取到公共实例的 Umami ID 后，可以直接在代码中配置使用。
+1. 使用第三方 Umami 公共实例。
+2. 获取公共实例分配的站点 ID。
 
-你的 Umami ID 应该类似于：`123abc456def`
+> 你的 Umami ID 应该类似于：`123abc456def`
 
-**参考链接：**
-
-- [Umami 文档](https://umami.is/docs/guides/hosting)
-- [Umami 公共服务](https://umami.is/)
+**官方文档及资源：** <Pill name="Umami 文档" link="https://umami.is/docs/guides/hosting" icon="simple-icons:umami" :color="{ light: '#000000', dark: '#ffffff' }" alt="umami图标" /> <Pill name="Umami 公共服务" link="https://umami.is/" icon="simple-icons:umami" :color="{ light: '#000000', dark: '#ffffff' }" alt="umami图标" />

@@ -68,9 +68,7 @@ export const Aside_Data: AsideItem[] = [
 import DefaultTheme from 'vitepress/theme'
 
 import { h } from 'vue' // [!code ++]
-
 import { DocAsideLogo } from '@theojs/lumen' // [!code ++]
-
 import { Aside_Data } from '../data/AsideData' // [!code ++]
 
 export default {
@@ -86,17 +84,17 @@ export default {
 
 ## 数据接口说明
 
-|  字段   |                     类型                      | 描述                                                                                                                                                                                                     |
-| :-----: | :-------------------------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `link`  |                   `string`                    | 链接地址                                                                                                                                                                                                 |
-| `color` | `string` \| `{ light: string; dark: string }` | 图标的颜色，可为单一颜色字符串，也可以是包含 `light` 和 `dark` 属性的对象                                                                                                                                |
-| `icon`  | `string` \| `{ light: string; dark: string }` | 图标名称，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />可为单一图标名称或包含 `light` 和 `dark` 模式的对象 |
-| `image` | `string` \| `{ light: string; dark: string }` | 图片地址或包含 `light` 和 `dark` 模式的对象                                                                                                                                                              |
-| `name`  |                   `string`                    | <Badge text="可选" /> 名称                                                                                                                                                                               |
-| `promo` |                   `string`                    | <Badge text="可选" /> 活动名称                                                                                                                                                                           |
-| `hide1` |                   `string`                    | <Badge text="可选" /> 隐藏信息1                                                                                                                                                                          |
-| `info1` |                   `string`                    | <Badge text="可选" /> 信息1                                                                                                                                                                              |
-| `hide2` |                   `string`                    | <Badge text="可选" /> 隐藏信息2                                                                                                                                                                          |
-| `info2` |                   `string`                    | <Badge text="可选" /> 信息2                                                                                                                                                                              |
-|  `alt`  |                   `string`                    | <Badge text="可选" /> 图片/图标的 `alt` 文本                                                                                                                                                             |
-|  `rel`  |                   `string`                    | <Badge text="可选" /> 链接的 `rel` 属性。                                                                                                                                                                |
+| 字段    | 类型            | 描述                                                                                                                                                                                                                                | 是否必填              |
+| ------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `link`  | `LinkType`      | 链接地址，点击后跳转目标页面，支持外部或内部链接。例如：`'https://example.com'`。                                                                                                                                                   | <Badge text="必填" /> |
+| `icon`  | `IconImageType` | 图标，支持任意 <Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />，也支持深浅色模式。例如：`{ light: 'mdi:home-outline', dark: 'mdi:home' }`。 | <Badge text="可选" /> |
+| `color` | `IconImageType` | 图标颜色，可为字符串或深浅色对象。例如：`'#E50914'` 或 `{ light: '#E50914', dark: '#FF0000' }`。                                                                                                                                    | <Badge text="可选" /> |
+| `image` | `IconImageType` | 图片，支持普通图片地址或 `{ light, dark }` 模式。例如：`'https://example.com/icon.webp'` 或 `{ light: 'xxx-light.svg', dark: 'xxx-dark.svg' }`。                                                                                    | <Badge text="可选" /> |
+| `name`  | `string`        | 名称文本，常用于品牌、平台名称。例如：`'哔哩哔哩'`。                                                                                                                                                                                | <Badge text="可选" /> |
+| `promo` | `string`        | 活动标题，显示为高亮推广信息。例如：`'限时折扣'`。                                                                                                                                                                                  | <Badge text="可选" /> |
+| `info1` | `string`        | 活动描述，可用于介绍当前推广或产品。例如：`'新人注册即送 5 元红包'`。                                                                                                                                                               | <Badge text="可选" /> |
+| `info2` | `string`        | 附加活动描述，补充额外信息。例如：`'优惠截止至 5 月 30 日'`。                                                                                                                                                                       | <Badge text="可选" /> |
+| `hide1` | `string`        | 默认隐藏的信息块，鼠标悬停时显示。例如：`'仅限中国大陆用户'`。                                                                                                                                                                      | <Badge text="可选" /> |
+| `hide2` | `string`        | 第二个隐藏的信息块，用于额外补充。例如：`'每日限量 500 名用户参与'`。                                                                                                                                                               | <Badge text="可选" /> |
+| `alt`   | `string`        | 图片或图标的无障碍文本描述，有助于屏幕阅读器识别。例如：`'哔哩哔哩标志'`。                                                                                                                                                          | <Badge text="可选" /> |
+| `rel`   | `string`        | 链接的 `rel` 属性，建议使用如 `noopener noreferrer` 提升安全性。例如：`'nofollow'`。                                                                                                                                                | <Badge text="可选" /> |

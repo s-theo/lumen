@@ -11,11 +11,21 @@ head:
 
 # 页面分享按钮组件 - ShareButton
 
-## 引入组件
+## 功能概述
+
+- 一键复制当前页面完整链接到剪贴板
+- 复制成功时显示反馈状态（图标和文本切换）
+- 支持自定义按钮图标、按钮文本及复制成功提示内容
+- 使用 Iconify 图标库，方便替换任意图标
+- 兼容现代浏览器，自动处理复制失败场景提示
+- 可嵌入 VitePress 主题布局的任意位置
+
+## 组件引入
+
+在 `.vitepress/theme/index.ts` 中引入并注册组件，例如将分享按钮插入侧边栏大纲区域：
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme' // [!code ++]
-
 import { h } from 'vue' // [!code ++]
 
 import { ShareButton } from '@theojs/lumen'// [!code ++]
@@ -35,7 +45,6 @@ export default {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 import { h } from 'vue' // [!code ++]
 
 import { ShareButton } from '@theojs/lumen' // [!code ++]
@@ -59,9 +68,9 @@ export default {
 
 ## 参数说明
 
-|    参数名    |   类型   |                                  默认值                                  | 描述                                                                                                                                                                      |
-| :----------: | :------: | :----------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `buttonIcon` | `string` | `solar:copy-bold` : <iconify-icon icon="solar:copy-bold"></iconify-icon> | 按钮图标的类名，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />。             |
-| `buttonText` | `string` |                              `复制页面链接`                              | 按钮显示的文本。                                                                                                                                                          |
-| `copiedIcon` | `string` |   `mdi:thumbs-up` : <iconify-icon icon="mdi:thumbs-up"></iconify-icon>   | 复制成功后显示的图标的类名，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />。 |
-| `copiedText` | `string` |                              `链接已复制!`                               | 复制成功后显示的文本。                                                                                                                                                    |
+|    参数名    |   类型   | 描述                                                                                                                                                                      |                                 默认值                                 |
+| :----------: | :------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------: |
+| `buttonIcon` | `string` | 按钮图标的类名，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />。             | `solar:copy-bold` <iconify-icon icon="solar:copy-bold"></iconify-icon> |
+| `buttonText` | `string` | 按钮显示的文本。                                                                                                                                                          |                             `复制页面链接`                             |
+| `copiedIcon` | `string` | 复制成功后显示的图标的类名，支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />。 |   `mdi:thumbs-up` <iconify-icon icon="mdi:thumbs-up"></iconify-icon>   |
+| `copiedText` | `string` | 复制成功后显示的文本。                                                                                                                                                    |                             `链接已复制!`                              |

@@ -13,6 +13,8 @@ head:
 
 ## 安装
 
+你可以通过以下三种包管理器安装 `@theojs/lumen` 插件，选择你熟悉的方式即可
+
 ::: code-group
 
 ```sh [pnpm]
@@ -29,7 +31,9 @@ yarn add @theojs/lumen
 
 :::
 
-## 页面导航
+## 主要功能模块导航
+
+以下是 `@theojs/lumen` 插件的核心功能模块入口，点击即可查看详细配置和用法
 
 <BoxCube
   :items="[

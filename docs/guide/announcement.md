@@ -22,9 +22,7 @@ head:
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme' // [!code ++]
-
 import { h } from 'vue'
-
 import { Announcement } from '@theojs/lumen' // [!code ++]
 
 export default {
@@ -80,15 +78,15 @@ hero:
 
 ## 数据接口说明
 
-|    字段    |   类型    | 描述                                                                                                                                                                                                                                                            |
-| :--------: | :-------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|   `link`   | `string`  | <Badge text="可选" /> 链接的 URL。                                                                                                                                                                                                                              |
-|  `title`   | `string`  | 链接的标题。                                                                                                                                                                                                                                                    |
-| `content`  | `string`  | <Badge text="可选" /> 链接的内容。                                                                                                                                                                                                                              |
-|   `date`   | `string`  | <Badge text="可选" /> 活动截止日期。                                                                                                                                                                                                                            |
-| `dateText` | `string`  | <Badge text="可选" /> 活动截止内容。默认为 `活动时间: 即日至;`                                                                                                                                                                                                  |
-| `dateIcon` | `string`  | <Badge text="可选" /> 活动截止图标。默认为`line-md:calendar`<iconify-icon icon="line-md:calendar" ></iconify-icon>。支持<Pill name="iconify 图标" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> |
-|   `copy`   | `boolean` | <Badge text="可选" /> 复制开关，默认为 `false`，设置为 `true` 时，点击链接将复制 `install` 字段中的内容，**并且链接将无任何跳转行为**                                                                                                                           |
-| `install`  | `string`  | <Badge text="可选" /> 复制的内容，当 `copy` 为 `true` 时，点击链接将复制该内容到剪贴板。                                                                                                                                                                        |
-|   `alt`    | `string`  | <Badge text="可选" /> 图标的 `alt` 文本                                                                                                                                                                                                                         |
-|   `rel`    | `string`  | <Badge text="可选" /> 链接的 `rel` 属性。                                                                                                                                                                                                                       |
+| 字段       | 类型      | 描述                                                                                                                                                                                                           | 是否必填              |
+| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `link`     | `string`  | 链接地址，点击后跳转的目标 URL。                                                                                                                                                                               | <Badge text="可选" /> |
+| `title`    | `string`  | 链接显示的标题文本，突出展示的主要内容。                                                                                                                                                                       | <Badge text="必填" /> |
+| `content`  | `string`  | 链接下方的补充描述内容，可用于详细说明或附加信息。                                                                                                                                                             | <Badge text="可选" /> |
+| `date`     | `string`  | 活动截止日期或相关时间信息，通常用于提示有效期限。                                                                                                                                                             | <Badge text="可选" /> |
+| `dateText` | `string`  | 活动时间的文字说明，默认为 `活动时间: 即日至`，可自定义显示文案。                                                                                                                                              | <Badge text="可选" /> |
+| `dateIcon` | `string`  | 活动时间旁显示的图标，默认是日历图标（`line-md:calendar`），支持任意 <Pill name="iconify" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> 图标。 | <Badge text="可选" /> |
+| `copy`     | `boolean` | 是否启用点击复制功能。若设置为 `true`，点击链接时将复制 `install` 字段内容，且链接不进行跳转。                                                                                                                 | <Badge text="可选" /> |
+| `install`  | `string`  | 复制到剪贴板的文本内容，仅在 `copy` 为 `true` 时生效。                                                                                                                                                         | <Badge text="可选" /> |
+| `alt`      | `string`  | 图标的替代文本，用于无障碍和 SEO 优化。                                                                                                                                                                        | <Badge text="可选" /> |
+| `rel`      | `string`  | 链接的 `rel` 属性，用于控制链接的安全性和行为，如防止新窗口跳转时的安全风险（`noopener`）、避免搜索引擎跟踪（`nofollow`）等。                                                                                  | <Badge text="可选" /> |
