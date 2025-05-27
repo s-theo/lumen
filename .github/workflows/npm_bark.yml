@@ -1,4 +1,4 @@
-name: NPM Downloads to Bark
+name: npm_bark
 
 on:
   schedule:
@@ -10,21 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: lts/*
 
       - uses: pnpm/action-setup@v4
-        name: Install pnpm
 
       - name: Install dependencies
-        run: pnpm add axios ts-node typescript@5.5.4 -w
+        run: pnpm add axios typescript tsx -w
 
       - name: Run TypeScript script
         env:
           BARK_KEY: ${{ secrets.BARK_KEY }}
-        run: pnpm ts-node script/npm_downloads.ts
+        run: pnpm tsx script/npm_bark.ts
