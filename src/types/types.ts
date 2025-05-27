@@ -171,9 +171,9 @@ export interface FooterData {
 /** HomeFooter Group 接口 */
 export interface Group {
   /** 图标名称（支持 iconify） */
-  icon?: string
+  icon?: IconImageType
   /** 图标样式 */
-  color?: string
+  color?: IconImageType
   /** 分组标题 */
   title: string
   /** 链接数组 */
@@ -184,20 +184,40 @@ export interface Group {
 
 /** HomeFooter Beian 接口 */
 export interface Beian {
-  /** ICP 备案号 */
-  icp?: string
-  /** ICP 图标，@default 'fluent:globe-shield-48-filled' */
-  icpIcon?: string
-  /** 无障碍描述 */
-  icpalt?: string
-  /** 公安备案号 */
-  police?: string
-  /** 公安备案图标，@default 'fluent:shield-checkmark-48-filled' */
-  policeIcon?: string
-  /** 无障碍描述 */
-  policealt?: string
+  /** ICP 备案 */
+  icp?: Icp
+  /** 公安备案 */
+  police?: Police
   /** 是否显示图标 */
   showIcon?: boolean
+}
+
+/** HomeFooter Beian 接口 */
+export interface Icp {
+  /** ICP 备案号 */
+  number?: string
+  /** ICP 图标，@default 'fluent:globe-shield-48-filled' */
+  icon?: IconImageType
+  /** 图标的颜色。 */
+  color?: IconImageType
+  /** 无障碍描述 */
+  alt?: string
+  /** Rel 属性 */
+  rel?: RelType
+}
+
+/** HomeFooter Beian 接口 */
+export interface Police {
+  /** 公安备案号 */
+  number?: string
+  /** 公安备案图标，@default 'fluent:shield-checkmark-48-filled' */
+  icon?: IconImageType
+  /** 图标的颜色。 */
+  color?: IconImageType
+  /** 无障碍描述 */
+  alt?: string
+  /** Rel 属性 */
+  rel?: RelType
 }
 
 /** HomeFooter Author 接口 */
@@ -206,16 +226,22 @@ export interface Author {
   name?: string
   /** 作者链接 */
   link?: LinkType
+  /** 版权图标图标 */
+  icon?: IconImageType
+  /** 图标的颜色。 */
+  color?: IconImageType
   /** 无障碍描述 */
   alt?: AltType
+  /** Rel 属性 */
+  rel?: RelType
 }
 
 /** HomeFooter Link 接口 */
 export interface Link {
   /** 链接图标 */
-  icon?: string
+  icon?: IconImageType
   /** 链接样式 */
-  color?: string
+  color?: IconImageType
   /** 链接名称 */
   name: string
   /** 链接地址 */
