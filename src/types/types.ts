@@ -37,7 +37,7 @@ export interface BoxItem {
   /** 图片的 alt 文本 */
   alt?: AltType
   /** Rel 属性 */
-  rel: RelType
+  rel?: RelType
 }
 
 /** DocPill 接口 */

@@ -11,30 +11,32 @@ head:
 
 # 配置主题
 
+## 主题样式导入
+
 ::: code-group
 
-```ts [所有主题]
-// theme/index.ts
+```ts [全量导入]
+// .vitepress/theme/index.ts
 import '@theojs/lumen/theme'
 ```
 
-```ts [部分主题]
-// theme/index.ts
+```ts [按需导入]
+// .vitepress/theme/index.ts
 /* 徽章样式 */
 import '@theojs/lumen/badge'
 /* 按钮 */
 import '@theojs/lumen/button'
-/* 配色 */
+/* 主题配色 */
 import '@theojs/lumen/colors'
-/* 文档样式 */
+/* 文档基础样式 */
 import '@theojs/lumen/doc'
-/* 容器样式 */
+/* 容器样式（警告、提示块等） */
 import '@theojs/lumen/doc-blocks'
 /* 首页样式 */
 import '@theojs/lumen/home'
 /* 首页按钮 */
 import '@theojs/lumen/home-blocks'
-/* 图标 */
+/* 图标样式 */
 import '@theojs/lumen/icon'
 /* 图片样式 */
 import '@theojs/lumen/pic'
@@ -62,6 +64,8 @@ export default defineConfig({
 :::
 <Pill name="使用方法查看: https://iconify.design/docs/iconify-icon/" link="https://iconify.design/docs/iconify-icon/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />
 
+### 示例
+
 ```vue-html
 <iconify-icon icon="simple-icons:fontawesome"></iconify-icon>
 <iconify-icon icon="line-md:iconify2-static"></iconify-icon>
@@ -78,7 +82,9 @@ export default defineConfig({
 
 ## 自定义组件 CSS
 
-可以通过覆盖根级别的 CSS 变量来自定义默认主题的 CSS：
+默认使用 CSS 变量来管理样式。你可以通过覆盖根级 CSS 变量，轻松实现主题颜色及样式的个性化定制。
+
+### 在主题入口导入自定义变量文件
 
 ```ts
 // .vitepress/theme/index.ts
@@ -91,6 +97,8 @@ export default DefaultTheme
 ..
 ```
 
+### 在 `var.css` 中覆盖变量
+
 ```css
 /* .vitepress/theme/var.css */
 :root {
@@ -99,12 +107,13 @@ export default DefaultTheme
 }
 ```
 
-查看<Pill name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/theme/components-var.css" icon="unjs:theme-colors" alt="iconify icon" />内容来获取可以被覆盖的变量。
+查看<Pill name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/theme/components-var.css" icon="unjs:theme-colors" alt="iconify icon" />文件中查看所有可用变量，方便针对性覆盖。
 
-## 示例
+## 内置样式示例
 
-### 容器
+### 1. 容器
 
+容器用于显示信息提示、警告、注意事项等内容，支持多种内置类型：
 **输入**
 
 ```md
@@ -179,7 +188,7 @@ export default DefaultTheme
 这是一段文字
 :::
 
-### 自定义容器
+### 2. 自定义容器
 
 **输入**
 
@@ -210,7 +219,7 @@ console.log('Hello, VitePress!')
 
 :::
 
-### GitHub 风格容器
+### 3. GitHub 风格容器
 
 **输入**
 
@@ -278,7 +287,7 @@ console.log('Hello, VitePress!')
 >
 > 这是一段文字
 
-### 徽章
+### 4. Badge 组件
 
 ```vue
 <Badge type="info" text="default" />
@@ -294,7 +303,7 @@ console.log('Hello, VitePress!')
 <Badge type="danger" text="caution" />
 <Badge type="info">custom element</Badge>
 
-### 图片浅色与深色模式
+### 图片的浅色和深色模式支持
 
 **输入**
 

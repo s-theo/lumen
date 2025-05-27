@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Icon, usePrelink, handleClick } from '../types'
-import { Link } from './common'
+import { usePrelink, handleClick } from '../types'
+import { Link, IconDisplay } from './common'
 
 const prelink = usePrelink()
 </script>
@@ -17,13 +17,7 @@ const prelink = usePrelink()
       <span class="title" v-html="prelink.title"></span>
       <p v-if="prelink.content" class="content" v-html="prelink.content"></p>
       <div v-if="prelink.date" class="time-info">
-        <Icon
-          class="iconify"
-          :icon="prelink.dateIcon || 'line-md:calendar'"
-          :ssr="true"
-          :inline="true"
-          :aria-label="prelink.alt || 'date'"
-        />
+        <IconDisplay class="iconify" :icon="prelink.dateIcon || 'line-md:calendar'" :alt="prelink.alt || 'date'" />
         <time v-html="prelink.dateText || '活动时间: 即日至'"> </time>
         <time class="date">{{ prelink.date }}</time>
       </div>

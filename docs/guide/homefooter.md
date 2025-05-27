@@ -199,80 +199,80 @@ const icon: IconImageType = {
 
 `FooterData` 是所有组件的顶层接口，包含了以下几个字段：
 
-|   字段   |   类型    |       是否必填        | 描述                         |
-| :------: | :-------: | :-------------------: | ---------------------------- |
-| `group`  | `Group[]` | <Badge text="可选" /> | 链接分组数组，包含多个分组。 |
-| `beian`  |  `Beian`  | <Badge text="可选" /> | 包含 ICP 和公安备案信息      |
-| `author` | `Author`  | <Badge text="可选" /> | 包含作者姓名和链接           |
+| 字段     | 类型      | 描述                                                                 | 是否必填              |
+| -------- | --------- | -------------------------------------------------------------------- | --------------------- |
+| `group`  | `Group[]` | 链接分组数组，支持多个分组配置，每个分组包含标题、图标、链接等信息。 | <Badge text="可选" /> |
+| `beian`  | `Beian`   | ICP 备案与公安备案配置，用于展示网站备案合规信息。                   | <Badge text="可选" /> |
+| `author` | `Author`  | 作者信息展示，包含作者名称、链接与版权图标，常用于页脚归属标识。     | <Badge text="可选" /> |
 
 ### `Group` 接口
 
 `Group` 接口定义了一个链接分组，包括分组的图标、标题及其下的多个链接。
 
-|  字段   |      类型       |       是否必填        | 描述                                      |
-| :-----: | :-------------: | :-------------------: | ----------------------------------------- |
-| `icon`  | `IconImageType` | <Badge text="可选" /> | 分组图标名称（支持 iconify 或多模式图标） |
-| `color` | `IconImageType` | <Badge text="可选" /> | 图标颜色或样式                            |
-| `title` |    `string`     | <Badge text="必填" /> | 分组标题                                  |
-| `links` |    `Link[]`     | <Badge text="必填" /> | 该分组包含的[链接数组](#link-接口)        |
-|  `alt`  |    `string`     | <Badge text="可选" /> | 图标的无障碍描述文本（alt）               |
+| 字段    | 类型            | 描述                                                                                                                                                                                                                                          | 是否必填              |
+| ------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `icon`  | `IconImageType` | 分组图标，支持任意 <Pill name="iconify" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> 图标，亦可设置深浅色模式。例如：`icon: { light: 'mdi:home-outline', dark: 'mdi:home' }` | <Badge text="可选" /> |
+| `color` | `IconImageType` | 图标颜色或样式，支持十六进制或 rgba 颜色值，亦可分别设置深浅色。例如：`color: { light: '#666', dark: '#ccc' }` 或 `color: 'rgba(255, 87, 51, 1)'`                                                                                             | <Badge text="可选" /> |
+| `title` | `string`        | 分组标题，将展示为该链接组的名称。                                                                                                                                                                                                            | <Badge text="必填" /> |
+| `links` | `Link[]`        | 分组内的链接数组，参考下方 [Link 接口](#link-接口)。                                                                                                                                                                                          | <Badge text="必填" /> |
+| `alt`   | `string`        | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                                                                                                                                                                            | <Badge text="可选" /> |
 
 ### `Link` 接口
 
 `Link` 接口用于描述具体的链接信息，包括链接的图标、样式、名称、地址及其打开方式。
 
-|  字段   |      类型       |       是否必填        | 描述                        |
-| :-----: | :-------------: | :-------------------: | --------------------------- |
-| `icon`  | `IconImageType` | <Badge text="可选" /> | 链接图标                    |
-| `color` | `IconImageType` | <Badge text="可选" /> | 链接颜色                    |
-| `name`  |    `string`     | <Badge text="必填" /> | 链接名称                    |
-| `link`  |    `string`     | <Badge text="必填" /> | 链接地址                    |
-|  `alt`  |    `string`     | <Badge text="可选" /> | 图标的无障碍描述文本（alt） |
-|  `rel`  |    `string`     | <Badge text="可选" /> | 链接的 rel 属性             |
+| 字段    | 类型            | 描述                                                                                                                                                                                                                                                | 是否必填              |
+| ------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `icon`  | `IconImageType` | 链接前的图标，支持任意 <Pill name="iconify" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> 图标，支持深浅色模式。例如：`icon: { light: 'solar:book-bold', dark: 'solar:book-bold' }` | <Badge text="可选" /> |
+| `color` | `IconImageType` | 图标颜色或样式，支持十六进制或 rgba 颜色值，亦可分别设置深浅色。例如：`color: { light: '#666', dark: '#ccc' }` 或 `color: 'rgba(255, 87, 51, 1)'`                                                                                                   | <Badge text="可选" /> |
+| `name`  | `string`        | 链接显示的文本。                                                                                                                                                                                                                                    | <Badge text="必填" /> |
+| `link`  | `string`        | 链接地址，可为外部 URL 或内部路径，如 `/docs`。                                                                                                                                                                                                     | <Badge text="必填" /> |
+| `alt`   | `string`        | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                                                                                                                                                                                  | <Badge text="可选" /> |
+| `rel`   | `string`        | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                                                                                                                                        | <Badge text="可选" /> |
 
 ### `Beian` 接口
 
 `Beian` 接口用于表示备案信息，包括 ICP 备案号、公安备案号以及是否显示备案图标。
 
-|    字段    |   类型    |       是否必填        | 描述                           |
-| :--------: | :-------: | :-------------------: | ------------------------------ |
-|   `icp`    |   `Icp`   | <Badge text="可选" /> | ICP 备案信息                   |
-|  `police`  | `Police`  | <Badge text="可选" /> | 公安备案信息                   |
-| `showIcon` | `boolean` | <Badge text="可选" /> | 是否显示备案图标，默认 `false` |
+| 字段       | 类型      | 描述                                                            | 是否必填              |
+| ---------- | --------- | --------------------------------------------------------------- | --------------------- |
+| `icp`      | `Icp`     | ICP 备案信息配置。                                              | <Badge text="可选" /> |
+| `police`   | `Police`  | 公安备案信息配置。                                              | <Badge text="可选" /> |
+| `showIcon` | `boolean` | 是否显示备案图标，默认值为 `false`，开启后将渲染 iconify 图标。 | <Badge text="可选" /> |
 
 #### `Icp` 接口
 
 `Icp` 接口表示 ICP 备案信息。
 
-|   字段   |      类型       |       是否必填        | 描述                                             |
-| :------: | :-------------: | :-------------------: | ------------------------------------------------ |
-| `number` |    `string`     | <Badge text="可选" /> | ICP 备案号                                       |
-|  `icon`  | `IconImageType` | <Badge text="可选" /> | ICP 图标，默认 `'fluent:globe-shield-48-filled'` |
-| `color`  | `IconImageType` | <Badge text="可选" /> | 图标颜色                                         |
-|  `alt`   |    `string`     | <Badge text="可选" /> | 图标的无障碍描述文本（alt）                      |
-|  `rel`   |    `string`     | <Badge text="可选" /> | 链接的 rel 属性                                  |
+| 字段     | 类型            | 描述                                                                                                                                                                                                                                                                                    | 是否必填              |
+| -------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `number` | `string`        | ICP 备案号文本，例如 `粤ICP备88888888号`。                                                                                                                                                                                                                                              | <Badge text="可选" /> |
+| `icon`   | `IconImageType` | 图标名称，支持任意 <Pill name="iconify" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> 图标，默认 `'fluent:globe-shield-48-filled'`。支持深浅色模式。例如：`icon: { light: 'solar:book-bold', dark: 'solar:book-bold' }` | <Badge text="可选" /> |
+| `color`  | `IconImageType` | 图标颜色或样式，支持十六进制或 rgba 颜色值，亦可分别设置深浅色。例如：`color: { light: '#666', dark: '#ccc' }` 或 `color: 'rgba(255, 87, 51, 1)'`                                                                                                                                       | <Badge text="可选" /> |
+| `alt`    | `string`        | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                                                                                                                                                                                                                      | <Badge text="可选" /> |
+| `rel`    | `string`        | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                                                                                                                                                                            | <Badge text="可选" /> |
 
 #### `Police` 接口
 
 `Police` 接口表示公安备案信息。
 
-|   字段   |      类型       |       是否必填        | 描述                                                     |
-| :------: | :-------------: | :-------------------: | -------------------------------------------------------- |
-| `number` |    `string`     | <Badge text="可选" /> | 公安备案号                                               |
-|  `icon`  | `IconImageType` | <Badge text="可选" /> | 公安备案图标，默认 `'fluent:shield-checkmark-48-filled'` |
-| `color`  | `IconImageType` | <Badge text="可选" /> | 图标颜色                                                 |
-|  `alt`   |    `string`     | <Badge text="可选" /> | 图标的无障碍描述文本（alt）                              |
-|  `rel`   |    `string`     | <Badge text="可选" /> | 链接的 rel 属性                                          |
+| 字段     | 类型            | 描述                                                                                                                                                                                                                                                                                        | 是否必填              |
+| -------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `number` | `string`        | 公安备案号文本，例如 `粤公网安备 88888888888888 号`。                                                                                                                                                                                                                                       | <Badge text="可选" /> |
+| `icon`   | `IconImageType` | 图标名称，支持任意 <Pill name="iconify" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> 图标，默认 `'fluent:shield-checkmark-48-filled'`，支持深浅色模式。例如：`icon: { light: 'solar:book-bold', dark: 'solar:book-bold' }` | <Badge text="可选" /> |
+| `color`  | `IconImageType` | 图标颜色或样式，支持十六进制或 rgba 颜色值，亦可分别设置深浅色。例如：`color: { light: '#666', dark: '#ccc' }` 或 `color: 'rgba(255, 87, 51, 1)'`                                                                                                                                           | <Badge text="可选" /> |
+| `alt`    | `string`        | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                                                                                                                                                                                                                          | <Badge text="可选" /> |
+| `rel`    | `string`        | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                                                                                                                                                                                | <Badge text="可选" /> |
 
 ### `Author` 接口
 
 `Author` 接口表示作者信息，包括作者姓名和链接。
 
-|  字段   |      类型       |       是否必填        | 描述                        |
-| :-----: | :-------------: | :-------------------: | --------------------------- |
-| `name`  |    `string`     | <Badge text="可选" /> | 作者姓名                    |
-| `link`  |    `string`     | <Badge text="可选" /> | 作者链接                    |
-| `icon`  | `IconImageType` | <Badge text="可选" /> | 版权图标                    |
-| `color` | `IconImageType` | <Badge text="可选" /> | 图标颜色                    |
-|  `alt`  |    `string`     | <Badge text="可选" /> | 图标的无障碍描述文本（alt） |
-|  `rel`  |    `string`     | <Badge text="可选" /> | 链接的 rel 属性             |
+| 字段    | 类型            | 描述                                                                                                                                                                                                      | 是否必填              |
+| ------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `name`  | `string`        | 作者或站点拥有者的名称，将展示在页脚中。                                                                                                                                                                  | <Badge text="可选" /> |
+| `link`  | `string`        | 作者名称的链接地址，一般为个人主页或项目主页。                                                                                                                                                            | <Badge text="可选" /> |
+| `icon`  | `IconImageType` | 版权图标，支持任意 <Pill name="iconify" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> 图标，支持深浅色模式。例如：`icon: 'mdi:copyright'` | <Badge text="可选" /> |
+| `color` | `IconImageType` | 图标颜色或样式，支持十六进制或 rgba 颜色值，亦可分别设置深浅色。例如：`color: { light: '#666', dark: '#ccc' }` 或 `color: 'rgba(255, 87, 51, 1)'`                                                         | <Badge text="可选" /> |
+| `alt`   | `string`        | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                                                                                                                                        | <Badge text="可选" /> |
+| `rel`   | `string`        | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                                                                                              | <Badge text="可选" /> |
