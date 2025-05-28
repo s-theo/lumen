@@ -1,0 +1,93 @@
+name: Summarize new issues
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  contents: read
+  models: read
+
+jobs:
+  ai-assistant:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run AI summarization and classification
+        id: inference
+        uses: actions/ai-inference@v1
+        with:
+          prompt: |
+            你是 GitHub issue 助手，请完成以下任务：
+
+            1. 用 1-2 句话总结该 Issue 内容，中文输出。
+            2. 判断该 Issue 类型，四选一：bug、feature、question、other。
+            3. 判断该 Issue 是否为重复问题，回答“是”或“否”。
+
+            ---
+            标题：${{ github.event.issue.title }}
+            正文：${{ github.event.issue.body }}
+
+      - name: Comment AI summary
+        if: ${{ steps.inference.outputs.response != '' }}
+        run: |
+          SUMMARY="$(echo '${{ steps.inference.outputs.response }}' | sed -n '1p')"
+          gh issue comment $ISSUE_NUMBER --body "AI 自动总结：$SUMMARY"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+
+      - name: Extract classification and duplication status
+        id: parse
+        run: |
+          RESPONSE='${{ steps.inference.outputs.response }}'
+          # 去除多余空格和大小写转换，提取分类
+          CLASS=$(echo "$RESPONSE" | sed -n '2p' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]' | sed 's/[^a-z]*//g')
+          DUP=$(echo "$RESPONSE" | sed -n '3p' | tr '[:upper:]' '[:lower:]' | tr -d '[:space:]')
+
+          echo "issue_class=$CLASS" >> $GITHUB_OUTPUT
+          echo "is_duplicate=$DUP" >> $GITHUB_OUTPUT
+        shell: bash
+
+      - name: Add labels based on classification
+        run: |
+          LABELS="ai-reviewed"
+          case "$ISSUE_CLASS" in
+            bug) LABELS="$LABELS,bug" ;;
+            feature) LABELS="$LABELS,feature" ;;
+            question) LABELS="$LABELS,question" ;;
+            *) LABELS="$LABELS,other" ;;
+          esac
+
+          if [ "$IS_DUPLICATE" = "是" ] || [ "$IS_DUPLICATE" = "yes" ]; then
+            LABELS="$LABELS,duplicate"
+          fi
+
+          IFS=',' read -ra ARR <<< "$LABELS"
+          for label in "${ARR[@]}"; do
+            gh issue edit $ISSUE_NUMBER --add-label "$label" || true
+          done
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          ISSUE_CLASS: ${{ steps.parse.outputs.issue_class }}
+          IS_DUPLICATE: ${{ steps.parse.outputs.is_duplicate }}
+
+      - name: Assign issue to Theo-Messi
+        run: |
+          gh issue edit $ISSUE_NUMBER --add-assignee Theo-Messi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+
+      - name: Comment duplicate warning if needed
+        if: ${{ steps.parse.outputs.is_duplicate == '是' || steps.parse.outputs.is_duplicate == 'yes' }}
+        run: |
+          gh issue comment $ISSUE_NUMBER --body "该 Issue 可能是重复问题，已标记为 duplicate 标签，请检查相关 Issue。"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
