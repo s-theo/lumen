@@ -18,14 +18,14 @@ function loadTwikooScript(): Promise<void> {
       return
     }
     if (!twikooScript.value) {
-      reject(new Error('twikoo script element not found'))
+      reject(new Error('未找到 Twikoo 脚本元素'))
       return
     }
     twikooScript.value.onload = () => {
       if ((window as any).twikoo?.init) resolve()
-      else reject(new Error('window.twikoo.init not defined after script loaded'))
+      else reject(new Error('Twikoo 脚本已加载，但未找到 window.twikoo.init'))
     }
-    twikooScript.value.onerror = () => reject(new Error('Failed to load twikoo script'))
+    twikooScript.value.onerror = () => reject(new Error('加载 Twikoo 脚本失败'))
   })
 }
 
@@ -42,7 +42,7 @@ async function initTwikoo() {
       el: '#twikoo'
     })
   } catch (err) {
-    console.error('初始化 Twikoo 失败:', err)
+    console.error('初始化 Twikoo 评论系统失败：', err)
   }
 }
 
