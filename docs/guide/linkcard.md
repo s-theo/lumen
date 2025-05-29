@@ -16,17 +16,18 @@ head:
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
-import { DocBox, DocBoxCube, DocLinks, DocPill } from '@theojs/lumen' // [!code ++]
+// [!code ++]
+import { DocBox, DocBoxCube, DocLinks, DocPill } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
-  enhanceApp: ({ app }) => { // [!code ++]
+  // [!code ++]
+  enhanceApp: ({ app }) => {
     app.component('Box', DocBox) // [!code ++]
     app.component('Pill', DocPill) // [!code ++]
     app.component('Links', DocLinks) // [!code ++]
     app.component('BoxCube', DocBoxCube) // [!code ++]
   } // [!code ++]
-  ...
 }
 ```
 

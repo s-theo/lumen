@@ -148,6 +148,46 @@
   --Home-links-custom-alt: url('https://i.theojs.cn/logo/avatar-mini.webp');
   --Home-links-custom-brand-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
   --Home-links-custom-alt-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
+
+  /**
+  * waline-style     
+  * https://waline.js.org/reference/client/style.html 
+  * -------------------------------------------------------------------------- */
+
+  /* 主题色 */
+  --waline-theme-color: var(--vp-c-brand-1);
+  --waline-active-color: var(--vp-c-brand-3);
+
+  /* 布局颜色 */
+  --waline-color: var(--vp-c-text-1) !important;
+  --waline-bg-color: var(--vp-c-bg-alt) !important;
+  --waline-bg-color-light: var(--vp-c-bg-elv) !important;
+  --waline-bg-color-hover: #f0f0f0;
+  --waline-border-color: #ddd;
+  --waline-disable-bg-color: #f8f8f8;
+  --waline-disable-color: #bbb;
+  --waline-code-bg-color: var(--vp-c-bg-alt) !important;
+
+  /* 特殊颜色 */
+  --waline-bq-color: #f0f0f0;
+
+  /* 头像 */
+  --waline-avatar-size: 3.25rem;
+  --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
+
+  /* 徽章 */
+  --waline-badge-color: #3498db;
+  --waline-badge-font-size: 0.775em;
+
+  /* 信息 */
+  --waline-info-bg-color: #f8f8f8;
+  --waline-info-color: #999;
+  --waline-info-font-size: 0.625em;
+
+  /* 渲染选择 */
+  --waline-border: 1px solid var(--waline-border-color);
+  --waline-avatar-radius: 50%;
+  --waline-box-shadow: none;
 }
 
 .dark {
