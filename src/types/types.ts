@@ -1,3 +1,5 @@
+import type { WalineProps } from '@waline/client/full'
+
 /** 图标和图片的类型 */
 export type IconImageType = string | IconImageMode
 /** Alt 文本类型 */
@@ -156,6 +158,29 @@ export interface Prelink {
 export interface TwikooData {
   /** Twikoo 的环境 ID。 */
   envId: string
+}
+
+/** Waline 配置数据类型接口。 */
+export interface WalineData {
+  serverURL: WalineProps['serverURL']
+  path?: string
+  lang?: WalineProps['lang']
+  locale?: WalineProps['locale']
+  emoji?: WalineProps['emoji']
+  commentSorting?: WalineProps['commentSorting']
+  meta?: WalineProps['meta']
+  requiredMeta?: WalineProps['requiredMeta']
+  login?: WalineProps['login']
+  wordLimit?: WalineProps['wordLimit']
+  pageSize?: WalineProps['pageSize']
+  imageUploader?: WalineProps['imageUploader']
+  highlighter?: WalineProps['highlighter']
+  texRenderer?: WalineProps['texRenderer']
+  search?: WalineProps['search']
+  noCopyright?: WalineProps['noCopyright']
+  recaptchaV3Key?: WalineProps['recaptchaV3Key']
+  turnstileKey?: WalineProps['turnstileKey']
+  reaction?: WalineProps['reaction']
 }
 
 /** HomeFooter 接口 */

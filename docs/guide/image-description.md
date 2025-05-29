@@ -37,15 +37,18 @@ yarn add -D @mdit/plugin-figure
 ```ts [.vitepress/config.mts]
 import { defineConfig } from 'vitepress'
 
-import { figure } from '@mdit/plugin-figure' // [!code ++]
+// [!code ++]
+import { figure } from '@mdit/plugin-figure'
 
 export default defineConfig({
-  markdown: { // [!code ++]
-    config: (md) => { // [!code ++]
-      md.use(figure) // [!code ++]
+  // [!code ++]
+  markdown: {
+    // [!code ++]
+    config: (md) => {
+      // [!code ++]
+      md.use(figure)
     } // [!code ++]
   } // [!code ++]
-  ...
 })
 ```
 

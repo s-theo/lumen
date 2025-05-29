@@ -2,6 +2,9 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "lib": ["esnext", "dom", "dom.iterable"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "target": "esnext",
     "types": ["vue"]
   }
 }
