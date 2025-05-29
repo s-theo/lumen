@@ -109,7 +109,7 @@ hero:
 ---
 
 # 修改成部署的Twikoo地址
-<Twikoo :Twikoo_Data="{ envId: 'https://xxxxxx'  }" />
+<Twikoo :Twikoo_Data="{ envId: 'https://xxxxxx'  }" /> [!code ++]
 ```
 
 ## waline评论
@@ -125,6 +125,44 @@ hero:
     }
   ]"
 />
+
+:::::: details 使用 Waline 时报错: `does not provide an export named 'load'`
+
+请按以下步骤操作以解决该问题：
+
+::: code-group
+
+```sh [pnpm]
+pnpm add recaptcha-v3
+```
+
+```sh [npm]
+npm install recaptcha-v3
+```
+
+```sh [yarn]
+yarn add recaptcha-v3
+```
+
+:::
+然后在 `.vitepress/config.mts`中添加以下内容，确保依赖被正确预构建
+
+```ts
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  // [!code ++]
+  vite: {
+    // [!code ++]
+    optimizeDeps: {
+      // [!code ++]
+      include: ['recaptcha-v3']
+    } // [!code ++]
+  } // [!code ++]
+})
+```
+
+::::::
 
 ### 创建数据
 
