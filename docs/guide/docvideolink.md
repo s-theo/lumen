@@ -27,14 +27,16 @@ head:
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
-import { DocVideoLink } from '@theojs/lumen' // [!code ++]
+// [!code ++]
+import { DocVideoLink } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
-  enhanceApp: ({ app }) => { // [!code ++]
-    app.component('Vid', DocVideoLink) // [!code ++]
+  // [!code ++]
+  enhanceApp: ({ app }) => {
+    // [!code ++]
+    app.component('Vid', DocVideoLink)
   } // [!code ++]
-  ...
 }
 ```
 

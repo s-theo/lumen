@@ -52,12 +52,14 @@ import '@theojs/lumen/pic'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  vue: { // [!code ++]
-    template: { // [!code ++]
-      compilerOptions: { isCustomElement: (tag) => tag === 'iconify-icon' } // [!code ++]
+  // [!code ++]
+  vue: {
+    // [!code ++]
+    template: {
+      // [!code ++]
+      compilerOptions: { isCustomElement: (tag) => tag === 'iconify-icon' }
     } // [!code ++]
   } // [!code ++]
-  ...
 })
 ```
 
@@ -91,10 +93,11 @@ export default defineConfig({
 import DefaultTheme from 'vitepress/theme'
 
 import '@theojs/lumen/theme'
-import './var.css' // [!code ++]
+
+// [!code ++]
+import './var.css'
 
 export default DefaultTheme
-..
 ```
 
 ### 在 `var.css` 中覆盖变量

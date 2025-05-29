@@ -95,9 +95,9 @@ features:
     details: 为图片添加说明文字，增强内容语义表达，提高无障碍访问体验，同时有助于SEO。
     link: '/guide/image-description'
 
-  - title: '<iconify-icon class="i-mr" icon="heroicons-solid:chat" style="color:#3498db"></iconify-icon>Twikoo 评论'
-    details: 集成 Twikoo，提升用户互动体验，增强站点的社交功能。
-    link: '/guide/doctwikoo'
+  - title: '<iconify-icon class="i-mr" icon="heroicons-solid:chat" style="color:#3498db"></iconify-icon>集成评论'
+    details: 集成 Twikoo 和 waline 评论，提升用户互动体验，增强站点的社交功能。
+    link: '/guide/doccomment'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square-solid" style="color:#007bff"></iconify-icon>站点统计'
     details: 集成 Google、Baidu、Umami 分析工具，追踪访问数据。
@@ -115,3 +115,7 @@ features:
   --vp-home-hero-image-background-image: none !important;
 }
 </style>
+
+<!-- <Waline :Waline_Data="{  serverURL: 'https://waline-lumen.netlify.app/.netlify/functions/comment/'   ,lang: 'zh-CN',
+  noCopyright: true,
+  reaction: true }" /> -->

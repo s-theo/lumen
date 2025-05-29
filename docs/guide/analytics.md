@@ -18,14 +18,15 @@ head:
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
-import { googleAnalytics } from '@theojs/lumen' // [!code ++]
+// [!code ++]
+import { googleAnalytics } from '@theojs/lumen'
 
 export default {
   ...DefaultTheme,
+  // [!code ++]
   enhanceApp: ({ app }) => {
     googleAnalytics({ id: 'G-******' }) // [!code ++]
   }
-  ...
 }
 ```
 
@@ -47,16 +48,18 @@ export default {
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
-import { baiduAnalytics, trackPageview } from '@theojs/lumen' // [!code ++]
+// [!code ++]
+import { baiduAnalytics, trackPageview } from '@theojs/lumen'
 
 export default {
   ...DefaultTheme,
+  // [!code ++]
   enhanceApp: ({ app }) => {
     baiduAnalytics({ baiduId: '******' }) // [!code ++]
-    if (typeof window !== 'undefined') { // [!code ++]
+    // [!code ++]
+    if (typeof window !== 'undefined') {
       trackPageview('******', window.location.href) // [!code ++]
-    }// [!code ++]
-    ...
+    } // [!code ++]
   }
 }
 ```
@@ -76,18 +79,20 @@ export default {
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
-import { umamiAnalytics } from '@theojs/lumen'// [!code ++]
+// [!code ++]
+import { umamiAnalytics } from '@theojs/lumen'
 
 export default {
   ...DefaultTheme,
+  // [!code ++]
   enhanceApp: ({ app }) => {
-    umamiAnalytics({// [!code ++]
-      id: '***-***-***-***',// [!code ++]
-      src: 'https://*******',// [!code ++]
-      domains: 'your.domain.com'// [!code ++] 可选，参考官方配置 https://umami.is/docs/tracker-configuration#data-domains
+    // [!code ++]
+    umamiAnalytics({
+      id: '***-***-***-***', // [!code ++]
+      src: 'https://*******', // [!code ++]
+      domains: 'your.domain.com' // [!code ++] 可选，参考官方配置 https://umami.is/docs/tracker-configuration#data-domains
     }) // [!code ++]
   }
-  ...
 }
 ```
 

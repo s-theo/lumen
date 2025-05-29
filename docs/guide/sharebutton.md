@@ -25,19 +25,24 @@ head:
 在 `.vitepress/theme/index.ts` 中引入并注册组件，例如将分享按钮插入侧边栏大纲区域：
 
 ```ts [.vitepress/theme/index.ts]
-import DefaultTheme from 'vitepress/theme' // [!code ++]
-import { h } from 'vue' // [!code ++]
+import DefaultTheme from 'vitepress/theme'
 
-import { ShareButton } from '@theojs/lumen'// [!code ++]
+// [!code ++]
+import { h } from 'vue'
+
+// [!code ++]
+import { ShareButton } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
-  Layout() { // [!code ++]
-    return h(DefaultTheme.Layout, null, { // [!code ++]
-      'aside-outline-before': () => h(ShareButton) // [!code ++]
+  // [!code ++]
+  Layout() {
+    // [!code ++]
+    return h(DefaultTheme.Layout, null, {
+      // [!code ++]
+      'aside-outline-before': () => h(ShareButton)
     }) // [!code ++]
   } // [!code ++]
-  ...
 }
 ```
 
@@ -45,16 +50,23 @@ export default {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-import { h } from 'vue' // [!code ++]
 
-import { ShareButton } from '@theojs/lumen' // [!code ++]
+// [!code ++]
+import { h } from 'vue'
+
+// [!code ++]
+import { ShareButton } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
-  Layout() { // [!code ++]
-    return h(DefaultTheme.Layout, null, { // [!code ++]
-      'aside-outline-before': () => // [!code ++]
-        h(ShareButton, { // [!code ++]
+  // [!code ++]
+  Layout() {
+    // [!code ++]
+    return h(DefaultTheme.Layout, null, {
+      // [!code ++]
+      'aside-outline-before': () =>
+        // [!code ++]
+        h(ShareButton, {
           buttonIcon: 'fa6-solid:share-nodes', // 自定义图标 // [!code ++]
           buttonText: '分享此页面', // 自定义按钮文本 // [!code ++]
           copiedIcon: 'mdi:thumbs-up', // 自定义复制成功后的图标 // [!code ++]
@@ -62,7 +74,6 @@ export default {
         }) // [!code ++]
     }) // [!code ++]
   } // [!code ++]
-  ...
 }
 ```
 

@@ -21,18 +21,24 @@ head:
 ## 引入组件
 
 ```ts [.vitepress/theme/index.ts]
-import DefaultTheme from 'vitepress/theme' // [!code ++]
+import DefaultTheme from 'vitepress/theme'
+
+// [!code ++]
 import { h } from 'vue'
-import { Announcement } from '@theojs/lumen' // [!code ++]
+
+// [!code ++]
+import { Announcement } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
-  Layout() { // [!code ++]
-    return h(DefaultTheme.Layout, null, { // [!code ++]
-      'home-hero-info-before': () => h(Announcement) // [!code ++]
+  // [!code ++]
+  Layout() {
+    // [!code ++]
+    return h(DefaultTheme.Layout, null, {
+      // [!code ++]
+      'home-hero-info-before': () => h(Announcement)
     }) // [!code ++]
   } // [!code ++]
-  ...
 }
 ```
 
