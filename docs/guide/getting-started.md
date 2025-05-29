@@ -101,11 +101,11 @@ yarn add @theojs/lumen
       alt: '图片描述图标'
     },
     {
-      name: 'Twikoo 评论',
-      link: 'doctwikoo',
+      name: '集成评论',
+      link: 'doccomment',
       icon: 'heroicons-solid:chat',
       color: '#3498db',
-      alt: 'Twikoo 评论图标'
+      alt: '评论图标'
     },
     {
       name: '站点统计',

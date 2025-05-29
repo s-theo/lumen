@@ -57,8 +57,8 @@ export function guide(): SidebarItem[] {
           link: 'image-description'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-solid:chat" style="color:#3498db"></iconify-icon>Twikoo 评论',
-          link: 'doctwikoo'
+          text: '<iconify-icon class="i-mr" icon="heroicons-solid:chat" style="color:#3498db"></iconify-icon>集成评论',
+          link: 'doccomment'
         },
         {
           text: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square-solid" style="color:#007bff"></iconify-icon>站点统计',
