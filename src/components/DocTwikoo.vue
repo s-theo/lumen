@@ -18,9 +18,7 @@ onMounted(async () => {
 // 在组件卸载时清理 Twikoo 评论系统
 onBeforeUnmount(() => {
   const el = document.querySelector('#twikoo')
-  if (el) {
-    el.innerHTML = '' // 清空评论组件的内容
-  }
+  if (el) el.innerHTML = '' // 清空评论组件的内容
 })
 
 // 使用 VitePress 的 useRoute 监听路由变化
@@ -31,14 +29,16 @@ watch(
   () => route.path,
   async () => {
     await nextTick() // 等待 DOM 更新
-    setTimeout(() => initTwikoo(props.Twikoo_Data.envId), 500) // 直接调用 initTwikoo
+    await initTwikoo(props.Twikoo_Data.envId) // 直接调用 initTwikoo
   }
 )
 </script>
 
 <template>
-  <div id="twikoo" class="comment-container vp-raw">
-    <span class="visually-hidden">评论区</span>
+  <div class="vp-raw">
+    <div id="twikoo">
+      <span class="visually-hidden">评论区</span>
+    </div>
   </div>
 </template>
 
@@ -50,7 +50,7 @@ watch(
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   border: 0;
   white-space: nowrap;
 }

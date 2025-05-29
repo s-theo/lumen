@@ -41,17 +41,18 @@ export function isExternal(path: string): boolean {
  * @param envId - Twikoo 的环境 ID。
  */
 export const initTwikoo = async (envId: string): Promise<void> => {
-  if (typeof window === 'undefined') return
+  if (typeof globalThis.document === 'undefined') return
 
   try {
+    const el = document.querySelector('#twikoo')
+    if (!el) {
+      console.error('未找到 Twikoo 元素。')
+      return
+    }
+
     const twikoo = await import('twikoo')
     await nextTick()
-    const el = document.querySelector('#twikoo')
-    if (el) {
-      twikoo.init({ envId, el: '#twikoo' })
-    } else {
-      console.error('未找到 Twikoo 元素。')
-    }
+    twikoo.init({ envId, el: '#twikoo' })
   } catch (error) {
     console.error('初始化 Twikoo 失败：', error)
   }
