@@ -1,13 +1,6 @@
 import { useData, useRouter } from 'vitepress'
 
-import {
-  ComputedRef,
-  computed,
-  nextTick,
-  onMounted,
-  onUnmounted,
-  ref
-} from 'vue'
+import { ComputedRef, computed, onMounted, onUnmounted, ref } from 'vue'
 
 import type { Prelink, VideoProps } from '../types'
 
@@ -34,27 +27,6 @@ export const EXTERNAL_URL_RE = /^(?:[a-z]+:|\/\/)/i
  */
 export function isExternal(path: string): boolean {
   return EXTERNAL_URL_RE.test(path)
-}
-/**
- * 初始化 Twikoo 评论系统（仅在浏览器中生效）。
- *
- * @param envId - Twikoo 的环境 ID。
- */
-export const initTwikoo = async (envId: string): Promise<void> => {
-  if (typeof window === 'undefined') return
-
-  try {
-    const twikoo = await import('twikoo')
-    await nextTick()
-    const el = document.querySelector('#twikoo')
-    if (el) {
-      twikoo.init({ envId, el: '#twikoo' })
-    } else {
-      console.error('未找到 Twikoo 元素。')
-    }
-  } catch (error) {
-    console.error('初始化 Twikoo 失败：', error)
-  }
 }
 
 /** 将 `#hero-text` 的 DOM 节点插入至 `.VPHero .text` 中，并在组件卸载时还原。 */
