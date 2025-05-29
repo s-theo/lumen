@@ -11,7 +11,9 @@ head:
 
 # 评论组件 - Twikoo/Waline
 
-## Twikoo
+支持 [Twikoo](#twikoo-评论)/[Waline](#waline-评论) 评论系统，用户可自由选择喜欢的方案。
+
+## Twikoo 评论
 
 <Links
   :items="[
@@ -110,7 +112,7 @@ hero:
 <Twikoo :Twikoo_Data="{ envId: 'https://xxxxxx'  }" />
 ```
 
-## waline
+## waline评论
 
 <Links
   :items="[
