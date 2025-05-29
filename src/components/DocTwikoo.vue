@@ -1,33 +1,65 @@
 <script setup lang="ts">
 import { useRoute } from 'vitepress'
 
-import { onBeforeUnmount, onMounted, watch } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
-import { TwikooData, initTwikoo } from '../types'
+import { TwikooData } from '../types'
 
 const props = defineProps<{
   Twikoo_Data: TwikooData
 }>()
 
-// 组件挂载时初始化 Twikoo
-onMounted(async () => {
-  await initTwikoo(props.Twikoo_Data.envId) // 直接调用 initTwikoo
-})
+const twikooScript = ref<HTMLScriptElement | null>(null)
 
-// 在组件卸载时清理 Twikoo 评论系统
+function loadTwikooScript(): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if ((window as any).twikoo?.init) {
+      resolve()
+      return
+    }
+    if (!twikooScript.value) {
+      reject(new Error('twikoo script element not found'))
+      return
+    }
+    twikooScript.value.onload = () => {
+      if ((window as any).twikoo?.init) resolve()
+      else reject(new Error('window.twikoo.init not defined after script loaded'))
+    }
+    twikooScript.value.onerror = () => reject(new Error('Failed to load twikoo script'))
+  })
+}
+
+async function initTwikoo() {
+  try {
+    await loadTwikooScript()
+    const el = document.querySelector('#twikoo')
+    if (!el) {
+      console.error('未找到 #twikoo 元素')
+      return
+    }
+    ;(window as any).twikoo.init({
+      envId: props.Twikoo_Data.envId,
+      el: '#twikoo'
+    })
+  } catch (err) {
+    console.error('初始化 Twikoo 失败:', err)
+  }
+}
+
+onMounted(() => initTwikoo())
+
 onBeforeUnmount(() => {
   const el = document.querySelector('#twikoo')
-  if (el) el.innerHTML = '' // 清空评论组件的内容
+  if (el) el.innerHTML = ''
 })
 
-// 使用 VitePress 的 useRoute 监听路由变化
 const route = useRoute()
-
-// 监听路由变化，重新加载 Twikoo 评论系统
 watch(
   () => route.path,
-  async () => {
-    await initTwikoo(props.Twikoo_Data.envId) // 直接调用 initTwikoo
+  () => {
+    const el = document.querySelector('#twikoo')
+    if (el) el.innerHTML = ''
+    initTwikoo()
   }
 )
 </script>
@@ -37,6 +69,12 @@ watch(
     <div id="twikoo">
       <span class="visually-hidden">评论区</span>
     </div>
+    <component
+      :is="'script'"
+      ref="twikooScript"
+      src="https://fastly.jsdelivr.net/npm/twikoo@latest/dist/twikoo.min.js"
+      crossorigin="anonymous"
+    />
   </div>
 </template>
 
