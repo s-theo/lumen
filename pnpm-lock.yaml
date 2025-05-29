@@ -90,9 +90,6 @@ importers:
       iconify-icon:
         specifier: ^3.0.0
         version: 3.0.0
-      twikoo:
-        specifier: ^1.6.44
-        version: 1.6.44
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -2369,9 +2366,6 @@ packages:
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
-
-  twikoo@1.6.44:
-    resolution: {integrity: sha512-Y3YfGtMelWT+1XxZS8SmGXkHZ6/26ry1ZteKKBNTYV0oA+o5/2ELUMi4ta2zYD/V0wGZGv6EXJ6HJU8GTPVh4g==}
 
   type-fest@0.21.3:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
@@ -4945,8 +4939,6 @@ snapshots:
   trough@2.2.0: {}
 
   tslib@2.8.1: {}
-
-  twikoo@1.6.44: {}
 
   type-fest@0.21.3: {}
 
