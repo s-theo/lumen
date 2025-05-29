@@ -23,14 +23,16 @@ head:
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 
-import { HomeUnderline } from '@theojs/lumen' // [!code ++]
+// [!code ++]
+import { HomeUnderline } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
-  enhanceApp: ({ app }) => { // [!code ++]
-    app.component('Home', HomeUnderline) // [!code ++]
+  // [!code ++]
+  enhanceApp: ({ app }) => {
+    // [!code ++]
+    app.component('Home', HomeUnderline)
   } // [!code ++]
-  ...
 }
 ```
 
