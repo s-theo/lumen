@@ -50,9 +50,10 @@ export const initTwikoo = async (envId: string): Promise<void> => {
       return
     }
 
-    const twikoo = await import('twikoo')
-    await nextTick()
-    twikoo.init({ envId, el: '#twikoo' })
+    const mod = await import('twikoo')
+    const twikoo = mod?.default?.init ? mod.default : mod
+
+    twikoo.init({ envId, el })
   } catch (error) {
     console.error('初始化 Twikoo 失败：', error)
   }

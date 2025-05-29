@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vitepress'
 
-import { nextTick, onBeforeUnmount, onMounted, watch } from 'vue'
+import { onBeforeUnmount, onMounted, watch } from 'vue'
 
 import { TwikooData, initTwikoo } from '../types'
 
@@ -11,7 +11,6 @@ const props = defineProps<{
 
 // 组件挂载时初始化 Twikoo
 onMounted(async () => {
-  await nextTick() // 确保 DOM 更新完成
   await initTwikoo(props.Twikoo_Data.envId) // 直接调用 initTwikoo
 })
 
@@ -28,7 +27,6 @@ const route = useRoute()
 watch(
   () => route.path,
   async () => {
-    await nextTick() // 等待 DOM 更新
     await initTwikoo(props.Twikoo_Data.envId) // 直接调用 initTwikoo
   }
 )
