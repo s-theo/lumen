@@ -32,13 +32,6 @@ export const head: HeadConfig[] = [
   ['link', { rel: 'manifest', href: '/site.webmanifest' }],
   [
     'meta',
-    {
-      name: 'description',
-      content: '✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库'
-    }
-  ],
-  [
-    'meta',
     { name: 'keywords', content: 'Vue, VitePress, 插件, 功能组件, 主题美化' }
   ],
   ['meta', { property: 'og:type', content: 'website' }],

@@ -1,9 +1,7 @@
 ---
 title: 首页公告栏组件 - Announcement
+description: 了解如何使用 @theojs/lumen 插件，为你的 VitePress 网站首页添加一个引人注目的公告栏组件。轻松配置和展示活动信息、重要通知或快速安装命令，有效提升首页互动性和信息传递效率。
 head:
-  - - meta
-    - name: description
-      content: 了解如何使用 @theojs/lumen 插件，为你的 VitePress 网站首页添加一个引人注目的公告栏组件。轻松配置和展示活动信息、重要通知或快速安装命令，有效提升首页互动性和信息传递效率。
   - - meta
     - name: keywords
       content: VitePress 首页公告栏 公告栏 @theojs/lumen Lumen Vue组件 主题插件 网站首页 通知栏 活动推广 快速安装 theojs VitePress插件 首页定制
