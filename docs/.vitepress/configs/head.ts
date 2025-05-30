@@ -34,7 +34,7 @@ export const head: HeadConfig[] = [
     'meta',
     {
       name: 'description',
-      content: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件'
+      content: '✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库'
     }
   ],
   [
@@ -58,7 +58,7 @@ export const head: HeadConfig[] = [
     'meta',
     {
       property: 'og:description',
-      content: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件'
+      content: '✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库'
     }
   ],
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
@@ -68,7 +68,7 @@ export const head: HeadConfig[] = [
     'meta',
     {
       name: 'twitter:description',
-      content: '✨ 集成 Vue 功能组件和主题美化的 VitePress 插件'
+      content: '✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库'
     }
   ],
   [
