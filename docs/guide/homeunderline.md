@@ -48,7 +48,7 @@ hero:
   name: Lumen
   text: 'Enhanced ' # [!code ++] 副标题文本前半部分，下划线会作用于这里
   textsuffix: 'Theme' # [!code ++] 副标题文本后半部分
-  tagline: ✨ 集成 Vue 功能组件和主题美化的 VitePress 插件
+  tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
 ---
 <Home /> # [!code ++]
 ```
