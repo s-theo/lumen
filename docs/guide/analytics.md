@@ -1,9 +1,7 @@
 ---
 title: 站点统计组件 - Analytics
+description: 探索如何使用 @theojs/lumen 插件，在你的 VitePress 站点中无缝集成谷歌分析 (Google Analytics)、百度统计 (Baidu Analytics) 及 Umami Analytics。本指南将帮助你快速配置和管理站点统计，有效追踪和分析网站数据。
 head:
-  - - meta
-    - name: description
-      content: 探索如何使用 @theojs/lumen 插件，在你的 VitePress 站点中无缝集成谷歌分析 (Google Analytics)、百度统计 (Baidu Analytics) 及 Umami Analytics。本指南将帮助你快速配置和管理站点统计，有效追踪和分析网站数据。
   - - meta
     - name: keywords
       content: VitePress 站点统计 谷歌分析 Google Analytics 百度统计 Baidu Analytics Umami Analytics 网站分析 数据追踪 @theojs/lumen 插件 流量统计 网站集成 theojs
