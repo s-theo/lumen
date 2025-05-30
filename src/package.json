@@ -65,7 +65,7 @@
     "bumpp": "^10.1.1",
     "iconify-icon": "^3.0.0",
     "typescript": "^5.8.3",
-    "vue": "^3.5.14"
+    "vue": "^3.5.16"
   },
   "devDependencies": {
     "vite": "^6.3.5",
