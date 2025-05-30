@@ -105,7 +105,7 @@ hero:
   name: Lumen
   text: 'Enhanced '
   textsuffix: 'Theme'
-  tagline: ✨ 集成 Vue 功能组件和主题美化的 VitePress 插件
+  tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
 ---
 
 # 修改成部署的Twikoo地址
@@ -246,7 +246,7 @@ hero:
   name: Lumen
   text: 'Enhanced '
   textsuffix: 'Theme'
-  tagline: ✨ 集成 Vue 功能组件和主题美化的 VitePress 插件
+  tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
 ---
 
 # 修改成部署的Twikoo地址  [!code ++]

@@ -52,7 +52,7 @@ hero:
   name: Lumen
   text: 'Enhanced '
   textsuffix: 'Theme'
-  tagline: ✨ 集成 Vue 功能组件和主题美化的 VitePress 插件
+  tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
   prelink: # [!code ++]
     title: '🎉 活动不停歇，青云梯四周年双旦特惠' # [!code ++]
     content: '· 月/季/半年付85折 优惠码<span class="promo-text"> qyt85 </span></br>· 年付以及年付以上8折 优惠码<span class="promo-text"> qyt80</span></br>· 年付8折/2年付7折/3年付6折 配合优惠码折上折，最高可达<span class="promo-text"> 48 </span>折' # [!code ++]
@@ -73,7 +73,7 @@ hero:
   name: Lumen
   text: 'Enhanced '
   textsuffix: 'Theme'
-  tagline: ✨ 集成 Vue 功能组件和主题美化的 VitePress 插件
+  tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
   prelink:
     copy: true # [!code ++]
     install: 'pnpm add @theojs/lumen' # [!code ++]

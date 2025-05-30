@@ -1,7 +1,7 @@
 {
   "name": "@theojs/lumen",
   "version": "5.4.6",
-  "description": "用于 VitePress 主题美化和集成 Vue 功能组件",
+  "description": "专为 VitePress 打造的主题美化与 Vue 扩展组件库",
   "keywords": [
     "css",
     "vue",
@@ -13,11 +13,15 @@
     "vitepress-ui",
     "comment",
     "twikoo",
+    "waline",
     "iconify",
     "iconify-icon",
     "video-player",
     "youtube",
-    "tools"
+    "tools",
+    "theojs",
+    "lumen",
+    "vitepress-enhance"
   ],
   "homepage": "https://lumen.theojs.cn/",
   "bugs": {
@@ -30,6 +34,7 @@
   },
   "license": "MIT",
   "author": "Theo",
+  "type": "module",
   "exports": {
     ".": "./types/index.ts",
     "./theme": "./theme/all.css",
@@ -45,8 +50,10 @@
     "./components-var": "./theme/components-var.css",
     "./package.json": "./package.json"
   },
-  "main": "types/index.ts",
-  "style": "theme/all.css",
+  "main": "./types/index.ts",
+  "module": "./types/index.ts",
+  "types": "./types/index.ts",
+  "style": "./theme/all.css",
   "files": [
     "theme/",
     "types/",
