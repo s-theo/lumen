@@ -46,24 +46,6 @@ import '@theojs/lumen/pic'
 
 ## 图标支持
 
-:::details 使用 `iconify-icon` 时报错 `[Vue warn]: Failed to resolve component: iconify-icon`
-
-```ts [.vitepress/config.mts]
-import { defineConfig } from 'vitepress'
-
-export default defineConfig({
-  // [!code ++]
-  vue: {
-    // [!code ++]
-    template: {
-      // [!code ++]
-      compilerOptions: { isCustomElement: (tag) => tag === 'iconify-icon' }
-    } // [!code ++]
-  } // [!code ++]
-})
-```
-
-:::
 <Pill name="使用方法查看: https://iconify.design/docs/iconify-icon/" link="https://iconify.design/docs/iconify-icon/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />
 
 ### 示例
@@ -117,6 +99,7 @@ export default DefaultTheme
 ### 1. 容器
 
 容器用于显示信息提示、警告、注意事项等内容，支持多种内置类型：
+
 **输入**
 
 ```md
@@ -329,3 +312,58 @@ console.log('Hello, VitePress!')
 ![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
 
 ![浅色模式](https://i.theojs.cn/logo/github.svg#light)
+
+## 报错解决
+
+### 导入主题时报错: `does not provide an export named 'load'`
+
+请按以下步骤操作以解决该问题：
+
+::: code-group
+
+```sh [pnpm]
+pnpm add recaptcha-v3
+```
+
+```sh [npm]
+npm install recaptcha-v3
+```
+
+```sh [yarn]
+yarn add recaptcha-v3
+```
+
+:::
+然后在 `.vitepress/config.mts`中添加以下内容
+
+```ts [.vitepress/config.mts]
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  // [!code ++]
+  vite: {
+    // [!code ++]
+    optimizeDeps: {
+      // [!code ++]
+      include: ['recaptcha-v3']
+    } // [!code ++]
+  } // [!code ++]
+})
+```
+
+### 使用 `iconify-icon` 时报错: `[Vue warn]: Failed to resolve component: iconify-icon`
+
+```ts [.vitepress/config.mts]
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  // [!code ++]
+  vue: {
+    // [!code ++]
+    template: {
+      // [!code ++]
+      compilerOptions: { isCustomElement: (tag) => tag === 'iconify-icon' }
+    } // [!code ++]
+  } // [!code ++]
+})
+```
