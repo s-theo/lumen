@@ -1,9 +1,7 @@
 ---
 title: 首页下划线组件 - HomeUnderline
+description: 学习如何使用 @theojs/lumen 插件的 HomeUnderline 组件，为 VitePress 网站首页的英雄区标题文本添加美观的动态下划线效果。本指南包含组件引入、属性配置及在首页布局中使用的详细步骤，提升首页视觉吸引力和用户体验。
 head:
-  - - meta
-    - name: description
-      content: 学习如何使用 @theojs/lumen 插件的 HomeUnderline 组件，为 VitePress 网站首页的英雄区标题文本添加美观的动态下划线效果。本指南包含组件引入、属性配置及在首页布局中使用的详细步骤，提升首页视觉吸引力和用户体验。
   - - meta
     - name: keywords
       content: VitePress 首页下划线 @theojs/lumen Lumen HomeUnderline 动态下划线 首页美化 标题效果 主题插件 theojs VitePress插件 Hero美化 文本装饰
