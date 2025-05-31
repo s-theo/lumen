@@ -1,4 +1,4 @@
-import { useData, useRouter } from 'vitepress'
+import { useData, useRoute, useRouter } from 'vitepress'
 
 import { ComputedRef, computed, onMounted, onUnmounted, ref } from 'vue'
 
@@ -166,4 +166,41 @@ export function handleClick(
     .catch((err) => {
       console.error('[Announcement] 复制失败:', err)
     })
+}
+
+/**
+ * 获取当前语言对应的 locale key（如 'root'、'en'）。 优先通过路由路径匹配 locales 中的前缀（排除 'root'），
+ * 如果匹配不到则根据站点语言设置 lang 进行匹配 fallback。
+ *
+ * @example
+ *   const localeKey = getLocaleKey()
+ *   const currentFooter = computed(
+ *     () => props.Footer_Data.locales?.[localeKey.value]
+ *   )
+ *
+ * @returns 当前 locale 的 key（如 'root'、'en'），默认为 'root'
+ */
+export function getLocaleKey() {
+  const { site } = useData()
+  const route = useRoute()
+
+  return computed(() => {
+    const locales = site.value.locales
+    const path = route.path
+
+    const matchedByPath = Object.keys(locales).find(
+      (prefix) => prefix !== 'root' && path.startsWith('/' + prefix)
+    )
+
+    if (matchedByPath) {
+      return matchedByPath
+    }
+
+    const lang = site.value.lang
+    const matchedByLang = Object.entries(locales).find(
+      ([, value]) => value.lang === lang
+    )
+
+    return matchedByLang?.[0] || 'root'
+  })
 }

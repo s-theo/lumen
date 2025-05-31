@@ -10,7 +10,7 @@ export const markdown: MarkdownOptions = {
   image: { lazyLoading: true },
   config: (md) => {
     md.use(obsidianImgSize)
-    md.use(groupIconMdPlugin, { titleBar: { includeSnippet: false } })
+    md.use(groupIconMdPlugin, { titleBar: { includeSnippet: true } })
     md.use(figure)
   }
 }
