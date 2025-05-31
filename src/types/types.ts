@@ -102,33 +102,84 @@ export interface BoxCubeItem {
   rel?: RelType
 }
 
-/** DocAsideLogo 接口 */
-export interface AsideItem {
-  /** 链接地址。 */
+/** Promo 类型：表示一个具有活动性质的推广项 */
+export interface Promo {
+  /** 活动标题 */
+  promo: string
+  /** 跳转链接 */
   link: LinkType
-  /** 图标的颜色。 */
-  color?: IconImageType
-  /** 图标名称（支持 iconify） */
+  /** 图标（支持 iconify 或 image 的 light/dark） */
   icon?: IconImageType
-  /** 图片路径（支持 light 和 dark 模式） */
+  /** 图标颜色（支持 light/dark） */
+  color?: IconImageType
+  /** 图片资源（支持 light/dark） */
   image?: IconImageType
-  /** 名称。 */
-  name?: string
-  /** 活动名称。 */
-  promo?: string
-  /** 隐藏信息 1。 */
-  hide1?: string
-  /** 信息 1。 */
+  /** 附加信息1 */
   info1?: string
-  /** 隐藏信息 2。 */
-  hide2?: string
-  /** 信息 2。 */
+  /** 附加信息2 */
   info2?: string
-  /** 图片的 alt 文本 */
+  /** 图标/图片的替代文本 */
   alt?: AltType
-  /** Rel 属性 */
+  /** 链接的 rel 属性 */
   rel?: RelType
 }
+
+/** Normal 类型：表示普通链接项 */
+export interface Normal {
+  /** 名称标题 */
+  name: string
+  /** 跳转链接 */
+  link: LinkType
+  /** 图标（可选） */
+  icon?: IconImageType
+  /** 图标颜色（可选） */
+  color?: IconImageType
+  /** 图片资源（可选） */
+  image?: IconImageType
+  /** 隐藏信息1（可用于鼠标悬停显示） */
+  hide1?: string
+  /** 隐藏信息2 */
+  hide2?: string
+  /** 图标/图片的替代文本 */
+  alt?: AltType
+  /** 链接的 rel 属性 */
+  rel?: RelType
+}
+
+/** AsidePromo 类型：继承 Promo，同时支持 i18n 局部多语言（排除递归） */
+export type AsidePromo = Promo & {
+  /** 可选的多语言翻译字段，键为语言代码 */
+  i18n?: Partial<Record<string, Omit<AsidePromo, 'i18n'>>>
+}
+
+/** AsideNormal 类型：继承 Normal，同时支持 i18n 局部多语言（排除递归） */
+export type AsideNormal = Normal & {
+  /** 可选的多语言翻译字段，键为语言代码 */
+  i18n?: Partial<Record<string, Omit<AsideNormal, 'i18n'>>>
+}
+
+/** AsideAll 类型：联合类型，允许是 Promo 或 Normal */
+export type AsideAll = AsidePromo | AsideNormal
+
+/**
+ * AsideItem 类型：支持两种结构
+ *
+ * - 单语言：直接是 AsideAll[] 数组
+ * - 多语言：包裹在 i18n 对象中，按语言划分不同的 AsideAll[] 内容
+ */
+export type AsideItem =
+  | AsideAll[] // 单语言结构
+  | {
+      i18n: Record<string, AsideAll[]> // 多语言结构，键为语言代码，如 'root' | 'en' 等
+    }
+
+/**
+ * AsideDataWrapper 类型：最终使用的封装结构
+ *
+ * - 可以是直接的 AsideAll[]（单语言）
+ * - 或是 { i18n: Record<string, AsideAll[]> } 的对象（多语言）
+ */
+export type AsideDataWrapper = AsideAll[] | { i18n: Record<string, AsideAll[]> }
 
 /** Announcement 接口 */
 export interface Prelink {
@@ -185,6 +236,7 @@ export interface WalineData {
 
 /** HomeFooter 接口 */
 export interface FooterData {
+  i18n?: Record<string, Partial<Omit<FooterData, 'i18n'>>>
   /** 链接分组数组。 */
   group?: Group[]
   /** 备案信息。 */

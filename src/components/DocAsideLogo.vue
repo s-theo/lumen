@@ -1,17 +1,30 @@
 <script setup lang="ts">
-import { AsideItem } from '../types'
+import { AsideAll, AsideItem, AsidePromo, getLocaleKey } from '../types'
+import { computed } from 'vue'
 import { IconDisplay, ImageDisplay, Link } from './common'
 
-const props = defineProps<{ Aside_Data: AsideItem[] }>()
+const props = defineProps<{ Aside_Data: AsideItem }>()
+
+const localeKey = getLocaleKey()
+
+const aside = computed<AsideAll[]>(() => {
+  const data = props.Aside_Data
+  if (Array.isArray(data)) return data
+  return data?.i18n?.[localeKey.value] ?? []
+})
+
+function isAsidePromo(item: AsideAll): item is AsidePromo {
+  return 'promo' in item && typeof item.promo === 'string'
+}
 </script>
 
 <template>
   <Link
-    v-for="(aside, index) in props.Aside_Data"
+    v-for="(aside, index) in aside"
     :key="index"
     :href="aside.link"
     :rel="aside.rel"
-    :classes="'link' + (aside.promo ? ' has-promo' : '') + (aside.name ? ' has-name' : '')"
+    :classes="['link', isAsidePromo(aside) ? 'has-promo' : '', 'name' in aside ? 'has-name' : ''].join(' ')"
   >
     <template v-if="aside.icon">
       <IconDisplay :icon="aside.icon" :color="aside.color" :alt="aside.alt" width="24" height="24" />
@@ -20,25 +33,22 @@ const props = defineProps<{ Aside_Data: AsideItem[] }>()
       <ImageDisplay class="icon" :image="aside.image" :alt="aside.alt" width="24" height="24" />
     </template>
     <div>
-      <span class="promo" v-html="aside.promo"></span>
-      <p v-if="aside.hide1" class="hide" v-html="aside.hide1"></p>
-      <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
-      <span v-if="aside.name" class="name" v-html="aside.name"></span>
-      <p v-if="aside.hide2" class="hide" v-html="aside.hide2"></p>
-      <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
+      <template v-if="isAsidePromo(aside)">
+        <span class="promo" v-html="aside.promo"></span>
+        <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
+        <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
+      </template>
+
+      <template v-else>
+        <p v-if="'hide1' in aside && aside.hide1" class="hide" v-html="aside.hide1"></p>
+        <span v-if="'name' in aside" class="name" v-html="aside.name"></span>
+        <p v-if="'hide2' in aside && aside.hide2" class="hide" v-html="aside.hide2"></p>
+      </template>
     </div>
   </Link>
 </template>
 
 <style scoped>
-/**
- * 处理不同模式下的图标显示：暗色模式下隐藏浅色图标，浅色模式下隐藏暗色图标。
- */
-:root:not(.dark) .dark-only,
-:root:is(.dark) .light-only {
-  display: none;
-}
-
 .link {
   display: flex;
   position: relative;
