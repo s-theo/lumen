@@ -23,122 +23,13 @@ head:
 ## 创建数据
 
 在`.vitepress`目录下新建`data/footerData.ts`文件，并添加以下内容：
-
-```ts [.vitepress/data/footerData.ts]
-import type { FooterData } from '@theojs/lumen'
-
-export const Footer_Data: FooterData = {
-  beian: {
-    showIcon: true,
-    icp: {
-      number: '粤ICP备12345678号',
-      icon: {
-        light: 'fluent:globe-shield-48-filled',
-        dark: 'fluent:globe-shield-48-filled'
-      },
-      color: {
-        light: 'rgba(20, 150, 255, 1)',
-        dark: 'rgba(100, 200, 255, 1)'
-      },
-      alt: 'ICP 备案图标',
-      rel: 'noopener noreferrer'
-    },
-    police: {
-      number: '粤公网安备12345678号',
-      icon: {
-        light: 'fluent:shield-checkmark-48-filled',
-        dark: 'fluent:shield-checkmark-48-filled'
-      },
-      color: {
-        light: 'rgba(20, 255, 150, 1)',
-        dark: 'rgba(100, 255, 200, 1)'
-      },
-      alt: '公安备案图标',
-      rel: 'noopener noreferrer'
-    }
-  },
-  author: {
-    name: 'Theo',
-    link: 'https://theojs.cn',
-    icon: {
-      light: 'mdi:copyright',
-      dark: 'mdi:copyright'
-    },
-    color: {
-      light: '#999',
-      dark: '#ccc'
-    },
-    alt: '版权图标',
-    rel: 'noopener noreferrer'
-  },
-  group: [
-    {
-      title: '外部链接',
-      icon: {
-        light: 'bx:link',
-        dark: 'bx:link'
-      },
-      color: {
-        light: 'rgba(255, 87, 51, 1)',
-        dark: 'rgba(255, 130, 100, 1)'
-      },
-      links: [
-        {
-          name: '示例1',
-          link: 'https://example1.com',
-          icon: {
-            light: 'solar:book-bold',
-            dark: 'solar:book-bold'
-          },
-          color: {
-            light: 'rgba(200, 100, 50, 1)',
-            dark: 'rgba(255, 150, 100, 1)'
-          },
-          alt: '示例1图标',
-          rel: 'noopener noreferrer'
-        },
-        {
-          name: '示例2',
-          link: 'https://example2.com'
-          // icon 和 color 可省略
-        }
-      ]
-    },
-    {
-      title: '内部链接',
-      icon: {
-        light: 'bx:link',
-        dark: 'bx:link'
-      },
-      color: {
-        light: 'rgba(255, 87, 51, 1)',
-        dark: 'rgba(255, 130, 100, 1)'
-      },
-      links: [
-        {
-          name: '示例1',
-          link: '/docs',
-          icon: {
-            light: 'solar:book-bold',
-            dark: 'solar:book-bold'
-          },
-          color: {
-            light: 'rgba(200, 100, 50, 1)',
-            dark: 'rgba(255, 150, 100, 1)'
-          },
-          alt: '文档链接图标',
-          rel: 'noopener noreferrer'
-        },
-        {
-          name: '示例2',
-          link: '/page'
-          // icon 和 color 可省略
-        }
-      ]
-    }
-  ]
-}
-```
+::: details 点开查看
+<<< ./example/FooterData.ts
+:::
+或者支持 `i18n`
+::: details 点开查看
+<<< ./example/FooterData_i18n.ts
+:::
 
 ## 引入组件
 
@@ -204,11 +95,12 @@ const icon: IconImageType = {
 
 `FooterData` 是所有组件的顶层接口，包含了以下几个字段：
 
-| 字段     | 类型      | 描述                                                                 | 是否必填              |
-| -------- | --------- | -------------------------------------------------------------------- | --------------------- |
-| `group`  | `Group[]` | 链接分组数组，支持多个分组配置，每个分组包含标题、图标、链接等信息。 | <Badge text="可选" /> |
-| `beian`  | `Beian`   | ICP 备案与公安备案配置，用于展示网站备案合规信息。                   | <Badge text="可选" /> |
-| `author` | `Author`  | 作者信息展示，包含作者名称、链接与版权图标，常用于页脚归属标识。     | <Badge text="可选" /> |
+| 字段     | 类型                                                | 描述                                                                 | 是否必填              |
+| -------- | --------------------------------------------------- | -------------------------------------------------------------------- | --------------------- |
+| `i18n`   | `Record<string, Partial<Omit<FooterData, 'i18n'>>>` | 多语言数据配置                                                       | <Badge text="可选" /> |
+| `group`  | `Group[]`                                           | 链接分组数组，支持多个分组配置，每个分组包含标题、图标、链接等信息。 | <Badge text="可选" /> |
+| `beian`  | `Beian`                                             | ICP 备案与公安备案配置，用于展示网站备案合规信息。                   | <Badge text="可选" /> |
+| `author` | `Author`                                            | 作者信息展示，包含作者名称、链接与版权图标，常用于页脚归属标识。     | <Badge text="可选" /> |
 
 ### `Group` 接口
 
