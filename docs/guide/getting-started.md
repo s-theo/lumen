@@ -4,7 +4,7 @@ description: 快速了解如何安装和开始使用 @theojs/lumen 插件。本�
 head:
   - - meta
     - name: keywords
-      content: '@theojs/lumen 快速开始 安装教程 VitePress 主题插件 Vue组件 功能模块 pnpm npm yarn 导入主题 首页公告栏 侧边栏链接 视频组件 Twikoo评论 站点统计 theojs Lumen'
+      content: '@theojs/lumen 快速开始 安装教程 VitePress 主题插件 Vue组件 功能模块 pnpm npm yarn 导入主题 首页公告栏 侧边栏链接 视频组件 Waline评论 站点统计 theojs Lumen'
 ---
 
 # 快速开始
@@ -83,13 +83,6 @@ yarn add @theojs/lumen
       icon: 'heroicons-solid:rectangle-group',
       color: '#1abc9c',
       alt: '链接卡片图标'
-    },
-    {
-      name: '页面分享按钮',
-      link: 'sharebutton',
-      icon: 'heroicons-solid:share',
-      color: '#007bff',
-      alt: '页面分享按钮图标'
     },
     {
       name: '图片描述',
