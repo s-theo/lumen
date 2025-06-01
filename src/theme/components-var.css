@@ -126,21 +126,6 @@
   --HomeUnderline-bg: var(--vp-c-brand-1);
 
   /**
-  * Component: ShareButton
-  * -------------------------------------------------------------------------- */
-
-  --ShareButton-bg: var(--component-bg);
-  --ShareButton-border: transparent;
-  --ShareButton-text: var(--vp-c-brand-1);
-  --ShareButton-copied-text: var(--vp-c-brand-1);
-  --ShareButton-transition: var(--vp-c-brand-soft);
-  --ShareButton-icon: var(--vp-c-brand-1);
-  --ShareButton-bg-hover: var(--vp-c-brand-soft);
-  --ShareButton-border-hover: var(--vp-c-brand-soft);
-  --ShareButton-transform-hover: translateY(-1px);
-  --ShareButton-transform-active: scale(0.9);
-
-  /**
   * Home-links
   * -------------------------------------------------------------------------- */
 

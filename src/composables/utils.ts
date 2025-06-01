@@ -1,6 +1,6 @@
-import { useData, useRoute, useRouter } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 
-import { ComputedRef, computed, onMounted, onUnmounted, ref } from 'vue'
+import { ComputedRef, computed, onMounted, onUnmounted } from 'vue'
 
 import type { Prelink, VideoProps } from '../types'
 
@@ -52,32 +52,6 @@ export const moveDomElements = (): void => {
 }
 
 /**
- * 提供复制文本到剪贴板的功能，并显示复制状态。
- *
- * @returns 包含 `copied` 状态和 `copyLink` 函数的组合对象。
- */
-export const useCopyLink = () => {
-  const copied = ref(false)
-
-  const copyLink = async (text: string) => {
-    try {
-      if (!navigator.clipboard) {
-        alert('当前浏览器不支持自动复制，请手动复制。')
-        return
-      }
-      await navigator.clipboard.writeText(text)
-      copied.value = true
-      setTimeout(() => (copied.value = false), 2000)
-    } catch (error) {
-      console.error('复制失败:', error)
-      alert('复制失败，请手动复制。')
-    }
-  }
-
-  return { copied, copyLink }
-}
-
-/**
  * 支持的视频平台播放器配置。
  *
  * 每个平台提供一个 `src` 函数用于生成嵌入链接，以及播放器名称。
@@ -118,19 +92,6 @@ export function getVideo(props: VideoProps) {
   if (props.is && props.id) return video[props.is]
   if (props.id) return video.youtube
   return { src: props.src || '', title: 'Custom video player' }
-}
-
-/**
- * 基于当前路由生成页面分享链接。
- *
- * @returns 当前页面完整的分享链接。
- */
-export function useShareLink(): ComputedRef<string> {
-  const router = useRouter()
-  return computed(() => {
-    if (typeof window === 'undefined') return ''
-    return `${window.location.origin}${router.route.path}`
-  })
 }
 
 /**
