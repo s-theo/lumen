@@ -87,16 +87,12 @@ features:
     details: 设计美观的链接卡片，直观展示外部资源或推荐内容，提升页面内容的吸引力。
     link: '/guide/linkcard'
 
-  - title: '<iconify-icon class="i-mr" icon="heroicons-solid:share" style="color:#007bff"></iconify-icon>页面分享'
-    details: 为每个页面提供便捷的分享功能，方便用户分享内容，提高站点的曝光率。
-    link: '/guide/sharebutton'
-
   - title: '<iconify-icon class="i-mr" icon="heroicons-solid:photo" style="color:#2ecc71"></iconify-icon>图片描述'
     details: 为图片添加说明文字，增强内容语义表达，提高无障碍访问体验，同时有助于SEO。
     link: '/guide/image-description'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons-solid:chat" style="color:#3498db"></iconify-icon>集成评论'
-    details: 集成 Twikoo 和 waline 评论，提升用户互动体验，增强站点的社交功能。
+    details: 集成 waline 评论，提升用户互动体验，增强站点的社交功能。
     link: '/guide/doccomment'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square-solid" style="color:#007bff"></iconify-icon>站点统计'

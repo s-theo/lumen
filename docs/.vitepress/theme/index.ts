@@ -12,14 +12,12 @@ import {
   DocVideoLink,
   HomeFooter,
   HomeUnderline,
-  ShareButton,
-  Twikoo,
   Waline,
   umamiAnalytics
 } from '@theojs/lumen'
 import '@theojs/lumen/theme'
 
-import { Aside_Data, Footer_Data, Twikoo_Data, Waline_Data } from '../data'
+import { Aside_Data, Footer_Data, Waline_Data } from '../data'
 
 import 'virtual:group-icons.css'
 
@@ -29,10 +27,8 @@ export default {
     return h(DefaultTheme.Layout, null, {
       'home-hero-info-before': () => h(Announcement),
       'aside-ads-before': () => h(DocAsideLogo, { Aside_Data }),
-      'aside-outline-before': () => h(ShareButton),
       'layout-bottom': () => h(HomeFooter, { Footer_Data }),
-      // 'doc-after': () => h(Waline, { Waline_Data })
-      'doc-after': () => h(Twikoo, { Twikoo_Data })
+      'doc-after': () => h(Waline, { Waline_Data })
     })
   },
   enhanceApp: ({ app }) => {
@@ -49,7 +45,6 @@ export default {
     app.component('BoxCube', DocBoxCube)
     app.component('Home', HomeUnderline)
     app.component('Vid', DocVideoLink)
-    app.component('Twikoo', Twikoo)
     app.component('Waline', Waline)
   }
 }
