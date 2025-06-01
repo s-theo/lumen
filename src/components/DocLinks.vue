@@ -30,11 +30,6 @@ const props = defineProps<{ items: LinkItem[] }>()
 </template>
 
 <style scoped>
-:root:not(.dark) .dark-only,
-:root:is(.dark) .light-only {
-  display: none;
-}
-
 .link {
   display: flex;
   align-items: center;
