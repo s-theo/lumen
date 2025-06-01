@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { FooterData, isExternal, getLocaleKey } from '../types'
-import { Link, IconDisplay } from './common'
-import { ref, onMounted, computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
+
+import { FooterData, getLocaleKey, isExternal } from '../types'
+import { IconDisplay, Link } from './common'
 
 const props = defineProps<{ Footer_Data: FooterData }>()
 

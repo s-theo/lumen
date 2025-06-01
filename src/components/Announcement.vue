@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { usePrelink, handleClick } from '../types'
-import { Link, IconDisplay } from './common'
+import { handleClick, usePrelink } from '../types'
+import { IconDisplay, Link } from './common'
 
 const prelink = usePrelink()
 </script>
