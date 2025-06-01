@@ -4,6 +4,7 @@ import { Waline } from '@waline/client/component'
 import type { WalineData } from '../types'
 
 import '@waline/client/style'
+import '@waline/client/meta'
 
 const { Waline_Data: data } = defineProps<{ Waline_Data: WalineData }>()
 const route = useRoute()

@@ -205,12 +205,6 @@ export interface Prelink {
   rel?: RelType
 }
 
-/** Twikoo 配置数据类型接口。 */
-export interface TwikooData {
-  /** Twikoo 的环境 ID。 */
-  envId: string
-}
-
 /** Waline 配置数据类型接口。 */
 export interface WalineData {
   serverURL: WalineProps['serverURL']
@@ -337,19 +331,4 @@ export interface VideoProps {
   is?: 'youtube' | 'bilibili' | 'tencent' | 'youku' | 'vimeo'
   /** 自定义视频链接，只有在 `is` 和`id` 不存在时才需要提供。 */
   src?: string
-}
-
-/** ShareButton 接口。 */
-export interface ShareButtonItem {
-  /** 按钮图标的类名，支持 Iconify 图标库。 @default 'solar:copy-bold' */
-  buttonIcon?: string
-
-  /** 按钮显示的文本内容。@default '复制页面链接' */
-  buttonText?: string
-
-  /** 复制成功后显示的图标的类名，支持 Iconify 图标库。 @default 'mdi:thumbs-up' */
-  copiedIcon?: string
-
-  /** 复制成功后显示的文本信息。@default '链接已复制!' */
-  copiedText?: string
 }

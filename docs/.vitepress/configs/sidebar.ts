@@ -49,10 +49,6 @@ export function guide(): SidebarItem[] {
           link: 'linkcard'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-solid:share" style="color:#007bff"></iconify-icon>页面分享按钮',
-          link: 'sharebutton'
-        },
-        {
           text: '<iconify-icon class="i-mr" icon="heroicons-solid:photo" style="color:#2ecc71"></iconify-icon>图片描述',
           link: 'image-description'
         },

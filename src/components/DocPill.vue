@@ -18,14 +18,6 @@ const pill = defineProps<Pill>()
 </template>
 
 <style scoped>
-/**
- * 处理不同模式下的图标显示：暗色模式下隐藏浅色图标，浅色模式下隐藏暗色图标。
- */
-:root:not(.dark) .dark-only,
-:root:is(.dark) .light-only {
-  display: none;
-}
-
 .vp-doc h1 > .link {
   vertical-align: top;
   margin-top: 2px;
