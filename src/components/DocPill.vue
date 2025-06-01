@@ -40,6 +40,10 @@ const pill = defineProps<Pill>()
   line-height: 18px;
 }
 
+.vp-doc td > .link {
+  font-size: 1em;
+}
+
 .link {
   display: inline-flex;
   align-items: center;
@@ -79,7 +83,7 @@ const pill = defineProps<Pill>()
 
 .name {
   color: var(--Pill-name);
-  font-size: 0.75em;
+  font-size: 0.875em;
   letter-spacing: 0.05em;
 }
 </style>
