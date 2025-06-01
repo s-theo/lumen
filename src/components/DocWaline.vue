@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { useRoute, useData } from 'vitepress'
-import { Waline } from '@waline/client/component'
-import type { WalineData } from '../types'
+import { useData, useRoute } from 'vitepress'
 
-import '@waline/client/style'
+import { Waline } from '@waline/client/component'
 import '@waline/client/meta'
+import '@waline/client/style'
+
+import type { WalineData } from '../types'
 
 const { Waline_Data: data } = defineProps<{ Waline_Data: WalineData }>()
 const route = useRoute()
