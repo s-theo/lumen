@@ -48,19 +48,17 @@ import '@theojs/lumen/pic'
 
 ### 示例
 
-```vue-html
+```vue
 <iconify-icon icon="simple-icons:fontawesome"></iconify-icon>
 <iconify-icon icon="line-md:iconify2-static"></iconify-icon>
 <iconify-icon icon="cil:locomotive" height="36"></iconify-icon>
 <iconify-icon icon="cil:paper-plane" width="36"></iconify-icon>
-<iconify-icon icon="cil:truck" style="font-size: 18px" height="2em"></iconify-icon>
 ```
 
 <iconify-icon icon="simple-icons:fontawesome"></iconify-icon>
 <iconify-icon icon="line-md:iconify2-static"></iconify-icon>
 <iconify-icon icon="cil:locomotive" height="36"></iconify-icon>
 <iconify-icon icon="cil:paper-plane" width="36"></iconify-icon>
-<iconify-icon icon="cil:truck" style="font-size: 18px" height="2em"></iconify-icon>
 
 ## 自定义组件 CSS
 

@@ -48,29 +48,29 @@ export default {
 <!-- YouTube 视频 -->
 <Vid id="dQw4w9WgXcQ" />
 <!-- 指定平台 -->
-<Vid is="youtube" id="dQw4w9WgXcQ" />
+<Vid id="dQw4w9WgXcQ" is="youtube" />
 
 <!-- Bilibili 视频 -->
-<Vid is="bilibili" id="BV1if421Q7mL" />
+<Vid id="BV1if421Q7mL" is="bilibili" />
 
 <!-- 腾讯视频 -->
-<Vid is="tencent" id="y0035f2sc4s" />
+<Vid id="y0035f2sc4s" is="tencent" />
 
 <!-- 优酷视频 -->
-<Vid is="youku" id="XNTE5NTc3NjIwMA==" />
+<Vid id="XNTE5NTc3NjIwMA==" is="youku" />
 
 <!-- Vimeo 视频 -->
-<Vid is="vimeo" id="76979871" />
+<Vid id="76979871" is="vimeo" />
 ```
 
 ### 自定义视频链接示例
 
-```vue-html
+```vue
 <!-- 其他视频平台嵌入 -->
 <Vid src="https://geo.dailymotion.com/player.html?video=x7z0ovx" />
 
 <!-- 直接嵌入 MP4 视频 -->
-<Vid src="https://download.blender.org/durian/trailer/sintel_trailer-720p.mp4" />
+<Vid src="https://media.w3.org/2010/05/sintel/trailer.mp4" />
 ```
 
 ## 数据接口说明
