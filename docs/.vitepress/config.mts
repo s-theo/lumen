@@ -105,7 +105,7 @@ export default defineConfig({
     sidebar,
 
     socialLinks,
-    search: { provider: 'local', options: search },
+    search: { provider: 'algolia', options: search },
     notFound: {
       title: '找不到页面',
       quote: '页面不见了，也许它去找寻新的冒险了！',
