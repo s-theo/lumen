@@ -1,4 +1,4 @@
-import { useData, useRoute } from 'vitepress'
+import { useData } from 'vitepress'
 
 import { ComputedRef, computed, onMounted, onUnmounted } from 'vue'
 
@@ -7,29 +7,27 @@ import type { Prelink, VideoProps } from '../types'
 /**
  * 提取 frontmatter 中 hero 配置的 `prelink` 属性。
  *
- * @returns 一个包含 `Prelink` 对象或 `undefined` 的计算属性。
+ * @returns 包含 `Prelink` 对象或 `undefined` 的计算属性
  */
 export const usePrelink = (): ComputedRef<Prelink | undefined> => {
   const { frontmatter } = useData()
   return computed(() => frontmatter.value.hero?.prelink)
 }
 
-/** 正则表达式：匹配外部链接。 规则：以协议（如 http:, https:, mailto: 等）或 `//` 开头。 */
+/** 匹配外部链接的正则：以协议（如 http:、https:、mailto:）或 `//` 开头 */
 export const EXTERNAL_URL_RE = /^(?:[a-z]+:|\/\/)/i
 
 /**
  * 判断给定路径是否为外部链接。
  *
- * 外部链接指以协议（如 `http:`, `mailto:`）或 `//` 开头的 URL。
- *
- * @param path - 要检测的链接路径字符串。
- * @returns 如果是外部链接返回 `true`，否则返回 `false`。
+ * @param path - 链接路径字符串
+ * @returns 是外部链接返回 true，否则 false
  */
 export function isExternal(path: string): boolean {
   return EXTERNAL_URL_RE.test(path)
 }
 
-/** 将 `#hero-text` 的 DOM 节点插入至 `.VPHero .text` 中，并在组件卸载时还原。 */
+/** 将 `#hero-text` 节点移动到 `.VPHero .text` 中，并在组件卸载时复原。 */
 export const moveDomElements = (): void => {
   let sourceElement: Element | null = null
   let placeholder: Comment | null = null
@@ -37,7 +35,6 @@ export const moveDomElements = (): void => {
   onMounted(() => {
     const target = document.querySelector('.VPHero .text')
     sourceElement = document.querySelector('#hero-text')
-
     if (target && sourceElement) {
       placeholder = document.createComment('hero-text-placeholder')
       sourceElement.before(placeholder)
@@ -51,11 +48,7 @@ export const moveDomElements = (): void => {
   })
 }
 
-/**
- * 支持的视频平台播放器配置。
- *
- * 每个平台提供一个 `src` 函数用于生成嵌入链接，以及播放器名称。
- */
+/** 支持的视频平台播放器配置。 */
 export const video = {
   bilibili: {
     src: (id: VideoProps['id']) =>
@@ -83,10 +76,10 @@ export const video = {
 }
 
 /**
- * 获取对应视频平台的嵌入配置或自定义视频信息。
+ * 获取视频播放器配置。
  *
- * @param props - 视频参数，包括平台标识 `is`、视频 ID、以及自定义 `src`。
- * @returns 视频播放器配置对象。
+ * @param props - 视频参数
+ * @returns 对应平台视频播放器配置或自定义配置
  */
 export function getVideo(props: VideoProps) {
   if (props.is && props.id) return video[props.is]
@@ -95,27 +88,27 @@ export function getVideo(props: VideoProps) {
 }
 
 /**
- * 处理预设链接点击事件：支持跳转或复制内容。
+ * 处理预设链接点击事件，支持复制操作。
  *
- * @param event - 鼠标点击事件。
- * @param prelink - `Prelink` 对象，包含跳转链接、复制文本等字段。
+ * @param event - 鼠标点击事件
+ * @param prelink - 预设链接配置
  */
 export function handleClick(
   event: MouseEvent,
   prelink: Prelink | undefined
 ): void {
-  if (!prelink?.copy) return // 非复制操作，直接 return
+  if (!prelink?.copy) return
 
   event.preventDefault()
 
   const textToCopy = prelink.install?.trim()
   if (!textToCopy) {
-    alert('没有提供可复制的内容')
+    alert('未提供可复制内容')
     return
   }
 
   if (!navigator.clipboard) {
-    alert('当前浏览器不支持复制，请手动复制。')
+    alert('浏览器不支持复制，请手动复制。')
     return
   }
 
@@ -130,38 +123,11 @@ export function handleClick(
 }
 
 /**
- * 获取当前语言对应的 locale key（如 'root'、'en'）。 优先通过路由路径匹配 locales 中的前缀（排除 'root'），
- * 如果匹配不到则根据站点语言设置 lang 进行匹配 fallback。
+ * 获取当前激活的 locale key（如 `root`、`en`）。
  *
- * @example
- *   const localeKey = getLocaleKey()
- *   const currentFooter = computed(
- *     () => props.Footer_Data.locales?.[localeKey.value]
- *   )
- *
- * @returns 当前 locale 的 key（如 'root'、'en'），默认为 'root'
+ * @returns 当前激活的 locale key
  */
 export function getLocaleKey() {
-  const { site } = useData()
-  const route = useRoute()
-
-  return computed(() => {
-    const locales = site.value.locales
-    const path = route.path
-
-    const matchedByPath = Object.keys(locales).find(
-      (prefix) => prefix !== 'root' && path.startsWith('/' + prefix)
-    )
-
-    if (matchedByPath) {
-      return matchedByPath
-    }
-
-    const lang = site.value.lang
-    const matchedByLang = Object.entries(locales).find(
-      ([, value]) => value.lang === lang
-    )
-
-    return matchedByLang?.[0] || 'root'
-  })
+  const { localeIndex } = useData()
+  return computed(() => localeIndex.value)
 }
