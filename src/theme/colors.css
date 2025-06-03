@@ -45,6 +45,8 @@
   --vp-c-bg-soft: rgba(22, 31, 50, 1);
   --vp-c-bg-alt: rgba(13, 18, 27, 1);
   --vp-c-bg-elv: var(--vp-c-bg-soft);
+
+  --docsearch-hit-active-color: var(--c-text-light-1);
 }
 
 /* style the promo information */
