@@ -45,8 +45,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(prettier@3.5.3)
       prettier-plugin-packagejson:
-        specifier: ^2.5.14
-        version: 2.5.14(prettier@3.5.3)
+        specifier: ^2.5.15
+        version: 2.5.15(prettier@3.5.3)
       prettier-plugin-sort-json:
         specifier: ^4.1.1
         version: 4.1.1(prettier@3.5.3)
@@ -57,11 +57,11 @@ importers:
   docs:
     dependencies:
       '@mdit/plugin-figure':
-        specifier: ^0.20.0
-        version: 0.20.0(markdown-it@14.1.0)
+        specifier: ^0.21.0
+        version: 0.21.0(markdown-it@14.1.0)
       '@mdit/plugin-img-size':
-        specifier: ^0.20.0
-        version: 0.20.0(markdown-it@14.1.0)
+        specifier: ^0.21.0
+        version: 0.21.0(markdown-it@14.1.0)
       '@theojs/lumen':
         specifier: workspace:*
         version: link:../src
@@ -500,8 +500,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@mdit/plugin-figure@0.20.0':
-    resolution: {integrity: sha512-/gh8b/g8pob/kvOqpRTZKMn4RW9S0La3JdDmdZ7ssSiVyYTUfIrhM8QgE+pdf5vebyMquIbw7tJDwTHoLWrzLA==}
+  '@mdit/plugin-figure@0.21.0':
+    resolution: {integrity: sha512-6WKHQOryrwXJ+GK+/wcmR+65sikO2AzT56bOAOhgcnrcgidO51tNej4Z6v5STcHKeJ7IVdiMoT5y5kB+VD0hrg==}
     engines: {node: '>= 18'}
     peerDependencies:
       markdown-it: ^14.1.0
@@ -509,8 +509,8 @@ packages:
       markdown-it:
         optional: true
 
-  '@mdit/plugin-img-size@0.20.0':
-    resolution: {integrity: sha512-t8dcw6VLZnr0F/jPLDMvhyqf1aHXsM4iywfdhXlbSm7GTQJqWCenzQHwSWqKyn9gBUX4KXS2sXRvUPc5kYNePw==}
+  '@mdit/plugin-img-size@0.21.0':
+    resolution: {integrity: sha512-ueYDsKKjtgdLi/fO50K2fRg3lwIFIgQ3bVHlJcrc9Wm++XhudqQZmLrbRjRVrTkLmGI7Zx23QsfG2ve5IXQAkw==}
     engines: {node: '>= 18'}
     peerDependencies:
       markdown-it: ^14.1.0
@@ -518,8 +518,8 @@ packages:
       markdown-it:
         optional: true
 
-  '@pkgr/core@0.2.4':
-    resolution: {integrity: sha512-ROFF39F6ZrnzSUEmQQZUar0Jt4xVoP9WnDRdWwF4NNcXs3xBTLgBUDoOwW141y1jP+S8nahIbdxbFC7IShw9Iw==}
+  '@pkgr/core@0.2.7':
+    resolution: {integrity: sha512-YLT9Zo3oNPJoBjBc4q8G2mjU4tqIbf5CEOORbUUr48dCD9q3umJ3IPlVqOqDakPfd2HuwccBaqlGhN4Gmr5OWg==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
   '@rollup/rollup-android-arm-eabi@4.41.1':
@@ -2102,8 +2102,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.0
 
-  prettier-plugin-packagejson@2.5.14:
-    resolution: {integrity: sha512-h+3tSpr2nVpp+YOK1MDIYtYhHVXr8/0V59UUbJpIJFaqi3w4fvUokJo6eV8W+vELrUXIZzJ+DKm5G7lYzrMcKQ==}
+  prettier-plugin-packagejson@2.5.15:
+    resolution: {integrity: sha512-2QSx6y4IT6LTwXtCvXAopENW5IP/aujC8fobEM2pDbs0IGkiVjW/ipPuYAHuXigbNe64aGWF7vIetukuzM3CBw==}
     peerDependencies:
       prettier: '>= 1.16.0'
     peerDependenciesMeta:
@@ -2347,8 +2347,8 @@ packages:
     resolution: {integrity: sha512-Kb3PrPYz4HanVF1LVGuAdW6LoVgIwjUYJGzFe7NDrBLCN4lsV/5J0MFurV+ygS4bRVwrCEt2c7MQ1R2a72oJDw==}
     engines: {node: '>=0.10.0'}
 
-  synckit@0.11.6:
-    resolution: {integrity: sha512-2pR2ubZSV64f/vqm9eLPz/KOvR9Dm+Co/5ChLgeHl0yEDRc6h5hXHoxEQH8Y5Ljycozd3p1k5TTSVdzYGkPvLw==}
+  synckit@0.11.8:
+    resolution: {integrity: sha512-+XZ+r1XGIJGeQk3VvXhT6xx/VpbHsRzsTkGgF6E5RX9TTXD0118l87puaEBZ566FhqblC6U0d4XnubznJDm30A==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
   tabbable@6.2.0:
@@ -2998,19 +2998,19 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@mdit/plugin-figure@0.20.0(markdown-it@14.1.0)':
+  '@mdit/plugin-figure@0.21.0(markdown-it@14.1.0)':
     dependencies:
       '@types/markdown-it': 14.1.2
     optionalDependencies:
       markdown-it: 14.1.0
 
-  '@mdit/plugin-img-size@0.20.0(markdown-it@14.1.0)':
+  '@mdit/plugin-img-size@0.21.0(markdown-it@14.1.0)':
     dependencies:
       '@types/markdown-it': 14.1.2
     optionalDependencies:
       markdown-it: 14.1.0
 
-  '@pkgr/core@0.2.4': {}
+  '@pkgr/core@0.2.7': {}
 
   '@rollup/rollup-android-arm-eabi@4.41.1':
     optional: true
@@ -4687,10 +4687,10 @@ snapshots:
     dependencies:
       prettier: 3.5.3
 
-  prettier-plugin-packagejson@2.5.14(prettier@3.5.3):
+  prettier-plugin-packagejson@2.5.15(prettier@3.5.3):
     dependencies:
       sort-package-json: 3.2.1
-      synckit: 0.11.6
+      synckit: 0.11.8
     optionalDependencies:
       prettier: 3.5.3
 
@@ -4954,9 +4954,9 @@ snapshots:
 
   symbol-observable@1.0.1: {}
 
-  synckit@0.11.6:
+  synckit@0.11.8:
     dependencies:
-      '@pkgr/core': 0.2.4
+      '@pkgr/core': 0.2.7
 
   tabbable@6.2.0: {}
 
