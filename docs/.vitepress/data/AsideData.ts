@@ -24,7 +24,7 @@ export const Aside_Data: AsideItem = [
     rel: 'sponsored',
     image: 'https://i.theojs.cn/logo/totoro.webp',
     alt: '龙猫云 Logo',
-    promo: '龙猫云51大促-低至48折！',
+    promo: '龙猫云618大促-低至48折！',
     info1:
       '月付 <span class="promo-text"> 85折 </span>优惠码 <span class="promo-text"> spring85 </span>',
     info2:
@@ -37,48 +37,47 @@ export const Aside_Data: AsideItem = [
   //   alt: '龙猫云 Logo',
   //   promo: 'Totoro Cloud - 龙猫云'
   // },
-  // {
-  //   link: 'https://itheo.top/qyt',
-  //   image: 'https://i.theojs.cn/logo/qyt.webp',
-  //   alt: '青云梯 Logo',
-  //   promo: '青云梯 51劳动节活动开启',
-  //   info1:
-  //     '月付 <span class="promo-text"> 85折 </span>优惠码 <span class="promo-text"> wuyi85 </span>',
-  //   info2:
-  //     '年付 <span class="promo-text"> 8折 </span>优惠码 <span class="promo-text"> wuyi80 </span>'
-  // },
   {
     link: 'https://itheo.top/qyt',
-    rel: 'sponsored',
     image: 'https://i.theojs.cn/logo/qyt.webp',
     alt: '青云梯 Logo',
-    promo: '青云梯'
+    promo: '青云梯 618大促活动开启',
+    info1:
+      '月付 <span class="promo-text"> 85折 </span>优惠码 <span class="promo-text"> wuyi85 </span>',
+    info2:
+      '年付 <span class="promo-text"> 8折 </span>优惠码 <span class="promo-text"> wuyi80 </span>'
   },
   // {
-  //   link: 'https://itheo.top/tnt',
+  //   link: 'https://itheo.top/qyt',
   //   rel: 'sponsored',
-  //   image: 'https://i.theojs.cn/docs/TNT.webp',
-  //   alt: 'TNT Cloud Logo',
-  //   promo: 'TNT Cloud 五一特惠!',
-  //   info1:
-  //     '全场 <span class="promo-text"> 8折 </span>优惠码 <span class="promo-text"> MayDay80 </span>'
+  //   image: 'https://i.theojs.cn/logo/qyt.webp',
+  //   alt: '青云梯 Logo',
+  //   promo: '青云梯'
   // },
   {
     link: 'https://itheo.top/tnt',
     rel: 'sponsored',
     image: 'https://i.theojs.cn/docs/TNT.webp',
     alt: 'TNT Cloud Logo',
-    promo: 'TNT Cloud'
+    promo: 'TNT Cloud 618购物狂欢!',
+    info1:
+      '全场 <span class="promo-text"> 8折 </span>优惠码 <span class="promo-text"> Crazy618 </span>'
   },
   // {
+  //   link: 'https://itheo.top/tnt',
+  //   rel: 'sponsored',
+  //   image: 'https://i.theojs.cn/docs/TNT.webp',
+  //   alt: 'TNT Cloud Logo',
+  //   promo: 'TNT Cloud'
+  // },
+  // {
   //   link: 'https://itheo.top/feitu',
-  // rel: 'sponsored',
+  //   rel: 'sponsored',
   //   image: 'https://i.theojs.cn/logo/feitu.webp',
-  // alt: '飞兔云 Logo',
-  //   promo: '飞兔云 双11 狂欢来袭！',
-  //   info1:
-  //     '全场 <span class="promo-text"> 88 </span>折！全场 <span class="promo-text"> 88 </span>折！',
-  //   info2: '优惠码 <span class="promo-text"> 1111@88 </span>全场打折'
+  //   alt: '飞兔云 Logo',
+  //   promo: '飞兔云 六一&端午 特惠',
+  //   info1: '月/半年/年付 <span class="promo-text">85</span> 折 ',
+  //   info2: '优惠券 <span class="promo-text"> 61@85 </span>'
   // },
   {
     link: 'https://itheo.top/feitu',
