@@ -313,39 +313,7 @@ console.log('Hello, VitePress!')
 
 ### 导入主题时报错: `does not provide an export named 'load'`
 
-请按以下步骤操作以解决该问题：
-
-::: code-group
-
-```sh [pnpm]
-pnpm add recaptcha-v3
-```
-
-```sh [npm]
-npm install recaptcha-v3
-```
-
-```sh [yarn]
-yarn add recaptcha-v3
-```
-
-:::
-然后在 `.vitepress/config.mts`中添加以下内容
-
-```ts [.vitepress/config.mts]
-import { defineConfig } from 'vitepress'
-
-export default defineConfig({
-  // [!code ++]
-  vite: {
-    // [!code ++]
-    optimizeDeps: {
-      // [!code ++]
-      include: ['recaptcha-v3']
-    } // [!code ++]
-  } // [!code ++]
-})
-```
+查看 [解决方式](./doccomment.md##安装依赖)
 
 ### 使用 `iconify-icon` 时报错: `[Vue warn]: Failed to resolve component: iconify-icon`
 
