@@ -22,7 +22,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
 <template>
   <Link
     v-for="(aside, index) in aside"
-    :key="index"
+    :key="aside.link + index"
     :href="aside.link"
     :rel="aside.rel"
     :classes="['link', isAsidePromo(aside) ? 'has-promo' : '', 'name' in aside ? 'has-name' : ''].join(' ')"
@@ -39,11 +39,10 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
         <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
         <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
       </template>
-
       <template v-else>
-        <p v-if="'hide1' in aside && aside.hide1" class="hide" v-html="aside.hide1"></p>
-        <span v-if="'name' in aside" class="name" v-html="aside.name"></span>
-        <p v-if="'hide2' in aside && aside.hide2" class="hide" v-html="aside.hide2"></p>
+        <p v-if="aside.hide1" class="hide" v-html="aside.hide1"></p>
+        <span class="name" v-html="aside.name"></span>
+        <p v-if="aside.hide2" class="hide" v-html="aside.hide2"></p>
       </template>
     </div>
   </Link>

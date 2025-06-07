@@ -34,7 +34,7 @@ onMounted(() => {
           />
           {{ section.title }}
         </span>
-        <div v-for="(link, idx) in section.links" :key="link.name + idx" class="list-links">
+        <div v-for="(link, idx) in section.links" :key="link.link + idx" class="list-links">
           <IconDisplay
             v-if="link.icon"
             class="iconify icon-space"
