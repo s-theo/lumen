@@ -1,10 +1,6 @@
 ---
 title: 评论组件 - Waline
 description: 了解如何通过 @theojs/lumen 插件将 Waline 评论系统集成到你的 VitePress 网站中。本指南包括数据配置、组件引入以及在文档页和首页启用评论功能的步骤，帮助你轻松为站点添加互动评论区。
-head:
-  - - meta
-    - name: keywords
-      content: VitePress  Waline 评论系统 @theojs/lumen Lumen Vue组件 主题插件 静态网站评论 博客评论 theojs VitePress插件 评论集成 互动评论
 ---
 
 # 评论组件 - Waline
