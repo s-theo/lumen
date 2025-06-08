@@ -22,7 +22,6 @@ export default defineConfig({
   description: '✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库',
   lang: 'zh-Hans',
   cleanUrls: true,
-  metaChunk: true,
   lastUpdated: true,
   sitemap: { hostname: baseUrl },
   head,
