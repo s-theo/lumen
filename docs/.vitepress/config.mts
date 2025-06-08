@@ -61,7 +61,9 @@ export default defineConfig({
       src: 'https://i.theojs.cn/logo/Lumen-Logo-mini.webp',
       width: 24,
       height: 24,
-      alt: 'Lumen Logo'
+      alt: 'Lumen Logo',
+      loading: 'eager',
+      fetchpriority: 'high'
     },
 
     // 修改链接
