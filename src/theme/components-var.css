@@ -148,8 +148,8 @@
   --waline-dark-grey: var(--vp-c-text-1) !important;
 
   /* 主题色 */
-  --waline-theme-color: var(--vp-c-brand-3);
-  --waline-active-color: var(--vp-c-brand-2);
+  --waline-theme-color: var(--vp-c-brand-3) !important;
+  --waline-active-color: var(--vp-c-brand-2) !important;
 
   /* 布局颜色 */
   --waline-color: var(--vp-c-text-1) !important;
@@ -165,12 +165,12 @@
   --waline-bq-color: var(--vp-c-text-3) !important;
 
   /* 头像 */
-  --waline-avatar-size: 3rem;
+  --waline-avatar-size: 3.25rem;
   --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
 
   /* 徽章 */
   --waline-badge-color: #3498db;
-  --waline-badge-font-size: 0.625em;
+  --waline-badge-font-size: 0.775em;
 
   /* 信息 */
   --waline-info-bg-color: var(--vp-c-bg-alt) !important;
