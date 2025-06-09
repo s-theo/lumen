@@ -36,3 +36,12 @@ const { lang, isDark } = useData()
     :reaction="data.reaction"
   />
 </template>
+
+<style>
+.wl-reaction-text {
+  color: var(--vp-c-text-3);
+  font-weight: 500;
+  font-size: 0.75rem !important;
+  line-height: 2.25rem;
+}
+</style>
