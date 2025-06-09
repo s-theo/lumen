@@ -30,5 +30,22 @@ export const Waline_Data: WalineData = {
     'https://unpkg.com/@waline/emojis@latest/tw',
     'https://unpkg.com/@waline/emojis@latest/weibo',
     'https://unpkg.com/@waline/emojis@latest/soul-emoji'
-  ]
+  ],
+  imageUploader: async (file) => {
+    const formData = new FormData()
+    formData.append('image', file)
+
+    const { success, data, message } = await (
+      await fetch(
+        `https://api.imgbb.com/1/upload?key=${(import.meta as any).env.VITE_IMGBB_API_KEY}`,
+        {
+          method: 'POST',
+          body: formData
+        }
+      )
+    ).json()
+
+    if (success) return data.url
+    throw new Error(`上传失败: ${message}`)
+  }
 }
