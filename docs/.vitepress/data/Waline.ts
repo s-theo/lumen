@@ -36,13 +36,10 @@ export const Waline_Data: WalineData = {
     formData.append('image', file)
 
     const { success, data, message } = await (
-      await fetch(
-        `https://api.imgbb.com/1/upload?key=${(import.meta as any).env.VITE_IMGBB_API_KEY}`,
-        {
-          method: 'POST',
-          body: formData
-        }
-      )
+      await fetch(import.meta.env.VITE_IMGBB_URL, {
+        method: 'POST',
+        body: formData
+      })
     ).json()
 
     if (success) return data.url
