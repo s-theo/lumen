@@ -5,13 +5,9 @@ description: 了解如何使用 @theojs/lumen 插件提供的视频组件 (Vid)�
 
 # 视频组件 - DocVideoLink
 
-该组件支持多种主流视频平台的视频嵌入，并允许通过自定义链接插入任意视频源。通过简洁的属性配置，可以轻松集成 YouTube、Bilibili、腾讯视频、优酷、Vimeo 等平台的视频，保证响应式设计和优质的观看体验。
+该组件支持多种主流视频平台的视频嵌入，并允许通过自定义链接插入任意视频源。通过简洁直观的属性配置，可轻松集成 YouTube、Bilibili、腾讯视频、优酷、Vimeo 等平台，确保响应式布局与良好的观看体验。
 
-- **支持多平台**：内置支持 <Pill name="YouTube" icon="logos:youtube-icon" link="https://www.youtube.com/" alt="youtube icon" />
-  <Pill name="Bilibili" icon="simple-icons:bilibili" color="#00A1D6" link="https://www.bilibili.com/" alt="bilibili icon" />
-  <Pill name="腾讯视频" image="https://v.qq.com/favicon.ico" link="https://v.qq.com/" alt="腾讯视频 icon" />
-  <Pill name="优酷视频" image="https://img.alicdn.com/imgextra/i2/O1CN01BeAcgL1ywY0G5nSn8_!!6000000006643-2-tps-195-195.png" link="https://www.youku.com/" alt="优酷视频 icon" />
-  <Pill name="Vimeo" icon="logos:vimeo-icon" link="https://vimeo.com" alt="vimeo icon"/>，只需提供对应平台标识 `is` 和视频 ID `id` 即可。
+- **支持多平台**：内置支持 <Pill name="YouTube" icon="logos:youtube-icon" link="https://www.youtube.com/" alt="youtube icon" /><Pill name="Bilibili" icon="simple-icons:bilibili" color="#00A1D6" link="https://www.bilibili.com/" alt="bilibili icon" /><Pill name="腾讯视频" image="https://v.qq.com/favicon.ico" link="https://v.qq.com/" alt="腾讯视频 icon" /><Pill name="优酷视频" image="https://img.alicdn.com/imgextra/i2/O1CN01BeAcgL1ywY0G5nSn8_!!6000000006643-2-tps-195-195.png" link="https://www.youku.com/" alt="优酷视频 icon" /><Pill name="Vimeo" icon="logos:vimeo-icon" link="https://vimeo.com" alt="vimeo icon"/>，只需提供对应平台标识 `is` 和视频 ID `id` 即可。
 - **自定义视频链接**：也可直接通过 `src` 属性插入自定义视频链接，适用于 MP4 文件或其他视频源。
 - **响应式设计**：自动适配不同屏幕尺寸，兼容移动端与桌面端，保证视频比例和显示效果。
 - **使用简便**：清晰的属性接口，无需额外配置，快速嵌入视频。
