@@ -44,24 +44,6 @@
       },
       alt: 'github icon',
       rel: 'noopener noreferrer'
-    },
-    // 带描述的项
-    {
-      name: 'Vue.js',
-      link: 'https://vuejs.org/',
-      icon: 'devicon:vuejs',
-      desc: 'v3.4.31',
-      alt: 'vue icon',
-      rel: 'noopener noreferrer'
-    },
-    // 带标签的项
-    {
-      name: 'Vue',
-      link: 'https://vuejs.org/',
-      icon: 'vscode-icons:file-type-vue',
-      tag: 'new',
-      alt: 'vue icon',
-      rel: 'noopener noreferrer'
     }
   ]"
 />

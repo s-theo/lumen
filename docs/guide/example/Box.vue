@@ -44,15 +44,6 @@
       },
       alt: 'github icon',
       rel: 'noopener noreferrer'
-    },
-    // 带标签的图标
-    {
-      name: 'Vue',
-      link: 'https://vuejs.org/',
-      icon: 'vscode-icons:file-type-vue',
-      tag: 'new',
-      alt: 'vue icon',
-      rel: 'noopener noreferrer'
     }
   ]"
 />

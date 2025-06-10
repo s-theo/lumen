@@ -14,32 +14,29 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
     :rel="boxcube.rel"
   >
     <template v-if="boxcube.icon">
-      <IconDisplay :icon="boxcube.icon" :color="boxcube.color" :alt="boxcube.alt" width="38" height="38" />
+      <IconDisplay :icon="boxcube.icon" :color="boxcube.color" :alt="boxcube.alt" width="32" height="32" />
     </template>
     <template v-else-if="boxcube.image">
-      <ImageDisplay :image="boxcube.image" :alt="boxcube.alt" width="38" height="38" />
+      <ImageDisplay :image="boxcube.image" :alt="boxcube.alt" width="32" height="32" />
     </template>
     <span class="name">{{ boxcube.name }}</span>
-    <p v-if="boxcube.desc" class="desc">{{ boxcube.desc }}</p>
-    <p v-if="boxcube.tag" class="tag">{{ boxcube.tag }}</p>
   </Link>
 </template>
 
 <style scoped>
 .link {
   display: inline-flex;
-  position: relative;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  margin: 0.3em;
+  margin: 0.25em;
   border: 1px solid var(--Boxcube-border);
-  border-radius: 0.8em;
+  border-radius: 0.5em;
   background-color: var(--Boxcube-bg);
-  width: 8em;
-  height: 8em;
+  width: 6.75em;
+  height: 6.75em;
   overflow: hidden;
   -webkit-text-decoration: none !important;
   text-decoration: none !important;
@@ -83,55 +80,15 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   color: var(--iconify-defaultcolor);
 }
 
-.name,
-.desc {
+.name {
+  transform: translateY(1em);
   max-width: 80%;
   overflow: hidden;
-
+  color: var(--Boxcube-name);
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.name {
-  transform: translateY(0.5em);
-  color: var(--Boxcube-name);
-  font-weight: 500;
-  font-size: 0.875em;
-  line-height: 1.2;
-  letter-spacing: 0.05em;
-}
-
-.desc {
-  position: absolute;
-  bottom: 1em;
-  margin: 0;
-  width: 80%;
-  color: var(--Boxcube-desc);
-  font-size: 0.75em;
-  line-height: 1.5;
-}
-
-.tag {
-  display: flex;
-  position: absolute;
-  top: 0.5em;
-  right: -3.75em;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(25deg);
-  z-index: 1;
-  margin: 0;
-  border-radius: 0.7em;
-  background-color: var(--Boxcube-tag-bg);
-  padding: 0.25em 0.5em;
-  width: 100%;
-  overflow: hidden;
-  pointer-events: none;
-  color: var(--Boxcube-tag);
-  font-weight: 500;
-  font-size: 0.625em;
-  line-height: 1;
-  text-transform: uppercase;
 }
 </style>
