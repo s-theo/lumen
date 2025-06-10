@@ -58,7 +58,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 0.125em 0;
   border: 1.5px solid var(--AsideLogo-border);
-  border-radius: 0.8em;
+  border-radius: 0.5em;
   background-color: var(--AsideLogo-bg);
   padding: 0.25em 0;
 }

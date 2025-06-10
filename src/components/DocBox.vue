@@ -8,31 +8,29 @@ const props = defineProps<{ items: BoxItem[] }>()
 <template>
   <Link v-for="(box, index) in props.items" :key="box.link + index" class="link" :href="box.link" :rel="box.rel">
     <template v-if="box.icon">
-      <IconDisplay :icon="box.icon" :color="box.color" :alt="box.alt" width="38" height="38" />
+      <IconDisplay :icon="box.icon" :color="box.color" :alt="box.alt" width="32" height="32" />
     </template>
     <template v-else-if="box.image">
-      <ImageDisplay :image="box.image" :alt="box.alt" width="38" height="38" />
+      <ImageDisplay :image="box.image" :alt="box.alt" width="32" height="32" />
     </template>
     <span class="name">{{ box.name }}</span>
-    <p v-if="box.tag" class="tag">{{ box.tag }}</p>
   </Link>
 </template>
 
 <style scoped>
 .link {
   display: inline-flex;
-  position: relative;
   flex-wrap: wrap;
   align-items: center;
   gap: 1em;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 0.15em;
   border: 1px solid var(--Box-border);
-  border-radius: 0.8em;
+  border-radius: 0.5em;
   background-color: var(--Box-bg);
   padding: 0 1.6em;
-  width: 14em;
-  height: 3.5em;
+  width: 10em;
+  height: 3em;
   text-decoration: none !important;
 }
 
@@ -65,24 +63,6 @@ const props = defineProps<{ items: BoxItem[] }>()
   }
 }
 
-.tag {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  margin: 0;
-  border-radius: 0 0.7em 0 0.7em;
-  background-color: var(--Box-tag-bg);
-  padding: 0.25em 0.5em;
-  pointer-events: none;
-  color: var(--Box-tag);
-  font-weight: 500;
-  font-size: 0.625em;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
 .iconify {
   flex-shrink: 0;
   color: var(--iconify-defaultcolor);
@@ -91,8 +71,7 @@ const props = defineProps<{ items: BoxItem[] }>()
 .name {
   overflow: hidden;
   color: var(--Box-name);
-  font-weight: 500;
-  font-size: 0.875em;
+  font-size: 0.75em;
   letter-spacing: 0.05em;
   text-overflow: ellipsis;
   white-space: nowrap;
