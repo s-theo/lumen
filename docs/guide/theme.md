@@ -40,7 +40,13 @@ import '@theojs/lumen/pic'
 
 ## 图标支持
 
-<Pill name="使用方法查看: https://iconify.design/docs/iconify-icon/" link="https://iconify.design/docs/iconify-icon/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" />
+<Pill
+  name="使用方法查看: https://iconify.design/docs/iconify-icon/"
+  link="https://iconify.design/docs/iconify-icon/"
+  icon="line-md:iconify2-static"
+  color="#1769AA"
+  alt="iconify icon"
+/>
 
 ### 示例
 
