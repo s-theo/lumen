@@ -88,41 +88,6 @@ export function getVideo(props: VideoProps) {
 }
 
 /**
- * 处理预设链接点击事件，支持复制操作。
- *
- * @param event - 鼠标点击事件
- * @param prelink - 预设链接配置
- */
-export function handleClick(
-  event: MouseEvent,
-  prelink: Prelink | undefined
-): void {
-  if (!prelink?.copy) return
-
-  event.preventDefault()
-
-  const textToCopy = prelink.install?.trim()
-  if (!textToCopy) {
-    alert('未提供可复制内容')
-    return
-  }
-
-  if (!navigator.clipboard) {
-    alert('浏览器不支持复制，请手动复制。')
-    return
-  }
-
-  navigator.clipboard
-    .writeText(textToCopy)
-    .then(() => {
-      console.log('[Announcement] 已复制到剪贴板:', textToCopy)
-    })
-    .catch((err) => {
-      console.error('[Announcement] 复制失败:', err)
-    })
-}
-
-/**
  * 获取当前激活的 locale key（如 `root`、`en`）。
  *
  * @returns 当前激活的 locale key
