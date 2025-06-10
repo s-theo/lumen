@@ -28,8 +28,6 @@ export interface BoxItem {
   name: string
   /** DocBox 链接。 */
   link: LinkType
-  /** DocBox 标签。 */
-  tag?: string
   /** 图标的颜色。 */
   color?: IconImageType
   /** 图标名称（支持 iconify） */
@@ -86,10 +84,6 @@ export interface BoxCubeItem {
   name: string
   /** BoxCube 链接。 */
   link: LinkType
-  /** BoxCube 描述。 */
-  desc?: string
-  /** BoxCube 标签。 */
-  tag?: string
   /** 图标的颜色。 */
   color?: IconImageType
   /** 图标名称（支持 iconify） */
@@ -195,10 +189,6 @@ export interface Prelink {
   dateText?: string
   /** 日期图标 */
   dateIcon?: string
-  /** 复制开关 */
-  copy?: boolean
-  /** 复制的内容 */
-  install?: string
   /** 图片的 alt 文本 */
   alt?: AltType
   /** Rel 属性 */
