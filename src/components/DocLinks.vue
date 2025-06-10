@@ -36,7 +36,7 @@ const props = defineProps<{ items: LinkItem[] }>()
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 0.5em 0;
   border: 1px solid var(--Links-border);
-  border-radius: 0.8em;
+  border-radius: 0.5em;
   background-color: var(--Links-bg);
   padding: 1em;
   text-decoration: none !important;
@@ -58,12 +58,12 @@ const props = defineProps<{ items: LinkItem[] }>()
 }
 
 .iconify {
-  flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
+  flex-shrink: 0;
   color: var(--iconify-defaultcolor);
 }
 
 .default-icon {
-  flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
+  flex-shrink: 0;
   margin: 0 0.25em 0 0.2em;
 }
 
