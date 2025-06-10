@@ -61,8 +61,6 @@
   --Box-bg: var(--component-bg);
   --Box-border: transparent;
   --Box-name: inherit;
-  --Box-tag: var(--vp-c-brand-text);
-  --Box-tag-bg: var(--vp-c-brand-3);
   --Box-bg-hover: var(--vp-c-brand-soft);
   --Box-border-hover: var(--vp-c-brand-soft);
   --Box-boxshadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -76,9 +74,6 @@
   --Boxcube-bg: var(--component-bg);
   --Boxcube-border: transparent;
   --Boxcube-name: inherit;
-  --Boxcube-desc: var(--vp-c-text-3);
-  --Boxcube-tag: var(--vp-c-brand-text);
-  --Boxcube-tag-bg: var(--vp-c-brand-3);
   --Boxcube-bg-hover: var(--vp-c-brand-soft);
   --Boxcube-border-hover: var(--vp-c-brand-soft);
   --Boxcube-boxshadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -194,17 +189,6 @@
     rgba(255, 130, 255, 1),
     rgba(120, 200, 255, 1)
   );
-
-  /**
-  * Component: Box
-  * -------------------------------------------------------------------------- */
-
-  --Box-tag-bg: var(--vp-c-brand-1);
-
-  /**
-  * Component: BoxCube
-  * -------------------------------------------------------------------------- */
-  --Boxcube-tag-bg: var(--vp-c-brand-1);
 
   /**
   * Component: AsideLogo
