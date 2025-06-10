@@ -1,23 +1,22 @@
 <script setup lang="ts">
-import { handleClick, usePrelink } from '../types'
+import { usePrelink } from '../types'
 import { IconDisplay, Link } from './common'
 
 const prelink = usePrelink()
 </script>
 
 <template>
-  <Link
-    v-if="prelink"
-    :classes="['prelink', prelink.copy ? 'copy-mode' : '']"
-    :href="prelink.copy ? undefined : prelink.link"
-    :rel="prelink.rel"
-    @click="(e) => handleClick(e, prelink)"
-  >
+  <Link v-if="prelink" class="prelink" :href="prelink.link" :rel="prelink.rel">
     <div class="prelink-content">
       <span class="title" v-html="prelink.title"></span>
       <p v-if="prelink.content" class="content" v-html="prelink.content"></p>
       <div v-if="prelink.date" class="time-info">
-        <IconDisplay class="iconify" :icon="prelink.dateIcon || 'line-md:calendar'" :alt="prelink.alt || 'date'" />
+        <IconDisplay
+          :icon="prelink.dateIcon || 'line-md:calendar'"
+          :alt="prelink.alt || 'date'"
+          width="14"
+          height="14"
+        />
         <time v-html="prelink.dateText || '活动时间: 即日至'"> </time>
         <time class="date">{{ prelink.date }}</time>
       </div>
@@ -32,13 +31,9 @@ const prelink = usePrelink()
   transition: all 0.5s ease;
   margin-bottom: 1em;
   border: 1px solid var(--Announcement-border);
-  border-radius: 0.8em;
+  border-radius: 0.5em;
   background-color: var(--Announcement-bg);
-  padding: 0.3em 1.5em;
-}
-
-.prelink.copy-mode {
-  cursor: pointer;
+  padding: 0.15em 1em;
 }
 
 .prelink:hover {
@@ -72,10 +67,6 @@ const prelink = usePrelink()
   gap: 0.25em;
   font-weight: 500;
   font-size: 0.75em;
-}
-
-.iconify {
-  font-size: 1.2em;
 }
 
 .date {
