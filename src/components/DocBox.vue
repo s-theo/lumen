@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { BoxItem } from '../types'
-import { IconDisplay, ImageDisplay, Link } from './common'
+import { Icon, Image, Link } from './common'
 
 const props = defineProps<{ items: BoxItem[] }>()
 </script>
@@ -8,10 +8,10 @@ const props = defineProps<{ items: BoxItem[] }>()
 <template>
   <Link v-for="(box, index) in props.items" :key="box.link + index" class="link" :href="box.link" :rel="box.rel">
     <template v-if="box.icon">
-      <IconDisplay :icon="box.icon" :color="box.color" :alt="box.alt" width="32" height="32" />
+      <Icon :icon="box.icon" :color="box.color" :alt="box.alt" width="32" height="32" />
     </template>
     <template v-else-if="box.image">
-      <ImageDisplay :image="box.image" :alt="box.alt" width="32" height="32" />
+      <Image :image="box.image" :alt="box.alt" width="32" height="32" />
     </template>
     <span class="name">{{ box.name }}</span>
   </Link>
