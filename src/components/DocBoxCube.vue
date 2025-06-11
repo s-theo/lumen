@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { BoxCubeItem } from '../types'
-import { IconDisplay, ImageDisplay, Link } from './common'
+import { Icon, Image, Link } from './common'
 
 const props = defineProps<{ items: BoxCubeItem[] }>()
 </script>
@@ -14,10 +14,10 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
     :rel="boxcube.rel"
   >
     <template v-if="boxcube.icon">
-      <IconDisplay :icon="boxcube.icon" :color="boxcube.color" :alt="boxcube.alt" width="32" height="32" />
+      <Icon :icon="boxcube.icon" :color="boxcube.color" :alt="boxcube.alt" width="32" height="32" />
     </template>
     <template v-else-if="boxcube.image">
-      <ImageDisplay :image="boxcube.image" :alt="boxcube.alt" width="32" height="32" />
+      <Image :image="boxcube.image" :alt="boxcube.alt" width="32" height="32" />
     </template>
     <span class="name">{{ boxcube.name }}</span>
   </Link>
