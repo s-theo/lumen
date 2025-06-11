@@ -1,3 +1,4 @@
-export { default as IconDisplay } from './IconDisplay.vue'
-export { default as ImageDisplay } from './ImageDisplay.vue'
+export { default as Icon } from './Icon.vue'
+export { default as Image } from './Image.vue'
+export { default as Svg } from './Svg.vue'
 export { default as Link } from './Link.vue'
