@@ -48,7 +48,7 @@ onMounted(() => {
             <Link :href="link.link" :rel="link.rel">
               {{ link.name }}
               <Icon
-                v-if="isExternal(link.link)"
+                v-if="isExternal(link.link) && !(footer.noIcon || section.noIcon || link.noIcon)"
                 class="external-link-icon"
                 icon="basil:arrow-up-outline"
                 alt="External Link Icon"
