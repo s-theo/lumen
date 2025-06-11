@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Pill } from '../types'
-import { IconDisplay, ImageDisplay, Link } from './common'
+import { Icon, Image, Link } from './common'
 
 const pill = defineProps<Pill>()
 </script>
@@ -8,10 +8,10 @@ const pill = defineProps<Pill>()
 <template>
   <Link :href="pill.link" :rel="pill.rel" :classes="'link ignore-header'">
     <template v-if="pill.icon">
-      <IconDisplay :icon="pill.icon" :color="pill.color" :alt="pill.alt" width="14" height="14" />
+      <Icon :icon="pill.icon" :color="pill.color" :alt="pill.alt" width="14" height="14" />
     </template>
     <template v-else-if="pill.image">
-      <ImageDisplay :image="pill.image" :alt="pill.alt" width="14" height="14" />
+      <Image :image="pill.image" :alt="pill.alt" width="14" height="14" />
     </template>
     <span class="name">{{ pill.name }}</span>
   </Link>
