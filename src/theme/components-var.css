@@ -143,8 +143,8 @@
   --waline-dark-grey: var(--vp-c-text-1) !important;
 
   /* 主题色 */
-  --waline-theme-color: var(--vp-c-brand-3) !important;
-  --waline-active-color: var(--vp-c-brand-2) !important;
+  --waline-theme-color: var(--vp-c-brand-1) !important;
+  --waline-active-color: var(--vp-c-brand-3) !important;
 
   /* 布局颜色 */
   --waline-color: var(--vp-c-text-1) !important;

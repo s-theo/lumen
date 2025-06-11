@@ -27,8 +27,8 @@
   --c-text-light-1: rgba(44, 62, 80, 1);
 
   --vp-c-brand-text: var(--c-text-light-1);
-  --c-bg-accent: var(--c-white-dark);
   --vp-c-bg-alt: rgba(246, 246, 247, 1);
+  --vp-c-bg-elv: rgba(44, 62, 80, 0.1);
 }
 
 .dark {
@@ -39,7 +39,6 @@
 
   --vp-c-text-1: var(--c-text-dark-1);
   --vp-c-brand-text: var(--c-text-light-1);
-  --c-bg-accent: var(--vp-c-bg-soft);
 
   --vp-c-bg: var(--c-black);
   --vp-c-bg-soft: rgba(22, 31, 50, 1);
