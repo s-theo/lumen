@@ -21,8 +21,8 @@ onMounted(() => {
 <template>
   <footer class="footer">
     <div v-if="footer.group?.length" class="list-container">
-      <div v-for="(section, index) in footer.group" :key="section.title + index">
-        <span class="list-title">
+      <section v-for="(section, index) in footer.group" :key="section.title + index">
+        <h3 class="list-title">
           <Icon
             v-if="section.icon"
             class="iconify icon-space"
@@ -33,30 +33,32 @@ onMounted(() => {
             height="14"
           />
           {{ section.title }}
-        </span>
-        <div v-for="(link, idx) in section.links" :key="link.link + idx" class="list-links">
-          <Icon
-            v-if="link.icon"
-            class="iconify icon-space"
-            :icon="link.icon"
-            :color="link.color"
-            :alt="link.alt"
-            width="14"
-            height="14"
-          />
-          <Link :href="link.link" :rel="link.rel">
-            {{ link.name }}
+        </h3>
+        <ul>
+          <li v-for="(link, idx) in section.links" :key="link.link + idx" class="list-links">
             <Icon
-              v-if="isExternal(link.link)"
-              class="external-link-icon"
-              icon="basil:arrow-up-outline"
-              alt="External Link Icon"
+              v-if="link.icon"
+              class="iconify icon-space"
+              :icon="link.icon"
+              :color="link.color"
+              :alt="link.alt"
               width="14"
               height="14"
             />
-          </Link>
-        </div>
-      </div>
+            <Link :href="link.link" :rel="link.rel">
+              {{ link.name }}
+              <Icon
+                v-if="isExternal(link.link)"
+                class="external-link-icon"
+                icon="basil:arrow-up-outline"
+                alt="External Link Icon"
+                width="14"
+                height="14"
+              />
+            </Link>
+          </li>
+        </ul>
+      </section>
     </div>
 
     <div class="footer-info">
