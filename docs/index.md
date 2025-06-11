@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: Lumen
-  text: 'Enhanced '
-  textsuffix: 'Theme'
+  text: Enhanced
+  textsuffix: Theme
   tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
 
   image:

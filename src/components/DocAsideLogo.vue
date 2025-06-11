@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 
 import { AsideAll, AsideItem, AsidePromo, getLocaleKey } from '../types'
-import { IconDisplay, ImageDisplay, Link } from './common'
+import { Icon, Image, Link } from './common'
 
 const props = defineProps<{ Aside_Data: AsideItem }>()
 
@@ -28,10 +28,10 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
     :classes="['link', isAsidePromo(aside) ? 'has-promo' : '', 'name' in aside ? 'has-name' : ''].join(' ')"
   >
     <template v-if="aside.icon">
-      <IconDisplay :icon="aside.icon" :color="aside.color" :alt="aside.alt" width="24" height="24" />
+      <Icon :icon="aside.icon" :color="aside.color" :alt="aside.alt" width="24" height="24" />
     </template>
     <template v-else-if="aside.image">
-      <ImageDisplay class="icon" :image="aside.image" :alt="aside.alt" width="24" height="24" />
+      <Image class="icon" :image="aside.image" :alt="aside.alt" width="24" height="24" />
     </template>
     <div>
       <template v-if="isAsidePromo(aside)">

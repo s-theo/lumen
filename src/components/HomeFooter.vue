@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 
 import { FooterData, getLocaleKey, isExternal } from '../types'
-import { IconDisplay, Link } from './common'
+import { Icon, Link } from './common'
 
 const props = defineProps<{ Footer_Data: FooterData }>()
 
@@ -23,7 +23,7 @@ onMounted(() => {
     <div v-if="footer.group?.length" class="list-container">
       <div v-for="(section, index) in footer.group" :key="section.title + index">
         <span class="list-title">
-          <IconDisplay
+          <Icon
             v-if="section.icon"
             class="iconify icon-space"
             :icon="section.icon"
@@ -35,7 +35,7 @@ onMounted(() => {
           {{ section.title }}
         </span>
         <div v-for="(link, idx) in section.links" :key="link.link + idx" class="list-links">
-          <IconDisplay
+          <Icon
             v-if="link.icon"
             class="iconify icon-space"
             :icon="link.icon"
@@ -46,7 +46,7 @@ onMounted(() => {
           />
           <Link :href="link.link" :rel="link.rel">
             {{ link.name }}
-            <IconDisplay
+            <Icon
               v-if="isExternal(link.link)"
               class="external-link-icon"
               icon="basil:arrow-up-outline"
@@ -62,7 +62,7 @@ onMounted(() => {
     <div class="footer-info">
       <span v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
         <p v-if="footer.beian?.icp?.number" class="footer-infotext">
-          <IconDisplay
+          <Icon
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
             :icon="footer.beian.icp.icon || 'fluent:globe-shield-48-filled'"
@@ -79,7 +79,7 @@ onMounted(() => {
         <span class="info-spacing"></span>
 
         <p v-if="footer.beian?.police?.number" class="footer-infotext">
-          <IconDisplay
+          <Icon
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
             :icon="footer.beian.police.icon || 'fluent:shield-checkmark-48-filled'"
@@ -98,7 +98,7 @@ onMounted(() => {
 
       <span v-if="footer.author?.name" class="info-item">
         <p class="footer-infotext">
-          <IconDisplay
+          <Icon
             class="info-icon"
             :icon="footer.author.icon || 'ri:copyright-line'"
             :color="footer.author.color"
