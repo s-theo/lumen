@@ -227,12 +227,16 @@ export interface FooterData {
   beian?: Beian
   /** 作者信息。 */
   author?: Author
+  /** 外部链接图标开关 */
+  noIcon?: boolean
 }
 
 /** HomeFooter Group 接口 */
 export interface Group {
   /** 图标名称（支持 iconify） */
   icon?: IconImageType
+  /** 外部链接图标开关 */
+  noIcon?: boolean
   /** 图标样式 */
   color?: IconImageType
   /** 分组标题 */
@@ -301,6 +305,8 @@ export interface Author {
 export interface Link {
   /** 链接图标 */
   icon?: IconImageType
+  /** 外部链接图标开关 */
+  noIcon?: boolean
   /** 链接样式 */
   color?: IconImageType
   /** 链接名称 */
