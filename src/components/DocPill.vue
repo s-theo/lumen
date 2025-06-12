@@ -72,10 +72,6 @@ const pill = defineProps<Pill>()
   transform: var(--Pill-transform-active);
 }
 
-.link::after {
-  display: none !important;
-}
-
 .iconify {
   flex-shrink: 0;
   color: var(--iconify-defaultcolor);
