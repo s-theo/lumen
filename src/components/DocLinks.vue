@@ -122,7 +122,7 @@ const props = defineProps<{
 }
 
 @media (max-width: 600px) {
-  .doc-links-list.two-columns {
+  .flex.grid {
     grid-template-columns: 1fr;
   }
 }
