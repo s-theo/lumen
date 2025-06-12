@@ -2,43 +2,56 @@
 import { BoxCubeItem } from '../types'
 import { Icon, Image, Link } from './common'
 
-const props = defineProps<{ items: BoxCubeItem[] }>()
+const props = defineProps<{
+  items: BoxCubeItem[]
+  grid?: number
+}>()
 </script>
 
 <template>
-  <Link
-    v-for="(boxcube, index) in props.items"
-    :key="boxcube.link + index"
-    class="link"
-    :href="boxcube.link"
-    :rel="boxcube.rel"
+  <div
+    class="grid"
+    :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
   >
-    <template v-if="boxcube.icon">
-      <Icon :icon="boxcube.icon" :color="boxcube.color" :alt="boxcube.alt" width="32" height="32" />
-    </template>
-    <template v-else-if="boxcube.image">
-      <Image :image="boxcube.image" :alt="boxcube.alt" width="32" height="32" />
-    </template>
-    <span class="name">{{ boxcube.name }}</span>
-  </Link>
+    <Link
+      v-for="(boxcube, index) in props.items"
+      :key="boxcube.link + index"
+      class="link"
+      :href="boxcube.link"
+      :rel="boxcube.rel"
+    >
+      <template v-if="boxcube.icon">
+        <Icon :icon="boxcube.icon" :color="boxcube.color" :alt="boxcube.alt" width="32" height="32" />
+      </template>
+      <template v-else-if="boxcube.image">
+        <Image :image="boxcube.image" :alt="boxcube.alt" width="32" height="32" />
+      </template>
+      <span class="name">{{ boxcube.name }}</span>
+    </Link>
+  </div>
 </template>
 
 <style scoped>
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 .link {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  margin: 0.25em;
   border: 1px solid var(--Boxcube-border);
   border-radius: 0.5em;
   background-color: var(--Boxcube-bg);
-  width: 6.75em;
-  height: 6.75em;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  min-width: 0;
   overflow: hidden;
-  -webkit-text-decoration: none !important;
   text-decoration: none !important;
 }
 
@@ -52,29 +65,6 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
 .link:active {
   transform: var(--Boxcube-transform-active);
 }
-
-.link::after {
-  display: none !important;
-}
-
-@media (max-width: 1024px) {
-  .link {
-    width: calc(24% - 0.5em);
-  }
-}
-
-@media (max-width: 768px) {
-  .link {
-    width: calc(33% - 0.5em);
-  }
-}
-
-@media (max-width: 480px) {
-  .link {
-    width: calc(49.5% - 0.5em);
-  }
-}
-
 .iconify {
   flex-shrink: 0;
   color: var(--iconify-defaultcolor);
@@ -90,5 +80,11 @@ const props = defineProps<{ items: BoxCubeItem[] }>()
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .flex.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 </style>
