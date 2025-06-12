@@ -8,6 +8,7 @@ description: 了解如何通过 @theojs/lumen 插件将 Waline 评论系统集�
 ## waline评论
 
 <Links
+  :grid="true"
   :items="[
     {
       name: '如何部署请查看 waline 文档',
