@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "format:cheak": "prettier --check .",
     "preview": "pnpm -F=docs preview",
-    "release": "cd src && pnpm release"
+    "release": "cd src && pnpm release",
+    "upall": "pnpm -r update --latest"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -47,5 +48,5 @@
     "prettier-plugin-vitepress": "^0.0.10",
     "simple-git-hooks": "^2.13.0"
   },
-  "packageManager": "pnpm@10.11.1"
+  "packageManager": "pnpm@10.12.1"
 }

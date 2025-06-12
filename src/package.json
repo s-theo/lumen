@@ -75,7 +75,7 @@
   },
   "devDependencies": {
     "vite": "^6.3.5",
-    "vitepress": "2.0.0-alpha.5"
+    "vitepress": "2.0.0-alpha.6"
   },
-  "packageManager": "pnpm@10.11.1"
+  "packageManager": "pnpm@10.12.1"
 }
