@@ -5,7 +5,7 @@ import { computed } from 'vue'
 
 import { Icon } from '@iconify/vue'
 
-import { AltType, ClassesType, HeightType, IconImageType, WidthType } from '../../types'
+import { AltType, HeightType, IconImageType, WidthType } from '../../types'
 
 const props = defineProps<{
   icon: IconImageType
@@ -13,7 +13,6 @@ const props = defineProps<{
   alt?: AltType
   width?: WidthType
   height?: HeightType
-  classes?: ClassesType
 }>()
 
 const { isDark } = useData()
@@ -38,7 +37,6 @@ const currentColor = computed(() => {
 
 <template>
   <Icon
-    :class="props.classes"
     :icon="currentIcon"
     :color="currentColor"
     :ssr="true"

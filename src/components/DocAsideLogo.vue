@@ -23,9 +23,9 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
   <Link
     v-for="(aside, index) in aside"
     :key="aside.link + index"
+    :class="['link', isAsidePromo(aside) ? 'has-promo' : '', 'name' in aside ? 'has-name' : ''].join(' ')"
     :href="aside.link"
     :rel="aside.rel"
-    :classes="['link', isAsidePromo(aside) ? 'has-promo' : '', 'name' in aside ? 'has-name' : ''].join(' ')"
   >
     <template v-if="aside.icon">
       <Icon :icon="aside.icon" :color="aside.color" :alt="aside.alt" width="24" height="24" />

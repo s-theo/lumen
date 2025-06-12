@@ -3,14 +3,13 @@ import { useData } from 'vitepress'
 
 import { computed } from 'vue'
 
-import { AltType, ClassesType, HeightType, IconImageType, WidthType } from '../../types'
+import { AltType, HeightType, IconImageType, WidthType } from '../../types'
 
 const props = defineProps<{
   image: IconImageType
   alt?: AltType
   width?: WidthType
   height?: HeightType
-  classes?: ClassesType
 }>()
 
 const { isDark } = useData()
@@ -25,7 +24,6 @@ const currentImage = computed(() => {
 
 <template>
   <img
-    :class="props.classes"
     :src="currentImage"
     :alt="props.alt"
     loading="lazy"
