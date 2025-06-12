@@ -83,7 +83,7 @@ const props = defineProps<{
 }
 
 @media (max-width: 600px) {
-  .flex.grid {
+  .grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
