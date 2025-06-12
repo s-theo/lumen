@@ -16,7 +16,7 @@ const props = defineProps<{
     <Link
       v-for="(boxcube, index) in props.items"
       :key="boxcube.link + index"
-      class="link"
+      class="link no-icon"
       :href="boxcube.link"
       :rel="boxcube.rel"
     >

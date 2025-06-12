@@ -17,7 +17,13 @@ const props = defineProps<{
     ]"
     :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
   >
-    <Link v-for="(link, index) in props.items" :key="link.link + index" class="link" :href="link.link" :rel="link.rel">
+    <Link
+      v-for="(link, index) in props.items"
+      :key="link.link + index"
+      class="link no-icon"
+      :href="link.link"
+      :rel="link.rel"
+    >
       <span class="row">
         <template v-if="link.icon">
           <Icon :icon="link.icon" :color="link.color" :alt="link.alt" width="32" height="32" />

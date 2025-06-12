@@ -6,7 +6,7 @@ const pill = defineProps<Pill>()
 </script>
 
 <template>
-  <Link :class="'link ignore-header'" :href="pill.link" :rel="pill.rel">
+  <Link class="link ignore-header no-icon" :href="pill.link" :rel="pill.rel">
     <template v-if="pill.icon">
       <Icon :icon="pill.icon" :color="pill.color" :alt="pill.alt" width="14" height="14" />
     </template>
