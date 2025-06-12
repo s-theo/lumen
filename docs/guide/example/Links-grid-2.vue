@@ -21,12 +21,6 @@
       alt: 'github icon',
       desc: '全球最大的代码托管平台，提供版本控制、协作开发和项目管理等功能，广泛用于开源和私有项目的开发。',
       rel: 'noopener noreferrer'
-    },
-    // 无图标
-    {
-      name: 'Google',
-      link: 'https://www.google.com',
-      rel: 'noopener noreferrer'
     }
   ]"
 />
