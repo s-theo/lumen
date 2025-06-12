@@ -22,24 +22,6 @@ export interface IconImageMode {
   dark: string
 }
 
-/** DocBox 接口 */
-export interface BoxItem {
-  /** DocBox 名称。 */
-  name: string
-  /** DocBox 链接。 */
-  link: LinkType
-  /** 图标的颜色。 */
-  color?: IconImageType
-  /** 图标名称（支持 iconify） */
-  icon?: IconImageType
-  /** 图片路径（支持 light 和 dark 模式） */
-  image?: IconImageType
-  /** 图片的 alt 文本 */
-  alt?: AltType
-  /** Rel 属性 */
-  rel?: RelType
-}
-
 /** DocPill 接口 */
 export interface Pill {
   /** Pill 名称。 */
