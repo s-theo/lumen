@@ -6,7 +6,6 @@ import { h } from 'vue'
 import {
   Announcement,
   DocAsideLogo,
-  DocBox,
   DocBoxCube,
   DocLinks,
   DocPill,
@@ -38,7 +37,6 @@ export default {
       src: import.meta.env.VITE_UMAMI_SRC,
       domains: 'lumen.theojs.cn'
     })
-    app.component('Box', DocBox)
     app.component('Pill', DocPill)
     app.component('Links', DocLinks)
     app.component('BoxCube', DocBoxCube)
