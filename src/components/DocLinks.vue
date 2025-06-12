@@ -4,12 +4,19 @@ import { Icon, Image, Link } from './common'
 
 const props = defineProps<{
   items: LinkItem[]
-  grid?: boolean
+  grid?: boolean | number
 }>()
 </script>
 
 <template>
-  <div :class="['flex', props.grid ? 'grid' : '']">
+  <div
+    :class="[
+      'flex',
+      typeof props.grid === 'boolean' && props.grid ? 'grid' : '',
+      typeof props.grid === 'number' ? 'grid' : ''
+    ]"
+    :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
+  >
     <Link v-for="(link, index) in props.items" :key="link.link + index" class="link" :href="link.link" :rel="link.rel">
       <span class="row">
         <template v-if="link.icon">
@@ -39,12 +46,14 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .flex.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .row {
@@ -105,7 +114,7 @@ const props = defineProps<{
 }
 
 .desc {
-  margin-top: 0.875em;
+  margin: 0.875em 0 0 0;
   color: var(--Links-desc);
   font-size: 0.75em;
   line-height: 1.5;
