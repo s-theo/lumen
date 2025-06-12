@@ -1,17 +1,15 @@
 您说：
 <script setup lang="ts">
-import { ClassesType, LinkType, RelType, isExternal } from '../../types'
+import { LinkType, RelType, isExternal } from '../../types'
 
 const props = defineProps<{
   href: LinkType
   rel?: RelType
-  classes?: ClassesType
 }>()
 </script>
 
 <template>
   <a
-    :class="props.classes"
     :href="props.href"
     :target="isExternal(props.href) ? '_blank' : '_self'"
     :rel="props.rel ?? (isExternal(props.href) ? 'noreferrer' : undefined)"
