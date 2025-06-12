@@ -47,5 +47,5 @@
     "prettier-plugin-vitepress": "^0.0.10",
     "simple-git-hooks": "^2.13.0"
   },
-  "packageManager": "pnpm@10.11.1"
+  "packageManager": "pnpm@10.12.1"
 }
