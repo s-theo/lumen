@@ -2,7 +2,6 @@ import { defineAsyncComponent } from 'vue'
 
 export { default as Announcement } from './Announcement.vue'
 export { default as DocAsideLogo } from './DocAsideLogo.vue'
-export { default as DocBox } from './DocBox.vue'
 export { default as DocPill } from './DocPill.vue'
 export { default as DocBoxCube } from './DocBoxCube.vue'
 export { default as DocLinks } from './DocLinks.vue'
