@@ -55,19 +55,6 @@
   --AsideLogo-transform-active: scale(0.9);
 
   /**
-  * Component: Box
-  * -------------------------------------------------------------------------- */
-
-  --Box-bg: var(--component-bg);
-  --Box-border: transparent;
-  --Box-name: inherit;
-  --Box-bg-hover: var(--vp-c-brand-soft);
-  --Box-border-hover: var(--vp-c-brand-soft);
-  --Box-boxshadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --Box-transform-hover: translateY(-1px);
-  --Box-transform-active: scale(0.95);
-
-  /**
   * Component: BoxCube
   * -------------------------------------------------------------------------- */
 
@@ -87,7 +74,7 @@
   --Links-bg: var(--component-bg);
   --Links-border: transparent;
   --Links-name: inherit;
-  --Links-desc: var(--vp-c-text-3);
+  --Links-desc: var(--vp-c-text-2);
   --Links-bg-hover: var(--vp-c-brand-soft);
   --Links-border-hover: var(--vp-c-brand-soft);
   --Links-boxshadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05);

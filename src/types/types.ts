@@ -12,32 +12,12 @@ export type HeightType = string | undefined
 export type LinkType = string | undefined
 /** Rel 属性类型 */
 export type RelType = string | undefined
-/** 样式类类型 */
-export type ClassesType = string | string[]
 
 export interface IconImageMode {
   /** 浅色模式下的图标和图片 */
   light: string
   /** 深色模式下的图标和图片 */
   dark: string
-}
-
-/** DocBox 接口 */
-export interface BoxItem {
-  /** DocBox 名称。 */
-  name: string
-  /** DocBox 链接。 */
-  link: LinkType
-  /** 图标的颜色。 */
-  color?: IconImageType
-  /** 图标名称（支持 iconify） */
-  icon?: IconImageType
-  /** 图片路径（支持 light 和 dark 模式） */
-  image?: IconImageType
-  /** 图片的 alt 文本 */
-  alt?: AltType
-  /** Rel 属性 */
-  rel?: RelType
 }
 
 /** DocPill 接口 */
