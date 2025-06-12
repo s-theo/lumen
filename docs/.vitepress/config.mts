@@ -41,6 +41,9 @@ export default defineConfig({
           按需导入: 'logos:typescript-icon',
           全量导入: 'logos:typescript-icon',
           单独导入: 'logos:typescript-icon',
+          单列: 'logos:vue',
+          双列: 'logos:vue',
+          多列: 'logos:vue',
           '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg'
         }
       }),
