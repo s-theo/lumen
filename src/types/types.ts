@@ -12,8 +12,6 @@ export type HeightType = string | undefined
 export type LinkType = string | undefined
 /** Rel 属性类型 */
 export type RelType = string | undefined
-/** 样式类类型 */
-export type ClassesType = string | string[]
 
 export interface IconImageMode {
   /** 浅色模式下的图标和图片 */
