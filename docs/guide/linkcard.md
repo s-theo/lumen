@@ -50,14 +50,16 @@ export default {
 
 **输入**
 ::: code-group
-<<< ./example/Links.vue[单列.vue]
-<<< ./example/Links-grid.vue[双列.vue]
+<<< ./example/Links.vue[单列]
+<<< ./example/Links-grid-2.vue[双列]
+<<< ./example/Links-grid-3.vue[多列]
 :::
 
 **输出**
 
 <!--@include: ./example/Links.vue-->
-<!--@include: ./example/Links-grid.vue-->
+<!--@include: ./example/Links-grid-2.vue-->
+<!--@include: ./example/Links-grid-3.vue-->
 
 ### 参数说明
 
