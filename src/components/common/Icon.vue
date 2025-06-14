@@ -11,7 +11,7 @@ const props = defineProps<{
   icon: IconImageType
   color?: IconImageType
   alt?: AltType
-  size: SizeType
+  size?: SizeType
 }>()
 
 const { isDark } = useData()
@@ -35,13 +35,5 @@ const currentColor = computed(() => {
 </script>
 
 <template>
-  <Icon
-    :icon="currentIcon"
-    :color="currentColor"
-    :aria-label="alt"
-    :inline="true"
-    :ssr="true"
-    :width="size"
-    :height="size"
-  />
+  <Icon :icon="currentIcon" :color="currentColor" :aria-label="alt" inline ssr :width="size" :height="size" />
 </template>
