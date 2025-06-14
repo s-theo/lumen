@@ -23,7 +23,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
   <Link
     v-for="(aside, index) in aside"
     :key="aside.link + index"
-    :class="['link', isAsidePromo(aside) ? 'has-promo' : '', 'name' in aside ? 'has-name' : ''].join(' ')"
+    :class="['link', { 'has-promo': isAsidePromo(aside), 'has-name': 'name' in aside }]"
     :href="aside.link"
     :rel="aside.rel"
     :target="aside.target"
