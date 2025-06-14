@@ -23,7 +23,10 @@ const prelink = usePrelink()
 .prelink {
   display: inline-flex;
   flex-direction: column;
-  transition: all 0.5s ease;
+  transition:
+    transform 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
   margin-bottom: 1em;
   border: 1px solid var(--Announcement-border);
   border-radius: 0.5em;
