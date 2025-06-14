@@ -59,7 +59,7 @@ onMounted(() => {
     </div>
 
     <div class="footer-info">
-      <span v-if="footer.beian?.icp || footer.beian?.police" class="info-item">
+      <span v-if="footer.beian?.icp || footer.beian?.police">
         <p v-if="footer.beian?.icp?.number" class="footer-infotext">
           <Icon
             v-if="footer.beian?.showIcon"
@@ -70,7 +70,7 @@ onMounted(() => {
             size="12"
           />
           <Link
-            href="https://beian.miit.gov.cn/#/Integrated/index"
+            :href="footer.beian.icp.link || 'https://beian.miit.gov.cn/#/Integrated/index'"
             :rel="footer.beian.icp.rel"
             :target="footer.beian.icp.target"
           >
@@ -89,7 +89,11 @@ onMounted(() => {
             :alt="footer.beian.police.alt"
             size="12"
           />
-          <Link href="https://beian.mps.gov.cn/" :rel="footer.beian.police.rel" :target="footer.beian.police.target">
+          <Link
+            :href="footer.beian.police.link || 'https://beian.mps.gov.cn/'"
+            :rel="footer.beian.police.rel"
+            :target="footer.beian.police.target"
+          >
             {{ footer.beian.police.number }}
           </Link>
         </p>
@@ -97,20 +101,22 @@ onMounted(() => {
 
       <span class="info-spacing-copyright"></span>
 
-      <span v-if="footer.author?.name" class="info-item">
+      <span v-if="footer.author?.name">
         <p class="footer-infotext">
           <Icon
-            class="info-icon"
+            class="info-icon icon-space"
             :icon="footer.author.icon || 'ri:copyright-line'"
             :color="footer.author.color"
             :alt="footer.author.alt"
             size="12"
           />
-          {{ Year }}
-          <Link :href="footer.author.link" :rel="footer.author.rel" :target="footer.author.target">
-            {{ footer.author.name }}.
+          <Link
+            :href="footer.author.link || 'https://github.com/' + footer.author.name"
+            :rel="footer.author.rel"
+            :target="footer.author.target"
+          >
+            {{ Year }} {{ footer.author.name }} {{ footer.author.text || 'All Rights Reserved.' }}
           </Link>
-          All Rights Reserved.
         </p>
       </span>
     </div>
@@ -171,6 +177,7 @@ onMounted(() => {
 
 .footer-info {
   margin: 0.875em 0;
+  letter-spacing: 0.025em;
   text-align: center;
 }
 
@@ -178,11 +185,6 @@ onMounted(() => {
   display: inline-block;
   margin: 0;
   font-size: 0.75em;
-}
-
-.info-item {
-  display: inline-block;
-  letter-spacing: 0.025em;
 }
 
 .info-spacing,
