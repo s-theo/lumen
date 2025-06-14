@@ -1,18 +1,20 @@
-您说：
 <script setup lang="ts">
-import { LinkType, RelType, isExternal } from '../../types'
+import { LinkType, RelType, TargetType, isExternal } from '../../types'
 
 const props = defineProps<{
   href: LinkType
   rel?: RelType
+  target?: TargetType
 }>()
+
+const { href, rel, target } = props
 </script>
 
 <template>
   <a
-    :href="props.href"
-    :target="isExternal(props.href) ? '_blank' : '_self'"
-    :rel="props.rel ?? (isExternal(props.href) ? 'noreferrer' : undefined)"
+    :href="href"
+    :rel="rel ?? (isExternal(href) ? 'noreferrer' : undefined)"
+    :target="target ?? (isExternal(href) ? '_blank' : undefined)"
   >
     <slot />
   </a>
