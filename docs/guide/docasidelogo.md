@@ -54,31 +54,33 @@ export default {
 
 ### Promo
 
-| 字段    | 类型            | 描述                                                               | 是否必填              |
-| ------- | --------------- | ------------------------------------------------------------------ | --------------------- |
-| `promo` | `string`        | 活动标题，例如：`"限时折扣"`。                                     | <Badge text="必填" /> |
-| `link`  | `LinkType`      | 跳转链接，支持外部或内部地址。                                     | <Badge text="必填" /> |
-| `icon`  | `IconImageType` | 图标（支持 iconify，或深浅模式图标）。                             | <Badge text="可选" /> |
-| `color` | `IconImageType` | 图标颜色（支持纯色字符串或 `{ light, dark }` 格式）。              | <Badge text="可选" /> |
-| `image` | `IconImageType` | 图片资源（支持普通地址或 `{ light, dark }` 图像）。                | <Badge text="可选" /> |
-| `info1` | `string`        | 附加信息 1，例如：`"新用户立减 5 元"`。                            | <Badge text="可选" /> |
-| `info2` | `string`        | 附加信息 2，例如：`"优惠截止至 6 月 30 日"`。                      | <Badge text="可选" /> |
-| `alt`   | `AltType`       | 图片或图标的替代文本，有助于无障碍访问。                           | <Badge text="可选" /> |
-| `rel`   | `RelType`       | 链接的 `rel` 属性，建议设置为 `noopener noreferrer` 以增强安全性。 | <Badge text="可选" /> |
+| 字段     | 类型            | 描述                                                                                                                                   | 是否必填              |
+| -------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `promo`  | `string`        | 活动标题，例如：`"限时折扣"`。                                                                                                         | <Badge text="必填" /> |
+| `link`   | `LinkType`      | 跳转链接，支持外部或内部地址。                                                                                                         | <Badge text="必填" /> |
+| `rel`    | `RelType`       | 链接的 `rel` 属性，建议设置为 `noopener noreferrer` 以增强安全性。                                                                     | <Badge text="可选" /> |
+| `target` | `TargetType`    | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
+| `icon`   | `IconImageType` | 图标（支持 iconify，或深浅模式图标）。                                                                                                 | <Badge text="可选" /> |
+| `color`  | `IconImageType` | 图标颜色（支持纯色字符串或 `{ light, dark }` 格式）。                                                                                  | <Badge text="可选" /> |
+| `image`  | `IconImageType` | 图片资源（支持普通地址或 `{ light, dark }` 图像）。                                                                                    | <Badge text="可选" /> |
+| `info1`  | `string`        | 附加信息 1，例如：`"新用户立减 5 元"`。                                                                                                | <Badge text="可选" /> |
+| `info2`  | `string`        | 附加信息 2，例如：`"优惠截止至 6 月 30 日"`。                                                                                          | <Badge text="可选" /> |
+| `alt`    | `AltType`       | 图片或图标的替代文本，有助于无障碍访问。                                                                                               | <Badge text="可选" /> |
 
 ### Normal
 
-| 字段    | 类型            | 描述                                                               | 是否必填              |
-| ------- | --------------- | ------------------------------------------------------------------ | --------------------- |
-| `name`  | `string`        | 显示名称，例如：`"哔哩哔哩"`。                                     | <Badge text="必填" /> |
-| `link`  | `LinkType`      | 跳转链接，支持外部或内部地址。                                     | <Badge text="必填" /> |
-| `icon`  | `IconImageType` | 图标（支持 iconify，或深浅模式图标）。                             | <Badge text="可选" /> |
-| `color` | `IconImageType` | 图标颜色（支持纯色字符串或 `{ light, dark }` 格式）。              | <Badge text="可选" /> |
-| `image` | `IconImageType` | 图片资源（支持普通地址或 `{ light, dark }` 图像）。                | <Badge text="可选" /> |
-| `hide1` | `string`        | 隐藏信息 1，悬停时显示。例如：`"仅限中国大陆用户"`。               | <Badge text="可选" /> |
-| `hide2` | `string`        | 隐藏信息 2，用于补充额外提示。例如：`"每日限量 500 名"`。          | <Badge text="可选" /> |
-| `alt`   | `AltType`       | 图片或图标的替代文本，有助于无障碍访问。                           | <Badge text="可选" /> |
-| `rel`   | `RelType`       | 链接的 `rel` 属性，建议设置为 `noopener noreferrer` 以增强安全性。 | <Badge text="可选" /> |
+| 字段     | 类型            | 描述                                                                                                                                   | 是否必填              |
+| -------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `name`   | `string`        | 显示名称，例如：`"哔哩哔哩"`。                                                                                                         | <Badge text="必填" /> |
+| `link`   | `LinkType`      | 跳转链接，支持外部或内部地址。                                                                                                         | <Badge text="必填" /> |
+| `rel`    | `RelType`       | 链接的 `rel` 属性，建议设置为 `noopener noreferrer` 以增强安全性。                                                                     | <Badge text="可选" /> |
+| `target` | `TargetType`    | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
+| `icon`   | `IconImageType` | 图标（支持 iconify，或深浅模式图标）。                                                                                                 | <Badge text="可选" /> |
+| `color`  | `IconImageType` | 图标颜色（支持纯色字符串或 `{ light, dark }` 格式）。                                                                                  | <Badge text="可选" /> |
+| `image`  | `IconImageType` | 图片资源（支持普通地址或 `{ light, dark }` 图像）。                                                                                    | <Badge text="可选" /> |
+| `hide1`  | `string`        | 隐藏信息 1，悬停时显示。例如：`"仅限中国大陆用户"`。                                                                                   | <Badge text="可选" /> |
+| `hide2`  | `string`        | 隐藏信息 2，用于补充额外提示。例如：`"每日限量 500 名"`。                                                                              | <Badge text="可选" /> |
+| `alt`    | `AltType`       | 图片或图标的替代文本，有助于无障碍访问。                                                                                               | <Badge text="可选" /> |
 
 ### AsidePromo
 

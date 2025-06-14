@@ -6,7 +6,7 @@ const prelink = usePrelink()
 </script>
 
 <template>
-  <Link v-if="prelink" class="prelink" :href="prelink.link" :rel="prelink.rel">
+  <Link v-if="prelink" class="prelink" :href="prelink.link" :rel="prelink.rel" :target="prelink.target">
     <div class="prelink-content">
       <span class="title" v-html="prelink.title"></span>
       <p v-if="prelink.content" class="content" v-html="prelink.content"></p>
