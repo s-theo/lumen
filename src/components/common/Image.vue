@@ -19,8 +19,20 @@ const currentImage = computed(() => {
   }
   return props.image
 })
+
+const altText = computed(() => props.alt ?? '')
 </script>
 
 <template>
-  <img :src="currentImage" :alt="alt" :width="size" :height="size" loading="lazy" decoding="async" />
+  <img
+    :src="currentImage"
+    :alt="altText"
+    :width="size"
+    :height="size"
+    loading="lazy"
+    decoding="async"
+    referrerpolicy="no-referrer"
+    fetchpriority="low"
+    draggable="false"
+  />
 </template>
