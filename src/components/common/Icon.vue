@@ -38,10 +38,10 @@ const currentColor = computed(() => {
   <Icon
     :icon="currentIcon"
     :color="currentColor"
-    :ssr="true"
+    :aria-label="alt"
     :inline="true"
-    :aria-label="props.alt"
-    :width="props.size"
-    :height="props.size"
+    :ssr="true"
+    :width="size"
+    :height="size"
   />
 </template>

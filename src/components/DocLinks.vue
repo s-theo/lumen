@@ -23,6 +23,7 @@ const props = defineProps<{
       class="link no-icon"
       :href="link.link"
       :rel="link.rel"
+      :target="link.target"
     >
       <span class="row">
         <template v-if="link.icon">
