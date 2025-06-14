@@ -10,6 +10,8 @@ export type SizeType = string | undefined
 export type LinkType = string | undefined
 /** Rel 属性类型 */
 export type RelType = string | undefined
+/** 目标类型 */
+export type TargetType = string | undefined
 
 export interface IconImageMode {
   /** 浅色模式下的图标和图片 */
@@ -24,6 +26,10 @@ export interface Pill {
   name: string
   /** Pill 链接。 */
   link?: LinkType
+  /** Rel 属性 */
+  rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
   /** 图标名称（支持 iconify） */
   icon?: IconImageType
   /** 图标的颜色。 */
@@ -32,8 +38,6 @@ export interface Pill {
   image?: IconImageType
   /** 图片的 alt 文本 */
   alt?: AltType
-  /** Rel 属性 */
-  rel?: RelType
 }
 
 /** DocLinks 接口 */
@@ -44,6 +48,10 @@ export interface LinkItem {
   desc?: string
   /** DocLinks 链接。 */
   link: LinkType
+  /** Rel 属性 */
+  rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
   /** 图标的颜色。 */
   color?: IconImageType
   /** 图标名称（支持 iconify） */
@@ -52,8 +60,6 @@ export interface LinkItem {
   image?: IconImageType
   /** 图片的 alt 文本 */
   alt?: AltType
-  /** Rel 属性 */
-  rel?: RelType
 }
 
 /** BoxCube 接口 */
@@ -62,6 +68,10 @@ export interface BoxCubeItem {
   name: string
   /** BoxCube 链接。 */
   link: LinkType
+  /** Rel 属性 */
+  rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
   /** 图标的颜色。 */
   color?: IconImageType
   /** 图标名称（支持 iconify） */
@@ -70,8 +80,6 @@ export interface BoxCubeItem {
   image?: IconImageType
   /** 图片的 alt 文本 */
   alt?: AltType
-  /** Rel 属性 */
-  rel?: RelType
 }
 
 /** Promo 类型：表示一个具有活动性质的推广项 */
@@ -80,6 +88,10 @@ export interface Promo {
   promo: string
   /** 跳转链接 */
   link: LinkType
+  /** Rel 属性 */
+  rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
   /** 图标（支持 iconify 或 image 的 light/dark） */
   icon?: IconImageType
   /** 图标颜色（支持 light/dark） */
@@ -92,8 +104,6 @@ export interface Promo {
   info2?: string
   /** 图标/图片的替代文本 */
   alt?: AltType
-  /** 链接的 rel 属性 */
-  rel?: RelType
 }
 
 /** Normal 类型：表示普通链接项 */
@@ -102,6 +112,10 @@ export interface Normal {
   name: string
   /** 跳转链接 */
   link: LinkType
+  /** Rel 属性 */
+  rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
   /** 图标（可选） */
   icon?: IconImageType
   /** 图标颜色（可选） */
@@ -114,8 +128,6 @@ export interface Normal {
   hide2?: string
   /** 图标/图片的替代文本 */
   alt?: AltType
-  /** 链接的 rel 属性 */
-  rel?: RelType
 }
 
 /** AsidePromo 类型：继承 Promo，同时支持 i18n 局部多语言（排除递归） */
@@ -145,6 +157,10 @@ export type AsideItem = AsideAll[] | { i18n: Record<string, AsideAll[]> }
 export interface Prelink {
   /** 链接的 URL。 */
   link?: LinkType
+  /** Rel 属性 */
+  rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
   /** 链接的标题。 */
   title: string
   /** 链接的内容。 */
@@ -157,8 +173,6 @@ export interface Prelink {
   dateIcon?: string
   /** 图片的 alt 文本 */
   alt?: AltType
-  /** Rel 属性 */
-  rel?: RelType
 }
 
 /** Waline 配置数据类型接口。 */
@@ -232,9 +246,11 @@ export interface Icp {
   /** 图标的颜色。 */
   color?: IconImageType
   /** 无障碍描述 */
-  alt?: string
+  alt?: AltType
   /** Rel 属性 */
   rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
 }
 
 /** HomeFooter Beian 接口 */
@@ -246,9 +262,11 @@ export interface Police {
   /** 图标的颜色。 */
   color?: IconImageType
   /** 无障碍描述 */
-  alt?: string
+  alt?: AltType
   /** Rel 属性 */
   rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
 }
 
 /** HomeFooter Author 接口 */
@@ -257,14 +275,16 @@ export interface Author {
   name?: string
   /** 作者链接 */
   link?: LinkType
+  /** Rel 属性 */
+  rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
   /** 版权图标图标 */
   icon?: IconImageType
   /** 图标的颜色。 */
   color?: IconImageType
   /** 无障碍描述 */
   alt?: AltType
-  /** Rel 属性 */
-  rel?: RelType
 }
 
 /** HomeFooter Link 接口 */
@@ -279,10 +299,12 @@ export interface Link {
   name: string
   /** 链接地址 */
   link: LinkType
-  /** 无障碍描述 */
-  alt?: AltType
   /** Rel 属性 */
   rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
+  /** 无障碍描述 */
+  alt?: AltType
 }
 
 /** DocVideoLink 接口 */

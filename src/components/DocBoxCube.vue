@@ -19,6 +19,7 @@ const props = defineProps<{
       class="link no-icon"
       :href="boxcube.link"
       :rel="boxcube.rel"
+      :target="boxcube.target"
     >
       <template v-if="boxcube.icon">
         <Icon :icon="boxcube.icon" :color="boxcube.color" :alt="boxcube.alt" size="32" />
