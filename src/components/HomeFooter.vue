@@ -124,7 +124,9 @@ onMounted(() => {
 
 .footer a {
   position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition:
+    color 0.25s,
+    text-decoration-color 0.25s;
 }
 
 .footer a:hover {

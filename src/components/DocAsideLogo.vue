@@ -56,7 +56,10 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
   justify-content: center;
   align-items: center;
   gap: 1em;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition:
+    transform 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
   margin: 0.125em 0;
   border: 1.5px solid var(--AsideLogo-border);
   border-radius: 0.5em;
