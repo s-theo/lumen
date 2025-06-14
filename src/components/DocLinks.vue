@@ -26,19 +26,13 @@ const props = defineProps<{
     >
       <span class="row">
         <template v-if="link.icon">
-          <Icon :icon="link.icon" :color="link.color" :alt="link.alt" width="32" height="32" />
+          <Icon :icon="link.icon" :color="link.color" :alt="link.alt" size="32" />
         </template>
         <template v-else-if="link.image">
-          <Image :image="link.image" :alt="link.alt" width="32" height="32" />
+          <Image :image="link.image" :alt="link.alt" size="32" />
         </template>
         <template v-else>
-          <Icon
-            class="default-icon"
-            alt="external link icon"
-            icon="fa6-solid:arrow-up-right-from-square"
-            width="24"
-            height="24"
-          />
+          <Icon class="default-icon" alt="external link icon" icon="fa6-solid:arrow-up-right-from-square" size="24" />
         </template>
         <span class="name">{{ link.name }}</span>
       </span>
@@ -98,7 +92,6 @@ const props = defineProps<{
   flex-shrink: 0;
   color: var(--iconify-defaultcolor);
 }
-
 .default-icon {
   flex-shrink: 0;
   margin: 0 0.25em 0 0.2em;

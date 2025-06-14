@@ -29,8 +29,7 @@ onMounted(() => {
             :icon="section.icon"
             :color="section.color"
             :alt="section.alt"
-            width="14"
-            height="14"
+            size="14"
           />
           {{ section.title }}
         </h3>
@@ -42,8 +41,7 @@ onMounted(() => {
               :icon="link.icon"
               :color="link.color"
               :alt="link.alt"
-              width="14"
-              height="14"
+              size="14"
             />
             <Link :href="link.link" :rel="link.rel">
               {{ link.name }}
@@ -52,8 +50,7 @@ onMounted(() => {
                 class="external-link-icon"
                 icon="basil:arrow-up-outline"
                 alt="External Link Icon"
-                width="14"
-                height="14"
+                size="14"
               />
             </Link>
           </li>
@@ -70,8 +67,7 @@ onMounted(() => {
             :icon="footer.beian.icp.icon || 'fluent:globe-shield-48-filled'"
             :color="footer.beian.icp.color"
             :alt="footer.beian.icp.alt"
-            width="12"
-            height="12"
+            size="12"
           />
           <Link :rel="footer.beian.icp.rel" href="https://beian.miit.gov.cn/#/Integrated/index">
             {{ footer.beian.icp.number }}
@@ -87,8 +83,7 @@ onMounted(() => {
             :icon="footer.beian.police.icon || 'fluent:shield-checkmark-48-filled'"
             :color="footer.beian.police.color"
             :alt="footer.beian.police.alt"
-            width="12"
-            height="12"
+            size="12"
           />
           <Link :rel="footer.beian.police.rel" href="https://beian.mps.gov.cn/">
             {{ footer.beian.police.number }}
@@ -105,8 +100,7 @@ onMounted(() => {
             :icon="footer.author.icon || 'ri:copyright-line'"
             :color="footer.author.color"
             :alt="footer.author.alt"
-            width="12"
-            height="12"
+            size="12"
           />
           {{ Year }}
           <Link :rel="footer.author.rel" :href="footer.author.link"> {{ footer.author.name }}. </Link>
