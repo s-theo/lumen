@@ -4,7 +4,7 @@ import type { WalineProps } from '@waline/client/full'
 export type IconImageType = string | IconImageMode
 /** Alt 文本类型 */
 export type AltType = string | undefined
-/** 高度类型 */
+/** 尺寸类型 */
 export type SizeType = string | undefined
 /** 链接类型 */
 export type LinkType = string | undefined
@@ -139,19 +139,7 @@ export type AsideAll = AsidePromo | AsideNormal
  * - 单语言：直接是 AsideAll[] 数组
  * - 多语言：包裹在 i18n 对象中，按语言划分不同的 AsideAll[] 内容
  */
-export type AsideItem =
-  | AsideAll[] // 单语言结构
-  | {
-      i18n: Record<string, AsideAll[]> // 多语言结构，键为语言代码，如 'root' | 'en' 等
-    }
-
-/**
- * AsideDataWrapper 类型：最终使用的封装结构
- *
- * - 可以是直接的 AsideAll[]（单语言）
- * - 或是 { i18n: Record<string, AsideAll[]> } 的对象（多语言）
- */
-export type AsideDataWrapper = AsideAll[] | { i18n: Record<string, AsideAll[]> }
+export type AsideItem = AsideAll[] | { i18n: Record<string, AsideAll[]> }
 
 /** Announcement 接口 */
 export interface Prelink {
