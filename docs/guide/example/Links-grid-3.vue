@@ -7,7 +7,7 @@
       link: 'https://vercel.com/',
       icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel' },
       color: { light: '#000000', dark: '#FFFFFF' },
-      desc: '前端云平台，提供无服务器部署、静态站点生成和实时预览等功能，旨在帮助开发者快速构建和部署现代 Web 应用。',
+      desc: '适用于前端框架的无服务器部署平台，支持静态生成和即时预览。',
       alt: 'Vercel icon',
       rel: 'noopener noreferrer'
     },
@@ -17,13 +17,37 @@
       link: 'https://vitejs.dev/',
       icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' },
       alt: 'Vite icon',
-      desc: '现代前端构建工具，提供快速的开发服务器和高效的打包功能，支持热模块替换和按需加载，旨在提升前端开发体验。',
+      desc: '极速的现代前端构建工具，支持热更新与按需加载。',
+      rel: 'noopener noreferrer'
+    },
+    {
+      name: 'Netlify',
+      link: 'https://www.netlify.com/',
+      icon: { light: 'skill-icons:netlify-light', dark: 'skill-icons:netlify-dark' },
+      desc: '提供 CI/CD、自动构建和无服务器函数的前端部署平台。',
+      alt: 'Netlify icon',
       rel: 'noopener noreferrer'
     },
     // 无图标
     {
-      name: 'Google',
-      link: 'https://www.google.com',
+      name: 'MDN Web Docs',
+      link: 'https://developer.mozilla.org/',
+      desc: '权威的 Web 技术文档库，涵盖 HTML、CSS 和 JavaScript。',
+      alt: 'MDN Web Docs',
+      rel: 'noopener noreferrer'
+    },
+    {
+      name: 'Stack Overflow',
+      link: 'https://stackoverflow.com/',
+      desc: '全球最大程序员问答社区，快速解决开发难题。',
+      alt: 'Stack Overflow',
+      rel: 'noopener noreferrer'
+    },
+    {
+      name: 'DevDocs',
+      link: 'https://devdocs.io/',
+      desc: '整合多种技术文档的搜索工具，支持离线访问。',
+      alt: 'DevDocs',
       rel: 'noopener noreferrer'
     }
   ]"
