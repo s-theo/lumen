@@ -44,14 +44,14 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 
 .flex.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 
 .row {
@@ -66,7 +66,11 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
   margin: 0;
   border: 1px solid var(--Links-border);
   border-radius: 0.75em;

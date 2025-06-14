@@ -18,6 +18,38 @@ const pill = defineProps<Pill>()
 </template>
 
 <style scoped>
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  transform: translateY(1px);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
+  margin: 0 0.125em;
+  border: 1px solid var(--Pill-border);
+  border-radius: 0.5em;
+  background-color: var(--Pill-bg);
+  padding: 0em 0.25em;
+  height: 1.375em;
+  font-size: 1rem;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.link:hover {
+  transform: var(--Pill-transform-hover);
+  box-shadow: var(--Pill-boxshadow-hover);
+  border-color: var(--Pill-border-hover);
+  background-color: var(--Pill-bg-hover);
+}
+
+.link:active {
+  transform: var(--Pill-transform-active);
+}
+
 .vp-doc h1 > .link {
   vertical-align: top;
   margin-top: 2px;
@@ -41,35 +73,8 @@ const pill = defineProps<Pill>()
 }
 
 .vp-doc td > .link {
+  vertical-align: -1px;
   font-size: 1em;
-}
-
-.link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25em;
-  transform: translateY(1px);
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-  margin: 0 0.125em;
-  border: 1px solid var(--Pill-border);
-  border-radius: 0.5em;
-  background-color: var(--Pill-bg);
-  padding: 0em 0.25em;
-  height: 1.375em;
-  font-size: 1rem;
-  text-decoration: none !important;
-  white-space: nowrap;
-}
-
-.link:hover {
-  transform: var(--Pill-transform-hover);
-  box-shadow: var(--Pill-boxshadow-hover);
-  border-color: var(--Pill-border-hover);
-  background-color: var(--Pill-bg-hover);
-}
-
-.link:active {
-  transform: var(--Pill-transform-active);
 }
 
 .iconify {

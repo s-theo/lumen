@@ -14,7 +14,7 @@
     rgba(176, 71, 255, 1),
     rgba(100, 108, 255, 1)
   );
-  --promo-title-weight: 900;
+  --promo-title-weight: 600;
 
   /**
   * Component: Announcement
@@ -22,10 +22,10 @@
   --Announcement-bg: var(--vp-button-alt-bg);
   --Announcement-border: transparent;
   --Announcement-data: var(--vp-c-brand-1);
-  --Announcement-bg-hover: var(--vp-c-brand-soft);
-  --Announcement-border-hover: var(--vp-c-brand-soft);
-  --Announcement-transform-hover: translateY(-1px);
-  --Announcement-transform-active: scale(0.98);
+  --Announcement-bg-hover: var(--vp-button-alt-bg);
+  --Announcement-border-hover: var(--vp-c-brand-1);
+  --Announcement-transform-hover: none;
+  --Announcement-transform-active: none;
 
   /**
   * Component: AsideLogo
@@ -47,12 +47,12 @@
   );
   --AsideLogo-hide: var(--vp-c-text-2);
   --AsideLogo-info: var(--vp-c-text-2);
-  --AsideLogo-name-bg-hover: var(--vp-c-brand-soft);
-  --AsideLogo-name-border-hover: var(--vp-c-brand-soft);
-  --AsideLogo-promo-bg-hover: rgba(100, 108, 255, 0.16);
-  --AsideLogo-promo-border-hover: rgba(100, 108, 255, 0.16);
-  --AsideLogo-transform-hover: translateY(-1px);
-  --AsideLogo-transform-active: scale(0.9);
+  --AsideLogo-name-bg-hover: var(--component-bg);
+  --AsideLogo-name-border-hover: var(--vp-c-brand-1);
+  --AsideLogo-promo-bg-hover: var(--component-bg);
+  --AsideLogo-promo-border-hover: rgba(100, 108, 255, 1);
+  --AsideLogo-transform-hover: none;
+  --AsideLogo-transform-active: none;
 
   /**
   * Component: BoxCube
@@ -61,11 +61,11 @@
   --Boxcube-bg: var(--component-bg);
   --Boxcube-border: transparent;
   --Boxcube-name: inherit;
-  --Boxcube-bg-hover: var(--vp-c-brand-soft);
-  --Boxcube-border-hover: var(--vp-c-brand-soft);
-  --Boxcube-boxshadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --Boxcube-transform-hover: translateY(-1px);
-  --Boxcube-transform-active: scale(0.95);
+  --Boxcube-bg-hover: var(--component-bg);
+  --Boxcube-border-hover: var(--vp-c-brand-1);
+  --Boxcube-boxshadow-hover: none;
+  --Boxcube-transform-hover: none;
+  --Boxcube-transform-active: none;
 
   /**
   * Component: Links
@@ -75,11 +75,11 @@
   --Links-border: transparent;
   --Links-name: inherit;
   --Links-desc: var(--vp-c-text-2);
-  --Links-bg-hover: var(--vp-c-brand-soft);
-  --Links-border-hover: var(--vp-c-brand-soft);
-  --Links-boxshadow-hover: 0 4px 6px rgba(0, 0, 0, 0.05);
-  --Links-transform-hover: translateY(-1px);
-  --Links-transform-active: scale(0.95);
+  --Links-bg-hover: var(--component-bg);
+  --Links-border-hover: var(--vp-c-brand-1);
+  --Links-boxshadow-hover: none;
+  --Links-transform-hover: none;
+  --Links-transform-active: none;
 
   /**
   * Component: Pill
@@ -88,11 +88,11 @@
   --Pill-bg: var(--vp-code-bg);
   --Pill-border: transparent;
   --Pill-name: inherit;
-  --Pill-bg-hover: var(--vp-c-brand-soft);
-  --Pill-border-hover: var(--vp-c-brand-soft);
-  --Pill-boxshadow-hover: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --Pill-transform-hover: translateY(0px);
-  --Pill-transform-active: scale(0.95);
+  --Pill-bg-hover: var(--vp-code-bg);
+  --Pill-border-hover: var(--vp-c-brand-1);
+  --Pill-boxshadow-hover: none;
+  --Pill-transform-hover: translateY(1px);
+  --Pill-transform-active: translateY(1px) scale(0.98);
 
   /**
   * Component: HomeFooter

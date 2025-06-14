@@ -37,7 +37,7 @@ const props = defineProps<{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 0.5em;
-  margin-bottom: 0.5em;
+  margin: 0.5em 0;
 }
 
 .link {
@@ -45,7 +45,11 @@ const props = defineProps<{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s,
+    background-color 0.25s;
   border: 1px solid var(--Boxcube-border);
   border-radius: 0.5em;
   background-color: var(--Boxcube-bg);
