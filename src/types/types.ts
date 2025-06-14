@@ -247,6 +247,8 @@ export interface Icp {
   color?: IconImageType
   /** 无障碍描述 */
   alt?: AltType
+  /** ICP网站或自定义链接 */
+  link?: LinkType
   /** Rel 属性 */
   rel?: RelType
   /** 链接的目标（可选） */
@@ -263,6 +265,8 @@ export interface Police {
   color?: IconImageType
   /** 无障碍描述 */
   alt?: AltType
+  /** 公安备案网站或自定义链接 */
+  link?: LinkType
   /** Rel 属性 */
   rel?: RelType
   /** 链接的目标（可选） */
@@ -285,6 +289,8 @@ export interface Author {
   color?: IconImageType
   /** 无障碍描述 */
   alt?: AltType
+  /** 版权文本 */
+  text?: string
 }
 
 /** HomeFooter Link 接口 */
