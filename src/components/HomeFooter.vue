@@ -29,13 +29,13 @@ onMounted(() => {
             :icon="section.icon"
             :color="section.color"
             :alt="section.alt"
-            size="14"
+            size="12"
           />
           {{ section.title }}
         </h3>
         <ul>
           <li v-for="(link, idx) in section.links" :key="link.link + idx" class="list-links">
-            <Icon v-if="link.icon" class="icon-space" :icon="link.icon" :color="link.color" :alt="link.alt" size="14" />
+            <Icon v-if="link.icon" class="icon-space" :icon="link.icon" :color="link.color" :alt="link.alt" size="12" />
             <Link :href="link.link" :rel="link.rel" :target="link.target">
               {{ link.name }}
               <Icon
