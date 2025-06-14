@@ -7,7 +7,7 @@
       link: 'https://i.theojs.cn/alipay.webp',
       image: 'https://i.theojs.cn/logo/alipay.svg',
       alt: 'alipay icon',
-      desc: '中国领先的第三方支付平台，提供在线支付、转账、理财等多种金融服务。',
+      desc: '中国领先的第三方支付平台，支持转账、支付和理财服务。',
       rel: 'noopener noreferrer'
     },
     // 深浅模式图片
@@ -19,7 +19,7 @@
         dark: 'https://i.theojs.cn/logo/github-dark.svg'
       },
       alt: 'github icon',
-      desc: '全球最大的代码托管平台，提供版本控制、协作开发和项目管理等功能，广泛用于开源和私有项目的开发。',
+      desc: '全球最大代码托管平台，支持版本控制和协作开发。',
       rel: 'noopener noreferrer'
     }
   ]"
