@@ -43,7 +43,7 @@ onMounted(() => {
               :alt="link.alt"
               size="14"
             />
-            <Link :href="link.link" :rel="link.rel">
+            <Link :href="link.link" :rel="link.rel" :target="link.target">
               {{ link.name }}
               <Icon
                 v-if="isExternal(link.link) && !(footer.noIcon || section.noIcon || link.noIcon)"
@@ -69,7 +69,11 @@ onMounted(() => {
             :alt="footer.beian.icp.alt"
             size="12"
           />
-          <Link :rel="footer.beian.icp.rel" href="https://beian.miit.gov.cn/#/Integrated/index">
+          <Link
+            href="https://beian.miit.gov.cn/#/Integrated/index"
+            :rel="footer.beian.icp.rel"
+            :target="footer.beian.icp.target"
+          >
             {{ footer.beian.icp.number }}
           </Link>
         </p>
@@ -85,7 +89,7 @@ onMounted(() => {
             :alt="footer.beian.police.alt"
             size="12"
           />
-          <Link :rel="footer.beian.police.rel" href="https://beian.mps.gov.cn/">
+          <Link href="https://beian.mps.gov.cn/" :rel="footer.beian.police.rel" :target="footer.beian.police.target">
             {{ footer.beian.police.number }}
           </Link>
         </p>
@@ -103,7 +107,9 @@ onMounted(() => {
             size="12"
           />
           {{ Year }}
-          <Link :rel="footer.author.rel" :href="footer.author.link"> {{ footer.author.name }}. </Link>
+          <Link :href="footer.author.link" :rel="footer.author.rel" :target="footer.author.target">
+            {{ footer.author.name }}.
+          </Link>
           All Rights Reserved.
         </p>
       </span>

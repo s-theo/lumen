@@ -22,5 +22,5 @@ const currentImage = computed(() => {
 </script>
 
 <template>
-  <img :src="currentImage" :alt="props.alt" loading="lazy" decoding="async" :width="props.size" :height="props.size" />
+  <img :src="currentImage" :alt="alt" :width="size" :height="size" loading="lazy" decoding="async" />
 </template>

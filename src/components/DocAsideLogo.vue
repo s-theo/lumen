@@ -26,6 +26,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
     :class="['link', isAsidePromo(aside) ? 'has-promo' : '', 'name' in aside ? 'has-name' : ''].join(' ')"
     :href="aside.link"
     :rel="aside.rel"
+    :target="aside.target"
   >
     <template v-if="aside.icon">
       <Icon :icon="aside.icon" :color="aside.color" :alt="aside.alt" size="24" />
