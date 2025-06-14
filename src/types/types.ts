@@ -4,10 +4,8 @@ import type { WalineProps } from '@waline/client/full'
 export type IconImageType = string | IconImageMode
 /** Alt 文本类型 */
 export type AltType = string | undefined
-/** 宽度类型 */
-export type WidthType = string | undefined
 /** 高度类型 */
-export type HeightType = string | undefined
+export type SizeType = string | undefined
 /** 链接类型 */
 export type LinkType = string | undefined
 /** Rel 属性类型 */
