@@ -13,6 +13,7 @@
     "dev": "pnpm -F=docs dev",
     "format": "prettier --write .",
     "format:cheak": "prettier --check .",
+    "iall": "pnpm -r install",
     "preview": "pnpm -F=docs preview",
     "release": "cd src && pnpm release",
     "upall": "pnpm -r update --latest"
