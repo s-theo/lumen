@@ -2,7 +2,7 @@ import type { UserConfig } from '@commitlint/types'
 
 const config: UserConfig = {
   extends: ['@commitlint/config-conventional'],
-  ignores: [(commit) => commit.includes('bump deps')]
+  rules: { 'body-max-line-length': [0] }
 }
 
 export default config
