@@ -58,6 +58,7 @@ export const Aside_Data: AsideItem = [
   {
     link: 'https://itheo.top/yhy',
     image: 'https://i.theojs.cn/logo/galaxy_transparent_square.webp',
+    crop: true,
     alt: 'Galaxy Cloud - 银河云 Logo',
     rel: 'sponsored',
     promo: 'Galaxy 银河云 618购物节',
@@ -77,6 +78,7 @@ export const Aside_Data: AsideItem = [
     link: 'https://itheo.top/tnt',
     rel: 'sponsored',
     image: 'https://i.theojs.cn/docs/TNT.webp',
+    crop: true,
     alt: 'TNT Cloud Logo',
     promo: 'TNT Cloud 618购物狂欢!',
     info1:
