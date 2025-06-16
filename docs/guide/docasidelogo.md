@@ -63,6 +63,7 @@ export default {
 | `icon`   | `IconImageType` | 图标（支持 iconify，或深浅模式图标）。                                                                                                 | <Badge text="可选" /> |
 | `color`  | `IconImageType` | 图标颜色（支持纯色字符串或 `{ light, dark }` 格式）。                                                                                  | <Badge text="可选" /> |
 | `image`  | `IconImageType` | 图片资源（支持普通地址或 `{ light, dark }` 图像）。                                                                                    | <Badge text="可选" /> |
+| `crop`   | `CropType`      | 图片是否裁剪为正方形。为 `true` 时图片将使用 `aspect-ratio: 1 / 1` 和 `object-fit: cover` 裁剪显示。                                   | <Badge text="可选" /> |
 | `info1`  | `string`        | 附加信息 1，例如：`"新用户立减 5 元"`。                                                                                                | <Badge text="可选" /> |
 | `info2`  | `string`        | 附加信息 2，例如：`"优惠截止至 6 月 30 日"`。                                                                                          | <Badge text="可选" /> |
 | `alt`    | `AltType`       | 图片或图标的替代文本，有助于无障碍访问。                                                                                               | <Badge text="可选" /> |
@@ -78,6 +79,7 @@ export default {
 | `icon`   | `IconImageType` | 图标（支持 iconify，或深浅模式图标）。                                                                                                 | <Badge text="可选" /> |
 | `color`  | `IconImageType` | 图标颜色（支持纯色字符串或 `{ light, dark }` 格式）。                                                                                  | <Badge text="可选" /> |
 | `image`  | `IconImageType` | 图片资源（支持普通地址或 `{ light, dark }` 图像）。                                                                                    | <Badge text="可选" /> |
+| `crop`   | `CropType`      | 图片是否裁剪为正方形。为 `true` 时图片将使用 `aspect-ratio: 1 / 1` 和 `object-fit: cover` 裁剪显示。                                   | <Badge text="可选" /> |
 | `hide1`  | `string`        | 隐藏信息 1，悬停时显示。例如：`"仅限中国大陆用户"`。                                                                                   | <Badge text="可选" /> |
 | `hide2`  | `string`        | 隐藏信息 2，用于补充额外提示。例如：`"每日限量 500 名"`。                                                                              | <Badge text="可选" /> |
 | `alt`    | `AltType`       | 图片或图标的替代文本，有助于无障碍访问。                                                                                               | <Badge text="可选" /> |

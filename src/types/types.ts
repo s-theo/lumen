@@ -12,6 +12,8 @@ export type LinkType = string | undefined
 export type RelType = string | undefined
 /** 目标类型 */
 export type TargetType = string | undefined
+/** 裁剪图片 */
+export type CropType = boolean
 
 export interface IconImageMode {
   /** 浅色模式下的图标和图片 */
@@ -36,6 +38,8 @@ export interface Pill {
   color?: IconImageType
   /** 图片路径（支持 light 和 dark 模式） */
   image?: IconImageType
+  /** 裁剪图片 */
+  crop?: CropType
   /** 图片的 alt 文本 */
   alt?: AltType
 }
@@ -58,6 +62,8 @@ export interface LinkItem {
   icon?: IconImageType
   /** 图片路径（支持 light 和 dark 模式） */
   image?: IconImageType
+  /** 裁剪图片 */
+  crop?: CropType
   /** 图片的 alt 文本 */
   alt?: AltType
 }
@@ -78,6 +84,8 @@ export interface BoxCubeItem {
   icon?: IconImageType
   /** 图片路径（支持 light 和 dark 模式） */
   image?: IconImageType
+  /** 裁剪图片 */
+  crop?: CropType
   /** 图片的 alt 文本 */
   alt?: AltType
 }
@@ -98,6 +106,8 @@ export interface Promo {
   color?: IconImageType
   /** 图片资源（支持 light/dark） */
   image?: IconImageType
+  /** 裁剪图片 */
+  crop?: CropType
   /** 附加信息1 */
   info1?: string
   /** 附加信息2 */
@@ -122,6 +132,8 @@ export interface Normal {
   color?: IconImageType
   /** 图片资源（可选） */
   image?: IconImageType
+  /** 裁剪图片 */
+  crop?: CropType
   /** 隐藏信息1（可用于鼠标悬停显示） */
   hide1?: string
   /** 隐藏信息2 */
