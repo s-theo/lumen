@@ -11,7 +11,7 @@ const pill = defineProps<Pill>()
       <Icon :icon="pill.icon" :color="pill.color" :alt="pill.alt" size="14" />
     </template>
     <template v-else-if="pill.image">
-      <Image :image="pill.image" :alt="pill.alt" size="14" />
+      <Image :image="pill.image" :alt="pill.alt" :crop="pill.crop" size="14" />
     </template>
     <span class="name">{{ pill.name }}</span>
   </Link>
