@@ -15,10 +15,10 @@ hero:
     width: 320
     height: 320
 
-  prelink:
-    # content: '<span class="promo-text" style="display: inline-flex; align-items: center"><img src="https://i.theojs.cn/logo/qyt.webp" style="height:0.65em; "/>IPLC纯专线内网传输线路 最高2.5Gbps速率!</span>'
+  Announcement:
+    # desc: '<span class="promo-text" style="display: inline-flex; align-items: center"><img src="https://i.theojs.cn/logo/qyt.webp" style="height:0.65em; "/>IPLC纯专线内网传输线路 最高2.5Gbps速率!</span>'
     title: '<iconify-icon icon="streamline-emojis:wrapped-gift-2" ></iconify-icon> <span class="promo-title"> FlyingBird 520&618 活动继续启航！</span>'
-    content: |
+    desc: |
       · <span class="promo-text"> 优惠码可重复使用5次!!! </span></br>
       · 月付 <span class="promo-text"> 85折 </span>优惠码 <span class="promo-text"> fb2561885 </span></br>
       · 年付 <span class="promo-text"> 64折 </span>优惠码 <span class="promo-text"> fb2561880 </span></br>
