@@ -39,6 +39,7 @@
 <Pill
   name="GitHub"
   link="https://github.com"
+  :crop="true"
   :image="{
     light: 'https://i.theojs.cn/logo/github.svg',
     dark: 'https://i.theojs.cn/logo/github-dark.svg'

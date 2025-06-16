@@ -32,7 +32,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
       <Icon :icon="aside.icon" :color="aside.color" :alt="aside.alt" size="24" />
     </template>
     <template v-else-if="aside.image">
-      <Image class="icon" :image="aside.image" :alt="aside.alt" size="24" />
+      <Image class="icon" :image="aside.image" :alt="aside.alt" :crop="aside.crop" size="24" />
     </template>
     <div>
       <template v-if="isAsidePromo(aside)">

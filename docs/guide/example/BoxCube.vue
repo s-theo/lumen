@@ -43,6 +43,7 @@
         light: 'https://i.theojs.cn/logo/github.svg',
         dark: 'https://i.theojs.cn/logo/github-dark.svg'
       },
+      crop: true,
       alt: 'github icon',
       rel: 'noopener noreferrer'
     }

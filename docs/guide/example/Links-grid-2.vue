@@ -18,6 +18,7 @@
         light: 'https://i.theojs.cn/logo/github.svg',
         dark: 'https://i.theojs.cn/logo/github-dark.svg'
       },
+      crop: true,
       alt: 'github icon',
       desc: '全球最大代码托管平台，支持版本控制和协作开发。',
       rel: 'noopener noreferrer'

@@ -30,7 +30,7 @@ const props = defineProps<{
           <Icon :icon="link.icon" :color="link.color" :alt="link.alt" size="32" />
         </template>
         <template v-else-if="link.image">
-          <Image :image="link.image" :alt="link.alt" size="32" />
+          <Image :image="link.image" :alt="link.alt" :crop="link.crop" size="32" />
         </template>
         <span class="name">{{ link.name }}</span>
       </span>
