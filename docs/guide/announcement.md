@@ -42,15 +42,10 @@ export default {
 ```yaml [.vitepress/index.md]
 ---
 layout: home
-
 hero:
-  name: Lumen
-  text: 'Enhanced '
-  textsuffix: 'Theme'
-  tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
-  prelink: # [!code ++]
+  Announcement: # [!code ++]
     title: '🎉 活动不停歇，青云梯四周年双旦特惠' # [!code ++]
-    content: '· 月/季/半年付85折 优惠码<span class="promo-text"> qyt85 </span></br>· 年付以及年付以上8折 优惠码<span class="promo-text"> qyt80</span></br>· 年付8折/2年付7折/3年付6折 配合优惠码折上折，最高可达<span class="promo-text"> 48 </span>折' # [!code ++]
+    desc: '· 月/季/半年付85折 优惠码<span class="promo-text"> qyt85 </span></br>· 年付以及年付以上8折 优惠码<span class="promo-text"> qyt80</span></br>· 年付8折/2年付7折/3年付6折 配合优惠码折上折，最高可达<span class="promo-text"> 48 </span>折' # [!code ++]
     date: '2025年1月7日23时59分' # [!code ++]
     dateIcon: 'mdi:calendar-star' # [!code ++]
     dateText: '活动截止日期' # [!code ++]
@@ -66,7 +61,7 @@ hero:
 | `rel`      | `RelType`    | 链接的 `rel` 属性，用于控制链接的安全性和行为，如防止新窗口跳转时的安全风险（`noopener`）、避免搜索引擎跟踪（`nofollow`）等。                                                                                  | <Badge text="可选" /> |
 | `target`   | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。                                                                         | <Badge text="可选" /> |
 | `title`    | `string`     | 链接显示的标题文本，突出展示的主要内容。                                                                                                                                                                       | <Badge text="必填" /> |
-| `content`  | `string`     | 链接下方的补充描述内容，可用于详细说明或附加信息。                                                                                                                                                             | <Badge text="可选" /> |
+| `desc`     | `string`     | 链接下方的补充描述内容，可用于详细说明或附加信息。                                                                                                                                                             | <Badge text="可选" /> |
 | `date`     | `string`     | 活动截止日期或相关时间信息，通常用于提示有效期限。                                                                                                                                                             | <Badge text="可选" /> |
 | `dateText` | `string`     | 活动时间的文字说明，默认为 `活动时间: 即日至`，可自定义显示文案。                                                                                                                                              | <Badge text="可选" /> |
 | `dateIcon` | `string`     | 活动时间旁显示的图标，默认是日历图标（`line-md:calendar`），支持任意 <Pill name="iconify" link="https://icon-sets.iconify.design/" icon="line-md:iconify2-static" color="#1769AA" alt="iconify icon" /> 图标。 | <Badge text="可选" /> |

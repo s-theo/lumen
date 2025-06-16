@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { usePrelink } from '../types'
+import { useAnnouncement } from '../types'
 import { Icon, Link } from './common'
 
-const prelink = usePrelink()
+const ann = useAnnouncement()
 </script>
 
 <template>
-  <Link v-if="prelink" class="prelink" :href="prelink.link" :rel="prelink.rel" :target="prelink.target">
-    <div class="prelink-content">
-      <span class="title" v-html="prelink.title"></span>
-      <p v-if="prelink.content" class="content" v-html="prelink.content"></p>
-      <div v-if="prelink.date" class="time-info">
-        <Icon :icon="prelink.dateIcon || 'line-md:calendar'" :alt="prelink.alt || 'date'" size="14" />
-        <time v-html="prelink.dateText || '活动时间: 即日至'"> </time>
-        <time class="date">{{ prelink.date }}</time>
+  <Link v-if="ann" class="ann" :href="ann.link" :rel="ann.rel" :target="ann.target">
+    <div class="content">
+      <span class="title" v-html="ann.title"></span>
+      <p v-if="ann.desc" class="desc" v-html="ann.desc"></p>
+      <div v-if="ann.date" class="time-info">
+        <Icon :icon="ann.dateIcon || 'line-md:calendar'" :alt="ann.alt || 'date'" size="14" />
+        <time v-html="ann.dateText || '活动时间: 即日至'"> </time>
+        <time class="date">{{ ann.date }}</time>
       </div>
     </div>
   </Link>
 </template>
 
 <style scoped>
-.prelink {
+.ann {
   display: inline-flex;
   flex-direction: column;
   transition:
@@ -34,17 +34,17 @@ const prelink = usePrelink()
   padding: 0.15em 1em;
 }
 
-.prelink:hover {
+.ann:hover {
   transform: var(--Announcement-transform-hover);
   border-color: var(--Announcement-border-hover);
   background-color: var(--Announcement-bg-hover);
 }
 
-.prelink:active {
+.ann:active {
   transform: var(--Announcement-transform-active);
 }
 
-.prelink-content {
+.content {
   display: flex;
   flex-direction: column;
 }
@@ -54,7 +54,7 @@ const prelink = usePrelink()
   font-size: 0.8em;
 }
 
-.content {
+.desc {
   font-weight: 500;
   font-size: 0.75em;
 }
