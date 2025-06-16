@@ -2,16 +2,18 @@ import { useData } from 'vitepress'
 
 import { ComputedRef, computed, onMounted, onUnmounted } from 'vue'
 
-import type { Prelink, VideoProps } from '../types'
+import type { AnnouncementItem, VideoProps } from '../types'
 
 /**
- * 提取 frontmatter 中 hero 配置的 `prelink` 属性。
+ * 提取 frontmatter 中 hero 配置的 `Announcement` 属性。
  *
- * @returns 包含 `Prelink` 对象或 `undefined` 的计算属性
+ * @returns 包含 `AnnouncementItem` 对象或 `undefined` 的计算属性
  */
-export const usePrelink = (): ComputedRef<Prelink | undefined> => {
+export const useAnnouncement = (): ComputedRef<
+  AnnouncementItem | undefined
+> => {
   const { frontmatter } = useData()
-  return computed(() => frontmatter.value.hero?.prelink)
+  return computed(() => frontmatter.value.hero?.Announcement)
 }
 
 /** 匹配外部链接的正则：以协议（如 http:、https:、mailto:）或 `//` 开头 */

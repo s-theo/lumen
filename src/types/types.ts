@@ -166,7 +166,7 @@ export type AsideAll = AsidePromo | AsideNormal
 export type AsideItem = AsideAll[] | { i18n: Record<string, AsideAll[]> }
 
 /** Announcement 接口 */
-export interface Prelink {
+export interface AnnouncementItem {
   /** 链接的 URL。 */
   link?: LinkType
   /** Rel 属性 */
@@ -176,7 +176,7 @@ export interface Prelink {
   /** 链接的标题。 */
   title: string
   /** 链接的内容。 */
-  content?: string
+  desc?: string
   /** 日期 */
   date?: string
   /** 日期文本 */
