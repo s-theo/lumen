@@ -55,7 +55,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
   position: relative;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 0.75em;
   transition:
     transform 0.25s,
     border-color 0.25s,
@@ -65,6 +65,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
   border-radius: 0.5em;
   background-color: var(--AsideLogo-bg);
   padding: 0.25em 0;
+  text-align: center;
 }
 
 .link:hover {
@@ -131,7 +132,7 @@ ul:last-of-type {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 0.875em;
 }
 
@@ -140,7 +141,7 @@ ul:last-of-type {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 0.875em;
 }
 </style>
