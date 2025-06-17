@@ -22,8 +22,11 @@ export const Aside_Data: AsideItem = [
   },
   {
     link: 'https://example.com/',
-    icon: { light: 'simple-icons:netflix', dark: 'simple-icons:youtube' },
-    color: { light: '#E50914', dark: '#FF0000' },
+    icon: {
+      light: 'simple-icons:netflix',
+      dark: 'simple-icons:youtube',
+      color: { light: '#E50914', dark: '#FF0000' }
+    },
     name: 'iconify图标的 light/dark 模式'
   },
   {

@@ -3,10 +3,10 @@ import { useData } from 'vitepress'
 
 import { computed } from 'vue'
 
-import { AltType, SizeType, IconImageType, CropType } from '../../types'
+import { AltType, SizeType, ImageType, CropType } from '../../types'
 
 const props = defineProps<{
-  image: IconImageType
+  image: ImageType
   alt?: AltType
   size?: SizeType
   crop?: CropType
@@ -15,18 +15,44 @@ const props = defineProps<{
 const { isDark } = useData()
 
 const currentImage = computed(() => {
-  if (typeof props.image === 'object') {
+  if (typeof props.image === 'string') return props.image
+  if ('light' in props.image && 'dark' in props.image) {
     return isDark.value ? props.image.dark : props.image.light
   }
-  return props.image
+  return props.image.src
 })
 
-const altText = computed(() => props.alt ?? '')
+const altText = computed(() => {
+  if (props.alt) return props.alt
+  if (typeof props.image === 'object' && 'alt' in props.image) return props.image.alt
+  return ''
+})
+
+const crop = computed(() => {
+  return (
+    typeof props.image === 'object' &&
+    Object.prototype.hasOwnProperty.call(props.image, 'crop') &&
+    props.image.crop === true
+  )
+})
 </script>
 
 <template>
   <img
-    :class="{ crop: props.crop }"
+    v-if="crop"
+    class="crop"
+    :src="currentImage"
+    :alt="altText"
+    :width="size"
+    :height="size"
+    loading="lazy"
+    decoding="async"
+    referrerpolicy="no-referrer"
+    fetchpriority="low"
+    draggable="false"
+  />
+  <img
+    v-else
     :src="currentImage"
     :alt="altText"
     :width="size"

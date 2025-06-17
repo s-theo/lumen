@@ -27,10 +27,10 @@ const props = defineProps<{
     >
       <span class="row">
         <template v-if="link.icon">
-          <Icon :icon="link.icon" :color="link.color" :alt="link.alt" size="32" />
+          <Icon :icon="link.icon" :alt="link.alt" size="32" />
         </template>
         <template v-else-if="link.image">
-          <Image :image="link.image" :alt="link.alt" :crop="link.crop" size="32" />
+          <Image :image="link.image" :alt="link.alt" size="32" />
         </template>
         <span class="name">{{ link.name }}</span>
       </span>

@@ -43,8 +43,7 @@ import '@theojs/lumen/pic'
 <Pill
   name="使用方法查看: https://iconify.design/docs/iconify-icon/"
   link="https://iconify.design/docs/iconify-icon/"
-  icon="line-md:iconify2-static"
-  color="#1769AA"
+  :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA' }"
   alt="iconify icon"
 />
 
@@ -90,7 +89,8 @@ export default DefaultTheme
 }
 ```
 
-查看<Pill name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/theme/components-var.css" icon="unjs:theme-colors" alt="iconify icon" />文件中查看所有可用变量，方便针对性覆盖。
+查看<Pill name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/theme/components-var.css" :icon="{ icon: 'unjs:theme-colors', alt: 'iconify icon' }" />
+文件中查看所有可用变量，方便针对性覆盖。
 
 ## 内置样式示例
 

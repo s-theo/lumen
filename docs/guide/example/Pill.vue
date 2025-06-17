@@ -2,9 +2,7 @@
 <Pill
   name="Iconify"
   link="https://iconify.design/"
-  icon="line-md:iconify2-static"
-  color="#1769AA"
-  alt="iconify icon"
+  :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA', alt: 'iconify icon' }"
   rel="noopener noreferrer"
 />
 <Pill name="Vue" link="https://vuejs.org/" icon="vscode-icons:file-type-vue" alt="vue icon" rel="noopener noreferrer" />
@@ -13,8 +11,11 @@
 <Pill
   name="Vercel"
   link="https://vercel.com/"
-  :icon="{ light: 'ion:logo-vercel', dark: 'ion:logo-vercel' }"
-  :color="{ light: '#000000', dark: '#FFFFFF' }"
+  :icon="{
+    light: 'ion:logo-vercel',
+    dark: 'ion:logo-vercel',
+    color: { light: '#000000', dark: '#FFFFFF' }
+  }"
   alt="vercel icon"
   rel="noopener noreferrer"
 />
@@ -30,8 +31,10 @@
 <Pill
   name="支付宝"
   link="https://i.theojs.cn/alipay.webp"
-  image="https://i.theojs.cn/logo/alipay.svg"
-  alt="alipay icon"
+  :image="{
+    src: 'https://i.theojs.cn/logo/alipay.svg',
+    alt: 'github icon'
+  }"
   rel="noopener noreferrer"
 />
 
@@ -39,11 +42,11 @@
 <Pill
   name="GitHub"
   link="https://github.com"
-  :crop="true"
   :image="{
     light: 'https://i.theojs.cn/logo/github.svg',
-    dark: 'https://i.theojs.cn/logo/github-dark.svg'
+    dark: 'https://i.theojs.cn/logo/github-dark.svg',
+    alt: 'github icon',
+    crop: true
   }"
-  alt="github icon"
   rel="noopener noreferrer"
 />
