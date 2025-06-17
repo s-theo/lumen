@@ -5,11 +5,11 @@ import { computed } from 'vue'
 
 import { Icon } from '@iconify/vue'
 
-import { AltType, IconImageType, SizeType } from '../../types'
+import { AltType, IconType, SizeType, IconImageMode } from '../../types'
 
 const props = defineProps<{
-  icon: IconImageType
-  color?: IconImageType
+  icon: IconType
+  color?: IconImageMode
   alt?: AltType
   size?: SizeType
 }>()
@@ -17,18 +17,28 @@ const props = defineProps<{
 const { isDark } = useData()
 
 const currentIcon = computed(() => {
-  if (typeof props.icon === 'object') {
+  if (typeof props.icon === 'string') return props.icon
+  if (props.icon && typeof props.icon === 'object' && 'light' in props.icon && 'dark' in props.icon) {
     return isDark.value ? props.icon.dark : props.icon.light
   }
-  return props.icon
+  if (props.icon && typeof props.icon === 'object' && 'icon' in props.icon) {
+    return props.icon.icon
+  }
+  return ''
 })
 
 const currentColor = computed(() => {
-  if (typeof props.color === 'object') {
-    return isDark.value ? props.color.dark : props.color.light
+  if (!props.icon) return undefined
+  if (typeof props.icon === 'string') {
+    return undefined
   }
-  if (typeof props.color === 'string') {
-    return props.color
+  if ('color' in props.icon && props.icon.color) {
+    if (typeof props.icon.color === 'object' && 'light' in props.icon.color && 'dark' in props.icon.color) {
+      return isDark.value ? props.icon.color.dark : props.icon.color.light
+    }
+    if (typeof props.icon.color === 'string') {
+      return props.icon.color
+    }
   }
   return undefined
 })
