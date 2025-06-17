@@ -15,6 +15,6 @@ export const nav: DefaultTheme.NavItem[] = [
   },
   {
     text: '<iconify-icon class="i-mr" icon="heroicons-solid:document-magnifying-glass" style="color:#f39c12"></iconify-icon>变更日志',
-    link: `https://github.com/Theo-Messi/lumen/releases`
+    link: 'https://github.com/Theo-Messi/lumen/releases'
   }
 ]
