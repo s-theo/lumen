@@ -23,19 +23,12 @@ onMounted(() => {
     <div v-if="footer.group?.length" class="list-container">
       <section v-for="(section, index) in footer.group" :key="section.title + index">
         <h3 class="list-title">
-          <Icon
-            v-if="section.icon"
-            class="icon-space"
-            :icon="section.icon"
-            :color="section.color"
-            :alt="section.alt"
-            size="12"
-          />
+          <Icon v-if="section.icon" class="icon-space" :icon="section.icon" :alt="section.alt" size="12" />
           {{ section.title }}
         </h3>
         <ul>
           <li v-for="(link, idx) in section.links" :key="link.link + idx" class="list-links">
-            <Icon v-if="link.icon" class="icon-space" :icon="link.icon" :color="link.color" :alt="link.alt" size="12" />
+            <Icon v-if="link.icon" class="icon-space" :icon="link.icon" :alt="link.alt" size="12" />
             <Link :href="link.link" :rel="link.rel" :target="link.target">
               {{ link.name }}
               <Icon
@@ -58,7 +51,6 @@ onMounted(() => {
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
             :icon="footer.beian.icp.icon || 'fluent:globe-shield-48-filled'"
-            :color="footer.beian.icp.color"
             :alt="footer.beian.icp.alt"
             size="12"
           />
@@ -78,7 +70,6 @@ onMounted(() => {
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
             :icon="footer.beian.police.icon || 'fluent:shield-checkmark-48-filled'"
-            :color="footer.beian.police.color"
             :alt="footer.beian.police.alt"
             size="12"
           />
@@ -99,7 +90,6 @@ onMounted(() => {
           <Icon
             class="info-icon icon-space"
             :icon="footer.author.icon || 'ri:copyright-line'"
-            :color="footer.author.color"
             :alt="footer.author.alt"
             size="12"
           />
