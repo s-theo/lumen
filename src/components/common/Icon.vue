@@ -42,13 +42,19 @@ const currentColor = computed(() => {
   }
   return undefined
 })
+
+const ariaLabel = computed(() => {
+  const alt = props.alt?.trim()
+  const iconAlt = typeof props.icon === 'object' ? props.icon.alt?.trim?.() : undefined
+  return alt || iconAlt || undefined
+})
 </script>
 
 <template>
   <Icon
     :icon="currentIcon"
     :color="currentColor"
-    :aria-label="alt"
+    :aria-label="ariaLabel"
     :inline="true"
     :ssr="true"
     :width="size"
