@@ -68,7 +68,7 @@
   "dependencies": {
     "@iconify/vue": "^5.0.0",
     "@waline/client": "^3.5.7",
-    "bumpp": "^10.1.1",
+    "bumpp": "^10.2.0",
     "iconify-icon": "^3.0.0",
     "typescript": "^5.8.3",
     "vue": "catalog:"
