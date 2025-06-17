@@ -39,7 +39,7 @@ export interface Pill {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
-  /** 图片的 alt 文本 */
+  /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
 
@@ -55,9 +55,9 @@ export interface LinkItem {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 图标名称（支持 iconify） */
+  /** 图标配置 */
   icon?: IconType
-  /** 图片路径（支持 light 和 dark 模式） */
+  /** 图片配置 */
   image?: ImageType
   /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
@@ -73,11 +73,11 @@ export interface BoxCubeItem {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 图标名称（支持 iconify） */
+  /** 图标配置 */
   icon?: IconType
-  /** 图片路径（支持 light 和 dark 模式） */
+  /** 图片配置 */
   image?: ImageType
-  /** 图片的 alt 文本 */
+  /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
 
@@ -91,15 +91,15 @@ export interface Promo {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 图标（支持 iconify 或 image 的 light/dark） */
-  icon?: IconType
-  /** 图片资源（支持 light/dark） */
-  image?: ImageType
   /** 附加信息1 */
   info1?: string
   /** 附加信息2 */
   info2?: string
-  /** 图标/图片的替代文本 */
+  /** 图标配置 */
+  icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
+  /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
 
@@ -113,15 +113,15 @@ export interface Normal {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 图标（可选） */
-  icon?: IconType
-  /** 图片资源（可选） */
-  image?: ImageType
   /** 隐藏信息1（可用于鼠标悬停显示） */
   hide1?: string
   /** 隐藏信息2 */
   hide2?: string
-  /** 图标/图片的替代文本 */
+  /** 图标配置 */
+  icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
+  /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
 
@@ -208,16 +208,16 @@ export interface FooterData {
 
 /** HomeFooter Group 接口 */
 export interface Group {
-  /** 图标名称（支持 iconify） */
+  /** 图标配置 */
   icon?: IconType
+  /** 图片的 alt 文本 或 图标的 aria-label */
+  alt?: AltType
   /** 外部链接图标开关 */
   noIcon?: boolean
   /** 分组标题 */
   title: string
   /** 链接数组 */
   links: Link[]
-  /** 无障碍描述 */
-  alt?: AltType
 }
 
 /** HomeFooter Beian 接口 */
