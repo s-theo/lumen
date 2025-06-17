@@ -79,10 +79,7 @@ export default defineConfig({
     outlineTitle: '本页目录', // 目录文本
 
     // 上次更新
-    lastUpdated: {
-      text: '最后更新于',
-      formatOptions: { dateStyle: 'full', timeStyle: 'full', hourCycle: 'h24' }
-    },
+    lastUpdatedText: '最后更新于',
 
     // 文章翻页
     docFooter: { prev: '上一篇', next: '下一篇' },

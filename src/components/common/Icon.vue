@@ -5,7 +5,7 @@ import { computed } from 'vue'
 
 import { Icon } from '@iconify/vue'
 
-import { AltType, IconType, SizeType, IconImageMode } from '../../types'
+import { AltType, IconImageMode, IconType, SizeType } from '../../types'
 
 const props = defineProps<{
   icon: IconType
