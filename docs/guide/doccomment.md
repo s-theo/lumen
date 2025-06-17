@@ -67,7 +67,7 @@ export const Waline_Data: WalineData = {
 }
 ```
 
-### 接口说明 <Pill name="查看 waline 接口说明文档"  link="https://waline.js.org/reference/client/props.html" image="https://waline.js.org/logo.png"   alt='waline icon'/>
+### 接口说明 <Pill name="查看 waline 接口说明文档"  link="https://waline.js.org/reference/client/props.html" image="https://waline.js.org/logo.png" alt='waline icon'/>
 
 ::: tip
 `path` 属性已通过 **VitePress** 提供的 `useRoute()` 自动获取，一般无需手动设置；**如有特殊需求，也可以自行覆盖**。
