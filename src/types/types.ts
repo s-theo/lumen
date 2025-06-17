@@ -1,7 +1,7 @@
 import type { WalineProps } from '@waline/client/full'
 
 /** 图标和图片的类型 */
-export type IconImageType = string | IconImageMode
+export type IconImageMode = string | { light: string; dark: string }
 /** Alt 文本类型 */
 export type AltType = string | undefined
 /** 尺寸类型 */
@@ -15,12 +15,15 @@ export type TargetType = string | undefined
 /** 裁剪图片 */
 export type CropType = boolean
 
-export interface IconImageMode {
-  /** 浅色模式下的图标和图片 */
-  light: string
-  /** 深色模式下的图标和图片 */
-  dark: string
-}
+export type IconType =
+  | string
+  | { icon: string; color?: IconImageMode; alt?: AltType }
+  | { light: string; dark: string; color?: IconImageMode; alt?: AltType }
+
+export type ImageType =
+  | string
+  | { src: string; crop?: CropType; alt?: AltType }
+  | { light: string; dark: string; crop?: CropType; alt?: AltType }
 
 /** DocPill 接口 */
 export interface Pill {
@@ -32,15 +35,11 @@ export interface Pill {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 图标名称（支持 iconify） */
-  icon?: IconImageType
-  /** 图标的颜色。 */
-  color?: IconImageType
-  /** 图片路径（支持 light 和 dark 模式） */
-  image?: IconImageType
-  /** 裁剪图片 */
-  crop?: CropType
-  /** 图片的 alt 文本 */
+  /** 图标配置 */
+  icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
+  /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
 
@@ -56,15 +55,11 @@ export interface LinkItem {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 图标的颜色。 */
-  color?: IconImageType
-  /** 图标名称（支持 iconify） */
-  icon?: IconImageType
-  /** 图片路径（支持 light 和 dark 模式） */
-  image?: IconImageType
-  /** 裁剪图片 */
-  crop?: CropType
-  /** 图片的 alt 文本 */
+  /** 图标配置 */
+  icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
+  /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
 
@@ -78,15 +73,11 @@ export interface BoxCubeItem {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 图标的颜色。 */
-  color?: IconImageType
-  /** 图标名称（支持 iconify） */
-  icon?: IconImageType
-  /** 图片路径（支持 light 和 dark 模式） */
-  image?: IconImageType
-  /** 裁剪图片 */
-  crop?: CropType
-  /** 图片的 alt 文本 */
+  /** 图标配置 */
+  icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
+  /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
 
@@ -100,19 +91,15 @@ export interface Promo {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 图标（支持 iconify 或 image 的 light/dark） */
-  icon?: IconImageType
-  /** 图标颜色（支持 light/dark） */
-  color?: IconImageType
-  /** 图片资源（支持 light/dark） */
-  image?: IconImageType
-  /** 裁剪图片 */
-  crop?: CropType
   /** 附加信息1 */
   info1?: string
   /** 附加信息2 */
   info2?: string
-  /** 图标/图片的替代文本 */
+  /** 图标配置 */
+  icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
+  /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
 
@@ -126,19 +113,15 @@ export interface Normal {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 图标（可选） */
-  icon?: IconImageType
-  /** 图标颜色（可选） */
-  color?: IconImageType
-  /** 图片资源（可选） */
-  image?: IconImageType
-  /** 裁剪图片 */
-  crop?: CropType
   /** 隐藏信息1（可用于鼠标悬停显示） */
   hide1?: string
   /** 隐藏信息2 */
   hide2?: string
-  /** 图标/图片的替代文本 */
+  /** 图标配置 */
+  icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
+  /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
 
@@ -182,7 +165,7 @@ export interface AnnouncementItem {
   /** 日期文本 */
   dateText?: string
   /** 日期图标 */
-  dateIcon?: string
+  dateIcon?: IconType
   /** 图片的 alt 文本 */
   alt?: AltType
 }
@@ -225,18 +208,16 @@ export interface FooterData {
 
 /** HomeFooter Group 接口 */
 export interface Group {
-  /** 图标名称（支持 iconify） */
-  icon?: IconImageType
+  /** 图标配置 */
+  icon?: IconType
+  /** 图片的 alt 文本 或 图标的 aria-label */
+  alt?: AltType
   /** 外部链接图标开关 */
   noIcon?: boolean
-  /** 图标样式 */
-  color?: IconImageType
   /** 分组标题 */
   title: string
   /** 链接数组 */
   links: Link[]
-  /** 无障碍描述 */
-  alt?: AltType
 }
 
 /** HomeFooter Beian 接口 */
@@ -254,9 +235,7 @@ export interface Icp {
   /** ICP 备案号 */
   number?: string
   /** ICP 图标，@default 'fluent:globe-shield-48-filled' */
-  icon?: IconImageType
-  /** 图标的颜色。 */
-  color?: IconImageType
+  icon?: IconType
   /** 无障碍描述 */
   alt?: AltType
   /** ICP网站或自定义链接 */
@@ -272,9 +251,7 @@ export interface Police {
   /** 公安备案号 */
   number?: string
   /** 公安备案图标，@default 'fluent:shield-checkmark-48-filled' */
-  icon?: IconImageType
-  /** 图标的颜色。 */
-  color?: IconImageType
+  icon?: IconType
   /** 无障碍描述 */
   alt?: AltType
   /** 公安备案网站或自定义链接 */
@@ -296,9 +273,7 @@ export interface Author {
   /** 链接的目标（可选） */
   target?: TargetType
   /** 版权图标图标 */
-  icon?: IconImageType
-  /** 图标的颜色。 */
-  color?: IconImageType
+  icon?: IconType
   /** 无障碍描述 */
   alt?: AltType
   /** 版权文本 */
@@ -308,11 +283,9 @@ export interface Author {
 /** HomeFooter Link 接口 */
 export interface Link {
   /** 链接图标 */
-  icon?: IconImageType
+  icon?: IconType
   /** 外部链接图标开关 */
   noIcon?: boolean
-  /** 链接样式 */
-  color?: IconImageType
   /** 链接名称 */
   name: string
   /** 链接地址 */

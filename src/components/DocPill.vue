@@ -8,10 +8,10 @@ const pill = defineProps<Pill>()
 <template>
   <Link class="link ignore-header no-icon" :href="pill.link" :rel="pill.rel" :target="pill.target">
     <template v-if="pill.icon">
-      <Icon :icon="pill.icon" :color="pill.color" :alt="pill.alt" size="14" />
+      <Icon :icon="pill.icon" :alt="pill.alt" size="14" />
     </template>
     <template v-else-if="pill.image">
-      <Image :image="pill.image" :alt="pill.alt" :crop="pill.crop" size="14" />
+      <Image :image="pill.image" :alt="pill.alt" size="14" />
     </template>
     <span class="name">{{ pill.name }}</span>
   </Link>
