@@ -72,11 +72,11 @@ importers:
   docs:
     devDependencies:
       '@mdit/plugin-figure':
-        specifier: ^0.22.0
-        version: 0.22.0(markdown-it@14.1.0)
+        specifier: ^0.22.1
+        version: 0.22.1(markdown-it@14.1.0)
       '@mdit/plugin-img-size':
-        specifier: ^0.22.0
-        version: 0.22.0(markdown-it@14.1.0)
+        specifier: ^0.22.1
+        version: 0.22.1(markdown-it@14.1.0)
       '@theojs/lumen':
         specifier: workspace:*
         version: link:../src
@@ -525,8 +525,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@mdit/plugin-figure@0.22.0':
-    resolution: {integrity: sha512-Lcw/2vgNef3giRy/a+nfvYQTpumFlpdxbAMtlRiO1oewqb/R+YQYHImHZV9tUwRT/iGku2JdtM71XkOxy/PKjA==}
+  '@mdit/plugin-figure@0.22.1':
+    resolution: {integrity: sha512-z7uqtKsQ/ILkdM4pLrfuvz2eAhtwNzRPT9xnixFosrMgF7CEHbBtFTF6nc2ht1mOqCTRqoIL+FWg8InYMiBPhQ==}
     engines: {node: '>= 18'}
     peerDependencies:
       markdown-it: ^14.1.0
@@ -534,8 +534,8 @@ packages:
       markdown-it:
         optional: true
 
-  '@mdit/plugin-img-size@0.22.0':
-    resolution: {integrity: sha512-d//Pji9kuJ+fUPYOETp29MJox1IViugmS71rv/p5hxgT5Fl3JaNbK5CC6I44W8xBDTnvBB6DXQNaz6BzvEsYnw==}
+  '@mdit/plugin-img-size@0.22.1':
+    resolution: {integrity: sha512-Rv8ZDUyeYsBfhjJQtz0kj8GWnyjX8SWovRwuGuhxD6RXRMsqiaDPekGOEN77ZBN2tCcZEc5tGmHHonlg1RAUtQ==}
     engines: {node: '>= 18'}
     peerDependencies:
       markdown-it: ^14.1.0
@@ -3038,13 +3038,13 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@mdit/plugin-figure@0.22.0(markdown-it@14.1.0)':
+  '@mdit/plugin-figure@0.22.1(markdown-it@14.1.0)':
     dependencies:
       '@types/markdown-it': 14.1.2
     optionalDependencies:
       markdown-it: 14.1.0
 
-  '@mdit/plugin-img-size@0.22.0(markdown-it@14.1.0)':
+  '@mdit/plugin-img-size@0.22.1(markdown-it@14.1.0)':
     dependencies:
       '@types/markdown-it': 14.1.2
     optionalDependencies:
