@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { LinkItem } from '../types'
+import { CardItem } from '../types'
 import { Icon, Image, Link } from './common'
 
 const props = defineProps<{
-  items: LinkItem[]
+  items: CardItem[]
   grid?: number
 }>()
 </script>
@@ -14,23 +14,23 @@ const props = defineProps<{
     :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
   >
     <Link
-      v-for="(link, index) in props.items"
-      :key="link.link + index"
-      class="link no-icon"
-      :href="link.link"
-      :rel="link.rel"
-      :target="link.target"
+      v-for="(card, index) in props.items"
+      :key="card.link + index"
+      class="card no-icon"
+      :href="card.link"
+      :rel="card.rel"
+      :target="card.target"
     >
       <span class="row">
-        <template v-if="link.icon">
-          <Icon :icon="link.icon" :alt="link.alt" size="32" />
+        <template v-if="card.icon">
+          <Icon :icon="card.icon" :alt="card.alt" :size="card.size || '64'" />
         </template>
-        <template v-else-if="link.image">
-          <Image :image="link.image" :alt="link.alt" size="32" />
+        <template v-else-if="card.image">
+          <Image :image="card.image" :alt="card.alt" :size="card.size || '64'" />
         </template>
-        <span class="name">{{ link.name }}</span>
+        <span v-if="card.name" class="name">{{ card.name }}</span>
       </span>
-      <p v-if="link.desc" class="desc">{{ link.desc }}</p>
+      <p v-if="card.desc" class="desc">{{ card.desc }}</p>
     </Link>
   </div>
 </template>
@@ -38,20 +38,21 @@ const props = defineProps<{
 <style scoped>
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0.5em;
   margin: 0.5em 0;
 }
 
 .row {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.75em;
   width: 100%;
   min-width: 0;
 }
 
-.link {
+.card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -61,23 +62,23 @@ const props = defineProps<{
     border-color 0.25s,
     background-color 0.25s;
   margin: 0;
-  border: 1px solid var(--Links-border);
+  border: 1px solid var(--Card-border);
   border-radius: 0.75em;
-  background-color: var(--Links-bg);
+  background-color: var(--Card-bg);
   padding: 1em;
   min-width: 0;
   text-decoration: none !important;
 }
 
-.link:hover {
-  transform: var(--Links-transform-hover);
-  box-shadow: var(--Links-boxshadow-hover);
-  border-color: var(--Links-border-hover);
-  background-color: var(--Links-bg-hover);
+.card:hover {
+  transform: var(--Card-transform-hover);
+  box-shadow: var(--Card-boxshadow-hover);
+  border-color: var(--Card-border-hover);
+  background-color: var(--Card-bg-hover);
 }
 
-.link:active {
-  transform: var(--Links-transform-active);
+.card:active {
+  transform: var(--Card-transform-active);
 }
 
 .iconify {
@@ -90,18 +91,20 @@ const props = defineProps<{
   width: 100%;
   min-width: 0;
   overflow: hidden;
-  color: var(--Links-name);
+  color: var(--Card-name);
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0.05em;
+  text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .desc {
+  align-self: flex-start;
   margin-top: 0.875em;
-  color: var(--Links-desc);
+  color: var(--Card-desc);
   font-size: 0.75em;
   line-height: 1.5;
   letter-spacing: 0.025em;
@@ -109,7 +112,7 @@ const props = defineProps<{
 
 @media (max-width: 600px) {
   .flex.grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 </style>

@@ -94,7 +94,7 @@ onMounted(() => {
             size="12"
           />
           <Link
-            :href="footer.author.link || 'https://github.com/' + footer.author.name"
+            :href="footer.author.link || `https://github.com/${footer.author.name}`"
             :rel="footer.author.rel"
             :target="footer.author.target"
           >
