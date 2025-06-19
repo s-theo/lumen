@@ -4,13 +4,13 @@ import { Icon, Image, Link } from './common'
 
 const props = defineProps<{
   items: CardItem[]
-  grid?: boolean | number
+  grid?: number
 }>()
 </script>
 
 <template>
   <div
-    :class="['flex', (typeof props.grid === 'boolean' && props.grid) || typeof props.grid === 'number' ? 'grid' : '']"
+    class="grid"
     :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
   >
     <Link
@@ -36,14 +36,7 @@ const props = defineProps<{
 </template>
 
 <style scoped>
-.flex {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  margin: 0.5em 0;
-}
-
-.flex.grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.5em;
