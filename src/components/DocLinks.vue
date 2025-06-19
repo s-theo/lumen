@@ -108,8 +108,8 @@ const props = defineProps<{
 }
 
 @media (max-width: 600px) {
-  .flex.grid {
-    grid-template-columns: 1fr !important;
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)) !important;
   }
 }
 </style>
