@@ -1,5 +1,5 @@
 <Links
-  grid
+  :grid="2"
   :items="[
     // 普通图片
     {

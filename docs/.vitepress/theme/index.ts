@@ -7,6 +7,7 @@ import {
   Announcement,
   DocAsideLogo,
   DocBoxCube,
+  DocCard,
   DocLinks,
   DocPill,
   DocVideoLink,
@@ -39,6 +40,7 @@ export default {
     })
     app.component('Pill', DocPill)
     app.component('Links', DocLinks)
+    app.component('Card', DocCard)
     app.component('BoxCube', DocBoxCube)
     app.component('Home', HomeUnderline)
     app.component('Vid', DocVideoLink)
