@@ -82,6 +82,20 @@
   --Links-transform-active: none;
 
   /**
+  * Component: Card
+  * -------------------------------------------------------------------------- */
+
+  --Card-bg: var(--component-bg);
+  --Card-border: transparent;
+  --Card-name: inherit;
+  --Card-desc: var(--vp-c-text-2);
+  --Card-bg-hover: var(--component-bg);
+  --Card-border-hover: var(--vp-c-brand-1);
+  --Card-boxshadow-hover: none;
+  --Card-transform-hover: none;
+  --Card-transform-active: none;
+
+  /**
   * Component: Pill
   * -------------------------------------------------------------------------- */
 
