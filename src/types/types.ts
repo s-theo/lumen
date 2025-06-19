@@ -81,6 +81,28 @@ export interface BoxCubeItem {
   alt?: AltType
 }
 
+/** DocCard 接口 */
+export interface CardItem {
+  /** DocCard 名称。 */
+  name?: string
+  /** DocCard 描述。 */
+  desc?: string
+  /** DocCard 链接。 */
+  link: LinkType
+  /** Rel 属性 */
+  rel?: RelType
+  /** 链接的目标（可选） */
+  target?: TargetType
+  /** 图标配置 */
+  icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
+  /** 图片和图标大小 */
+  size?: SizeType
+  /** 图片的 alt 文本 或 图标的 aria-label */
+  alt?: AltType
+}
+
 /** Promo 类型：表示一个具有活动性质的推广项 */
 export interface Promo {
   /** 活动标题 */
