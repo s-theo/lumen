@@ -15,8 +15,9 @@ const config = computed(() => getVideo(props))
       loading="lazy"
       :title="config.title"
       :src="typeof config.src === 'function' ? config.src(props.id) : config.src"
-      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
       allowfullscreen
+      referrerpolicy="no-referrer"
     />
   </figure>
 </template>
