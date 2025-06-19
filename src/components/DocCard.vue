@@ -10,11 +10,7 @@ const props = defineProps<{
 
 <template>
   <div
-    :class="[
-      'flex',
-      typeof props.grid === 'boolean' && props.grid ? 'grid' : '',
-      typeof props.grid === 'number' ? 'grid' : ''
-    ]"
+    :class="['flex', (typeof props.grid === 'boolean' && props.grid) || typeof props.grid === 'number' ? 'grid' : '']"
     :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
   >
     <Link
@@ -114,7 +110,7 @@ const props = defineProps<{
 
 .desc {
   align-self: flex-start;
-  margin: 0.875em 0 0 0;
+  margin-top: 0.875em;
   color: var(--Card-desc);
   font-size: 0.75em;
   line-height: 1.5;
