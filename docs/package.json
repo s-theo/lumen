@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@mdit/plugin-figure": "^0.22.1",
-    "@mdit/plugin-img-size": "^0.22.1",
+    "@mdit/plugin-img-size": "^0.22.2",
     "@theojs/lumen": "workspace:*",
     "vite": "catalog:",
     "vitepress": "catalog:",
