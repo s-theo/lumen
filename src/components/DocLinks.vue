@@ -100,7 +100,7 @@ const props = defineProps<{
 }
 
 .desc {
-  margin-top: 0.875em;
+  margin: 0.875em 0 0 0;
   color: var(--Links-desc);
   font-size: 0.75em;
   line-height: 1.5;
