@@ -12,7 +12,7 @@ const ann = useAnnouncement()
       <p v-if="ann.desc" class="desc" v-html="ann.desc"></p>
       <div v-if="ann.date" class="time-info">
         <Icon :icon="ann.dateIcon || 'line-md:calendar'" :alt="ann.alt || 'date'" size="14" />
-        <time v-html="ann.dateText || '活动时间: 即日至'"> </time>
+        <time v-html="ann.dateText || '活动时间: 即日至'"></time>
         <time class="date">{{ ann.date }}</time>
       </div>
     </div>

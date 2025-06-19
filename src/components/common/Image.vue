@@ -22,37 +22,16 @@ const currentImage = computed(() => {
   return props.image.src
 })
 
-const altText = computed(() => {
-  if (props.alt) return props.alt
-  if (typeof props.image === 'object' && 'alt' in props.image) return props.image.alt
-  return ''
-})
+const altText = computed(() => props.alt ?? (typeof props.image === 'object' ? (props.image.alt ?? '') : ''))
 
 const crop = computed(() => {
-  return (
-    typeof props.image === 'object' &&
-    Object.prototype.hasOwnProperty.call(props.image, 'crop') &&
-    props.image.crop === true
-  )
+  return typeof props.image === 'object' && 'crop' in props.image ? Boolean(props.image.crop) : false
 })
 </script>
 
 <template>
   <img
-    v-if="crop"
-    class="crop"
-    :src="currentImage"
-    :alt="altText"
-    :width="size"
-    :height="size"
-    loading="lazy"
-    decoding="async"
-    referrerpolicy="no-referrer"
-    fetchpriority="low"
-    draggable="false"
-  />
-  <img
-    v-else
+    :class="{ crop: crop }"
     :src="currentImage"
     :alt="altText"
     :width="size"

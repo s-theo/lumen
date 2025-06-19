@@ -18,26 +18,18 @@ const { isDark } = useData()
 
 const currentIcon = computed(() => {
   if (typeof props.icon === 'string') return props.icon
-  if (props.icon && typeof props.icon === 'object' && 'light' in props.icon && 'dark' in props.icon) {
-    return isDark.value ? props.icon.dark : props.icon.light
-  }
-  if (props.icon && typeof props.icon === 'object' && 'icon' in props.icon) {
-    return props.icon.icon
-  }
+  if ('light' in props.icon && 'dark' in props.icon) return isDark.value ? props.icon.dark : props.icon.light
+  if ('icon' in props.icon) return props.icon.icon
   return ''
 })
 
 const currentColor = computed(() => {
-  if (!props.icon) return undefined
-  if (typeof props.icon === 'string') {
-    return undefined
-  }
-  if ('color' in props.icon && props.icon.color) {
-    if (typeof props.icon.color === 'object' && 'light' in props.icon.color && 'dark' in props.icon.color) {
-      return isDark.value ? props.icon.color.dark : props.icon.color.light
-    }
-    if (typeof props.icon.color === 'string') {
-      return props.icon.color
+  if (typeof props.icon !== 'object' || !props.icon) return undefined
+  if ('color' in props.icon) {
+    const color = props.icon.color
+    if (typeof color === 'string') return color
+    if ('light' in color && 'dark' in color) {
+      return isDark.value ? color.dark : color.light
     }
   }
   return undefined
@@ -45,8 +37,7 @@ const currentColor = computed(() => {
 
 const ariaLabel = computed(() => {
   const iconAlt = typeof props.icon === 'object' ? props.icon.alt?.trim?.() : undefined
-  const alt = props.alt?.trim()
-  return iconAlt || alt || undefined
+  return iconAlt || props.alt?.trim() || undefined
 })
 </script>
 
