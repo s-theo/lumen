@@ -67,4 +67,4 @@ hero:
 | `dateIcon` | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
 | `alt`      | `AltType`    | 图标的替代文本，用于无障碍和 SEO 优化。                                                                                                | <Badge text="可选" /> |
 
-<!--@include: ./type.md{1,20}-->
+<!--@include: ./type.md{1,10}-->

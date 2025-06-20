@@ -45,6 +45,7 @@
         alt: 'github icon',
         crop: true
       },
+      size: 48,
       rel: 'noopener noreferrer'
     }
   ]"

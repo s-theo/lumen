@@ -3,6 +3,7 @@
   name="Iconify"
   link="https://iconify.design/"
   :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA', alt: 'iconify icon' }"
+  :size="16"
   rel="noopener noreferrer"
 />
 <Pill name="Vue" link="https://vuejs.org/" icon="vscode-icons:file-type-vue" alt="vue icon" rel="noopener noreferrer" />

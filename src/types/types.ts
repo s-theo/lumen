@@ -5,7 +5,7 @@ export type IconImageMode = string | { light: string; dark: string }
 /** Alt 文本类型 */
 export type AltType = string | undefined
 /** 尺寸类型 */
-export type SizeType = string | undefined
+export type SizeType = null | string | number
 /** 链接类型 */
 export type LinkType = string | undefined
 /** Rel 属性类型 */
@@ -39,6 +39,8 @@ export interface Pill {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
+  /** 图片和图标大小 */
+  size?: SizeType
   /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
@@ -59,6 +61,8 @@ export interface LinkItem {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
+  /** 图片和图标大小 */
+  size?: SizeType
   /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
@@ -77,6 +81,8 @@ export interface BoxCubeItem {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
+  /** 图片和图标大小 */
+  size?: SizeType
   /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
@@ -121,6 +127,8 @@ export interface Promo {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
+  /** 图片和图标大小 */
+  size?: SizeType
   /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }
@@ -143,6 +151,8 @@ export interface Normal {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
+  /** 图片和图标大小 */
+  size?: SizeType
   /** 图片的 alt 文本 或 图标的 aria-label */
   alt?: AltType
 }

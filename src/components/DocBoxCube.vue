@@ -22,10 +22,10 @@ const props = defineProps<{
       :target="boxcube.target"
     >
       <template v-if="boxcube.icon">
-        <Icon :icon="boxcube.icon" :alt="boxcube.alt" size="32" />
+        <Icon :icon="boxcube.icon" :alt="boxcube.alt" :size="boxcube.size || '32'" />
       </template>
       <template v-else-if="boxcube.image">
-        <Image :image="boxcube.image" :alt="boxcube.alt" size="32" />
+        <Image :image="boxcube.image" :alt="boxcube.alt" :size="boxcube.size || '32'" />
       </template>
       <span class="name">{{ boxcube.name }}</span>
     </Link>
