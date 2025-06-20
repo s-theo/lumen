@@ -19,8 +19,7 @@ updates:
       include: scope
     versioning-strategy: 'auto'
     allow:
-      - dependency-type: 'all'
-      - dependency-name: '*'
+      - dependency-type: 'direct'
 
   - package-ecosystem: 'github-actions'
     directory: /
