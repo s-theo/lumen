@@ -81,13 +81,10 @@ export const Waline_Data: WalineData = {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { h } from 'vue'
-
 // [!code ++]
 import { Waline } from '@theojs/lumen'
-
 // [!code ++]
 import { Waline_Data } from '../data'
 
@@ -110,10 +107,8 @@ export default {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { h } from 'vue'
-
 // [!code ++]
 import { Waline } from '@theojs/lumen'
 

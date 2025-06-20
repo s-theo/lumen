@@ -9,7 +9,6 @@ description: 了解如何使用 @theojs/lumen 插件提供的多种链接卡片�
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { DocBoxCube, DocLinks, DocPill } from '@theojs/lumen'
 
