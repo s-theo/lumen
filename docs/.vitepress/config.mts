@@ -1,9 +1,6 @@
 import { defineConfig } from 'vitepress'
-
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import llmstxt from 'vitepress-plugin-llms'
-
-import Lumenpkg from '../../src/package.json'
 import {
   head,
   markdown,
@@ -13,6 +10,7 @@ import {
   socialLinks,
   transformPageData
 } from './configs'
+import Lumenpkg from '../../src/package.json'
 
 const Lumenversion = `v` + Lumenpkg.version
 const baseUrl = 'https://lumen.theojs.cn'

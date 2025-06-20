@@ -1,7 +1,5 @@
 import { useData } from 'vitepress'
-
 import { ComputedRef, computed, onMounted, onUnmounted } from 'vue'
-
 import type { AnnouncementItem, VideoProps } from '../types'
 
 /**
