@@ -105,8 +105,8 @@
   --Pill-bg-hover: var(--vp-code-bg);
   --Pill-border-hover: var(--vp-c-brand-1);
   --Pill-boxshadow-hover: none;
-  --Pill-transform-hover: translateY(1px);
-  --Pill-transform-active: translateY(1px) scale(0.98);
+  --Pill-transform-hover: none;
+  --Pill-transform-active: none;
 
   /**
   * Component: HomeFooter

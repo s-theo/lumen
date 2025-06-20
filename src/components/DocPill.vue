@@ -6,7 +6,13 @@ const pill = defineProps<Pill>()
 </script>
 
 <template>
-  <Link class="link ignore-header no-icon" :href="pill.link" :rel="pill.rel" :target="pill.target">
+  <Link
+    class="link ignore-header no-icon"
+    :class="{ 'no-icon-img': !pill.icon && !pill.image }"
+    :href="pill.link"
+    :rel="pill.rel"
+    :target="pill.target"
+  >
     <template v-if="pill.icon">
       <Icon :icon="pill.icon" :alt="pill.alt" size="14" />
     </template>
@@ -21,8 +27,8 @@ const pill = defineProps<Pill>()
 .link {
   display: inline-flex;
   align-items: center;
+  vertical-align: -1px;
   gap: 0.25em;
-  transform: translateY(1px);
   transition:
     transform 0.25s,
     box-shadow 0.25s,
@@ -37,6 +43,10 @@ const pill = defineProps<Pill>()
   font-size: 1rem;
   text-decoration: none !important;
   white-space: nowrap;
+}
+
+.link.no-icon-img {
+  vertical-align: 1.5px;
 }
 
 .link:hover {
@@ -75,6 +85,10 @@ const pill = defineProps<Pill>()
 .vp-doc td > .link {
   vertical-align: -1px;
   font-size: 1em;
+}
+
+.vp-doc td > .link.no-icon-img {
+  vertical-align: 1.5px;
 }
 
 .iconify {
