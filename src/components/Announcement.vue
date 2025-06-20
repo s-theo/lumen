@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useAnnouncement } from '../types'
 import { Icon, Link } from './common'
+import { useAnnouncement } from '../types'
 
 const ann = useAnnouncement()
 </script>

@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-
-import { moveDomElements } from '../types'
 import { Svg } from './common'
+import { moveDomElements } from '../types'
 
 const { frontmatter: fm } = useData()
 

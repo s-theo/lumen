@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { LinkItem } from '../types'
 import { Icon, Image, Link } from './common'
+import { LinkItem } from '../types'
 
 const props = defineProps<{
   items: LinkItem[]

@@ -1,8 +1,6 @@
 /// <reference types="vite/client" />
 import DefaultTheme from 'vitepress/theme'
-
 import { h } from 'vue'
-
 import {
   Announcement,
   DocAsideLogo,
@@ -17,9 +15,7 @@ import {
   umamiAnalytics
 } from '@theojs/lumen'
 import '@theojs/lumen/theme'
-
 import { Aside_Data, Footer_Data, Waline_Data } from '../data'
-
 import 'virtual:group-icons.css'
 
 export default {

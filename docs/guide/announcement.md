@@ -17,10 +17,8 @@ head:
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { h } from 'vue'
-
 // [!code ++]
 import { Announcement } from '@theojs/lumen'
 

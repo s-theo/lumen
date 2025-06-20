@@ -16,7 +16,6 @@ description: 了解如何使用 @theojs/lumen 插件提供的视频组件 (Vid)�
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { DocVideoLink } from '@theojs/lumen'
 

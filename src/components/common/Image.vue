@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-
 import { computed } from 'vue'
-
 import { AltType, CropType, ImageType, SizeType } from '../../types'
 
 const props = defineProps<{

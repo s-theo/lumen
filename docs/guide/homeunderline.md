@@ -17,7 +17,6 @@ head:
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { HomeUnderline } from '@theojs/lumen'
 

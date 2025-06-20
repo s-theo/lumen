@@ -11,7 +11,6 @@ description: 探索如何使用 @theojs/lumen 插件，在你的 VitePress 站�
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { googleAnalytics } from '@theojs/lumen'
 
@@ -41,7 +40,6 @@ export default {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { baiduAnalytics, trackPageview } from '@theojs/lumen'
 
@@ -72,7 +70,6 @@ export default {
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { umamiAnalytics } from '@theojs/lumen'
 

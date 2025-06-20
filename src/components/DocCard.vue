@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { CardItem } from '../types'
 import { Icon, Image, Link } from './common'
+import { CardItem } from '../types'
 
 const props = defineProps<{
   items: CardItem[]

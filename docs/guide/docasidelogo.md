@@ -28,13 +28,10 @@ head:
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { h } from 'vue'
-
 // [!code ++]
 import { DocAsideLogo } from '@theojs/lumen'
-
 // [!code ++]
 import { Aside_Data } from '../data/AsideData'
 

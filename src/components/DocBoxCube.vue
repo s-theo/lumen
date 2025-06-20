@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { BoxCubeItem } from '../types'
 import { Icon, Image, Link } from './common'
+import { BoxCubeItem } from '../types'
 
 const props = defineProps<{
   items: BoxCubeItem[]

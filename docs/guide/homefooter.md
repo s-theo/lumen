@@ -36,13 +36,10 @@ head:
 
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
-
 // [!code ++]
 import { h } from 'vue'
-
 // [!code ++]
 import { HomeFooter } from '@theojs/lumen'
-
 // [!code ++]
 import { Footer_Data } from '../data/footerData'
 

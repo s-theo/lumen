@@ -70,9 +70,7 @@ import '@theojs/lumen/pic'
 ```ts
 // .vitepress/theme/index.ts
 import DefaultTheme from 'vitepress/theme'
-
 import '@theojs/lumen/theme'
-
 // [!code ++]
 import './var.css'
 

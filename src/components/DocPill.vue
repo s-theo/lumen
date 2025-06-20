@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Pill } from '../types'
 import { Icon, Image, Link } from './common'
+import { Pill } from '../types'
 
 const pill = defineProps<Pill>()
 </script>
