@@ -3,19 +3,11 @@
   "dependencyDashboard": true,
   "extends": ["config:recommended"],
   "labels": ["dependencies"],
-  "lockFileMaintenance": {
-    "commitMessageAction": "bump",
-    "commitMessageExtra": "",
-    "enabled": true,
-    "groupName": "deps"
-  },
-  "npm": {
-    "enabled": true
-  },
+  "npm": { "enabled": true },
   "packageRules": [
     {
       "commitMessageAction": "bump",
-      "commitMessageExtra": "",
+      "commitMessageExtra": "deps",
       "groupName": "deps",
       "matchPackageNames": ["/.*/"]
     }
