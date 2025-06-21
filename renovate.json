@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "commitMessageAction": "update",
+  "commitMessagePrefix": "build",
+  "commitMessageTopic": "{{depName}}",
+  "dependencyDashboard": true,
+  "extends": ["config:base"],
+  "labels": ["build"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 9am on Monday"]
+  },
+  "npm": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "packageRules": [
+        {
+          "groupName": "deps",
+          "matchDepTypes": ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"],
+          "matchPackagePatterns": ["*"]
+        }
+      ]
+    },
+    {
+      "groupName": "GitHub Actions",
+      "groupSlug": "gh-actions",
+      "managers": ["github-actions"],
+      "matchPackagePatterns": ["^actions/"]
+    }
+  ],
+  "rangeStrategy": "auto",
+  "schedule": ["before 09:00 every day"],
+  "timezone": "Asia/Shanghai"
+}
