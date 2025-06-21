@@ -7,7 +7,7 @@ plugins:
   - 'prettier-plugin-organize-attributes'
   - 'prettier-plugin-vitepress'
 
-printWidth: 80
+printWidth: 120
 semi: false
 singleQuote: true
 trailingComma: 'none'
@@ -34,7 +34,6 @@ overrides:
 
   - files: ['*.vue']
     options:
-      printWidth: 120
       attributeGroups:
         - '^((v-bind)?:?|v-)is$'
         - '^v-for$'
