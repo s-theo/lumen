@@ -4,7 +4,7 @@
   "commitMessagePrefix": "build",
   "commitMessageTopic": "{{depName}}",
   "dependencyDashboard": true,
-  "extends": ["config:base"],
+  "extends": ["config:recommended"],
   "labels": ["build"],
   "lockFileMaintenance": {
     "enabled": true,
@@ -15,22 +15,23 @@
   },
   "packageRules": [
     {
-      "packageRules": [
-        {
-          "groupName": "deps",
-          "matchDepTypes": ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"],
-          "matchPackagePatterns": ["*"]
-        }
-      ]
+      "groupName": "deps",
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies",
+        "peerDependencies",
+        "optionalDependencies"
+      ],
+      "matchPackageNames": ["*"]
     },
     {
       "groupName": "GitHub Actions",
       "groupSlug": "gh-actions",
-      "managers": ["github-actions"],
-      "matchPackagePatterns": ["^actions/"]
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["/^actions//"]
     }
   ],
   "rangeStrategy": "auto",
-  "schedule": ["before 09:00 every day"],
+  "schedule": ["before 09:00"],
   "timezone": "Asia/Shanghai"
 }
