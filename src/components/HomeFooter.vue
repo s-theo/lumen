@@ -140,14 +140,13 @@ onMounted(() => {
   margin-bottom: 0.5em;
   font-weight: 600;
   font-size: 0.75em;
-  letter-spacing: 0.05em;
+  line-height: 1.5;
 }
 
 .list-links {
   opacity: 0.9;
   font-size: 0.75em;
   line-height: 2.4;
-  letter-spacing: 0.025em;
 }
 
 .iconify {
@@ -161,7 +160,6 @@ onMounted(() => {
 
 .footer-info {
   margin: 0.875em 0;
-  letter-spacing: 0.025em;
   text-align: center;
 }
 
