@@ -81,7 +81,6 @@ const props = defineProps<{
   overflow: hidden;
   color: var(--Boxcube-name);
   font-size: 0.75em;
-  letter-spacing: 0.05em;
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;

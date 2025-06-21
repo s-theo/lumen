@@ -9,7 +9,7 @@
         src: 'https://i.theojs.cn/logo/alipay.svg',
         alt: 'alipay icon'
       },
-      desc: '中国领先的第三方支付平台，支持转账、支付和理财服务。',
+      desc: '移动支付平台，提供便捷的在线支付和转账服务',
       rel: 'noopener noreferrer'
     },
     // 深浅模式图片
