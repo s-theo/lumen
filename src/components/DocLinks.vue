@@ -94,7 +94,6 @@ const props = defineProps<{
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5;
-  letter-spacing: 0.05em;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -104,7 +103,6 @@ const props = defineProps<{
   color: var(--Links-desc);
   font-size: 0.75em;
   line-height: 1.5;
-  letter-spacing: 0.025em;
 }
 
 @media (max-width: 600px) {

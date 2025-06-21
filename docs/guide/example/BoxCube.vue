@@ -1,5 +1,5 @@
 <BoxCube
-  :grid="5"
+  :grid="6"
   :items="[
     // 普通 iconify 图标
     {
