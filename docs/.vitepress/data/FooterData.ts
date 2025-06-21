@@ -13,10 +13,7 @@ export const Footer_Data: FooterData = {
       icon: 'mdi:github',
       alt: 'github icon',
       links: [
-        {
-          name: 'Theo-Docs',
-          link: 'https://github.com/Theo-Messi/Theo-Docs'
-        },
+        { name: 'Theo-Docs', link: 'https://github.com/Theo-Messi/Theo-Docs' },
         {
           name: '玄学宝典',
           link: 'https://github.com/Theo-Messi/xx.theojs.cn'
@@ -25,10 +22,7 @@ export const Footer_Data: FooterData = {
           name: '常用配置文件',
           link: 'https://github.com/Theo-Messi/dotfiles'
         },
-        {
-          name: 'Lumen',
-          link: 'https://github.com/Theo-Messi/lumen'
-        }
+        { name: 'Lumen', link: 'https://github.com/Theo-Messi/lumen' }
       ]
     },
     {
@@ -36,19 +30,23 @@ export const Footer_Data: FooterData = {
       icon: 'heroicons:globe-alt-solid',
       alt: '优质线路 icon',
       links: [
-        { name: '银河云', link: 'https://itheo.top/yhy', rel: 'sponsored' },
-        { name: '青云梯', link: 'https://itheo.top/qyt', rel: 'sponsored' },
         {
-          name: 'Totoro Cloud',
-          link: 'https://itheo.top/totoro',
-          rel: 'sponsored'
-        },
-        { name: 'TNT Cloud', link: 'https://itheo.top/tnt', rel: 'sponsored' },
-        {
-          name: 'FlyingBird',
+          name: 'FlyingBird - 飞鸟机场',
           link: 'https://itheo.top/flyingbird',
           rel: 'sponsored'
         },
+        {
+          name: 'Totoro - 龙猫云',
+          link: 'https://itheo.top/totoro',
+          rel: 'sponsored'
+        },
+        { name: '青云梯', link: 'https://itheo.top/qyt', rel: 'sponsored' },
+        {
+          name: 'Galaxy - 银河云',
+          link: 'https://itheo.top/yhy',
+          rel: 'sponsored'
+        },
+        { name: 'TNT Cloud', link: 'https://itheo.top/tnt', rel: 'sponsored' },
         { name: '飞兔云', link: 'https://itheo.top/feitu', rel: 'sponsored' }
       ]
     },
