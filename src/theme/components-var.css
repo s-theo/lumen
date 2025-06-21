@@ -8,12 +8,7 @@
   --i-mr: 0.25em;
   --promo-text-color: var(--vp-c-brand-1);
   --promo-text-weight: bold;
-  --promo-title-color: linear-gradient(
-    225deg,
-    rgba(100, 108, 255, 1),
-    rgba(176, 71, 255, 1),
-    rgba(100, 108, 255, 1)
-  );
+  --promo-title-color: linear-gradient(225deg, rgba(100, 108, 255, 1), rgba(176, 71, 255, 1), rgba(100, 108, 255, 1));
   --promo-title-weight: 600;
 
   /**
@@ -33,18 +28,8 @@
 
   --AsideLogo-bg: var(--component-bg);
   --AsideLogo-border: transparent;
-  --AsideLogo-name: linear-gradient(
-    225deg,
-    var(--vp-c-brand-1),
-    var(--vp-c-brand-3),
-    var(--vp-c-brand-1)
-  );
-  --AsideLogo-promo: linear-gradient(
-    225deg,
-    rgba(100, 108, 255, 1),
-    rgba(176, 71, 255, 1),
-    rgba(100, 108, 255, 1)
-  );
+  --AsideLogo-name: linear-gradient(225deg, var(--vp-c-brand-1), var(--vp-c-brand-3), var(--vp-c-brand-1));
+  --AsideLogo-promo: linear-gradient(225deg, rgba(100, 108, 255, 1), rgba(176, 71, 255, 1), rgba(100, 108, 255, 1));
   --AsideLogo-hide: var(--vp-c-text-2);
   --AsideLogo-info: var(--vp-c-text-2);
   --AsideLogo-name-bg-hover: var(--component-bg);
@@ -184,22 +169,12 @@
   * Default
   * -------------------------------------------------------------------------- */
 
-  --promo-title-color: linear-gradient(
-    225deg,
-    rgba(120, 200, 255, 1),
-    rgba(255, 130, 255, 1),
-    rgba(120, 200, 255, 1)
-  );
+  --promo-title-color: linear-gradient(225deg, rgba(120, 200, 255, 1), rgba(255, 130, 255, 1), rgba(120, 200, 255, 1));
 
   /**
   * Component: AsideLogo
   * -------------------------------------------------------------------------- */
-  --AsideLogo-promo: linear-gradient(
-    225deg,
-    rgba(120, 200, 255, 1),
-    rgba(255, 130, 255, 1),
-    rgba(120, 200, 255, 1)
-  );
+  --AsideLogo-promo: linear-gradient(225deg, rgba(120, 200, 255, 1), rgba(255, 130, 255, 1), rgba(120, 200, 255, 1));
 
   /**
   * waline-style     

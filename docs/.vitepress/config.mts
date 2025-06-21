@@ -1,15 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import llmstxt from 'vitepress-plugin-llms'
-import {
-  head,
-  markdown,
-  nav,
-  search,
-  sidebar,
-  socialLinks,
-  transformPageData
-} from './configs'
+import { head, markdown, nav, search, sidebar, socialLinks, transformPageData } from './configs'
 import Lumenpkg from '../../src/package.json'
 
 const Lumenversion = `v` + Lumenpkg.version
@@ -67,10 +59,7 @@ export default defineConfig({
     },
 
     // 修改链接
-    editLink: {
-      pattern: 'https://github.com/Theo-Messi/lumen/edit/main/docs/:path',
-      text: '为此页提供修改建议'
-    },
+    editLink: { pattern: 'https://github.com/Theo-Messi/lumen/edit/main/docs/:path', text: '为此页提供修改建议' },
 
     // 目录设置
     outline: 'deep', // 索引级别

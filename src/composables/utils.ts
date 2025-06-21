@@ -7,9 +7,7 @@ import type { AnnouncementItem, VideoProps } from '../types'
  *
  * @returns 包含 `AnnouncementItem` 对象或 `undefined` 的计算属性
  */
-export const useAnnouncement = (): ComputedRef<
-  AnnouncementItem | undefined
-> => {
+export const useAnnouncement = (): ComputedRef<AnnouncementItem | undefined> => {
   const { frontmatter } = useData()
   return computed(() => frontmatter.value.hero?.Announcement)
 }
@@ -51,13 +49,11 @@ export const moveDomElements = (): void => {
 /** 支持的视频平台播放器配置。 */
 export const video = {
   bilibili: {
-    src: (id: VideoProps['id']) =>
-      `https://player.bilibili.com/player.html?bvid=${id}&autoplay=0`,
+    src: (id: VideoProps['id']) => `https://player.bilibili.com/player.html?bvid=${id}&autoplay=0`,
     title: 'Bilibili video player'
   },
   tencent: {
-    src: (id: VideoProps['id']) =>
-      `https://v.qq.com/txp/iframe/player.html?vid=${id}`,
+    src: (id: VideoProps['id']) => `https://v.qq.com/txp/iframe/player.html?vid=${id}`,
     title: 'Tencent Video player'
   },
   youku: {
@@ -65,8 +61,7 @@ export const video = {
     title: 'Youku video player'
   },
   youtube: {
-    src: (id: VideoProps['id']) =>
-      `https://www.youtube-nocookie.com/embed/${id}`,
+    src: (id: VideoProps['id']) => `https://www.youtube-nocookie.com/embed/${id}`,
     title: 'YouTube video player'
   },
   vimeo: {

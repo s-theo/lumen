@@ -4,13 +4,9 @@ const baseUrl = 'https://lumen.theojs.cn'
 const imgUrl = 'https://i.theojs.cn/logo/Lumen-Logo.webp'
 const defaultOgImage = 'https://i.theojs.cn/logo/Lumen-og.webp'
 
-export const transformPageData: UserConfig['transformPageData'] = (
-  pageData
-) => {
+export const transformPageData: UserConfig['transformPageData'] = (pageData) => {
   // canonical URL
-  const DynamicUrl = `${baseUrl}/${pageData.relativePath}`
-    .replace(/index\.md$/, '')
-    .replace(/\.md$/, '')
+  const DynamicUrl = `${baseUrl}/${pageData.relativePath}`.replace(/index\.md$/, '').replace(/\.md$/, '')
 
   pageData.frontmatter.head ??= []
 
@@ -24,15 +20,10 @@ export const transformPageData: UserConfig['transformPageData'] = (
   )
 
   // 添加 canonical 链接
-  pageData.frontmatter.head.push([
-    'link',
-    { rel: 'canonical', href: DynamicUrl }
-  ])
+  pageData.frontmatter.head.push(['link', { rel: 'canonical', href: DynamicUrl }])
 
   // 提取 og:image，没有则用默认
-  const ogImageEntry = pageData.frontmatter.head.find(
-    (item) => item[0] === 'meta' && item[1]?.property === 'og:image'
-  )
+  const ogImageEntry = pageData.frontmatter.head.find((item) => item[0] === 'meta' && item[1]?.property === 'og:image')
   const ogImage = ogImageEntry?.[1]?.content || defaultOgImage
 
   const isHome = pageData.relativePath === 'index.md'
@@ -84,9 +75,5 @@ export const transformPageData: UserConfig['transformPageData'] = (
       }
 
   // 添加 JSON-LD
-  pageData.frontmatter.head.push([
-    'script',
-    { type: 'application/ld+json' },
-    JSON.stringify(jsonLd)
-  ])
+  pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)])
 }
