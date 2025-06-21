@@ -3,12 +3,17 @@
   "dependencyDashboard": true,
   "extends": ["config:recommended"],
   "labels": ["dependencies"],
-  "lockFileMaintenance": { "enabled": true, "groupName": "deps" },
-  "npm": { "enabled": true },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "groupName": "deps"
+  },
+  "npm": {
+    "enabled": true
+  },
   "packageRules": [
     {
       "groupName": "deps",
-      "matchPackagePatterns": [".*"]
+      "matchPackageNames": ["/.*/"]
     }
   ],
   "rangeStrategy": "bump",
