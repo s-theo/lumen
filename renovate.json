@@ -17,14 +17,19 @@
     {
       "commitMessageTopic": "deps",
       "groupName": "deps",
-      "matchDepTypes": ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"],
-      "matchPackagePatterns": ["*"]
+      "matchDepTypes": [
+        "dependencies",
+        "devDependencies",
+        "peerDependencies",
+        "optionalDependencies"
+      ],
+      "matchPackageNames": ["*"]
     },
     {
       "commitMessageTopic": "gh-actions",
       "groupName": "GitHub Actions",
       "matchManagers": ["github-actions"],
-      "matchPackagePatterns": ["^actions/"]
+      "matchPackageNames": ["/^actions//"]
     },
     {
       "commitMessageTopic": "lock",
