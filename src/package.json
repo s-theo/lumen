@@ -16,7 +16,6 @@
     "iconify",
     "iconify-icon",
     "video-player",
-    "youtube",
     "tools",
     "theojs",
     "lumen",
@@ -68,14 +67,14 @@
   "dependencies": {
     "@iconify/vue": "^5.0.0",
     "@waline/client": "^3.5.7",
-    "bumpp": "^10.2.0",
-    "iconify-icon": "^3.0.0",
-    "typescript": "^5.8.3",
-    "vue": "catalog:"
+    "iconify-icon": "^3.0.0"
   },
   "devDependencies": {
+    "bumpp": "^10.2.0",
+    "typescript": "^5.8.3",
     "vite": "catalog:",
-    "vitepress": "catalog:"
+    "vitepress": "catalog:",
+    "vue": "catalog:"
   },
   "packageManager": "pnpm@10.12.1"
 }
