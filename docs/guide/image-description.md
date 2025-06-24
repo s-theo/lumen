@@ -63,7 +63,7 @@ import '@theojs/lumen/pic'
 
 ### 也可以单独添加样式
 
-<<< @/../src/theme/picture.css
+<<< @/../src/style/picture.css
 
 ## 使用示例
 
