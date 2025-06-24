@@ -11,8 +11,8 @@
     "commitlint": "commitlint --edit",
     "cz": "git-cz",
     "dev": "pnpm -F=docs dev",
-    "format": "prettier --write .",
-    "format:cheak": "prettier --check .",
+    "format": "prettier --experimental-cli --write .",
+    "format:cheak": "prettier --experimental-cli --check .",
     "iall": "pnpm -r install",
     "preview": "pnpm -F=docs preview",
     "release": "cd src && pnpm release",
@@ -22,9 +22,7 @@
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*": [
-      "prettier --write --ignore-unknown"
-    ]
+    "*": "prettier --experimental-cli --ignore-unknown --write"
   },
   "config": {
     "commitizen": {
