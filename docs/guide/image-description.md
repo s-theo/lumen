@@ -51,7 +51,7 @@ export default defineConfig({
 
 ```ts [全量导入]
 // theme/index.ts
-import '@theojs/lumen/theme'
+import '@theojs/lumen/style'
 ```
 
 ```ts [单独导入]
@@ -63,7 +63,7 @@ import '@theojs/lumen/pic'
 
 ### 也可以单独添加样式
 
-<<< @/../src/theme/picture.css
+<<< @/../src/style/picture.css
 
 ## 使用示例
 
