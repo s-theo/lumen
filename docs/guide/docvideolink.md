@@ -39,19 +39,19 @@ export default {
 <!-- YouTube 视频 -->
 <Vid id="dQw4w9WgXcQ" />
 <!-- 指定平台 -->
-<Vid id="dQw4w9WgXcQ" is="youtube" />
+<Vid is="youtube" id="dQw4w9WgXcQ" />
 
 <!-- Bilibili 视频 -->
-<Vid id="BV1if421Q7mL" is="bilibili" />
+<Vid is="bilibili" id="BV1if421Q7mL" />
 
 <!-- 腾讯视频 -->
-<Vid id="y0035f2sc4s" is="tencent" />
+<Vid is="tencent" id="y0035f2sc4s" />
 
 <!-- 优酷视频 -->
-<Vid id="XNTE5NTc3NjIwMA==" is="youku" />
+<Vid is="youku" id="XNTE5NTc3NjIwMA==" />
 
 <!-- Vimeo 视频 -->
-<Vid id="76979871" is="vimeo" />
+<Vid is="vimeo" id="76979871" />
 ```
 
 ### 自定义视频链接示例
