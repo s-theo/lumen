@@ -11,7 +11,7 @@ description: 了解如何配置和自定义 @theojs/lumen VitePress 主题。本
 
 ```ts [全量导入]
 // .vitepress/theme/index.ts
-import '@theojs/lumen/theme'
+import '@theojs/lumen/style'
 ```
 
 ```ts [按需导入]
@@ -63,7 +63,7 @@ import '@theojs/lumen/pic'
 ```ts
 // .vitepress/theme/index.ts
 import DefaultTheme from 'vitepress/theme'
-import '@theojs/lumen/theme'
+import '@theojs/lumen/style'
 // [!code ++]
 import './var.css'
 
@@ -80,7 +80,7 @@ export default DefaultTheme
 }
 ```
 
-查看<Pill name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/theme/components-var.css" :icon="{ icon: 'unjs:theme-colors', alt: 'iconify icon' }" />
+查看<Pill name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/style/components-var.css" :icon="{ icon: 'unjs:theme-colors', alt: 'iconify icon' }" />
 文件中查看所有可用变量，方便针对性覆盖。
 
 ## 内置样式示例

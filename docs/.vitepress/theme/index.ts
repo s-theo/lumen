@@ -14,7 +14,7 @@ import {
   Waline,
   umamiAnalytics
 } from '@theojs/lumen'
-import '@theojs/lumen/theme'
+import '@theojs/lumen/style'
 import { Aside_Data, Footer_Data, Waline_Data } from '../data'
 import 'virtual:group-icons.css'
 

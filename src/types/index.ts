@@ -1,4 +1,4 @@
-import '../theme/components-var.css'
+import '../style/components-var.css'
 import 'iconify-icon'
 
 export * from '../components'
