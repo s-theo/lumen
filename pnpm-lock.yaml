@@ -104,25 +104,25 @@ importers:
       '@waline/client':
         specifier: ^3.5.7
         version: 3.5.7(typescript@5.8.3)
-      bumpp:
-        specifier: ^10.2.0
-        version: 10.2.0
       iconify-icon:
         specifier: ^3.0.0
         version: 3.0.0
+    devDependencies:
+      bumpp:
+        specifier: ^10.2.0
+        version: 10.2.0
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
-      vue:
-        specifier: 'catalog:'
-        version: 3.5.17(typescript@5.8.3)
-    devDependencies:
       vite:
         specifier: 'catalog:'
         version: 6.3.5(@types/node@24.0.3)(jiti@2.4.2)(yaml@2.8.0)
       vitepress:
         specifier: 'catalog:'
         version: 2.0.0-alpha.6(@algolia/client-search@5.29.0)(@types/node@24.0.3)(fuse.js@7.0.0)(jiti@2.4.2)(postcss@8.5.6)(search-insights@2.17.3)(typescript@5.8.3)(yaml@2.8.0)
+      vue:
+        specifier: 'catalog:'
+        version: 3.5.17(typescript@5.8.3)
 
 packages:
 
@@ -482,8 +482,8 @@ packages:
   '@iconify-json/logos@1.2.4':
     resolution: {integrity: sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw==}
 
-  '@iconify-json/simple-icons@1.2.39':
-    resolution: {integrity: sha512-XlhW73c4dHvUrwWckVY76HDjnaZ2fWKD6hNZtd5kuv23GC0g3Lu0MXnYscpkIYOeiXO+Gtlw8FM53J7C84mCtA==}
+  '@iconify-json/simple-icons@1.2.40':
+    resolution: {integrity: sha512-sr2fbrS8rRhJNap41ucTStctxTcWQ3lcsHkY3loc4Yt1KNOne6D+l1JTOQCDj9f/VrUktVIEdaRQoYTvqfuSSw==}
 
   '@iconify-json/vscode-icons@1.2.23':
     resolution: {integrity: sha512-gFTcKecKra2/b5SbGDgHGI/l8CuikHyBPmqGlK+YCmS8AK72dtDQbUekdoACsju/3TYS37QvdPoOQwnyx2LdYg==}
@@ -2410,8 +2410,8 @@ packages:
     resolution: {integrity: sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==}
     engines: {node: '>=8.0'}
 
-  tokenx@1.0.1:
-    resolution: {integrity: sha512-MhOngUHRuVE0CHP4cNEZ/XpdXETFL65nJpEvoTW+VYPuXsT/MTeNj+UNnekNsnxecmj2DEvUYPebqz+CsPTUSg==}
+  tokenx@1.1.0:
+    resolution: {integrity: sha512-KCjtiC2niPwTSuz4ktM82Ki5bjqBwYpssiHDsGr5BpejN/B3ksacRvrsdoxljdMIh2nCX78alnDkeemBmYUmTA==}
 
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
@@ -2987,7 +2987,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/simple-icons@1.2.39':
+  '@iconify-json/simple-icons@1.2.40':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -5024,7 +5024,7 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  tokenx@1.0.1: {}
+  tokenx@1.1.0: {}
 
   tr46@0.0.3: {}
 
@@ -5136,7 +5136,7 @@ snapshots:
       picocolors: 1.1.1
       remark: 15.0.1
       remark-frontmatter: 5.0.0
-      tokenx: 1.0.1
+      tokenx: 1.1.0
       unist-util-remove: 4.0.0
       unist-util-visit: 5.0.0
     transitivePeerDependencies:
@@ -5147,7 +5147,7 @@ snapshots:
     dependencies:
       '@docsearch/css': 3.9.0
       '@docsearch/js': 3.9.0(@algolia/client-search@5.29.0)(search-insights@2.17.3)
-      '@iconify-json/simple-icons': 1.2.39
+      '@iconify-json/simple-icons': 1.2.40
       '@shikijs/core': 3.7.0
       '@shikijs/transformers': 3.7.0
       '@shikijs/types': 3.7.0
