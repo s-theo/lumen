@@ -1,5 +1,8 @@
 name: npm_bark
 
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '30 1 * * *'
