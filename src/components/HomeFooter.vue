@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useLayout } from 'vitepress/theme'
 import { computed, onMounted, ref } from 'vue'
 import { Icon, Link } from './common'
 import { FooterData, getLocaleKey, isExternal } from '../types'
@@ -15,10 +16,12 @@ const Year = ref('')
 onMounted(() => {
   Year.value = new Date().getFullYear().toString()
 })
+
+const { isHome } = useLayout()
 </script>
 
 <template>
-  <footer class="footer">
+  <footer v-if="isHome" class="footer">
     <div v-if="footer.group?.length" class="list-container">
       <section v-for="(section, index) in footer.group" :key="section.title + index">
         <h3 class="list-title">
@@ -123,10 +126,6 @@ onMounted(() => {
   -webkit-text-decoration: underline solid;
   text-decoration: underline solid;
   text-underline-offset: 4px;
-}
-
-.has-sidebar ~ .footer {
-  display: none;
 }
 
 .list-container {
