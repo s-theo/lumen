@@ -12,9 +12,9 @@
     "@theojs/lumen": "workspace:*",
     "vite": "catalog:",
     "vitepress": "catalog:",
-    "vitepress-plugin-group-icons": "^1.6.0",
-    "vitepress-plugin-llms": "^1.5.1",
+    "vitepress-plugin-group-icons": "^1.6.1",
+    "vitepress-plugin-llms": "^1.6.0",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@10.12.3"
+  "packageManager": "pnpm@10.12.4"
 }
