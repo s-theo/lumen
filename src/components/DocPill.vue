@@ -13,12 +13,8 @@ const pill = defineProps<Pill>()
     :rel="pill.rel"
     :target="pill.target"
   >
-    <template v-if="pill.icon">
-      <Icon :icon="pill.icon" :alt="pill.alt" :size="pill.size || '14'" />
-    </template>
-    <template v-else-if="pill.image">
-      <Image :image="pill.image" :alt="pill.alt" :size="pill.size || '14'" />
-    </template>
+    <Icon v-if="pill.icon" :icon="pill.icon" :alt="pill.alt" :size="pill.size || '14'" />
+    <Image v-else-if="pill.image" :image="pill.image" :alt="pill.alt" :size="pill.size || '14'" />
     <span class="name">{{ pill.name }}</span>
   </Link>
 </template>
