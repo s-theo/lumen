@@ -21,12 +21,8 @@ const props = defineProps<{
       :rel="boxcube.rel"
       :target="boxcube.target"
     >
-      <template v-if="boxcube.icon">
-        <Icon :icon="boxcube.icon" :alt="boxcube.alt" :size="boxcube.size || '32'" />
-      </template>
-      <template v-else-if="boxcube.image">
-        <Image :image="boxcube.image" :alt="boxcube.alt" :size="boxcube.size || '32'" />
-      </template>
+      <Icon v-if="boxcube.icon" :icon="boxcube.icon" :alt="boxcube.alt" :size="boxcube.size || '32'" />
+      <Image v-else-if="boxcube.image" :image="boxcube.image" :alt="boxcube.alt" :size="boxcube.size || '32'" />
       <span class="name">{{ boxcube.name }}</span>
     </Link>
   </div>

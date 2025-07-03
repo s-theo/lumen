@@ -22,12 +22,8 @@ const props = defineProps<{
       :target="card.target"
     >
       <span class="row">
-        <template v-if="card.icon">
-          <Icon :icon="card.icon" :alt="card.alt" :size="card.size || '64'" />
-        </template>
-        <template v-else-if="card.image">
-          <Image :image="card.image" :alt="card.alt" :size="card.size || '64'" />
-        </template>
+        <Icon v-if="card.icon" :icon="card.icon" :alt="card.alt" :size="card.size || '64'" />
+        <Image v-else-if="card.image" :image="card.image" :alt="card.alt" :size="card.size || '64'" />
         <span v-if="card.name" class="name">{{ card.name }}</span>
       </span>
       <p v-if="card.desc" class="desc">{{ card.desc }}</p>
