@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLayout } from 'vitepress/theme'
+import { useData } from 'vitepress'
 import { computed, onMounted, ref } from 'vue'
 import { Icon, Link } from './common'
 import { FooterData, getLocaleKey, isExternal } from '../types'
@@ -17,7 +17,10 @@ onMounted(() => {
   Year.value = new Date().getFullYear().toString()
 })
 
-const { isHome } = useLayout()
+const { frontmatter } = useData()
+const isHome = computed(() => {
+  return !!(frontmatter.value.isHome ?? frontmatter.value.layout === 'home')
+})
 </script>
 
 <template>
