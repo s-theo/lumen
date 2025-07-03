@@ -22,12 +22,8 @@ const props = defineProps<{
       :target="link.target"
     >
       <span class="row">
-        <template v-if="link.icon">
-          <Icon :icon="link.icon" :alt="link.alt" :size="link.size || '32'" />
-        </template>
-        <template v-else-if="link.image">
-          <Image :image="link.image" :alt="link.alt" :size="link.size || '32'" />
-        </template>
+        <Icon v-if="link.icon" :icon="link.icon" :alt="link.alt" :size="link.size || '32'" />
+        <Image v-else-if="link.image" :image="link.image" :alt="link.alt" :size="link.size || '32'" />
         <span class="name">{{ link.name }}</span>
       </span>
       <p v-if="link.desc" class="desc">{{ link.desc }}</p>
