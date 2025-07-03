@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Icon, Image, Link } from './common'
-import { Pill } from '../types'
+import { PillItem } from '../types'
 
-const pill = defineProps<Pill>()
+const pill = defineProps<PillItem>()
 </script>
 
 <template>

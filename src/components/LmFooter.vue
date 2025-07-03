@@ -110,7 +110,7 @@ const { isHome } = useLayout()
 
 <style scoped>
 .footer {
-  background: var(--HomeFooter-bg);
+  background: var(--Footer-bg);
   width: 100%;
 }
 
@@ -122,7 +122,7 @@ const { isHome } = useLayout()
 }
 
 .footer a:hover {
-  color: var(--HomeFooter-link-hover);
+  color: var(--Footer-link-hover);
   -webkit-text-decoration: underline solid;
   text-decoration: underline solid;
   text-underline-offset: 4px;

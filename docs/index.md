@@ -15,7 +15,7 @@ hero:
     width: 320
     height: 320
 
-  Announcement:
+  Notice:
     title: '<iconify-icon icon="streamline-emojis:wrapped-gift-2" ></iconify-icon> <span class="promo-title"> 青云梯 最具性价比IPLC专线!</span>'
     # desc: '
     # · 月/季/半年付 <span class="promo-text">85折: wuyi85</span><br>
@@ -58,23 +58,23 @@ features:
 
   - title: '<iconify-icon class="i-mr" icon="heroicons-solid:megaphone" style="color:#e74c3c"></iconify-icon>首页公告栏'
     details: 在首页展示重要通知或动态信息，吸引用户关注，提升站点的互动性。
-    link: '/guide/announcement'
+    link: '/guide/notice'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons:paint-brush-solid" style="color:#3498db"></iconify-icon>首页下划线'
     details: 实现首页副标题元素的下划线动画，增加视觉层次感和动感效果。
-    link: '/guide/homeunderline'
+    link: '/guide/underline'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons-solid:template" style="color:#2ecc71"></iconify-icon>页脚配置'
     details: 灵活自定义页脚内容，展示版权信息、链接分组等，增强站点的专业感。
-    link: '/guide/homefooter'
+    link: '/guide/footer'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons:bars-3-16-solid" style="color:#9b59b6"></iconify-icon>侧边栏链接'
     details: 在侧边栏中展示常用链接，提升用户导航体验，快速访问相关内容。
-    link: '/guide/docasidelogo'
+    link: '/guide/aside'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons-solid:video-camera" style="color:#f39c12"></iconify-icon>视频组件'
     details: 支持嵌入视频内容，提供更加丰富的多媒体展示形式，增强用户互动体验。
-    link: '/guide/docvideolink'
+    link: '/guide/vid'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons-solid:rectangle-group" style="color:#1abc9c"></iconify-icon>链接卡片'
     details: 设计美观的链接卡片，直观展示外部资源或推荐内容，提升页面内容的吸引力。
@@ -86,7 +86,7 @@ features:
 
   - title: '<iconify-icon class="i-mr" icon="heroicons-solid:chat" style="color:#3498db"></iconify-icon>集成评论'
     details: 集成 waline 评论，提升用户互动体验，增强站点的社交功能。
-    link: '/guide/doccomment'
+    link: '/guide/comment'
 
   - title: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square-solid" style="color:#007bff"></iconify-icon>站点统计'
     details: 集成 Google、Baidu、Umami 分析工具，追踪访问数据。

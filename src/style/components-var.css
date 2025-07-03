@@ -12,32 +12,32 @@
   --promo-title-weight: 600;
 
   /**
-  * Component: Announcement
+  * Component: notice
   * -------------------------------------------------------------------------- */
-  --Announcement-bg: var(--vp-button-alt-bg);
-  --Announcement-border: transparent;
-  --Announcement-data: var(--vp-c-brand-1);
-  --Announcement-bg-hover: var(--vp-button-alt-bg);
-  --Announcement-border-hover: var(--vp-c-brand-1);
-  --Announcement-transform-hover: none;
-  --Announcement-transform-active: none;
+  --notice-bg: var(--vp-button-alt-bg);
+  --notice-border: transparent;
+  --notice-data: var(--vp-c-brand-1);
+  --notice-bg-hover: var(--vp-button-alt-bg);
+  --notice-border-hover: var(--vp-c-brand-1);
+  --notice-transform-hover: none;
+  --notice-transform-active: none;
 
   /**
-  * Component: AsideLogo
+  * Component: Aside
   * -------------------------------------------------------------------------- */
 
-  --AsideLogo-bg: var(--component-bg);
-  --AsideLogo-border: transparent;
-  --AsideLogo-name: linear-gradient(225deg, var(--vp-c-brand-1), var(--vp-c-brand-3), var(--vp-c-brand-1));
-  --AsideLogo-promo: linear-gradient(225deg, rgba(100, 108, 255, 1), rgba(176, 71, 255, 1), rgba(100, 108, 255, 1));
-  --AsideLogo-hide: var(--vp-c-text-2);
-  --AsideLogo-info: var(--vp-c-text-2);
-  --AsideLogo-name-bg-hover: var(--component-bg);
-  --AsideLogo-name-border-hover: var(--vp-c-brand-1);
-  --AsideLogo-promo-bg-hover: var(--component-bg);
-  --AsideLogo-promo-border-hover: rgba(100, 108, 255, 1);
-  --AsideLogo-transform-hover: none;
-  --AsideLogo-transform-active: none;
+  --Aside-bg: var(--component-bg);
+  --Aside-border: transparent;
+  --Aside-name: linear-gradient(225deg, var(--vp-c-brand-1), var(--vp-c-brand-3), var(--vp-c-brand-1));
+  --Aside-promo: linear-gradient(225deg, rgba(100, 108, 255, 1), rgba(176, 71, 255, 1), rgba(100, 108, 255, 1));
+  --Aside-hide: var(--vp-c-text-2);
+  --Aside-info: var(--vp-c-text-2);
+  --Aside-name-bg-hover: var(--component-bg);
+  --Aside-name-border-hover: var(--vp-c-brand-1);
+  --Aside-promo-bg-hover: var(--component-bg);
+  --Aside-promo-border-hover: rgba(100, 108, 255, 1);
+  --Aside-transform-hover: none;
+  --Aside-transform-active: none;
 
   /**
   * Component: BoxCube
@@ -94,17 +94,17 @@
   --Pill-transform-active: none;
 
   /**
-  * Component: HomeFooter
+  * Component: Footer
   * -------------------------------------------------------------------------- */
 
-  --HomeFooter-bg: var(--component-bg);
-  --HomeFooter-link-hover: var(--vp-c-brand-1);
+  --Footer-bg: var(--component-bg);
+  --Footer-link-hover: var(--vp-c-brand-1);
 
   /**
-  * Component: HomeUnderline
+  * Component: Underline
   * -------------------------------------------------------------------------- */
 
-  --HomeUnderline-bg: var(--vp-c-brand-1);
+  --Underline-bg: var(--vp-c-brand-1);
 
   /**
   * Home-links
@@ -172,9 +172,9 @@
   --promo-title-color: linear-gradient(225deg, rgba(120, 200, 255, 1), rgba(255, 130, 255, 1), rgba(120, 200, 255, 1));
 
   /**
-  * Component: AsideLogo
+  * Component: Aside
   * -------------------------------------------------------------------------- */
-  --AsideLogo-promo: linear-gradient(225deg, rgba(120, 200, 255, 1), rgba(255, 130, 255, 1), rgba(120, 200, 255, 1));
+  --Aside-promo: linear-gradient(225deg, rgba(120, 200, 255, 1), rgba(255, 130, 255, 1), rgba(120, 200, 255, 1));
 
   /**
   * waline-style     
