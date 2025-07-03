@@ -28,20 +28,20 @@ const notice = useNotice()
     border-color 0.25s,
     background-color 0.25s;
   margin-bottom: 1em;
-  border: 1px solid var(--notice-border);
+  border: 1px solid var(--Notice-border);
   border-radius: 0.5em;
-  background-color: var(--notice-bg);
+  background-color: var(--Notice-bg);
   padding: 0.15em 1em;
 }
 
 .notice:hover {
-  transform: var(--notice-transform-hover);
-  border-color: var(--notice-border-hover);
-  background-color: var(--notice-bg-hover);
+  transform: var(--Notice-transform-hover);
+  border-color: var(--Notice-border-hover);
+  background-color: var(--Notice-bg-hover);
 }
 
 .notice:active {
-  transform: var(--notice-transform-active);
+  transform: var(--Notice-transform-active);
 }
 
 .content {
@@ -68,7 +68,7 @@ const notice = useNotice()
 }
 
 .date {
-  color: var(--notice-data);
+  color: var(--Notice-data);
   font-weight: bold;
 }
 

@@ -12,15 +12,15 @@
   --promo-title-weight: 600;
 
   /**
-  * Component: notice
+  * Component: Notice
   * -------------------------------------------------------------------------- */
-  --notice-bg: var(--vp-button-alt-bg);
-  --notice-border: transparent;
-  --notice-data: var(--vp-c-brand-1);
-  --notice-bg-hover: var(--vp-button-alt-bg);
-  --notice-border-hover: var(--vp-c-brand-1);
-  --notice-transform-hover: none;
-  --notice-transform-active: none;
+  --Notice-bg: var(--vp-button-alt-bg);
+  --Notice-border: transparent;
+  --Notice-data: var(--vp-c-brand-1);
+  --Notice-bg-hover: var(--vp-button-alt-bg);
+  --Notice-border-hover: var(--vp-c-brand-1);
+  --Notice-transform-hover: none;
+  --Notice-transform-active: none;
 
   /**
   * Component: Aside
