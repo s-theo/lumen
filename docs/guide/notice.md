@@ -1,5 +1,5 @@
 ---
-title: 首页公告栏组件 - Announcement
+title: 首页公告栏组件 - Notice
 description: 了解如何使用 @theojs/lumen 插件，为你的 VitePress 网站首页添加一个引人注目的公告栏组件。轻松配置和展示活动信息、重要通知或快速安装命令，有效提升首页互动性和信息传递效率。
 head:
   - - meta
@@ -7,7 +7,7 @@ head:
       content: https://i.theojs.cn/docs/announcement-light.webp
 ---
 
-# 首页公告栏组件 - Announcement
+# 首页公告栏组件 - Notice
 
 ![首页公告栏 - 效果图|550x0](https://i.theojs.cn/docs/announcement-light.webp#light '首页公告栏 - 效果图')
 
@@ -20,7 +20,7 @@ import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { h } from 'vue'
 // [!code ++]
-import { Announcement } from '@theojs/lumen'
+import { Notice } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
@@ -29,7 +29,7 @@ export default {
     // [!code ++]
     return h(DefaultTheme.Layout, null, {
       // [!code ++]
-      'home-hero-info-before': () => h(Announcement)
+      'home-hero-info-before': () => h(Notice)
     }) // [!code ++]
   } // [!code ++]
 }
@@ -41,7 +41,7 @@ export default {
 ---
 layout: home
 hero:
-  Announcement: # [!code ++]
+  Notice: # [!code ++]
     title: '🎉 活动不停歇，青云梯四周年双旦特惠' # [!code ++]
     desc: '· 月/季/半年付85折 优惠码<span class="promo-text"> qyt85 </span></br>· 年付以及年付以上8折 优惠码<span class="promo-text"> qyt80</span></br>· 年付8折/2年付7折/3年付6折 配合优惠码折上折，最高可达<span class="promo-text"> 48 </span>折' # [!code ++]
     date: '2025年1月7日23时59分' # [!code ++]

@@ -1,9 +1,9 @@
 ---
-title: 视频组件 - DocVideoLink
+title: 视频组件 - Vid
 description: 了解如何使用 @theojs/lumen 插件提供的视频组件 (Vid)，轻松在 VitePress 页面中嵌入来自 YouTube、Bilibili、腾讯视频、优酷等多个主流平台或自定义链接的视频。该组件支持响应式设计，配置简单易用，提升用户观看体验。
 ---
 
-# 视频组件 - DocVideoLink
+# 视频组件 - Vid
 
 该组件支持多种主流视频平台的视频嵌入，并允许通过自定义链接插入任意视频源。通过简洁直观的属性配置，可轻松集成 YouTube、Bilibili、腾讯视频、优酷、Vimeo 等平台，确保响应式布局与良好的观看体验。
 
@@ -17,14 +17,14 @@ description: 了解如何使用 @theojs/lumen 插件提供的视频组件 (Vid)�
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
-import { DocVideoLink } from '@theojs/lumen'
+import { Vid } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }) => {
     // [!code ++]
-    app.component('Vid', DocVideoLink)
+    app.component('Vid', Vid)
   } // [!code ++]
 }
 ```

@@ -1,13 +1,13 @@
 ---
-title: 侧边栏链接组件 - DocAsideLogo
-description: 学习如何使用 @theojs/lumen 插件的 DocAsideLogo 组件，在 VitePress 站点的侧边栏添加自定义链接、推广信息或品牌Logo。本指南将引导你配置数据并集成组件，以丰富侧边栏内容和提升用户体验。
+title: 侧边栏链接组件 - Aside
+description: 学习如何使用 @theojs/lumen 插件的 Aside 组件，在 VitePress 站点的侧边栏添加自定义链接、推广信息或品牌Logo。本指南将引导你配置数据并集成组件，以丰富侧边栏内容和提升用户体验。
 head:
   - - meta
     - property: og:image
       content: https://i.theojs.cn/docs/docasidelogo-light.webp
 ---
 
-# 侧边栏链接组件 - DocAsideLogo
+# 侧边栏链接组件 - Aside
 
 ![侧边栏 - 效果图|300x0](https://i.theojs.cn/docs/docasidelogo-light.webp#light '侧边栏 - 效果图')
 
@@ -31,7 +31,7 @@ import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { h } from 'vue'
 // [!code ++]
-import { DocAsideLogo } from '@theojs/lumen'
+import { Aside } from '@theojs/lumen'
 // [!code ++]
 import { Aside_Data } from '../data/AsideData'
 
@@ -41,7 +41,7 @@ export default {
     // [!code ++]
     return h(DefaultTheme.Layout, null, {
       // [!code ++]
-      'aside-ads-before': () => h(DocAsideLogo, { Aside_Data })
+      'aside-ads-before': () => h(Aside, { Aside_Data })
     }) // [!code ++]
   } // [!code ++]
 }

@@ -56,19 +56,19 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
     border-color 0.25s,
     background-color 0.25s;
   margin: 0.125em 0;
-  border: 1.5px solid var(--AsideLogo-border);
+  border: 1.5px solid var(--Aside-border);
   border-radius: 0.5em;
-  background-color: var(--AsideLogo-bg);
+  background-color: var(--Aside-bg);
   padding: 0.25em 0;
   text-align: center;
 }
 
 .link:hover {
-  transform: var(--AsideLogo-transform-hover);
+  transform: var(--Aside-transform-hover);
 }
 
 .link:active {
-  transform: var(--AsideLogo-transform-active);
+  transform: var(--Aside-transform-active);
 }
 
 ul:last-of-type {
@@ -85,13 +85,13 @@ ul:last-of-type {
 }
 
 .link:hover.has-promo {
-  border-color: var(--AsideLogo-promo-border-hover);
-  background-color: var(--AsideLogo-promo-bg-hover);
+  border-color: var(--Aside-promo-border-hover);
+  background-color: var(--Aside-promo-bg-hover);
 }
 
 .link:hover.has-name {
-  border-color: var(--AsideLogo-name-border-hover);
-  background-color: var(--AsideLogo-name-bg-hover);
+  border-color: var(--Aside-name-border-hover);
+  background-color: var(--Aside-name-bg-hover);
 }
 
 .link .icon {
@@ -109,21 +109,21 @@ ul:last-of-type {
 .link .hide {
   opacity: 0;
   transition: opacity 0.5s;
-  color: var(--AsideLogo-hide);
+  color: var(--Aside-hide);
   font-weight: 600;
   font-size: 0.75em;
   line-height: 1;
 }
 
 .link .info {
-  color: var(--AsideLogo-info);
+  color: var(--Aside-info);
   font-weight: 600;
   font-size: 0.75em;
   line-height: 1.2;
 }
 
 .link .name {
-  background-image: var(--AsideLogo-name);
+  background-image: var(--Aside-name);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -132,7 +132,7 @@ ul:last-of-type {
 }
 
 .link .promo {
-  background-image: var(--AsideLogo-promo);
+  background-image: var(--Aside-promo);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

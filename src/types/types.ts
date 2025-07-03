@@ -26,7 +26,7 @@ export type ImageType =
   | { light: string; dark: string; crop?: CropType; alt?: AltType }
 
 /** DocPill 接口 */
-export interface Pill {
+export interface PillItem {
   /** Pill 名称。 */
   name: string
   /** Pill 链接。 */
@@ -180,8 +180,8 @@ export type AsideAll = AsidePromo | AsideNormal
  */
 export type AsideItem = AsideAll[] | { i18n: Record<string, AsideAll[]> }
 
-/** Announcement 接口 */
-export interface AnnouncementItem {
+/** Notice 接口 */
+export interface NoticeItem {
   /** 链接的 URL。 */
   link?: LinkType
   /** Rel 属性 */
@@ -225,7 +225,7 @@ export interface WalineData {
   reaction?: WalineProps['reaction']
 }
 
-/** HomeFooter 接口 */
+/** Footer 接口 */
 export interface FooterData {
   i18n?: Record<string, Partial<Omit<FooterData, 'i18n'>>>
   /** 链接分组数组。 */
@@ -238,7 +238,7 @@ export interface FooterData {
   noIcon?: boolean
 }
 
-/** HomeFooter Group 接口 */
+/** Footer Group 接口 */
 export interface Group {
   /** 图标配置 */
   icon?: IconType
@@ -252,7 +252,7 @@ export interface Group {
   links: Link[]
 }
 
-/** HomeFooter Beian 接口 */
+/** Footer Beian 接口 */
 export interface Beian {
   /** ICP 备案 */
   icp?: Icp
@@ -262,7 +262,7 @@ export interface Beian {
   showIcon?: boolean
 }
 
-/** HomeFooter Beian 接口 */
+/** Footer Beian 接口 */
 export interface Icp {
   /** ICP 备案号 */
   number?: string
@@ -278,7 +278,7 @@ export interface Icp {
   target?: TargetType
 }
 
-/** HomeFooter Beian 接口 */
+/** Footer Beian 接口 */
 export interface Police {
   /** 公安备案号 */
   number?: string
@@ -294,7 +294,7 @@ export interface Police {
   target?: TargetType
 }
 
-/** HomeFooter Author 接口 */
+/** Footer Author 接口 */
 export interface Author {
   /** 作者姓名 */
   name?: string
@@ -312,7 +312,7 @@ export interface Author {
   text?: string
 }
 
-/** HomeFooter Link 接口 */
+/** Footer Link 接口 */
 export interface Link {
   /** 链接图标 */
   icon?: IconType
@@ -330,8 +330,8 @@ export interface Link {
   alt?: AltType
 }
 
-/** DocVideoLink 接口 */
-export interface VideoProps {
+/** Vid 接口 */
+export interface VidItem {
   /** 可选的 id，当选择平台时需要使用 id */
   id?: string
   /** 可选的平台类型 */

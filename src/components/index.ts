@@ -1,13 +1,13 @@
 import { defineAsyncComponent } from 'vue'
 
-export { default as Announcement } from './Announcement.vue'
-export { default as DocAsideLogo } from './DocAsideLogo.vue'
-export { default as DocPill } from './DocPill.vue'
-export { default as DocBoxCube } from './DocBoxCube.vue'
-export { default as DocCard } from './DocCard.vue'
-export { default as DocLinks } from './DocLinks.vue'
-export { default as DocVideoLink } from './DocVideoLink.vue'
-export { default as HomeFooter } from './HomeFooter.vue'
-export { default as HomeUnderline } from './HomeUnderline.vue'
+export { default as Notice } from './LmNotice.vue'
+export { default as Aside } from './LmAside.vue'
+export { default as Pill } from './LmPill.vue'
+export { default as BoxCube } from './LmBoxCube.vue'
+export { default as Card } from './LmCard.vue'
+export { default as Links } from './LmLinks.vue'
+export { default as Vid } from './LmVid.vue'
+export { default as Footer } from './LmFooter.vue'
+export { default as Underline } from './LmUnderline.vue'
 
-export const Waline = defineAsyncComponent(() => import('./DocWaline.vue'))
+export const Waline = defineAsyncComponent(() => import('./LmWaline.vue'))

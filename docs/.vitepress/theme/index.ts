@@ -2,15 +2,15 @@
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import {
-  Announcement,
-  DocAsideLogo,
-  DocBoxCube,
-  DocCard,
-  DocLinks,
-  DocPill,
-  DocVideoLink,
-  HomeFooter,
-  HomeUnderline,
+  Aside,
+  BoxCube,
+  Card,
+  Footer,
+  Links,
+  Notice,
+  Pill,
+  Underline,
+  Vid,
   Waline,
   umamiAnalytics
 } from '@theojs/lumen'
@@ -22,9 +22,9 @@ export default {
   extends: DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'home-hero-info-before': () => h(Announcement),
-      'aside-ads-before': () => h(DocAsideLogo, { Aside_Data }),
-      'layout-bottom': () => h(HomeFooter, { Footer_Data }),
+      'home-hero-info-before': () => h(Notice),
+      'aside-ads-before': () => h(Aside, { Aside_Data }),
+      'layout-bottom': () => h(Footer, { Footer_Data }),
       'doc-after': () => h(Waline, { Waline_Data })
     })
   },
@@ -34,12 +34,12 @@ export default {
       src: import.meta.env.VITE_UMAMI_SRC,
       domains: 'lumen.theojs.cn'
     })
-    app.component('Pill', DocPill)
-    app.component('Links', DocLinks)
-    app.component('Card', DocCard)
-    app.component('BoxCube', DocBoxCube)
-    app.component('Home', HomeUnderline)
-    app.component('Vid', DocVideoLink)
+    app.component('Pill', Pill)
+    app.component('Links', Links)
+    app.component('Card', Card)
+    app.component('BoxCube', BoxCube)
+    app.component('Home', Underline)
+    app.component('Vid', Vid)
     app.component('Waline', Waline)
   }
 }

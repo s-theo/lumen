@@ -26,23 +26,23 @@ export function guide(): SidebarItem[] {
         },
         {
           text: '<iconify-icon class="i-mr" icon="heroicons-solid:megaphone" style="color:#e74c3c"></iconify-icon>首页公告栏',
-          link: 'announcement'
+          link: 'notice'
         },
         {
           text: '<iconify-icon class="i-mr" icon="heroicons:paint-brush-solid" style="color:#3498db"></iconify-icon>首页下划线',
-          link: 'homeunderline'
+          link: 'underline'
         },
         {
           text: '<iconify-icon class="i-mr" icon="heroicons-solid:template" style="color:#2ecc71"></iconify-icon>页脚配置',
-          link: 'homefooter'
+          link: 'footer'
         },
         {
           text: '<iconify-icon class="i-mr" icon="heroicons:bars-3-16-solid" style="color:#9b59b6"></iconify-icon>侧边栏链接',
-          link: 'docasidelogo'
+          link: 'aside'
         },
         {
           text: '<iconify-icon class="i-mr" icon="heroicons-solid:video-camera" style="color:#f39c12"></iconify-icon>视频组件',
-          link: 'docvideolink'
+          link: 'vid'
         },
         {
           text: '<iconify-icon class="i-mr" icon="heroicons-solid:rectangle-group" style="color:#1abc9c"></iconify-icon>链接卡片',
@@ -54,7 +54,7 @@ export function guide(): SidebarItem[] {
         },
         {
           text: '<iconify-icon class="i-mr" icon="heroicons-solid:chat" style="color:#3498db"></iconify-icon>集成评论',
-          link: 'doccomment'
+          link: 'comment'
         },
         {
           text: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square-solid" style="color:#007bff"></iconify-icon>站点统计',
