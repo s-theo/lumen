@@ -39,31 +39,31 @@ yarn add @theojs/lumen
     },
     {
       name: '首页公告栏',
-      link: 'announcement',
+      link: 'notice',
       icon: { icon: 'heroicons-solid:megaphone', color: '#e74c3c' },
       alt: '首页公告栏图标'
     },
     {
       name: '首页下划线',
-      link: 'homeunderline',
+      link: 'underline',
       icon: { icon: 'heroicons:paint-brush-solid', color: '#3498db' },
       alt: '首页下划线图标'
     },
     {
       name: '页脚配置',
-      link: 'homefooter',
+      link: 'footer',
       icon: { icon: 'heroicons-solid:template', color: '#2ecc71' },
       alt: '页脚配置图标'
     },
     {
       name: '侧边栏链接',
-      link: 'docasidelogo',
+      link: 'aside',
       icon: { icon: 'heroicons:bars-3-16-solid', color: '#9b59b6' },
       alt: '侧边栏链接图标'
     },
     {
       name: '视频组件',
-      link: 'docvideolink',
+      link: 'vid',
       icon: { icon: 'heroicons-solid:video-camera', color: '#f39c12' },
       alt: '视频组件图标'
     },
@@ -81,7 +81,7 @@ yarn add @theojs/lumen
     },
     {
       name: '集成评论',
-      link: 'doccomment',
+      link: 'comment',
       icon: { icon: 'heroicons-solid:chat', color: '#3498db' },
       alt: '评论图标'
     },

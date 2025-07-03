@@ -1,13 +1,13 @@
 ---
-title: 页脚组件 - HomeFooter
-description: 了解如何使用 @theojs/lumen 插件的 HomeFooter 组件自定义 VitePress 网站的页脚。本指南包含数据配置（链接分组、备案信息、作者）和组件集成步骤，助你打造个性化且信息丰富的网站底部。
+title: 页脚组件 - Footer
+description: 了解如何使用 @theojs/lumen 插件的 Footer 组件自定义 VitePress 网站的页脚。本指南包含数据配置（链接分组、备案信息、作者）和组件集成步骤，助你打造个性化且信息丰富的网站底部。
 head:
   - - meta
     - property: og:image
       content: https://i.theojs.cn/docs/homefooter-desktop-light.webp
 ---
 
-# 页脚组件 - HomeFooter
+# 页脚组件 - Footer
 
 ![桌面端效果图](https://i.theojs.cn/docs/homefooter-desktop-light.webp#light '桌面端效果图')
 
@@ -39,7 +39,7 @@ import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { h } from 'vue'
 // [!code ++]
-import { HomeFooter } from '@theojs/lumen'
+import { Footer } from '@theojs/lumen'
 // [!code ++]
 import { Footer_Data } from '../data/footerData'
 
@@ -50,7 +50,7 @@ export default {
     // [!code ++]
     return h(DefaultTheme.Layout, null, {
       // [!code ++]
-      'layout-bottom': () => h(HomeFooter, { Footer_Data })
+      'layout-bottom': () => h(Footer, { Footer_Data })
     }) // [!code ++]
   } // [!code ++]
 }

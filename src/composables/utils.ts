@@ -1,15 +1,15 @@
 import { useData } from 'vitepress'
 import { ComputedRef, computed, onMounted, onUnmounted } from 'vue'
-import type { AnnouncementItem, VideoProps } from '../types'
+import type { NoticeItem, VidItem } from '../types'
 
 /**
- * 提取 frontmatter 中 hero 配置的 `Announcement` 属性。
+ * 提取 frontmatter 中 hero 配置的 `Notice` 属性。
  *
- * @returns 包含 `AnnouncementItem` 对象或 `undefined` 的计算属性
+ * @returns 包含 `NoticeItem` 对象或 `undefined` 的计算属性
  */
-export const useAnnouncement = (): ComputedRef<AnnouncementItem | undefined> => {
+export const useNotice = (): ComputedRef<NoticeItem | undefined> => {
   const { frontmatter } = useData()
-  return computed(() => frontmatter.value.hero?.Announcement)
+  return computed(() => frontmatter.value.hero?.Notice)
 }
 
 /** 匹配外部链接的正则：以协议（如 http:、https:、mailto:）或 `//` 开头 */
@@ -49,23 +49,23 @@ export const moveDomElements = (): void => {
 /** 支持的视频平台播放器配置。 */
 export const video = {
   bilibili: {
-    src: (id: VideoProps['id']) => `https://player.bilibili.com/player.html?bvid=${id}&autoplay=0`,
+    src: (id: VidItem['id']) => `https://player.bilibili.com/player.html?bvid=${id}&autoplay=0`,
     title: 'Bilibili video player'
   },
   tencent: {
-    src: (id: VideoProps['id']) => `https://v.qq.com/txp/iframe/player.html?vid=${id}`,
+    src: (id: VidItem['id']) => `https://v.qq.com/txp/iframe/player.html?vid=${id}`,
     title: 'Tencent Video player'
   },
   youku: {
-    src: (id: VideoProps['id']) => `https://player.youku.com/embed/${id}`,
+    src: (id: VidItem['id']) => `https://player.youku.com/embed/${id}`,
     title: 'Youku video player'
   },
   youtube: {
-    src: (id: VideoProps['id']) => `https://www.youtube-nocookie.com/embed/${id}`,
+    src: (id: VidItem['id']) => `https://www.youtube-nocookie.com/embed/${id}`,
     title: 'YouTube video player'
   },
   vimeo: {
-    src: (id: VideoProps['id']) => `https://player.vimeo.com/video/${id}`,
+    src: (id: VidItem['id']) => `https://player.vimeo.com/video/${id}`,
     title: 'Vimeo video player'
   }
 }
@@ -76,7 +76,7 @@ export const video = {
  * @param props - 视频参数
  * @returns 对应平台视频播放器配置或自定义配置
  */
-export function getVideo(props: VideoProps) {
+export function getVideo(props: VidItem) {
   if (props.is && props.id) return video[props.is]
   if (props.id) return video.youtube
   return { src: props.src || '', title: 'Custom video player' }

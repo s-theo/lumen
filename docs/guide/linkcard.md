@@ -1,6 +1,6 @@
 ---
 title: 链接卡片组件
-description: 了解如何使用 @theojs/lumen 插件提供的多种链接卡片组件（Pill, Links, BoxCube）在 VitePress 站点中创建美观且信息丰富的链接展示。本指南包含各组件的引入、使用示例和参数说明，支持 Iconify 图标和明暗模式。
+description: 了解如何使用 @theojs/lumen 插件提供的多种链接卡片组件（BoxCube, Card, Links, Pill ）在 VitePress 站点中创建美观且信息丰富的链接展示。本指南包含各组件的引入、使用示例和参数说明，支持 Iconify 图标和明暗模式。
 ---
 
 # 链接卡片组件
@@ -10,15 +10,16 @@ description: 了解如何使用 @theojs/lumen 插件提供的多种链接卡片�
 ```ts [.vitepress/theme/index.ts]
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
-import { DocBoxCube, DocLinks, DocPill } from '@theojs/lumen'
+import { BoxCube, Card, Links, Pill } from '@theojs/lumen'
 
 export default {
   extends: DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }) => {
-    app.component('Pill', DocPill) // [!code ++]
-    app.component('Links', DocLinks) // [!code ++]
-    app.component('BoxCube', DocBoxCube) // [!code ++]
+    app.component('Pill', Pill) // [!code ++]
+    app.component('Links', Links) // [!code ++]
+    app.component('Card', Card) // [!code ++]
+    app.component('BoxCube', BoxCube) // [!code ++]
   } // [!code ++]
 }
 ```
@@ -86,7 +87,7 @@ export default {
 
 <!--@include: ./example/BoxCube.vue-->
 
-## 参数说明
+### 参数说明
 
 | 字段     | 类型         | 描述                                                                                                                                   | 是否必填              |
 | -------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
@@ -112,6 +113,8 @@ export default {
 
 <!--@include: ./example/Card.vue-->
 <!--@include: ./example/Card-grid-2.vue-->
+
+### 参数说明
 
 | 字段     | 类型         | 描述                                                                                                                                   | 是否必填              |
 | -------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
