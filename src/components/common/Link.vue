@@ -6,13 +6,15 @@ const props = defineProps<{
   href: LinkType
   rel?: RelType
   target?: TargetType
+  noIcon?: boolean
 }>()
 
-const { href, rel, target } = props
+const { href, rel, target, noIcon } = props
 </script>
 
 <template>
   <a
+    :class="{ 'vp-external-link-icon': isExternal(href) && !noIcon, 'no-icon': noIcon }"
     :href="href ? withBase(href) : undefined"
     :rel="rel ?? (isExternal(href) ? 'noreferrer' : undefined)"
     :target="target ?? (isExternal(href) ? '_blank' : undefined)"

@@ -7,11 +7,12 @@ const pill = defineProps<PillItem>()
 
 <template>
   <Link
-    class="link ignore-header no-icon"
+    class="link ignore-header"
     :class="{ 'no-icon-img': !pill.icon && !pill.image }"
     :href="pill.link"
     :rel="pill.rel"
     :target="pill.target"
+    no-icon
   >
     <Icon v-if="pill.icon" :icon="pill.icon" :alt="pill.alt" :size="pill.size || '14'" />
     <Image v-else-if="pill.image" :image="pill.image" :alt="pill.alt" :size="pill.size || '14'" />
