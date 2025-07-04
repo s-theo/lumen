@@ -26,6 +26,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
     :href="aside.link"
     :rel="aside.rel"
     :target="aside.target"
+    no-icon
   >
     <Icon v-if="aside.icon" :icon="aside.icon" :alt="aside.alt" :size="aside.size || '24'" />
     <Image v-else-if="aside.image" class="icon" :image="aside.image" :alt="aside.alt" :size="aside.size || '24'" />

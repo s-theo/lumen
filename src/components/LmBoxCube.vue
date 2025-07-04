@@ -16,10 +16,11 @@ const props = defineProps<{
     <Link
       v-for="(boxcube, index) in props.items"
       :key="boxcube.link + index"
-      class="link no-icon"
+      class="link"
       :href="boxcube.link"
       :rel="boxcube.rel"
       :target="boxcube.target"
+      no-icon
     >
       <Icon v-if="boxcube.icon" :icon="boxcube.icon" :alt="boxcube.alt" :size="boxcube.size || '32'" />
       <Image v-else-if="boxcube.image" :image="boxcube.image" :alt="boxcube.alt" :size="boxcube.size || '32'" />

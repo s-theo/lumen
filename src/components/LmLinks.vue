@@ -16,10 +16,11 @@ const props = defineProps<{
     <Link
       v-for="(link, index) in props.items"
       :key="link.link + index"
-      class="link no-icon"
+      class="link"
       :href="link.link"
       :rel="link.rel"
       :target="link.target"
+      no-icon
     >
       <span class="row">
         <Icon v-if="link.icon" :icon="link.icon" :alt="link.alt" :size="link.size || '32'" />

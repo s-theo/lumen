@@ -6,7 +6,7 @@ const notice = useNotice()
 </script>
 
 <template>
-  <Link v-if="notice" class="notice" :href="notice.link" :rel="notice.rel" :target="notice.target">
+  <Link v-if="notice" class="notice" :href="notice.link" :rel="notice.rel" :target="notice.target" no-icon>
     <div class="content">
       <span class="title" v-html="notice.title"></span>
       <p v-if="notice.desc" class="desc" v-html="notice.desc"></p>
