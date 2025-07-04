@@ -34,15 +34,13 @@ const isHome = computed(() => {
         <ul>
           <li v-for="(link, idx) in section.links" :key="link.link + idx" class="list-links">
             <Icon v-if="link.icon" class="icon-space" :icon="link.icon" :alt="link.alt" size="12" />
-            <Link :href="link.link" :rel="link.rel" :target="link.target">
+            <Link
+              :href="link.link"
+              :rel="link.rel"
+              :target="link.target"
+              :no-icon="footer.noIcon || section.noIcon || link.noIcon || !isExternal(link.link)"
+            >
               {{ link.name }}
-              <Icon
-                v-if="isExternal(link.link) && !(footer.noIcon || section.noIcon || link.noIcon)"
-                class="external-link-icon"
-                icon="basil:arrow-up-outline"
-                alt="External Link Icon"
-                size="14"
-              />
             </Link>
           </li>
         </ul>
@@ -63,6 +61,7 @@ const isHome = computed(() => {
             :href="footer.beian.icp.link || 'https://beian.miit.gov.cn/#/Integrated/index'"
             :rel="footer.beian.icp.rel"
             :target="footer.beian.icp.target"
+            no-icon
           >
             {{ footer.beian.icp.number }}
           </Link>
@@ -82,6 +81,7 @@ const isHome = computed(() => {
             :href="footer.beian.police.link || 'https://beian.mps.gov.cn/'"
             :rel="footer.beian.police.rel"
             :target="footer.beian.police.target"
+            no-icon
           >
             {{ footer.beian.police.number }}
           </Link>
@@ -102,6 +102,7 @@ const isHome = computed(() => {
             :href="footer.author.link || `https://github.com/${footer.author.name}`"
             :rel="footer.author.rel"
             :target="footer.author.target"
+            no-icon
           >
             {{ Year }} {{ footer.author.name }} {{ footer.author.text || 'All Rights Reserved.' }}
           </Link>
@@ -178,14 +179,6 @@ const isHome = computed(() => {
 
 .info-icon {
   display: inline-block;
-}
-
-.external-link-icon {
-  position: absolute;
-  top: 0;
-  flex-shrink: 0;
-  transform: rotate(45deg);
-  color: var(--vp-c-text-3);
 }
 
 @media (max-width: 768px) {

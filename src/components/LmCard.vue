@@ -16,10 +16,11 @@ const props = defineProps<{
     <Link
       v-for="(card, index) in props.items"
       :key="card.link + index"
-      class="card no-icon"
+      class="link"
       :href="card.link"
       :rel="card.rel"
       :target="card.target"
+      no-icon
     >
       <span class="row">
         <Icon v-if="card.icon" :icon="card.icon" :alt="card.alt" :size="card.size || '64'" />
@@ -48,7 +49,7 @@ const props = defineProps<{
   min-width: 0;
 }
 
-.card {
+.link {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -66,14 +67,14 @@ const props = defineProps<{
   text-decoration: none !important;
 }
 
-.card:hover {
+.link:hover {
   transform: var(--Card-transform-hover);
   box-shadow: var(--Card-boxshadow-hover);
   border-color: var(--Card-border-hover);
   background-color: var(--Card-bg-hover);
 }
 
-.card:active {
+.link:active {
   transform: var(--Card-transform-active);
 }
 
