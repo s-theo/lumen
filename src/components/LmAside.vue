@@ -127,7 +127,7 @@ ul:last-of-type {
   background-image: var(--Aside-name);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: var(--Aside-name-color);
   font-weight: 600;
   font-size: 0.875em;
 }
@@ -136,7 +136,7 @@ ul:last-of-type {
   background-image: var(--Aside-promo);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: var(--Aside-promo-color);
   font-weight: 600;
   font-size: 0.875em;
 }
