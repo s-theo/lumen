@@ -55,9 +55,9 @@
 }
 
 .promo-title {
-  background-image: var(--promo-title-color);
+  background-image: var(--promo-title-bg);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: var(--promo-title-color);
   font-weight: var(--promo-title-weight);
 }
