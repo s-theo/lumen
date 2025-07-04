@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
 import { AltType, CropType, ImageType, SizeType } from '../../types'
 
@@ -30,7 +30,7 @@ const crop = computed(() => {
 <template>
   <img
     :class="{ crop: crop }"
-    :src="currentImage"
+    :src="currentImage ? withBase(currentImage) : undefined"
     :alt="altText"
     :width="size"
     :height="size"
