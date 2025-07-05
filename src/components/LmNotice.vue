@@ -57,6 +57,7 @@ const notice = useNotice()
 .desc {
   font-weight: 500;
   font-size: 0.75em;
+  white-space: pre-wrap;
 }
 
 .time-info {

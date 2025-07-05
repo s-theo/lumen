@@ -17,10 +17,9 @@ hero:
 
   Notice:
     title: '<iconify-icon icon="streamline-emojis:wrapped-gift-2" ></iconify-icon> <span class="promo-title"> 青云梯 最具性价比IPLC专线!</span>'
-    # desc: '
-    # · 月/季/半年付 <span class="promo-text">85折: wuyi85</span><br>
-    # · 年付以上 <span class="promo-text">64折: wuyi80</span><br>
-    # '
+    # desc: |
+    #   · 月/季/半年付 <span class="promo-text">85折: wuyi85</span>
+    #   · 年付以上 <span class="promo-text">64折: wuyi80</span>
     # date: '6月30号23点59分'
     # dateText: '活动截止至'
     link: https://itheo.top/qyt

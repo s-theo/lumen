@@ -37,17 +37,19 @@ export default {
 
 ## 配置公告栏
 
-```yaml [.vitepress/index.md]
+```yaml{4-12} [.vitepress/index.md]
 ---
 layout: home
 hero:
-  Notice: # [!code ++]
-    title: '🎉 活动不停歇，青云梯四周年双旦特惠' # [!code ++]
-    desc: '· 月/季/半年付85折 优惠码<span class="promo-text"> qyt85 </span></br>· 年付以及年付以上8折 优惠码<span class="promo-text"> qyt80</span></br>· 年付8折/2年付7折/3年付6折 配合优惠码折上折，最高可达<span class="promo-text"> 48 </span>折' # [!code ++]
-    date: '2025年1月7日23时59分' # [!code ++]
-    dateIcon: 'mdi:calendar-star' # [!code ++]
-    dateText: '活动截止日期' # [!code ++]
-    link: 'https://itheo.top/qyt' # [!code ++]
+  Notice:
+    title: '🎉 活动不停歇，青云梯四周年双旦特惠'
+    desc: | # 支持 YAML 的换行符，保持多行格式
+      · 月/季/半年付 <span class="promo-text">85折: wuyi85</span>
+      · 年付以上 <span class="promo-text">64折: wuyi80</span>
+    date: '2025年1月7日23时59分'
+    dateIcon: 'mdi:calendar-star'
+    dateText: '活动截止日期'
+    link: 'https://itheo.top/qyt'
 ---
 ```
 
