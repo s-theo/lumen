@@ -13,8 +13,8 @@ async function getDownloads(name: string) {
   }
 }
 
-async function notify(title: string, body: string) {
-  await axios.post(barkUrl!, {
+async function notify(barkUrl: string, title: string, body: string) {
+  await axios.post(barkUrl, {
     title,
     body,
     badge: 1,
@@ -29,7 +29,7 @@ async function main() {
   for (const name of packages) {
     const total = await getDownloads(name)
     const body = total > 0 ? `${name} 包当周总下载量为 ${total}` : `${name} 本周暂无下载数据`
-    await notify('NPM 下载量', body)
+    await notify(barkUrl, 'NPM 下载量', body)
   }
 }
 
