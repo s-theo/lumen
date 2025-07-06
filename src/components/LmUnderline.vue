@@ -4,12 +4,11 @@ import { Svg } from './common'
 import { moveDomElements } from '../types'
 
 const { frontmatter: fm } = useData()
-
-moveDomElements()
+moveDomElements('heroText')
 </script>
 
 <template>
-  <span id="hero-text">
+  <span ref="heroText">
     <span class="hero-text">{{ fm.hero?.text }}<Svg /></span>
     {{ fm.hero?.textsuffix }}
   </span>

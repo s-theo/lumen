@@ -1,5 +1,5 @@
 import { useData } from 'vitepress'
-import { ComputedRef, computed, onMounted, onUnmounted } from 'vue'
+import { ComputedRef, computed, onMounted, onUnmounted, useTemplateRef } from 'vue'
 import type { NoticeItem, VidItem } from '../types'
 
 /**
@@ -26,23 +26,23 @@ export function isExternal(path: string): boolean {
 }
 
 /** 将 `#hero-text` 节点移动到 `.VPHero .text` 中，并在组件卸载时复原。 */
-export const moveDomElements = (): void => {
-  let sourceElement: Element | null = null
-  let placeholder: Comment | null = null
+export function moveDomElements(refName: string) {
+  const heroTextRef = useTemplateRef<HTMLElement>(refName)
 
   onMounted(() => {
     const target = document.querySelector('.VPHero .text')
-    sourceElement = document.querySelector('#hero-text')
-    if (target && sourceElement) {
-      placeholder = document.createComment('hero-text-placeholder')
-      sourceElement.before(placeholder)
+    if (target && heroTextRef.value) {
+      const placeholder = document.createComment('hero-text-placeholder')
+      heroTextRef.value.before(placeholder)
       target.innerHTML = ''
-      target.appendChild(sourceElement)
+      target.appendChild(heroTextRef.value)
     }
   })
 
   onUnmounted(() => {
-    placeholder?.parentNode?.replaceChild(sourceElement, placeholder)
+    document
+      .querySelector('hero-text-placeholder')
+      ?.parentNode?.replaceChild(heroTextRef.value, document.querySelector('hero-text-placeholder'))
   })
 }
 
