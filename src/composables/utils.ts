@@ -46,9 +46,7 @@ export function moveDomElements(refName: string, targetSelector = '.VPHero .text
   })
 
   onUnmounted(() => {
-    if (placeholder && placeholder.parentNode && elementRef.value) {
-      placeholder.parentNode.replaceChild(elementRef.value, placeholder)
-    }
+    elementRef.value && placeholder?.parentNode?.replaceChild(elementRef.value, placeholder)
   })
 }
 
