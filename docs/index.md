@@ -16,14 +16,13 @@ hero:
     height: 320
 
   Notice:
-    title: '<iconify-icon icon="streamline-emojis:wrapped-gift-2" ></iconify-icon> <span class="promo-title"> 青云梯 最具性价比IPLC专线!</span>'
-    # desc: |
-    #   · 月/季/半年付 <span class="promo-text">85折: wuyi85</span>
-    #   · 年付以上 <span class="promo-text">64折: wuyi80</span>
-    # date: '6月30号23点59分'
-    # dateText: '活动截止至'
-    link: https://itheo.top/qyt
-    rel: sponsored
+    title: '<iconify-icon icon="streamline-emojis:wrapped-gift-2" ></iconify-icon> <span class="promo-title"> 小蜜蜂 618购物狂欢!!! 最低三年48折</span>'
+    desc: |
+      · 全套餐推出8折优惠 <span class="promo-text">xmfxmf7</span>
+      · 3年付更可享受 <span class="promo-text">4.8</span>折优惠
+    date: '7月31号23点59分'
+    dateText: '活动截止至'
+    link: https://itheo.top/bee
 
   actions:
     - theme: brand
