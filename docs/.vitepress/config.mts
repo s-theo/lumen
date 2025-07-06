@@ -13,6 +13,7 @@ export default defineConfig({
   lang: 'zh-Hans',
   cleanUrls: true,
   lastUpdated: true,
+  metaChunk: true,
   sitemap: { hostname: baseUrl },
   head,
   markdown,
@@ -38,10 +39,7 @@ export default defineConfig({
         }
       }),
       llmstxt({})
-    ],
-    build: {
-      chunkSizeWarningLimit: 1000
-    }
+    ]
   },
 
   themeConfig: {
