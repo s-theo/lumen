@@ -25,24 +25,30 @@ export function isExternal(path: string): boolean {
   return EXTERNAL_URL_RE.test(path)
 }
 
-/** 将 `#hero-text` 节点移动到 `.VPHero .text` 中，并在组件卸载时复原。 */
-export function moveDomElements(refName: string) {
-  const heroTextRef = useTemplateRef<HTMLElement>(refName)
+/**
+ * 将指定 refName 的 DOM 元素移动到目标容器，并在组件卸载时复原。
+ *
+ * @param refName - 需要移动的 ref 名称
+ * @param targetSelector - 目标容器的选择器，默认为 '.VPHero .text'
+ */
+export function moveDomElements(refName: string, targetSelector = '.VPHero .text') {
+  const elementRef = useTemplateRef<HTMLElement>(refName)
+  let placeholder: Comment | null = null
 
   onMounted(() => {
-    const target = document.querySelector('.VPHero .text')
-    if (target && heroTextRef.value) {
-      const placeholder = document.createComment('hero-text-placeholder')
-      heroTextRef.value.before(placeholder)
+    const target = document.querySelector(targetSelector)
+    if (target && elementRef.value) {
+      placeholder = document.createComment('moveDomElements-placeholder')
+      elementRef.value.before(placeholder)
       target.innerHTML = ''
-      target.appendChild(heroTextRef.value)
+      target.appendChild(elementRef.value)
     }
   })
 
   onUnmounted(() => {
-    document
-      .querySelector('hero-text-placeholder')
-      ?.parentNode?.replaceChild(heroTextRef.value, document.querySelector('hero-text-placeholder'))
+    if (placeholder && placeholder.parentNode && elementRef.value) {
+      placeholder.parentNode.replaceChild(elementRef.value, placeholder)
+    }
   })
 }
 
