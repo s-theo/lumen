@@ -1,5 +1,5 @@
 import { useData } from 'vitepress'
-import { ComputedRef, computed, onMounted, onUnmounted } from 'vue'
+import { ComputedRef, computed, onMounted, onUnmounted, useTemplateRef } from 'vue'
 import type { NoticeItem, VidItem } from '../types'
 
 /**
@@ -25,24 +25,28 @@ export function isExternal(path: string): boolean {
   return EXTERNAL_URL_RE.test(path)
 }
 
-/** 将 `#hero-text` 节点移动到 `.VPHero .text` 中，并在组件卸载时复原。 */
-export const moveDomElements = (): void => {
-  let sourceElement: Element | null = null
+/**
+ * 将指定 refName 的 DOM 元素移动到目标容器，并在组件卸载时复原。
+ *
+ * @param refName - 需要移动的 ref 名称
+ * @param targetSelector - 目标容器的选择器，默认为 '.VPHero .text'
+ */
+export function moveDomElements(refName: string, targetSelector = '.VPHero .text') {
+  const elementRef = useTemplateRef<HTMLElement>(refName)
   let placeholder: Comment | null = null
 
   onMounted(() => {
-    const target = document.querySelector('.VPHero .text')
-    sourceElement = document.querySelector('#hero-text')
-    if (target && sourceElement) {
-      placeholder = document.createComment('hero-text-placeholder')
-      sourceElement.before(placeholder)
+    const target = document.querySelector(targetSelector)
+    if (target && elementRef.value) {
+      placeholder = document.createComment('moveDomElements-placeholder')
+      elementRef.value.before(placeholder)
       target.innerHTML = ''
-      target.appendChild(sourceElement)
+      target.appendChild(elementRef.value)
     }
   })
 
   onUnmounted(() => {
-    placeholder?.parentNode?.replaceChild(sourceElement, placeholder)
+    elementRef.value && placeholder?.parentNode?.replaceChild(elementRef.value, placeholder)
   })
 }
 
