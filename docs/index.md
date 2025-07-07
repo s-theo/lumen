@@ -23,6 +23,7 @@ hero:
     date: '7月31号23点59分'
     dateText: '活动截止至'
     link: https://itheo.top/bee
+    rel: sponsored noreferrer
 
   actions:
     - theme: brand
