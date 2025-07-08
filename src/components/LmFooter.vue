@@ -31,8 +31,8 @@ const isHome = computed(() => {
           <Icon v-if="section.icon" class="icon-space" :icon="section.icon" :alt="section.alt" size="12" />
           {{ section.title }}
         </h3>
-        <ul>
-          <li v-for="(link, idx) in section.links" :key="link.link + idx" class="list-links">
+        <ul class="list-links">
+          <li v-for="(link, idx) in section.links" :key="link.link + idx">
             <Icon v-if="link.icon" class="icon-space" :icon="link.icon" :alt="link.alt" size="12" />
             <Link
               :href="link.link"
