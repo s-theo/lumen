@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
-import { AltType, CropType, ImageType, SizeType } from '../../types'
+import { AltType, ImageType, SizeType } from '../../types'
 
 const props = defineProps<{
   image: ImageType
   alt?: AltType
   size?: SizeType
-  crop?: CropType
+  crop?: boolean
 }>()
 
 const { isDark } = useData()
