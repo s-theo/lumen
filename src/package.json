@@ -72,7 +72,7 @@
   },
   "devDependencies": {
     "bumpp": "^10.2.0",
-    "vite": "catalog:",
+    "vite": "npm:rolldown-vite@^7.0.6",
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
