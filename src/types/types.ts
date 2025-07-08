@@ -12,8 +12,6 @@ export type LinkType = string | undefined
 export type RelType = string | undefined
 /** 目标类型 */
 export type TargetType = string | undefined
-/** 裁剪图片 */
-export type CropType = boolean
 
 export type IconType =
   | string
@@ -22,8 +20,8 @@ export type IconType =
 
 export type ImageType =
   | string
-  | { src: string; crop?: CropType; alt?: AltType }
-  | { light: string; dark: string; crop?: CropType; alt?: AltType }
+  | { src: string; crop?: boolean; alt?: AltType }
+  | { light: string; dark: string; crop?: boolean; alt?: AltType }
 
 /** DocPill 接口 */
 export interface PillItem {
