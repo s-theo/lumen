@@ -6,6 +6,10 @@ catalog:
   vue: ^3.5.17
   vite: ^7.0.3
   vitepress: 2.0.0-alpha.8
+  oxc-minify: ^0.76.0
+
+overrides:
+  'vite': 'npm:rolldown-vite@^7.0.6'
 
 ignoredBuiltDependencies:
   - esbuild

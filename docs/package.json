@@ -10,6 +10,7 @@
     "@mdit/plugin-figure": "^0.22.1",
     "@mdit/plugin-img-size": "^0.22.2",
     "@theojs/lumen": "workspace:*",
+    "oxc-minify": "catalog:",
     "vite": "catalog:",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.6.1",
