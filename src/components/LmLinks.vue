@@ -23,8 +23,8 @@ const props = defineProps<{
       no-icon
     >
       <span class="row">
-        <Icon v-if="link.icon" :icon="link.icon" :alt="link.alt" :size="link.size || '32'" />
-        <Image v-else-if="link.image" :image="link.image" :alt="link.alt" :size="link.size || '32'" />
+        <Icon v-if="link.icon" :icon="link.icon" :size="link.size || '32'" />
+        <Image v-else-if="link.image" :image="link.image" :size="link.size || '32'" />
         <span class="name">{{ link.name }}</span>
       </span>
       <p v-if="link.desc" class="desc">{{ link.desc }}</p>

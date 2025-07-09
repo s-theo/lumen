@@ -5,10 +5,7 @@
     {
       name: '支付宝',
       link: 'https://i.theojs.cn/alipay.webp',
-      image: {
-        src: 'https://i.theojs.cn/logo/alipay.svg',
-        alt: 'alipay icon'
-      },
+      image: { src: 'https://i.theojs.cn/logo/alipay.svg', alt: 'alipay icon' },
       desc: '移动支付平台，提供便捷的在线支付和转账服务',
       rel: 'noopener noreferrer'
     },

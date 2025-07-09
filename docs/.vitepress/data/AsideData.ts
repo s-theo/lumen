@@ -58,8 +58,7 @@ export const Aside_Data: AsideItem = [
   // {
   //   link: 'https://itheo.top/feitu',
   //   rel: 'sponsored noreferrer',
-  //   image: 'https://i.theojs.cn/logo/feitu.webp',
-  //   alt: '飞兔云 Logo',
+  //   image: { src: 'https://i.theojs.cn/logo/feitu.webp', alt: '飞兔云 Logo' },
   //   promo: '飞兔云 六一&端午 特惠',
   //   info1: '月/半年/年付 <span class="promo-text">85</span> 折 ',
   //   info2: '优惠券 <span class="promo-text"> 61@85 </span>'
@@ -73,15 +72,13 @@ export const Aside_Data: AsideItem = [
   {
     link: 'https://itheo.top/totoro',
     rel: 'sponsored noreferrer',
-    image: 'https://i.theojs.cn/logo/totoro.webp',
-    alt: '龙猫云 Logo',
+    image: { src: 'https://i.theojs.cn/logo/totoro.webp', alt: '龙猫云 Logo' },
     promo: 'Totoro Cloud - 龙猫云'
   },
   {
     link: 'https://itheo.top/qyt',
     rel: 'sponsored noreferrer',
-    image: 'https://i.theojs.cn/logo/qyt.webp',
-    alt: '青云梯 Logo',
+    image: { src: 'https://i.theojs.cn/logo/qyt.webp', alt: '青云梯 Logo' },
     promo: '青云梯'
   },
   {
@@ -99,36 +96,32 @@ export const Aside_Data: AsideItem = [
   {
     link: 'https://itheo.top/feitu',
     rel: 'sponsored noreferrer',
-    image: 'https://i.theojs.cn/logo/feitu.webp',
-    alt: '飞兔云 Logo',
+    image: { src: 'https://i.theojs.cn/logo/feitu.webp', alt: '飞兔云 Logo' },
     promo: '飞兔云'
   },
   {
     link: 'https://i.theojs.cn/sponsor.webp',
     rel: 'sponsored noreferrer',
     icon: 'twemoji:red-heart',
-    alt: '赞助图标',
     name: '赞助我的项目'
   },
   {
     link: 'https://doc.theojs.cn/',
-    image: 'https://i.theojs.cn/logo/avatar-128.webp',
-    alt: 'Theo-Docs Logo',
+    image: { src: 'https://i.theojs.cn/logo/avatar-128.webp', alt: 'Theo-Docs Logo' },
     name: 'Theo-Docs',
     hide1: '流媒体观影',
     hide2: '一站式服务'
   },
   {
     link: 'https://xx.theojs.cn/',
-    image: 'https://i.theojs.cn/logo/avatar-128.webp',
-    alt: '玄学宝典 Logo',
+    image: { src: 'https://i.theojs.cn/logo/avatar-128.webp', alt: '玄学宝典 Logo' },
     name: '玄学宝典',
     hide1: '传世经典著作',
     hide2: '山医命相卜'
   },
   {
     link: 'https://doc.theojs.cn/serve/sharing/Account-sharing-guide',
-    icon: { icon: 'cbi:netflix-alt', alt: '流媒体图标', color: '#E50914' },
+    icon: { icon: 'cbi:netflix-alt', color: '#E50914' },
     name: '流媒体帐号合租',
     hide1: '流媒体账号合租',
     hide2: '共享车位'
@@ -136,7 +129,6 @@ export const Aside_Data: AsideItem = [
   {
     link: 'https://github.com/Theo-Messi/dotfiles',
     icon: 'eos-icons:configuration-file',
-    alt: '配置文件图标',
     name: '常用配置 - dotfiles',
     hide1: 'zshrc、系统优化一键脚本',
     hide2: 'Clash/Loon/QX... 配置'

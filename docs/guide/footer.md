@@ -80,7 +80,6 @@ export default {
 | `icon`   | `IconType` | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType) | <Badge text="可选" /> |
 | `title`  | `string`   | 分组标题，将展示为该链接组的名称。                                                   | <Badge text="必填" /> |
 | `links`  | `Link[]`   | 分组内的链接数组，参考下方 [Link 接口](#link-接口)。                                 | <Badge text="必填" /> |
-| `alt`    | `AltType`  | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                   | <Badge text="可选" /> |
 
 ### `Link` 接口
 
@@ -94,7 +93,6 @@ export default {
 | `link`   | `string`     | 链接地址，可为外部 URL 或内部路径，如 `/docs`。                                                                                        | <Badge text="必填" /> |
 | `rel`    | `RelType`    | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                           | <Badge text="可选" /> |
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
-| `alt`    | `AltType`    | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                                                                     | <Badge text="可选" /> |
 
 ### `Beian` 接口
 
@@ -115,7 +113,6 @@ export default {
 | `number` | `string`     | ICP 备案号文本，例如 `粤ICP备88888888号`，也可用于其他类似用途的自定义文本。                                                           | <Badge text="可选" /> |
 | `link`   | `LinkType`   | 指向工信部网站备案系统的链接，默认为:`https://beian.miit.gov.cn/`，支持自定义                                                          | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
-| `alt`    | `AltType`    | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                                                                     | <Badge text="可选" /> |
 | `rel`    | `RelType`    | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                           | <Badge text="可选" /> |
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 
@@ -128,7 +125,6 @@ export default {
 | `number` | `string`     | 公安备案号文本，例如 `粤公网安备 88888888888888 号`，用于展示公安机关备案信息，也可用于其他类似用途的自定义文本。                      | <Badge text="可选" /> |
 | `link`   | `LinkType`   | 公安备案号对应的查询链接，默认为:`https://beian.mps.gov.cn/`，支持自定义                                                               | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
-| `alt`    | `AltType`    | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                                                                     | <Badge text="可选" /> |
 | `rel`    | `RelType`    | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                           | <Badge text="可选" /> |
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 
@@ -144,6 +140,5 @@ export default {
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 | `text`   | `string`     | 版权声明尾句，显示在作者名称后。可自定义该文本，默认值为 `All Rights Reserved.`。                                                      | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
-| `alt`    | `AltType`    | 图标的无障碍文本描述，供屏幕阅读器使用，建议提供。                                                                                     | <Badge text="可选" /> |
 
 <!--@include: ./type.md{1,10}-->

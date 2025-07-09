@@ -62,7 +62,6 @@ export default {
 | `size`   | `SizeType`   | 控制图片或者图标的的尺寸 默认为 `width="24" height="24"       `                                                                        | <Badge text="可选" /> |
 | `info1`  | `string`     | 附加信息 1，例如：`"新用户立减 5 元"`。                                                                                                | <Badge text="可选" /> |
 | `info2`  | `string`     | 附加信息 2，例如：`"优惠截止至 6 月 30 日"`。                                                                                          | <Badge text="可选" /> |
-| `alt`    | `AltType`    | 图片或图标的替代文本，有助于无障碍访问。                                                                                               | <Badge text="可选" /> |
 
 ### Normal
 
@@ -77,7 +76,6 @@ export default {
 | `size`   | `SizeType`   | 控制图片或者图标的的尺寸 默认为 `width="24" height="24"       `                                                                        | <Badge text="可选" /> |
 | `hide1`  | `string`     | 隐藏信息 1，悬停时显示。例如：`"仅限中国大陆用户"`。                                                                                   | <Badge text="可选" /> |
 | `hide2`  | `string`     | 隐藏信息 2，用于补充额外提示。例如：`"每日限量 500 名"`。                                                                              | <Badge text="可选" /> |
-| `alt`    | `AltType`    | 图片或图标的替代文本，有助于无障碍访问。                                                                                               | <Badge text="可选" /> |
 
 ### AsidePromo
 

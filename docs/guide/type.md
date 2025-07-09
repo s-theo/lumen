@@ -5,8 +5,8 @@ export type IconImageMode = string | { light: string; dark: string }
 
 export type IconType =
   | string
-  | { icon: string; color?: IconImageMode; alt?: AltType }
-  | { light: string; dark: string; color?: IconImageMode; alt?: AltType }
+  | { icon: string; color?: IconImageMode }
+  | { light: string; dark: string; color?: IconImageMode }
 ```
 
 ## ImageType

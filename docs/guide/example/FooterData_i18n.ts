@@ -15,7 +15,6 @@ export const Footer_Data: FooterData = {
               dark: 'rgba(100, 200, 255, 1)'
             }
           },
-          alt: 'ICP 备案图标',
           rel: 'noopener noreferrer'
         }
       }
@@ -34,7 +33,6 @@ export const Footer_Data: FooterData = {
               dark: 'rgba(100, 200, 255, 1)'
             }
           },
-          alt: 'ICP License Icon',
           rel: 'noopener noreferrer'
         }
       }

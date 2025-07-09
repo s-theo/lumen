@@ -2,12 +2,11 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { Icon } from '@iconify/vue'
-import { AltType, IconImageMode, IconType, SizeType } from '../../types'
+import { IconImageMode, IconType, SizeType } from '../../types'
 
 const props = defineProps<{
   icon: IconType
   color?: IconImageMode
-  alt?: AltType
   size?: SizeType
 }>()
 
@@ -31,21 +30,8 @@ const currentColor = computed(() => {
   }
   return undefined
 })
-
-const ariaLabel = computed(() => {
-  const iconAlt = typeof props.icon === 'object' ? props.icon.alt?.trim?.() : undefined
-  return iconAlt || props.alt?.trim() || undefined
-})
 </script>
 
 <template>
-  <Icon
-    :icon="currentIcon"
-    :color="currentColor"
-    :aria-label="ariaLabel"
-    :inline="true"
-    :ssr="true"
-    :width="size"
-    :height="size"
-  />
+  <Icon :icon="currentIcon" :color="currentColor" :inline="true" :ssr="true" :width="size" :height="size" />
 </template>

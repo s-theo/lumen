@@ -28,8 +28,8 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
     :target="aside.target"
     no-icon
   >
-    <Icon v-if="aside.icon" :icon="aside.icon" :alt="aside.alt" :size="aside.size || '24'" />
-    <Image v-else-if="aside.image" class="icon" :image="aside.image" :alt="aside.alt" :size="aside.size || '24'" />
+    <Icon v-if="aside.icon" :icon="aside.icon" :size="aside.size || '24'" />
+    <Image v-else-if="aside.image" class="icon" :image="aside.image" :size="aside.size || '24'" />
     <div>
       <template v-if="isAsidePromo(aside)">
         <span class="promo" v-html="aside.promo"></span>

@@ -65,6 +65,5 @@ hero:
 | `date`     | `string`     | 活动截止日期或相关时间信息，通常用于提示有效期限。                                                                                     | <Badge text="可选" /> |
 | `dateText` | `string`     | 活动时间的文字说明，默认为 `活动时间: 即日至`，可自定义显示文案。                                                                      | <Badge text="可选" /> |
 | `dateIcon` | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
-| `alt`      | `AltType`    | 图标的替代文本，用于无障碍和 SEO 优化。                                                                                                | <Badge text="可选" /> |
 
 <!--@include: ./type.md{1,10}-->

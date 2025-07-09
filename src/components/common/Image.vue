@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
-import { AltType, ImageType, SizeType } from '../../types'
+import { ImageType, SizeType } from '../../types'
 
 const props = defineProps<{
   image: ImageType
-  alt?: AltType
   size?: SizeType
   crop?: boolean
 }>()
@@ -20,7 +19,7 @@ const currentImage = computed(() => {
   return props.image.src
 })
 
-const altText = computed(() => props.alt ?? (typeof props.image === 'object' ? (props.image.alt ?? '') : ''))
+const altText = computed(() => (typeof props.image === 'object' && props.image.alt ? props.image.alt : ''))
 
 const crop = computed(() => {
   return typeof props.image === 'object' && 'crop' in props.image ? Boolean(props.image.crop) : false

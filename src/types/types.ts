@@ -15,8 +15,8 @@ export type TargetType = string | undefined
 
 export type IconType =
   | string
-  | { icon: string; color?: IconImageMode; alt?: AltType }
-  | { light: string; dark: string; color?: IconImageMode; alt?: AltType }
+  | { icon: string; color?: IconImageMode }
+  | { light: string; dark: string; color?: IconImageMode }
 
 export type ImageType =
   | string
@@ -39,8 +39,6 @@ export interface PillItem {
   image?: ImageType
   /** 图片和图标大小 */
   size?: SizeType
-  /** 图片的 alt 文本 或 图标的 aria-label */
-  alt?: AltType
 }
 
 /** DocLinks 接口 */
@@ -61,8 +59,6 @@ export interface LinkItem {
   image?: ImageType
   /** 图片和图标大小 */
   size?: SizeType
-  /** 图片的 alt 文本 或 图标的 aria-label */
-  alt?: AltType
 }
 
 /** BoxCube 接口 */
@@ -81,8 +77,6 @@ export interface BoxCubeItem {
   image?: ImageType
   /** 图片和图标大小 */
   size?: SizeType
-  /** 图片的 alt 文本 或 图标的 aria-label */
-  alt?: AltType
 }
 
 /** DocCard 接口 */
@@ -103,8 +97,6 @@ export interface CardItem {
   image?: ImageType
   /** 图片和图标大小 */
   size?: SizeType
-  /** 图片的 alt 文本 或 图标的 aria-label */
-  alt?: AltType
 }
 
 /** Promo 类型：表示一个具有活动性质的推广项 */
@@ -127,8 +119,6 @@ export interface Promo {
   image?: ImageType
   /** 图片和图标大小 */
   size?: SizeType
-  /** 图片的 alt 文本 或 图标的 aria-label */
-  alt?: AltType
 }
 
 /** Normal 类型：表示普通链接项 */
@@ -151,8 +141,6 @@ export interface Normal {
   image?: ImageType
   /** 图片和图标大小 */
   size?: SizeType
-  /** 图片的 alt 文本 或 图标的 aria-label */
-  alt?: AltType
 }
 
 /** AsidePromo 类型：继承 Promo，同时支持 i18n 局部多语言（排除递归） */
@@ -196,8 +184,6 @@ export interface NoticeItem {
   dateText?: string
   /** 日期图标 */
   dateIcon?: IconType
-  /** 图片的 alt 文本 */
-  alt?: AltType
 }
 
 /** Waline 配置数据类型接口。 */
@@ -240,8 +226,6 @@ export interface FooterData {
 export interface Group {
   /** 图标配置 */
   icon?: IconType
-  /** 图片的 alt 文本 或 图标的 aria-label */
-  alt?: AltType
   /** 外部链接图标开关 */
   noIcon?: boolean
   /** 分组标题 */
@@ -266,8 +250,6 @@ export interface Icp {
   number?: string
   /** ICP 图标，@default 'fluent:globe-shield-48-filled' */
   icon?: IconType
-  /** 无障碍描述 */
-  alt?: AltType
   /** ICP网站或自定义链接 */
   link?: LinkType
   /** Rel 属性 */
@@ -282,8 +264,6 @@ export interface Police {
   number?: string
   /** 公安备案图标，@default 'fluent:shield-checkmark-48-filled' */
   icon?: IconType
-  /** 无障碍描述 */
-  alt?: AltType
   /** 公安备案网站或自定义链接 */
   link?: LinkType
   /** Rel 属性 */
@@ -304,8 +284,6 @@ export interface Author {
   target?: TargetType
   /** 版权图标图标 */
   icon?: IconType
-  /** 无障碍描述 */
-  alt?: AltType
   /** 版权文本 */
   text?: string
 }
@@ -324,8 +302,6 @@ export interface Link {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 无障碍描述 */
-  alt?: AltType
 }
 
 /** Vid 接口 */

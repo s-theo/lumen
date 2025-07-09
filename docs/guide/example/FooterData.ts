@@ -13,7 +13,6 @@ export const Footer_Data: FooterData = {
           dark: 'rgba(100, 200, 255, 1)'
         }
       },
-      alt: 'ICP 备案图标',
       rel: 'noopener noreferrer'
     },
     police: {
@@ -26,7 +25,6 @@ export const Footer_Data: FooterData = {
           dark: 'rgba(100, 255, 200, 1)'
         }
       },
-      alt: '公安备案图标',
       rel: 'noopener noreferrer'
     }
   },
@@ -41,7 +39,6 @@ export const Footer_Data: FooterData = {
         dark: '#ccc'
       }
     },
-    alt: '版权图标',
     rel: 'noopener noreferrer'
   },
   group: [
@@ -67,7 +64,6 @@ export const Footer_Data: FooterData = {
               dark: 'rgba(255, 150, 100, 1)'
             }
           },
-          alt: '示例1图标',
           rel: 'noopener noreferrer'
         },
         {
@@ -99,7 +95,6 @@ export const Footer_Data: FooterData = {
               dark: 'rgba(255, 150, 100, 1)'
             }
           },
-          alt: '文档链接图标',
           rel: 'noopener noreferrer'
         },
         {
