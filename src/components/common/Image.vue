@@ -9,6 +9,8 @@ const props = defineProps<{
   crop?: boolean
 }>()
 
+defineOptions({ inheritAttrs: false })
+
 const { isDark } = useData()
 
 const currentImage = computed(() => {
@@ -38,6 +40,7 @@ const crop = computed(() => {
     referrerpolicy="no-referrer"
     fetchpriority="low"
     draggable="false"
+    v-bind="typeof image === 'string' ? $attrs : { ...image, ...$attrs }"
   />
 </template>
 
