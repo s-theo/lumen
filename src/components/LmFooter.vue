@@ -28,12 +28,12 @@ const isHome = computed(() => {
     <div v-if="footer.group?.length" class="list-container">
       <section v-for="(section, index) in footer.group" :key="section.title + index">
         <h3 class="list-title">
-          <Icon v-if="section.icon" class="icon-space" :icon="section.icon" :alt="section.alt" size="12" />
+          <Icon v-if="section.icon" class="icon-space" :icon="section.icon" size="12" />
           {{ section.title }}
         </h3>
         <ul class="list-links">
           <li v-for="(link, idx) in section.links" :key="link.link + idx">
-            <Icon v-if="link.icon" class="icon-space" :icon="link.icon" :alt="link.alt" size="12" />
+            <Icon v-if="link.icon" class="icon-space" :icon="link.icon" size="12" />
             <Link
               :href="link.link"
               :rel="link.rel"
@@ -54,7 +54,6 @@ const isHome = computed(() => {
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
             :icon="footer.beian.icp.icon || 'fluent:globe-shield-48-filled'"
-            :alt="footer.beian.icp.alt"
             size="12"
           />
           <Link
@@ -74,7 +73,6 @@ const isHome = computed(() => {
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
             :icon="footer.beian.police.icon || 'fluent:shield-checkmark-48-filled'"
-            :alt="footer.beian.police.alt"
             size="12"
           />
           <Link
@@ -92,12 +90,7 @@ const isHome = computed(() => {
 
       <span v-if="footer.author?.name">
         <p class="footer-infotext">
-          <Icon
-            class="info-icon icon-space"
-            :icon="footer.author.icon || 'ri:copyright-line'"
-            :alt="footer.author.alt"
-            size="12"
-          />
+          <Icon class="info-icon icon-space" :icon="footer.author.icon || 'ri:copyright-line'" size="12" />
           <Link
             :href="footer.author.link || `https://github.com/${footer.author.name}`"
             :rel="footer.author.rel"

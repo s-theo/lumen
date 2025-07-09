@@ -12,10 +12,9 @@ description: 了解如何通过 @theojs/lumen 插件将 Waline 评论系统集�
   :items="[
     {
       name: '如何部署请查看 waline 文档',
-      image: 'https://waline.js.org/logo.png',
+      image: { src: 'https://waline.js.org/logo.png', alt: 'waline icon' },
       desc: '一款简洁、安全的评论系统。',
-      link: 'https://waline.js.org/guide/get-started/',
-      alt: 'waline icon'
+      link: 'https://waline.js.org/guide/get-started/'
     }
   ]"
 />

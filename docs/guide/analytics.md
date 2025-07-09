@@ -25,7 +25,7 @@ export default {
 
 ### 获取 Google Analytics ID
 
-1. 访问<Pill name="Google Analytics" link="https://analytics.google.com/" icon="logos:google-analytics" alt="Google Analytics icon" />网站。
+1. 访问<Pill name="Google Analytics" link="https://analytics.google.com/" icon="logos:google-analytics" />网站。
 2. 登录到你的 Google Analytics 帐号。
 3. 创建一个新的 Google Analytics 账户，或者选择已有的账户。
 4. 在左下角点击 `Admin`（管理）。
@@ -34,7 +34,7 @@ export default {
 7. 在 `Property Settings`（属性设置）中，找到 `Tracking Info`（跟踪信息）。
 8. 点击 `Tracking Code`（跟踪代码），你会看到类似 `G-XXXXXXX` 的 ID。
 
-**详细操作见官方文档：** <Pill name="Google Analytics 帮助文档" link="https://support.google.com/analytics/answer/9304153?hl=zh-Hans" icon="logos:google-analytics" alt="Google Analytics icon" />
+**详细操作见官方文档：** <Pill name="Google Analytics 帮助文档" link="https://support.google.com/analytics/answer/9304153?hl=zh-Hans" icon="logos:google-analytics" />
 
 ## 百度统计 - baiduAnalytics
 
@@ -58,13 +58,13 @@ export default {
 
 ### 获取 Baidu Analytics ID
 
-1. 访问 <Pill name="百度统计" link="https://tongji.baidu.com/" :icon="{ icon: 'ri:baidu-fill', color: '#2932E1', alt: '百度统计图标' }" /> 网站。
+1. 访问 <Pill name="百度统计" link="https://tongji.baidu.com/" :icon="{ icon: 'ri:baidu-fill', color: '#2932E1' }" /> 网站。
 2. 使用百度账号登录或注册一个新账号。
 3. 登录后，点击页面上方的 `我的报告`-`使用设置`-`网站列表`。
 4. 添加你的网站，选择分类并保存
 5. 获取统计代码，复制链接中 `hm.js?******` 的 ID 部分。
 
-**详细操作见官方文档：** <Pill name="百度统计官方文档" link="https://tongji.baidu.com/web/help/article?id=175&type=0" :icon="{ icon: 'ri:baidu-fill', color: '#2932E1', alt: '百度统计图标' }" />
+**详细操作见官方文档：** <Pill name="百度统计官方文档" link="https://tongji.baidu.com/web/help/article?id=175&type=0" :icon="{ icon: 'ri:baidu-fill', color: '#2932E1' }" />
 
 ## Umami - umamiAnalytics
 
@@ -91,7 +91,7 @@ export default {
 
 #### 自建 Umami
 
-1. 参考 <Pill name="Umami 文档" link="https://umami.is/docs/guides/hosting" :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' }, alt: 'umami图标' }" /> 搭建 Umami 服务器。
+1. 参考 <Pill name="Umami 文档" link="https://umami.is/docs/guides/hosting" :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' } }" /> 搭建 Umami 服务器。
 2. 登录 Umami 仪表盘，创建新站点。
 3. 复制该站点的 ID 用于配置。
 
@@ -102,4 +102,4 @@ export default {
 
 > 你的 Umami ID 应该类似于：`123abc456def`
 
-**官方文档及资源：** <Pill name="Umami 文档" link="https://umami.is/docs/guides/hosting" :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' }, alt: 'umami图标' }" /> <Pill name="Umami 公共服务" link="https://umami.is/" :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' }, alt: 'umami图标' }" />
+**官方文档及资源：** <Pill name="Umami 文档" link="https://umami.is/docs/guides/hosting" :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' } }" /> <Pill name="Umami 公共服务" link="https://umami.is/" :icon="{ icon: 'simple-icons:umami', color: { light: '#000000', dark: '#ffffff' } }" />

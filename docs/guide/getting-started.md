@@ -34,62 +34,52 @@ yarn add @theojs/lumen
     {
       name: '导入主题',
       link: 'theme',
-      icon: { icon: 'heroicons:puzzle-piece-solid', color: '#ff9800' },
-      alt: '导入主题图标'
+      icon: { icon: 'heroicons:puzzle-piece-solid', color: '#ff9800' }
     },
     {
       name: '首页公告栏',
       link: 'notice',
-      icon: { icon: 'heroicons-solid:megaphone', color: '#e74c3c' },
-      alt: '首页公告栏图标'
+      icon: { icon: 'heroicons-solid:megaphone', color: '#e74c3c' }
     },
     {
       name: '首页下划线',
       link: 'underline',
-      icon: { icon: 'heroicons:paint-brush-solid', color: '#3498db' },
-      alt: '首页下划线图标'
+      icon: { icon: 'heroicons:paint-brush-solid', color: '#3498db' }
     },
     {
       name: '页脚配置',
       link: 'footer',
-      icon: { icon: 'heroicons-solid:template', color: '#2ecc71' },
-      alt: '页脚配置图标'
+      icon: { icon: 'heroicons-solid:template', color: '#2ecc71' }
     },
     {
       name: '侧边栏链接',
       link: 'aside',
-      icon: { icon: 'heroicons:bars-3-16-solid', color: '#9b59b6' },
-      alt: '侧边栏链接图标'
+      icon: { icon: 'heroicons:bars-3-16-solid', color: '#9b59b6' }
     },
     {
       name: '视频组件',
       link: 'vid',
-      icon: { icon: 'heroicons-solid:video-camera', color: '#f39c12' },
-      alt: '视频组件图标'
+      icon: { icon: 'heroicons-solid:video-camera', color: '#f39c12' }
     },
     {
       name: '链接卡片',
       link: 'linkcard',
-      icon: { icon: 'heroicons-solid:rectangle-group', color: '#1abc9c' },
-      alt: '链接卡片图标'
+      icon: { icon: 'heroicons-solid:rectangle-group', color: '#1abc9c' }
     },
     {
       name: '图片描述',
       link: 'image-description',
-      icon: { icon: 'heroicons-solid:photo', color: '#2ecc71' },
-      alt: '图片描述图标'
+      icon: { icon: 'heroicons-solid:photo', color: '#2ecc71' }
     },
     {
       name: '集成评论',
       link: 'comment',
-      icon: { icon: 'heroicons-solid:chat', color: '#3498db' },
-      alt: '评论图标'
+      icon: { icon: 'heroicons-solid:chat', color: '#3498db' }
     },
     {
       name: '站点统计',
       link: 'analytics',
-      icon: { icon: 'heroicons:chart-bar-square-solid', color: '#007bff' },
-      alt: '站点统计图标'
+      icon: { icon: 'heroicons:chart-bar-square-solid', color: '#007bff' }
     }
   ]"
 />

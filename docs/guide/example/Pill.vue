@@ -2,11 +2,11 @@
 <Pill
   name="Iconify"
   link="https://iconify.design/"
-  :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA', alt: 'iconify icon' }"
+  :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA' }"
   :size="16"
   rel="noopener noreferrer"
 />
-<Pill name="Vue" link="https://vuejs.org/" icon="vscode-icons:file-type-vue" alt="vue icon" rel="noopener noreferrer" />
+<Pill name="Vue" link="https://vuejs.org/" icon="vscode-icons:file-type-vue" rel="noopener noreferrer" />
 
 <!-- 深浅模式的 iconify 图标 -->
 <Pill
@@ -17,14 +17,12 @@
     dark: 'ion:logo-vercel',
     color: { light: '#000000', dark: '#FFFFFF' }
   }"
-  alt="vercel icon"
   rel="noopener noreferrer"
 />
 <Pill
   name="Vite"
   link="https://vitejs.dev/"
   :icon="{ light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' }"
-  alt="vite icon"
   rel="noopener noreferrer"
 />
 

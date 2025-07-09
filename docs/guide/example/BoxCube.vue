@@ -5,34 +5,28 @@
     {
       name: 'iconify',
       link: 'https://iconify.design/',
-      icon: { icon: 'line-md:iconify2-static', color: '#1769AA', alt: 'iconify icon' },
+      icon: { icon: 'line-md:iconify2-static', color: '#1769AA' },
       rel: 'noopener noreferrer'
     },
     // 深浅色模式的 iconify 图标
     {
       name: 'Vercel',
       link: 'https://vercel.com/',
-      icon: {
-        light: 'ion:logo-vercel',
-        dark: 'ion:logo-vercel',
-        color: { light: '#000000', dark: '#FFFFFF' },
-        alt: 'Vercel icon'
-      },
+      icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel', color: { light: '#000000', dark: '#FFFFFF' } },
       rel: 'noopener noreferrer'
     },
     // 深浅色模式 iconify 图标（无 color）
     {
       name: 'Vite',
       link: 'https://vitejs.dev/',
-      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark', alt: 'Vite icon' },
+      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' },
       rel: 'noopener noreferrer'
     },
     // 普通图片
     {
       name: '支付宝',
       link: 'https://i.theojs.cn/alipay.webp',
-      image: 'https://i.theojs.cn/logo/alipay.svg',
-      alt: 'alipay icon',
+      image: { src: 'https://i.theojs.cn/logo/alipay.svg', alt: 'alipay icon' },
       rel: 'noopener noreferrer'
     },
     // 深浅色模式图片
