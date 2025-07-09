@@ -5,12 +5,7 @@
     {
       name: 'Vercel',
       link: 'https://vercel.com/',
-      icon: {
-        light: 'ion:logo-vercel',
-        dark: 'ion:logo-vercel',
-        color: { light: '#000000', dark: '#FFFFFF' },
-        alt: 'Vercel icon'
-      },
+      icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel', color: { light: '#000000', dark: '#FFFFFF' } },
       desc: '适用于前端框架的无服务器部署平台，支持静态生成和即时预览。',
       rel: 'noopener noreferrer'
     },
@@ -18,22 +13,14 @@
     {
       name: 'Vite',
       link: 'https://vitejs.dev/',
-      icon: {
-        light: 'skill-icons:vite-light',
-        dark: 'skill-icons:vite-dark',
-        alt: 'Vite icon'
-      },
+      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' },
       desc: '极速的现代前端构建工具，支持热更新与按需加载。',
       rel: 'noopener noreferrer'
     },
     {
       name: 'Netlify',
       link: 'https://www.netlify.com/',
-      icon: {
-        light: 'skill-icons:netlify-light',
-        dark: 'skill-icons:netlify-dark',
-        alt: 'Netlify icon'
-      },
+      icon: { light: 'skill-icons:netlify-light', dark: 'skill-icons:netlify-dark' },
       desc: '提供 CI/CD、自动构建和无服务器函数的前端部署平台。',
       rel: 'noopener noreferrer'
     },

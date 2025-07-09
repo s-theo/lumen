@@ -22,8 +22,8 @@ const props = defineProps<{
       :target="boxcube.target"
       no-icon
     >
-      <Icon v-if="boxcube.icon" :icon="boxcube.icon" :alt="boxcube.alt" :size="boxcube.size || '32'" />
-      <Image v-else-if="boxcube.image" :image="boxcube.image" :alt="boxcube.alt" :size="boxcube.size || '32'" />
+      <Icon v-if="boxcube.icon" :icon="boxcube.icon" :size="boxcube.size || '32'" />
+      <Image v-else-if="boxcube.image" :image="boxcube.image" :size="boxcube.size || '32'" />
       <span class="name">{{ boxcube.name }}</span>
     </Link>
   </div>

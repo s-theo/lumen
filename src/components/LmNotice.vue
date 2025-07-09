@@ -19,7 +19,7 @@ const notice = useNotice()
       <span class="title" v-html="notice.title"></span>
       <p v-if="notice.desc" class="desc" v-html="notice.desc"></p>
       <div v-if="notice.date" class="time-info">
-        <Icon :icon="notice.dateIcon || 'line-md:calendar'" :alt="notice.alt || 'date'" size="14" />
+        <Icon :icon="notice.dateIcon || 'line-md:calendar'" size="14" />
         <time v-html="notice.dateText || '活动时间: 即日至'"></time>
         <time class="date">{{ notice.date }}</time>
       </div>
