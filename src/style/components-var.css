@@ -127,7 +127,7 @@
   * waline-style     
   * https://waline.js.org/reference/client/style.html 
   * -------------------------------------------------------------------------- */
-
+  --waline-bg-elv: rgba(44, 62, 80, 0.1);
   /* 字体大小 */
   --waline-font-size: 1rem !important;
 
@@ -143,9 +143,9 @@
   /* 布局颜色 */
   --waline-color: var(--vp-c-text-1) !important;
   --waline-bg-color: var(--vp-c-bg-alt) !important;
-  --waline-bg-color-light: var(--vp-c-bg-elv) !important;
-  --waline-bg-color-hover: var(--vp-c-bg-elv) !important;
-  --waline-border-color: var(--vp-c-bg-elv) !important;
+  --waline-bg-color-light: var(--waline-bg-elv) !important;
+  --waline-bg-color-hover: var(--waline-bg-elv) !important;
+  --waline-border-color: var(--waline-bg-elv) !important;
   --waline-disable-bg-color: var(--vp-c-bg-alt) !important;
   --waline-disable-color: var(--vp-c-text-3) !important;
   --waline-code-bg-color: var(--vp-c-bg-alt) !important;
