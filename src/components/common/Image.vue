@@ -26,6 +26,12 @@ const altText = computed(() => (typeof props.image === 'object' && props.image.a
 const crop = computed(() => {
   return typeof props.image === 'object' && 'crop' in props.image ? Boolean(props.image.crop) : false
 })
+
+const cleanedAttrs = computed(() => {
+  if (typeof props.image === 'string') return {}
+  const { light, dark, crop, ...restAttrs } = props.image
+  return restAttrs
+})
 </script>
 
 <template>
@@ -36,11 +42,7 @@ const crop = computed(() => {
     :width="size"
     :height="size"
     loading="lazy"
-    decoding="async"
-    referrerpolicy="no-referrer"
-    fetchpriority="low"
-    draggable="false"
-    v-bind="typeof image === 'string' ? $attrs : { ...image, ...$attrs }"
+    v-bind="typeof image === 'string' ? $attrs : { ...cleanedAttrs, ...$attrs }"
   />
 </template>
 
