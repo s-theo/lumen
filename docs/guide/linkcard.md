@@ -1,6 +1,6 @@
 ---
 title: 链接卡片组件
-description: 了解如何使用 @theojs/lumen 插件提供的多种链接卡片组件（BoxCube, Card, Links, Pill ）在 VitePress 站点中创建美观且信息丰富的链接展示。本指南包含各组件的引入、使用示例和参数说明，支持 Iconify 图标和明暗模式。
+description: 了解如何使用 @theojs/lumen 插件提供的多种链接卡片组件（ BoxCube, Card, Links, Pill ）在 VitePress 站点中创建美观且信息丰富的链接展示。本指南包含各组件的引入、使用示例和参数说明，支持 Iconify 图标和明暗模式。
 ---
 
 # 链接卡片组件
