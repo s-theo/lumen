@@ -1,6 +1,6 @@
 <script setup lang="ts">
+import { computed, useAttrs } from 'vue'
 import { useData, withBase } from 'vitepress'
-import { computed } from 'vue'
 import { ImageType, SizeType } from '../../types'
 
 const props = defineProps<{
@@ -26,6 +26,14 @@ const altText = computed(() => (typeof props.image === 'object' && props.image.a
 const crop = computed(() => {
   return typeof props.image === 'object' && 'crop' in props.image ? Boolean(props.image.crop) : false
 })
+
+const attrs = useAttrs()
+
+const cleanedAttrs = computed(() => {
+  if (typeof props.image === 'string') return attrs
+  const { light, dark, crop, ...restAttrs } = attrs
+  return restAttrs
+})
 </script>
 
 <template>
@@ -36,11 +44,7 @@ const crop = computed(() => {
     :width="size"
     :height="size"
     loading="lazy"
-    decoding="async"
-    referrerpolicy="no-referrer"
-    fetchpriority="low"
-    draggable="false"
-    v-bind="typeof image === 'string' ? $attrs : { ...image, ...$attrs }"
+    v-bind="cleanedAttrs"
   />
 </template>
 
