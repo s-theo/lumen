@@ -30,7 +30,7 @@ const crop = computed(() => {
 
 <template>
   <img
-    :class="{ crop: crop }"
+    :class="crop ? 'crop' : undefined"
     :src="currentImage ? withBase(currentImage) : undefined"
     :alt="altText"
     :width="size"
