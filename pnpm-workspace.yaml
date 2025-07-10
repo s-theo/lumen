@@ -3,11 +3,9 @@ packages:
   - docs
 
 catalog:
-  vue: ^3.5.17
   vitepress: 2.0.0-alpha.8
+  vue: ^3.5.17
 
 ignoredBuiltDependencies:
+  - esbuild
   - simple-git-hooks
-
-overrides:
-  vite: npm:rolldown-vite@latest
