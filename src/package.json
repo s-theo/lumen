@@ -66,15 +66,15 @@
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
-    "@waline/client": "^3.5.7",
+    "@waline/client": "^3.6.0",
     "iconify-icon": "^3.0.0",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
     "bumpp": "^10.2.0",
-    "vite": "npm:rolldown-vite@^7.0.6",
+    "vite": "npm:rolldown-vite@^7.0.7",
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@10.12.4"
+  "packageManager": "pnpm@10.13.1"
 }
