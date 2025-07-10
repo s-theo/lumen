@@ -10,7 +10,7 @@ export const Footer_Data: FooterData = {
   group: [
     {
       title: 'GitHub Source',
-      icon: { icon: 'mdi:github' },
+      icon: 'mdi:github',
       links: [
         { name: 'Theo-Docs', link: 'https://github.com/Theo-Messi/Theo-Docs' },
         { name: '玄学宝典', link: 'https://github.com/Theo-Messi/xx.theojs.cn' },
@@ -20,7 +20,7 @@ export const Footer_Data: FooterData = {
     },
     {
       title: '优质线路',
-      icon: { icon: 'heroicons:globe-alt-solid' },
+      icon: 'heroicons:globe-alt-solid',
       links: [
         { name: 'FlyingBird - 飞鸟机场', link: 'https://itheo.top/flyingbird', rel: 'sponsored noreferrer' },
         { name: 'Totoro - 龙猫云', link: 'https://itheo.top/totoro', rel: 'sponsored noreferrer' },
@@ -33,7 +33,7 @@ export const Footer_Data: FooterData = {
     },
     {
       title: '流媒体合租',
-      icon: { icon: 'heroicons:tv-solid' },
+      icon: 'heroicons:tv-solid',
       links: [
         { name: '银河录像局', link: 'https://itheo.top/yh', rel: 'sponsored noreferrer' },
         { name: '奈飞小铺', link: 'https://itheo.top/ihezu', rel: 'sponsored noreferrer' },
@@ -43,7 +43,7 @@ export const Footer_Data: FooterData = {
     },
     {
       title: '相关链接',
-      icon: { icon: 'heroicons:link-16-solid' },
+      icon: 'heroicons:link-16-solid',
       links: [
         { name: 'Theo-Docs', link: 'https://doc.theojs.cn/' },
         { name: '玄学宝典', link: 'https://xx.theojs.cn/' },
