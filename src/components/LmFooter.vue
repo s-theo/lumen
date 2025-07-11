@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { computed, onMounted, ref } from 'vue'
-import { Icon, Link } from './common'
+import { LmIcon, LmLink } from './common'
 import { FooterData, getLocaleKey, isExternal } from '../types'
 
 const props = defineProps<{ Footer_Data: FooterData }>()
@@ -28,20 +28,20 @@ const isHome = computed(() => {
     <div v-if="footer.group?.length" class="list-container">
       <section v-for="(section, index) in footer.group" :key="section.title + index">
         <h3 class="list-title">
-          <Icon v-if="section.icon" class="icon-space" :icon="section.icon" size="12" />
+          <LmIcon v-if="section.icon" class="icon-space" :icon="section.icon" size="12" />
           {{ section.title }}
         </h3>
         <ul class="list-links">
           <li v-for="(link, idx) in section.links" :key="link.link + idx">
-            <Icon v-if="link.icon" class="icon-space" :icon="link.icon" size="12" />
-            <Link
+            <LmIcon v-if="link.icon" class="icon-space" :icon="link.icon" size="12" />
+            <LmLink
               :href="link.link"
               :rel="link.rel"
               :target="link.target"
               :no-icon="footer.noIcon || section.noIcon || link.noIcon || !isExternal(link.link)"
             >
               {{ link.name }}
-            </Link>
+            </LmLink>
           </li>
         </ul>
       </section>
@@ -50,39 +50,39 @@ const isHome = computed(() => {
     <div class="footer-info">
       <span v-if="footer.beian?.icp || footer.beian?.police">
         <p v-if="footer.beian?.icp?.number" class="footer-infotext">
-          <Icon
+          <LmIcon
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
             :icon="footer.beian.icp.icon || 'fluent:globe-shield-48-filled'"
             size="12"
           />
-          <Link
+          <LmLink
             :href="footer.beian.icp.link || 'https://beian.miit.gov.cn/#/Integrated/index'"
             :rel="footer.beian.icp.rel"
             :target="footer.beian.icp.target"
             no-icon
           >
             {{ footer.beian.icp.number }}
-          </Link>
+          </LmLink>
         </p>
 
         <span class="info-spacing"></span>
 
         <p v-if="footer.beian?.police?.number" class="footer-infotext">
-          <Icon
+          <LmIcon
             v-if="footer.beian?.showIcon"
             class="info-icon icon-space"
             :icon="footer.beian.police.icon || 'fluent:shield-checkmark-48-filled'"
             size="12"
           />
-          <Link
+          <LmLink
             :href="footer.beian.police.link || 'https://beian.mps.gov.cn/'"
             :rel="footer.beian.police.rel"
             :target="footer.beian.police.target"
             no-icon
           >
             {{ footer.beian.police.number }}
-          </Link>
+          </LmLink>
         </p>
       </span>
 
@@ -90,15 +90,15 @@ const isHome = computed(() => {
 
       <span v-if="footer.author?.name">
         <p class="footer-infotext">
-          <Icon class="info-icon icon-space" :icon="footer.author.icon || 'ri:copyright-line'" size="12" />
-          <Link
+          <LmIcon class="info-icon icon-space" :icon="footer.author.icon || 'ri:copyright-line'" size="12" />
+          <LmLink
             :href="footer.author.link || `https://github.com/${footer.author.name}`"
             :rel="footer.author.rel"
             :target="footer.author.target"
             no-icon
           >
             {{ Year }} {{ footer.author.name }} {{ footer.author.text || 'All Rights Reserved.' }}
-          </Link>
+          </LmLink>
         </p>
       </span>
     </div>

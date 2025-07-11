@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon, Image, Link } from './common'
+import { LmIcon, LmImage, LmLink } from './common'
 import { BoxCubeItem } from '../types'
 
 const props = defineProps<{
@@ -13,7 +13,7 @@ const props = defineProps<{
     class="grid"
     :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
   >
-    <Link
+    <LmLink
       v-for="(boxcube, index) in props.items"
       :key="boxcube.link + index"
       class="link"
@@ -22,10 +22,10 @@ const props = defineProps<{
       :target="boxcube.target"
       no-icon
     >
-      <Icon v-if="boxcube.icon" :icon="boxcube.icon" :size="boxcube.size || '32'" />
-      <Image v-else-if="boxcube.image" :image="boxcube.image" :size="boxcube.size || '32'" />
+      <LmIcon v-if="boxcube.icon" :icon="boxcube.icon" :size="boxcube.size || '32'" />
+      <LmImage v-else-if="boxcube.image" :image="boxcube.image" :size="boxcube.size || '32'" />
       <span class="name">{{ boxcube.name }}</span>
-    </Link>
+    </LmLink>
   </div>
 </template>
 
