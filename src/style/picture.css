@@ -9,7 +9,7 @@
   display: none;
 }
 
-/* image subtitle */
+/* image figcaption */
 :root:not(.dark) .dark-only + figcaption,
 :root:is(.dark) .light-only + figcaption,
 :root:not(.dark) img[src$='#dark'] + figcaption,
