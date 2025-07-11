@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon, Image, Link } from './common'
+import { LmIcon, LmImage, LmLink } from './common'
 import { CardItem } from '../types'
 
 const props = defineProps<{
@@ -13,7 +13,7 @@ const props = defineProps<{
     class="grid"
     :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
   >
-    <Link
+    <LmLink
       v-for="(card, index) in props.items"
       :key="card.link + index"
       class="link"
@@ -23,12 +23,12 @@ const props = defineProps<{
       no-icon
     >
       <span class="row">
-        <Icon v-if="card.icon" :icon="card.icon" :size="card.size || '64'" />
-        <Image v-else-if="card.image" :image="card.image" :size="card.size || '64'" />
+        <LmIcon v-if="card.icon" :icon="card.icon" :size="card.size || '64'" />
+        <LmImage v-else-if="card.image" :image="card.image" :size="card.size || '64'" />
         <span v-if="card.name" class="name">{{ card.name }}</span>
       </span>
       <p v-if="card.desc" class="desc">{{ card.desc }}</p>
-    </Link>
+    </LmLink>
   </div>
 </template>
 

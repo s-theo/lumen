@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { Icon, Image, Link } from './common'
+import { LmIcon, LmImage, LmLink } from './common'
 import { PillItem } from '../types'
 
 const pill = defineProps<PillItem>()
 </script>
 
 <template>
-  <Link
+  <LmLink
     class="link ignore-header"
     :class="{ 'no-icon-img': !pill.icon && !pill.image }"
     :href="pill.link"
@@ -14,10 +14,10 @@ const pill = defineProps<PillItem>()
     :target="pill.target"
     no-icon
   >
-    <Icon v-if="pill.icon" :icon="pill.icon" :size="pill.size || '14'" />
-    <Image v-else-if="pill.image" :image="pill.image" :size="pill.size || '14'" />
+    <LmIcon v-if="pill.icon" :icon="pill.icon" :size="pill.size || '14'" />
+    <LmImage v-else-if="pill.image" :image="pill.image" :size="pill.size || '14'" />
     <span class="name">{{ pill.name }}</span>
-  </Link>
+  </LmLink>
 </template>
 
 <style scoped>
