@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Icon, Image, Link } from './common'
+import { LmIcon, LmImage, LmLink } from './common'
 import { LinkItem } from '../types'
 
 const props = defineProps<{
@@ -13,7 +13,7 @@ const props = defineProps<{
     class="grid"
     :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
   >
-    <Link
+    <LmLink
       v-for="(link, index) in props.items"
       :key="link.link + index"
       class="link"
@@ -23,12 +23,12 @@ const props = defineProps<{
       no-icon
     >
       <span class="row">
-        <Icon v-if="link.icon" :icon="link.icon" :size="link.size || '32'" />
-        <Image v-else-if="link.image" :image="link.image" :size="link.size || '32'" />
+        <LmIcon v-if="link.icon" :icon="link.icon" :size="link.size || '32'" />
+        <LmImage v-else-if="link.image" :image="link.image" :size="link.size || '32'" />
         <span class="name">{{ link.name }}</span>
       </span>
       <p v-if="link.desc" class="desc">{{ link.desc }}</p>
-    </Link>
+    </LmLink>
   </div>
 </template>
 

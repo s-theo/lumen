@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { Icon, Image, Link } from './common'
+import { LmIcon, LmImage, LmLink } from './common'
 import { AsideAll, AsideItem, AsidePromo, getLocaleKey } from '../types'
 
 const props = defineProps<{ Aside_Data: AsideItem }>()
@@ -19,7 +19,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
 </script>
 
 <template>
-  <Link
+  <LmLink
     v-for="(aside, index) in aside"
     :key="aside.link + index"
     :class="['link', { 'has-promo': isAsidePromo(aside), 'has-name': 'name' in aside }]"
@@ -28,8 +28,8 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
     :target="aside.target"
     no-icon
   >
-    <Icon v-if="aside.icon" :icon="aside.icon" :size="aside.size || '24'" />
-    <Image v-else-if="aside.image" class="icon" :image="aside.image" :size="aside.size || '24'" />
+    <LmIcon v-if="aside.icon" :icon="aside.icon" :size="aside.size || '24'" />
+    <LmImage v-else-if="aside.image" class="icon" :image="aside.image" :size="aside.size || '24'" />
     <div>
       <template v-if="isAsidePromo(aside)">
         <span class="promo" v-html="aside.promo"></span>
@@ -42,7 +42,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
         <p v-if="aside.hide2" class="hide" v-html="aside.hide2"></p>
       </template>
     </div>
-  </Link>
+  </LmLink>
 </template>
 
 <style scoped>
