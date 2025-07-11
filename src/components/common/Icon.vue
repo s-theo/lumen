@@ -24,9 +24,7 @@ const color = computed(() => {
   if ('color' in props.icon) {
     const color = props.icon.color
     if (typeof color === 'string') return color
-    if ('light' in color && 'dark' in color) {
-      return isDark.value ? color.dark : color.light
-    }
+    if ('light' in color && 'dark' in color) return isDark.value ? color.dark : color.light
   }
   return undefined
 })

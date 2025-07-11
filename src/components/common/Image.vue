@@ -15,10 +15,9 @@ const { isDark } = useData()
 
 const image = computed(() => {
   if (typeof props.image === 'string') return props.image
-  if ('light' in props.image && 'dark' in props.image) {
-    return isDark.value ? props.image.dark : props.image.light
-  }
-  return props.image.src
+  if ('light' in props.image && 'dark' in props.image) return isDark.value ? props.image.dark : props.image.light
+  if ('src' in props.image) return props.image.src
+  return undefined
 })
 
 const alt = computed(() => (typeof props.image === 'object' && props.image.alt ? props.image.alt : ''))
