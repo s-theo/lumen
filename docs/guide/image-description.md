@@ -70,9 +70,9 @@ import '@theojs/lumen/pic'
 ```md
 ![效果图](https://i.theojs.cn/logo/Lumen-Logo.webp)
 
-![浅色模式{.light-only}](https://i.theojs.cn/logo/github.svg)
+![浅色模式](https://i.theojs.cn/logo/github.svg){.light-only}
 
-![深色模式{.dark-only}](https://i.theojs.cn/logo/github-dark.svg)
+![深色模式](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
 
 ![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
 
@@ -81,9 +81,9 @@ import '@theojs/lumen/pic'
 
 ![效果图](https://i.theojs.cn/logo/Lumen-Logo.webp)
 
-![浅色模式{.light-only}](https://i.theojs.cn/logo/github.svg)
+![浅色模式](https://i.theojs.cn/logo/github.svg){.light-only}
 
-![深色模式{.dark-only}](https://i.theojs.cn/logo/github-dark.svg)
+![深色模式](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
 
 ![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
 
