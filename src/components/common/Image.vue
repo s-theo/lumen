@@ -13,21 +13,20 @@ defineOptions({ inheritAttrs: false })
 
 const { isDark } = useData()
 
-const currentImage = computed(() => {
+const resImage = computed(() => {
   if (typeof props.image === 'string') return props.image
-  if ('light' in props.image && 'dark' in props.image) {
-    return isDark.value ? props.image.dark : props.image.light
-  }
-  return props.image.src
+  if ('light' in props.image && 'dark' in props.image) return isDark.value ? props.image.dark : props.image.light
+  if ('src' in props.image) return props.image.src
+  return undefined
 })
 
-const altText = computed(() => (typeof props.image === 'object' && props.image.alt ? props.image.alt : ''))
+const resAlt = computed(() => (typeof props.image === 'object' && props.image.alt ? props.image.alt : ''))
 
-const crop = computed(() => {
+const resCrop = computed(() => {
   return typeof props.image === 'object' && 'crop' in props.image ? Boolean(props.image.crop) : false
 })
 
-const cleanedAttrs = computed(() => {
+const resAttrs = computed(() => {
   if (typeof props.image === 'string') return {}
   const { light, dark, crop, ...restAttrs } = props.image
   return restAttrs
@@ -36,13 +35,13 @@ const cleanedAttrs = computed(() => {
 
 <template>
   <img
-    :class="crop ? 'crop' : undefined"
-    :src="currentImage ? withBase(currentImage) : undefined"
-    :alt="altText"
+    :class="resCrop ? 'crop' : undefined"
+    :src="resImage ? withBase(resImage) : undefined"
+    :alt="resAlt"
     :width="size"
     :height="size"
     loading="lazy"
-    v-bind="typeof image === 'string' ? $attrs : { ...cleanedAttrs, ...$attrs }"
+    v-bind="typeof image === 'string' ? $attrs : { ...resAttrs, ...$attrs }"
   />
 </template>
 

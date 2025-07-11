@@ -12,26 +12,24 @@ const props = defineProps<{
 
 const { isDark } = useData()
 
-const currentIcon = computed(() => {
+const resIcon = computed(() => {
   if (typeof props.icon === 'string') return props.icon
   if ('light' in props.icon && 'dark' in props.icon) return isDark.value ? props.icon.dark : props.icon.light
   if ('icon' in props.icon) return props.icon.icon
-  return ''
+  return undefined
 })
 
-const currentColor = computed(() => {
+const resColor = computed(() => {
   if (typeof props.icon !== 'object' || !props.icon) return undefined
   if ('color' in props.icon) {
     const color = props.icon.color
     if (typeof color === 'string') return color
-    if ('light' in color && 'dark' in color) {
-      return isDark.value ? color.dark : color.light
-    }
+    if ('light' in color && 'dark' in color) return isDark.value ? color.dark : color.light
   }
   return undefined
 })
 </script>
 
 <template>
-  <Icon :icon="currentIcon" :color="currentColor" :inline="true" :ssr="true" :width="size" :height="size" />
+  <Icon :icon="resIcon" :color="resColor" :inline="true" :ssr="true" :width="size" :height="size" />
 </template>
