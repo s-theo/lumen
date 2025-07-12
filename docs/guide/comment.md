@@ -63,6 +63,7 @@ import type { WalineData } from '@theojs/lumen'
 export const Waline_Data: WalineData = {
   serverURL: 'https://xxxxxx', // 替换为你的 waline 服务地址     [!code ++]
   lang: 'zh-CN'
+  //其他选项...
 }
 ```
 
@@ -134,7 +135,7 @@ hero:
 ---
 
 # 修改成部署的 Waline 地址  [!code ++]
-<Waline :Waline_Data="{  serverURL: 'https://xxxxxx'  }" />
+<Waline :Waline_Data="{  serverURL: 'https://xxxxxx', ...其他选项  }" />
 
 ```
 
