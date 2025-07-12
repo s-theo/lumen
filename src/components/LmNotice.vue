@@ -59,7 +59,7 @@ const notice = useNotice()
 
 .title {
   font-weight: 600;
-  font-size: 0.8em;
+  font-size: 0.75em;
 }
 
 .desc {

@@ -111,14 +111,14 @@ ul:last-of-type {
   opacity: 0;
   transition: opacity 0.5s;
   color: var(--Aside-hide);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.75em;
   line-height: 1;
 }
 
 .link .info {
   color: var(--Aside-info);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.75em;
   line-height: 1.2;
 }

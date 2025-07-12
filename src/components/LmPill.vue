@@ -95,6 +95,7 @@ const pill = defineProps<PillItem>()
 
 .name {
   color: var(--Pill-name);
+  font-weight: 500;
   font-size: 0.875em;
 }
 </style>

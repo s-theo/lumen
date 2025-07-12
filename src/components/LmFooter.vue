@@ -140,7 +140,8 @@ const isHome = computed(() => {
 }
 
 .list-links {
-  opacity: 0.9;
+  opacity: 0.75;
+  font-weight: 500;
   font-size: 0.75em;
   line-height: 2.4;
 }
@@ -162,6 +163,7 @@ const isHome = computed(() => {
 .footer-infotext {
   display: inline-block;
   margin: 0;
+  font-weight: 500;
   font-size: 0.75em;
 }
 
