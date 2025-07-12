@@ -90,7 +90,7 @@ const props = defineProps<{
   overflow: hidden;
   color: var(--Card-name);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   text-align: center;
   text-overflow: ellipsis;
@@ -101,6 +101,7 @@ const props = defineProps<{
   align-self: flex-start;
   margin: 0.875em 0 0 0;
   color: var(--Card-desc);
+  font-weight: 500;
   font-size: 0.75em;
   line-height: 1.5;
 }

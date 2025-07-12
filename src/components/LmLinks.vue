@@ -89,7 +89,7 @@ const props = defineProps<{
   overflow: hidden;
   color: var(--Links-name);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -98,6 +98,7 @@ const props = defineProps<{
 .desc {
   margin: 0.875em 0 0 0;
   color: var(--Links-desc);
+  font-weight: 500;
   font-size: 0.75em;
   line-height: 1.5;
 }

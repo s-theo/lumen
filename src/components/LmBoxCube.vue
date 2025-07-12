@@ -77,6 +77,7 @@ const props = defineProps<{
   max-width: 80%;
   overflow: hidden;
   color: var(--Boxcube-name);
+  font-weight: 600;
   font-size: 0.75em;
   text-align: center;
   text-overflow: ellipsis;
