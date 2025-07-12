@@ -59,6 +59,7 @@ export default defineConfig({
           默认: 'logos:vue',
           '自定义 2 列': 'logos:vue',
           '自定义 3 列': 'logos:vue',
+          '自定义 5 列': 'logos:vue',
           '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg'
         }
       }),
