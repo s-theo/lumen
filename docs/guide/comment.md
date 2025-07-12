@@ -11,8 +11,8 @@ description: 了解如何通过 @theojs/lumen 插件将 Waline 评论系统集�
   :grid="2"
   :items="[
     {
-      name: '如何部署请查看 waline 文档',
       image: { src: 'https://waline.js.org/logo.png', alt: 'waline icon' },
+      name: '如何部署请查看 waline 文档',
       desc: '一款简洁、安全的评论系统。',
       link: 'https://waline.js.org/guide/get-started/'
     }
@@ -67,7 +67,7 @@ export const Waline_Data: WalineData = {
 }
 ```
 
-### 接口说明 <Pill name="查看 waline 接口说明文档"  link="https://waline.js.org/reference/client/props.html" image="https://waline.js.org/logo.png" alt='waline icon'/>
+### 接口说明 <Pill :image="{ src: 'https://waline.js.org/logo.png', alt: 'waline icon' }" name="查看 waline 接口说明文档" link="https://waline.js.org/reference/client/props.html" />
 
 ::: tip
 `path` 属性已通过 **VitePress** 提供的 `useRoute()` 自动获取，一般无需手动设置；**如有特殊需求，也可以自行覆盖**。
@@ -141,4 +141,4 @@ hero:
 
 ### CSS 变量
 
-已预设 <Pill name="部分 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/style/components-var.css" icon="unjs:theme-colors" />，如需进一步自定义，可参考 <Pill name="Waline 官方文档" link="https://waline.js.org/reference/client/style.html" image="https://waline.js.org/logo.png" alt="waline icon" /> 通过覆盖样式实现个性化调整。
+已预设 <Pill icon="unjs:theme-colors" name="部分 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/style/components-var.css" />，如需进一步自定义，可参考 <Pill :image="{ src: 'https://waline.js.org/logo.png', alt: 'waline icon' }" name="Waline 官方文档" link="https://waline.js.org/reference/client/style.html" /> 通过覆盖样式实现个性化调整。
