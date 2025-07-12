@@ -101,6 +101,7 @@ const props = defineProps<{
   font-weight: 500;
   font-size: 0.75em;
   line-height: 1.5;
+  word-break: break-all;
 }
 
 @media (max-width: 600px) {

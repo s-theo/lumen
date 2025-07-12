@@ -104,12 +104,12 @@ export default {
 
 ::: code-group
 <<< ./example/Card.vue[默认]
-<<< ./example/Card-grid-2.vue[自定义 2 列]
+<<< ./example/Card-grid-5.vue[自定义 5 列]
 :::
 **输出**
 
 <!--@include: ./example/Card.vue-->
-<!--@include: ./example/Card-grid-2.vue-->
+<!--@include: ./example/Card-grid-5.vue-->
 
 ### 参数说明
 
