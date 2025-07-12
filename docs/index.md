@@ -104,6 +104,8 @@ features:
 }
 </style>
 
-<!-- <Waline :Waline_Data="{  serverURL: 'https://waline-lumen.netlify.app/.netlify/functions/comment/'   ,lang: 'zh-CN',
-  noCopyright: true,
-  reaction: true }" /> -->
+<!-- <script setup lang="ts">
+import { Waline_Data } from './.vitepress/data'
+</script>
+
+<Waline :Waline_Data="Waline_Data" /> -->
