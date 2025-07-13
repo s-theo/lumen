@@ -66,4 +66,4 @@ hero:
 | `dateText` | `string`     | 活动时间的文字说明，默认为 `活动时间: 即日至`，可自定义显示文案。                                                                      | <Badge text="可选" /> |
 | `dateIcon` | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
 
-<!--@include: ./type.md{1,10}-->
+<!--@include: ./type.md{1,12}-->

@@ -1,12 +1,12 @@
-<Links
-  :grid="2"
+<Card
+  :grid="4"
   :items="[
     // 普通图片
     {
       image: { src: 'https://i.theojs.cn/logo/alipay.svg', alt: 'alipay icon' },
       name: '支付宝',
       desc: '移动支付平台，提供便捷的在线支付和转账服务',
-      link: 'https://i.theojs.cn/alipay.webp/'
+      link: 'https://i.theojs.cn/alipay.webp'
     },
     // 深浅模式图片
     {

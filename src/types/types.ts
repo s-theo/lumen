@@ -17,6 +17,8 @@ export type IconType =
   | string
   | { icon: string; color?: IconImageMode }
   | { light: string; dark: string; color?: IconImageMode }
+  | { svg: string }
+  | { svg: { light: string; dark: string } }
 
 export type ImageType =
   | string

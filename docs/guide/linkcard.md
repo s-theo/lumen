@@ -27,12 +27,18 @@ export default {
 ## Pill
 
 **输入**
-
-<<< ./example/Pill.vue{vue-html}
-
+::: code-group
+<<< ./example/Pill-iconify.vue{vue-html}[Iconify]
+<<< ./example/Pill-svg.vue{vue-html}[svg]
+<<< ./example/Pill-image.vue{vue-html}[image]
+:::
 **输出**
 
-<!--@include: ./example/Pill.vue-->
+<!--@include: ./example/Pill-iconify.vue-->
+
+<!--@include: ./example/Pill-svg.vue-->
+
+<!--@include: ./example/Pill-image.vue-->
 
 ### 参数说明
 
@@ -50,16 +56,16 @@ export default {
 
 **输入**
 ::: code-group
-<<< ./example/Links.vue[默认]
-<<< ./example/Links-grid-2.vue[自定义 2 列]
-<<< ./example/Links-grid-3.vue[自定义 3 列]
+<<< ./example/Links-iconify.vue{vue-html}[Iconify]
+<<< ./example/Links-svg.vue[svg]
+<<< ./example/Links-image.vue{vue-html}[image]
 :::
 
 **输出**
 
-<!--@include: ./example/Links.vue-->
-<!--@include: ./example/Links-grid-2.vue-->
-<!--@include: ./example/Links-grid-3.vue-->
+<!--@include: ./example/Links-iconify.vue-->
+<!--@include: ./example/Links-svg.vue-->
+<!--@include: ./example/Links-image.vue-->
 
 ### 参数说明
 
@@ -78,12 +84,17 @@ export default {
 ## BoxCube
 
 **输入**
-
-<<< ./example/BoxCube.vue
+::: code-group
+<<< ./example/BoxCube-iconify.vue[Iconify]
+<<< ./example/BoxCube-svg.vue[svg]
+<<< ./example/BoxCube-image.vue[image]
+:::
 
 **输出**
 
-<!--@include: ./example/BoxCube.vue-->
+<!--@include: ./example/BoxCube-iconify.vue-->
+<!--@include: ./example/BoxCube-svg.vue-->
+<!--@include: ./example/BoxCube-image.vue-->
 
 ### 参数说明
 
@@ -103,13 +114,15 @@ export default {
 **输入**
 
 ::: code-group
-<<< ./example/Card.vue[默认]
-<<< ./example/Card-grid-5.vue[自定义 5 列]
+<<< ./example/Card-iconify.vue[Iconify]
+<<< ./example/Card-svg.vue[svg]
+<<< ./example/Card-image.vue[image]
 :::
 **输出**
 
-<!--@include: ./example/Card.vue-->
-<!--@include: ./example/Card-grid-5.vue-->
+<!--@include: ./example/Card-iconify.vue-->
+<!--@include: ./example/Card-svg.vue-->
+<!--@include: ./example/Card-image.vue-->
 
 ### 参数说明
 
