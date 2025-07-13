@@ -3,7 +3,7 @@
   :items="[
     // 图片
     {
-      image: { src: 'https://i.theojs.cn/logo/alipay.svg', alt: 'alipay icon' },
+      image: 'https://i.theojs.cn/logo/alipay.svg',
       name: '支付宝',
       link: 'https://i.theojs.cn/alipay.webp'
     },
@@ -12,7 +12,6 @@
       image: {
         light: 'https://i.theojs.cn/logo/github.svg',
         dark: 'https://i.theojs.cn/logo/github-dark.svg',
-        alt: 'github icon',
         crop: true
       },
       size: 48,

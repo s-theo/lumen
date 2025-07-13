@@ -2,8 +2,6 @@ import type { WalineProps } from '@waline/client/full'
 
 /** 图标和图片的类型 */
 export type IconImageMode = string | { light: string; dark: string }
-/** Alt 文本类型 */
-export type AltType = string | undefined
 /** 尺寸类型 */
 export type SizeType = null | string | number
 /** 链接类型 */
@@ -22,8 +20,8 @@ export type IconType =
 
 export type ImageType =
   | string
-  | { src: string; crop?: boolean; alt?: AltType; [prop: string]: any }
-  | { light: string; dark: string; crop?: boolean; alt?: AltType; [prop: string]: any }
+  | { src: string; crop?: boolean; [prop: string]: any }
+  | { light: string; dark: string; crop?: boolean; [prop: string]: any }
 
 /** DocPill 接口 */
 export interface PillItem {
