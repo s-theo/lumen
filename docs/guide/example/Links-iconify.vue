@@ -1,4 +1,16 @@
 <Links
+  :items="[
+    {
+      icon: { icon: 'line-md:iconify2-static', color: '#1769AA' },
+      size: 48,
+      name: 'iconify',
+      desc: '开源的图标库，提供了数以万计的矢量图标，支持多种框架和平台。它允许开发者轻松地在项目中使用各种图标，并且支持深浅模式切换。',
+      link: 'https://iconify.design/'
+    }
+  ]"
+/>
+
+<Links
   :grid="3"
   :items="[
     // 深浅模式 iconify 图标
@@ -15,27 +27,11 @@
       desc: '极速的现代前端构建工具，支持热更新与按需加载。',
       link: 'https://vitejs.dev/'
     },
-    {
-      icon: { light: 'skill-icons:netlify-light', dark: 'skill-icons:netlify-dark' },
-      name: 'Netlify',
-      desc: '提供 CI/CD、自动构建和无服务器函数的前端部署平台。',
-      link: 'https://www.netlify.com/'
-    },
     // 无图标
     {
       name: 'MDN Web Docs',
       desc: '权威的 Web 技术文档库，涵盖 HTML、CSS 和 JavaScript。',
       link: 'https://developer.mozilla.org/'
-    },
-    {
-      name: 'Stack Overflow',
-      desc: '全球最大程序员问答社区，快速解决开发难题。',
-      link: 'https://stackoverflow.com/'
-    },
-    {
-      name: 'DevDocs',
-      desc: '整合多种技术文档的搜索工具，支持离线访问。',
-      link: 'https://devdocs.io/'
     }
   ]"
 />

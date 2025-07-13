@@ -56,11 +56,10 @@ export default defineConfig({
           按需导入: 'logos:typescript-icon',
           全量导入: 'logos:typescript-icon',
           单独导入: 'logos:typescript-icon',
-          默认: 'logos:vue',
-          '自定义 2 列': 'logos:vue',
-          '自定义 3 列': 'logos:vue',
-          '自定义 5 列': 'logos:vue',
-          '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg'
+          svg: 'logos:svg',
+          image: 'vscode-icons:file-type-image',
+          '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg',
+          iconify: 'https://i.theojs.cn/logo/iconify.svg'
         }
       }),
       llmstxt({})

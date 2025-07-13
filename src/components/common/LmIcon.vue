@@ -16,6 +16,13 @@ const resIcon = computed(() => {
   if (typeof props.icon === 'string') return props.icon
   if ('light' in props.icon && 'dark' in props.icon) return isDark.value ? props.icon.dark : props.icon.light
   if ('icon' in props.icon) return props.icon.icon
+
+  if ('svg' in props.icon) {
+    const svg = props.icon.svg
+    if (typeof svg === 'string') return svg
+    if (svg && typeof svg === 'object' && 'light' in svg && 'dark' in svg) return isDark.value ? svg.dark : svg.light
+  }
+
   return undefined
 })
 
@@ -28,8 +35,23 @@ const resColor = computed(() => {
   }
   return undefined
 })
+
+const resSvgSize = (svgString: string, size: string) => {
+  if (typeof window !== 'undefined') {
+    const svgElement = new DOMParser().parseFromString(svgString, 'image/svg+xml').querySelector('svg')
+    svgElement?.setAttribute('width', size)
+    svgElement?.setAttribute('height', size)
+    return svgElement?.outerHTML ?? svgString
+  }
+  return svgString
+}
+
+const resSvg = computed(() => {
+  return resIcon.value?.includes('<svg') && props.size ? resSvgSize(resIcon.value, String(props.size)) : null
+})
 </script>
 
 <template>
-  <Icon :icon="resIcon" :color="resColor" :inline="true" :ssr="true" :width="size" :height="size" />
+  <span v-if="resSvg" class="iconify" aria-hidden="true" v-html="resSvg" />
+  <Icon v-else :icon="resIcon" :color="resColor" :inline="true" :ssr="true" :width="size" :height="size" />
 </template>

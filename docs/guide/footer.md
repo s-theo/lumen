@@ -141,4 +141,4 @@ export default {
 | `text`   | `string`     | 版权声明尾句，显示在作者名称后。可自定义该文本，默认值为 `All Rights Reserved.`。                                                      | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
 
-<!--@include: ./type.md{1,10}-->
+<!--@include: ./type.md{1,12}-->
