@@ -42,7 +42,7 @@ import '@theojs/lumen/pic'
 
 ### 示例
 
-```vue
+```vue-html
 <iconify-icon icon="simple-icons:fontawesome"></iconify-icon>
 <iconify-icon icon="line-md:iconify2-static"></iconify-icon>
 <iconify-icon icon="cil:locomotive" height="36"></iconify-icon>
@@ -263,7 +263,7 @@ console.log('Hello, VitePress!')
 
 ### 4. Badge 组件
 
-```vue
+```vue-html
 <Badge type="info" text="default" />
 <Badge type="tip" text="^1.9.0" />
 <Badge type="warning" text="beta" />
