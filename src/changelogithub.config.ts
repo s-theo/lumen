@@ -1,22 +1,19 @@
 export default {
-  // 定义不同类型提交的显示方式和对应的语义化版本（SemVer）更新级别
   types: {
-    feat: { title: 'Features', semver: 'minor' },
-    fix: { title: 'Bug Fixes', semver: 'patch' },
+    feat: { title: 'Features' },
+    fix: { title: 'Bug Fixes' },
     docs: { title: 'Documentation' },
     style: { title: 'Styles' },
-    refactor: { title: 'Refactors', semver: 'patch' },
+    refactor: { title: 'Refactors' },
     perf: { title: 'Performance' },
     test: { title: 'Tests' },
-    chore: { title: 'Chore', semver: 'patch' },
-    build: { title: 'Build', semver: 'patch' },
+    chore: { title: 'Chore' },
+    build: { title: 'Build' },
     ci: { title: 'CI' }
   },
 
   // 重大更改
-  titles: {
-    breakingChanges: 'Breaking Changes'
-  },
+  titles: { breakingChanges: 'Breaking Changes' },
 
   // 是否包含贡献者列表
   contributors: false,
