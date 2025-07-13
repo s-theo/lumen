@@ -59,7 +59,7 @@ export default {
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
 | `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。详情查看 [ImageType](#ImageType)                                                     | <Badge text="可选" /> |
-| `size`   | `SizeType`   | 控制图片或者图标的的尺寸 默认为 `width="24" height="24"       `                                                                        | <Badge text="可选" /> |
+| `size`   | `SizeType`   | 控制图片或者图标的`width`和`height` 默认值为 `24`                                                                                      | <Badge text="可选" /> |
 | `info1`  | `string`     | 附加信息 1，例如：`"新用户立减 5 元"`。                                                                                                | <Badge text="可选" /> |
 | `info2`  | `string`     | 附加信息 2，例如：`"优惠截止至 6 月 30 日"`。                                                                                          | <Badge text="可选" /> |
 
@@ -73,7 +73,7 @@ export default {
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
 | `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。详情查看 [ImageType](#ImageType)                                                     | <Badge text="可选" /> |
-| `size`   | `SizeType`   | 控制图片或者图标的的尺寸 默认为 `width="24" height="24"       `                                                                        | <Badge text="可选" /> |
+| `size`   | `SizeType`   | 控制图片或者图标的`width`和`height` 默认值为 `24`                                                                                      | <Badge text="可选" /> |
 | `hide1`  | `string`     | 隐藏信息 1，悬停时显示。例如：`"仅限中国大陆用户"`。                                                                                   | <Badge text="可选" /> |
 | `hide2`  | `string`     | 隐藏信息 2，用于补充额外提示。例如：`"每日限量 500 名"`。                                                                              | <Badge text="可选" /> |
 
