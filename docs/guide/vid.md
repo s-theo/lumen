@@ -35,7 +35,7 @@ export default {
 只需传入平台标识 `is` 和视频 ID `id` 即可实现视频嵌入。未传 `is` 默认使用 YouTube。
 :::
 
-```vue
+```vue-html
 <!-- YouTube 视频 -->
 <Vid id="dQw4w9WgXcQ" />
 <!-- 指定平台 -->
@@ -56,7 +56,7 @@ export default {
 
 ### 自定义视频链接示例
 
-```vue
+```vue-html
 <!-- 其他视频平台嵌入 -->
 <Vid src="https://geo.dailymotion.com/player.html?video=x7z0ovx" />
 

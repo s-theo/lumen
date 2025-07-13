@@ -57,7 +57,7 @@ export default {
 **输入**
 ::: code-group
 <<< ./example/Links-iconify.vue{vue-html}[Iconify]
-<<< ./example/Links-svg.vue[svg]
+<<< ./example/Links-svg.vue{vue-html}[svg]
 <<< ./example/Links-image.vue{vue-html}[image]
 :::
 
@@ -85,9 +85,9 @@ export default {
 
 **输入**
 ::: code-group
-<<< ./example/BoxCube-iconify.vue[Iconify]
-<<< ./example/BoxCube-svg.vue[svg]
-<<< ./example/BoxCube-image.vue[image]
+<<< ./example/BoxCube-iconify.vue{vue-html}[Iconify]
+<<< ./example/BoxCube-svg.vue{vue-html}[svg]
+<<< ./example/BoxCube-image.vue{vue-html}[image]
 :::
 
 **输出**
@@ -114,9 +114,9 @@ export default {
 **输入**
 
 ::: code-group
-<<< ./example/Card-iconify.vue[Iconify]
-<<< ./example/Card-svg.vue[svg]
-<<< ./example/Card-image.vue[image]
+<<< ./example/Card-iconify.vue{vue-html}[Iconify]
+<<< ./example/Card-svg.vue{vue-html}[svg]
+<<< ./example/Card-image.vue{vue-html}[image]
 :::
 **输出**
 

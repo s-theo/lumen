@@ -13,15 +13,14 @@ head:
 
 ![侧边栏 - 效果图|300x0](https://i.theojs.cn/docs/docasidelogo-dark.webp#dark '侧边栏 - 效果图')
 
-## 创建数据
+## 创建数据 (点击打开查看)
 
-在 `.vitepress` 目录下新建 `data/AsideData.ts` 文件，并添加以下内容：
-::: details 点开查看
-<<< ./example/AsideData.ts
+::: details 在 `.vitepress` 目录下新建 `data/AsideData.ts` 文件，并添加以下内容：
+<<< ./example/AsideData.ts[.vitepress/data/AsideData.ts]
 :::
-或者支持 `i18n`
-::: details 点开查看
-<<< ./example/AsideData_i18n.ts
+
+::: details 或者支持 `i18n`
+<<< ./example/AsideData_i18n.ts[.vitepress/data/AsideData_i18n.ts]
 :::
 
 ## 引入组件
