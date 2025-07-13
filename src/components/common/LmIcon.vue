@@ -35,9 +35,23 @@ const resColor = computed(() => {
   }
   return undefined
 })
+
+const resSvgSize = (svgString: string, size: string) => {
+  if (typeof window !== 'undefined') {
+    const svgElement = new DOMParser().parseFromString(svgString, 'image/svg+xml').querySelector('svg')
+    svgElement?.setAttribute('width', size)
+    svgElement?.setAttribute('height', size)
+    return svgElement?.outerHTML ?? svgString
+  }
+  return svgString
+}
+
+const resSvg = computed(() => {
+  return resIcon.value?.includes('<svg') && props.size ? resSvgSize(resIcon.value, String(props.size)) : null
+})
 </script>
 
 <template>
-  <span v-if="resIcon && resIcon.startsWith('<svg')" class="iconify" aria-hidden="true" v-html="resIcon" />
+  <span v-if="resIcon && resIcon.startsWith('<svg')" class="iconify" aria-hidden="true" v-html="resSvg" />
   <Icon v-else :icon="resIcon" :color="resColor" :inline="true" :ssr="true" :width="size" :height="size" />
 </template>
