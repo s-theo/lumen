@@ -39,6 +39,7 @@ const resAttrs = computed(() => {
     :height="size"
     loading="lazy"
     aria-hidden="true"
+    alt=""
     v-bind="typeof image === 'string' ? $attrs : { ...resAttrs, ...$attrs }"
   />
 </template>
