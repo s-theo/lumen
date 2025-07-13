@@ -16,6 +16,6 @@ export type IconType =
 ```ts
 export type ImageType =
   | string
-  | { src: string; crop?: boolean; alt?: AltType; [prop: string]: any }
-  | { light: string; dark: string; crop?: boolean; alt?: AltType; [prop: string]: any }
+  | { src: string; crop?: boolean; [prop: string]: any }
+  | { light: string; dark: string; crop?: boolean; [prop: string]: any }
 ```

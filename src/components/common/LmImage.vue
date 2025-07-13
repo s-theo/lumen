@@ -20,8 +20,6 @@ const resImage = computed(() => {
   return undefined
 })
 
-const resAlt = computed(() => (typeof props.image === 'object' && props.image.alt ? props.image.alt : ''))
-
 const resCrop = computed(() => {
   return typeof props.image === 'object' && 'crop' in props.image ? Boolean(props.image.crop) : false
 })
@@ -37,10 +35,10 @@ const resAttrs = computed(() => {
   <img
     :class="resCrop ? 'crop' : undefined"
     :src="resImage ? withBase(resImage) : undefined"
-    :alt="resAlt"
     :width="size"
     :height="size"
     loading="lazy"
+    aria-hidden="true"
     v-bind="typeof image === 'string' ? $attrs : { ...resAttrs, ...$attrs }"
   />
 </template>
