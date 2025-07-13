@@ -39,7 +39,7 @@ export interface PillItem {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
-  /** 图片和图标大小 */
+  /** 图片和图标大小 @default '14' */
   size?: SizeType
 }
 
@@ -59,7 +59,7 @@ export interface LinkItem {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
-  /** 图片和图标大小 */
+  /** 图片和图标大小 @default '32' */
   size?: SizeType
 }
 
@@ -77,7 +77,7 @@ export interface BoxCubeItem {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
-  /** 图片和图标大小 */
+  /** 图片和图标大小 @default '32' */
   size?: SizeType
 }
 
@@ -97,7 +97,7 @@ export interface CardItem {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
-  /** 图片和图标大小 */
+  /** 图片和图标大小 @default '48' */
   size?: SizeType
 }
 
@@ -119,7 +119,7 @@ export interface Promo {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
-  /** 图片和图标大小 */
+  /** 图片和图标大小 @default '24' */
   size?: SizeType
 }
 
@@ -141,7 +141,7 @@ export interface Normal {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
-  /** 图片和图标大小 */
+  /** 图片和图标大小 @default '24' */
   size?: SizeType
 }
 
@@ -163,8 +163,9 @@ export type AsideAll = AsidePromo | AsideNormal
 /**
  * AsideItem 类型：支持两种结构
  *
- * - 单语言：直接是 AsideAll[] 数组
- * - 多语言：包裹在 i18n 对象中，按语言划分不同的 AsideAll[] 内容
+ * 单语言：直接是 AsideAll[] 数组
+ *
+ * 多语言：包裹在 i18n 对象中，按语言划分不同的 AsideAll[] 内容
  */
 export type AsideItem = AsideAll[] | { i18n: Record<string, AsideAll[]> }
 
@@ -184,7 +185,7 @@ export interface NoticeItem {
   date?: string
   /** 日期文本 */
   dateText?: string
-  /** 日期图标 */
+  /** 日期图标 @default 'line-md:calendar' */
   dateIcon?: IconType
 }
 
@@ -250,7 +251,7 @@ export interface Beian {
 export interface Icp {
   /** ICP 备案号 */
   number?: string
-  /** ICP 图标，@default 'fluent:globe-shield-48-filled' */
+  /** ICP 图标 @default 'fluent:globe-shield-48-filled' */
   icon?: IconType
   /** ICP网站或自定义链接 */
   link?: LinkType
@@ -264,7 +265,7 @@ export interface Icp {
 export interface Police {
   /** 公安备案号 */
   number?: string
-  /** 公安备案图标，@default 'fluent:shield-checkmark-48-filled' */
+  /** 公安备案图标 @default 'fluent:shield-checkmark-48-filled' */
   icon?: IconType
   /** 公安备案网站或自定义链接 */
   link?: LinkType
@@ -284,7 +285,7 @@ export interface Author {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 版权图标图标 */
+  /** 版权图标图标 @default 'ri:copyright-line' */
   icon?: IconType
   /** 版权文本 */
   text?: string

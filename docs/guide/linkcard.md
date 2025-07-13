@@ -50,7 +50,7 @@ export default {
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
 | `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。详情查看 [ImageType](#ImageType)                                                     | <Badge text="可选" /> |
-| `size`   | `SizeType`   | 控制图片或者图标的的尺寸 默认为 `width="14" height="14"`                                                                               | <Badge text="可选" /> |
+| `size`   | `SizeType`   | 控制图片或者图标的`width`和`height` 默认值为 `14`                                                                                      | <Badge text="可选" /> |
 
 ## Links
 
@@ -79,7 +79,7 @@ export default {
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
 | `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。详情查看 [ImageType](#ImageType)                                                     | <Badge text="可选" /> |
-| `size`   | `SizeType`   | 控制图片或者图标的的尺寸 默认为 `width="32" height="32"`                                                                               | <Badge text="可选" /> |
+| `size`   | `SizeType`   | 控制图片或者图标的`width`和`height` 默认值为 `32`                                                                                      | <Badge text="可选" /> |
 
 ## BoxCube
 
@@ -107,7 +107,7 @@ export default {
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
 | `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。详情查看 [ImageType](#ImageType)                                                     | <Badge text="可选" /> |
-| `size`   | `SizeType`   | 控制图片或者图标的的尺寸 默认为 `width="32" height="32"`                                                                               | <Badge text="可选" /> |
+| `size`   | `SizeType`   | 控制图片或者图标的`width`和`height` 默认值为 `32`                                                                                      | <Badge text="可选" /> |
 
 ## Card
 
@@ -136,6 +136,6 @@ export default {
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 | `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
 | `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。详情查看 [ImageType](#ImageType)                                                     | <Badge text="可选" /> |
-| `size`   | `SizeType`   | 控制图片或者图标的的尺寸 默认为 `width="48" height="48"`                                                                               | <Badge text="可选" /> |
+| `size`   | `SizeType`   | 控制图片或者图标的`width`和`height` 默认值为 `48`                                                                                      | <Badge text="可选" /> |
 
 <!--@include: ./type.md-->
