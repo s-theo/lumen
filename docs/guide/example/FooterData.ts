@@ -13,10 +13,10 @@ export const Footer_Data: FooterData = {
       rel: 'noopener noreferrer'
     },
     police: {
-      icon: {
-        light: 'fluent:shield-checkmark-48-filled',
-        dark: 'fluent:shield-checkmark-48-filled',
-        color: { light: 'rgba(20, 255, 150, 1)', dark: 'rgba(100, 255, 200, 1)' }
+      image: {
+        light: 'https://example.com/light-image.png',
+        dark: 'https://example.com/dark-image.png',
+        crop: true
       },
       number: '粤公网安备12345678号',
       rel: 'noopener noreferrer'
