@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { LmIcon, LmLink } from './common'
+import { LmIcon, LmLink, LmImage } from './common'
 import { useNotice } from '../types'
 
 const notice = useNotice()
@@ -19,7 +19,9 @@ const notice = useNotice()
       <span class="title" v-html="notice.title"></span>
       <p v-if="notice.desc" class="desc" v-html="notice.desc"></p>
       <div v-if="notice.date" class="time-info">
-        <LmIcon :icon="notice.dateIcon || 'line-md:calendar'" size="14" />
+        <LmIcon v-if="notice.dateIcon" :icon="notice.dateIcon" size="14" />
+        <LmImage v-else-if="notice.dateImage" :image="notice.dateImage" size="14" />
+        <LmIcon v-else :icon="'line-md:calendar'" size="14" />
         <time v-html="notice.dateText || '活动时间: 即日至'"></time>
         <time class="date">{{ notice.date }}</time>
       </div>
