@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { computed, onMounted, ref } from 'vue'
-import { LmIcon, LmLink } from './common'
+import { LmIcon, LmLink, LmImage } from './common'
 import { FooterData, getLocaleKey, isExternal } from '../types'
 
 const props = defineProps<{ Footer_Data: FooterData }>()
@@ -29,11 +29,13 @@ const isHome = computed(() => {
       <section v-for="(section, index) in footer.group" :key="section.title + index">
         <h3 class="list-title">
           <LmIcon v-if="section.icon" class="icon-space" :icon="section.icon" size="12" />
+          <LmImage v-else-if="section.image" class="image-inline" :image="section.image" size="12" />
           {{ section.title }}
         </h3>
         <ul class="list-links">
           <li v-for="(link, idx) in section.links" :key="link.link + idx">
             <LmIcon v-if="link.icon" class="icon-space" :icon="link.icon" size="12" />
+            <LmImage v-else-if="link.image" class="image-inline" :image="link.image" size="12" />
             <LmLink
               :href="link.link"
               :rel="link.rel"
@@ -48,14 +50,18 @@ const isHome = computed(() => {
     </div>
 
     <div class="footer-info">
-      <span v-if="footer.beian?.icp || footer.beian?.police">
-        <p v-if="footer.beian?.icp?.number" class="footer-infotext">
-          <LmIcon
-            v-if="footer.beian?.showIcon"
-            class="info-icon icon-space"
-            :icon="footer.beian.icp.icon || 'fluent:globe-shield-48-filled'"
-            size="12"
-          />
+      <template v-if="footer.beian?.icp || footer.beian?.police">
+        <span v-if="footer.beian?.icp?.number" class="footer-infotext">
+          <template v-if="footer.beian?.showIcon">
+            <LmIcon v-if="footer.beian.icp.icon" class="icon-space" :icon="footer.beian.icp.icon" size="12" />
+            <LmImage
+              v-else-if="footer.beian.icp.image"
+              class="image-inline"
+              :image="footer.beian.icp.image"
+              size="12"
+            />
+            <LmIcon v-else class="icon-space" icon="fluent:globe-shield-48-filled" size="12" />
+          </template>
           <LmLink
             :href="footer.beian.icp.link || 'https://beian.miit.gov.cn/#/Integrated/index'"
             :rel="footer.beian.icp.rel"
@@ -64,17 +70,21 @@ const isHome = computed(() => {
           >
             {{ footer.beian.icp.number }}
           </LmLink>
-        </p>
+        </span>
 
         <span class="info-spacing"></span>
 
-        <p v-if="footer.beian?.police?.number" class="footer-infotext">
-          <LmIcon
-            v-if="footer.beian?.showIcon"
-            class="info-icon icon-space"
-            :icon="footer.beian.police.icon || 'fluent:shield-checkmark-48-filled'"
-            size="12"
-          />
+        <span v-if="footer.beian?.police?.number" class="footer-infotext">
+          <template v-if="footer.beian?.showIcon">
+            <LmIcon v-if="footer.beian.police.icon" class="icon-space" :icon="footer.beian.police.icon" size="12" />
+            <LmImage
+              v-else-if="footer.beian.police.image"
+              class="image-inline"
+              :image="footer.beian.police.image"
+              size="12"
+            />
+            <LmIcon v-else class="icon-space" icon="fluent:shield-checkmark-48-filled" size="12" />
+          </template>
           <LmLink
             :href="footer.beian.police.link || 'https://beian.mps.gov.cn/'"
             :rel="footer.beian.police.rel"
@@ -83,23 +93,23 @@ const isHome = computed(() => {
           >
             {{ footer.beian.police.number }}
           </LmLink>
-        </p>
-      </span>
+        </span>
+      </template>
 
       <span class="info-spacing-copyright"></span>
 
-      <span v-if="footer.author?.name">
-        <p class="footer-infotext">
-          <LmIcon class="info-icon icon-space" :icon="footer.author.icon || 'ri:copyright-line'" size="12" />
-          <LmLink
-            :href="footer.author.link || `https://github.com/${footer.author.name}`"
-            :rel="footer.author.rel"
-            :target="footer.author.target"
-            no-icon
-          >
-            {{ Year }} {{ footer.author.name }} {{ footer.author.text || 'All Rights Reserved.' }}
-          </LmLink>
-        </p>
+      <span v-if="footer.author?.name" class="footer-infotext">
+        <LmIcon v-if="footer.author.icon" class="icon-space" :icon="footer.author.icon" size="12" />
+        <LmImage v-else-if="footer.author.image" class="image-inline" :image="footer.author.image" size="12" />
+        <LmIcon v-else class="icon-space" :icon="'ri:copyright-line'" size="12" />
+        <LmLink
+          :href="footer.author.link || `https://github.com/${footer.author.name}`"
+          :rel="footer.author.rel"
+          :target="footer.author.target"
+          no-icon
+        >
+          {{ Year }} {{ footer.author.name }} {{ footer.author.text || 'All Rights Reserved.' }}
+        </LmLink>
       </span>
     </div>
   </footer>
@@ -165,6 +175,7 @@ const isHome = computed(() => {
   margin: 0;
   font-weight: 500;
   font-size: 0.75em;
+  line-height: 1.6;
 }
 
 .info-spacing,
@@ -172,8 +183,10 @@ const isHome = computed(() => {
   margin-left: 1em;
 }
 
-.info-icon {
+.image-inline {
   display: inline-block;
+  vertical-align: -0.125em;
+  margin-right: 0.3em;
 }
 
 @media (max-width: 768px) {

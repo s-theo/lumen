@@ -183,8 +183,10 @@ export interface NoticeItem {
   date?: string
   /** 日期文本 */
   dateText?: string
-  /** 日期图标 @default 'line-md:calendar' */
+  /** 日期图标 */
   dateIcon?: IconType
+  /** 日期图片 */
+  dateImage?: ImageType
 }
 
 /** Waline 配置数据类型接口。 */
@@ -227,6 +229,8 @@ export interface FooterData {
 export interface Group {
   /** 图标配置 */
   icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
   /** 外部链接图标开关 */
   noIcon?: boolean
   /** 分组标题 */
@@ -249,8 +253,10 @@ export interface Beian {
 export interface Icp {
   /** ICP 备案号 */
   number?: string
-  /** ICP 图标 @default 'fluent:globe-shield-48-filled' */
+  /** ICP 图标 */
   icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
   /** ICP网站或自定义链接 */
   link?: LinkType
   /** Rel 属性 */
@@ -263,8 +269,10 @@ export interface Icp {
 export interface Police {
   /** 公安备案号 */
   number?: string
-  /** 公安备案图标 @default 'fluent:shield-checkmark-48-filled' */
+  /** 公安备案图标 */
   icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
   /** 公安备案网站或自定义链接 */
   link?: LinkType
   /** Rel 属性 */
@@ -283,8 +291,10 @@ export interface Author {
   rel?: RelType
   /** 链接的目标（可选） */
   target?: TargetType
-  /** 版权图标图标 @default 'ri:copyright-line' */
+  /** 版权图标图标 */
   icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
   /** 版权文本 */
   text?: string
 }
@@ -293,6 +303,8 @@ export interface Author {
 export interface Link {
   /** 链接图标 */
   icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
   /** 外部链接图标开关 */
   noIcon?: boolean
   /** 链接名称 */

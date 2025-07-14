@@ -73,12 +73,13 @@ export default {
 
 `Group` 接口定义了一个链接分组，包括分组的图标、标题及其下的多个链接。
 
-| 字段     | 类型       | 描述                                                                                 | 是否必填              |
-| -------- | ---------- | ------------------------------------------------------------------------------------ | --------------------- |
-| `noIcon` | `boolean`  | 是否隐藏该分组下所有外部链接的外链图标                                               | <Badge text="可选" /> |
-| `icon`   | `IconType` | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType) | <Badge text="可选" /> |
-| `title`  | `string`   | 分组标题，将展示为该链接组的名称。                                                   | <Badge text="必填" /> |
-| `links`  | `Link[]`   | 分组内的链接数组，参考下方 [Link 接口](#link-接口)。                                 | <Badge text="必填" /> |
+| 字段     | 类型        | 描述                                                                                                     | 是否必填              |
+| -------- | ----------- | -------------------------------------------------------------------------------------------------------- | --------------------- |
+| `noIcon` | `boolean`   | 是否隐藏该分组下所有外部链接的外链图标                                                                   | <Badge text="可选" /> |
+| `icon`   | `IconType`  | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。详情查看 [IconType](#IconType)    | <Badge text="可选" /> |
+| `image`  | `ImageType` | 图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥，。详情查看 [ImageType](#ImageType) | <Badge text="可选" /> |
+| `title`  | `string`    | 分组标题，将展示为该链接组的名称。                                                                       | <Badge text="必填" /> |
+| `links`  | `Link[]`    | 分组内的链接数组，参考下方 [Link 接口](#link-接口)。                                                     | <Badge text="必填" /> |
 
 ### `Link` 接口
 
@@ -87,7 +88,8 @@ export default {
 | 字段     | 类型         | 描述                                                                                                                                   | 是否必填              |
 | -------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | `noIcon` | `boolean`    | 是否隐藏该链接的外部链接图标                                                                                                           | <Badge text="可选" /> |
-| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
+| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。详情查看 [IconType](#IconType)                                  | <Badge text="可选" /> |
+| `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥。详情查看 [ImageType](#ImageType)                                 | <Badge text="可选" /> |
 | `name`   | `string`     | 链接显示的文本。                                                                                                                       | <Badge text="必填" /> |
 | `link`   | `string`     | 链接地址，可为外部 URL 或内部路径，如 `/docs`。                                                                                        | <Badge text="必填" /> |
 | `rel`    | `RelType`    | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                           | <Badge text="可选" /> |
@@ -97,11 +99,11 @@ export default {
 
 `Beian` 接口用于表示备案信息，包括 ICP 备案号、公安备案号以及是否显示备案图标。
 
-| 字段       | 类型      | 描述                                                            | 是否必填              |
-| ---------- | --------- | --------------------------------------------------------------- | --------------------- |
-| `icp`      | `Icp`     | ICP 备案信息配置。                                              | <Badge text="可选" /> |
-| `police`   | `Police`  | 公安备案信息配置。                                              | <Badge text="可选" /> |
-| `showIcon` | `boolean` | 是否显示备案图标，默认值为 `false`，开启后将渲染 iconify 图标。 | <Badge text="可选" /> |
+| 字段       | 类型      | 描述                                                                 | 是否必填              |
+| ---------- | --------- | -------------------------------------------------------------------- | --------------------- |
+| `icp`      | `Icp`     | ICP 备案信息配置。                                                   | <Badge text="可选" /> |
+| `police`   | `Police`  | 公安备案信息配置。                                                   | <Badge text="可选" /> |
+| `showIcon` | `boolean` | 是否显示ICP和公安备案图标，默认值为 `false`，开启后将渲染图标/图片。 | <Badge text="可选" /> |
 
 #### `Icp` 接口
 
@@ -111,7 +113,8 @@ export default {
 | -------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | `number` | `string`     | ICP 备案号文本，例如 `粤ICP备88888888号`，也可用于其他类似用途的自定义文本。                                                           | <Badge text="可选" /> |
 | `link`   | `LinkType`   | 指向工信部网站备案系统的链接，默认为:`https://beian.miit.gov.cn/`，支持自定义                                                          | <Badge text="可选" /> |
-| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
+| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。两者都未设置时将显示默认图标。详情查看 [IconType](#IconType)    | <Badge text="可选" /> |
+| `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥。两者都未设置时将显示默认图标。详情查看 [ImageType](#ImageType)   | <Badge text="可选" /> |
 | `rel`    | `RelType`    | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                           | <Badge text="可选" /> |
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 
@@ -123,7 +126,8 @@ export default {
 | -------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | `number` | `string`     | 公安备案号文本，例如 `粤公网安备 88888888888888 号`，用于展示公安机关备案信息，也可用于其他类似用途的自定义文本。                      | <Badge text="可选" /> |
 | `link`   | `LinkType`   | 公安备案号对应的查询链接，默认为:`https://beian.mps.gov.cn/`，支持自定义                                                               | <Badge text="可选" /> |
-| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
+| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。两者都未设置时将显示默认图标。详情查看 [IconType](#IconType)    | <Badge text="可选" /> |
+| `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥。两者都未设置时将显示默认图标。详情查看 [ImageType](#ImageType)   | <Badge text="可选" /> |
 | `rel`    | `RelType`    | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                           | <Badge text="可选" /> |
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 
@@ -138,6 +142,7 @@ export default {
 | `rel`    | `RelType`    | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                           | <Badge text="可选" /> |
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 | `text`   | `string`     | 版权声明尾句，显示在作者名称后。可自定义该文本，默认值为 `All Rights Reserved.`。                                                      | <Badge text="可选" /> |
-| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。详情查看 [IconType](#IconType)                                                   | <Badge text="可选" /> |
+| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。两者都未设置时将显示默认图标。详情查看 [IconType](#IconType)    | <Badge text="可选" /> |
+| `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥。两者都未设置时将显示默认图标。详情查看 [ImageType](#ImageType)   | <Badge text="可选" /> |
 
-<!--@include: ./type.md{1,12}-->
+<!--@include: ./type.md-->
