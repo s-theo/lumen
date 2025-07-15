@@ -53,9 +53,10 @@
 
   --Boxcube-bg: var(--component-bg);
   --Boxcube-border: transparent;
-  --Boxcube-name: inherit;
+  --Boxcube-name: var(--vp-c-brand-1);
   --Boxcube-bg-hover: var(--component-bg);
   --Boxcube-border-hover: var(--vp-c-brand-1);
+  --Boxcube-name-hover: var(--vp-c-brand-2);
   --Boxcube-boxshadow-hover: none;
   --Boxcube-transform-hover: none;
   --Boxcube-transform-active: none;
@@ -66,10 +67,11 @@
 
   --Links-bg: var(--component-bg);
   --Links-border: transparent;
-  --Links-name: inherit;
+  --Links-name: var(--vp-c-brand-1);
   --Links-desc: var(--vp-c-text-2);
   --Links-bg-hover: var(--component-bg);
   --Links-border-hover: var(--vp-c-brand-1);
+  --Links-name-hover: var(--vp-c-brand-2);
   --Links-boxshadow-hover: none;
   --Links-transform-hover: none;
   --Links-transform-active: none;
@@ -80,10 +82,11 @@
 
   --Card-bg: var(--component-bg);
   --Card-border: transparent;
-  --Card-name: inherit;
+  --Card-name: var(--vp-c-brand-1);
   --Card-desc: var(--vp-c-text-2);
   --Card-bg-hover: var(--component-bg);
   --Card-border-hover: var(--vp-c-brand-1);
+  --Card-name-hover: var(--vp-c-brand-2);
   --Card-boxshadow-hover: none;
   --Card-transform-hover: none;
   --Card-transform-active: none;
@@ -94,9 +97,10 @@
 
   --Pill-bg: var(--vp-code-bg);
   --Pill-border: transparent;
-  --Pill-name: inherit;
+  --Pill-name: var(--vp-c-brand-1);
   --Pill-bg-hover: var(--vp-code-bg);
   --Pill-border-hover: var(--vp-c-brand-1);
+  --Pill-name-hover: var(--vp-c-brand-2);
   --Pill-boxshadow-hover: none;
   --Pill-transform-hover: none;
   --Pill-transform-active: none;

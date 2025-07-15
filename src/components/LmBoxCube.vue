@@ -43,6 +43,7 @@ const props = defineProps<{
   justify-content: center;
   align-items: center;
   transition:
+    color 0.25s,
     transform 0.25s,
     box-shadow 0.25s,
     border-color 0.25s,
@@ -54,6 +55,7 @@ const props = defineProps<{
   width: 100%;
   min-width: 0;
   overflow: hidden;
+  color: var(--Boxcube-name);
   text-decoration: none !important;
 }
 
@@ -62,6 +64,7 @@ const props = defineProps<{
   box-shadow: var(--Boxcube-boxshadow-hover);
   border-color: var(--Boxcube-border-hover);
   background-color: var(--Boxcube-bg-hover);
+  color: var(--Boxcube-name-hover);
 }
 
 .link:active {
@@ -76,7 +79,6 @@ const props = defineProps<{
   transform: translateY(1em);
   max-width: 80%;
   overflow: hidden;
-  color: var(--Boxcube-name);
   font-weight: 600;
   font-size: 0.75em;
   text-align: center;
