@@ -27,6 +27,7 @@ const pill = defineProps<PillItem>()
   vertical-align: -1px;
   gap: 0.25em;
   transition:
+    color 0.25s,
     transform 0.25s,
     box-shadow 0.25s,
     border-color 0.25s,
@@ -37,6 +38,7 @@ const pill = defineProps<PillItem>()
   background-color: var(--Pill-bg);
   padding: 0em 0.25em;
   height: 1.375em;
+  color: var(--Pill-name);
   font-size: 1rem;
   text-decoration: none !important;
   white-space: nowrap;
@@ -51,6 +53,7 @@ const pill = defineProps<PillItem>()
   box-shadow: var(--Pill-boxshadow-hover);
   border-color: var(--Pill-border-hover);
   background-color: var(--Pill-bg-hover);
+  color: var(--Pill-name-hover);
 }
 
 .link:active {
@@ -94,7 +97,6 @@ const pill = defineProps<PillItem>()
 }
 
 .name {
-  color: var(--Pill-name);
   font-weight: 500;
   font-size: 0.875em;
 }
