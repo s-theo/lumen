@@ -47,6 +47,7 @@ const resAttrs = computed(() => {
 <style scoped>
 img {
   border-radius: 0.25em;
+  pointer-events: none;
 }
 
 img.crop {
