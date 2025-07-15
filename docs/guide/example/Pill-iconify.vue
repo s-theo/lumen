@@ -11,7 +11,7 @@
 <!-- 深浅模式的 iconify 图标 -->
 <Pill
   :icon="{ light: 'ion:logo-vercel', dark: 'ion:logo-vercel', color: { light: '#000000', dark: '#FFFFFF' } }"
-  name="Vercel"
+  name="<em>Vercel</em>"
   link="https://vercel.com/"
 />
 

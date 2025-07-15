@@ -25,9 +25,9 @@ const props = defineProps<{
       <span class="row">
         <LmIcon v-if="link.icon" :icon="link.icon" :size="link.size || '32'" />
         <LmImage v-else-if="link.image" :image="link.image" :size="link.size || '32'" />
-        <span class="name">{{ link.name }}</span>
+        <span class="name" v-html="link.name"></span>
       </span>
-      <p v-if="link.desc" class="desc">{{ link.desc }}</p>
+      <p v-if="link.desc" class="desc" v-html="link.desc"></p>
     </LmLink>
   </div>
 </template>

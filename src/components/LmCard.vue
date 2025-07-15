@@ -25,9 +25,9 @@ const props = defineProps<{
       <span class="row">
         <LmIcon v-if="card.icon" :icon="card.icon" :size="card.size || '48'" />
         <LmImage v-else-if="card.image" :image="card.image" :size="card.size || '48'" />
-        <span v-if="card.name" class="name">{{ card.name }}</span>
+        <span v-if="card.name" class="name" v-html="card.name"></span>
       </span>
-      <p v-if="card.desc" class="desc">{{ card.desc }}</p>
+      <p v-if="card.desc" class="desc" v-html="card.desc"></p>
     </LmLink>
   </div>
 </template>

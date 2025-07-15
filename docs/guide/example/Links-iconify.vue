@@ -13,10 +13,10 @@
 <Links
   :grid="3"
   :items="[
-    // 深浅模式 iconify 图标
+    // 深浅色模式的 iconify 图标 + v-html 渲染
     {
       icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel', color: { light: '#000000', dark: '#FFFFFF' } },
-      name: 'Vercel',
+      name: '<em>Vercel</em>',
       desc: '适用于前端框架的无服务器部署平台，支持静态生成和即时预览。',
       link: 'https://vercel.com/'
     },
