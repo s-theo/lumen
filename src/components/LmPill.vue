@@ -16,7 +16,7 @@ const pill = defineProps<PillItem>()
   >
     <LmIcon v-if="pill.icon" :icon="pill.icon" :size="pill.size || '14'" />
     <LmImage v-else-if="pill.image" :image="pill.image" :size="pill.size || '14'" />
-    <span class="name">{{ pill.name }}</span>
+    <span class="name" v-html="pill.name"></span>
   </LmLink>
 </template>
 
