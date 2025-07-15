@@ -28,8 +28,8 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
     :target="aside.target"
     no-icon
   >
-    <LmIcon v-if="aside.icon" :icon="aside.icon" :size="aside.size || '24'" />
-    <LmImage v-else-if="aside.image" class="icon" :image="aside.image" :size="aside.size || '24'" />
+    <LmIcon v-if="aside.icon" :icon="aside.icon" :size="aside.size || '32'" />
+    <LmImage v-else-if="aside.image" class="icon" :image="aside.image" :size="aside.size || '32'" />
     <div>
       <template v-if="isAsidePromo(aside)">
         <span class="promo" v-html="aside.promo"></span>
@@ -78,7 +78,7 @@ ul:last-of-type {
 
 .link:hover .icon,
 .link:hover .iconify {
-  transform: scale(1.75);
+  transform: scale(1.15);
 }
 
 .link:hover .hide {
@@ -95,14 +95,9 @@ ul:last-of-type {
   background-color: var(--Aside-name-bg-hover);
 }
 
-.link .icon {
-  transform: scale(1.25);
-  transition: transform 0.5s;
-}
-
+.link .icon,
 .link .iconify {
-  flex-shrink: 0; /* 禁止图标在 flex 布局中因空间不足被压缩。 */
-  transform: scale(1.25);
+  flex-shrink: 0;
   transition: transform 0.5s;
   color: var(--iconify-defaultcolor);
 }

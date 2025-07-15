@@ -117,7 +117,7 @@ export interface Promo {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
-  /** 图片和图标大小 @default '24' */
+  /** 图片和图标大小 @default '32' */
   size?: SizeType
 }
 
@@ -139,7 +139,7 @@ export interface Normal {
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
-  /** 图片和图标大小 @default '24' */
+  /** 图片和图标大小 @default '32' */
   size?: SizeType
 }
 
