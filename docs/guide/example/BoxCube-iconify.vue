@@ -15,7 +15,7 @@
     },
     // 深浅色模式 iconify 图标（无 color）
     {
-      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' },
+      icon: { light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' },
       name: 'Vite',
       link: 'https://vitejs.dev/'
     }
