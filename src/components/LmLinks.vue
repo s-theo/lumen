@@ -53,6 +53,7 @@ const props = defineProps<{
   flex-direction: column;
   align-items: flex-start;
   transition:
+    color 0.25s,
     transform 0.25s,
     box-shadow 0.25s,
     border-color 0.25s,
@@ -63,6 +64,7 @@ const props = defineProps<{
   background-color: var(--Links-bg);
   padding: 1em;
   min-width: 0;
+  color: var(--Links-name);
   text-decoration: none !important;
 }
 
@@ -71,6 +73,7 @@ const props = defineProps<{
   box-shadow: var(--Links-boxshadow-hover);
   border-color: var(--Links-border-hover);
   background-color: var(--Links-bg-hover);
+  color: var(--Links-name-hover);
 }
 
 .link:active {
@@ -87,7 +90,6 @@ const props = defineProps<{
   width: 100%;
   min-width: 0;
   overflow: hidden;
-  color: var(--Links-name);
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.5;
