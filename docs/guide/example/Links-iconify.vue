@@ -22,7 +22,7 @@
     },
     // 深浅模式 iconify 图标，无 color
     {
-      icon: { light: 'skill-icons:vite-light', dark: 'skill-icons:vite-dark' },
+      icon: { light: 'skill-icons:vite-dark', dark: 'skill-icons:vite-light' },
       name: 'Vite',
       desc: '极速的现代前端构建工具，支持热更新与按需加载。',
       link: 'https://vitejs.dev/'
