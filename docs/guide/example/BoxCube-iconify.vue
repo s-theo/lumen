@@ -7,10 +7,10 @@
       name: 'iconify',
       link: 'https://iconify.design/'
     },
-    // 深浅色模式的 iconify 图标
+    // 深浅色模式的 iconify 图标 + v-html 渲染
     {
       icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel', color: { light: '#000000', dark: '#FFFFFF' } },
-      name: 'Vercel',
+      name: '<em>Vercel</em>',
       link: 'https://vercel.com/'
     },
     // 深浅色模式 iconify 图标（无 color）
