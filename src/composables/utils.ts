@@ -95,21 +95,3 @@ export function getLocaleKey() {
   const { localeIndex } = useData()
   return computed(() => localeIndex.value)
 }
-
-/**
- * 处理图片加载错误，替换为默认的占位图。
- *
- * @remarks
- *   当图片加载失败时，该函数会将图片的 `src` 替换为一个默认的备用图片地址， 并移除当前的错误事件处理器以防止无限递归调用。
- * @example
- *   <img src="some-image.png" @error="onError" />
- *
- * @param {Event} e - 触发错误事件的事件对象
- */
-export function onError(e: Event): void {
-  const target = e.target
-  if (target instanceof HTMLImageElement) {
-    target.onerror = null
-    target.src = 'https://api.iconify.design/flat-color-icons:remove-image.svg'
-  }
-}

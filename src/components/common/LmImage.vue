@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
-import { ImageType, SizeType, onError } from '../../types'
+import { ImageType, SizeType } from '../../types'
 
 const props = defineProps<{
   image: ImageType
@@ -29,6 +29,14 @@ const resAttrs = computed(() => {
   const { light, dark, crop, ...restAttrs } = props.image
   return restAttrs
 })
+
+const onError = (e: Event): void => {
+  const target = e.target
+  if (target instanceof HTMLImageElement) {
+    target.onerror = null
+    target.src = 'https://api.iconify.design/flat-color-icons:remove-image.svg'
+  }
+}
 </script>
 
 <template>
