@@ -29,6 +29,14 @@ const resAttrs = computed(() => {
   const { light, dark, crop, ...restAttrs } = props.image
   return restAttrs
 })
+
+const onError = (e: Event): void => {
+  const target = e.target
+  if (target instanceof HTMLImageElement) {
+    target.onerror = null
+    target.src = 'https://api.iconify.design/flat-color-icons:remove-image.svg'
+  }
+}
 </script>
 
 <template>
@@ -41,6 +49,7 @@ const resAttrs = computed(() => {
     aria-hidden="true"
     alt=""
     v-bind="typeof image === 'string' ? $attrs : { ...resAttrs, ...$attrs }"
+    @error="onError"
   />
 </template>
 
