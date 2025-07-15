@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
-import { ImageType, SizeType } from '../../types'
+import { ImageType, SizeType, onError } from '../../types'
 
 const props = defineProps<{
   image: ImageType
@@ -41,6 +41,7 @@ const resAttrs = computed(() => {
     aria-hidden="true"
     alt=""
     v-bind="typeof image === 'string' ? $attrs : { ...resAttrs, ...$attrs }"
+    @error="onError"
   />
 </template>
 

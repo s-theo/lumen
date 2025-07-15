@@ -3,7 +3,7 @@
   :items="[
     // 普通图片
     {
-      image: 'https://i.theojs.cn/logo/alipay.svg',
+      image: 'https://i.theojs.cn/logo/alipay.svg1',
       name: '支付宝',
       desc: '移动支付平台，提供便捷的在线支付和转账服务',
       link: 'https://i.theojs.cn/alipay.webp'
