@@ -4,8 +4,7 @@
     // 普通 iconify 图标
     {
       icon: { icon: 'line-md:iconify2-static', color: '#1769AA' },
-      name: 'iconify',
-      link: 'https://iconify.design/'
+      name: 'iconify'
     },
     // 深浅色模式的 iconify 图标 + v-html 渲染
     {

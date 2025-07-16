@@ -21,8 +21,9 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
 <template>
   <LmLink
     v-for="(aside, index) in aside"
-    :key="aside.link + index"
+    :key="isAsidePromo(aside) ? aside.promo + index : 'name' in aside ? aside.name + index : index"
     :class="['link', { 'has-promo': isAsidePromo(aside), 'has-name': 'name' in aside }]"
+    :tag="aside.link ? 'a' : 'div'"
     :href="aside.link"
     :rel="aside.rel"
     :target="aside.target"
@@ -64,35 +65,35 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
   text-align: center;
 }
 
-.link:hover {
+.link.lm-link:hover.has-promo {
+  border-color: var(--Aside-promo-border-hover);
+  background-color: var(--Aside-promo-bg-hover);
+}
+
+.link.lm-link:hover.has-name {
+  border-color: var(--Aside-name-border-hover);
+  background-color: var(--Aside-name-bg-hover);
+}
+
+.link.lm-link:hover {
   transform: var(--Aside-transform-hover);
 }
 
-.link:active {
+.link.lm-link:active {
   transform: var(--Aside-transform-active);
+}
+
+.link.lm-link:hover .icon,
+.link.lm-link:hover .iconify {
+  transform: scale(1.15);
 }
 
 ul:last-of-type {
   margin-bottom: 1em;
 }
 
-.link:hover .icon,
-.link:hover .iconify {
-  transform: scale(1.15);
-}
-
 .link:hover .hide {
   opacity: 0.9;
-}
-
-.link:hover.has-promo {
-  border-color: var(--Aside-promo-border-hover);
-  background-color: var(--Aside-promo-bg-hover);
-}
-
-.link:hover.has-name {
-  border-color: var(--Aside-name-border-hover);
-  background-color: var(--Aside-name-bg-hover);
 }
 
 .link .icon,

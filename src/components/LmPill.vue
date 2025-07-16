@@ -48,7 +48,7 @@ const pill = defineProps<PillItem>()
   vertical-align: 1.5px;
 }
 
-.link:hover {
+.link.lm-link:hover {
   transform: var(--Pill-transform-hover);
   box-shadow: var(--Pill-boxshadow-hover);
   border-color: var(--Pill-border-hover);
@@ -56,7 +56,7 @@ const pill = defineProps<PillItem>()
   color: var(--Pill-name-hover);
 }
 
-.link:active {
+.link.lm-link:active {
   transform: var(--Pill-transform-active);
 }
 

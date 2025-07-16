@@ -15,7 +15,7 @@ const props = defineProps<{
   >
     <LmLink
       v-for="(boxcube, index) in props.items"
-      :key="boxcube.link + index"
+      :key="boxcube.name + index"
       class="link"
       :href="boxcube.link"
       :rel="boxcube.rel"
@@ -59,7 +59,7 @@ const props = defineProps<{
   text-decoration: none !important;
 }
 
-.link:hover {
+.link.lm-link:hover {
   transform: var(--Boxcube-transform-hover);
   box-shadow: var(--Boxcube-boxshadow-hover);
   border-color: var(--Boxcube-border-hover);
@@ -67,9 +67,10 @@ const props = defineProps<{
   color: var(--Boxcube-name-hover);
 }
 
-.link:active {
+.link.lm-link:active {
   transform: var(--Boxcube-transform-active);
 }
+
 .iconify {
   flex-shrink: 0;
   color: var(--iconify-defaultcolor);
