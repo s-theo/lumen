@@ -59,30 +59,30 @@ const props = defineProps<{
     border-color 0.25s,
     background-color 0.25s;
   margin: 0;
-  border: 1px solid var(--Links-border);
+  border: 1px solid var(--lm-Links-border);
   border-radius: 0.75em;
-  background-color: var(--Links-bg);
+  background-color: var(--lm-Links-bg);
   padding: 1em;
   min-width: 0;
-  color: var(--Links-name);
+  color: var(--lm-Links-name);
   text-decoration: none !important;
 }
 
 .link.lm-link:hover {
-  transform: var(--Links-transform-hover);
-  box-shadow: var(--Links-boxshadow-hover);
-  border-color: var(--Links-border-hover);
-  background-color: var(--Links-bg-hover);
-  color: var(--Links-name-hover);
+  transform: var(--lm-Links-transform-hover);
+  box-shadow: var(--lm-Links-boxshadow-hover);
+  border-color: var(--lm-Links-border-hover);
+  background-color: var(--lm-Links-bg-hover);
+  color: var(--lm-Links-name-hover);
 }
 
 .link.lm-link:active {
-  transform: var(--Links-transform-active);
+  transform: var(--lm-Links-transform-active);
 }
 
 .iconify {
   flex-shrink: 0;
-  color: var(--iconify-defaultcolor);
+  color: var(--lm-iconify-defColor);
 }
 
 .name {
@@ -99,7 +99,7 @@ const props = defineProps<{
 
 .desc {
   margin: 0.875em 0 0 0;
-  color: var(--Links-desc);
+  color: var(--lm-Links-desc);
   font-weight: 500;
   font-size: 0.75em;
   line-height: 1.5;

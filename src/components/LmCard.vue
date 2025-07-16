@@ -60,30 +60,30 @@ const props = defineProps<{
     border-color 0.25s,
     background-color 0.25s;
   margin: 0;
-  border: 1px solid var(--Card-border);
+  border: 1px solid var(--lm-Card-border);
   border-radius: 0.75em;
-  background-color: var(--Card-bg);
+  background-color: var(--lm-Card-bg);
   padding: 1em;
   min-width: 0;
-  color: var(--Card-name);
+  color: var(--lm-Card-name);
   text-decoration: none !important;
 }
 
 .link.lm-link:hover {
-  transform: var(--Card-transform-hover);
-  box-shadow: var(--Card-boxshadow-hover);
-  border-color: var(--Card-border-hover);
-  background-color: var(--Card-bg-hover);
-  color: var(--Card-name-hover);
+  transform: var(--lm-Card-transform-hover);
+  box-shadow: var(--lm-Card-boxshadow-hover);
+  border-color: var(--lm-Card-border-hover);
+  background-color: var(--lm-Card-bg-hover);
+  color: var(--lm-Card-name-hover);
 }
 
 .link.lm-link:active {
-  transform: var(--Card-transform-active);
+  transform: var(--lm-Card-transform-active);
 }
 
 .iconify {
   flex-shrink: 0;
-  color: var(--iconify-defaultcolor);
+  color: var(--lm-iconify-defColor);
 }
 
 .name {
@@ -102,7 +102,7 @@ const props = defineProps<{
 .desc {
   align-self: flex-start;
   margin: 0.875em 0 0 0;
-  color: var(--Card-desc);
+  color: var(--lm-Card-desc);
   font-weight: 500;
   font-size: 0.75em;
   line-height: 1.5;

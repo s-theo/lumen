@@ -75,8 +75,8 @@ export default DefaultTheme
 ```css
 /* .vitepress/theme/var.css */
 :root {
-  --notice-bg: var(--vp-button-alt-bg);
-  --notice-bg-hover: var(--vp-c-brand-soft);
+  --lm-Notice-bg: var(--vp-button-alt-bg);
+  --lm-Notice-bg-hover: var(--vp-c-brand-soft);
 }
 ```
 

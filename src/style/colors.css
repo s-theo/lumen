@@ -3,19 +3,19 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --c-yellow-1: rgba(255, 216, 89, 1);
-  --c-yellow-2: rgba(255, 216, 89, 0.9);
-  --c-yellow-3: rgba(255, 216, 89, 0.8);
-  --c-yellow-soft: rgba(255, 216, 89, 0.16);
+  --lm-c-yellow-1: rgba(255, 216, 89, 1);
+  --lm-c-yellow-2: rgba(255, 216, 89, 0.9);
+  --lm-c-yellow-3: rgba(255, 216, 89, 0.8);
+  --lm-c-yellow-soft: rgba(255, 216, 89, 0.16);
 
-  --c-white-dark: rgba(248, 248, 248, 1);
-  --c-black-darker: rgba(13, 18, 27, 1);
-  --c-black: rgba(17, 24, 39, 1);
+  --lm-c-white-dark: rgba(248, 248, 248, 1);
+  --lm-c-black-darker: rgba(13, 18, 27, 1);
+  --lm-c-black: rgba(17, 24, 39, 1);
 
-  --c-green-1: rgba(61, 214, 140, 1);
-  --c-green-2: rgba(61, 214, 140, 0.9);
-  --c-green-3: rgba(61, 214, 140, 0.8);
-  --c-green-soft: rgba(61, 214, 140, 0.16);
+  --lm-c-green-1: rgba(61, 214, 140, 1);
+  --lm-c-green-2: rgba(61, 214, 140, 0.9);
+  --lm-c-green-3: rgba(61, 214, 140, 0.8);
+  --lm-c-green-soft: rgba(61, 214, 140, 0.16);
 
   /* light theme is a bit different */
   --vp-c-brand-1: var(--vp-c-green-1);
@@ -23,40 +23,40 @@
   --vp-c-brand-3: var(--vp-c-green-3);
   --vp-c-brand-soft: var(--vp-c-green-soft);
 
-  --c-text-dark-1: rgba(217, 230, 235, 1);
-  --c-text-light-1: rgba(44, 62, 80, 1);
+  --lm-c-text-dark-1: rgba(217, 230, 235, 1);
+  --lm-c-text-light-1: rgba(44, 62, 80, 1);
 
-  --vp-c-brand-text: var(--c-text-light-1);
+  --vp-c-brand-text: var(--lm-c-text-light-1);
   --vp-c-bg-alt: rgba(246, 246, 247, 1);
 }
 
 .dark {
-  --vp-c-brand-1: var(--c-yellow-1);
-  --vp-c-brand-2: var(--c-yellow-2);
-  --vp-c-brand-3: var(--c-yellow-3);
-  --vp-c-brand-soft: var(--c-yellow-soft);
+  --vp-c-brand-1: var(--lm-c-yellow-1);
+  --vp-c-brand-2: var(--lm-c-yellow-2);
+  --vp-c-brand-3: var(--lm-c-yellow-3);
+  --vp-c-brand-soft: var(--lm-c-yellow-soft);
 
-  --vp-c-text-1: var(--c-text-dark-1);
-  --vp-c-brand-text: var(--c-text-light-1);
+  --vp-c-text-1: var(--lm-c-text-dark-1);
+  --vp-c-brand-text: var(--lm-c-text-light-1);
 
-  --vp-c-bg: var(--c-black);
+  --vp-c-bg: var(--lm-c-black);
   --vp-c-bg-soft: rgba(22, 31, 50, 1);
   --vp-c-bg-alt: rgba(13, 18, 27, 1);
   --vp-c-bg-elv: var(--vp-c-bg-soft);
 
-  --docsearch-hit-active-color: var(--c-text-light-1);
+  --docsearch-hit-active-color: var(--lm-c-text-light-1);
 }
 
 /* style the promo information */
 .promo-text {
-  color: var(--promo-text-color);
-  font-weight: var(--promo-text-weight);
+  color: var(--lm-promo-text-color);
+  font-weight: var(--lm-promo-text-weight);
 }
 
 .promo-title {
-  background-image: var(--promo-title-bg);
+  background-image: var(--lm-promo-title-bg);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: var(--promo-title-color);
-  font-weight: var(--promo-title-weight);
+  -webkit-text-fill-color: var(--lm-promo-title-color);
+  font-weight: var(--lm-promo-title-weight);
 }

@@ -3,129 +3,134 @@
   * Default
   * -------------------------------------------------------------------------- */
 
-  --iconify-defaultcolor: var(--vp-c-text-2);
-  --component-bg: var(--vp-c-bg-alt);
-  --i-mr: 0.25em;
-  --promo-text-color: var(--vp-c-brand-1);
-  --promo-text-weight: bold;
-  --promo-title-bg: -webkit-linear-gradient(
+  --lm-iconify-defColor: var(--vp-c-text-2);
+  --lm-component-bg: var(--vp-c-bg-alt);
+  --lm-imr: 0.25em;
+  --lm-promo-text-color: var(--vp-c-brand-1);
+  --lm-promo-text-weight: bold;
+  --lm-promo-title-bg: -webkit-linear-gradient(
     225deg,
     rgba(100, 108, 255, 1),
     rgba(176, 71, 255, 1),
     rgba(100, 108, 255, 1)
   );
-  --promo-title-color: transparent;
-  --promo-title-weight: 600;
+  --lm-promo-title-color: transparent;
+  --lm-promo-title-weight: 600;
 
   /**
   * Component: Notice
   * -------------------------------------------------------------------------- */
-  --Notice-bg: var(--vp-button-alt-bg);
-  --Notice-border: transparent;
-  --Notice-data: var(--vp-c-brand-1);
-  --Notice-bg-hover: var(--vp-button-alt-bg);
-  --Notice-border-hover: var(--vp-c-brand-1);
-  --Notice-transform-hover: none;
-  --Notice-transform-active: none;
+  --lm-Notice-bg: var(--vp-button-alt-bg);
+  --lm-Notice-border: transparent;
+  --lm-Notice-data: var(--vp-c-brand-1);
+  --lm-Notice-bg-hover: var(--vp-button-alt-bg);
+  --lm-Notice-border-hover: var(--vp-c-brand-1);
+  --lm-Notice-transform-hover: none;
+  --lm-Notice-transform-active: none;
 
   /**
   * Component: Aside
   * -------------------------------------------------------------------------- */
 
-  --Aside-bg: var(--component-bg);
-  --Aside-border: transparent;
-  --Aside-name: -webkit-linear-gradient(225deg, var(--vp-c-brand-1), var(--vp-c-brand-3), var(--vp-c-brand-1));
-  --Aside-name-color: transparent;
-  --Aside-promo: -webkit-linear-gradient(225deg, rgba(100, 108, 255, 1), rgba(176, 71, 255, 1), rgba(100, 108, 255, 1));
-  --Aside-promo-color: transparent;
-  --Aside-hide: var(--vp-c-text-2);
-  --Aside-info: var(--vp-c-text-2);
-  --Aside-name-bg-hover: var(--component-bg);
-  --Aside-name-border-hover: var(--vp-c-brand-1);
-  --Aside-promo-bg-hover: var(--component-bg);
-  --Aside-promo-border-hover: rgba(100, 108, 255, 1);
-  --Aside-transform-hover: none;
-  --Aside-transform-active: none;
+  --lm-Aside-bg: var(--lm-component-bg);
+  --lm-Aside-border: transparent;
+  --lm-Aside-name: -webkit-linear-gradient(225deg, var(--vp-c-brand-1), var(--vp-c-brand-3), var(--vp-c-brand-1));
+  --lm-Aside-name-color: transparent;
+  --lm-Aside-promo: -webkit-linear-gradient(
+    225deg,
+    rgba(100, 108, 255, 1),
+    rgba(176, 71, 255, 1),
+    rgba(100, 108, 255, 1)
+  );
+  --lm-Aside-promo-color: transparent;
+  --lm-Aside-hide: var(--vp-c-text-2);
+  --lm-Aside-info: var(--vp-c-text-2);
+  --lm-Aside-name-bg-hover: var(--lm-component-bg);
+  --lm-Aside-name-border-hover: var(--vp-c-brand-1);
+  --lm-Aside-promo-bg-hover: var(--lm-component-bg);
+  --lm-Aside-promo-border-hover: rgba(100, 108, 255, 1);
+  --lm-Aside-transform-hover: none;
+  --lm-Aside-transform-active: none;
 
   /**
   * Component: BoxCube
   * -------------------------------------------------------------------------- */
 
-  --Boxcube-bg: var(--component-bg);
-  --Boxcube-border: transparent;
-  --Boxcube-name: var(--vp-c-brand-1);
-  --Boxcube-bg-hover: var(--component-bg);
-  --Boxcube-border-hover: var(--vp-c-brand-1);
-  --Boxcube-name-hover: var(--vp-c-brand-2);
-  --Boxcube-boxshadow-hover: none;
-  --Boxcube-transform-hover: none;
-  --Boxcube-transform-active: none;
+  --lm-Boxcube-bg: var(--lm-component-bg);
+  --lm-Boxcube-border: transparent;
+  --lm-Boxcube-name: var(--vp-c-brand-1);
+  --lm-Boxcube-bg-hover: var(--lm-component-bg);
+  --lm-Boxcube-border-hover: var(--vp-c-brand-1);
+  --lm-Boxcube-name-hover: var(--vp-c-brand-2);
+  --lm-Boxcube-boxshadow-hover: none;
+  --lm-Boxcube-transform-hover: none;
+  --lm-Boxcube-transform-active: none;
 
   /**
   * Component: Links
   * -------------------------------------------------------------------------- */
 
-  --Links-bg: var(--component-bg);
-  --Links-border: transparent;
-  --Links-name: var(--vp-c-brand-1);
-  --Links-desc: var(--vp-c-text-2);
-  --Links-bg-hover: var(--component-bg);
-  --Links-border-hover: var(--vp-c-brand-1);
-  --Links-name-hover: var(--vp-c-brand-2);
-  --Links-boxshadow-hover: none;
-  --Links-transform-hover: none;
-  --Links-transform-active: none;
+  --lm-Links-bg: var(--lm-component-bg);
+  --lm-Links-border: transparent;
+  --lm-Links-name: var(--vp-c-brand-1);
+  --lm-Links-desc: var(--vp-c-text-2);
+  --lm-Links-bg-hover: var(--lm-component-bg);
+  --lm-Links-border-hover: var(--vp-c-brand-1);
+  --lm-Links-name-hover: var(--vp-c-brand-2);
+  --lm-Links-boxshadow-hover: none;
+  --lm-Links-transform-hover: none;
+  --lm-Links-transform-active: none;
 
   /**
   * Component: Card
   * -------------------------------------------------------------------------- */
 
-  --Card-bg: var(--component-bg);
-  --Card-border: transparent;
-  --Card-name: var(--vp-c-brand-1);
-  --Card-desc: var(--vp-c-text-2);
-  --Card-bg-hover: var(--component-bg);
-  --Card-border-hover: var(--vp-c-brand-1);
-  --Card-name-hover: var(--vp-c-brand-2);
-  --Card-boxshadow-hover: none;
-  --Card-transform-hover: none;
-  --Card-transform-active: none;
+  --lm-Card-bg: var(--lm-component-bg);
+  --lm-Card-border: transparent;
+  --lm-Card-name: var(--vp-c-brand-1);
+  --lm-Card-desc: var(--vp-c-text-2);
+  --lm-Card-bg-hover: var(--lm-component-bg);
+  --lm-Card-border-hover: var(--vp-c-brand-1);
+  --lm-Card-name-hover: var(--vp-c-brand-2);
+  --lm-Card-boxshadow-hover: none;
+  --lm-Card-transform-hover: none;
+  --lm-Card-transform-active: none;
 
   /**
   * Component: Pill
   * -------------------------------------------------------------------------- */
 
-  --Pill-bg: var(--vp-code-bg);
-  --Pill-border: transparent;
-  --Pill-name: var(--vp-c-brand-1);
-  --Pill-bg-hover: var(--vp-code-bg);
-  --Pill-border-hover: var(--vp-c-brand-1);
-  --Pill-name-hover: var(--vp-c-brand-2);
-  --Pill-boxshadow-hover: none;
-  --Pill-transform-hover: none;
-  --Pill-transform-active: none;
+  --lm-Pill-bg: var(--vp-code-bg);
+  --lm-Pill-border: transparent;
+  --lm-Pill-name: var(--vp-c-brand-1);
+  --lm-Pill-bg-hover: var(--vp-code-bg);
+  --lm-Pill-border-hover: var(--vp-c-brand-1);
+  --lm-Pill-name-hover: var(--vp-c-brand-2);
+  --lm-Pill-boxshadow-hover: none;
+  --lm-Pill-transform-hover: none;
+  --lm-Pill-transform-active: none;
 
   /**
   * Component: Footer
   * -------------------------------------------------------------------------- */
 
-  --Footer-bg: var(--component-bg);
-  --Footer-link-hover: var(--vp-c-brand-1);
+  --lm-Footer-bg: var(--lm-component-bg);
+  --lm-Footer-link-hover: var(--vp-c-brand-1);
 
   /**
   * Component: Underline
   * -------------------------------------------------------------------------- */
 
-  --Underline-bg: var(--vp-c-brand-1);
+  --lm-Underline-bg: var(--vp-c-brand-1);
 
   /**
   * Home-links
   * -------------------------------------------------------------------------- */
 
-  --Home-links-custom-brand: url('https://i.theojs.cn/logo/avatar-mini.webp');
-  --Home-links-custom-alt: url('https://i.theojs.cn/logo/avatar-mini.webp');
-  --Home-links-custom-brand-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
-  --Home-links-custom-alt-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
+  --lm-button-brand: url('https://i.theojs.cn/logo/avatar-mini.webp');
+  --lm-button-alt: url('https://i.theojs.cn/logo/avatar-mini.webp');
+  --lm-button-brand-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
+  --lm-button-alt-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
 
   /**
   * waline-style     
@@ -181,24 +186,24 @@
   * Default
   * -------------------------------------------------------------------------- */
 
-  --promo-title-bg: -webkit-linear-gradient(
+  --lm-promo-title-bg: -webkit-linear-gradient(
     225deg,
     rgba(120, 200, 255, 1),
     rgba(255, 130, 255, 1),
     rgba(120, 200, 255, 1)
   );
-  --promo-title-color: transparent;
+  --lm-promo-title-color: transparent;
 
   /**
   * Component: Aside
   * -------------------------------------------------------------------------- */
-  --Aside-promo: -webkit-linear-gradient(
+  --lm-Aside-promo: -webkit-linear-gradient(
     225deg,
     rgba(120, 200, 255, 1),
     rgba(255, 130, 255, 1),
     rgba(120, 200, 255, 1)
   );
-  --Aside-name-color: transparent;
+  --lm-Aside-name-color: transparent;
 
   /**
   * waline-style     

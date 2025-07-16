@@ -39,20 +39,20 @@ const notice = useNotice()
     border-color 0.25s,
     background-color 0.25s;
   margin-bottom: 1em;
-  border: 1px solid var(--Notice-border);
+  border: 1px solid var(--lm-Notice-border);
   border-radius: 0.5em;
-  background-color: var(--Notice-bg);
+  background-color: var(--lm-Notice-bg);
   padding: 0.15em 1em;
 }
 
 .notice.lm-link:hover {
-  transform: var(--Notice-transform-hover);
-  border-color: var(--Notice-border-hover);
-  background-color: var(--Notice-bg-hover);
+  transform: var(--lm-Notice-transform-hover);
+  border-color: var(--lm-Notice-border-hover);
+  background-color: var(--lm-Notice-bg-hover);
 }
 
 .notice.lm-link:active {
-  transform: var(--Notice-transform-active);
+  transform: var(--lm-Notice-transform-active);
 }
 
 .content {
@@ -80,7 +80,7 @@ const notice = useNotice()
 }
 
 .date {
-  color: var(--Notice-data);
+  color: var(--lm-Notice-data);
   font-weight: bold;
 }
 
