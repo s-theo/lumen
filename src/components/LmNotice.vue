@@ -8,8 +8,9 @@ const notice = useNotice()
 <template>
   <LmLink
     v-if="notice"
-    :key="notice.link + notice.rel + notice.target"
+    :key="notice.link + notice.rel + notice.target || notice.title || notice.desc || notice.date"
     class="notice"
+    :tag="notice.link ? 'a' : 'div'"
     :href="notice.link"
     :rel="notice.rel"
     :target="notice.target"
@@ -44,13 +45,13 @@ const notice = useNotice()
   padding: 0.15em 1em;
 }
 
-.notice:hover {
+.notice.lm-link:hover {
   transform: var(--Notice-transform-hover);
   border-color: var(--Notice-border-hover);
   background-color: var(--Notice-bg-hover);
 }
 
-.notice:active {
+.notice.lm-link:active {
   transform: var(--Notice-transform-active);
 }
 

@@ -1,10 +1,5 @@
 <!-- iconify 图标 -->
-<Pill
-  :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA' }"
-  size="16"
-  name="Iconify"
-  link="https://iconify.design/"
-/>
+<Pill :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA' }" size="16" name="Iconify" />
 
 <Pill icon="vscode-icons:file-type-vue" name="Vue" link="https://vuejs.org/" />
 

@@ -31,7 +31,7 @@ export interface PillItem {
   link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
   /** 图标配置 */
   icon?: IconType
@@ -48,10 +48,10 @@ export interface LinkItem {
   /** DocLinks 描述。 */
   desc?: string
   /** DocLinks 链接。 */
-  link: LinkType
+  link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
   /** 图标配置 */
   icon?: IconType
@@ -66,10 +66,10 @@ export interface BoxCubeItem {
   /** BoxCube 名称。 */
   name: string
   /** BoxCube 链接。 */
-  link: LinkType
+  link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
   /** 图标配置 */
   icon?: IconType
@@ -86,10 +86,10 @@ export interface CardItem {
   /** DocCard 描述。 */
   desc?: string
   /** DocCard 链接。 */
-  link: LinkType
+  link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
   /** 图标配置 */
   icon?: IconType
@@ -104,10 +104,10 @@ export interface Promo {
   /** 活动标题 */
   promo: string
   /** 跳转链接 */
-  link: LinkType
+  link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
   /** 附加信息1 */
   info1?: string
@@ -126,10 +126,10 @@ export interface Normal {
   /** 名称标题 */
   name: string
   /** 跳转链接 */
-  link: LinkType
+  link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
   /** 隐藏信息1（可用于鼠标悬停显示） */
   hide1?: string
@@ -173,7 +173,7 @@ export interface NoticeItem {
   link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
   /** 链接的标题。 */
   title: string
@@ -261,7 +261,7 @@ export interface Icp {
   link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
 }
 
@@ -277,7 +277,7 @@ export interface Police {
   link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
 }
 
@@ -289,7 +289,7 @@ export interface Author {
   link?: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
   /** 版权图标图标 */
   icon?: IconType
@@ -313,7 +313,7 @@ export interface Link {
   link: LinkType
   /** Rel 属性 */
   rel?: RelType
-  /** 链接的目标（可选） */
+  /** 链接的目标 */
   target?: TargetType
 }
 

@@ -15,7 +15,7 @@ const props = defineProps<{
   >
     <LmLink
       v-for="(card, index) in props.items"
-      :key="card.link + index"
+      :key="card.name || card.desc + index"
       class="link"
       :href="card.link"
       :rel="card.rel"
@@ -69,7 +69,7 @@ const props = defineProps<{
   text-decoration: none !important;
 }
 
-.link:hover {
+.link.lm-link:hover {
   transform: var(--Card-transform-hover);
   box-shadow: var(--Card-boxshadow-hover);
   border-color: var(--Card-border-hover);
@@ -77,7 +77,7 @@ const props = defineProps<{
   color: var(--Card-name-hover);
 }
 
-.link:active {
+.link.lm-link:active {
   transform: var(--Card-transform-active);
 }
 
