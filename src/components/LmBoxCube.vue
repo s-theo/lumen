@@ -48,32 +48,32 @@ const props = defineProps<{
     box-shadow 0.25s,
     border-color 0.25s,
     background-color 0.25s;
-  border: 1px solid var(--Boxcube-border);
+  border: 1px solid var(--lm-Boxcube-border);
   border-radius: 0.5em;
-  background-color: var(--Boxcube-bg);
+  background-color: var(--lm-Boxcube-bg);
   aspect-ratio: 1 / 1;
   width: 100%;
   min-width: 0;
   overflow: hidden;
-  color: var(--Boxcube-name);
+  color: var(--lm-Boxcube-name);
   text-decoration: none !important;
 }
 
 .link.lm-link:hover {
-  transform: var(--Boxcube-transform-hover);
-  box-shadow: var(--Boxcube-boxshadow-hover);
-  border-color: var(--Boxcube-border-hover);
-  background-color: var(--Boxcube-bg-hover);
-  color: var(--Boxcube-name-hover);
+  transform: var(--lm-Boxcube-transform-hover);
+  box-shadow: var(--lm-Boxcube-boxshadow-hover);
+  border-color: var(--lm-Boxcube-border-hover);
+  background-color: var(--lm-Boxcube-bg-hover);
+  color: var(--lm-Boxcube-name-hover);
 }
 
 .link.lm-link:active {
-  transform: var(--Boxcube-transform-active);
+  transform: var(--lm-Boxcube-transform-active);
 }
 
 .iconify {
   flex-shrink: 0;
-  color: var(--iconify-defaultcolor);
+  color: var(--lm-iconify-defColor);
 }
 
 .name {

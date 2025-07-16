@@ -23,6 +23,6 @@
   z-index: -1;
   width: calc(100% - 0.7em);
   height: auto;
-  color: var(--Underline-bg);
+  color: var(--lm-Underline-bg);
 }
 </style>

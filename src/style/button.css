@@ -3,24 +3,24 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-button-brand-border: var(--c-yellow-1);
-  --vp-button-brand-text: var(--c-black);
-  --vp-button-brand-bg: var(--c-yellow-1);
-  --vp-button-brand-hover-border: var(--c-yellow-2);
-  --vp-button-brand-hover-text: var(--c-black-darker);
-  --vp-button-brand-hover-bg: var(--c-yellow-2);
-  --vp-button-brand-active-border: var(--c-yellow-soft);
-  --vp-button-brand-active-text: var(--c-black-darker);
+  --vp-button-brand-border: var(--lm-c-yellow-1);
+  --vp-button-brand-text: var(--lm-c-black);
+  --vp-button-brand-bg: var(--lm-c-yellow-1);
+  --vp-button-brand-hover-border: var(--lm-c-yellow-2);
+  --vp-button-brand-hover-text: var(--lm-c-black-darker);
+  --vp-button-brand-hover-bg: var(--lm-c-yellow-2);
+  --vp-button-brand-active-border: var(--lm-c-yellow-soft);
+  --vp-button-brand-active-text: var(--lm-c-black-darker);
   --vp-button-brand-active-bg: var(--vp-button-brand-bg);
 
   --vp-button-sponsor-border: var(--vp-c-sponsor);
-  --vp-button-sponsor-text: var(--c-white-dark);
+  --vp-button-sponsor-text: var(--lm-c-white-dark);
   --vp-button-sponsor-bg: var(--vp-c-sponsor);
   --vp-button-sponsor-hover-border: var(--vp-c-sponsor);
-  --vp-button-sponsor-hover-text: var(--c-white-dark);
+  --vp-button-sponsor-hover-text: var(--lm-c-white-dark);
   --vp-button-sponsor-hover-bg: var(--vp-c-sponsor);
   --vp-button-sponsor-active-border: var(--vp-c-sponsor);
-  --vp-button-sponsor-active-text: var(--c-black-dark);
+  --vp-button-sponsor-active-text: var(--lm-c-black-dark);
   --vp-button-sponsor-active-bg: var(--vp-c-sponsor);
 }
 
