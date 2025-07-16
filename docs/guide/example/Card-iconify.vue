@@ -4,8 +4,7 @@
     {
       icon: { icon: 'line-md:iconify2-static', color: '#1769AA' },
       name: 'iconify',
-      desc: '开源的图标库，提供了数以万计的矢量图标，支持多种框架和平台。',
-      link: 'https://iconify.design/'
+      desc: '开源的图标库，提供了数以万计的矢量图标，支持多种框架和平台。'
     },
     // 深浅色模式的 iconify 图标 + v-html 渲染
     {

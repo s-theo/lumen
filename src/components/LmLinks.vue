@@ -15,7 +15,7 @@ const props = defineProps<{
   >
     <LmLink
       v-for="(link, index) in props.items"
-      :key="link.link + index"
+      :key="link.name + index"
       class="link"
       :href="link.link"
       :rel="link.rel"
@@ -68,7 +68,7 @@ const props = defineProps<{
   text-decoration: none !important;
 }
 
-.link:hover {
+.link.lm-link:hover {
   transform: var(--Links-transform-hover);
   box-shadow: var(--Links-boxshadow-hover);
   border-color: var(--Links-border-hover);
@@ -76,7 +76,7 @@ const props = defineProps<{
   color: var(--Links-name-hover);
 }
 
-.link:active {
+.link.lm-link:active {
   transform: var(--Links-transform-active);
 }
 
