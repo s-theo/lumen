@@ -117,7 +117,7 @@ const isHome = computed(() => {
 
 <style scoped>
 .footer {
-  background: var(--Footer-bg);
+  background: var(--lm-Footer-bg);
   width: 100%;
 }
 
@@ -129,7 +129,7 @@ const isHome = computed(() => {
 }
 
 .footer a:hover {
-  color: var(--Footer-link-hover);
+  color: var(--lm-Footer-link-hover);
   -webkit-text-decoration: underline solid;
   text-decoration: underline solid;
   text-underline-offset: 4px;

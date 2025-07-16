@@ -60,17 +60,17 @@ a.custom-alt-lumen::before {
 }
 
 a.custom-brand::before {
-  background-image: var(--Home-links-custom-brand);
+  background-image: var(--lm-button-brand);
 }
 
 a.custom-brand-lumen::before {
-  background-image: var(--Home-links-custom-brand-lumen);
+  background-image: var(--lm-button-brand-lumen);
 }
 
 a.custom-alt::before {
-  background-image: var(--Home-links-custom-alt);
+  background-image: var(--lm-button-alt);
 }
 
 a.custom-alt-lumen::before {
-  background-image: var(--Home-links-custom-alt-lumen);
+  background-image: var(--lm-button-alt-lumen);
 }

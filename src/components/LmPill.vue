@@ -33,12 +33,12 @@ const pill = defineProps<PillItem>()
     border-color 0.25s,
     background-color 0.25s;
   margin: 0 0.125em;
-  border: 1px solid var(--Pill-border);
+  border: 1px solid var(--lm-Pill-border);
   border-radius: 0.5em;
-  background-color: var(--Pill-bg);
+  background-color: var(--lm-Pill-bg);
   padding: 0em 0.25em;
   height: 1.375em;
-  color: var(--Pill-name);
+  color: var(--lm-Pill-name);
   font-size: 1rem;
   text-decoration: none !important;
   white-space: nowrap;
@@ -49,15 +49,15 @@ const pill = defineProps<PillItem>()
 }
 
 .link.lm-link:hover {
-  transform: var(--Pill-transform-hover);
-  box-shadow: var(--Pill-boxshadow-hover);
-  border-color: var(--Pill-border-hover);
-  background-color: var(--Pill-bg-hover);
-  color: var(--Pill-name-hover);
+  transform: var(--lm-Pill-transform-hover);
+  box-shadow: var(--lm-Pill-boxshadow-hover);
+  border-color: var(--lm-Pill-border-hover);
+  background-color: var(--lm-Pill-bg-hover);
+  color: var(--lm-Pill-name-hover);
 }
 
 .link.lm-link:active {
-  transform: var(--Pill-transform-active);
+  transform: var(--lm-Pill-transform-active);
 }
 
 .vp-doc h1 > .link {
@@ -93,7 +93,7 @@ const pill = defineProps<PillItem>()
 
 .iconify {
   flex-shrink: 0;
-  color: var(--iconify-defaultcolor);
+  color: var(--lm-iconify-defColor);
 }
 
 .name {
