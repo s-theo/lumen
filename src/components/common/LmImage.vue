@@ -43,8 +43,8 @@ const onError = (e: Event): void => {
   <img
     :class="resCrop ? 'crop' : undefined"
     :src="resImage ? withBase(resImage) : undefined"
-    :width="size"
-    :height="size"
+    :width="size ?? undefined"
+    :height="size ?? undefined"
     loading="lazy"
     aria-hidden="true"
     alt=""

@@ -14,8 +14,8 @@ const props = defineProps<{
     :style="typeof props.grid === 'number' ? { gridTemplateColumns: `repeat(${props.grid}, 1fr)` } : undefined"
   >
     <LmLink
-      v-for="(boxcube, index) in props.items"
-      :key="boxcube.name + index"
+      v-for="(boxcube, i) in props.items"
+      :key="boxcube.name + i"
       class="link"
       :href="boxcube.link"
       :rel="boxcube.rel"
