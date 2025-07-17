@@ -2,14 +2,9 @@ export default {
   types: {
     feat: { title: 'Features' },
     fix: { title: 'Bug Fixes' },
-    docs: { title: 'Documentation' },
     style: { title: 'Styles' },
     refactor: { title: 'Refactors' },
-    perf: { title: 'Performance' },
-    test: { title: 'Tests' },
-    chore: { title: 'Chore' },
-    build: { title: 'Build' },
-    ci: { title: 'CI' }
+    perf: { title: 'Performance' }
   },
 
   // 重大更改
