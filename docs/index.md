@@ -41,6 +41,7 @@ hero:
     - theme: brand
       text: ❤️ 成为赞助商
       link: https://i.theojs.cn/sponsor.webp
+      rel: nofollow
 
     - theme: custom-alt
       text: Theo-Docs

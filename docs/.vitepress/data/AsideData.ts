@@ -96,7 +96,7 @@ export const Aside_Data: AsideItem = [
     icon: 'twemoji:red-heart',
     name: '赞助我的项目',
     link: 'https://i.theojs.cn/sponsor.webp',
-    rel: 'sponsored noreferrer'
+    rel: 'nofollow'
   },
   {
     image: 'https://i.theojs.cn/logo/avatar-128.webp',
