@@ -17,10 +17,5 @@ export const socialLinks: DefaultTheme.SocialLink[] = [
     icon: 'npm',
     link: 'https://www.npmjs.com/package/@theojs/lumen',
     ariaLabel: 'npm'
-  },
-  {
-    icon: { svg: '<iconify-icon icon="twemoji:red-heart" width="20px" ></iconify-icon>' },
-    link: 'https://i.theojs.cn/sponsor.webp',
-    ariaLabel: 'Github Sponsors'
   }
 ]
