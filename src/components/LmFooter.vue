@@ -63,8 +63,8 @@ const isHome = computed(() => {
             <LmIcon v-else class="icon-space" icon="fluent:globe-shield-48-filled" size="12" />
           </template>
           <LmLink
-            :href="footer.beian.icp.link || 'https://beian.miit.gov.cn/#/Integrated/index'"
-            :rel="footer.beian.icp.rel"
+            :href="footer.beian.icp.link || 'https://beian.miit.gov.cn/'"
+            :rel="footer.beian.icp.rel || 'nofollow'"
             :target="footer.beian.icp.target"
             no-icon
           >
