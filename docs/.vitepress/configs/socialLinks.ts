@@ -19,7 +19,7 @@ export const socialLinks: DefaultTheme.SocialLink[] = [
     ariaLabel: 'npm'
   },
   {
-    icon: { svg: '<iconify-icon icon="twemoji:red-heart" style="font-size:1.2em" ></iconify-icon>' },
+    icon: { svg: '<iconify-icon icon="twemoji:red-heart" width="20px" ></iconify-icon>' },
     link: 'https://i.theojs.cn/sponsor.webp',
     ariaLabel: 'Github Sponsors'
   }
