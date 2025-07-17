@@ -9,14 +9,17 @@ const pill = defineProps<PillItem>()
   <LmLink
     class="link ignore-header"
     :class="{ 'no-icon-img': !pill.icon && !pill.image }"
+    :tag="pill.link ? 'a' : 'div'"
     :href="pill.link"
     :rel="pill.rel"
     :target="pill.target"
     no-icon
   >
-    <LmIcon v-if="pill.icon" :icon="pill.icon" :size="pill.size || '14'" />
-    <LmImage v-else-if="pill.image" :image="pill.image" :size="pill.size || '14'" />
-    <span class="name" v-html="pill.name"></span>
+    <section class="pill">
+      <LmIcon v-if="pill.icon" :icon="pill.icon" :size="pill.size || '14'" />
+      <LmImage v-else-if="pill.image" :image="pill.image" :size="pill.size || '14'" />
+      <h5 class="name" v-html="pill.name"></h5>
+    </section>
   </LmLink>
 </template>
 
@@ -25,7 +28,6 @@ const pill = defineProps<PillItem>()
   display: inline-flex;
   align-items: center;
   vertical-align: -1px;
-  gap: 0.25em;
   transition:
     color 0.25s,
     transform 0.25s,
@@ -58,6 +60,12 @@ const pill = defineProps<PillItem>()
 
 .link.lm-link:active {
   transform: var(--lm-Pill-transform-active);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
 }
 
 .vp-doc h1 > .link {

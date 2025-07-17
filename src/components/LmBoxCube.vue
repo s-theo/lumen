@@ -17,14 +17,17 @@ const props = defineProps<{
       v-for="(boxcube, i) in props.items"
       :key="boxcube.name + i"
       class="link"
+      :tag="boxcube.link ? 'a' : 'div'"
       :href="boxcube.link"
       :rel="boxcube.rel"
       :target="boxcube.target"
       no-icon
     >
-      <LmIcon v-if="boxcube.icon" :icon="boxcube.icon" :size="boxcube.size || '32'" />
-      <LmImage v-else-if="boxcube.image" :image="boxcube.image" :size="boxcube.size || '32'" />
-      <span class="name" v-html="boxcube.name"></span>
+      <section class="boxcube">
+        <LmIcon v-if="boxcube.icon" :icon="boxcube.icon" :size="boxcube.size || '32'" />
+        <LmImage v-else-if="boxcube.image" :image="boxcube.image" :size="boxcube.size || '32'" />
+        <h5 class="name" v-html="boxcube.name"></h5>
+      </section>
     </LmLink>
   </div>
 </template>
@@ -38,10 +41,6 @@ const props = defineProps<{
 }
 
 .link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   transition:
     color 0.25s,
     transform 0.25s,
@@ -52,7 +51,6 @@ const props = defineProps<{
   border-radius: 0.5em;
   background-color: var(--lm-Boxcube-bg);
   aspect-ratio: 1 / 1;
-  width: 100%;
   min-width: 0;
   overflow: hidden;
   color: var(--lm-Boxcube-name);
@@ -69,6 +67,15 @@ const props = defineProps<{
 
 .link.lm-link:active {
   transform: var(--lm-Boxcube-transform-active);
+}
+
+.boxcube {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .iconify {

@@ -17,17 +17,20 @@ const props = defineProps<{
       v-for="(link, i) in props.items"
       :key="link.name + i"
       class="link"
+      :tag="link.link ? 'a' : 'div'"
       :href="link.link"
       :rel="link.rel"
       :target="link.target"
       no-icon
     >
-      <span class="row">
-        <LmIcon v-if="link.icon" :icon="link.icon" :size="link.size || '32'" />
-        <LmImage v-else-if="link.image" :image="link.image" :size="link.size || '32'" />
-        <span class="name" v-html="link.name"></span>
-      </span>
-      <p v-if="link.desc" class="desc" v-html="link.desc"></p>
+      <section class="links">
+        <div class="links-header">
+          <LmIcon v-if="link.icon" :icon="link.icon" :size="link.size || '32'" />
+          <LmImage v-else-if="link.image" :image="link.image" :size="link.size || '32'" />
+          <span class="name" v-html="link.name"></span>
+        </div>
+        <p v-if="link.desc" class="desc" v-html="link.desc"></p>
+      </section>
     </LmLink>
   </div>
 </template>
@@ -40,18 +43,7 @@ const props = defineProps<{
   margin: 0.5em 0;
 }
 
-.row {
-  display: flex;
-  align-items: center;
-  gap: 0.75em;
-  width: 100%;
-  min-width: 0;
-}
-
 .link {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   transition:
     color 0.25s,
     transform 0.25s,
@@ -80,15 +72,25 @@ const props = defineProps<{
   transform: var(--lm-Links-transform-active);
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.links-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
 .iconify {
   flex-shrink: 0;
   color: var(--lm-iconify-defColor);
 }
 
 .name {
-  flex: 1 1 0%;
-  width: 100%;
-  min-width: 0;
   overflow: hidden;
   font-weight: 600;
   font-size: 0.875rem;

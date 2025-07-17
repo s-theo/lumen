@@ -93,12 +93,6 @@ export const Aside_Data: AsideItem = [
     rel: 'sponsored noreferrer'
   },
   {
-    icon: 'twemoji:red-heart',
-    name: '赞助我的项目',
-    link: 'https://i.theojs.cn/sponsor.webp',
-    rel: 'nofollow'
-  },
-  {
     image: 'https://i.theojs.cn/logo/avatar-128.webp',
     name: 'Theo-Docs',
     hide1: '流媒体观影',

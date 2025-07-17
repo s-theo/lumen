@@ -18,8 +18,8 @@ const notice = useNotice()
     :target="notice.target"
     no-icon
   >
-    <div class="content">
-      <span class="title" v-html="notice.title"></span>
+    <article>
+      <h2 class="title" v-html="notice.title"></h2>
       <p v-if="notice.desc" class="desc" v-html="notice.desc"></p>
       <div v-if="notice.date" class="time-info">
         <LmIcon v-if="notice.dateIcon" :icon="notice.dateIcon" size="14" />
@@ -28,14 +28,13 @@ const notice = useNotice()
         <time v-html="notice.dateText || '活动时间: 即日至'"></time>
         <time class="date">{{ notice.date }}</time>
       </div>
-    </div>
+    </article>
   </LmLink>
 </template>
 
 <style scoped>
 .notice {
   display: inline-flex;
-  flex-direction: column;
   transition:
     transform 0.25s,
     border-color 0.25s,
@@ -55,11 +54,6 @@ const notice = useNotice()
 
 .notice.lm-link:active {
   transform: var(--lm-Notice-transform-active);
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
 }
 
 .title {

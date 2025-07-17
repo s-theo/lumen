@@ -38,11 +38,6 @@ hero:
       text: 专线推荐
       link: https://doc.theojs.cn/serve/airport/flyingbird
 
-    - theme: brand
-      text: ❤️ 成为赞助商
-      link: https://i.theojs.cn/sponsor.webp
-      rel: nofollow
-
     - theme: custom-alt
       text: Theo-Docs
       link: https://doc.theojs.cn

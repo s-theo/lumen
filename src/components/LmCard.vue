@@ -17,17 +17,20 @@ const props = defineProps<{
       v-for="(card, i) in props.items"
       :key="card.name ? card.name + i : (card.desc ?? '') + i"
       class="link"
+      :tag="card.link ? 'a' : 'div'"
       :href="card.link"
       :rel="card.rel"
       :target="card.target"
       no-icon
     >
-      <span class="row">
-        <LmIcon v-if="card.icon" :icon="card.icon" :size="card.size || '48'" />
-        <LmImage v-else-if="card.image" :image="card.image" :size="card.size || '48'" />
-        <span v-if="card.name" class="name" v-html="card.name"></span>
-      </span>
-      <p v-if="card.desc" class="desc" v-html="card.desc"></p>
+      <section class="card">
+        <div class="card-header">
+          <LmIcon v-if="card.icon" :icon="card.icon" :size="card.size || '48'" />
+          <LmImage v-else-if="card.image" :image="card.image" :size="card.size || '48'" />
+          <h5 v-if="card.name" class="name" v-html="card.name"></h5>
+        </div>
+        <p v-if="card.desc" class="desc" v-html="card.desc"></p>
+      </section>
     </LmLink>
   </div>
 </template>
@@ -40,19 +43,7 @@ const props = defineProps<{
   margin: 0.5em 0;
 }
 
-.row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.75em;
-  width: 100%;
-  min-width: 0;
-}
-
 .link {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   transition:
     color 0.25s,
     transform 0.25s,
@@ -81,26 +72,37 @@ const props = defineProps<{
   transform: var(--lm-Card-transform-active);
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75em;
+}
+
 .iconify {
   flex-shrink: 0;
   color: var(--lm-iconify-defColor);
 }
 
 .name {
-  flex: 1 1 0%;
   width: 100%;
-  min-width: 0;
   overflow: hidden;
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.5;
-  text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .desc {
-  align-self: flex-start;
   margin: 0.875em 0 0 0;
   color: var(--lm-Card-desc);
   font-weight: 500;
