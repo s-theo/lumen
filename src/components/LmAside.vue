@@ -20,8 +20,8 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
 
 <template>
   <LmLink
-    v-for="(aside, index) in aside"
-    :key="isAsidePromo(aside) ? aside.promo + index : 'name' in aside ? aside.name + index : index"
+    v-for="(aside, i) in aside"
+    :key="isAsidePromo(aside) ? aside.promo + i : 'name' in aside ? aside.name + i : i"
     :class="['link', { 'has-promo': isAsidePromo(aside), 'has-name': 'name' in aside }]"
     :tag="aside.link ? 'a' : 'div'"
     :href="aside.link"

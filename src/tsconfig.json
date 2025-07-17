@@ -4,6 +4,7 @@
     "lib": ["esnext", "dom", "dom.iterable"],
     "module": "esnext",
     "moduleResolution": "bundler",
+    "strict": true,
     "target": "esnext",
     "types": ["vue"]
   }

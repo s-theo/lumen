@@ -8,7 +8,9 @@ const notice = useNotice()
 <template>
   <LmLink
     v-if="notice"
-    :key="notice.link + notice.rel + notice.target || notice.title || notice.desc || notice.date"
+    :key="
+      (notice.link ?? '') + (notice.rel ?? '') + (notice.target ?? '') || notice.title || notice.desc || notice.date
+    "
     class="notice"
     :tag="notice.link ? 'a' : 'div'"
     :href="notice.link"

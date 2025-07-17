@@ -26,21 +26,21 @@ const isHome = computed(() => {
 <template>
   <footer v-if="isHome" class="footer">
     <div v-if="footer.group?.length" class="list-container">
-      <section v-for="(section, index) in footer.group" :key="section.title + index">
+      <section v-for="(section, i) in footer.group" :key="section.title + i">
         <h3 class="list-title">
           <LmIcon v-if="section.icon" class="icon-space" :icon="section.icon" size="12" />
           <LmImage v-else-if="section.image" class="image-inline" :image="section.image" size="12" />
           {{ section.title }}
         </h3>
         <ul class="list-links">
-          <li v-for="(link, idx) in section.links" :key="link.link + idx">
+          <li v-for="(link, i) in section.links" :key="link.name + i">
             <LmIcon v-if="link.icon" class="icon-space" :icon="link.icon" size="12" />
             <LmImage v-else-if="link.image" class="image-inline" :image="link.image" size="12" />
             <LmLink
               :href="link.link"
               :rel="link.rel"
               :target="link.target"
-              :no-icon="footer.noIcon || section.noIcon || link.noIcon || !isExternal(link.link)"
+              :no-icon="footer.noIcon || section.noIcon || link.noIcon || !isExternal(link.link ?? '')"
             >
               {{ link.name }}
             </LmLink>

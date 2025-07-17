@@ -21,6 +21,6 @@ function mountGoogleAnalytics(id: string) {
   gtag('js', new Date())
   gtag('config', id)
 }
-export default ({ id }) => {
+export default ({ id }: { id: string }) => {
   if (process.env.NODE_ENV === 'production' && id && typeof window !== 'undefined') mountGoogleAnalytics(id)
 }

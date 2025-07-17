@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
 import { computed } from 'vue'
-import { LinkType, RelType, TargetType, isExternal } from '../../types'
+import { LinkType, RelType, TargetType, EXTERNAL_URL_RE } from '../../types'
 
 const props = defineProps<{
   tag?: string
@@ -13,15 +13,16 @@ const props = defineProps<{
 
 const { href, rel, target, noIcon } = props
 const tag = computed(() => props.tag ?? (props.href ? 'a' : 'span'))
+const isExternal = computed(() => (props.href && EXTERNAL_URL_RE.test(props.href)) || props.target === '_blank')
 </script>
 
 <template>
   <component
     :is="tag"
-    :class="{ 'lm-link': href, 'vp-external-link-icon': isExternal(href) && !noIcon, 'no-icon': noIcon }"
+    :class="{ 'lm-link': href, 'vp-external-link-icon': isExternal && !noIcon, 'no-icon': noIcon }"
     :href="href ? withBase(href) : undefined"
-    :rel="rel ?? (isExternal(href) ? 'noreferrer' : undefined)"
-    :target="target ?? (isExternal(href) ? '_blank' : undefined)"
+    :rel="rel ?? (isExternal ? 'noreferrer' : undefined)"
+    :target="target ?? (isExternal ? '_blank' : undefined)"
   >
     <slot />
   </component>

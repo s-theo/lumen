@@ -31,7 +31,7 @@ const resColor = computed(() => {
   if ('color' in props.icon) {
     const color = props.icon.color
     if (typeof color === 'string') return color
-    if ('light' in color && 'dark' in color) return isDark.value ? color.dark : color.light
+    if (color && 'light' in color && 'dark' in color) return isDark.value ? color.dark : color.light
   }
   return undefined
 })
@@ -53,5 +53,5 @@ const resSvg = computed(() => {
 
 <template>
   <span v-if="resSvg" class="iconify" aria-hidden="true" v-html="resSvg" />
-  <Icon v-else :icon="resIcon" :color="resColor" :inline="true" :ssr="true" :width="size" :height="size" />
+  <Icon v-else :icon="resIcon ?? ''" :color="resColor" :inline="true" :ssr="true" :width="size" :height="size" />
 </template>
