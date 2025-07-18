@@ -1,19 +1,7 @@
 /// <reference types="vite/client" />
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
-import {
-  Aside,
-  BoxCube,
-  Card,
-  Footer,
-  Links,
-  Notice,
-  Pill,
-  Underline,
-  Vid,
-  Waline,
-  umamiAnalytics
-} from '@theojs/lumen'
+import { Aside, BoxCube, Card, Footer, Links, Notice, Pill, Underline, Waline, umamiAnalytics } from '@theojs/lumen'
 import '@theojs/lumen/style'
 import { Aside_Data, Footer_Data, Waline_Data } from '../data'
 import 'virtual:group-icons.css'
@@ -39,7 +27,6 @@ export default {
     app.component('Card', Card)
     app.component('BoxCube', BoxCube)
     app.component('Home', Underline)
-    app.component('Vid', Vid)
     app.component('Waline', Waline)
   }
 }

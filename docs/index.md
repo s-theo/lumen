@@ -72,10 +72,6 @@ features:
     details: 在侧边栏中展示常用链接，提升用户导航体验，快速访问相关内容。
     link: '/guide/aside'
 
-  - title: '<iconify-icon class="i-mr" icon="heroicons-solid:video-camera" style="color:#f39c12"></iconify-icon>视频组件'
-    details: 支持嵌入视频内容，提供更加丰富的多媒体展示形式，增强用户互动体验。
-    link: '/guide/vid'
-
   - title: '<iconify-icon class="i-mr" icon="heroicons-solid:rectangle-group" style="color:#1abc9c"></iconify-icon>链接卡片'
     details: 设计美观的链接卡片，直观展示外部资源或推荐内容，提升页面内容的吸引力。
     link: '/guide/linkcard'

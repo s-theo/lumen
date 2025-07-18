@@ -36,7 +36,6 @@ yarn add @theojs/lumen
     { icon: { icon: 'heroicons:paint-brush-solid', color: '#3498db' }, name: '首页下划线', link: 'underline' },
     { icon: { icon: 'heroicons-solid:template', color: '#2ecc71' }, name: '页脚配置', link: 'footer' },
     { icon: { icon: 'heroicons:bars-3-16-solid', color: '#9b59b6' }, name: '侧边栏链接', link: 'aside' },
-    { icon: { icon: 'heroicons-solid:video-camera', color: '#f39c12' }, name: '视频组件', link: 'vid' },
     { icon: { icon: 'heroicons-solid:rectangle-group', color: '#1abc9c' }, name: '链接卡片', link: 'linkcard' },
     { icon: { icon: 'heroicons-solid:photo', color: '#2ecc71' }, name: '图片描述', link: 'image-description' },
     { icon: { icon: 'heroicons-solid:chat', color: '#3498db' }, name: '集成评论', link: 'comment' },

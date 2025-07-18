@@ -1,6 +1,6 @@
 import { useData } from 'vitepress'
 import { type ComputedRef, computed, onMounted, onUnmounted, useTemplateRef } from 'vue'
-import type { NoticeItem, VidItem } from '../types'
+import type { NoticeItem } from '../types'
 
 /**
  * 提取 frontmatter 中 hero 配置的 `Notice` 属性。
@@ -48,42 +48,6 @@ export function moveDomElements(refName: string, targetSelector = '.VPHero .text
   onUnmounted(() => {
     elementRef.value && placeholder?.parentNode?.replaceChild(elementRef.value, placeholder)
   })
-}
-
-/** 支持的视频平台播放器配置。 */
-export const video = {
-  bilibili: {
-    src: (id: VidItem['id']) => `https://player.bilibili.com/player.html?bvid=${id}&autoplay=0`,
-    title: 'Bilibili video player'
-  },
-  tencent: {
-    src: (id: VidItem['id']) => `https://v.qq.com/txp/iframe/player.html?vid=${id}`,
-    title: 'Tencent Video player'
-  },
-  youku: {
-    src: (id: VidItem['id']) => `https://player.youku.com/embed/${id}`,
-    title: 'Youku video player'
-  },
-  youtube: {
-    src: (id: VidItem['id']) => `https://www.youtube-nocookie.com/embed/${id}`,
-    title: 'YouTube video player'
-  },
-  vimeo: {
-    src: (id: VidItem['id']) => `https://player.vimeo.com/video/${id}`,
-    title: 'Vimeo video player'
-  }
-}
-
-/**
- * 获取视频播放器配置。
- *
- * @param props - 视频参数
- * @returns 对应平台视频播放器配置或自定义配置
- */
-export function getVideo(props: VidItem) {
-  if (props.is && props.id) return video[props.is]
-  if (props.id) return video.youtube
-  return { src: props.src || '', title: 'Custom video player' }
 }
 
 /**
