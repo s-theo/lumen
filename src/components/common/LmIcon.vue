@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import { computed } from 'vue'
+import { computed, ref, onMounted, watchEffect } from 'vue'
 import { Icon } from '@iconify/vue'
 import type { IconImageMode, IconType, SizeType } from '../../types'
 
@@ -49,9 +49,19 @@ const resSvgSize = (svgString: string, size: string) => {
 const resSvg = computed(() => {
   return resIcon.value?.includes('<svg') && props.size ? resSvgSize(resIcon.value, String(props.size)) : null
 })
+
+const refSvg = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  watchEffect(() => {
+    if (refSvg.value && resSvg.value) {
+      refSvg.value.innerHTML = resSvg.value || ''
+    }
+  })
+})
 </script>
 
 <template>
-  <span v-if="resSvg" class="iconify" aria-hidden="true" v-html="resSvg" />
+  <span v-if="resSvg" ref="refSvg" class="iconify" aria-hidden="true" />
   <Icon v-else :icon="resIcon ?? ''" :color="resColor" :inline="true" :ssr="true" :width="size" :height="size" />
 </template>
