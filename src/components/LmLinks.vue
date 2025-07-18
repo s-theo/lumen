@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { LmIcon, LmImage, LmLink } from './common'
-import { LinkItem } from '../types'
+import type { LinkItem } from '../types'
 
 const props = defineProps<{
   items: LinkItem[]

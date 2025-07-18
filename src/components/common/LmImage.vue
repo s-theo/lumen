@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
 import { computed } from 'vue'
-import { ImageType, SizeType } from '../../types'
+import type { ImageType, SizeType } from '../../types'
 
 const props = defineProps<{
   image: ImageType

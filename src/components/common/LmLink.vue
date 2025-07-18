@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
 import { computed } from 'vue'
-import { LinkType, RelType, TargetType, EXTERNAL_URL_RE } from '../../types'
+import type { LinkType, RelType, TargetType } from '../../types'
+import { EXTERNAL_URL_RE } from '../../composables'
 
 const props = defineProps<{
   tag?: string

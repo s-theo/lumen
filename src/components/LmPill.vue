@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { LmIcon, LmImage, LmLink } from './common'
-import { PillItem } from '../types'
+import type { PillItem } from '../types'
 
 const pill = defineProps<PillItem>()
 </script>

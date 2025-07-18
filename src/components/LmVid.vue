@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { VidItem, getVideo } from '../types'
+import type { VidItem } from '../types'
+import { getVideo } from '../composables'
 
 const props = defineProps<VidItem>()
 

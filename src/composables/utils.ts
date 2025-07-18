@@ -1,5 +1,5 @@
 import { useData } from 'vitepress'
-import { ComputedRef, computed, onMounted, onUnmounted, useTemplateRef } from 'vue'
+import { type ComputedRef, computed, onMounted, onUnmounted, useTemplateRef } from 'vue'
 import type { NoticeItem, VidItem } from '../types'
 
 /**
