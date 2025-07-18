@@ -65,8 +65,11 @@ const props = defineProps<{
   background-color: var(--lm-Card-bg);
   padding: 1em;
   min-width: 0;
-  color: var(--lm-Card-name);
   text-decoration: none !important;
+}
+
+.link.lm-link {
+  color: var(--lm-Card-name);
 }
 
 .link.lm-link:hover {

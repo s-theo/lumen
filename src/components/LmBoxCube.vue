@@ -55,8 +55,11 @@ const props = defineProps<{
   width: 100%;
   min-width: 0;
   overflow: hidden;
-  color: var(--lm-Boxcube-name);
   text-decoration: none !important;
+}
+
+.link.lm-link {
+  color: var(--lm-Boxcube-name);
 }
 
 .link.lm-link:hover {

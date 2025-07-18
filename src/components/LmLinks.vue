@@ -64,8 +64,11 @@ const props = defineProps<{
   background-color: var(--lm-Links-bg);
   padding: 1em;
   min-width: 0;
-  color: var(--lm-Links-name);
   text-decoration: none !important;
+}
+
+.link.lm-link {
+  color: var(--lm-Links-name);
 }
 
 .link.lm-link:hover {
