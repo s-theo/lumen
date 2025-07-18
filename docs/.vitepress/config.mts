@@ -51,6 +51,7 @@ export default defineConfig({
   // vite 配置
   vite: {
     plugins: [
+      // @ts-ignore: 使用 rolldown-vite 时类型不兼容 vite，但运行正常
       groupIconVitePlugin({
         customIcon: {
           按需导入: 'logos:typescript-icon',
@@ -61,7 +62,7 @@ export default defineConfig({
           '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg',
           iconify: 'https://i.theojs.cn/logo/iconify.svg'
         }
-      }),
+      }), // @ts-ignore
       llmstxt({})
     ]
   },
