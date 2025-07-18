@@ -6,7 +6,6 @@ export { default as Pill } from './LmPill.vue'
 export { default as BoxCube } from './LmBoxCube.vue'
 export { default as Card } from './LmCard.vue'
 export { default as Links } from './LmLinks.vue'
-export { default as Vid } from './LmVid.vue'
 export { default as Footer } from './LmFooter.vue'
 export { default as Underline } from './LmUnderline.vue'
 

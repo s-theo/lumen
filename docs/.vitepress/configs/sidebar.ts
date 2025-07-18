@@ -41,10 +41,6 @@ export function guide(): SidebarItem[] {
           link: 'aside'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-solid:video-camera" style="color:#f39c12"></iconify-icon>视频组件',
-          link: 'vid'
-        },
-        {
           text: '<iconify-icon class="i-mr" icon="heroicons-solid:rectangle-group" style="color:#1abc9c"></iconify-icon>链接卡片',
           link: 'linkcard'
         },
