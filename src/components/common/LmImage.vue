@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData, withBase } from 'vitepress'
+import { withBase } from 'vitepress'
 import { computed } from 'vue'
 import type { ImageType, SizeType } from '../../types'
 
@@ -11,14 +11,9 @@ const props = defineProps<{
 
 defineOptions({ inheritAttrs: false })
 
-const { isDark } = useData()
-
-const resImage = computed(() => {
-  if (typeof props.image === 'string') return props.image
-  if ('light' in props.image && 'dark' in props.image) return isDark.value ? props.image.dark : props.image.light
-  if ('src' in props.image) return props.image.src
-  return undefined
-})
+const isImage = (img: ImageType): img is { light: string; dark: string } => {
+  return typeof img === 'object' && 'light' in img && 'dark' in img
+}
 
 const resCrop = computed(() => {
   return typeof props.image === 'object' && 'crop' in props.image ? Boolean(props.image.crop) : false
@@ -40,20 +35,53 @@ const onError = (e: Event): void => {
 </script>
 
 <template>
-  <img
-    :class="resCrop ? 'crop' : undefined"
-    :src="resImage ? withBase(resImage) : undefined"
-    :width="size ?? undefined"
-    :height="size ?? undefined"
-    loading="lazy"
-    aria-hidden="true"
-    alt=""
-    v-bind="typeof image === 'string' ? $attrs : { ...resAttrs, ...$attrs }"
-    @error="onError"
-  />
+  <template v-if="isImage(props.image)">
+    <img
+      class="dark-img"
+      :class="resCrop ? 'crop' : undefined"
+      :src="withBase(props.image.dark)"
+      :width="size ?? undefined"
+      :height="size ?? undefined"
+      loading="lazy"
+      aria-hidden="true"
+      alt=""
+      v-bind="{ ...resAttrs, ...$attrs }"
+      @error="onError"
+    />
+    <img
+      class="light-img"
+      :class="resCrop ? 'crop' : undefined"
+      :src="withBase(props.image.light)"
+      :width="size ?? undefined"
+      :height="size ?? undefined"
+      loading="lazy"
+      aria-hidden="true"
+      alt=""
+      v-bind="{ ...resAttrs, ...$attrs }"
+      @error="onError"
+    />
+  </template>
+  <template v-else>
+    <img
+      :class="resCrop ? 'crop' : undefined"
+      :src="typeof props.image === 'string' ? withBase(props.image) : withBase(props.image.src)"
+      :width="size ?? undefined"
+      :height="size ?? undefined"
+      loading="lazy"
+      aria-hidden="true"
+      alt=""
+      v-bind="typeof props.image === 'string' ? $attrs : { ...resAttrs, ...$attrs }"
+      @error="onError"
+    />
+  </template>
 </template>
 
 <style scoped>
+:root:not(.dark) .dark-img,
+:root:is(.dark) .light-img {
+  display: none;
+}
+
 img {
   border-radius: 0.25em;
   pointer-events: none;
