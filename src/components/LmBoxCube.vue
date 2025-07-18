@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { LmIcon, LmImage, LmLink } from './common'
-import { BoxCubeItem } from '../types'
+import type { BoxCubeItem } from '../types'
 
 const props = defineProps<{
   items: BoxCubeItem[]

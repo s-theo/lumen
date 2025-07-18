@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { LmIcon, LmImage, LmLink } from './common'
-import { CardItem } from '../types'
+import type { CardItem } from '../types'
 
 const props = defineProps<{
   items: CardItem[]
