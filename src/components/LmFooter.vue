@@ -13,9 +13,9 @@ const footer = computed(() => {
   return props.Footer_Data.i18n?.[localeKey.value] ?? props.Footer_Data
 })
 
-const Year = ref('')
+const currentYear = ref('')
 onMounted(() => {
-  Year.value = new Date().getFullYear().toString()
+  currentYear.value = new Date().getFullYear().toString()
 })
 
 const { frontmatter } = useData()
@@ -109,7 +109,9 @@ const isHome = computed(() => {
           :target="footer.author.target"
           no-icon
         >
-          {{ Year }} {{ footer.author.name }} {{ footer.author.text || 'All Rights Reserved.' }}
+          {{ footer.author.startYear ? footer.author.startYear + ' - ' : '' }}{{ currentYear }}
+          {{ footer.author.name }}
+          {{ footer.author.text || 'All Rights Reserved.' }}
         </LmLink>
       </span>
     </div>

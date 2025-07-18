@@ -2,7 +2,7 @@ import type { FooterData } from '@theojs/lumen'
 
 export const Footer_Data: FooterData = {
   beian: { showIcon: true, icp: { number: '鄂ICP备2024060426号' }, police: { number: '粤公网安备44200102445449号' } },
-  author: { name: 'Theo', link: 'https://github.com/Theo-Messi' },
+  author: { startYear: 2021, name: 'Theo', link: 'https://github.com/Theo-Messi' },
   group: [
     {
       icon: 'mdi:github',
