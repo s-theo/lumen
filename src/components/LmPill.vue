@@ -38,7 +38,6 @@ const pill = defineProps<PillItem>()
   background-color: var(--lm-Pill-bg);
   padding: 0em 0.25em;
   height: 1.375em;
-  color: var(--lm-Pill-name);
   font-size: 1rem;
   text-decoration: none !important;
   white-space: nowrap;
@@ -46,6 +45,10 @@ const pill = defineProps<PillItem>()
 
 .link.no-icon-img {
   vertical-align: 1.5px;
+}
+
+.link.lm-link {
+  color: var(--lm-Pill-name);
 }
 
 .link.lm-link:hover {
