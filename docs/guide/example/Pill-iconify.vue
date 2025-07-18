@@ -1,4 +1,4 @@
-<!-- iconify 图标 -->
+<!-- iconify 图标 + 无链接 -->
 <Pill :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA' }" size="16" name="Iconify" />
 
 <Pill icon="vscode-icons:file-type-vue" name="Vue" link="https://vuejs.org/" />
@@ -6,7 +6,7 @@
 <!-- 深浅模式的 iconify 图标 -->
 <Pill
   :icon="{ light: 'ion:logo-vercel', dark: 'ion:logo-vercel', color: { light: '#000000', dark: '#FFFFFF' } }"
-  name="<em>Vercel</em>"
+  name="<p style='margin:0; font-style: italic;'>Vercel</p>"
   link="https://vercel.com/"
 />
 

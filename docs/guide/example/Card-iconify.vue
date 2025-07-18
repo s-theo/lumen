@@ -1,6 +1,6 @@
 <Card
   :items="[
-    // iconify 图标
+    // iconify 图标 + 无链接
     {
       icon: { icon: 'line-md:iconify2-static', color: '#1769AA' },
       name: 'iconify',
@@ -9,7 +9,7 @@
     // 深浅色模式的 iconify 图标 + v-html 渲染
     {
       icon: { light: 'ion:logo-vercel', dark: 'ion:logo-vercel', color: { light: '#000000', dark: '#FFFFFF' } },
-      name: '<em>Vercel</em>',
+      name: `<p style='margin:0; font-style: italic;'>Vercel</p>`,
       desc: '适用于前端框架的无服务器部署平台，支持静态生成和即时预览。',
       link: 'https://vercel.com/'
     },
