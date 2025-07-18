@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { LmIcon, LmImage, LmLink } from './common'
-import type { AsideAll, AsideItem, AsidePromo } from '../types'
 import { getLocaleKey } from '../composables'
+import type { AsideAll, AsideItem, AsidePromo } from '../types'
 
 const props = defineProps<{ Aside_Data: AsideItem }>()
 

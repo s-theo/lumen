@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { computed, onMounted, ref } from 'vue'
-import { LmIcon, LmLink, LmImage } from './common'
-import type { FooterData } from '../types'
+import { LmIcon, LmImage, LmLink } from './common'
 import { getLocaleKey, isExternal } from '../composables'
+import type { FooterData } from '../types'
 
 const props = defineProps<{ Footer_Data: FooterData }>()
 
