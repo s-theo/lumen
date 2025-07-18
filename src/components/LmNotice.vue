@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { LmIcon, LmLink, LmImage } from './common'
-import { useNotice } from '../types'
+import { LmIcon, LmImage, LmLink } from './common'
+import { useNotice } from '../composables'
 
 const notice = useNotice()
 </script>

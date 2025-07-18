@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { LmSvg } from './common'
-import { moveDomElements } from '../types'
+import { moveDomElements } from '../composables'
 
 const { frontmatter: fm } = useData()
 moveDomElements('heroText')
