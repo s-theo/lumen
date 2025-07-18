@@ -283,6 +283,12 @@ export interface Police {
 
 /** Footer Author 接口 */
 export interface Author {
+  /** 版权图标配置 */
+  icon?: IconType
+  /** 版权图片配置 */
+  image?: ImageType
+  /** 版权起始年份 */
+  startYear?: number
   /** 作者姓名 */
   name?: string
   /** 作者链接 */
@@ -291,10 +297,6 @@ export interface Author {
   rel?: RelType
   /** 链接的目标 */
   target?: TargetType
-  /** 版权图标图标 */
-  icon?: IconType
-  /** 图片配置 */
-  image?: ImageType
   /** 版权文本 */
   text?: string
 }
