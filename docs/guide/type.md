@@ -1,14 +1,13 @@
 ## IconType
 
 ```ts
-export type IconImageMode = string | { light: string; dark: string }
+export type IconMode = string | { light: string; dark: string }
 
 export type IconType =
   | string
-  | { icon: string; color?: IconImageMode }
-  | { light: string; dark: string; color?: IconImageMode }
-  | { svg: string }
-  | { svg: { light: string; dark: string } }
+  | { icon: string; color?: IconMode }
+  | { light: string; dark: string; color?: IconMode }
+  | { svg: IconMode }
 ```
 
 ## ImageType
