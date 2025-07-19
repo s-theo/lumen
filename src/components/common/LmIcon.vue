@@ -2,11 +2,11 @@
 import { useData } from 'vitepress'
 import { computed, ref, onMounted, watchEffect } from 'vue'
 import { Icon } from '@iconify/vue'
-import type { IconImageMode, IconType, SizeType } from '../../types'
+import type { IconMode, IconType, SizeType } from '../../types'
 
 const props = defineProps<{
   icon: IconType
-  color?: IconImageMode
+  color?: IconMode
   size?: SizeType
 }>()
 

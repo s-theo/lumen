@@ -1,7 +1,7 @@
 import type { WalineProps } from '@waline/client/full'
 
 /** 图标和图片的类型 */
-export type IconImageMode = string | { light: string; dark: string }
+export type IconMode = string | { light: string; dark: string }
 /** 尺寸类型 */
 export type SizeType = null | string | number
 /** 链接类型 */
@@ -13,10 +13,9 @@ export type TargetType = string | undefined
 
 export type IconType =
   | string
-  | { icon: string; color?: IconImageMode }
-  | { light: string; dark: string; color?: IconImageMode }
-  | { svg: string }
-  | { svg: { light: string; dark: string } }
+  | { icon: string; color?: IconMode }
+  | { light: string; dark: string; color?: IconMode }
+  | { svg: IconMode }
 
 export type ImageType =
   | string
