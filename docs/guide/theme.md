@@ -269,6 +269,13 @@ console.log('Hello, VitePress!')
 <Badge type="warning" text="beta" />
 <Badge type="danger" text="caution" />
 <Badge type="info">custom element</Badge>
+
+<!-- 或者是 small-->
+<Badge type="info small" text="default" />
+<Badge type="tip small" text="^1.9.0" />
+<Badge type="warning small" text="beta" />
+<Badge type="danger small" text="caution" />
+<Badge type="info small">custom element</Badge>
 ```
 
 <Badge type="info" text="default" />
@@ -276,6 +283,12 @@ console.log('Hello, VitePress!')
 <Badge type="warning" text="beta" />
 <Badge type="danger" text="caution" />
 <Badge type="info">custom element</Badge>
+
+<Badge type="info small" text="default" />
+<Badge type="tip small" text="^1.9.0" />
+<Badge type="warning small" text="beta" />
+<Badge type="danger small" text="caution" />
+<Badge type="info small">custom element</Badge>
 
 ### 图片的浅色和深色模式支持
 
