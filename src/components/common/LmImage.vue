@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData, withBase } from 'vitepress'
-import { computed, watchEffect } from 'vue'
+import { computed, onMounted } from 'vue'
 import type { ImageType, SizeType } from '../../types'
 
 const props = defineProps<{
@@ -39,7 +39,7 @@ const onError = (e: Event): void => {
   }
 }
 
-watchEffect(() => {
+onMounted(() => {
   resImage.value
 })
 </script>
