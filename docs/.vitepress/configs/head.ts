@@ -20,19 +20,9 @@ export const head: HeadConfig[] = [
   ['meta', { property: 'og:type', content: 'website' }],
   ['meta', { property: 'og:locale', content: 'zh-Hans' }],
   ['meta', { property: 'og:site_name', content: 'Lumen' }],
-  ['meta', { property: 'og:title', content: 'Lumen - VitePress 插件库' }],
-  ['meta', { property: 'og:description', content: '✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库' }],
-  ['meta', { property: 'og:url', content: 'https://lumen.theojs.cn/' }],
-  ['meta', { property: 'og:image', content: 'https://i.theojs.cn/logo/Lumen-og.webp' }],
-  ['meta', { property: 'og:image:alt', content: 'Lumen Logo' }],
 
   // ——— Twitter Cards ———
-  ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-  ['meta', { name: 'twitter:site', content: '@TheoMessi_' }],
-  ['meta', { name: 'twitter:title', content: 'Lumen - VitePress 插件库' }],
-  ['meta', { name: 'twitter:description', content: '✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库' }],
-  ['meta', { name: 'twitter:image', content: 'https://i.theojs.cn/logo/Lumen-og.webp' }],
-  ['meta', { name: 'twitter:image:alt', content: 'Lumen Logo' }],
+  ['meta', { name: 'twitter:card', content: 'summary' }],
 
   // ——— SEO 辅助 ———
   ['meta', { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' }],
