@@ -5,75 +5,71 @@ const imgUrl = 'https://i.theojs.cn/logo/Lumen-Logo.webp'
 const defaultOgImage = 'https://i.theojs.cn/logo/Lumen-og.webp'
 
 export const transformPageData: UserConfig['transformPageData'] = (pageData) => {
+  // head is an array
+  pageData.frontmatter.head ??= []
+
   // canonical URL
   const DynamicUrl = `${baseUrl}/${pageData.relativePath}`.replace(/index\.md$/, '').replace(/\.md$/, '')
 
-  pageData.frontmatter.head ??= []
+  // title
+  const title = pageData.frontmatter?.hero?.name || pageData.title || 'Lumen'
 
-  // 过滤掉已有的 canonical 和 JSON-LD script，避免重复
-  pageData.frontmatter.head = pageData.frontmatter.head.filter(
-    (item) =>
-      !(
-        (item[0] === 'link' && item[1]?.rel === 'canonical') ||
-        (item[0] === 'script' && item[1]?.type === 'application/ld+json')
-      )
-  )
+  // description
+  const description = pageData.frontmatter?.hero?.tagline || pageData.description || ''
 
-  // 添加 canonical 链接
-  pageData.frontmatter.head.push(['link', { rel: 'canonical', href: DynamicUrl }])
+  // modified_time
+  const modified_time = pageData.lastUpdated ? new Date(pageData.lastUpdated).toISOString() : new Date().toISOString()
 
-  // 提取 og:image，没有则用默认
+  // og:image
   const ogImageEntry = pageData.frontmatter.head.find((item) => item[0] === 'meta' && item[1]?.property === 'og:image')
   const ogImage = ogImageEntry?.[1]?.content || defaultOgImage
 
+  // json-ld
   const isHome = pageData.relativePath === 'index.md'
-
   const jsonLd = isHome
     ? {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
         url: baseUrl + '/',
         inLanguage: 'zh-Hans',
-        author: {
-          '@type': 'Person',
-          name: 'Theo',
-          url: baseUrl
-        },
+        author: { '@type': 'Person', name: 'Theo', url: baseUrl },
         publisher: {
           '@type': 'Organization',
           name: 'Theo',
-          logo: {
-            '@type': 'ImageObject',
-            url: imgUrl
-          }
+          logo: { '@type': 'ImageObject', url: imgUrl }
         },
-        description: '✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库',
-        name: 'Lumen'
+        description: description,
+        name: title
       }
     : {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
-        headline: pageData.frontmatter.title || '',
+        headline: title,
         inLanguage: 'zh-Hans',
-        author: {
-          '@type': 'Person',
-          name: 'Theo',
-          url: baseUrl
-        },
+        author: { '@type': 'Person', name: 'Theo', url: baseUrl },
         publisher: {
           '@type': 'Organization',
           name: 'Theo',
-          logo: {
-            '@type': 'ImageObject',
-            url: imgUrl
-          }
+          logo: { '@type': 'ImageObject', url: imgUrl }
         },
         mainEntityOfPage: DynamicUrl,
-        description: pageData.description || '',
+        description: description,
         url: DynamicUrl,
         image: ogImage
       }
 
-  // 添加 JSON-LD
-  pageData.frontmatter.head.push(['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)])
+  // add head
+  pageData.frontmatter.head.push(
+    ['link', { rel: 'canonical', href: DynamicUrl }],
+    ['meta', { property: 'og:title', content: title }],
+    ['meta', { property: 'og:url', content: DynamicUrl }],
+    ['meta', { property: 'og:image', content: ogImage }],
+    ['meta', { property: 'og:description', content: description }],
+    ['meta', { property: 'twitter:title', content: title }],
+    ['meta', { property: 'twitter:image', content: ogImage }],
+    ['meta', { property: 'twitter:description', content: description }],
+    ['meta', { property: 'article:published_time', content: '2020-07-21T08:17:36.000Z' }],
+    ['meta', { property: 'article:modified_time', content: modified_time }],
+    ['script', { type: 'application/ld+json' }, JSON.stringify(jsonLd)]
+  )
 }
