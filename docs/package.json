@@ -10,7 +10,7 @@
     "@mdit/plugin-figure": "^0.22.1",
     "@mdit/plugin-img-size": "^0.22.2",
     "@theojs/lumen": "workspace:*",
-    "oxc-minify": "^0.77.2",
+    "oxc-minify": "^0.77.3",
     "vite": "npm:rolldown-vite@^7.0.9",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.6.1",
