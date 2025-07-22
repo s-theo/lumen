@@ -314,7 +314,7 @@ console.log('Hello, VitePress!')
 
 ![浅色模式](https://i.theojs.cn/logo/github.svg#light)
 
-## 报错解决
+## 解决方案
 
 ### 导入主题时报错: `does not provide an export named 'load'`
 
@@ -335,4 +335,28 @@ export default defineConfig({
     } // [!code ++]
   } // [!code ++]
 })
+```
+
+### 使用 [vitepress-plugin-image-viewer](https://www.npmjs.com/package/vitepress-plugin-image-viewer) 时排除组件内的图像
+
+```ts [.vitepress/theme/index.ts]
+// [!code ++]
+import { useRoute } from 'vitepress'
+// [!code ++]
+import imageViewer from 'vitepress-plugin-image-viewer'
+import DefaultTheme from 'vitepress/theme'
+// [!code ++]
+import 'viewerjs/dist/viewer.min.css'
+
+export default {
+  extends: DefaultTheme,
+  // [!code ++]
+  setup() {
+    const route = useRoute() // [!code ++]
+    // [!code ++]
+    imageViewer(route, '.vp-doc', {
+      filter: (img: HTMLImageElement) => !img.hasAttribute('data-no-viewer') // [!code ++]
+    }) // [!code ++]
+  } // [!code ++]
+}
 ```
