@@ -81,12 +81,16 @@ const handleCopy = async () => {
   margin-top: -2px;
 }
 
-.vp-doc td .copy {
+.vp-doc td .copy,
+.vp-doc ul .copy,
+.vp-doc ol .copy {
   vertical-align: 1px;
   font-size: 0.875em;
 }
 
-.vp-doc td .copy.no-icon {
+.vp-doc td .copy.no-icon,
+.vp-doc ul .copy.no-icon,
+.vp-doc ol .copy.no-icon {
   vertical-align: 1.5px;
 }
 
