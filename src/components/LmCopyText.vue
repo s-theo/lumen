@@ -8,7 +8,8 @@ const props = defineProps<CopyTextItem>()
 const copied = ref(false)
 let timer: ReturnType<typeof setTimeout> | null = null
 
-const tipPos = computed(() => props.tipPos ?? 'top')
+const toolTipPos = computed(() => props.toolTipPos ?? 'top')
+const type = computed(() => props.type ?? 'auto')
 
 const handleCopy = async () => {
   await navigator.clipboard.writeText(props.text)
@@ -23,21 +24,21 @@ const handleCopy = async () => {
 <template>
   <button
     class="copy ignore-header"
-    :class="{ 'no-icon': props.noIcon }"
+    :class="[{ 'no-icon': props.noIcon }, type]"
     type="button"
     aria-label="点击复制"
     :title="props.text"
     @click="handleCopy"
   >
     <Transition name="fade">
-      <span v-if="copied" :class="['tip', tipPos]">{{ props.tip || '已复制' }}</span>
+      <span v-if="copied" :class="['tooltip', toolTipPos]">{{ props.toolTip || '已复制' }}</span>
     </Transition>
     <template v-if="!props.noIcon">
       <LmIcon v-if="props.icon" :icon="props.icon" size="14" />
       <LmImage v-else-if="props.image" :image="props.image" size="14" />
       <LmIcon v-else icon="heroicons-solid:clipboard-copy" size="14" />
     </template>
-    <span class="copy-text" :class="{ bold: props.bold }" v-html="props.label || props.text" />
+    <span :class="{ bold: props.bold }" v-html="props.label || props.text" />
   </button>
 </template>
 
@@ -56,11 +57,60 @@ const handleCopy = async () => {
   margin-right: 0.25em;
   border: 1px solid var(--lm-CopyText-border);
   border-radius: 0.5em;
-  background-color: var(--lm-CopyText-bg);
   padding: 0em 0.5em;
   height: 1.375em;
   font-weight: initial;
   font-size: 0.875rem;
+}
+
+.copy.auto {
+  background-color: var(--lm-CopyText-auto-bg);
+  color: var(--lm-CopyText-auto-color);
+}
+
+.copy.auto:hover {
+  border-color: var(--lm-CopyText-auto-border-hover);
+  background-color: var(--lm-CopyText-auto-bg-hover);
+}
+
+.copy.info {
+  background-color: var(--lm-CopyText-info-bg);
+  color: var(--lm-CopyText-info-color);
+}
+
+.copy.info:hover {
+  border-color: var(--lm-CopyText-info-border-hover);
+  background-color: var(--lm-CopyText-info-bg-hover);
+}
+
+.copy.tip {
+  background-color: var(--lm-CopyText-tip-bg);
+  color: var(--lm-CopyText-tip-color);
+}
+
+.copy.tip:hover {
+  border-color: var(--lm-CopyText-tip-border-hover);
+  background-color: var(--lm-CopyText-tip-bg-hover);
+}
+
+.copy.warning {
+  background-color: var(--lm-CopyText-warning-bg);
+  color: var(--lm-CopyText-warning-color);
+}
+
+.copy.warning:hover {
+  border-color: var(--lm-CopyText-warning-border-hover);
+  background-color: var(--lm-CopyText-warning-bg-hover);
+}
+
+.copy.danger {
+  background-color: var(--lm-CopyText-danger-bg);
+  color: var(--lm-CopyText-danger-color);
+}
+
+.copy.danger:hover {
+  border-color: var(--lm-CopyText-danger-border-hover);
+  background-color: var(--lm-CopyText-danger-bg-hover);
 }
 
 .vp-doc h1 .copy {
@@ -98,44 +148,39 @@ const handleCopy = async () => {
   transform: translateY(0.5px);
 }
 
-.copy:hover {
-  border-color: var(--lm-CopyText-border-hover);
-  background-color: var(--lm-CopyText-bg-hover);
-}
-
-.tip {
+.copy .tooltip {
   position: absolute;
   z-index: 10;
-  border: 0.5px solid var(--lm-CopyText-tip-border);
+  border: inherit;
   border-radius: 4px;
-  background-color: var(--lm-CopyText-tip-bg);
+  background-color: inherit;
   padding: 3px 6px;
   pointer-events: none;
-  color: var(--lm-CopyText-tip-text);
+  color: inherit;
   font-size: 0.875em;
   line-height: 1;
   white-space: nowrap;
 }
 
-.tip.top {
+.copy .tooltip.top {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(-4px);
 }
 
-.tip.bottom {
+.copy .tooltip.bottom {
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(4px);
 }
 
-.tip.left {
+.copy .tooltip.left {
   top: 50%;
   right: 100%;
   transform: translateX(-4px) translateY(-50%);
 }
 
-.tip.right {
+.copy .tooltip.right {
   top: 50%;
   left: 100%;
   transform: translateX(4px) translateY(-50%);
@@ -156,16 +201,7 @@ const handleCopy = async () => {
   opacity: 1;
 }
 
-.iconify {
-  flex-shrink: 0;
-  color: var(--lm-CopyText-iconify-color, var(--lm-iconify-defColor));
-}
-
-.copy-text {
-  color: var(--lm-CopyText-text-color);
-}
-
-.copy-text.bold {
+.bold {
   font-weight: 500;
 }
 </style>
