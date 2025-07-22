@@ -97,6 +97,20 @@
   --lm-Card-transform-active: none;
 
   /**
+  * Component: CopyText
+  * -------------------------------------------------------------------------- */
+
+  --lm-CopyText-bg: var(--vp-code-bg);
+  --lm-CopyText-border: transparent;
+  --lm-CopyText-bg-hover: var(--vp-c-brand-soft);
+  --lm-CopyText-border-hover: transparent;
+  --lm-CopyText-tip-border: var(--vp-c-text-3);
+  --lm-CopyText-tip-bg: var(--vp-code-bg);
+  --lm-CopyText-tip-text: var(--vp-c-brand-1);
+  --lm-CopyText-iconify-color: var(--vp-c-brand-3);
+  --lm-CopyText-text-color: var(--vp-c-brand-1);
+
+  /**
   * Component: Pill
   * -------------------------------------------------------------------------- */
 
