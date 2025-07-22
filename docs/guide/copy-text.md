@@ -33,13 +33,13 @@ export default {
 
 ## 数据接口说明
 
-|   字段   | 类型                                     | 说明                                                 | 是否必填              |
-| :------: | ---------------------------------------- | ---------------------------------------------------- | --------------------- |
-|  `text`  | `string`                                 | 要复制的文本内容                                     | <Badge text="必填" /> |
-|  `tip`   | `string`                                 | 复制成功后显示的提示文本，默认值：`已复制`           | <Badge text="可选" /> |
-| `noIcon` | `boolean`                                | 是否不显示图标，默认值：`false`                      | <Badge text="可选" /> |
-|  `icon`  | `IconType`                               | 按钮的图标，默认值：`heroicons-solid:clipboard-copy` | <Badge text="可选" /> |
-| `image`  | `ImageType`                              | 按钮的图片                                           | <Badge text="可选" /> |
-| `tipPos` | `'top' \| 'bottom' \| 'left' \| 'right'` | 提示显示的位置，默认值：`top`                        | <Badge text="可选" /> |
+|   字段   | 类型                                     | 说明                                                                                  | 是否必填              |
+| :------: | ---------------------------------------- | ------------------------------------------------------------------------------------- | --------------------- |
+|  `text`  | `string`                                 | 要复制的文本内容                                                                      | <Badge text="必填" /> |
+|  `tip`   | `string`                                 | 复制成功后显示的提示文本，默认值：`已复制`                                            | <Badge text="可选" /> |
+| `noIcon` | `boolean`                                | 是否不显示图标，默认值：`false`                                                       | <Badge text="可选" /> |
+|  `icon`  | `IconType`                               | 按钮的图标，默认值：`heroicons-solid:clipboard-copy` 。详情查看 [IconType](#IconType) | <Badge text="可选" /> |
+| `image`  | `ImageType`                              | 按钮的图片 。详情查看 [ImageType](#ImageType)                                         | <Badge text="可选" /> |
+| `tipPos` | `'top' \| 'bottom' \| 'left' \| 'right'` | 提示显示的位置，默认值：`top`                                                         | <Badge text="可选" /> |
 
 <!--@include: ./type.md-->
