@@ -8,5 +8,6 @@ export { default as Card } from './LmCard.vue'
 export { default as Links } from './LmLinks.vue'
 export { default as Footer } from './LmFooter.vue'
 export { default as Underline } from './LmUnderline.vue'
+export { default as CopyText } from './LmCopyText.vue'
 
 export const Waline = defineAsyncComponent(() => import('./LmWaline.vue'))

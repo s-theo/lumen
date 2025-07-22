@@ -97,6 +97,35 @@
   --lm-Card-transform-active: none;
 
   /**
+  * Component: CopyText
+  * -------------------------------------------------------------------------- */
+  --lm-CopyText-border: transparent;
+  --lm-CopyText-auto-bg: var(--vp-code-bg);
+  --lm-CopyText-auto-color: var(--vp-c-brand-1);
+  --lm-CopyText-auto-bg-hover: var(--vp-c-brand-soft);
+  --lm-CopyText-auto-border-hover: transparent;
+  --lm-CopyText-info-bg: var(--vp-code-bg);
+  --lm-CopyText-info-color: var(--vp-c-text-1);
+  --lm-CopyText-info-bg-hover: var(--vp-code-bg);
+  --lm-CopyText-info-border-hover: transparent;
+  --lm-CopyText-tip-bg: var(--vp-c-green-soft);
+  --lm-CopyText-tip-color: var(--vp-c-green-1);
+  --lm-CopyText-tip-bg-hover: var(--vp-c-green-soft);
+  --lm-CopyText-tip-border-hover: transparent;
+  --lm-CopyText-warning-bg: var(--vp-c-warning-soft);
+  --lm-CopyText-warning-color: var(--vp-c-warning-1);
+  --lm-CopyText-warning-bg-hover: var(--vp-c-warning-soft);
+  --lm-CopyText-warning-border-hover: transparent;
+  --lm-CopyText-warning-bg: var(--vp-c-warning-soft);
+  --lm-CopyText-warning-color: var(--vp-c-warning-1);
+  --lm-CopyText-warning-bg-hover: var(--vp-c-warning-soft);
+  --lm-CopyText-warning-border-hover: transparent;
+  --lm-CopyText-danger-bg: var(--vp-c-danger-soft);
+  --lm-CopyText-danger-color: var(--vp-c-danger-1);
+  --lm-CopyText-danger-bg-hover: var(--vp-c-danger-soft);
+  --lm-CopyText-danger-border-hover: transparent;
+
+  /**
   * Component: Pill
   * -------------------------------------------------------------------------- */
 
