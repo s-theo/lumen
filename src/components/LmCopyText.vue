@@ -53,6 +53,7 @@ const handleCopy = async () => {
   transition:
     background-color 0.3s,
     border 0.3s;
+  will-change: transform;
   cursor: pointer;
   margin-right: 0.25em;
   border: 1px solid var(--lm-CopyText-border);
