@@ -98,6 +98,28 @@ export interface CardItem {
   size?: SizeType
 }
 
+/** CopyText 接口 */
+export interface CopyTextItem {
+  /** 颜色类型 @default 'auto' */
+  type?: 'auto' | 'info' | 'tip' | 'warning' | 'danger'
+  /** 显示的文本 */
+  label?: string
+  /** 复制按钮的文本内容 */
+  text: string
+  /** 复制成功后的提示文本 @default '已复制' */
+  toolTip?: string
+  /** 关闭图标 */
+  noIcon?: boolean
+  /** 图标配置 @default 'heroicons-solid:clipboard-copy' */
+  icon?: IconType
+  /** 图片配置 */
+  image?: ImageType
+  /** 提示显示的方向 @default 'top' */
+  toolTipPos?: 'top' | 'bottom' | 'left' | 'right'
+  /** 是否加粗文本 @default false */
+  bold?: boolean
+}
+
 /** Promo 类型：表示一个具有活动性质的推广项 */
 export interface Promo {
   /** 活动标题 */

@@ -55,6 +55,10 @@ export function guide(): SidebarItem[] {
         {
           text: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square-solid" style="color:#007bff"></iconify-icon>站点统计',
           link: 'analytics'
+        },
+        {
+          text: '<iconify-icon class="i-mr" icon="heroicons-solid:clipboard-copy" style="color:#20c997"></iconify-icon>复制按钮',
+          link: 'copy-text'
         }
       ]
     }

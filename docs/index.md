@@ -88,6 +88,10 @@ features:
     details: 集成 Google、Baidu、Umami 分析工具，追踪访问数据。
     link: '/guide/analytics'
 
+  - title: '<iconify-icon class="i-mr" icon="heroicons-solid:clipboard-copy" style="color:#20c997"></iconify-icon>复制按钮'
+    details: 快速添加一键复制功能，提升内容可用性与用户体验，支持自定义提示与图标。
+    link: '/guide/copy-text'
+
   - title: '<iconify-icon class="i-mr" icon="line-md:iconify2-static" style="color:#1769AA"></iconify-icon>图标集成'
     details: 轻松集成 Iconify 图标库，提供上千种矢量图标，支持多种平台，丰富站点的视觉表现和交互体验。
     link: '/guide/theme#图标支持'

@@ -39,6 +39,7 @@ yarn add @theojs/lumen
     { icon: { icon: 'heroicons-solid:rectangle-group', color: '#1abc9c' }, name: '链接卡片', link: 'linkcard' },
     { icon: { icon: 'heroicons-solid:photo', color: '#2ecc71' }, name: '图片描述', link: 'image-description' },
     { icon: { icon: 'heroicons-solid:chat', color: '#3498db' }, name: '集成评论', link: 'comment' },
-    { icon: { icon: 'heroicons:chart-bar-square-solid', color: '#007bff' }, name: '站点统计', link: 'analytics' }
+    { icon: { icon: 'heroicons:chart-bar-square-solid', color: '#007bff' }, name: '站点统计', link: 'analytics' },
+    { icon: { icon: 'heroicons-solid:clipboard-copy', color: '#20c997' }, name: '复制按钮', link: 'copy-text' }
   ]"
 />
