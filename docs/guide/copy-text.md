@@ -41,5 +41,6 @@ export default {
 |  `icon`  | `IconType`                               | 按钮的图标，默认值：`heroicons-solid:clipboard-copy` 。详情查看 [IconType](#IconType) | <Badge text="可选" /> |
 | `image`  | `ImageType`                              | 按钮的图片 。详情查看 [ImageType](#ImageType)                                         | <Badge text="可选" /> |
 | `tipPos` | `'top' \| 'bottom' \| 'left' \| 'right'` | 提示显示的位置，默认值：`top`                                                         | <Badge text="可选" /> |
+|  `bold`  | `boolean`                                | 是否启用加粗样式，启用时文字加粗 `font-weight: 600`，默认值：`false`                  | <Badge text="可选" /> |
 
 <!--@include: ./type.md-->

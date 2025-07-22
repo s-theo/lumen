@@ -102,6 +102,8 @@ export interface CardItem {
 export interface CopyTextItem {
   /** 复制按钮的文本内容 */
   text: string
+  /** 是否加粗文本 @default false */
+  bold?: boolean
   /** 复制成功后的提示文本 @default '已复制' */
   tip?: string
   /** 关闭图标 */

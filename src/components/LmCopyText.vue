@@ -22,7 +22,7 @@ const handleCopy = async () => {
 
 <template>
   <button
-    class="copy"
+    class="copy ignore-header"
     :class="{ 'no-icon': props.noIcon }"
     type="button"
     aria-label="点击复制"
@@ -37,7 +37,7 @@ const handleCopy = async () => {
       <LmImage v-else-if="props.image" :image="props.image" size="14" />
       <LmIcon v-else icon="heroicons-solid:clipboard-copy" size="14" />
     </template>
-    <span class="copy-text" v-html="props.text" />
+    <span class="copy-text" :class="{ bold: props.bold }" v-html="props.text" />
   </button>
 </template>
 
@@ -55,11 +55,39 @@ const handleCopy = async () => {
   cursor: pointer;
   margin-right: 0.25em;
   border: 1px solid var(--lm-CopyText-border);
-  border-radius: 4px;
+  border-radius: 0.5em;
   background-color: var(--lm-CopyText-bg);
-  padding: 3px 6px;
+  padding: 0em 0.25em;
+  height: 1.375em;
+  font-weight: initial;
+  font-size: 0.875rem;
+}
+
+.vp-doc h1 .copy {
+  vertical-align: top;
+  margin-top: 0px;
+}
+
+.vp-doc h2 .copy,
+.vp-doc h3 .copy {
+  vertical-align: top;
+  margin-top: -1px;
+}
+
+.vp-doc h4 .copy,
+.vp-doc h5 .copy,
+.vp-doc h6 .copy {
+  vertical-align: top;
+  margin-top: -2px;
+}
+
+.vp-doc td .copy {
+  vertical-align: 1px;
   font-size: 0.875em;
-  line-height: 1.15;
+}
+
+.vp-doc td .copy.no-icon {
+  vertical-align: 1.5px;
 }
 
 .copy.no-icon {
@@ -81,6 +109,7 @@ const handleCopy = async () => {
   pointer-events: none;
   color: var(--lm-CopyText-tip-text);
   font-size: 0.875em;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -130,5 +159,9 @@ const handleCopy = async () => {
 
 .copy-text {
   color: var(--lm-CopyText-text-color);
+}
+
+.copy-text.bold {
+  font-weight: 600;
 }
 </style>
