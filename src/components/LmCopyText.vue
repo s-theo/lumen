@@ -37,7 +37,7 @@ const handleCopy = async () => {
       <LmImage v-else-if="props.image" :image="props.image" size="14" />
       <LmIcon v-else icon="heroicons-solid:clipboard-copy" size="14" />
     </template>
-    <span class="copy-text" :class="{ bold: props.bold }" v-html="props.text" />
+    <span class="copy-text" :class="{ bold: props.bold }" v-html="props.label || props.text" />
   </button>
 </template>
 

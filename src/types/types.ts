@@ -100,6 +100,8 @@ export interface CardItem {
 
 /** CopyText 接口 */
 export interface CopyTextItem {
+  /** 显示的文本 */
+  label?: string
   /** 复制按钮的文本内容 */
   text: string
   /** 是否加粗文本 @default false */

@@ -1,4 +1,4 @@
-<Copy text="hello world" />
+<Copy label="显示的文本" text="hello world" />
 <Copy text="加粗文本" bold />
 <Copy text="复制这段文字" tip="Copied" tipPos="bottom" />
 <Copy text="更换图标" icon="material-symbols:content-copy" />
