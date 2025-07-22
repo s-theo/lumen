@@ -57,7 +57,7 @@ const handleCopy = async () => {
   border: 1px solid var(--lm-CopyText-border);
   border-radius: 0.5em;
   background-color: var(--lm-CopyText-bg);
-  padding: 0em 0.25em;
+  padding: 0em 0.5em;
   height: 1.375em;
   font-weight: initial;
   font-size: 0.875rem;
@@ -162,6 +162,6 @@ const handleCopy = async () => {
 }
 
 .copy-text.bold {
-  font-weight: 600;
+  font-weight: 500;
 }
 </style>
