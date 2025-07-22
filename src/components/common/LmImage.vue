@@ -46,6 +46,7 @@ const onError = (e: Event): void => {
       loading="lazy"
       aria-hidden="true"
       alt=""
+      data-no-viewer
       v-bind="{ ...resAttrs, ...$attrs }"
       @error="onError"
     />
@@ -58,6 +59,7 @@ const onError = (e: Event): void => {
       loading="lazy"
       aria-hidden="true"
       alt=""
+      data-no-viewer
       v-bind="{ ...resAttrs, ...$attrs }"
       @error="onError"
     />
@@ -71,6 +73,7 @@ const onError = (e: Event): void => {
       loading="lazy"
       aria-hidden="true"
       alt=""
+      data-no-viewer
       v-bind="typeof image === 'string' ? $attrs : { ...resAttrs, ...$attrs }"
       @error="onError"
     />
