@@ -27,3 +27,22 @@
 .VPButton.medium {
   border-radius: 12px !important;
 }
+
+.VPButton.logo::before,
+.VPButton.author::before {
+  display: inline-block;
+  transform: translateY(7px);
+  margin-right: 0.5em;
+  background: no-repeat center/24px;
+  width: 24px;
+  height: 24px;
+  content: '';
+}
+
+.VPButton.author::before {
+  background-image: var(--lm-button-author);
+}
+
+.VPButton.logo::before {
+  background-image: var(--lm-button-logo);
+}
