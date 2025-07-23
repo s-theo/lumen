@@ -48,6 +48,8 @@ export interface LinkItem {
   desc?: string
   /** DocLinks 链接。 */
   link?: LinkType
+  /** 链接地址描述文本 */
+  linkText?: string
   /** Rel 属性 */
   rel?: RelType
   /** 链接的目标 */
