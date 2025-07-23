@@ -59,7 +59,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
     border-color 0.25s,
     background-color 0.25s;
   margin: 0.125em 0;
-  border: 1.5px solid var(--lm-Aside-border);
+  border: 1px solid var(--lm-Aside-border);
   border-radius: 0.5em;
   background-color: var(--lm-Aside-bg);
   padding: 0.25em 0;
@@ -87,10 +87,6 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
 .link.lm-link:hover .icon,
 .link.lm-link:hover .iconify {
   transform: scale(1.15);
-}
-
-ul:last-of-type {
-  margin-bottom: 1em;
 }
 
 .link:hover .hide {
