@@ -28,6 +28,9 @@ const props = defineProps<{
         <span class="name" v-html="link.name"></span>
       </span>
       <p v-if="link.desc" class="desc" v-html="link.desc"></p>
+      <p v-if="link.linkText" class="link-text">
+        {{ link.linkText }} <span class="vpi-arrow-right" style="margin-left: 6px" />
+      </p>
     </LmLink>
   </div>
 </template>
@@ -107,6 +110,16 @@ const props = defineProps<{
   font-size: 0.75em;
   line-height: 1.5;
   word-break: break-all;
+}
+
+.link-text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding-top: 8px;
+  font-weight: 500;
+  font-size: 0.75em;
+  line-height: 1.5;
 }
 
 @media (max-width: 600px) {
