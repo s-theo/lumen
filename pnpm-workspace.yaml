@@ -4,7 +4,7 @@ packages:
 
 catalog:
   vitepress: 2.0.0-alpha.8
-  vue: ^3.5.17
+  vue: ^3.5.18
 
 ignoredBuiltDependencies:
   - esbuild
