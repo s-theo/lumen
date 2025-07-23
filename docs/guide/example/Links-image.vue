@@ -6,7 +6,8 @@
       image: 'https://i.theojs.cn/logo/alipay.svg',
       name: '支付宝',
       desc: '移动支付平台，提供便捷的在线支付和转账服务',
-      link: 'https://i.theojs.cn/alipay.webp'
+      link: 'https://i.theojs.cn/alipay.webp',
+      linkText: '立即查看'
     },
     // 深浅模式图片
     {
@@ -17,7 +18,8 @@
       },
       name: 'GitHub',
       desc: '全球最大代码托管平台，支持版本控制和协作开发。',
-      link: 'https://github.com/'
+      link: 'https://github.com/',
+      linkText: '跳转链接'
     }
   ]"
 />
