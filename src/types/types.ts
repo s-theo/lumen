@@ -22,11 +22,11 @@ export type ImageType =
   | { src: string; crop?: boolean; [prop: string]: any }
   | { light: string; dark: string; crop?: boolean; [prop: string]: any }
 
-/** DocPill 接口 */
+/** Pill */
 export interface PillItem {
-  /** Pill 名称。 */
+  /** 名称 */
   name: string
-  /** Pill 链接。 */
+  /** 链接 */
   link?: LinkType
   /** Rel 属性 */
   rel?: RelType
@@ -40,13 +40,13 @@ export interface PillItem {
   size?: SizeType
 }
 
-/** DocLinks 接口 */
+/** Links */
 export interface LinkItem {
-  /** DocLinks 名称。 */
+  /** 名称 */
   name: string
-  /** DocLinks 描述。 */
+  /** 描述 */
   desc?: string
-  /** DocLinks 链接。 */
+  /** 链接 */
   link?: LinkType
   /** 链接地址描述文本 */
   linkText?: string
@@ -62,11 +62,11 @@ export interface LinkItem {
   size?: SizeType
 }
 
-/** BoxCube 接口 */
+/** BoxCube */
 export interface BoxCubeItem {
-  /** BoxCube 名称。 */
+  /** 名称 */
   name: string
-  /** BoxCube 链接。 */
+  /** 链接 */
   link?: LinkType
   /** Rel 属性 */
   rel?: RelType
@@ -80,13 +80,13 @@ export interface BoxCubeItem {
   size?: SizeType
 }
 
-/** DocCard 接口 */
+/** Card */
 export interface CardItem {
-  /** DocCard 名称。 */
+  /** 名称 */
   name?: string
-  /** DocCard 描述。 */
+  /** 描述 */
   desc?: string
-  /** DocCard 链接。 */
+  /** 链接 */
   link?: LinkType
   /** Rel 属性 */
   rel?: RelType
@@ -100,7 +100,7 @@ export interface CardItem {
   size?: SizeType
 }
 
-/** CopyText 接口 */
+/** CopyText */
 export interface CopyTextItem {
   /** 颜色类型 @default 'auto' */
   type?: 'auto' | 'info' | 'tip' | 'warning' | 'danger'
@@ -122,7 +122,7 @@ export interface CopyTextItem {
   bold?: boolean
 }
 
-/** Promo 类型：表示一个具有活动性质的推广项 */
+/** Promo ：表示一个具有活动性质的推广项 */
 export interface Promo {
   /** 活动标题 */
   promo: string
@@ -144,7 +144,7 @@ export interface Promo {
   size?: SizeType
 }
 
-/** Normal 类型：表示普通链接项 */
+/** Normal ：表示普通链接项 */
 export interface Normal {
   /** 名称标题 */
   name: string
@@ -166,23 +166,23 @@ export interface Normal {
   size?: SizeType
 }
 
-/** AsidePromo 类型：继承 Promo，同时支持 i18n 局部多语言（排除递归） */
+/** AsidePromo ：继承 Promo，同时支持 i18n 局部多语言（排除递归） */
 export type AsidePromo = Promo & {
   /** 可选的多语言翻译字段，键为语言代码 */
   i18n?: Partial<Record<string, Omit<AsidePromo, 'i18n'>>>
 }
 
-/** AsideNormal 类型：继承 Normal，同时支持 i18n 局部多语言（排除递归） */
+/** AsideNormal ：继承 Normal，同时支持 i18n 局部多语言（排除递归） */
 export type AsideNormal = Normal & {
   /** 可选的多语言翻译字段，键为语言代码 */
   i18n?: Partial<Record<string, Omit<AsideNormal, 'i18n'>>>
 }
 
-/** AsideAll 类型：联合类型，允许是 Promo 或 Normal */
+/** AsideAll ：联合类型，允许是 Promo 或 Normal */
 export type AsideAll = AsidePromo | AsideNormal
 
 /**
- * AsideItem 类型：支持两种结构
+ * AsideItem ：支持两种结构
  *
  * 单语言：直接是 AsideAll[] 数组
  *
@@ -190,29 +190,29 @@ export type AsideAll = AsidePromo | AsideNormal
  */
 export type AsideItem = AsideAll[] | { i18n: Record<string, AsideAll[]> }
 
-/** Notice 接口 */
+/** Notice */
 export interface NoticeItem {
-  /** 链接的 URL。 */
+  /** 链接 */
   link?: LinkType
   /** Rel 属性 */
   rel?: RelType
   /** 链接的目标 */
   target?: TargetType
-  /** 链接的标题。 */
+  /** 链接的标题 */
   title: string
-  /** 链接的内容。 */
+  /** 链接的内容 */
   desc?: string
   /** 日期 */
   date?: string
   /** 日期文本 */
   dateText?: string
-  /** 日期图标 */
+  /** 日期图标 @default 'line-md:calendar' */
   dateIcon?: IconType
   /** 日期图片 */
   dateImage?: ImageType
 }
 
-/** Waline 配置数据类型接口。 */
+/** Waline 配置数据类型 */
 export interface WalineData {
   serverURL: WalineProps['serverURL']
   path?: string
@@ -235,20 +235,20 @@ export interface WalineData {
   reaction?: WalineProps['reaction']
 }
 
-/** Footer 接口 */
+/** Footer */
 export interface FooterData {
   i18n?: Record<string, Partial<Omit<FooterData, 'i18n'>>>
-  /** 链接分组数组。 */
+  /** 链接分组数组 */
   group?: Group[]
-  /** 备案信息。 */
+  /** 备案信息 */
   beian?: Beian
-  /** 作者信息。 */
+  /** 作者信息 */
   author?: Author
   /** 外部链接图标开关 */
   noIcon?: boolean
 }
 
-/** Footer Group 接口 */
+/** Footer_Group */
 export interface Group {
   /** 图标配置 */
   icon?: IconType
@@ -262,7 +262,7 @@ export interface Group {
   links: Link[]
 }
 
-/** Footer Beian 接口 */
+/** Footer_Beian */
 export interface Beian {
   /** ICP 备案 */
   icp?: Icp
@@ -272,11 +272,11 @@ export interface Beian {
   showIcon?: boolean
 }
 
-/** Footer Beian 接口 */
+/** Footer_Beian_Icp */
 export interface Icp {
   /** ICP 备案号 */
   number?: string
-  /** ICP 图标 */
+  /** ICP 图标 @default 'fluent:globe-shield-48-filled' */
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
@@ -288,11 +288,11 @@ export interface Icp {
   target?: TargetType
 }
 
-/** Footer Beian 接口 */
+/** Footer_Beian_Police */
 export interface Police {
   /** 公安备案号 */
   number?: string
-  /** 公安备案图标 */
+  /** 公安备案图标 @default 'fluent:shield-checkmark-48-filled' */
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
@@ -304,9 +304,9 @@ export interface Police {
   target?: TargetType
 }
 
-/** Footer Author 接口 */
+/** Footer_Author */
 export interface Author {
-  /** 版权图标配置 */
+  /** 版权图标配置 @default 'ri:copyright-line' */
   icon?: IconType
   /** 版权图片配置 */
   image?: ImageType
@@ -324,7 +324,7 @@ export interface Author {
   text?: string
 }
 
-/** Footer Link 接口 */
+/** Footer_Link */
 export interface Link {
   /** 链接图标 */
   icon?: IconType
