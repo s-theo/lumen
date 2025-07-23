@@ -41,7 +41,6 @@
     "./doc": "./style/doc.css",
     "./doc-blocks": "./style/doc-blocks.css",
     "./home": "./style/home.css",
-    "./home-blocks": "./style/home-links.css",
     "./pic": "./style/picture.css",
     "./badge": "./style/badge.css",
     "./components-var": "./style/components-var.css",

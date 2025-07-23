@@ -153,13 +153,11 @@
   --lm-Underline-bg: var(--vp-c-brand-1);
 
   /**
-  * Home-links
+  * button
   * -------------------------------------------------------------------------- */
 
-  --lm-button-brand: url('https://i.theojs.cn/logo/avatar-mini.webp');
-  --lm-button-alt: url('https://i.theojs.cn/logo/avatar-mini.webp');
-  --lm-button-brand-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
-  --lm-button-alt-lumen: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
+  --lm-button-author: url('https://i.theojs.cn/logo/avatar-mini.webp');
+  --lm-button-logo: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
 
   /**
   * waline-style     

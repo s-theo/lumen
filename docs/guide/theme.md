@@ -18,7 +18,7 @@ import '@theojs/lumen/style'
 // .vitepress/theme/index.ts
 /* 徽章样式 */
 import '@theojs/lumen/badge'
-/* 按钮 */
+/* 首页按钮 */
 import '@theojs/lumen/button'
 /* 主题配色 */
 import '@theojs/lumen/colors'
@@ -28,8 +28,6 @@ import '@theojs/lumen/doc'
 import '@theojs/lumen/doc-blocks'
 /* 首页样式 */
 import '@theojs/lumen/home'
-/* 首页按钮 */
-import '@theojs/lumen/home-blocks'
 /* 图标样式 */
 import '@theojs/lumen/icon'
 /* 图片样式 */
@@ -290,7 +288,7 @@ console.log('Hello, VitePress!')
 <Badge type="danger small" text="caution" />
 <Badge type="info small">custom element</Badge>
 
-### 图片的浅色和深色模式支持
+### 5. 图片的浅色和深色模式支持
 
 **输入**
 
@@ -313,6 +311,43 @@ console.log('Hello, VitePress!')
 ![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
 
 ![浅色模式](https://i.theojs.cn/logo/github.svg#light)
+
+### 6. 首页 actions 添加图片
+
+查看 [自定义组件 css](#自定义组件-css) 将下方的内容更换为自己的图片链接
+
+```css [.vitepress/theme/var.css]
+:root {
+  --lm-button-author: url('https://i.theojs.cn/logo/avatar-mini.webp');
+  --lm-button-logo: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
+}
+```
+
+```yaml [.vitepress/index.md]
+---
+layout: home
+
+hero:
+  actions:
+    - theme: brand author
+      text: Theo-Docs
+      link: https://doc.theojs.cn/
+
+    - theme: alt author
+      text: Theo-Docs
+      link: https://doc.theojs.cn/
+
+    - theme: brand logo
+      text: Lumen
+      link: hhttps://lumen.theojs.cn/
+
+    - theme: alt logo
+      text: Lumen
+      link: https://lumen.theojs.cn/
+
+features: ...
+---
+```
 
 ## 解决方案
 

@@ -43,11 +43,11 @@ hero:
       link: https://i.theojs.cn/sponsor.webp
       rel: nofollow
 
-    - theme: custom-alt
+    - theme: alt author
       text: Theo-Docs
       link: https://doc.theojs.cn
 
-    - theme: custom-alt
+    - theme: alt author
       text: 玄学宝典
       link: https://xx.theojs.cn
 
