@@ -5,7 +5,6 @@ import { obsidianImgSize } from '@mdit/plugin-img-size'
 
 export const markdown: MarkdownOptions = {
   theme: { light: 'one-light', dark: 'one-dark-pro' },
-  image: { lazyLoading: true },
   config: (md) => {
     md.use(obsidianImgSize)
     md.use(groupIconMdPlugin, { titleBar: { includeSnippet: true } })
