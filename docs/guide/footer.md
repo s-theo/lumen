@@ -9,9 +9,9 @@ head:
 
 # 页脚组件 - Footer
 
-![桌面端效果图](https://i.theojs.cn/docs/homefooter-desktop-light.webp#light '桌面端效果图')
+![桌面端效果图|688x0](https://i.theojs.cn/docs/homefooter-desktop-light.webp#light '桌面端效果图')
 
-![桌面端效果图](https://i.theojs.cn/docs/homefooter-desktop-dark.webp#dark '桌面端效果图')
+![桌面端效果图|688x0](https://i.theojs.cn/docs/homefooter-desktop-dark.webp#dark '桌面端效果图')
 
 ![移动端效果图|300x0](https://i.theojs.cn/docs/homefooter-mobile-light.webp#light '移动端效果图')
 

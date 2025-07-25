@@ -9,9 +9,9 @@ head:
 
 # 首页下划线组件 - Underline
 
-![首页下划线 - 效果图](https://i.theojs.cn/docs/homeunderline-light.webp#light '首页下划线 - 效果图')
+![首页下划线 - 效果图|688x0](https://i.theojs.cn/docs/homeunderline-light.webp#light '首页下划线 - 效果图')
 
-![首页下划线 - 效果图](https://i.theojs.cn/docs/homeunderline-dark.webp#dark '首页下划线 - 效果图')
+![首页下划线 - 效果图|688x0](https://i.theojs.cn/docs/homeunderline-dark.webp#dark '首页下划线 - 效果图')
 
 ## 引入组件
 
