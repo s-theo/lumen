@@ -43,7 +43,6 @@ const onError = (e: Event): void => {
       :src="withBase(props.image.dark)"
       :width="size ?? undefined"
       :height="size ?? undefined"
-      loading="lazy"
       aria-hidden="true"
       alt=""
       data-no-viewer
@@ -56,7 +55,6 @@ const onError = (e: Event): void => {
       :src="withBase(props.image.light)"
       :width="size ?? undefined"
       :height="size ?? undefined"
-      loading="lazy"
       aria-hidden="true"
       alt=""
       data-no-viewer
@@ -70,7 +68,6 @@ const onError = (e: Event): void => {
       :src="typeof props.image === 'string' ? withBase(props.image) : withBase(props.image.src)"
       :width="size ?? undefined"
       :height="size ?? undefined"
-      loading="lazy"
       aria-hidden="true"
       alt=""
       data-no-viewer
