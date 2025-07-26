@@ -38,9 +38,6 @@ export default defineConfig({
   // 动态生成 meta 标签和 JSON-LD 数据
   transformPageData,
 
-  // 禁用页面链接的预加载
-  router: { prefetchLinks: false },
-
   // vue 配置
   vue: {
     template: {
