@@ -393,3 +393,19 @@ export default {
   } // [!code ++]
 }
 ```
+
+### 组件图像默认加载行为
+
+在组件中，图像默认使用 `loading="lazy"`，即图片会在接近视口时才开始加载，以优化页面加载速度和性能。
+
+**如果需要修改默认行为**
+
+如果你希望图像在页面加载时立即加载，你可以显式地在组件中设置 `loading="eager"`。
+
+```vue-html
+<Pill
+  :image="{ src: 'https://www.example.com/image.jpg', loading: 'eager' }"
+  name="示例图片"
+  link="https://www.example.com"
+/>
+```
