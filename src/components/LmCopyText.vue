@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import { LmIcon, LmImage } from './common'
 import type { CopyTextItem } from '../types'
 
@@ -15,9 +15,7 @@ const handleCopy = async () => {
   await navigator.clipboard.writeText(props.text)
   copied.value = true
   if (timer !== null) clearTimeout(timer)
-  timer = setTimeout(() => {
-    copied.value = false
-  }, 1000)
+  timer = setTimeout(() => (copied.value = false), 1000)
 }
 </script>
 

@@ -14,9 +14,7 @@ const footer = computed(() => {
 })
 
 const currentYear = ref('')
-onMounted(() => {
-  currentYear.value = new Date().getFullYear().toString()
-})
+onMounted(() => (currentYear.value = new Date().getFullYear().toString()))
 
 const { frontmatter } = useData()
 const isHome = computed(() => {

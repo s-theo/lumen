@@ -2,28 +2,23 @@
 import { computed } from 'vue'
 import { LmIcon, LmImage, LmLink } from './common'
 import { getLocaleKey } from '../composables'
-import type { AsideAll, AsideItem, AsidePromo } from '../types'
+import type { AsideAll, AsideItem } from '../types'
 
 const props = defineProps<{ Aside_Data: AsideItem }>()
 
 const localeKey = getLocaleKey()
 
 const aside = computed<AsideAll[]>(() => {
-  const data = props.Aside_Data
-  if (Array.isArray(data)) return data
-  return data?.i18n?.[localeKey.value] ?? []
+  if (Array.isArray(props.Aside_Data)) return props.Aside_Data
+  return props.Aside_Data?.i18n?.[localeKey.value] ?? []
 })
-
-function isAsidePromo(item: AsideAll): item is AsidePromo {
-  return 'promo' in item && typeof item.promo === 'string'
-}
 </script>
 
 <template>
   <LmLink
     v-for="(aside, i) in aside"
-    :key="isAsidePromo(aside) ? aside.promo + i : 'name' in aside ? aside.name + i : i"
-    :class="['link', { 'has-promo': isAsidePromo(aside), 'has-name': 'name' in aside }]"
+    :key="'promo' in aside ? aside.promo + i : 'name' in aside ? aside.name + i : i"
+    :class="['link', { 'has-promo': 'promo' in aside, 'has-name': 'name' in aside }]"
     :tag="aside.link ? 'a' : 'div'"
     :href="aside.link"
     :rel="aside.rel"
@@ -33,7 +28,7 @@ function isAsidePromo(item: AsideAll): item is AsidePromo {
     <LmIcon v-if="aside.icon" :icon="aside.icon" :size="aside.size || '32'" />
     <LmImage v-else-if="aside.image" class="icon" :image="aside.image" :size="aside.size || '32'" />
     <div>
-      <template v-if="isAsidePromo(aside)">
+      <template v-if="'promo' in aside">
         <span class="promo" v-html="aside.promo"></span>
         <p v-if="aside.info1" class="info" v-html="aside.info1"></p>
         <p v-if="aside.info2" class="info" v-html="aside.info2"></p>
