@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import { computed, ref, onMounted, watchEffect } from 'vue'
+import { computed, onMounted, ref, watchEffect } from 'vue'
 import { Icon } from '@iconify/vue'
 import type { IconMode, IconType, SizeType } from '../../types'
 
@@ -54,9 +54,7 @@ const refSvg = ref<HTMLElement | null>(null)
 
 onMounted(() => {
   watchEffect(() => {
-    if (refSvg.value && resSvg.value) {
-      refSvg.value.innerHTML = resSvg.value || ''
-    }
+    if (refSvg.value && resSvg.value) refSvg.value.innerHTML = resSvg.value || ''
   })
 })
 </script>

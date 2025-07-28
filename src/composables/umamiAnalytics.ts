@@ -21,11 +21,7 @@ function mountUmami(options: UmamiOption) {
   let properties: Umami[] = []
 
   // 如果是数组，展开并处理
-  if (Array.isArray(options)) {
-    properties.push(...options)
-  } else {
-    properties.push(options)
-  }
+  Array.isArray(options) ? properties.push(...options) : properties.push(options)
 
   // 过滤掉没有 id 的属性
   properties = properties.filter((property) => Boolean(property.id))
@@ -49,7 +45,5 @@ function mountUmami(options: UmamiOption) {
 
 export default (options: UmamiOption) => {
   // 确保只在浏览器环境中运行
-  if (typeof window !== 'undefined') {
-    mountUmami(options)
-  }
+  if (typeof window !== 'undefined') mountUmami(options)
 }
