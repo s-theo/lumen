@@ -28,3 +28,7 @@
 .dark {
   --vp-home-hero-name-background: -webkit-linear-gradient(45deg, var(--lm-c-yellow-2) 30%, var(--lm-c-green-1));
 }
+
+.VPHero .VPImage {
+  filter: drop-shadow(-2px 4px 6px rgba(0, 0, 0, 0.2));
+}
