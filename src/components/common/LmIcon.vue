@@ -54,9 +54,7 @@ const refSvg = ref<HTMLElement | null>(null)
 
 onMounted(() => {
   watchEffect(() => {
-    if (refSvg.value && resSvg.value) {
-      refSvg.value.innerHTML = resSvg.value || ''
-    }
+    if (refSvg.value && resSvg.value) refSvg.value.innerHTML = resSvg.value || ''
   })
 })
 </script>

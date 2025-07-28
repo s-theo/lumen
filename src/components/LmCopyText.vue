@@ -15,9 +15,7 @@ const handleCopy = async () => {
   await navigator.clipboard.writeText(props.text)
   copied.value = true
   if (timer !== null) clearTimeout(timer)
-  timer = setTimeout(() => {
-    copied.value = false
-  }, 1000)
+  timer = setTimeout(() => (copied.value = false), 1000)
 }
 </script>
 
