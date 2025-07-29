@@ -70,11 +70,10 @@ export default defineConfig({
 
     // Logo
     logo: {
-      src: 'https://i.theojs.cn/logo/Lumen-Logo-mini.webp',
+      src: 'https://i.theojs.cn/logo/lumen-logo-mini.svg',
       width: 24,
       height: 24,
-      alt: 'Lumen Logo',
-      loading: 'eager',
+      alt: 'lumen',
       fetchpriority: 'high'
     },
 

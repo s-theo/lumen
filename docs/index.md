@@ -8,12 +8,9 @@ hero:
   tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
 
   image:
-    src: 'https://i.theojs.cn/logo/Lumen-Logo.webp'
-    alt: '@theojs/lumen'
-    loading: eager
+    src: https://i.theojs.cn/logo/lumen-logo-large.svg
+    alt: lumen'
     fetchpriority: high
-    width: 320
-    height: 320
 
   Notice:
     title: '<iconify-icon icon="streamline-emojis:wrapped-gift-2" ></iconify-icon> <span class="promo-title"> 小蜜蜂 618购物狂欢!!! 最低三年48折</span>'
@@ -98,12 +95,6 @@ features:
 ---
 
 <Home />
-
-<style>
-:root {
-  --vp-home-hero-image-background-image: none !important;
-}
-</style>
 
 <!-- <script setup lang="ts">
 import { Waline_Data } from './.vitepress/data'
