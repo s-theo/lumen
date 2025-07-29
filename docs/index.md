@@ -9,7 +9,7 @@ hero:
 
   image:
     src: https://i.theojs.cn/logo/lumen-logo-large.svg
-    alt: lumen'
+    alt: lumen
     fetchpriority: high
 
   Notice:
