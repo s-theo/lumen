@@ -317,7 +317,7 @@ console.log('Hello, VitePress!')
 ```css [.vitepress/theme/var.css]
 :root {
   --lm-button-author: url('https://i.theojs.cn/logo/avatar-mini.webp');
-  --lm-button-logo: url('https://i.theojs.cn/logo/Lumen-Logo-mini.webp');
+  --lm-button-logo: url('https://i.theojs.cn/logo/lumen-logo-mini.svg');
 }
 ```
 
