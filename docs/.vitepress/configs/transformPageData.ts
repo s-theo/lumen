@@ -1,7 +1,7 @@
 import type { UserConfig } from 'vitepress'
 
 const baseUrl = 'https://lumen.theojs.cn'
-const imgUrl = 'https://i.theojs.cn/logo/Lumen-Logo.webp'
+const imgUrl = 'https://i.theojs.cn/logo/lumen-logo-large.svg'
 const defaultOgImage = 'https://i.theojs.cn/logo/Lumen-og.webp'
 
 export const transformPageData: UserConfig['transformPageData'] = (pageData) => {

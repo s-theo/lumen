@@ -2,7 +2,6 @@ import type { HeadConfig } from 'vitepress'
 
 export const head: HeadConfig[] = [
   // ——— 基础图标与浏览器支持 ———
-  ['link', { rel: 'icon', type: 'image/webp', href: 'https://i.theojs.cn/logo/Lumen-Logo.webp' }],
   ['link', { rel: 'icon', type: 'image/png', href: '/favicon-96x96.png', sizes: '96x96' }],
   ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
   ['link', { rel: 'shortcut icon', href: '/favicon.ico' }],
