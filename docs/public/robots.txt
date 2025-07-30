@@ -1,4 +1,6 @@
-User-agent: *
-Disallow:
+user-agent: *
 
-Sitemap: https://lumen.theojs.cn/sitemap.xml
+disallow: /assets/*.js$
+disallow: /assets/*.css$
+
+sitemap: https://lumen.theojs.cn/sitemap.xml
