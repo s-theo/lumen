@@ -48,7 +48,7 @@ const isHome = computed(() => {
       </section>
     </div>
 
-    <div class="footer-info">
+    <div v-if="footer.beian?.icp || footer.beian?.police || footer.author" class="footer-info">
       <template v-if="footer.beian?.icp || footer.beian?.police">
         <span v-if="footer.beian?.icp?.number" class="footer-infotext">
           <template v-if="footer.beian?.showIcon">
