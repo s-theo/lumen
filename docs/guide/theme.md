@@ -76,7 +76,7 @@ export default DefaultTheme
 }
 ```
 
-查看<Pill icon="unjs:theme-colors" name="默认组件 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/style/components-var.css" /> 文件中查看所有可用变量，方便针对性覆盖。
+查看<Pill icon="unjs:theme-colors" name="默认组件 CSS 变量" link="https://github.com/s-theo/lumen/blob/main/src/style/components-var.css" /> 文件中查看所有可用变量，方便针对性覆盖。
 
 ## 内置样式示例
 

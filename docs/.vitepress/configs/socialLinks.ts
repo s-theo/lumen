@@ -5,13 +5,18 @@ import type { DefaultTheme } from 'vitepress'
 export const socialLinks: DefaultTheme.SocialLink[] = [
   {
     icon: 'github',
-    link: 'https://github.com/Theo-Messi/lumen',
+    link: 'https://github.com/s-theo/lumen',
     ariaLabel: 'Github'
   },
   {
     icon: 'gmail',
     link: 'mailto:fanxiaobin422@gmail.com',
     ariaLabel: 'Gmail'
+  },
+  {
+    icon: 'telegram',
+    link: 'https://t.me/s_theo',
+    ariaLabel: 'Telegram'
   },
   {
     icon: 'npm',

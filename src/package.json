@@ -22,11 +22,11 @@
   ],
   "homepage": "https://lumen.theojs.cn/",
   "bugs": {
-    "url": "https://github.com/Theo-Messi/lumen/issues"
+    "url": "https://github.com/s-theo/lumen/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Theo-Messi/lumen.git",
+    "url": "https://github.com/s-theo/lumen.git",
     "directory": "src"
   },
   "license": "MIT",
