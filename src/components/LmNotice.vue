@@ -24,7 +24,7 @@ const notice = useNotice()
       <div v-if="notice.date" class="time-info">
         <LmIcon v-if="notice.dateIcon" :icon="notice.dateIcon" size="14" />
         <LmImage v-else-if="notice.dateImage" :image="notice.dateImage" size="14" />
-        <LmIcon v-else :icon="'line-md:calendar'" size="14" />
+        <LmIcon v-else icon="heroicons:calendar-days" size="14" style="transform: translateY(-0.5px)" />
         <time v-html="notice.dateText || '活动时间: 即日至'"></time>
         <time class="date">{{ notice.date }}</time>
       </div>

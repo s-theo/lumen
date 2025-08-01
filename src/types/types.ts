@@ -112,7 +112,7 @@ export interface CopyTextItem {
   toolTip?: string
   /** 关闭图标 */
   noIcon?: boolean
-  /** 图标配置 @default 'heroicons-solid:clipboard-copy' */
+  /** 图标配置 @default 'heroicons-outline:clipboard-copy' */
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
@@ -206,7 +206,7 @@ export interface NoticeItem {
   date?: string
   /** 日期文本 */
   dateText?: string
-  /** 日期图标 @default 'line-md:calendar' */
+  /** 日期图标 @default 'heroicons:calendar-days' */
   dateIcon?: IconType
   /** 日期图片 */
   dateImage?: ImageType

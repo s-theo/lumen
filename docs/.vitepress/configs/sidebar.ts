@@ -12,52 +12,52 @@ export function guide(): SidebarItem[] {
       // text: '快速开始',
       items: [
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons:rocket-launch-solid" style="color:#20c997"></iconify-icon>快速开始',
+          text: '<iconify-icon class="i-mr" icon="heroicons:rocket-launch" style="color:#20c997"></iconify-icon>快速开始',
           link: 'getting-started'
         }
       ]
     },
     {
-      text: '<iconify-icon class="i-mr" icon="heroicons:wrench-screwdriver-solid" style="color:#3498db"></iconify-icon>配置',
+      text: '<iconify-icon class="i-mr" icon="heroicons:wrench-screwdriver" style="color:#3498db"></iconify-icon>配置',
       items: [
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons:puzzle-piece-solid" style="color:#ff9800"></iconify-icon>导入主题',
+          text: '<iconify-icon class="i-mr" icon="heroicons:puzzle-piece" style="color:#ff9800"></iconify-icon>导入主题',
           link: 'theme'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-solid:megaphone" style="color:#e74c3c"></iconify-icon>首页公告栏',
+          text: '<iconify-icon class="i-mr" icon="heroicons:megaphone" style="color:#e74c3c"></iconify-icon>首页公告栏',
           link: 'notice'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons:paint-brush-solid" style="color:#3498db"></iconify-icon>首页下划线',
+          text: '<iconify-icon class="i-mr" icon="heroicons:paint-brush" style="color:#3498db"></iconify-icon>首页下划线',
           link: 'underline'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-solid:template" style="color:#2ecc71"></iconify-icon>页脚配置',
+          text: '<iconify-icon class="i-mr" icon="heroicons-outline:template" style="color:#2ecc71"></iconify-icon>页脚配置',
           link: 'footer'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons:bars-3-16-solid" style="color:#9b59b6"></iconify-icon>侧边栏链接',
+          text: '<iconify-icon class="i-mr" icon="heroicons:bars-3" style="color:#9b59b6"></iconify-icon>侧边栏链接',
           link: 'aside'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-solid:rectangle-group" style="color:#1abc9c"></iconify-icon>链接卡片',
+          text: '<iconify-icon class="i-mr" icon="heroicons:rectangle-group" style="color:#1abc9c"></iconify-icon>链接卡片',
           link: 'linkcard'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-solid:photo" style="color:#2ecc71"></iconify-icon>图片描述',
+          text: '<iconify-icon class="i-mr" icon="heroicons:photo" style="color:#2ecc71"></iconify-icon>图片描述',
           link: 'image-description'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-solid:chat" style="color:#3498db"></iconify-icon>集成评论',
+          text: '<iconify-icon class="i-mr" icon="heroicons-outline:chat" style="color:#3498db"></iconify-icon>集成评论',
           link: 'comment'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square-solid" style="color:#007bff"></iconify-icon>站点统计',
+          text: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square" style="color:#007bff"></iconify-icon>站点统计',
           link: 'analytics'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-solid:clipboard-copy" style="color:#20c997"></iconify-icon>复制按钮',
+          text: '<iconify-icon class="i-mr" icon="heroicons-outline:clipboard-copy" style="color:#20c997"></iconify-icon>复制按钮',
           link: 'copy-text'
         }
       ]
