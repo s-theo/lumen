@@ -77,9 +77,9 @@ jobs:
           ISSUE_CLASS: ${{ steps.parse.outputs.issue_class }}
           IS_DUPLICATE: ${{ steps.parse.outputs.is_duplicate }}
 
-      - name: Assign issue to Theo-Messi
+      - name: Assign issue to s-theo
         run: |
-          gh issue edit $ISSUE_NUMBER --add-assignee Theo-Messi
+          gh issue edit $ISSUE_NUMBER --add-assignee s-theo
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}

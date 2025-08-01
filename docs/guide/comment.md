@@ -141,4 +141,4 @@ hero:
 
 ### CSS 变量
 
-已预设 <Pill icon="unjs:theme-colors" name="部分 CSS 变量" link="https://github.com/Theo-Messi/lumen/blob/main/src/style/components-var.css" />，如需进一步自定义，可参考 <Pill image="https://waline.js.org/logo.png" name="Waline 官方文档" link="https://waline.js.org/reference/client/style.html" /> 通过覆盖样式实现个性化调整。
+已预设 <Pill icon="unjs:theme-colors" name="部分 CSS 变量" link="https://github.com/s-theo/lumen/blob/main/src/style/components-var.css" />，如需进一步自定义，可参考 <Pill image="https://waline.js.org/logo.png" name="Waline 官方文档" link="https://waline.js.org/reference/client/style.html" /> 通过覆盖样式实现个性化调整。
