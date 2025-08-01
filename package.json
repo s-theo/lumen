@@ -8,7 +8,10 @@
   "scripts": {
     "build": "pnpm -F=docs build",
     "change": "cd src && pnpm dlx changelogithub --dry",
-    "clean:all": " pnpm store prune && pnpm cache delete '*' && rm -rf node_modules src/node_modules docs/node_modules pnpm-lock.yaml docs/.vitepress/{cache,dist}",
+    "clean": "pnpm clean:pnpm && pnpm clean:nm && pnpm clean:vp",
+    "clean:nm": "rm -rf */node_modules node_modules pnpm-lock.yaml",
+    "clean:pnpm": "rm -rf pnpm store prune && pnpm cache delete '*'",
+    "clean:vp": "rm -rf docs/.vitepress/{cache,dist}",
     "commitlint": "commitlint --edit",
     "cz": "git-cz",
     "dev": "pnpm -F=docs dev",
