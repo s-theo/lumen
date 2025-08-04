@@ -36,8 +36,7 @@ const onError = (e: Event): void => {
 <template>
   <template v-if="isImage(props.image)">
     <img
-      class="dark-img"
-      :class="resCrop ? 'crop' : undefined"
+      :class="['dark-img', resCrop && 'crop']"
       :src="withBase(props.image.dark)"
       :width="size ?? undefined"
       :height="size ?? undefined"
@@ -49,8 +48,7 @@ const onError = (e: Event): void => {
       @error="onError"
     />
     <img
-      class="light-img"
-      :class="resCrop ? 'crop' : undefined"
+      :class="['light-img', resCrop && 'crop']"
       :src="withBase(props.image.light)"
       :width="size ?? undefined"
       :height="size ?? undefined"
