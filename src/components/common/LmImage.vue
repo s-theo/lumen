@@ -14,9 +14,7 @@ defineOptions({ inheritAttrs: false })
 const isImage = (image: ImageType): image is { light: string; dark: string } =>
   typeof image === 'object' && 'light' in image && 'dark' in image
 
-const resCrop = computed(() =>
-  typeof props.image === 'object' && 'crop' in props.image ? Boolean(props.image.crop) : false
-)
+const resCrop = computed(() => Boolean(typeof props.image === 'object' && 'crop' in props.image && props.image.crop))
 
 const resAttrs = computed(() => {
   if (typeof props.image === 'string') return {}
@@ -36,8 +34,7 @@ const onError = (e: Event): void => {
 <template>
   <template v-if="isImage(props.image)">
     <img
-      class="dark-img"
-      :class="resCrop ? 'crop' : undefined"
+      :class="['dark-img', resCrop && 'crop']"
       :src="withBase(props.image.dark)"
       :width="size ?? undefined"
       :height="size ?? undefined"
@@ -49,8 +46,7 @@ const onError = (e: Event): void => {
       @error="onError"
     />
     <img
-      class="light-img"
-      :class="resCrop ? 'crop' : undefined"
+      :class="['light-img', resCrop && 'crop']"
       :src="withBase(props.image.light)"
       :width="size ?? undefined"
       :height="size ?? undefined"
