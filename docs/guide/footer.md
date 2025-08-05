@@ -20,11 +20,11 @@ head:
 ## 创建数据 (点击打开查看)
 
 ::: details 在`.vitepress`目录下新建`data/FooterData.ts`文件，并添加以下内容：
-<<< ./example/FooterData.ts[.vitepress/data/FooterData.ts]
+<<< ../demo/FooterData.ts[.vitepress/data/FooterData.ts]
 :::
 
 ::: details 或者支持 `i18n`
-<<< ./example/FooterData_i18n.ts[.vitepress/data/FooterData_i18n.ts]
+<<< ../demo/FooterData_i18n.ts[.vitepress/data/FooterData_i18n.ts]
 :::
 
 ## 引入组件
@@ -146,4 +146,4 @@ export default {
 | `target`    | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。   | <Badge text="可选" /> |
 | `text`      | `string`     | 版权声明尾句，显示在作者名称后。可自定义该文本，默认值为 `All Rights Reserved.`。                                                        | <Badge text="可选" /> |
 
-<!--@include: ./type.md-->
+<!--@include: ../demo/type.md-->

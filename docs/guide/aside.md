@@ -16,11 +16,11 @@ head:
 ## 创建数据 (点击打开查看)
 
 ::: details 在 `.vitepress` 目录下新建 `data/AsideData.ts` 文件，并添加以下内容：
-<<< ./example/AsideData.ts[.vitepress/data/AsideData.ts]
+<<< ../demo/AsideData.ts[.vitepress/data/AsideData.ts]
 :::
 
 ::: details 或者支持 `i18n`
-<<< ./example/AsideData_i18n.ts[.vitepress/data/AsideData_i18n.ts]
+<<< ../demo/AsideData_i18n.ts[.vitepress/data/AsideData_i18n.ts]
 :::
 
 ## 引入组件
@@ -104,4 +104,4 @@ export default {
 | 单语言结构 | `AsideAll[]`                           | 直接使用 `AsidePromo` 或 `AsideNormal` 组成的数组。                                 |
 | 多语言结构 | `{ i18n: Record<string, AsideAll[]> }` | 使用 `i18n` 包裹的对象，不同语言对应不同数组，如 `{ i18n: { root: [], en: [] } }`。 |
 
-<!--@include: ./type.md-->
+<!--@include: ../demo/type.md-->
