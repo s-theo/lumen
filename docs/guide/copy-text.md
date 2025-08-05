@@ -25,11 +25,11 @@ export default {
 
 **输入**
 
-<<< ./example/CopyText.vue{vue-html}
+<<< ../demo/CopyText.vue{vue-html}
 
 **输出**
 
-<!--@include: ./example/CopyText.vue-->
+<!--@include: ../demo/CopyText.vue-->
 
 ## 数据接口说明
 
@@ -45,4 +45,4 @@ export default {
 | `toolTipPos` | `top \| bottom \| left \| right`           | 提示显示的位置，默认值：`top`                                                           | <Badge text="可选" /> |
 |    `bold`    | `boolean`                                  | 是否启用加粗样式，启用时文字加粗 `font-weight: 600`，默认值：`false`                    | <Badge text="可选" /> |
 
-<!--@include: ./type.md-->
+<!--@include: ../demo/type.md-->

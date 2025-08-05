@@ -28,17 +28,17 @@ export default {
 
 **输入**
 ::: code-group
-<<< ./example/Pill-iconify.vue{vue-html}[Iconify]
-<<< ./example/Pill-svg.vue{vue-html}[svg]
-<<< ./example/Pill-image.vue{vue-html}[image]
+<<< ../demo/Pill.vue#iconify{vue-html}[Iconify]
+<<< ../demo/Pill.vue#svg{vue-html}[svg]
+<<< ../demo/Pill.vue#image{vue-html}[image]
 :::
 **输出**
 
-<!--@include: ./example/Pill-iconify.vue-->
+<!--@include: ../demo/Pill.vue#iconify-->
 
-<!--@include: ./example/Pill-svg.vue-->
+<!--@include: ../demo/Pill.vue#svg-->
 
-<!--@include: ./example/Pill-image.vue-->
+<!--@include: ../demo/Pill.vue#image-->
 
 ### 参数说明
 
@@ -56,16 +56,16 @@ export default {
 
 **输入**
 ::: code-group
-<<< ./example/Links-iconify.vue{vue-html}[Iconify]
-<<< ./example/Links-svg.vue{vue-html}[svg]
-<<< ./example/Links-image.vue{vue-html}[image]
+<<< ../demo/Links.vue#iconify{vue-html}[Iconify]
+<<< ../demo/Links.vue#svg{vue-html}[svg]
+<<< ../demo/Links.vue#image{vue-html}[image]
 :::
 
 **输出**
 
-<!--@include: ./example/Links-iconify.vue-->
-<!--@include: ./example/Links-svg.vue-->
-<!--@include: ./example/Links-image.vue-->
+<!--@include: ../demo/Links.vue#iconify-->
+<!--@include: ../demo/Links.vue#svg-->
+<!--@include: ../demo/Links.vue#image-->
 
 ### 参数说明
 
@@ -86,16 +86,16 @@ export default {
 
 **输入**
 ::: code-group
-<<< ./example/BoxCube-iconify.vue{vue-html}[Iconify]
-<<< ./example/BoxCube-svg.vue{vue-html}[svg]
-<<< ./example/BoxCube-image.vue{vue-html}[image]
+<<< ../demo/BoxCube.vue#iconify{vue-html}[Iconify]
+<<< ../demo/BoxCube.vue#svg{vue-html}[svg]
+<<< ../demo/BoxCube.vue#image{vue-html}[image]
 :::
 
 **输出**
 
-<!--@include: ./example/BoxCube-iconify.vue-->
-<!--@include: ./example/BoxCube-svg.vue-->
-<!--@include: ./example/BoxCube-image.vue-->
+<!--@include: ../demo/BoxCube.vue#iconify-->
+<!--@include: ../demo/BoxCube.vue#svg-->
+<!--@include: ../demo/BoxCube.vue#image-->
 
 ### 参数说明
 
@@ -115,15 +115,15 @@ export default {
 **输入**
 
 ::: code-group
-<<< ./example/Card-iconify.vue{vue-html}[Iconify]
-<<< ./example/Card-svg.vue{vue-html}[svg]
-<<< ./example/Card-image.vue{vue-html}[image]
+<<< ../demo/Card.vue#iconify{vue-html}[Iconify]
+<<< ../demo/Card.vue#svg{vue-html}[svg]
+<<< ../demo/Card.vue#image{vue-html}[image]
 :::
 **输出**
 
-<!--@include: ./example/Card-iconify.vue-->
-<!--@include: ./example/Card-svg.vue-->
-<!--@include: ./example/Card-image.vue-->
+<!--@include: ../demo/Card.vue#iconify-->
+<!--@include: ../demo/Card.vue#svg-->
+<!--@include: ../demo/Card.vue#image-->
 
 ### 参数说明
 
@@ -139,4 +139,4 @@ export default {
 | `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。详情查看 [ImageType](#ImageType)                                                     | <Badge text="可选" /> |
 | `size`   | `SizeType`   | 控制图片或者图标的`width`和`height` 默认值为 `48`                                                                                      | <Badge text="可选" /> |
 
-<!--@include: ./type.md-->
+<!--@include: ../demo/type.md-->

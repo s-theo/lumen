@@ -67,4 +67,4 @@ hero:
 | `dateIcon`  | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `dateImage` 互斥。若 `dateIcon` 和 `dateImage` 都未定义，组件会显示默认图标 `'heroicons:calendar-days'`。详情查看 [IconType](#IconType) | <Badge text="可选" /> |
 | `dateImage` | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。与 `dateIcon` 互斥。若 `dateIcon` 和 `dateImage` 都未定义，组件会显示默认图标 `'heroicons:calendar-days'`。详情查看 [ImageType](#ImageType)    | <Badge text="可选" /> |
 
-<!--@include: ./type.md-->
+<!--@include: ../demo/type.md-->
