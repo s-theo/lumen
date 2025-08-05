@@ -8,12 +8,7 @@
   --lm-imr: 0.25em;
   --lm-promo-text-color: var(--vp-c-brand-1);
   --lm-promo-text-weight: bold;
-  --lm-promo-title-bg: -webkit-linear-gradient(
-    225deg,
-    rgba(100, 108, 255, 1),
-    rgba(176, 71, 255, 1),
-    rgba(100, 108, 255, 1)
-  );
+  --lm-promo-title-bg: var(--lm-Aside-promo);
   --lm-promo-title-color: transparent;
   --lm-promo-title-weight: 600;
 
@@ -99,6 +94,7 @@
   /**
   * Component: CopyText
   * -------------------------------------------------------------------------- */
+
   --lm-CopyText-border: transparent;
   --lm-CopyText-auto-bg: var(--vp-code-bg);
   --lm-CopyText-auto-color: var(--vp-c-brand-1);
@@ -163,20 +159,14 @@
   * waline-style     
   * https://waline.js.org/reference/client/style.html 
   * -------------------------------------------------------------------------- */
-  --waline-bg-elv: rgba(44, 62, 80, 0.1);
-  /* 字体大小 */
-  --waline-font-size: 1rem !important;
 
-  /* 常规颜色 */
+  --waline-bg-elv: rgba(44, 62, 80, 0.1);
+  --waline-font-size: 1rem !important;
   --waline-white: var(--vp-c-white) !important;
   --waline-light-grey: var(--vp-c-text-1) !important;
   --waline-dark-grey: var(--vp-c-text-1) !important;
-
-  /* 主题色 */
   --waline-theme-color: var(--vp-c-brand-1) !important;
   --waline-active-color: var(--vp-c-brand-3) !important;
-
-  /* 布局颜色 */
   --waline-color: var(--vp-c-text-1) !important;
   --waline-bg-color: var(--vp-c-bg-alt) !important;
   --waline-bg-color-light: var(--waline-bg-elv) !important;
@@ -185,24 +175,14 @@
   --waline-disable-bg-color: var(--vp-c-bg-alt) !important;
   --waline-disable-color: var(--vp-c-text-3) !important;
   --waline-code-bg-color: var(--vp-c-bg-alt) !important;
-
-  /* 特殊颜色 */
   --waline-bq-color: var(--vp-c-text-3) !important;
-
-  /* 头像 */
   --waline-avatar-size: 3.25rem;
   --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
-
-  /* 徽章 */
   --waline-badge-color: #3498db;
   --waline-badge-font-size: 0.775em;
-
-  /* 信息 */
   --waline-info-bg-color: var(--vp-c-bg-alt) !important;
   --waline-info-color: var(--vp-c-text-3) !important;
   --waline-info-font-size: 0.625em;
-
-  /* 渲染选择 */
   --waline-border: 1px solid var(--waline-border-color);
   --waline-avatar-radius: 50%;
   --waline-box-shadow: none;
@@ -213,12 +193,7 @@
   * Default
   * -------------------------------------------------------------------------- */
 
-  --lm-promo-title-bg: -webkit-linear-gradient(
-    225deg,
-    rgba(120, 200, 255, 1),
-    rgba(255, 130, 255, 1),
-    rgba(120, 200, 255, 1)
-  );
+  --lm-promo-title-bg: var(--lm-Aside-promo);
   --lm-promo-title-color: transparent;
 
   /**
@@ -237,12 +212,9 @@
   * https://waline.js.org/reference/client/style.html 
   * -------------------------------------------------------------------------- */
 
-  /* 常规颜色 */
   --waline-white: var(--vp-c-brand-text) !important;
   --waline-light-grey: var(--vp-c-text-1) !important;
   --waline-dark-grey: var(--vp-c-text-1) !important;
-
-  /* 布局颜色 */
   --waline-color: var(--vp-c-text-1) !important;
   --waline-bg-color: var(--vp-c-bg-alt) !important;
   --waline-bg-color-light: var(--vp-c-bg-elv) !important;
@@ -251,11 +223,7 @@
   --waline-disable-bg-color: var(--vp-c-bg-elv) !important;
   --waline-disable-color: var(--vp-c-text-3) !important;
   --waline-code-bg-color: var(--vp-c-bg-alt) !important;
-
-  /* 特殊颜色 */
   --waline-bq-color: var(--vp-c-text-3) !important;
-
-  /* 其他颜色 */
   --waline-info-bg-color: var(--vp-c-bg-elv) !important;
   --waline-info-color: var(--vp-c-text-3) !important;
 }
