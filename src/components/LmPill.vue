@@ -7,8 +7,7 @@ const pill = defineProps<PillItem>()
 
 <template>
   <LmLink
-    class="link ignore-header"
-    :class="{ 'no-icon-img': !pill.icon && !pill.image }"
+    :class="['link', 'ignore-header', { 'no-icon-img': !pill.icon && !pill.image }]"
     :href="pill.link"
     :rel="pill.rel"
     :target="pill.target"

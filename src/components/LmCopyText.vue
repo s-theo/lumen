@@ -21,8 +21,7 @@ const handleCopy = async () => {
 
 <template>
   <button
-    class="copy ignore-header"
-    :class="[{ 'no-icon': props.noIcon }, type]"
+    :class="['copy', 'ignore-header', { 'no-icon': props.noIcon }, type]"
     type="button"
     aria-label="点击复制"
     :title="props.text"
