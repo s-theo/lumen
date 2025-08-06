@@ -9,3 +9,9 @@
 .vp-doc a:has(.VPBadge)::after {
   display: none !important;
 }
+
+/* @mdit/plugin-footnote: https://mdit-plugins.github.io/zh/footnote.html  */
+.vp-doc sup a,
+.vp-doc a.footnote-backref {
+  text-decoration: none;
+}
