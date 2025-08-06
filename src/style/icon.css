@@ -5,7 +5,7 @@ iconify-icon {
   height: 1em;
 }
 
-/* right margin for Iconify icons */
+/* right margin for Iconify */
 .i-mr {
   margin-right: var(--lm-imr);
 }

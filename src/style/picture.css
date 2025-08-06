@@ -9,7 +9,7 @@
   display: none;
 }
 
-/* image figcaption */
+/* @mdit/plugin-figure: https://mdit-plugins.github.io/zh/figure.html */
 :root:not(.dark) .dark-only + figcaption,
 :root:is(.dark) .light-only + figcaption,
 :root:not(.dark) img[src$='#dark'] + figcaption,
