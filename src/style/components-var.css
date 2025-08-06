@@ -156,8 +156,7 @@
   --lm-button-logo: url('https://i.theojs.cn/logo/lumen-logo-mini.svg');
 
   /**
-  * waline-style     
-  * https://waline.js.org/reference/client/style.html 
+  * Component:Waline - https://waline.js.org/reference/client/style.html 
   * -------------------------------------------------------------------------- */
 
   --waline-bg-elv: rgba(44, 62, 80, 0.1);
@@ -208,8 +207,7 @@
   --lm-Aside-name-color: transparent;
 
   /**
-  * waline-style     
-  * https://waline.js.org/reference/client/style.html 
+  * Component:Waline - https://waline.js.org/reference/client/style.html 
   * -------------------------------------------------------------------------- */
 
   --waline-white: var(--vp-c-brand-text) !important;
