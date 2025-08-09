@@ -10,10 +10,10 @@
     "@mdit/plugin-figure": "^0.22.1",
     "@mdit/plugin-img-size": "^0.22.2",
     "@theojs/lumen": "workspace:*",
-    "oxc-minify": "^0.80.0",
-    "vite": "npm:rolldown-vite@^7.0.12",
+    "oxc-minify": "^0.81.0",
+    "vite": "npm:rolldown-vite@^7.1.0",
     "vitepress": "catalog:",
-    "vitepress-plugin-group-icons": "^1.6.1",
+    "vitepress-plugin-group-icons": "^1.6.2",
     "vitepress-plugin-llms": "^1.7.2",
     "vue": "catalog:"
   },
