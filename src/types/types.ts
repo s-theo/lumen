@@ -276,7 +276,7 @@ export interface Beian {
 export interface Icp {
   /** ICP 备案号 */
   number?: string
-  /** ICP 图标 @default 'fluent:globe-shield-48-filled' */
+  /** ICP 图标 */
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
@@ -292,7 +292,7 @@ export interface Icp {
 export interface Police {
   /** 公安备案号 */
   number?: string
-  /** 公安备案图标 @default 'fluent:shield-checkmark-48-filled' */
+  /** 公安备案图标 */
   icon?: IconType
   /** 图片配置 */
   image?: ImageType
