@@ -59,7 +59,7 @@ const isHome = computed(() => {
               :image="footer.beian.icp.image"
               size="12"
             />
-            <LmIcon v-else class="icon-space" icon="fluent:globe-shield-48-filled" size="12" />
+            <LmImage v-else class="image-inline" image="https://i.theojs.cn/logo/miit.webp" size="12" loading="eager" />
           </template>
           <LmLink
             :href="footer.beian.icp.link || 'https://beian.miit.gov.cn/'"
@@ -82,7 +82,7 @@ const isHome = computed(() => {
               :image="footer.beian.police.image"
               size="12"
             />
-            <LmIcon v-else class="icon-space" icon="fluent:shield-checkmark-48-filled" size="12" />
+            <LmImage v-else class="image-inline" image="https://i.theojs.cn/logo/mps.webp" size="12" loading="eager" />
           </template>
           <LmLink
             :href="footer.beian.police.link || 'https://beian.mps.gov.cn/'"
