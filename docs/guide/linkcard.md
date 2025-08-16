@@ -13,7 +13,6 @@ import DefaultTheme from 'vitepress/theme'
 import { BoxCube, Card, Links, Pill } from '@theojs/lumen'
 
 export default {
-  extends: DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }) => {
     app.component('Pill', Pill) // [!code ++]

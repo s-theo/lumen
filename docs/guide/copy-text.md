@@ -13,7 +13,6 @@ import DefaultTheme from 'vitepress/theme'
 import { CopyText } from '@theojs/lumen'
 
 export default {
-  extends: DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }) => {
     app.component('Copy', CopyText) // [!code ++]

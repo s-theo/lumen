@@ -382,7 +382,6 @@ import DefaultTheme from 'vitepress/theme'
 import 'viewerjs/dist/viewer.min.css'
 
 export default {
-  extends: DefaultTheme,
   // [!code ++]
   setup() {
     const route = useRoute() // [!code ++]
