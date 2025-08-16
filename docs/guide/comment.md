@@ -113,7 +113,6 @@ import { h } from 'vue'
 import { Waline } from '@theojs/lumen'
 
 export default {
-  extends: DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }) => {
     // [!code ++]

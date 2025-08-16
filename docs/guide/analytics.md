@@ -15,7 +15,6 @@ import DefaultTheme from 'vitepress/theme'
 import { googleAnalytics } from '@theojs/lumen'
 
 export default {
-  ...DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }) => {
     googleAnalytics({ id: 'G-******' }) // [!code ++]
@@ -44,7 +43,6 @@ import DefaultTheme from 'vitepress/theme'
 import { baiduAnalytics, trackPageview } from '@theojs/lumen'
 
 export default {
-  ...DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }) => {
     baiduAnalytics({ baiduId: '******' }) // [!code ++]
@@ -74,7 +72,6 @@ import DefaultTheme from 'vitepress/theme'
 import { umamiAnalytics } from '@theojs/lumen'
 
 export default {
-  ...DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }) => {
     // [!code ++]

@@ -21,7 +21,6 @@ import DefaultTheme from 'vitepress/theme'
 import { Underline } from '@theojs/lumen'
 
 export default {
-  extends: DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }) => {
     // [!code ++]
