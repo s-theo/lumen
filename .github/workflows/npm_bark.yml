@@ -22,9 +22,9 @@ jobs:
       - uses: pnpm/action-setup@v4
 
       - name: Install dependencies
-        run: pnpm add axios typescript tsx -w
+        run: pnpm add axios -w
 
       - name: Run TypeScript script
         env:
           BARK_KEY: ${{ secrets.BARK_KEY }}
-        run: pnpm tsx script/npm_bark.ts
+        run: node script/npm_bark.ts
