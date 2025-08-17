@@ -1,4 +1,4 @@
-name: CI
+name: commitlint
 
 on: [push, pull_request]
 
@@ -8,32 +8,36 @@ permissions:
 jobs:
   commitlint:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Install required dependencies
-        run: |
-          sudo apt update
-          sudo apt install -y sudo
-          sudo apt install -y git curl
-          curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-          sudo DEBIAN_FRONTEND=noninteractive apt install -y nodejs
+
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+          version: latest
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: pnpm
+
       - name: Print versions
         run: |
           git --version
           node --version
-          npm --version
-          npx commitlint --version
+          pnpm --version
+          pnpm dlx commitlint --version
+
       - name: Install commitlint
-        run: |
-          npm install conventional-changelog-conventionalcommits
-          npm install commitlint@latest
+        run: pnpm add -D conventional-changelog-conventionalcommits commitlint
 
-      - name: Validate current commit (last commit) with commitlint
+      - name: Validate current commit (last commit)
         if: github.event_name == 'push'
-        run: npx commitlint --last --verbose
+        run: pnpm dlx commitlint --last --verbose
 
-      - name: Validate PR commits with commitlint
+      - name: Validate PR commits
         if: github.event_name == 'pull_request'
-        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+        run: pnpm dlx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose

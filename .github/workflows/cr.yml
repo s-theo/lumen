@@ -1,4 +1,4 @@
-name: Publish Any Commit
+name: Publish Commit
 
 permissions:
   contents: read
@@ -35,17 +35,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        run: npm install -g pnpm
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+          version: latest
 
-      - name: Set node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: pnpm
-
-      - name: Install
-        run: pnpm install
 
       - name: Release
         run: pnpm dlx pkg-pr-new publish --compact --packageManager=pnpm --pnpm './src'
