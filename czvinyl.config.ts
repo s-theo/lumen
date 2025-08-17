@@ -7,14 +7,12 @@ const config: CzVinylConfig = {
     { value: 'feat', description: '新增功能' },
     { value: 'fix', description: '修复缺陷' },
     { value: 'docs', description: '文档更新' },
-    { value: 'style', description: '代码格式（不影响功能，例如空格、分号等）' },
-    {
-      value: 'refactor',
-      description: '重构代码（既不是新增功能，也不是修复 bug）'
-    },
+    { value: 'style', description: '代码格式' },
+    { value: 'refactor', description: '重构代码' },
     { value: 'perf', description: '性能优化' },
     { value: 'test', description: '增加测试' },
-    { value: 'chore', description: '构建过程或辅助工具变动' }
+    { value: 'chore', description: '构建过程或辅助工具变动' },
+    { value: 'ci', description: '持续集成相关的变动' }
   ],
   maxCommitLineWidth: 72,
   typeQuestion: '请选择提交类型:',
