@@ -30,14 +30,11 @@ jobs:
       github.event_name == 'pull_request'
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
-        with:
-          run_install: true
 
       - uses: actions/setup-node@v4
         with:

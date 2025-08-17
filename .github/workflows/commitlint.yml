@@ -15,8 +15,6 @@ jobs:
           fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
-        with:
-          run_install: true
 
       - uses: actions/setup-node@v4
         with:
@@ -31,7 +29,7 @@ jobs:
           pnpm dlx commitlint --version
 
       - name: Install commitlint
-        run: pnpm add -D conventional-changelog-conventionalcommits commitlint
+        run: pnpm add conventional-changelog-conventionalcommits commitlint -w
 
       - name: Validate current commit (last commit)
         if: github.event_name == 'push'
