@@ -126,6 +126,7 @@ const isHome = computed(() => {
   position: relative;
   transition:
     color 0.25s,
+    opacity 0.25s,
     text-decoration-color 0.25s;
 }
 
@@ -137,10 +138,12 @@ const isHome = computed(() => {
 }
 
 .list-container {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  row-gap: 1.25em;
+  justify-items: center;
   margin: 1.25em auto;
-  max-width: 75%;
+  max-width: 65%;
 }
 
 .list-title {
@@ -151,10 +154,17 @@ const isHome = computed(() => {
 }
 
 .list-links {
-  opacity: 0.75;
   font-weight: 500;
   font-size: 0.75em;
   line-height: 2.4;
+}
+
+.list-links a {
+  opacity: 0.75;
+}
+
+.list-links a:hover {
+  opacity: 1;
 }
 
 .iconify {
@@ -191,13 +201,6 @@ const isHome = computed(() => {
 }
 
 @media (max-width: 768px) {
-  .list-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 1.25em;
-    justify-items: center;
-  }
-
   .info-spacing-copyright {
     margin-left: -1em;
   }
