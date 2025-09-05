@@ -55,6 +55,13 @@ export const Aside_Data: AsideItem = [
     link: 'https://itheo.top/bee',
     rel: 'sponsored noreferrer'
   },
+  {
+    image: 'https://i.theojs.cn/logo/okanc.webp',
+    promo: 'OKNAC 活动开启',
+    info1: '全场8折 <span class="promo-text">优惠码: theo80</span>',
+    link: 'https://itheo.top/okanc',
+    rel: 'sponsored noreferrer'
+  },
   // {
   //   image: 'https://i.theojs.cn/logo/qyt.webp',
   //   promo: '青云梯',
