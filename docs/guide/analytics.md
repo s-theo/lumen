@@ -18,7 +18,7 @@ export default {
   // [!code ++]
   enhanceApp: ({ app }) => {
     googleAnalytics({ id: 'G-******' }) // [!code ++]
-  }
+  } // [!code ++]
 }
 ```
 
@@ -50,7 +50,7 @@ export default {
     if (typeof window !== 'undefined') {
       trackPageview('******', window.location.href) // [!code ++]
     } // [!code ++]
-  }
+  } // [!code ++]
 }
 ```
 
@@ -80,7 +80,7 @@ export default {
       src: 'https://*******', // [!code ++]
       domains: 'your.domain.com' // [!code ++] 可选，参考官方配置 https://umami.is/docs/tracker-configuration#data-domains
     }) // [!code ++]
-  }
+  } // [!code ++]
 }
 ```
 
