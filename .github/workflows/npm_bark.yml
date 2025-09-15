@@ -15,11 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v5
         with:
           node-version: lts/*
-
-      - uses: pnpm/action-setup@v4
 
       - name: Install dependencies
         run: pnpm add axios -w
