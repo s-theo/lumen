@@ -16,13 +16,15 @@ head:
 ## 引入组件
 
 ```ts [.vitepress/theme/index.ts]
+// [!code ++]
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { Underline } from '@theojs/lumen'
 
 export default {
   // [!code ++]
-  enhanceApp: ({ app }) => {
+  enhanceApp: ({ app }: EnhanceAppContext) => {
     // [!code ++]
     app.component('Home', Underline)
   } // [!code ++]

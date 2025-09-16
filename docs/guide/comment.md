@@ -106,6 +106,8 @@ export default {
 你也可以在首页直接挂载 `Waline` 组件：
 
 ```ts [.vitepress/theme/index.ts]
+// [!code ++]
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { h } from 'vue'
@@ -114,7 +116,7 @@ import { Waline } from '@theojs/lumen'
 
 export default {
   // [!code ++]
-  enhanceApp: ({ app }) => {
+  enhanceApp: ({ app }: EnhanceAppContext) => {
     // [!code ++]
     app.component('Waline', Waline)
     // [!code ++]

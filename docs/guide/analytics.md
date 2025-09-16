@@ -10,13 +10,15 @@ description: 探索如何使用 @theojs/lumen 插件，在你的 VitePress 站�
 ## 谷歌分析 - googleAnalytics
 
 ```ts [.vitepress/theme/index.ts]
+// [!code ++]
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { googleAnalytics } from '@theojs/lumen'
 
 export default {
   // [!code ++]
-  enhanceApp: ({ app }) => {
+  enhanceApp: ({ app }: EnhanceAppContext) => {
     googleAnalytics({ id: 'G-******' }) // [!code ++]
   } // [!code ++]
 }
@@ -38,13 +40,15 @@ export default {
 ## 百度统计 - baiduAnalytics
 
 ```ts [.vitepress/theme/index.ts]
+// [!code ++]
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { baiduAnalytics, trackPageview } from '@theojs/lumen'
 
 export default {
   // [!code ++]
-  enhanceApp: ({ app }) => {
+  enhanceApp: ({ app }: EnhanceAppContext) => {
     baiduAnalytics({ baiduId: '******' }) // [!code ++]
     // [!code ++]
     if (typeof window !== 'undefined') {
@@ -67,13 +71,15 @@ export default {
 ## Umami - umamiAnalytics
 
 ```ts [.vitepress/theme/index.ts]
+// [!code ++]
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { umamiAnalytics } from '@theojs/lumen'
 
 export default {
   // [!code ++]
-  enhanceApp: ({ app }) => {
+  enhanceApp: ({ app }: EnhanceAppContext) => {
     // [!code ++]
     umamiAnalytics({
       id: '***-***-***-***', // [!code ++]
