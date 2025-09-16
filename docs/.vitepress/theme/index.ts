@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import * as lm from '@theojs/lumen'
@@ -17,7 +18,7 @@ export default {
       'doc-after': () => h(lm.Waline, { Waline_Data })
     })
   },
-  enhanceApp: ({ app }) => {
+  enhanceApp: ({ app }: EnhanceAppContext) => {
     lm.umamiAnalytics({
       id: import.meta.env.VITE_UMAMI_ID,
       src: import.meta.env.VITE_UMAMI_SRC,

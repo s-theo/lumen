@@ -8,13 +8,15 @@ description: 了解如何使用 @theojs/lumen 插件提供的多种链接卡片�
 ## 引入组件
 
 ```ts [.vitepress/theme/index.ts]
+// [!code ++]
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { BoxCube, Card, Links, Pill } from '@theojs/lumen'
 
 export default {
   // [!code ++]
-  enhanceApp: ({ app }) => {
+  enhanceApp: ({ app }: EnhanceAppContext) => {
     app.component('Pill', Pill) // [!code ++]
     app.component('Links', Links) // [!code ++]
     app.component('Card', Card) // [!code ++]

@@ -8,13 +8,15 @@ description: 了解如何使用 @theojs/lumen 的 CopyText 组件来实现点击
 ## 引入组件
 
 ```ts [.vitepress/theme/index.ts]
+// [!code ++]
+import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { CopyText } from '@theojs/lumen'
 
 export default {
   // [!code ++]
-  enhanceApp: ({ app }) => {
+  enhanceApp: ({ app }: EnhanceAppContext) => {
     app.component('Copy', CopyText) // [!code ++]
   } // [!code ++]
 }
