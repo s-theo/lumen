@@ -65,7 +65,7 @@
   "dependencies": {
     "@iconify/vue": "^5.0.0",
     "@waline/client": "^3.6.0",
-    "iconify-icon": "^3.0.0",
+    "iconify-icon": "^3.0.1",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
@@ -73,5 +73,5 @@
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@10.16.1"
+  "packageManager": "pnpm@10.17.0"
 }
