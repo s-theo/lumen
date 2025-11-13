@@ -64,8 +64,8 @@
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
-    "@waline/client": "^3.6.0",
-    "iconify-icon": "^3.0.1",
+    "@waline/client": "^3.8.0",
+    "iconify-icon": "^3.0.2",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
@@ -73,5 +73,5 @@
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@10.18.2"
+  "packageManager": "pnpm@10.22.0"
 }
