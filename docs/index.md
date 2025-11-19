@@ -13,12 +13,11 @@ hero:
     fetchpriority: high
 
   Notice:
-    title: '<span class="promo-title">青云梯双十一优惠活动!</span>'
+    title: '<span class="promo-title">青云梯 双旦特惠!</span>'
     desc: |
-      · 全场套餐 <span class="promo-text"> 8折: 10180 </span>
-      · 每位用户不限使用次数。
-      · 优惠券可叠加套餐本身优惠，享受折上折。
-    date: '2025年11月30日23点59分'
+      · 全场套餐 <span class="promo-text"> 8折: 0080 </span>
+      · 3年付更可享受 <span class="promo-text"> 48折 </span>
+    date: '2026年1月30日23点59分'
     dateText: '活动截止至'
     link: https://itheo.top/qyt
     rel: sponsored noreferrer
