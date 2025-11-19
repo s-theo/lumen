@@ -8,14 +8,14 @@
   },
   "devDependencies": {
     "@mdit/plugin-figure": "^0.22.2",
-    "@mdit/plugin-img-size": "^0.22.3",
+    "@mdit/plugin-img-size": "^0.22.4",
     "@theojs/lumen": "workspace:*",
-    "oxc-minify": "^0.97.0",
-    "vite": "npm:rolldown-vite@^7.2.5",
+    "oxc-minify": "^0.106.0",
+    "vite": "npm:rolldown-vite@^7.3.0",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.6.5",
-    "vitepress-plugin-llms": "^1.9.1",
+    "vitepress-plugin-llms": "^1.10.0",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@10.22.0"
+  "packageManager": "pnpm@10.27.0"
 }
