@@ -42,7 +42,7 @@ export const Aside_Data: AsideItem = [
   //   rel: 'sponsored noreferrer'
   // },
   {
-    image: { src: 'https://i.theojs.cn/docs/TNT.webp', crop: true },
+    image: { src: 'https://i.theojs.cn/logo/TNT.webp', crop: true },
     promo: 'TNT 专属特惠',
     info1: '全场套餐 <span class="promo-text"> 8折: TNT80</span>',
     info2: '全场85折 <span class="promo-text">折扣码: TNT85</span>',
@@ -114,7 +114,7 @@ export const Aside_Data: AsideItem = [
   //   rel: 'sponsored noreferrer'
   // },
   // {
-  //   image: { src: 'https://i.theojs.cn/docs/TNT.webp', crop: true },
+  //   image: { src: 'https://i.theojs.cn/logo/TNT.webp', crop: true },
   //   promo: 'TNT Cloud',
   //   link: 'https://itheo.top/tnt',
   //   rel: 'sponsored noreferrer'
