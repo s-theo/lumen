@@ -83,30 +83,36 @@ export const Aside_Data: AsideItem = [
   //   link: 'https://itheo.top/qyt',
   //   rel: 'sponsored noreferrer'
   // },
-  {
-    image: { src: 'https://i.theojs.cn/logo/galaxy_transparent_square.webp', crop: true },
-    promo: '银河云',
-    link: 'https://itheo.top/yhy',
-    rel: 'sponsored noreferrer'
-  },
-  {
-    image: 'https://i.theojs.cn/logo/flyingbird.webp',
-    promo: 'FlyingBird',
-    link: 'https://itheo.top/flyingbird',
-    rel: 'sponsored noreferrer'
-  },
-  {
-    image: 'https://i.theojs.cn/logo/totoro.webp',
-    promo: 'Totoro Cloud - 龙猫云',
-    link: 'https://itheo.top/totoro',
-    rel: 'sponsored noreferrer'
-  },
   // {
   //   image: 'https://i.theojs.cn/logo/hyperlink_logo.webp',
   //   promo: 'hyperlink - 极连云',
   //   link: 'https://itheo.top/hyperlink',
   //   rel: 'sponsored noreferrer'
   // },
+  {
+    image: { src: 'https://i.theojs.cn/logo/galaxy_transparent_square.webp', crop: true },
+    promo: '银河云',
+    link: 'https://itheo.top/yhy',
+    rel: 'sponsored noreferrer'
+  },
+  // {
+  //   image: 'https://i.theojs.cn/logo/flyingbird.webp',
+  //   promo: 'FlyingBird',
+  //   link: 'https://itheo.top/flyingbird',
+  //   rel: 'sponsored noreferrer'
+  // },
+  {
+    image: 'https://i.theojs.cn/logo/totoro.webp',
+    promo: 'Totoro Cloud - 龙猫云',
+    link: 'https://itheo.top/totoro',
+    rel: 'sponsored noreferrer'
+  },
+  {
+    image: 'https://i.theojs.cn/logo/fclogo.webp',
+    promo: 'FatCat Cloud - 肥猫云',
+    link: 'https://itheo.top/fatcat',
+    rel: 'sponsored noreferrer'
+  },
   // {
   //   image: 'https://i.theojs.cn/logo/bee_logo.webp',
   //   promo: '小蜜蜂',
