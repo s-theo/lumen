@@ -77,6 +77,13 @@ export const Aside_Data: AsideItem = [
     link: 'https://itheo.top/onlyrabbit',
     rel: 'sponsored noreferrer'
   },
+  {
+    image: 'https://i.theojs.cn/logo/lightspeed_logo.webp',
+    promo: 'lightspeed - 光速云特惠',
+    info1: '全场套餐 <span class="promo-text"> 8折: ok88</span>',
+    link: 'https://itheo.top/lightspeed',
+    rel: 'sponsored noreferrer'
+  },
   // {
   //   image: 'https://i.theojs.cn/logo/qyt.webp',
   //   promo: '青云梯',
@@ -113,6 +120,12 @@ export const Aside_Data: AsideItem = [
     link: 'https://itheo.top/fatcat',
     rel: 'sponsored noreferrer'
   },
+  // {
+  //   image: 'https://i.theojs.cn/logo/lightspeed_logo.webp',
+  //   promo: 'lightspeed - 光速云',
+  //   link: 'https://itheo.top/lightspeed',
+  //   rel: 'sponsored noreferrer'
+  // },
   // {
   //   image: 'https://i.theojs.cn/logo/bee_logo.webp',
   //   promo: '小蜜蜂',
