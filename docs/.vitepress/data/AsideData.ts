@@ -100,9 +100,9 @@ export const Aside_Data: AsideItem = [
   },
   {
     image: 'https://i.theojs.cn/logo/flyingbird.webp',
-    promo: 'FlyingBird 专属优惠',
-    info1: '专属优惠码<span class="promo-text"> 9折: theo </span>',
-    info2: '年付以上<span class="promo-text"> 64折: year85 </span>',
+    promo: 'FlyingBird 双旦优惠',
+    info1: '月/季/半年付<span class="promo-text"> 85折: fb250085 </span>',
+    info2: '年付以上<span class="promo-text"> 64折: fb250080 </span>',
     link: 'https://itheo.top/flyingbird',
     rel: 'sponsored noreferrer'
   },
