@@ -33,13 +33,13 @@ export const Aside_Data: AsideItem = [
     link: 'https://itheo.top/hyperlink',
     rel: 'sponsored noreferrer'
   },
-  {
-    image: 'https://i.theojs.cn/logo/lightspeed_logo.webp',
-    promo: 'lightspeed - 光速云特惠',
-    info1: '全场套餐 <span class="promo-text"> 75折: 7575</span>',
-    link: 'https://itheo.top/lightspeed',
-    rel: 'sponsored noreferrer'
-  },
+  // {
+  //   image: 'https://i.theojs.cn/logo/lightspeed_logo.webp',
+  //   promo: 'lightspeed - 光速云特惠',
+  //   info1: '全场套餐 <span class="promo-text"> 75折: 7575</span>',
+  //   link: 'https://itheo.top/lightspeed',
+  //   rel: 'sponsored noreferrer'
+  // },
   {
     image: { src: 'https://i.theojs.cn/logo/galaxy_transparent_square.webp', crop: true },
     promo: '银河云 双旦特惠',
@@ -142,12 +142,12 @@ export const Aside_Data: AsideItem = [
     link: 'https://itheo.top/fatcat',
     rel: 'sponsored noreferrer'
   },
-  // {
-  //   image: 'https://i.theojs.cn/logo/lightspeed_logo.webp',
-  //   promo: 'lightspeed - 光速云',
-  //   link: 'https://itheo.top/lightspeed',
-  //   rel: 'sponsored noreferrer'
-  // },
+  {
+    image: 'https://i.theojs.cn/logo/lightspeed_logo.webp',
+    promo: 'lightspeed - 光速云',
+    link: 'https://itheo.top/lightspeed',
+    rel: 'sponsored noreferrer'
+  },
   // {
   //   image: 'https://i.theojs.cn/logo/bee_logo.webp',
   //   promo: '小蜜蜂',
