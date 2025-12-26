@@ -28,12 +28,12 @@ hero:
       link: /guide/getting-started
 
     - theme: alt
-      text: 账号合租
-      link: https://doc.theojs.cn/serve/sharing/account-sharing-guide
+      text: 机场推荐评测
+      link: https://doc.theojs.cn/serve/airport/summary
 
     - theme: alt
-      text: 专线推荐
-      link: https://doc.theojs.cn/serve/airport/qingyunti
+      text: 账号合租
+      link: https://doc.theojs.cn/serve/sharing/account-sharing-guide
 
     - theme: alt author
       text: Theo-Docs
