@@ -17,8 +17,8 @@ export const Aside_Data: AsideItem = [
     link: 'https://doc.theojs.cn/serve/sharing/account-sharing-guide'
   },
   {
-    image: 'https://i.theojs.cn/logo/sms-activate.webp',
-    promo: 'SMS-Activate 短信接码',
+    image: 'https://i.theojs.cn/logo/hero-sms.webp',
+    promo: 'Hero-SMS 短信接码',
     info1: '秒开 <span class="promo-text">虚拟号码</span> 注册无障碍',
     info2: '覆盖 <span class="promo-text">200+国家</span> 轻松可用',
     link: 'https://itheo.top/sms',
