@@ -10,6 +10,13 @@ export const Aside_Data: AsideItem = [
     rel: 'sponsored noreferrer'
   },
   {
+    icon: 'fluent-color:apps-32',
+    promo: '科学上网软件使用指南',
+    info1: '常用网络工具快速上手',
+    info2: '高级配置与使用技巧',
+    link: 'https://doc.theojs.cn/serve/antiwall/sunmmary'
+  },
+  {
     icon: { icon: 'cib:netflix', color: '#E50914' },
     promo: '流媒体帐号合租',
     info1: '<span class="promo-text">合租账号  低价共享</span>',
