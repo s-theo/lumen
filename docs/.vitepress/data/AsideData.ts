@@ -10,11 +10,12 @@ export const Aside_Data: AsideItem = [
     rel: 'sponsored noreferrer'
   },
   {
-    icon: 'fluent-color:apps-32',
-    promo: '科学上网软件使用指南',
-    info1: '常用网络工具快速上手',
-    info2: '高级配置与使用技巧',
-    link: 'https://doc.theojs.cn/serve/antiwall/sunmmary'
+    icon: 'fa7-brands:openai',
+    promo: 'AI 使用教程汇总',
+    info1: '<span class="promo-text"> ChatGPT、Gemini </span>',
+    info2: '<span class="promo-text"> 新手入门  国内使用 </span>',
+    link: 'https://doc.theojs.cn/ai/summary',
+    rel: 'sponsored noreferrer'
   },
   {
     icon: { icon: 'cib:netflix', color: '#E50914' },
@@ -32,17 +33,17 @@ export const Aside_Data: AsideItem = [
     rel: 'sponsored noreferrer'
   },
   {
-    image: 'https://i.theojs.cn/logo/avatar-128.webp',
-    name: 'Theo-Docs',
-    hide1: '流媒体观影',
-    hide2: '一站式服务',
-    link: 'https://doc.theojs.cn/'
+    icon: 'fluent-color:apps-32',
+    promo: '科学上网软件使用指南',
+    info1: '常用网络工具快速上手',
+    info2: '高级配置与使用技巧',
+    link: 'https://doc.theojs.cn/serve/antiwall/sunmmary'
   },
   {
     image: 'https://i.theojs.cn/logo/avatar-128.webp',
-    name: '玄学宝典',
-    hide1: '传世经典著作',
-    hide2: '山医命相卜',
+    promo: '玄学宝典',
+    info1: '传世经典著作',
+    info2: '山医命相卜',
     link: 'https://xx.theojs.cn/'
   }
 ]
