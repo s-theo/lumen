@@ -69,9 +69,9 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "bumpp": "^10.3.1",
+    "bumpp": "^10.4.0",
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@10.22.0"
+  "packageManager": "pnpm@10.28.1"
 }
