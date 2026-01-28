@@ -7,15 +7,15 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@mdit/plugin-figure": "^0.22.2",
-    "@mdit/plugin-img-size": "^0.22.4",
+    "@mdit/plugin-figure": "^0.22.3",
+    "@mdit/plugin-img-size": "^0.22.5",
     "@theojs/lumen": "workspace:*",
-    "oxc-minify": "^0.110.0",
+    "oxc-minify": "^0.111.0",
     "vite": "npm:rolldown-vite@^7.3.1",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.7.1",
     "vitepress-plugin-llms": "^1.10.0",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@10.28.1"
+  "packageManager": "pnpm@10.28.2"
 }
