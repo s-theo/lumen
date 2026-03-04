@@ -64,14 +64,14 @@
   },
   "dependencies": {
     "@iconify/vue": "^5.0.0",
-    "@waline/client": "^3.8.0",
+    "@waline/client": "^3.13.0",
     "iconify-icon": "^3.0.2",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "bumpp": "^10.4.0",
+    "bumpp": "^10.4.1",
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@10.28.2"
+  "packageManager": "pnpm@10.30.3"
 }
