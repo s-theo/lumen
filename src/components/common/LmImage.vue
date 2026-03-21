@@ -81,6 +81,7 @@ const onError = (e: Event): void => {
 }
 
 img {
+  margin: 0;
   border-radius: 0.25em;
   pointer-events: none;
 }
