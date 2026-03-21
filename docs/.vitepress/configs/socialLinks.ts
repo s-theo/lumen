@@ -14,11 +14,6 @@ export const socialLinks: DefaultTheme.SocialLink[] = [
     ariaLabel: 'Gmail'
   },
   {
-    icon: 'telegram',
-    link: 'https://t.me/s_theo',
-    ariaLabel: 'Telegram'
-  },
-  {
     icon: 'npm',
     link: 'https://www.npmjs.com/package/@theojs/lumen',
     ariaLabel: 'npm'

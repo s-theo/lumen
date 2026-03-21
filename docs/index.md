@@ -13,13 +13,13 @@ hero:
     fetchpriority: high
 
   Notice:
-    title: '<span class="promo-title">青云梯双十一优惠活动!</span>'
+    title: '<span class="promo-title">青云梯 超值优惠大放送!</span>'
     desc: |
-      · 全场套餐 <span class="promo-text"> 8折: 10180 </span>
-      · 每位用户不限使用次数。
-      · 优惠券可叠加套餐本身优惠，享受折上折。
-    date: '2025年11月30日23点59分'
-    dateText: '活动截止至'
+      · 8折<span class="promo-text"> 优惠码: qyt85 </span>
+      · 85折<span class="promo-text"> 优惠码: qyt80 </span>
+      · 配合优惠码折上折，最高可达<span class="promo-text">48折</span>
+    # date: '7月31号23点59分'
+    # dateText: '活动截止至'
     link: https://itheo.top/qyt
     rel: sponsored noreferrer
 
@@ -29,12 +29,12 @@ hero:
       link: /guide/getting-started
 
     - theme: alt
-      text: 账号合租
-      link: https://doc.theojs.cn/serve/sharing/account-sharing-guide
+      text: 机场推荐评测
+      link: https://doc.theojs.cn/serve/airport/summary
 
     - theme: alt
-      text: 专线推荐
-      link: https://doc.theojs.cn/serve/airport/qingyunti
+      text: 账号合租
+      link: https://doc.theojs.cn/serve/sharing/account-sharing-guide
 
     - theme: alt author
       text: Theo-Docs
