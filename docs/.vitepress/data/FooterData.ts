@@ -7,38 +7,26 @@ export const Footer_Data: FooterData = {
       icon: 'heroicons:globe-alt-solid',
       title: '优质线路',
       links: [
+        { name: 'Sogo云', link: 'https://itheo.top/sogo', rel: 'sponsored noreferrer' },
         { name: '青云梯(QingYunTi)', link: 'https://itheo.top/qyt', rel: 'sponsored noreferrer' },
         { name: '隐云(YinYun)', link: 'https://itheo.top/yinyun', rel: 'sponsored noreferrer' },
         { name: '银河云(GalaxyCloud)', link: 'https://itheo.top/yhy', rel: 'sponsored noreferrer' },
         { name: '美乐云(MeiLe)', link: 'https://itheo.top/meile', rel: 'sponsored noreferrer' },
         { name: 'TNT Cloud', link: 'https://itheo.top/tnt', rel: 'sponsored noreferrer' },
-        { name: '肥猫云(FatCatCloud)', link: 'https://itheo.top/fatcat', rel: 'sponsored noreferrer' },
-        { name: '酷酷云(KuKuCloud)', link: 'https://itheo.top/kuku', rel: 'sponsored noreferrer' }
+        { name: '肥猫云(FatCatCloud)', link: 'https://itheo.top/fatcat', rel: 'sponsored noreferrer' }
       ]
     },
     {
       icon: 'heroicons:globe-alt-solid',
       title: '优质线路',
       links: [
+        { name: '酷酷云(KuKuCloud)', link: 'https://itheo.top/kuku', rel: 'sponsored noreferrer' },
         { name: '龙猫云(TotoroCloud)', link: 'https://itheo.top/totoro', rel: 'sponsored noreferrer' },
         { name: '小蜜蜂(XmfWww)', link: 'https://itheo.top/bee', rel: 'sponsored noreferrer' },
         { name: 'OKANC', link: 'https://itheo.top/okanc', rel: 'sponsored noreferrer' },
         { name: '奈云(NaiYun)', link: 'https://itheo.top/naiyun', rel: 'sponsored noreferrer' },
         { name: '飞鸟机场(FlyingBird)', link: 'https://itheo.top/flyingbird', rel: 'sponsored noreferrer' },
-        { name: '全球云(GlobalYun)', link: 'https://itheo.top/globalyun', rel: 'sponsored noreferrer' },
         { name: 'Echo', link: 'https://itheo.top/echo', rel: 'sponsored noreferrer' }
-      ]
-    },
-    {
-      icon: 'heroicons:globe-alt-solid',
-      title: '优质线路',
-      links: [
-        { name: '极连云(HyperLink)', link: 'https://itheo.top/hyperlink', rel: 'sponsored noreferrer' },
-        { name: '光速云(LightSpeed)', link: 'https://itheo.top/lightspeed', rel: 'sponsored noreferrer' },
-        { name: '唯兔云(OnlyRabbit)', link: 'https://itheo.top/onlyrabbit', rel: 'sponsored noreferrer' },
-        { name: '星岛梦(StarDream)', link: 'https://itheo.top/xdm', rel: 'sponsored noreferrer' },
-        { name: '光年梯(LightYear)', link: 'https://itheo.top/lightyear', rel: 'sponsored noreferrer' },
-        { name: '飞猫云(FlyingCat)', link: 'https://itheo.top/flyingcat', rel: 'sponsored noreferrer' }
       ]
     },
     {
