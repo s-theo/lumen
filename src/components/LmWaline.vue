@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useData, useRoute } from 'vitepress'
 import { Waline } from '@waline/client/component'
+import { useData, useRoute } from 'vitepress'
 import '@waline/client/meta'
 import '@waline/client/style'
 import type { WalineData } from '../types'

@@ -1,7 +1,7 @@
-import type { MarkdownOptions } from 'vitepress'
-import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 import { figure } from '@mdit/plugin-figure'
 import { obsidianImgSize } from '@mdit/plugin-img-size'
+import type { MarkdownOptions } from 'vitepress'
+import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 
 export const markdown: MarkdownOptions = {
   theme: { light: 'one-light', dark: 'one-dark-pro' },
