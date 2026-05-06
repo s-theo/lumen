@@ -50,15 +50,7 @@
   "module": "./types/index.ts",
   "types": "./types/index.ts",
   "style": "./style/all.css",
-  "files": [
-    "style/",
-    "types/",
-    "components/",
-    "composables/",
-    "tsconfig.json",
-    "readme.md",
-    "License"
-  ],
+  "files": ["style/", "types/", "components/", "composables/", "tsconfig.json", "readme.md", "License"],
   "scripts": {
     "release": "bumpp && pnpm publish --registry=https://registry.npmjs.org"
   },
