@@ -17,6 +17,7 @@
     "dev": "pnpm -F=docs dev",
     "format": "prettier --experimental-cli --write .",
     "format:cheak": "prettier --experimental-cli --check .",
+    "generate:dts": "node src/scripts/generate-dts.cjs",
     "iall": "pnpm -r install",
     "preview": "pnpm -F=docs preview",
     "release": "cd src && pnpm release",
