@@ -10,7 +10,8 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": ["vue"],
+    "typeRoots": ["./types", "./node_modules/@types"],
     "verbatimModuleSyntax": true
-  }
+  },
+  "include": ["types/**/*.d.ts", "**/*.ts", "**/*.vue"]
 }

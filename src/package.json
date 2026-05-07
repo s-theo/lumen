@@ -33,22 +33,65 @@
   "author": "Theo",
   "type": "module",
   "exports": {
-    ".": "./types/index.ts",
-    "./style": "./style/all.css",
-    "./icon": "./style/icon.css",
-    "./button": "./style/button.css",
-    "./colors": "./style/colors.css",
-    "./doc": "./style/doc.css",
-    "./doc-blocks": "./style/doc-blocks.css",
-    "./home": "./style/home.css",
-    "./pic": "./style/picture.css",
-    "./badge": "./style/badge.css",
-    "./components-var": "./style/components-var.css",
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./types/index.ts"
+    },
+    "./style": {
+      "types": "./types/style.d.ts",
+      "import": "./style/all.css",
+      "default": "./style/all.css"
+    },
+    "./icon": {
+      "types": "./types/style.d.ts",
+      "import": "./style/icon.css",
+      "default": "./style/icon.css"
+    },
+    "./button": {
+      "types": "./types/style.d.ts",
+      "import": "./style/button.css",
+      "default": "./style/button.css"
+    },
+    "./colors": {
+      "types": "./types/style.d.ts",
+      "import": "./style/colors.css",
+      "default": "./style/colors.css"
+    },
+    "./doc": {
+      "types": "./types/style.d.ts",
+      "import": "./style/doc.css",
+      "default": "./style/doc.css"
+    },
+    "./doc-blocks": {
+      "types": "./types/style.d.ts",
+      "import": "./style/doc-blocks.css",
+      "default": "./style/doc-blocks.css"
+    },
+    "./home": {
+      "types": "./types/style.d.ts",
+      "import": "./style/home.css",
+      "default": "./style/home.css"
+    },
+    "./pic": {
+      "types": "./types/style.d.ts",
+      "import": "./style/picture.css",
+      "default": "./style/picture.css"
+    },
+    "./badge": {
+      "types": "./types/style.d.ts",
+      "import": "./style/badge.css",
+      "default": "./style/badge.css"
+    },
+    "./components-var": {
+      "types": "./types/style.d.ts",
+      "import": "./style/components-var.css",
+      "default": "./style/components-var.css"
+    },
     "./package.json": "./package.json"
   },
   "main": "./types/index.ts",
   "module": "./types/index.ts",
-  "types": "./types/index.ts",
+  "types": "./types/index.d.ts",
   "style": "./style/all.css",
   "files": [
     "style/",
