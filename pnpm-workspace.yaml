@@ -6,9 +6,10 @@ catalog:
   vitepress: 2.0.0-alpha.17
   vue: ^3.5.34
 
-onlyBuiltDependencies:
-  - esbuild
-  - simple-git-hooks
+allowBuilds:
+  esbuild: true
+  simple-git-hooks: true
 
 shellEmulator: true
 autoInstallPeers: false
+minimumReleaseAge: 0
