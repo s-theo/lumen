@@ -26,7 +26,7 @@ export default {
   // [!code ++]
   enhanceApp: ({ app }: EnhanceAppContext) => {
     // [!code ++]
-    app.component('Home', Underline)
+    app.component('Underline', Underline)
   } // [!code ++]
 }
 ```
@@ -45,7 +45,7 @@ hero:
   textsuffix: Theme # [!code ++] 副标题文本后半部分
   tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
 ---
-<Home /> # [!code ++]
+<Underline /> # [!code ++]
 ```
 
 ## 接口数据说明
