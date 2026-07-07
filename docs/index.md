@@ -90,7 +90,7 @@ features:
     link: '/guide/theme#图标支持'
 ---
 
-<Home />
+<Underline />
 
 <!-- <script setup lang="ts">
 import { Waline_Data } from './.vitepress/data'

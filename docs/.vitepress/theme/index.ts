@@ -29,7 +29,7 @@ export default {
     app.component('Card', lm.Card)
     app.component('Copy', lm.CopyText)
     app.component('BoxCube', lm.BoxCube)
-    app.component('Home', lm.Underline)
+    app.component('Underline', lm.Underline)
     app.component('Waline', lm.Waline)
   }
 }
