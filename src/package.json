@@ -107,14 +107,14 @@
   },
   "dependencies": {
     "@iconify/vue": "^5.0.1",
-    "@waline/client": "^3.13.0",
+    "@waline/client": "^3.15.2",
     "iconify-icon": "^3.0.2",
     "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "bumpp": "^11.0.1",
+    "bumpp": "^11.1.0",
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@10.33.4"
+  "packageManager": "pnpm@11.10.0"
 }

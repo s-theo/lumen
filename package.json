@@ -35,22 +35,22 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.5.3",
-    "@commitlint/config-conventional": "^20.5.3",
-    "@commitlint/types": "^20.5.0",
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/types": "^21.2.0",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "commitizen": "^4.3.1",
+    "commitizen": "^4.3.2",
     "cz-vinyl": "^2.5.4",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.2",
-    "prettier": "3.8.3",
+    "lint-staged": "^17.0.8",
+    "prettier": "3.9.4",
     "prettier-plugin-css-order": "^2.2.0",
-    "prettier-plugin-jsdoc": "^1.8.0",
+    "prettier-plugin-jsdoc": "^1.8.1",
     "prettier-plugin-organize-attributes": "^1.0.0",
     "prettier-plugin-packagejson": "^3.0.2",
     "prettier-plugin-sort-json": "^4.2.0",
     "prettier-plugin-vitepress": "^0.0.10",
     "simple-git-hooks": "^2.13.1"
   },
-  "packageManager": "pnpm@10.33.4"
+  "packageManager": "pnpm@11.10.0"
 }
