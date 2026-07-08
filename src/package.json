@@ -109,7 +109,7 @@
     "@iconify/vue": "^5.0.1",
     "@waline/client": "^3.15.2",
     "iconify-icon": "^3.0.2",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   },
   "devDependencies": {
     "bumpp": "^11.1.0",
