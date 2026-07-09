@@ -1,9 +1,19 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { LmIcon, LmImage } from './common'
-import type { CopyTextItem } from '../types'
+import type { IconType, ImageType } from '../types'
 
-const props = defineProps<CopyTextItem>()
+const props = defineProps<{
+  type?: 'auto' | 'info' | 'tip' | 'warning' | 'danger'
+  label?: string
+  text: string
+  toolTip?: string
+  noIcon?: boolean
+  icon?: IconType
+  image?: ImageType
+  toolTipPos?: 'top' | 'bottom' | 'left' | 'right'
+  bold?: boolean
+}>()
 
 const copied = ref(false)
 let timer: ReturnType<typeof setTimeout> | null = null
