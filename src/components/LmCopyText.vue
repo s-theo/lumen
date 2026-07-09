@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { LmIcon, LmImage } from './common'
 import type { IconType, ImageType } from '../types'
+import { LmIcon, LmImage } from './common'
 
 const props = defineProps<{
   type?: 'auto' | 'info' | 'tip' | 'warning' | 'danger'

@@ -1,7 +1,7 @@
+import Lumenpkg from '@theojs/lumen/package.json' with { type: 'json' }
 import { defineConfig } from 'vitepress'
 import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import llmstxt from 'vitepress-plugin-llms'
-import Lumenpkg from '@theojs/lumen/package.json' with { type: 'json' }
 import { head, markdown, nav, search, sidebar, socialLinks, transformPageData } from './configs'
 
 const Lumenversion = `v` + Lumenpkg.version

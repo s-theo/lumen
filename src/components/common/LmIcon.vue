@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { Icon } from '@iconify/vue'
 import { useData } from 'vitepress'
 import { computed, onMounted, ref, watchEffect } from 'vue'
-import { Icon } from '@iconify/vue'
 import type { IconMode, IconType, SizeType } from '../../types'
 
 const props = defineProps<{

@@ -1,8 +1,9 @@
 /// <reference types="vite/client" />
+
+import * as lm from '@theojs/lumen'
 import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
-import * as lm from '@theojs/lumen'
 import '@theojs/lumen/style'
 import './style/home-image.css'
 import { Aside_Data, Footer_Data, Waline_Data } from '../data'

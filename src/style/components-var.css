@@ -1,7 +1,7 @@
 :root {
   /**
-  * Default
-  * -------------------------------------------------------------------------- */
+   * Default
+   * -------------------------------------------------------------------------- */
 
   --lm-iconify-defColor: var(--vp-c-text-2);
   --lm-component-bg: var(--vp-c-bg-alt);
@@ -13,8 +13,8 @@
   --lm-promo-title-weight: 600;
 
   /**
-  * Component: Notice
-  * -------------------------------------------------------------------------- */
+   * Component: Notice
+   * -------------------------------------------------------------------------- */
   --lm-Notice-bg: var(--vp-button-alt-bg);
   --lm-Notice-border: transparent;
   --lm-Notice-data: var(--vp-c-brand-1);
@@ -24,8 +24,8 @@
   --lm-Notice-transform-active: none;
 
   /**
-  * Component: Aside
-  * -------------------------------------------------------------------------- */
+   * Component: Aside
+   * -------------------------------------------------------------------------- */
 
   --lm-Aside-bg: var(--lm-component-bg);
   --lm-Aside-border: transparent;
@@ -48,8 +48,8 @@
   --lm-Aside-transform-active: none;
 
   /**
-  * Component: BoxCube
-  * -------------------------------------------------------------------------- */
+   * Component: BoxCube
+   * -------------------------------------------------------------------------- */
 
   --lm-Boxcube-bg: var(--lm-component-bg);
   --lm-Boxcube-border: transparent;
@@ -62,8 +62,8 @@
   --lm-Boxcube-transform-active: none;
 
   /**
-  * Component: Links
-  * -------------------------------------------------------------------------- */
+   * Component: Links
+   * -------------------------------------------------------------------------- */
 
   --lm-Links-bg: var(--lm-component-bg);
   --lm-Links-border: transparent;
@@ -77,8 +77,8 @@
   --lm-Links-transform-active: none;
 
   /**
-  * Component: Card
-  * -------------------------------------------------------------------------- */
+   * Component: Card
+   * -------------------------------------------------------------------------- */
 
   --lm-Card-bg: var(--lm-component-bg);
   --lm-Card-border: transparent;
@@ -92,8 +92,8 @@
   --lm-Card-transform-active: none;
 
   /**
-  * Component: CopyText
-  * -------------------------------------------------------------------------- */
+   * Component: CopyText
+   * -------------------------------------------------------------------------- */
 
   --lm-CopyText-border: transparent;
   --lm-CopyText-auto-bg: var(--vp-code-bg);
@@ -122,8 +122,8 @@
   --lm-CopyText-danger-border-hover: transparent;
 
   /**
-  * Component: Pill
-  * -------------------------------------------------------------------------- */
+   * Component: Pill
+   * -------------------------------------------------------------------------- */
 
   --lm-Pill-bg: var(--vp-code-bg);
   --lm-Pill-border: transparent;
@@ -136,28 +136,28 @@
   --lm-Pill-transform-active: none;
 
   /**
-  * Component: Footer
-  * -------------------------------------------------------------------------- */
+   * Component: Footer
+   * -------------------------------------------------------------------------- */
 
   --lm-Footer-bg: var(--lm-component-bg);
   --lm-Footer-link-hover: var(--vp-c-brand-1);
 
   /**
-  * Component: Underline
-  * -------------------------------------------------------------------------- */
+   * Component: Underline
+   * -------------------------------------------------------------------------- */
 
   --lm-Underline-bg: var(--vp-c-brand-1);
 
   /**
-  * button
-  * -------------------------------------------------------------------------- */
+   * button
+   * -------------------------------------------------------------------------- */
 
   --lm-button-author: url('https://i.theojs.cn/logo/avatar-mini.webp');
   --lm-button-logo: url('https://i.theojs.cn/logo/lumen-logo-mini.svg');
 
   /**
-  * Component:Waline - https://waline.js.org/reference/client/style.html 
-  * -------------------------------------------------------------------------- */
+   * Component:Waline - https://waline.js.org/reference/client/style.html
+   * -------------------------------------------------------------------------- */
 
   --waline-bg-elv: rgba(44, 62, 80, 0.1);
   --waline-font-size: 1rem !important;
@@ -189,15 +189,15 @@
 
 .dark {
   /**
-  * Default
-  * -------------------------------------------------------------------------- */
+   * Default
+   * -------------------------------------------------------------------------- */
 
   --lm-promo-title-bg: var(--lm-Aside-promo);
   --lm-promo-title-color: transparent;
 
   /**
-  * Component: Aside
-  * -------------------------------------------------------------------------- */
+   * Component: Aside
+   * -------------------------------------------------------------------------- */
   --lm-Aside-promo: -webkit-linear-gradient(
     225deg,
     rgba(120, 200, 255, 1),
@@ -207,8 +207,8 @@
   --lm-Aside-name-color: transparent;
 
   /**
-  * Component:Waline - https://waline.js.org/reference/client/style.html 
-  * -------------------------------------------------------------------------- */
+   * Component:Waline - https://waline.js.org/reference/client/style.html
+   * -------------------------------------------------------------------------- */
 
   --waline-white: var(--vp-c-brand-text) !important;
   --waline-light-grey: var(--vp-c-text-1) !important;
