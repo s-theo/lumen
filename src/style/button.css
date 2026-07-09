@@ -33,7 +33,7 @@
   display: inline-block;
   transform: translateY(7px);
   margin-right: 0.5em;
-  background: no-repeat center/24px;
+  background: no-repeat center / 24px;
   width: 24px;
   height: 24px;
   content: '';

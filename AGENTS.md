@@ -25,7 +25,8 @@ The root `package.json` delegates docs build/dev commands:
 pnpm run build      # pnpm -F=docs build
 pnpm run dev        # pnpm -F=docs dev
 pnpm run preview    # pnpm -F=docs preview
-pnpm run format     # prettier --experimental-cli --write .
+pnpm run format     # biome check --write .
+pnpm run format:check
 ```
 
 ## Before Editing
@@ -37,8 +38,12 @@ pnpm run format     # prettier --experimental-cli --write .
 
 ## Coding Notes
 
-- Use Prettier, not ad-hoc formatting. Config lives in `.prettierrc.yaml`.
+- Use Biome, not Prettier or ad-hoc formatting. Config lives in `biome.json`.
 - Style is 2 spaces, single quotes, no semicolons, no trailing commas.
+- `pnpm run format` applies Biome safe fixes, formatting, and import organization.
+- `pnpm run format:check` verifies formatting/import organization without writing.
+- Biome is configured with `files.ignoreUnknown`; unsupported file types are skipped instead of failing the run.
+- Keep VitePress sidebar links absolute, such as `/guide/getting-started`. Do not combine sidebar section `base` with relative item links, because `vitepress-plugin-llms` can fail to match those files and emit "No matching file found for sidebar link" warnings.
 - Public package types are exported from `src/types/`; keep those interfaces stable unless the task is explicitly a breaking API change.
 - Vue SFC `defineProps` in this repo should prefer inline prop shapes when the runtime prop keys are needed. Direct `defineProps<ImportedInterface>()` can fail under the current Vite/VitePress/Rolldown build because Vue SFC cannot resolve imported type members without an fs resolver in that environment.
 
@@ -53,5 +58,5 @@ pnpm run build
 For formatting-only or broad code changes, also run:
 
 ```bash
-pnpm run format:cheak
+pnpm run format:check
 ```
