@@ -37,7 +37,7 @@ export const Aside_Data: AsideItem = [
     promo: '科学上网软件使用指南',
     info1: '常用网络工具快速上手',
     info2: '高级配置与使用技巧',
-    link: 'https://doc.theojs.cn/serve/antiwall/sunmmary'
+    link: 'https://doc.theojs.cn/serve/antiwall/summary'
   },
   {
     image: 'https://i.theojs.cn/logo/avatar-128.webp',
