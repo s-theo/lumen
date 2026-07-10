@@ -20,7 +20,7 @@ hero:
       · 配合优惠码折上折，最高可达<span class="promo-text">48折</span>
     # date: '7月31号23点59分'
     # dateText: '活动截止至'
-    link: https://itheo.top/qyt
+    link: https://ilil.uk/qyt
     rel: sponsored noreferrer
 
   actions:

@@ -49,7 +49,7 @@ hero:
     date: '2025年1月7日23时59分'
     dateIcon: 'mdi:calendar-star'
     dateText: '活动截止日期'
-    link: 'https://itheo.top/qyt'
+    link: 'https://ilil.uk/qyt'
 ---
 ```
 
