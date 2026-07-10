@@ -21,6 +21,7 @@ export const Footer_Data: FooterData = {
         { name: '边缘节点(EdgeNova)', link: 'https://ilil.uk/edgenova', rel: 'sponsored noreferrer' },
         { name: '快狸(KuaiLi)', link: 'https://ilil.uk/kuaili', rel: 'sponsored noreferrer' },
         { name: '速界(SuJie)', link: 'https://ilil.uk/sujie', rel: 'sponsored noreferrer' },
+        { name: '可达(KeDa)', link: 'https://ilil.uk/keda', rel: 'sponsored noreferrer' },
         { name: '银河云(GalaxyCloud)', link: 'https://ilil.uk/yhy', rel: 'sponsored noreferrer' },
         // { name: '美乐云(MeiLe)', link: 'https://ilil.uk/meile', rel: 'sponsored noreferrer' }
         { name: '隐云(YinYun)', link: 'https://ilil.uk/yinyun', rel: 'sponsored noreferrer' }
