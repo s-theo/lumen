@@ -116,5 +116,5 @@
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@11.12.0"
+  "packageManager": "pnpm@11.10.0"
 }
