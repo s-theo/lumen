@@ -14,7 +14,7 @@ export type UmamiOption = Umami | Umami[]
 
 function mountUmami(options: UmamiOption) {
   // 确保只有在生产环境下执行
-  if (process.env.NODE_ENV !== 'production') {
+  if (!import.meta.env.PROD) {
     return
   }
 

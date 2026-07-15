@@ -111,6 +111,10 @@
     "iconify-icon": "^3.0.2",
     "typescript": "^7.0.2"
   },
+  "peerDependencies": {
+    "vitepress": "^1.6.4 || >=2.0.0-alpha.18 <3.0.0",
+    "vue": "^3.5.0"
+  },
   "devDependencies": {
     "bumpp": "^11.1.0",
     "vitepress": "catalog:",
