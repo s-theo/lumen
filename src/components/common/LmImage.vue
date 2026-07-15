@@ -14,7 +14,9 @@ defineOptions({ inheritAttrs: false })
 const isThemedImage = (image: ImageType): image is { light: string; dark: string } =>
   typeof image === 'object' && 'light' in image && 'dark' in image
 
-const shouldCrop = computed(() => Boolean(typeof props.image === 'object' && 'crop' in props.image && props.image.crop))
+const shouldCrop = computed(
+  () => props.crop || Boolean(typeof props.image === 'object' && 'crop' in props.image && props.image.crop)
+)
 
 const imageAttrs = computed(() => {
   if (typeof props.image === 'string') return {}
