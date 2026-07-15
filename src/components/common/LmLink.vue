@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { withBase } from 'vitepress'
 import { computed } from 'vue'
-import { EXTERNAL_URL_RE } from '../../composables'
+import { isExternal as isExternalUrl } from '../../composables'
 import type { LinkType, RelType, TargetType } from '../../types'
 
 const props = defineProps<{
@@ -12,18 +12,21 @@ const props = defineProps<{
   noIcon?: boolean
 }>()
 
-const { href, rel, target, noIcon } = props
-const tag = computed(() => props.tag ?? (props.href ? 'a' : 'span'))
-const isExternal = computed(() => (props.href && EXTERNAL_URL_RE.test(props.href)) || props.target === '_blank')
+const resolvedTag = computed(() => props.tag ?? (props.href ? 'a' : 'span'))
+const isExternalLink = computed(() => isExternalUrl(props.href ?? '') || props.target === '_blank')
 </script>
 
 <template>
   <component
-    :is="tag"
-    :class="{ 'lm-link': href, 'vp-external-link-icon': isExternal && !noIcon, 'no-icon': noIcon }"
-    :href="href ? withBase(href) : undefined"
-    :rel="rel ?? (isExternal ? 'noreferrer' : undefined)"
-    :target="target ?? (isExternal ? '_blank' : undefined)"
+    :is="resolvedTag"
+    :class="{
+      'lm-link': props.href,
+      'vp-external-link-icon': isExternalLink && !props.noIcon,
+      'no-icon': props.noIcon
+    }"
+    :href="props.href ? withBase(props.href) : undefined"
+    :rel="props.rel ?? (isExternalLink ? 'noreferrer' : undefined)"
+    :target="props.target ?? (isExternalLink ? '_blank' : undefined)"
   >
     <slot />
   </component>

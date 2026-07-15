@@ -43,7 +43,7 @@ const pill = defineProps<{
   border: 1px solid var(--lm-Pill-border);
   border-radius: 0.5em;
   background-color: var(--lm-Pill-bg);
-  padding: 0em 0.25em;
+  padding: 0 0.25em;
   height: 1.375em;
   font-size: 1rem;
   text-decoration: none !important;

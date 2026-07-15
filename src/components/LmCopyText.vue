@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onUnmounted, ref } from 'vue'
 import type { IconType, ImageType } from '../types'
 import { LmIcon, LmImage } from './common'
 
@@ -27,6 +27,10 @@ const handleCopy = async () => {
   if (timer !== null) clearTimeout(timer)
   timer = setTimeout(() => (copied.value = false), 1000)
 }
+
+onUnmounted(() => {
+  if (timer !== null) clearTimeout(timer)
+})
 </script>
 
 <template>
@@ -65,7 +69,7 @@ const handleCopy = async () => {
   margin-right: 0.25em;
   border: 1px solid var(--lm-CopyText-border);
   border-radius: 0.5em;
-  padding: 0em 0.5em;
+  padding: 0 0.5em;
   height: 1.375em;
   font-weight: initial;
   font-size: 0.875rem;
@@ -123,7 +127,7 @@ const handleCopy = async () => {
 
 .vp-doc h1 .copy {
   vertical-align: top;
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .vp-doc h2 .copy,
