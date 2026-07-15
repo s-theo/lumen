@@ -93,6 +93,10 @@
   "module": "./types/index.ts",
   "types": "./types/index.d.ts",
   "style": "./style/all.css",
+  "sideEffects": [
+    "./types/index.ts",
+    "**/*.css"
+  ],
   "files": [
     "style/",
     "types/",
