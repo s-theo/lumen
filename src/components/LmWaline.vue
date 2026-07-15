@@ -14,7 +14,7 @@ const { lang, isDark } = useData()
   <ClientOnly>
     <Waline
       :serverURL="data.serverURL"
-      :path="route.path"
+      :path="data.path ?? route.path"
       :lang="data.lang || lang"
       :locale="data.locale"
       :emoji="data.emoji"
