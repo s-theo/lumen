@@ -65,13 +65,13 @@ importers:
       iconify-icon:
         specifier: ^3.0.2
         version: 3.0.2
-      typescript:
-        specifier: ^7.0.2
-        version: 7.0.2
     devDependencies:
       bumpp:
         specifier: ^11.1.0
         version: 11.1.0
+      typescript:
+        specifier: ^7.0.2
+        version: 7.0.2
       vitepress:
         specifier: 'catalog:'
         version: 2.0.0-alpha.18(jiti@2.7.0)(postcss@8.5.17)(typescript@7.0.2)(yaml@2.9.0)
