@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Theo",
   "engines": {
-    "node": ">=22.12.0 <23"
+    "node": ">=22.12.0 <25"
   },
   "scripts": {
     "build": "pnpm -F=docs build",
@@ -31,9 +31,9 @@
     "*": "biome check --write --no-errors-on-unmatched"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.3",
+    "@biomejs/biome": "^2.5.4",
     "lint-staged": "^17.0.8",
     "simple-git-hooks": "^2.13.1"
   },
-  "packageManager": "pnpm@11.10.0"
+  "packageManager": "pnpm@11.13.1"
 }
