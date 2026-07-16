@@ -13,8 +13,8 @@
     "vite": "^8.1.4",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.7.5",
-    "vitepress-plugin-llms": "^1.13.2",
+    "vitepress-plugin-llms": "^1.13.3",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@11.10.0"
+  "packageManager": "pnpm@11.13.1"
 }
