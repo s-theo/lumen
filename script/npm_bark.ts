@@ -4,10 +4,14 @@ const packages = ['@theojs/lumen']
 const barkUrl = process.env.BARK_KEY
 if (!barkUrl) throw new Error('BARK_KEY 环境变量未定义')
 
+interface NpmDownloadsResponse {
+  downloads: Array<{ downloads: number }>
+}
+
 async function getDownloads(name: string) {
   try {
-    const res = await axios.get(`https://api.npmjs.org/downloads/range/last-week/${name}`)
-    return res.data.downloads.reduce((sum: number, d: any) => sum + d.downloads, 0)
+    const res = await axios.get<NpmDownloadsResponse>(`https://api.npmjs.org/downloads/range/last-week/${name}`)
+    return res.data.downloads.reduce((sum, day) => sum + day.downloads, 0)
   } catch {
     return 0
   }

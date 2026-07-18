@@ -107,7 +107,7 @@ const isHome = computed(() => {
           :target="footer.author.target"
           no-icon
         >
-          {{ footer.author.startYear ? footer.author.startYear + ' - ' : '' }}{{ currentYear }}
+          {{ footer.author.startYear ? `${footer.author.startYear} - ` : '' }}{{ currentYear }}
           {{ footer.author.name }}
           {{ footer.author.text || 'All Rights Reserved.' }}
         </LmLink>
