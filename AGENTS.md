@@ -7,8 +7,10 @@ Scope: this file applies to the entire repository. There are no nested `AGENTS.m
 Lumen is a pnpm workspace: `src/` is the published ESM package `@theojs/lumen`, while `docs/` is its VitePress
 documentation site and integration consumer through `workspace:*`.
 
-The stack is Vue 3, VitePress 2 alpha, TypeScript, CSS, and Biome. The root `package.json` is authoritative for the
-Node range (`>=22.12.0 <25`) and pnpm pin (`11.14.0`). Cloudflare Pages builds the documentation site from `main`.
+The stack is Vue, VitePress, Vite, TypeScript, CSS, and Biome. Read the supported Node engine and package-manager pin
+from the root `package.json`; read dependency and peer constraints from the applicable package manifests and
+`pnpm-workspace.yaml`; read resolved versions from `pnpm-lock.yaml`; and read tool versions from config or schema
+metadata. Do not copy version snapshots into this file. Cloudflare Pages builds the documentation site from `main`.
 
 The npm package is not bundled before publication. It ships `.ts`, `.vue`, CSS, and declaration files directly, so
 source paths and package metadata are part of the consumer contract.
@@ -52,8 +54,8 @@ npm_config_cache=/tmp/lumen-npm-cache npm pack --dry-run --json ./src
 git diff --check
 ```
 
-Run commands from the repository root. `pnpm run format` writes Biome formatting and import-order fixes;
-`format:check` is check-only, and Biome lint rules are disabled.
+Run commands from the repository root. `pnpm run format` writes safe Biome formatting, lint, and import-order fixes;
+`format:check` checks the formatter, recommended linter rules, and assist actions without writing files.
 
 ## Package and code constraints
 
@@ -62,7 +64,8 @@ Run commands from the repository root. `pnpm run format` writes Biome formatting
 - `src/types/index.ts` is the runtime package entry. Its `components-var.css` and `iconify-icon` imports are intentional
   side effects, not dead imports.
 - Keep top-level Vue `defineProps` runtime keys in an inline object shape. Imported types may be used as property value
-  types, but direct `defineProps<ImportedInterface>()` can fail in the current Vue/VitePress/TypeScript build.
+  types, but direct `defineProps<ImportedInterface>()` can fail during SFC runtime prop extraction; `pnpm run build` is
+  the authoritative integration check.
 - `pnpm run generate:dts` rewrites `src/types/index.d.ts`, `src/types/shims.d.ts`, and `src/types/style.d.ts`. Run it
   only when changing their generator or intended output, then review all three tracked files.
 - Keep VitePress sidebar links absolute (for example, `/guide/getting-started`). Do not combine a sidebar section
@@ -71,8 +74,9 @@ Run commands from the repository root. `pnpm run format` writes Biome formatting
   `/llms-full.md` to those files through Cloudflare; the `.md` paths are aliases, not build artifacts.
 - The docs theme imports the package root, styles, components, analytics, and public data types. A docs build is the
   primary integration check; the repository has no separate test suite.
-- `minimumReleaseAge: 0` intentionally overrides pnpm 11's 1,440-minute default. Removing it changes dependency
-  resolution policy; keep `allowBuilds` limited to installed dependencies that actually run lifecycle scripts.
+- `minimumReleaseAge: 0` is an intentional install policy override. Changing or removing it can alter dependency
+  resolution; verify its current semantics against the pinned pnpm version and `pnpm-workspace.yaml` before editing.
+  Keep `allowBuilds` limited to installed dependencies that actually run lifecycle scripts.
 
 ## Validation by change type
 

@@ -6,7 +6,8 @@ const defaultOgImage = 'https://i.theojs.cn/logo/Lumen-og.webp'
 
 export const transformPageData: UserConfig['transformPageData'] = (pageData) => {
   // head is an array
-  const head = (pageData.frontmatter.head ??= []) as HeadConfig[]
+  pageData.frontmatter.head ??= []
+  const head = pageData.frontmatter.head as HeadConfig[]
 
   // canonical URL
   const DynamicUrl = `${baseUrl}/${pageData.relativePath}`.replace(/index\.md$/, '').replace(/\.md$/, '')
@@ -30,7 +31,7 @@ export const transformPageData: UserConfig['transformPageData'] = (pageData) => 
     ? {
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        url: baseUrl + '/',
+        url: `${baseUrl}/`,
         inLanguage: 'zh-Hans',
         author: { '@type': 'Person', name: 'Theo', url: baseUrl },
         publisher: {

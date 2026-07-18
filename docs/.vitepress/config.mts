@@ -4,7 +4,7 @@ import { groupIconVitePlugin } from 'vitepress-plugin-group-icons'
 import llmstxt from 'vitepress-plugin-llms'
 import { head, markdown, nav, search, sidebar, socialLinks, transformPageData } from './configs'
 
-const Lumenversion = `v` + Lumenpkg.version
+const Lumenversion = `v${Lumenpkg.version}`
 const baseUrl = 'https://lumen.theojs.cn'
 
 export default defineConfig({

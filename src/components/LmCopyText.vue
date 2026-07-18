@@ -18,8 +18,8 @@ const props = defineProps<{
 const copied = ref(false)
 let timer: ReturnType<typeof setTimeout> | null = null
 
-const toolTipPos = computed(() => props.toolTipPos ?? 'top')
-const type = computed(() => props.type ?? 'auto')
+const resolvedToolTipPos = computed(() => props.toolTipPos ?? 'top')
+const resolvedType = computed(() => props.type ?? 'auto')
 
 const handleCopy = async () => {
   await navigator.clipboard.writeText(props.text)
@@ -35,14 +35,14 @@ onUnmounted(() => {
 
 <template>
   <button
-    :class="['copy', 'ignore-header', { 'no-icon': props.noIcon }, type]"
+    :class="['copy', 'ignore-header', { 'no-icon': props.noIcon }, resolvedType]"
     type="button"
     aria-label="点击复制"
     :title="props.text"
     @click="handleCopy"
   >
     <Transition name="fade">
-      <span v-if="copied" :class="['tooltip', toolTipPos]">{{ props.toolTip || '已复制' }}</span>
+      <span v-if="copied" :class="['tooltip', resolvedToolTipPos]">{{ props.toolTip || '已复制' }}</span>
     </Transition>
     <template v-if="!props.noIcon">
       <LmIcon v-if="props.icon" :icon="props.icon" size="14" />

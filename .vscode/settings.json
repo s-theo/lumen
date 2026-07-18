@@ -1,0 +1,25 @@
+{
+  "[javascript][javascriptreact][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
+    }
+  },
+  "[css][json][jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.biome": "explicit"
+    }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "vscode.markdown-language-features",
+    "editor.formatOnSave": true
+  }
+}

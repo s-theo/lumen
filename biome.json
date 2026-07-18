@@ -37,7 +37,17 @@
     }
   },
   "linter": {
-    "enabled": false
+    "enabled": true,
+    "includes": ["**", "!src/types/index.d.ts", "!src/types/shims.d.ts", "!src/types/style.d.ts"],
+    "rules": {
+      "preset": "recommended",
+      "suspicious": {
+        "noTsIgnore": "error"
+      }
+    }
+  },
+  "html": {
+    "experimentalFullSupportEnabled": true
   },
   "javascript": {
     "formatter": {
