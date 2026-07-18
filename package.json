@@ -35,5 +35,5 @@
     "lint-staged": "^17.0.8",
     "simple-git-hooks": "^2.13.1"
   },
-  "packageManager": "pnpm@11.13.1"
+  "packageManager": "pnpm@11.14.0"
 }
