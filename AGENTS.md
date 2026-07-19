@@ -7,8 +7,8 @@ Scope: this file applies to the entire repository. There are no nested `AGENTS.m
 Lumen is a pnpm workspace: `src/` is the published ESM package `@theojs/lumen`, while `docs/` is its VitePress
 documentation site and integration consumer through `workspace:*`.
 
-The stack is Vue, VitePress, Vite, TypeScript, CSS, and Biome. Read the supported Node engine and package-manager pin
-from the root `package.json`; read dependency and peer constraints from the applicable package manifests and
+The stack is Vue, VitePress, Vite, TypeScript, CSS, and Biome. Read the package-manager pin from the root
+`package.json`; read dependency and peer constraints from the applicable package manifests and
 `pnpm-workspace.yaml`; read resolved versions from `pnpm-lock.yaml`; and read tool versions from config or schema
 metadata. Do not copy version snapshots into this file. Cloudflare Pages builds the documentation site from `main`.
 
