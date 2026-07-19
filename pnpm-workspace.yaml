@@ -6,9 +6,6 @@ catalog:
   vitepress: 2.0.0-alpha.18
   vue: ^3.5.40
 
-allowBuilds:
-  simple-git-hooks: true
-
 shellEmulator: true
 autoInstallPeers: false
 minimumReleaseAge: 0

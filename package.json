@@ -21,16 +21,8 @@
     "release": "cd src && pnpm release",
     "upall": "pnpm -r update --latest"
   },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*": "biome check --write --no-errors-on-unmatched"
-  },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.4",
-    "lint-staged": "^17.0.8",
-    "simple-git-hooks": "^2.13.1"
+    "@biomejs/biome": "^2.5.4"
   },
   "packageManager": "pnpm@11.14.0"
 }
