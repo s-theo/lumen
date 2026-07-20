@@ -6,7 +6,6 @@ import type { ImageType, SizeType } from '../../types'
 const props = defineProps<{
   image: ImageType
   size?: SizeType
-  crop?: boolean
 }>()
 
 defineOptions({ inheritAttrs: false })
@@ -36,7 +35,7 @@ const handleImageError = (event: Event): void => {
 <template>
   <template v-if="isThemedImage(props.image)">
     <img
-      :class="['dark-img', shouldCrop && 'crop']"
+      :class="['lm-img', 'dark-img', shouldCrop && 'crop']"
       :src="withBase(props.image.dark)"
       :width="size ?? undefined"
       :height="size ?? undefined"
@@ -48,7 +47,7 @@ const handleImageError = (event: Event): void => {
       @error="handleImageError"
     />
     <img
-      :class="['light-img', shouldCrop && 'crop']"
+      :class="['lm-img', 'light-img', shouldCrop && 'crop']"
       :src="withBase(props.image.light)"
       :width="size ?? undefined"
       :height="size ?? undefined"
@@ -62,7 +61,7 @@ const handleImageError = (event: Event): void => {
   </template>
   <template v-else>
     <img
-      :class="shouldCrop ? 'crop' : undefined"
+      :class="['lm-img', shouldCrop && 'crop']"
       :src="typeof props.image === 'string' ? withBase(props.image) : withBase(props.image.src)"
       :width="size ?? undefined"
       :height="size ?? undefined"
@@ -82,13 +81,13 @@ const handleImageError = (event: Event): void => {
   display: none;
 }
 
-img {
+.lm-img {
   margin: 0;
   border-radius: 0.25em;
   pointer-events: none;
 }
 
-img.crop {
+.lm-img.crop {
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }

@@ -18,6 +18,7 @@
     "editor.defaultFormatter": "Vue.volar",
     "editor.formatOnSave": true
   },
+  "vue.format.wrapAttributes": "force-expand-multiline",
   "[markdown]": {
     "editor.defaultFormatter": "vscode.markdown-language-features",
     "editor.formatOnSave": true
