@@ -49,10 +49,6 @@ export function guide(): SidebarItem[] {
           link: '/guide/image-description'
         },
         {
-          text: '<iconify-icon class="i-mr" icon="heroicons-outline:chat" style="color:#3498db"></iconify-icon>集成评论',
-          link: '/guide/comment'
-        },
-        {
           text: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square" style="color:#007bff"></iconify-icon>站点统计',
           link: '/guide/analytics'
         },

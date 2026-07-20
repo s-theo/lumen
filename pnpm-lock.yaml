@@ -53,9 +53,6 @@ importers:
       '@iconify/vue':
         specifier: ^5.0.1
         version: 5.0.1(vue@3.5.40(typescript@7.0.2))
-      '@waline/client':
-        specifier: ^3.15.2
-        version: 3.15.2(typescript@7.0.2)
       iconify-icon:
         specifier: ^3.0.2
         version: 3.0.2
@@ -607,14 +604,6 @@ packages:
     peerDependencies:
       vue: ^3.5.0
 
-  '@waline/api@1.1.2':
-    resolution: {integrity: sha512-r1H+XL+/Ww4qXv8vjq09HJQtMvYqMofgfueuokgsDW1kJ9/6CYY7g6LkksYlDJmWm0aqkLR/9ZTI/bbozL4FBA==}
-    engines: {node: '>=22'}
-
-  '@waline/client@3.15.2':
-    resolution: {integrity: sha512-QBAVbruefDR+IKyQdM/Ao9fd07Xxpx1WEJ7xI8lBVNDjMQBr1PpdwrTpLC8RrYbgUR9ymNBvtLDJi0xK3pbORQ==}
-    engines: {node: '>=22'}
-
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -631,9 +620,6 @@ packages:
 
   args-tokenizer@0.3.0:
     resolution: {integrity: sha512-xXAd7G2Mll5W8uo37GETpQ2VrE84M181Z7ugHFGQnJZ50M2mbOv0osSZ9VsSgPfJQ+LVG0prSi0th+ELMsno7Q==}
-
-  autosize@6.0.1:
-    resolution: {integrity: sha512-f86EjiUKE6Xvczc4ioP1JBlWG7FKrE13qe/DxBCpe8GCipCq2nFw73aO8QEBKHfSbYGDN5eB9jXWKen7tspDqQ==}
 
   bail@2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
@@ -918,16 +904,6 @@ packages:
     resolution: {integrity: sha512-MqIQVVkz+uGEHi3TsHx/czcxxCbRIL7sv5K5DnYw/tI+apY54IbPefV/cmgxp6LoJSEx/TqcHdLs/298afG5QQ==}
     engines: {node: '>=6'}
 
-  marked-highlight@2.2.4:
-    resolution: {integrity: sha512-PZxisNMJDduSjc0q6uvjsnqqHCXc9s0eyzxDO9sB1eNGJnd/H1/Fu+z6g/liC1dfJdFW4SftMwMlLvsBhUPrqQ==}
-    peerDependencies:
-      marked: '>=4 <19'
-
-  marked@18.0.6:
-    resolution: {integrity: sha512-MrV5puXBfuiy6wl6DLaq3BtIJQAJToAd5zt/ZKhRfGRAuFPALE7/4Y7jnxRQoEgK/pBgurGqLyAuRgZ2xOjr6w==}
-    engines: {node: '>= 20'}
-    hasBin: true
-
   mdast-util-from-markdown@2.0.3:
     resolution: {integrity: sha512-W4mAWTvSlKvf8L6J+VN9yLSqQ9AOAAvHuoDAmPkz4dHf553m5gVj2ejadHJhoJmcmxEnOv6Pa8XJhpxE93kb8Q==}
 
@@ -1073,9 +1049,6 @@ packages:
 
   quansync@1.0.0:
     resolution: {integrity: sha512-5xZacEEufv3HSTPQuchrvV6soaiACMFnq1H8wkVioctoH3TRha9Sz66lOxRwPK/qZj7HPiSveih9yAyh98gvqA==}
-
-  recaptcha-v3@1.11.3:
-    resolution: {integrity: sha512-sEE6J0RzUkS+sKEBpgCD/AqCU0ffrAVOADGjvAx9vcttN+VLK42SWMkj/J/I6vHu3Kew+xcfbBqDVb65N0QGDw==}
 
   regex-recursion@6.0.2:
     resolution: {integrity: sha512-0YCaSCq2VRIebiaUviZNs0cBz1kg5kVS2UKUfNIx8YVs1cN3AV7NTctO5FOKBA+UT2BPJIWZauYHPqJODG50cg==}
@@ -1721,20 +1694,6 @@ snapshots:
     dependencies:
       vue: 3.5.40(typescript@7.0.2)
 
-  '@waline/api@1.1.2': {}
-
-  '@waline/client@3.15.2(typescript@7.0.2)':
-    dependencies:
-      '@vueuse/core': 14.3.0(vue@3.5.40(typescript@7.0.2))
-      '@waline/api': 1.1.2
-      autosize: 6.0.1
-      marked: 18.0.6
-      marked-highlight: 2.2.4(marked@18.0.6)
-      recaptcha-v3: 1.11.3
-      vue: 3.5.40(typescript@7.0.2)
-    transitivePeerDependencies:
-      - typescript
-
   ansi-regex@5.0.1: {}
 
   ansi-styles@4.3.0:
@@ -1748,8 +1707,6 @@ snapshots:
   argparse@2.0.1: {}
 
   args-tokenizer@0.3.0: {}
-
-  autosize@6.0.1: {}
 
   bail@2.0.2: {}
 
@@ -1979,12 +1936,6 @@ snapshots:
       uc.micro: 2.1.0
 
   markdown-title@1.0.2: {}
-
-  marked-highlight@2.2.4(marked@18.0.6):
-    dependencies:
-      marked: 18.0.6
-
-  marked@18.0.6: {}
 
   mdast-util-from-markdown@2.0.3:
     dependencies:
@@ -2234,8 +2185,6 @@ snapshots:
   punycode.js@2.3.1: {}
 
   quansync@1.0.0: {}
-
-  recaptcha-v3@1.11.3: {}
 
   regex-recursion@6.0.2:
     dependencies:

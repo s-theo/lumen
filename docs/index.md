@@ -73,10 +73,6 @@ features:
     details: 为图片添加说明文字，增强内容语义表达，提高无障碍访问体验，同时有助于SEO。
     link: '/guide/image-description'
 
-  - title: '<iconify-icon class="i-mr" icon="heroicons-outline:chat" style="color:#3498db"></iconify-icon>集成评论'
-    details: 集成 waline 评论，提升用户互动体验，增强站点的社交功能。
-    link: '/guide/comment'
-
   - title: '<iconify-icon class="i-mr" icon="heroicons:chart-bar-square" style="color:#007bff"></iconify-icon>站点统计'
     details: 集成 Google、Baidu、Umami 分析工具，追踪访问数据。
     link: '/guide/analytics'
@@ -91,9 +87,3 @@ features:
 ---
 
 <Underline />
-
-<!-- <script setup lang="ts">
-import { Waline_Data } from './.vitepress/data'
-</script>
-
-<Waline :Waline_Data="Waline_Data" /> -->
