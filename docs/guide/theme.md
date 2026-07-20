@@ -349,10 +349,6 @@ features: ...
 
 ## 解决方案
 
-### 导入主题时报错: `does not provide an export named 'load'`
-
-查看 [解决方式](./comment.md##安装依赖)
-
 ### 使用 `iconify-icon` 时报错: `[Vue warn]: Failed to resolve component: iconify-icon`
 
 ```ts [.vitepress/config.mts]

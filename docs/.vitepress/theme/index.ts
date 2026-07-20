@@ -6,7 +6,7 @@ import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import '@theojs/lumen/style'
 import './style/home-image.css'
-import { Aside_Data, Footer_Data, Waline_Data } from '../data'
+import { Aside_Data, Footer_Data } from '../data'
 import 'virtual:group-icons.css'
 
 export default {
@@ -15,8 +15,7 @@ export default {
     return h(DefaultTheme.Layout, null, {
       'home-hero-info-before': () => h(lm.Notice),
       'aside-ads-before': () => h(lm.Aside, { Aside_Data }),
-      'layout-bottom': () => h(lm.Footer, { Footer_Data }),
-      'doc-after': () => h(lm.Waline, { Waline_Data })
+      'layout-bottom': () => h(lm.Footer, { Footer_Data })
     })
   },
   enhanceApp: ({ app }: EnhanceAppContext) => {
@@ -31,6 +30,5 @@ export default {
     app.component('Copy', lm.CopyText)
     app.component('BoxCube', lm.BoxCube)
     app.component('Underline', lm.Underline)
-    app.component('Waline', lm.Waline)
   }
 }

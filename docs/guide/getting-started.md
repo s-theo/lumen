@@ -1,6 +1,6 @@
 ---
 title: 快速开始
-description: 快速了解如何安装和开始使用 @theojs/lumen 插件。本指南提供 pnpm、npm 和 yarn 安装命令，并概述了主题导入、首页定制、内容组件如公告栏、视频、评论等核心功能模块的入口。
+description: 快速了解如何安装和开始使用 @theojs/lumen 插件。本指南提供 pnpm、npm 和 yarn 安装命令，并概述了主题导入、首页定制、内容组件如公告栏、视频等核心功能模块的入口。
 ---
 
 # 快速开始
@@ -38,7 +38,6 @@ yarn add @theojs/lumen
     { icon: { icon: 'heroicons:bars-3', color: '#9b59b6' }, name: '侧边栏链接', link: 'aside' },
     { icon: { icon: 'heroicons:rectangle-group', color: '#1abc9c' }, name: '链接卡片', link: 'linkcard' },
     { icon: { icon: 'heroicons:photo', color: '#2ecc71' }, name: '图片描述', link: 'image-description' },
-    { icon: { icon: 'heroicons-outline:chat', color: '#3498db' }, name: '集成评论', link: 'comment' },
     { icon: { icon: 'heroicons:chart-bar-square', color: '#007bff' }, name: '站点统计', link: 'analytics' },
     { icon: { icon: 'heroicons-outline:clipboard-copy', color: '#20c997' }, name: '复制按钮', link: 'copy-text' }
   ]"

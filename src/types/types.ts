@@ -1,5 +1,3 @@
-import type { WalineProps } from '@waline/client/full'
-
 /** 图标和图片的类型 */
 export type IconMode = string | { light: string; dark: string }
 /** 尺寸类型 */
@@ -210,29 +208,6 @@ export interface NoticeItem {
   dateIcon?: IconType
   /** 日期图片 */
   dateImage?: ImageType
-}
-
-/** Waline 配置数据类型 */
-export interface WalineData {
-  serverURL: WalineProps['serverURL']
-  path?: string
-  lang?: WalineProps['lang']
-  locale?: WalineProps['locale']
-  emoji?: WalineProps['emoji']
-  commentSorting?: WalineProps['commentSorting']
-  meta?: WalineProps['meta']
-  requiredMeta?: WalineProps['requiredMeta']
-  login?: WalineProps['login']
-  wordLimit?: WalineProps['wordLimit']
-  pageSize?: WalineProps['pageSize']
-  imageUploader?: WalineProps['imageUploader']
-  highlighter?: WalineProps['highlighter']
-  texRenderer?: WalineProps['texRenderer']
-  search?: WalineProps['search']
-  noCopyright?: WalineProps['noCopyright']
-  recaptchaV3Key?: WalineProps['recaptchaV3Key']
-  turnstileKey?: WalineProps['turnstileKey']
-  reaction?: WalineProps['reaction']
 }
 
 /** Footer */
