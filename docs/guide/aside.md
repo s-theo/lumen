@@ -23,6 +23,10 @@ head:
 <<< ../demo/AsideData_i18n.ts[.vitepress/data/AsideData_i18n.ts]
 :::
 
+::: details 也可以在单项中覆盖需要翻译的字段
+<<< ../demo/AsideData_item_i18n.ts[.vitepress/data/AsideData_item_i18n.ts]
+:::
+
 ## 引入组件
 
 ```ts [.vitepress/theme/index.ts]
@@ -76,6 +80,24 @@ export default {
 | `hide1`  | `string`     | 隐藏信息 1，悬停时显示。例如：`"仅限中国大陆用户"`。                                                                                   | <Badge text="可选" /> |
 | `hide2`  | `string`     | 隐藏信息 2，用于补充额外提示。例如：`"每日限量 500 名"`。                                                                              | <Badge text="可选" /> |
 
+### AsidePromo
+
+`AsidePromo` 继承 `Promo`，并支持按语言覆盖单项字段。
+
+| 字段   | 类型                                                | 描述                                                                  | 是否必填              |
+| ------ | --------------------------------------------------- | --------------------------------------------------------------------- | --------------------- |
+| ...    | 同 `Promo` 接口                                     | 同上，字段不再赘述。                                                  | -                     |
+| `i18n` | `Partial<Record<string, Omit<AsidePromo, 'i18n'>>>` | 以语言代码为键；翻译项需要 `promo`，其余字段仅在需要覆盖时填写。      | <Badge text="可选" /> |
+
+### AsideNormal
+
+`AsideNormal` 继承 `Normal`，并支持按语言覆盖单项字段。
+
+| 字段   | 类型                                                 | 描述                                                                | 是否必填              |
+| ------ | ---------------------------------------------------- | ------------------------------------------------------------------- | --------------------- |
+| ...    | 同 `Normal` 接口                                     | 同上，字段不再赘述。                                                | -                     |
+| `i18n` | `Partial<Record<string, Omit<AsideNormal, 'i18n'>>>` | 以语言代码为键；翻译项需要 `name`，其余字段仅在需要覆盖时填写。     | <Badge text="可选" /> |
+
 ### AsideAll
 
 | 类型          | 描述                                                     |
@@ -90,8 +112,8 @@ export default {
 | 单语言结构 | `AsideAll[]`                           | 直接使用 `AsidePromo` 或 `AsideNormal` 组成的数组。                                 |
 | 多语言结构 | `{ i18n: Record<string, AsideAll[]> }` | 使用 `i18n` 包裹的对象，不同语言对应不同数组，如 `{ i18n: { root: [], en: [] } }`。 |
 
-::: warning
-当前组件只读取 `Aside_Data` 顶层的 `i18n`。请按上表的多语言结构为每种语言提供完整数组，不要在单个 `AsidePromo` 或 `AsideNormal` 项内配置 `i18n`。
+::: tip
+顶层与单项 `i18n` 可以同时使用。组件会先选择当前语言对应的顶层数组，再浅层合并每一项当前语言的字段覆盖；未覆盖字段继承该项基础配置，嵌套对象则由翻译值整体替换。顶层缺少当前语言时不展示条目，单项缺少当前语言时保持原数据。
 :::
 
 <!--@include: ../demo/type.md-->

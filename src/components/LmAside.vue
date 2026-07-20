@@ -8,9 +8,15 @@ const props = defineProps<{ Aside_Data: AsideItem }>()
 
 const localeKey = getLocaleKey()
 
+function localizeAsideItem(item: AsideAll, locale: string): AsideAll {
+  const localizedItem = item.i18n?.[locale]
+  return localizedItem ? { ...item, ...localizedItem } : item
+}
+
 const aside = computed<AsideAll[]>(() => {
-  if (Array.isArray(props.Aside_Data)) return props.Aside_Data
-  return props.Aside_Data?.i18n?.[localeKey.value] ?? []
+  const locale = localeKey.value
+  const items = Array.isArray(props.Aside_Data) ? props.Aside_Data : (props.Aside_Data.i18n[locale] ?? [])
+  return items.map((item) => localizeAsideItem(item, locale))
 })
 </script>
 
