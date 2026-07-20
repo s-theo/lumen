@@ -32,6 +32,8 @@ import '@theojs/lumen/home'
 import '@theojs/lumen/icon'
 /* 图片样式 */
 import '@theojs/lumen/pic'
+/* 组件 CSS 变量 */
+import '@theojs/lumen/components-var'
 ```
 
 :::
@@ -259,6 +261,8 @@ console.log('Hello, VitePress!')
 
 ### 4. Badge 组件
 
+`Badge` 是 VitePress 默认主题提供的组件，Lumen 的 `badge` 样式会调整它的外观；它不是 Lumen 单独导出的 Vue 组件。
+
 ```vue-html
 <Badge type="info" text="default" />
 <Badge type="tip" text="^1.9.0" />
@@ -321,7 +325,7 @@ console.log('Hello, VitePress!')
 }
 ```
 
-```yaml [.vitepress/index.md]
+```yaml [index.md]
 ---
 layout: home
 
@@ -337,7 +341,7 @@ hero:
 
     - theme: brand logo
       text: Lumen
-      link: hhttps://lumen.theojs.cn/
+      link: https://lumen.theojs.cn/
 
     - theme: alt logo
       text: Lumen
@@ -378,6 +382,7 @@ import DefaultTheme from 'vitepress/theme'
 import 'viewerjs/dist/viewer.min.css'
 
 export default {
+  extends: DefaultTheme,
   // [!code ++]
   setup() {
     const route = useRoute() // [!code ++]

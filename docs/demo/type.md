@@ -18,3 +18,12 @@ export type ImageType =
   | { src: string; crop?: boolean; [prop: string]: any }
   | { light: string; dark: string; crop?: boolean; [prop: string]: any }
 ```
+
+## 其他公共类型
+
+```ts
+export type SizeType = null | string | number
+export type LinkType = string | undefined
+export type RelType = string | undefined
+export type TargetType = string | undefined
+```

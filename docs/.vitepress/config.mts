@@ -17,6 +17,9 @@ export default defineConfig({
   // 站点语言
   lang: 'zh-Hans',
 
+  // demo 仅作为文档代码片段，不生成独立页面
+  srcExclude: ['demo/**'],
+
   // 开启后网址后缀无'html'
   cleanUrls: true,
 

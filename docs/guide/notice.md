@@ -37,7 +37,9 @@ export default {
 
 ## 配置公告栏
 
-```yaml{4-12} [.vitepress/index.md]
+在站点内容根目录的 `index.md` 中配置 `hero.Notice`。字段名 `Notice` 区分大小写。
+
+```yaml{4-12} [index.md]
 ---
 layout: home
 hero:
@@ -63,8 +65,8 @@ hero:
 | `title`     | `string`     | 链接显示的标题文本，突出展示的主要内容。                                                                                                                                                         | <Badge text="必填" /> |
 | `desc`      | `string`     | 链接下方的补充描述内容，可用于详细说明或附加信息。                                                                                                                                               | <Badge text="可选" /> |
 | `date`      | `string`     | 活动截止日期或相关时间信息，通常用于提示有效期限。                                                                                                                                               | <Badge text="可选" /> |
-| `dateText`  | `string`     | 活动时间的文字说明，默认为 `活动时间: 即日至`，可自定义显示文案。                                                                                                                                | <Badge text="可选" /> |
-| `dateIcon`  | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `dateImage` 互斥。若 `dateIcon` 和 `dateImage` 都未定义，组件会显示默认图标 `'heroicons:calendar-days'`。详情查看 [IconType](#IconType) | <Badge text="可选" /> |
-| `dateImage` | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪。与 `dateIcon` 互斥。若 `dateIcon` 和 `dateImage` 都未定义，组件会显示默认图标 `'heroicons:calendar-days'`。详情查看 [ImageType](#ImageType)    | <Badge text="可选" /> |
+| `dateText`  | `string`     | 活动时间的文字说明，仅在设置 `date` 时显示；默认值为 `活动时间: 即日至`。                                                                                                                        | <Badge text="可选" /> |
+| `dateIcon`  | `IconType`   | 日期图标，仅在设置 `date` 时显示。建议与 `dateImage` 二选一；同时设置时优先显示 `dateIcon`。两者都未定义时使用默认图标 `heroicons:calendar-days`。详情查看 [IconType](#IconType)     | <Badge text="可选" /> |
+| `dateImage` | `ImageType`  | 日期图片，仅在设置 `date` 时显示。建议与 `dateIcon` 二选一；同时设置时优先显示 `dateIcon`。两者都未定义时使用默认图标 `heroicons:calendar-days`。详情查看 [ImageType](#ImageType) | <Badge text="可选" /> |
 
 <!--@include: ../demo/type.md-->
