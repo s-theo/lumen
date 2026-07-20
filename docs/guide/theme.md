@@ -32,10 +32,12 @@ import '@theojs/lumen/home'
 import '@theojs/lumen/icon'
 /* 图片样式 */
 import '@theojs/lumen/pic'
-/* 组件 CSS 变量 */
-import '@theojs/lumen/components-var'
 ```
 
+:::
+
+::: tip
+从 `@theojs/lumen` 根入口导入组件时会自动加载 `components-var.css`，全量样式 `@theojs/lumen/style` 也已包含它，通常无需再单独导入 `@theojs/lumen/components-var`。
 :::
 
 ## 图标支持 <Pill :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA' }" name="查看图标库" link="https://icon-sets.iconify.design/" />
