@@ -23,6 +23,7 @@ import DefaultTheme from 'vitepress/theme'
 import { Underline } from '@theojs/lumen'
 
 export default {
+  extends: DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }: EnhanceAppContext) => {
     // [!code ++]
@@ -33,9 +34,9 @@ export default {
 
 ## 使用示例
 
-在首页的 Markdown 文件（如 `.vitepress/index.md`）中，通过设置 `layout: home` 使用首页布局，并在 `hero` 区域中配置标题文本，同时在页面内容中插入 `<Home />` 组件渲染带有动态下划线效果的标题
+在站点内容根目录的首页 Markdown 文件（通常是 `index.md`）中，通过设置 `layout: home` 使用首页布局，并在 `hero` 区域中配置标题文本，同时在页面内容中插入 `<Underline />` 组件渲染带有动态下划线效果的标题。
 
-```yaml [.vitepress/index.md]
+```yaml [index.md]
 ---
 layout: home
 
@@ -47,6 +48,10 @@ hero:
 ---
 <Underline /> # [!code ++]
 ```
+
+::: tip
+`Underline` 会读取当前页面的 `hero.text` 和 `hero.textsuffix`，并替换 VitePress 默认首页 Hero 的标题节点。请仅在默认首页布局中使用一次；自定义 Hero DOM 结构时可能无法定位目标节点。
+:::
 
 ## 接口数据说明
 

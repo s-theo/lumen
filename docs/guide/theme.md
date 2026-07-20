@@ -36,6 +36,10 @@ import '@theojs/lumen/pic'
 
 :::
 
+::: tip
+从 `@theojs/lumen` 根入口导入组件时会自动加载 `components-var.css`，全量样式 `@theojs/lumen/style` 也已包含它，通常无需再单独导入 `@theojs/lumen/components-var`。
+:::
+
 ## 图标支持 <Pill :icon="{ icon: 'line-md:iconify2-static', color: '#1769AA' }" name="查看图标库" link="https://icon-sets.iconify.design/" />
 
 ### 示例
@@ -259,6 +263,8 @@ console.log('Hello, VitePress!')
 
 ### 4. Badge 组件
 
+`Badge` 是 VitePress 默认主题提供的组件，Lumen 的 `badge` 样式会调整它的外观；它不是 Lumen 单独导出的 Vue 组件。
+
 ```vue-html
 <Badge type="info" text="default" />
 <Badge type="tip" text="^1.9.0" />
@@ -321,7 +327,7 @@ console.log('Hello, VitePress!')
 }
 ```
 
-```yaml [.vitepress/index.md]
+```yaml [index.md]
 ---
 layout: home
 
@@ -337,7 +343,7 @@ hero:
 
     - theme: brand logo
       text: Lumen
-      link: hhttps://lumen.theojs.cn/
+      link: https://lumen.theojs.cn/
 
     - theme: alt logo
       text: Lumen
@@ -378,6 +384,7 @@ import DefaultTheme from 'vitepress/theme'
 import 'viewerjs/dist/viewer.min.css'
 
 export default {
+  extends: DefaultTheme,
   // [!code ++]
   setup() {
     const route = useRoute() // [!code ++]

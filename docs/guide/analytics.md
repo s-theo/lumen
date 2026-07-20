@@ -1,28 +1,29 @@
 ---
-title: 站点统计组件 - Analytics
+title: 站点统计工具 - Analytics
 description: 探索如何使用 @theojs/lumen 插件，在你的 VitePress 站点中无缝集成谷歌分析 (Google Analytics)、百度统计 (Baidu Analytics) 及 Umami Analytics。本指南将帮助你快速配置和管理站点统计，有效追踪和分析网站数据。
 ---
 
-# 站点统计组件
+# 站点统计工具
 
 该插件集成了三种常见的站点统计工具：**谷歌分析 (Google Analytics)**、**百度统计 (Baidu Analytics)** 和 **Umami Analytics**，让你可以轻松地在 VitePress 网站中集成并管理这些分析工具。无论是谷歌分析的强大功能，还是百度统计对中国市场的适配，或者是 Umami 的隐私友好型方案，都可以通过这个插件快速集成并使用。
 
 ## 谷歌分析 - googleAnalytics
 
 ```ts [.vitepress/theme/index.ts]
-// [!code ++]
-import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { googleAnalytics } from '@theojs/lumen'
 
 export default {
+  extends: DefaultTheme,
   // [!code ++]
-  enhanceApp: ({ app }: EnhanceAppContext) => {
+  enhanceApp() {
     googleAnalytics({ id: 'G-******' }) // [!code ++]
   } // [!code ++]
 }
 ```
+
+`googleAnalytics` 只会在生产构建中加载脚本；开发服务器中不会发送统计数据。
 
 ### 获取 Google Analytics ID
 
@@ -46,17 +47,25 @@ import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { baiduAnalytics, trackPageview } from '@theojs/lumen'
 
+const baiduId = '******'
+
 export default {
+  extends: DefaultTheme,
   // [!code ++]
-  enhanceApp: ({ app }: EnhanceAppContext) => {
-    baiduAnalytics({ baiduId: '******' }) // [!code ++]
+  enhanceApp: ({ router }: EnhanceAppContext) => {
+    baiduAnalytics({ baiduId }) // [!code ++]
+
+    const previousAfterRouteChange = router.onAfterRouteChange // [!code ++]
     // [!code ++]
-    if (typeof window !== 'undefined') {
-      trackPageview('******', window.location.href) // [!code ++]
+    router.onAfterRouteChange = async (to) => {
+      await previousAfterRouteChange?.(to) // [!code ++]
+      trackPageview(baiduId, to) // [!code ++]
     } // [!code ++]
   } // [!code ++]
 }
 ```
+
+`baiduAnalytics` 会在浏览器环境加载脚本。VitePress 会在首次访问和后续客户端路由切换后调用 `onAfterRouteChange`；示例保留已有处理函数并上报当前路径。
 
 ### 获取 Baidu Analytics ID
 
@@ -71,15 +80,14 @@ export default {
 ## Umami - umamiAnalytics
 
 ```ts [.vitepress/theme/index.ts]
-// [!code ++]
-import type { EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // [!code ++]
 import { umamiAnalytics } from '@theojs/lumen'
 
 export default {
+  extends: DefaultTheme,
   // [!code ++]
-  enhanceApp: ({ app }: EnhanceAppContext) => {
+  enhanceApp() {
     // [!code ++]
     umamiAnalytics({
       id: '***-***-***-***', // [!code ++]
@@ -89,6 +97,8 @@ export default {
   } // [!code ++]
 }
 ```
+
+`umamiAnalytics` 只会在生产构建中加载脚本。参数既可以是上面的单个配置对象，也可以是配置对象数组，用于同时加载多个站点追踪器。
 
 ### 获取 Umami Analytics ID
 

@@ -15,12 +15,19 @@ import DefaultTheme from 'vitepress/theme'
 import { CopyText } from '@theojs/lumen'
 
 export default {
+  extends: DefaultTheme,
   // [!code ++]
   enhanceApp: ({ app }: EnhanceAppContext) => {
     app.component('Copy', CopyText) // [!code ++]
   } // [!code ++]
 }
 ```
+
+这里将组件注册为 `Copy`，这是自定义的全局别名。也可以改为 `app.component('CopyText', CopyText)`，并在页面中使用 `<CopyText />`。
+
+::: tip
+组件使用浏览器 Clipboard API。请在 HTTPS 或本地开发环境中使用，并确保浏览器允许页面访问剪贴板。
+:::
 
 ## 使用示例
 
@@ -44,6 +51,6 @@ export default {
 |    `icon`    | `IconType`                                 | 按钮的图标，默认值：`heroicons-outline:clipboard-copy` 。详情查看 [IconType](#IconType) | <Badge text="可选" /> |
 |   `image`    | `ImageType`                                | 按钮的图片 。详情查看 [ImageType](#ImageType)                                           | <Badge text="可选" /> |
 | `toolTipPos` | `top \| bottom \| left \| right`           | 提示显示的位置，默认值：`top`                                                           | <Badge text="可选" /> |
-|    `bold`    | `boolean`                                  | 是否启用加粗样式，启用时文字加粗 `font-weight: 600`，默认值：`false`                    | <Badge text="可选" /> |
+|    `bold`    | `boolean`                                  | 是否启用加粗样式，启用时文字加粗 `font-weight: 500`，默认值：`false`                    | <Badge text="可选" /> |
 
 <!--@include: ../demo/type.md-->

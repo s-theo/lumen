@@ -9,6 +9,10 @@ head:
 
 # 页脚组件 - Footer
 
+::: info
+`Footer` 默认只在 `layout: home` 的页面渲染。也可通过 frontmatter 的 `isHome: true` 显式启用；`isHome: false` 会覆盖首页布局判断并关闭显示。
+:::
+
 ## 创建数据 (点击打开查看)
 
 ::: details 在`.vitepress`目录下新建`data/FooterData.ts`文件，并添加以下内容：
@@ -19,10 +23,14 @@ head:
 <<< ../demo/FooterData_i18n.ts[.vitepress/data/FooterData_i18n.ts]
 :::
 
+::: warning
+匹配到当前语言后，语言对象会整体替换根级 Footer 数据，不会进行深度合并。请在每个语言对象中完整填写需要展示的 `group`、`beian`、`author` 和 `noIcon` 字段。
+:::
+
 ## 引入组件
 
 ::: tip
-`.. /data/footerData` 可替换为存放数据的路径
+`../data/FooterData` 可替换为实际存放数据的路径。
 :::
 
 ```ts [.vitepress/theme/index.ts]
@@ -32,7 +40,7 @@ import { h } from 'vue'
 // [!code ++]
 import { Footer } from '@theojs/lumen'
 // [!code ++]
-import { Footer_Data } from '../data/footerData'
+import { Footer_Data } from '../data/FooterData'
 
 export default {
   extends: DefaultTheme,
@@ -51,7 +59,7 @@ export default {
 
 ### `FooterData` 接口
 
-`FooterData` 是所有组件的顶层接口，包含了以下几个字段：
+`FooterData` 是 Footer 组件的顶层数据接口，包含以下字段：
 
 | 字段     | 类型                                                | 描述                                                                 | 是否必填              |
 | -------- | --------------------------------------------------- | -------------------------------------------------------------------- | --------------------- |
@@ -68,8 +76,8 @@ export default {
 | 字段     | 类型        | 描述                                                                                                     | 是否必填              |
 | -------- | ----------- | -------------------------------------------------------------------------------------------------------- | --------------------- |
 | `noIcon` | `boolean`   | 是否隐藏该分组下所有外部链接的外链图标                                                                   | <Badge text="可选" /> |
-| `icon`   | `IconType`  | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。详情查看 [IconType](#IconType)    | <Badge text="可选" /> |
-| `image`  | `ImageType` | 图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥，。详情查看 [ImageType](#ImageType) | <Badge text="可选" /> |
+| `icon`   | `IconType`  | 图标配置，支持字符串或对象及深浅色模式。建议与 `image` 二选一；同时设置时优先显示 `icon`。详情查看 [IconType](#IconType)     | <Badge text="可选" /> |
+| `image`  | `ImageType` | 图片配置，支持字符串或对象及深浅色模式。建议与 `icon` 二选一；同时设置时优先显示 `icon`。详情查看 [ImageType](#ImageType)   | <Badge text="可选" /> |
 | `title`  | `string`    | 分组标题，将展示为该链接组的名称。                                                                       | <Badge text="必填" /> |
 | `links`  | `Link[]`    | 分组内的链接数组，参考下方 [Link 接口](#link-接口)。                                                     | <Badge text="必填" /> |
 
@@ -80,10 +88,10 @@ export default {
 | 字段     | 类型         | 描述                                                                                                                                   | 是否必填              |
 | -------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | `noIcon` | `boolean`    | 是否隐藏该链接的外部链接图标                                                                                                           | <Badge text="可选" /> |
-| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。详情查看 [IconType](#IconType)                                  | <Badge text="可选" /> |
-| `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥。详情查看 [ImageType](#ImageType)                                 | <Badge text="可选" /> |
+| `icon`   | `IconType`   | 图标配置，支持字符串或对象及深浅色模式。建议与 `image` 二选一；同时设置时优先显示 `icon`。详情查看 [IconType](#IconType)               | <Badge text="可选" /> |
+| `image`  | `ImageType`  | 图片配置，支持字符串或对象及深浅色模式。建议与 `icon` 二选一；同时设置时优先显示 `icon`。详情查看 [ImageType](#ImageType)             | <Badge text="可选" /> |
 | `name`   | `string`     | 链接显示的文本。                                                                                                                       | <Badge text="必填" /> |
-| `link`   | `string`     | 链接地址，可为外部 URL 或内部路径，如 `/docs`。                                                                                        | <Badge text="必填" /> |
+| `link`   | `LinkType`   | 链接地址，可为外部 URL 或内部路径，如 `/docs`。                                                                                        | <Badge text="必填" /> |
 | `rel`    | `RelType`    | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                           | <Badge text="可选" /> |
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 
@@ -105,9 +113,9 @@ export default {
 | -------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | `number` | `string`              | ICP 备案号文本，例如 `粤ICP备88888888号`，也可用于其他类似用途的自定义文本。                                                                                                                            | <Badge text="可选" /> |
 | `link`   | `LinkType`            | 指向工信部网站备案系统的链接，默认为:`https://beian.miit.gov.cn/`，支持自定义                                                                                                                           | <Badge text="可选" /> |
-| `icon`   | `IconType`            | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。两者都未设置时将显示默认图标。详情查看 [IconType](#IconType)                                                                     | <Badge text="可选" /> |
-| `image`  | `ImageType`           | 图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥。两者都未设置时将显示默认图标。详情查看 [ImageType](#ImageType)                                                                    | <Badge text="可选" /> |
-| `rel`    | `RelType`\|`nofollow` | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。(由于默认链接为`https://beian.miit.gov.cn/` 但该站点存在 `HTTP 521` 错误，因此默认设置为`nofollow` 以规避潜在的 SEO 风险。) | <Badge text="可选" /> |
+| `icon`   | `IconType`            | ICP 图标，仅在 `showIcon` 为 `true` 时显示。建议与 `image` 二选一；同时设置时优先显示 `icon`，两者都未设置时显示默认图标。详情查看 [IconType](#IconType)                                                 | <Badge text="可选" /> |
+| `image`  | `ImageType`           | ICP 图片，仅在 `showIcon` 为 `true` 时显示。建议与 `icon` 二选一；同时设置时优先显示 `icon`，两者都未设置时显示默认图标。详情查看 [ImageType](#ImageType)                                               | <Badge text="可选" /> |
+| `rel`    | `RelType`            | 设置链接的 `rel` 属性，未设置时组件默认为 `nofollow`。                                                                                                                                               | <Badge text="可选" /> |
 | `target` | `TargetType`          | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。                                                                  | <Badge text="可选" /> |
 
 #### `Police` 接口
@@ -118,8 +126,8 @@ export default {
 | -------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
 | `number` | `string`     | 公安备案号文本，例如 `粤公网安备 88888888888888 号`，用于展示公安机关备案信息，也可用于其他类似用途的自定义文本。                      | <Badge text="可选" /> |
 | `link`   | `LinkType`   | 公安备案号对应的查询链接，默认为:`https://beian.mps.gov.cn/`，支持自定义                                                               | <Badge text="可选" /> |
-| `icon`   | `IconType`   | 图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。两者都未设置时将显示默认图标。详情查看 [IconType](#IconType)    | <Badge text="可选" /> |
-| `image`  | `ImageType`  | 图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥。两者都未设置时将显示默认图标。详情查看 [ImageType](#ImageType)   | <Badge text="可选" /> |
+| `icon`   | `IconType`   | 公安备案图标，仅在 `showIcon` 为 `true` 时显示。建议与 `image` 二选一；同时设置时优先显示 `icon`，两者都未设置时显示默认图标。详情查看 [IconType](#IconType)  | <Badge text="可选" /> |
+| `image`  | `ImageType`  | 公安备案图片，仅在 `showIcon` 为 `true` 时显示。建议与 `icon` 二选一；同时设置时优先显示 `icon`，两者都未设置时显示默认图标。详情查看 [ImageType](#ImageType) | <Badge text="可选" /> |
 | `rel`    | `RelType`    | 设置链接的 `rel` 属性，常见如 `noopener noreferrer`，用于安全性或 SEO 考虑。                                                           | <Badge text="可选" /> |
 | `target` | `TargetType` | 链接的目标窗口。默认根据链接地址判断：外部链接默认在新标签页打开（`_blank`），内部链接无默认值（`即当前页打开`）。可自定义覆盖该行为。 | <Badge text="可选" /> |
 
@@ -129,8 +137,8 @@ export default {
 
 | 字段        | 类型         | 描述                                                                                                                                     | 是否必填              |
 | ----------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| `icon`      | `IconType`   | 版权图标配置，支持字符串或对象，支持深浅色模式和颜色配置。与 `image` 互斥。两者都未设置时将显示默认图标。详情查看 [IconType](#IconType)  | <Badge text="可选" /> |
-| `image`     | `ImageType`  | 版权图片配置，支持字符串或对象，支持深浅色模式和裁剪配置。与 `icon` 互斥。两者都未设置时将显示默认图标。详情查看 [ImageType](#ImageType) | <Badge text="可选" /> |
+| `icon`      | `IconType`   | 版权图标。建议与 `image` 二选一；同时设置时优先显示 `icon`，两者都未设置时显示默认版权图标。详情查看 [IconType](#IconType)               | <Badge text="可选" /> |
+| `image`     | `ImageType`  | 版权图片。建议与 `icon` 二选一；同时设置时优先显示 `icon`，两者都未设置时显示默认版权图标。详情查看 [ImageType](#ImageType)             | <Badge text="可选" /> |
 | `startYear` | `number`     | 版权的起始年份，表示作者首次拥有版权的年份或版权开始生效的年份。如果未提供，则不显示年份范围。                                           | <Badge text="可选" /> |
 | `name`      | `string`     | 作者或站点拥有者的名称，将展示在页脚中。                                                                                                 | <Badge text="可选" /> |
 | `link`      | `LinkType`   | 作者链接地址，若未填写，则默认拼接为 `https://github.com/${name}`。                                                                      | <Badge text="可选" /> |
