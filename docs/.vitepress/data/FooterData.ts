@@ -46,8 +46,7 @@ export const Footer_Data: FooterData = {
         { name: '肥猫云(FatCatCloud)', link: 'https://ilil.uk/fatcat', rel: 'sponsored noreferrer' },
         { name: '二猫云(2mao)', link: 'https://ilil.uk/2mao', rel: 'sponsored noreferrer' },
         // { name: '奈云(NaiYun)', link: 'https://ilil.uk/naiyun', rel: 'sponsored noreferrer' },
-        { name: 'TNT Cloud', link: 'https://ilil.uk/tnt', rel: 'sponsored noreferrer' },
-        { name: '飞鸟机场(FlyingBird)', link: 'https://ilil.uk/flyingbird', rel: 'sponsored noreferrer' }
+        { name: 'TNT Cloud', link: 'https://ilil.uk/tnt', rel: 'sponsored noreferrer' }
       ]
     },
     {
