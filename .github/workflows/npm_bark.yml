@@ -22,7 +22,7 @@ jobs:
           node-version: lts/*
 
       - name: Install dependencies
-        run: pnpm add axios -w
+        run: pnpm add axios -w --ignore-scripts
 
       - name: Run TypeScript script
         env:
