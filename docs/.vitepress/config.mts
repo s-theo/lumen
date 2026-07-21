@@ -83,11 +83,10 @@ export default defineConfig({
     editLink: { pattern: 'https://github.com/s-theo/lumen/edit/main/docs/:path', text: '为此页提供修改建议' },
 
     // 目录设置
-    outline: 'deep', // 索引级别
-    outlineTitle: '本页目录', // 目录文本
+    outline: { level: 'deep', label: '本页目录' },
 
     // 上次更新
-    lastUpdatedText: '最后更新于',
+    lastUpdated: { text: '最后更新于' },
 
     // 文章翻页
     docFooter: { prev: '上一篇', next: '下一篇' },
