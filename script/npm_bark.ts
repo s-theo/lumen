@@ -24,7 +24,7 @@ async function notify(barkUrl: string, title: string, body: string) {
     badge: 1,
     category: 'Github Actions',
     sound: 'multiwayinvitation.caf',
-    icon: 'https://i.theojs.cn/logo/npm.webp',
+    icon: 'https://i.theojs.cn/cdn-cgi/image/format=png/logo/npm.webp',
     group: 'Github Actions'
   })
 }
