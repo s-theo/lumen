@@ -44,14 +44,14 @@ export default {
 layout: home
 hero:
   Notice:
-    title: '🎉 活动不停歇，青云梯四周年双旦特惠'
+    title: '🎉 Lumen 新功能发布'
     desc: | # 支持 YAML 的换行符，保持多行格式
-      · 月/季/半年付 <span class="promo-text">85折: wuyi85</span>
-      · 年付以上 <span class="promo-text">64折: wuyi80</span>
-    date: '2025年1月7日23时59分'
+      · 查看更新说明与使用示例
+      · 欢迎在项目仓库提交反馈
+    date: '2026年12月31日'
     dateIcon: 'mdi:calendar-star'
-    dateText: '活动截止日期'
-    link: 'https://ilil.uk/qyt'
+    dateText: '活动时间'
+    link: 'https://github.com/s-theo/lumen'
 ---
 ```
 

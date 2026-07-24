@@ -12,29 +12,10 @@ hero:
     alt: lumen
     fetchpriority: high
 
-  Notice:
-    title: '<span class="promo-title">青云梯 超值优惠大放送!</span>'
-    desc: |
-      · 8折<span class="promo-text"> 优惠码: qyt85 </span>
-      · 85折<span class="promo-text"> 优惠码: qyt80 </span>
-      · 配合优惠码折上折，最高可达<span class="promo-text">48折</span>
-    # date: '7月31号23点59分'
-    # dateText: '活动截止至'
-    link: https://ilil.uk/qyt
-    rel: sponsored noreferrer
-
   actions:
     - theme: brand
       text: 快速开始
       link: /guide/getting-started
-
-    - theme: alt
-      text: 机场推荐评测
-      link: https://doc.theojs.cn/serve/airport/summary
-
-    - theme: alt
-      text: 账号合租
-      link: https://doc.theojs.cn/serve/sharing/account-sharing-guide
 
     - theme: alt author
       text: Theo-Docs
