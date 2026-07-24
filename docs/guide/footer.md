@@ -4,7 +4,7 @@ description: 了解如何使用 @theojs/lumen 插件的 Footer 组件自定义 V
 head:
   - - meta
     - property: og:image
-      content: https://i.theojs.cn/docs/homefooter-desktop-light.webp
+      content: https://i.theojs.net/docs/homefooter-desktop-light.webp
 ---
 
 # 页脚组件 - Footer

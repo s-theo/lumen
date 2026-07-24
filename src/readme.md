@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <img src="https://i.theojs.cn/logo/lumen-logo-large.svg" width="300" alt="@theojs/lumen" />
+    <img src="https://i.theojs.net/logo/lumen-logo-large.svg" width="300" alt="@theojs/lumen" />
   </p>
   <p>
     <img
@@ -19,8 +19,8 @@
     />
   </p>
   <p>
-    <a href="https://lumen.theojs.cn/">演示站点</a> |
-    <a href="https://lumen.theojs.cn/guide/getting-started">查看文档</a>
+    <a href="https://lumen.theojs.net/">演示站点</a> |
+    <a href="https://lumen.theojs.net/guide/getting-started">查看文档</a>
   </p>
 </div>
 

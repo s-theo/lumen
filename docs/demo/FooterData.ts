@@ -29,7 +29,7 @@ export const Footer_Data: FooterData = {
       color: { light: '#999', dark: '#ccc' }
     },
     name: 'Theo',
-    link: 'https://theojs.cn',
+    link: 'https://theojs.net',
     rel: 'noopener noreferrer'
   },
   group: [

@@ -8,7 +8,7 @@ hero:
   tagline: ✨ 专为 VitePress 打造的主题美化与 Vue 扩展组件库
 
   image:
-    src: https://i.theojs.cn/logo/lumen-logo-large.svg
+    src: https://i.theojs.net/logo/lumen-logo-large.svg
     alt: lumen
     fetchpriority: high
 
@@ -19,11 +19,11 @@ hero:
 
     - theme: alt author
       text: Theo-Docs
-      link: https://doc.theojs.cn
+      link: https://doc.theojs.net
 
     - theme: alt author
       text: 玄学宝典
-      link: https://xx.theojs.cn
+      link: https://xx.theojs.net
 
 features:
   - title: '<iconify-icon class="i-mr" icon="heroicons:puzzle-piece" style="color:#ff9800"></iconify-icon>开箱即用的主题配色'

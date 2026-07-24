@@ -44,13 +44,13 @@
 
   <!-- #region image -->
   <!-- 图片 -->
-  <Pill image="https://i.theojs.cn/logo/alipay.svg" name="支付宝" link="https://i.theojs.cn/alipay.webp" />
+  <Pill image="https://i.theojs.net/logo/alipay.svg" name="支付宝" link="https://i.theojs.net/alipay.webp" />
 
   <!-- 深浅模式的图片 -->
   <Pill
     :image="{
-      light: 'https://i.theojs.cn/logo/github.svg',
-      dark: 'https://i.theojs.cn/logo/github-dark.svg',
+      light: 'https://i.theojs.net/logo/github.svg',
+      dark: 'https://i.theojs.net/logo/github-dark.svg',
       crop: true
     }"
     name="GitHub"

@@ -22,7 +22,7 @@ export default {
     lm.umamiAnalytics({
       id: import.meta.env.VITE_UMAMI_ID,
       src: import.meta.env.VITE_UMAMI_SRC,
-      domains: 'lumen.theojs.cn'
+      domains: 'lumen.theojs.net'
     })
     app.component('Pill', lm.Pill)
     app.component('Links', lm.Links)

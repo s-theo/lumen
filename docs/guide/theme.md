@@ -91,36 +91,36 @@ export default DefaultTheme
 **输入**
 
 ```md
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 ::: info
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
 
 ::: tip
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
 
 ::: warning
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
 
 ::: danger
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
 
 ::: details
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
@@ -128,36 +128,36 @@ export default DefaultTheme
 
 **输出**
 
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 ::: info
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
 
 ::: tip
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
 
 ::: warning
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
 
 ::: danger
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
 
 ::: details
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 
 这是一段文字
 :::
@@ -168,7 +168,7 @@ export default DefaultTheme
 
 ````md
 ::: danger STOP
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 :::
 
 ::: details Click me to view the code
@@ -182,7 +182,7 @@ console.log('Hello, VitePress!')
 
 **输出**
 ::: danger STOP
-[这是一个链接](https://doc.theojs.cn/)
+[这是一个链接](https://doc.theojs.net/)
 :::
 
 ::: details Click me to view the code
@@ -200,31 +200,31 @@ console.log('Hello, VitePress!')
 ```md
 > [!NOTE]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 > [!TIP]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 > [!IMPORTANT]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 > [!WARNING]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 > [!CAUTION]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 ```
@@ -233,31 +233,31 @@ console.log('Hello, VitePress!')
 
 > [!NOTE]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 > [!TIP]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 > [!IMPORTANT]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 > [!WARNING]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
 > [!CAUTION]
 >
-> [这是一个链接](https://doc.theojs.cn/)
+> [这是一个链接](https://doc.theojs.net/)
 >
 > 这是一段文字
 
@@ -297,24 +297,24 @@ console.log('Hello, VitePress!')
 **输入**
 
 ```md
-![浅色模式](https://i.theojs.cn/logo/github.svg){.light-only}
+![浅色模式](https://i.theojs.net/logo/github.svg){.light-only}
 
-![深色模式](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
+![深色模式](https://i.theojs.net/logo/github-dark.svg){.dark-only}
 
-![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
+![深色模式](https://i.theojs.net/logo/github-dark.svg#dark)
 
-![浅色模式](https://i.theojs.cn/logo/github.svg#light)
+![浅色模式](https://i.theojs.net/logo/github.svg#light)
 ```
 
 **输出**
 
-![浅色模式](https://i.theojs.cn/logo/github.svg){.light-only}
+![浅色模式](https://i.theojs.net/logo/github.svg){.light-only}
 
-![深色模式](https://i.theojs.cn/logo/github-dark.svg){.dark-only}
+![深色模式](https://i.theojs.net/logo/github-dark.svg){.dark-only}
 
-![深色模式](https://i.theojs.cn/logo/github-dark.svg#dark)
+![深色模式](https://i.theojs.net/logo/github-dark.svg#dark)
 
-![浅色模式](https://i.theojs.cn/logo/github.svg#light)
+![浅色模式](https://i.theojs.net/logo/github.svg#light)
 
 ### 6. 首页 actions 添加图片
 
@@ -322,8 +322,8 @@ console.log('Hello, VitePress!')
 
 ```css [.vitepress/theme/var.css]
 :root {
-  --lm-button-author: url('https://i.theojs.cn/logo/avatar-mini.webp');
-  --lm-button-logo: url('https://i.theojs.cn/logo/lumen-logo-mini.svg');
+  --lm-button-author: url('https://i.theojs.net/logo/avatar-mini.webp');
+  --lm-button-logo: url('https://i.theojs.net/logo/lumen-logo-mini.svg');
 }
 ```
 
@@ -335,19 +335,19 @@ hero:
   actions:
     - theme: brand author
       text: Theo-Docs
-      link: https://doc.theojs.cn/
+      link: https://doc.theojs.net/
 
     - theme: alt author
       text: Theo-Docs
-      link: https://doc.theojs.cn/
+      link: https://doc.theojs.net/
 
     - theme: brand logo
       text: Lumen
-      link: https://lumen.theojs.cn/
+      link: https://lumen.theojs.net/
 
     - theme: alt logo
       text: Lumen
-      link: https://lumen.theojs.cn/
+      link: https://lumen.theojs.net/
 
 features: ...
 ---

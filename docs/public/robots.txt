@@ -3,4 +3,4 @@ user-agent: *
 disallow: /assets/*.js$
 disallow: /assets/*.css$
 
-sitemap: https://lumen.theojs.cn/sitemap.xml
+sitemap: https://lumen.theojs.net/sitemap.xml

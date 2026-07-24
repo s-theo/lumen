@@ -4,14 +4,14 @@ description: 学习如何使用 @theojs/lumen 插件的 Aside 组件，在 ViteP
 head:
   - - meta
     - property: og:image
-      content: https://i.theojs.cn/docs/docasidelogo-light.webp
+      content: https://i.theojs.net/docs/docasidelogo-light.webp
 ---
 
 # 侧边栏链接组件 - Aside
 
-![侧边栏 - 效果图|300x0](https://i.theojs.cn/docs/docasidelogo-light.webp#light '侧边栏 - 效果图')
+![侧边栏 - 效果图|300x0](https://i.theojs.net/docs/docasidelogo-light.webp#light '侧边栏 - 效果图')
 
-![侧边栏 - 效果图|300x0](https://i.theojs.cn/docs/docasidelogo-dark.webp#dark '侧边栏 - 效果图')
+![侧边栏 - 效果图|300x0](https://i.theojs.net/docs/docasidelogo-dark.webp#dark '侧边栏 - 效果图')
 
 ## 创建数据 (点击打开查看)
 

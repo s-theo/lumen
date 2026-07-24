@@ -47,13 +47,13 @@ export const Aside_Data: AsideItem = [
     link: 'https://example.com/'
   },
   {
-    image: 'https://i.theojs.cn/logo/github.svg',
+    image: 'https://i.theojs.net/logo/github.svg',
     name: '图片',
-    link: 'https://xx.theojs.cn/'
+    link: 'https://xx.theojs.net/'
   },
   {
-    image: { light: 'https://i.theojs.cn/logo/github.svg', dark: 'https://i.theojs.cn/logo/github-dark.svg' },
+    image: { light: 'https://i.theojs.net/logo/github.svg', dark: 'https://i.theojs.net/logo/github-dark.svg' },
     name: '图片的 light/dark 模式',
-    link: 'https://xx.theojs.cn/'
+    link: 'https://xx.theojs.net/'
   }
 ]

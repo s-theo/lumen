@@ -5,7 +5,7 @@ import llmstxt from 'vitepress-plugin-llms'
 import { head, markdown, nav, search, sidebar, socialLinks, transformPageData } from './configs'
 
 const Lumenversion = `v${Lumenpkg.version}`
-const baseUrl = 'https://lumen.theojs.cn'
+const baseUrl = 'https://lumen.theojs.net'
 
 export default defineConfig({
   // 站点名称
@@ -59,7 +59,7 @@ export default defineConfig({
           svg: 'logos:svg',
           image: 'vscode-icons:file-type-image',
           '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg',
-          iconify: 'https://i.theojs.cn/logo/iconify.svg'
+          iconify: 'https://i.theojs.net/logo/iconify.svg'
         }
       }),
       llmstxt({})
@@ -72,7 +72,7 @@ export default defineConfig({
 
     // Logo
     logo: {
-      src: 'https://i.theojs.cn/logo/lumen-logo-mini.svg',
+      src: 'https://i.theojs.net/logo/lumen-logo-mini.svg',
       width: 24,
       height: 24,
       alt: 'lumen',
