@@ -4,16 +4,6 @@ import type { DefaultTheme } from 'vitepress'
 
 export const socialLinks: DefaultTheme.SocialLink[] = [
   {
-    icon: 'github',
-    link: 'https://github.com/s-theo/lumen',
-    ariaLabel: 'Github'
-  },
-  {
-    icon: 'gmail',
-    link: 'mailto:s.theojs@gmail.com',
-    ariaLabel: 'Gmail'
-  },
-  {
     icon: 'npm',
     link: 'https://www.npmjs.com/package/@theojs/lumen',
     ariaLabel: 'npm'
