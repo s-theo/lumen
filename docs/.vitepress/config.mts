@@ -79,9 +79,6 @@ export default defineConfig({
       fetchpriority: 'high'
     },
 
-    // 修改链接
-    editLink: { pattern: 'https://github.com/s-theo/lumen/edit/main/docs/:path', text: '为此页提供修改建议' },
-
     // 目录设置
     outline: { level: 'deep', label: '本页目录' },
 

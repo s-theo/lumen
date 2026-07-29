@@ -8,12 +8,5 @@ export const Aside_Data: AsideItem = [
     info2: '覆盖 <span class="promo-text">200+国家</span> 轻松可用',
     link: 'https://ilil.uk/sms',
     rel: 'sponsored noreferrer'
-  },
-  {
-    image: 'https://i.theojs.net/logo/avatar-128.webp',
-    promo: '玄学宝典',
-    info1: '传世经典著作',
-    info2: '山医命相卜',
-    link: 'https://xx.theojs.net/'
   }
 ]

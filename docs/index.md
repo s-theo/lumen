@@ -17,14 +17,6 @@ hero:
       text: 快速开始
       link: /guide/getting-started
 
-    - theme: alt author
-      text: Theo-Docs
-      link: https://doc.theojs.net
-
-    - theme: alt author
-      text: 玄学宝典
-      link: https://xx.theojs.net
-
 features:
   - title: '<iconify-icon class="i-mr" icon="heroicons:puzzle-piece" style="color:#ff9800"></iconify-icon>开箱即用的主题配色'
     details: 支持开箱即用的多种主题配色，并提供灵活的配置选项，轻松切换主题颜色方案，满足品牌或个人偏好的视觉需求。

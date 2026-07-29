@@ -6,7 +6,7 @@ import DefaultTheme from 'vitepress/theme'
 import { h } from 'vue'
 import '@theojs/lumen/style'
 import './style/home-image.css'
-import { Aside_Data, Footer_Data } from '../data'
+import { Aside_Data } from '../data'
 import 'virtual:group-icons.css'
 
 export default {
@@ -14,8 +14,7 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'home-hero-info-before': () => h(lm.Notice),
-      'aside-ads-before': () => h(lm.Aside, { Aside_Data }),
-      'layout-bottom': () => h(lm.Footer, { Footer_Data })
+      'aside-ads-before': () => h(lm.Aside, { Aside_Data })
     })
   },
   enhanceApp: ({ app }: EnhanceAppContext) => {
