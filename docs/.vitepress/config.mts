@@ -114,7 +114,7 @@ export default defineConfig({
     // 社交链接
     socialLinks,
     // 搜索配置
-    search: { provider: 'algolia', options: search },
+    search: { provider: 'local', options: search },
 
     // 404 配置
     notFound: {
