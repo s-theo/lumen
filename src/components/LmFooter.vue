@@ -130,6 +130,10 @@ const isHome = computed(() => {
     text-decoration-color 0.25s;
 }
 
+.footer .list-links .vp-external-link-icon::after {
+  vertical-align: baseline;
+}
+
 .footer a:hover {
   color: var(--lm-Footer-link-hover);
   -webkit-text-decoration: underline solid;
