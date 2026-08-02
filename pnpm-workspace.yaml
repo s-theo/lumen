@@ -9,3 +9,4 @@ catalog:
 shellEmulator: true
 autoInstallPeers: false
 minimumReleaseAge: 0
+publishBranch: main
