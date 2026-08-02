@@ -5,7 +5,7 @@ import { groupIconMdPlugin } from 'vitepress-plugin-group-icons'
 
 export const markdown: MarkdownOptions = {
   theme: { light: 'one-light', dark: 'one-dark-pro' },
-  image: { lazyLoading: true },
+  image: { lazyLoad: true },
   config: (md) => {
     md.use(obsidianImgSize)
     md.use(groupIconMdPlugin, { titleBar: { includeSnippet: true } })

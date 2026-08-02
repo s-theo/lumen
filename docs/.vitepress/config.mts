@@ -26,9 +26,6 @@ export default defineConfig({
   // 最后更新时间戳
   lastUpdated: true,
 
-  // 是否将 meta 信息提取为单独的 chunk
-  metaChunk: true,
-
   // 站点地图
   sitemap: { hostname: baseUrl },
 
