@@ -55,7 +55,7 @@ export default defineConfig({
           单独导入: 'logos:typescript-icon',
           svg: 'logos:svg',
           image: 'vscode-icons:file-type-image',
-          '.vitepress': 'https://vitepress.dev/vitepress-logo-mini.svg',
+          vitepress: 'https://vitepress.dev/vitepress-logo-mini.svg',
           iconify: 'https://i.theojs.net/logo/iconify.svg'
         }
       }),
