@@ -67,7 +67,8 @@ Run commands from the repository root. `pnpm run format` writes safe Biome forma
   types, but direct `defineProps<ImportedInterface>()` can fail during SFC runtime prop extraction; `pnpm run build` is
   the authoritative integration check.
 - `pnpm run generate:dts` rewrites `src/types/index.d.ts`, `src/types/shims.d.ts`, and `src/types/style.d.ts`. Run it
-  only when changing their generator or intended output, then review all three tracked files.
+  when changing their generator or intended output and before every release; review all three tracked files and commit
+  any resulting diff before invoking `pnpm run release`.
 - Keep VitePress sidebar links absolute (for example, `/guide/getting-started`). Do not combine a sidebar section
   `base` with relative links; `vitepress-plugin-llms` may fail to match those pages.
 - The docs build generates `llms.txt` and `llms-full.txt` at the output root. Production redirects `/llms.md` and
