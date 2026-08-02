@@ -94,7 +94,8 @@ Run commands from the repository root. `pnpm run format` writes safe Biome forma
   or the docs build; do not treat it as full CI.
 - Cloudflare Pages tracks `s-theo/lumen` on `main`, runs `pnpm run build`, and publishes `docs/.vitepress/dist`.
 - CodeQL default setup, SonarCloud, and Cloudflare Pages checks are external integrations, not local workflow files.
-- `pnpm run release` runs `bumpp`, creates a signed release commit/tag, and publishes `src/` to npm. A `v*` tag then
-  triggers the GitHub release-notes workflow. Run release commands only with explicit release authorization.
+- `pnpm run release` runs `bumpp` and creates/pushes a signed release commit/tag. The `v*` tag workflow publishes
+  `src/` to npm through trusted publishing and then creates GitHub release notes. Run release commands only with
+  explicit release authorization.
 - Do not commit, push, create or mutate a PR, merge, publish, deploy, or delete branches unless Theo explicitly
   authorizes it. Before handoff, inspect the diff/status and report validations, warnings, Git state, and blockers.

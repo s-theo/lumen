@@ -105,7 +105,7 @@
     "License"
   ],
   "scripts": {
-    "release": "bumpp && pnpm publish --registry=https://registry.npmjs.org"
+    "release": "bumpp"
   },
   "dependencies": {
     "@iconify/vue": "^5.0.1",
