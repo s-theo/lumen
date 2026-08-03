@@ -14,7 +14,7 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'home-hero-info-before': () => h(lm.Notice),
-      'aside-ads-before': () => h(lm.Aside, { Aside_Data })
+      'aside-outline-after': () => h(lm.Aside, { Aside_Data })
     })
   },
   enhanceApp: ({ app }: EnhanceAppContext) => {

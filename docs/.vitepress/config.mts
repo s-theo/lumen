@@ -59,7 +59,7 @@ export default defineConfig({
           iconify: 'https://i.theojs.net/logo/iconify.svg'
         }
       }),
-      llmstxt({})
+      llmstxt({ stripHTML: false })
     ]
   },
 
@@ -101,6 +101,12 @@ export default defineConfig({
 
     // 语言切换
     langMenuLabel: '切换语言',
+
+    // 无障碍导航
+    navMenuLabel: '主导航',
+    mobileMenuLabel: '菜单',
+    extraMenuLabel: '更多选项',
+    skipToContentLabel: '跳转到内容',
 
     // 导航栏
     nav,

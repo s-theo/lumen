@@ -8,14 +8,14 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@mdit/plugin-figure": "^1.1.0",
-    "@mdit/plugin-img-size": "^1.0.2",
+    "@mdit/plugin-figure": "^1.2.2",
+    "@mdit/plugin-img-size": "^1.1.2",
     "@theojs/lumen": "workspace:*",
-    "vite": "^8.2.0",
+    "vite": "^8.3.2",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.7.6",
-    "vitepress-plugin-llms": "^1.13.4",
+    "vitepress-plugin-llms": "^1.14.0",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@11.18.0"
+  "packageManager": "pnpm@12.9.1"
 }
