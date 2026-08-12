@@ -22,7 +22,7 @@
     "upall": "pnpm -r update --latest"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.7"
+    "@biomejs/biome": "^2.5.8"
   },
   "packageManager": "pnpm@11.21.0"
 }
