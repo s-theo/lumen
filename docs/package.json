@@ -8,13 +8,13 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@mdit/plugin-figure": "^1.1.1",
-    "@mdit/plugin-img-size": "^1.0.3",
+    "@mdit/plugin-figure": "^1.2.0",
+    "@mdit/plugin-img-size": "^1.1.0",
     "@theojs/lumen": "workspace:*",
     "vite": "^8.2.1",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.7.6",
-    "vitepress-plugin-llms": "^1.13.4",
+    "vitepress-plugin-llms": "^1.13.5",
     "vue": "catalog:"
   },
   "packageManager": "pnpm@11.21.0"
