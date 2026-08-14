@@ -116,7 +116,7 @@
     "vue": "^3.5.41"
   },
   "devDependencies": {
-    "bumpp": "^12.2.0",
+    "bumpp": "^12.2.1",
     "typescript": "^7.0.2",
     "vitepress": "catalog:",
     "vue": "catalog:"
