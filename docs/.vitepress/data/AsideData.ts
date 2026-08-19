@@ -6,7 +6,7 @@ export const Aside_Data: AsideItem = [
     promo: '账号星球',
     info1: '汇聚 <span class="promo-text">热门会员</span> 一站选购',
     info2: '下单 <span class="promo-text">自动发货</span> 省心直达',
-    link: 'https://ilil.uk/acc',
+    link: 'https://s.ilil.uk/acc',
     rel: 'sponsored noreferrer'
   },
   {
@@ -14,7 +14,7 @@ export const Aside_Data: AsideItem = [
     promo: '银河录像局',
     info1: '畅享 <span class="promo-text">流媒体与 AI</span> 热门会员',
     info2: '精选 <span class="promo-text">合租订阅</span> 更省更轻松',
-    link: 'https://ilil.uk/yh',
+    link: 'https://s.ilil.uk/yh',
     rel: 'sponsored noreferrer'
   },
   {
@@ -22,7 +22,7 @@ export const Aside_Data: AsideItem = [
     promo: 'Hero-SMS 短信接码',
     info1: '秒开 <span class="promo-text">虚拟号码</span> 注册无障碍',
     info2: '覆盖 <span class="promo-text">200+国家</span> 轻松可用',
-    link: 'https://ilil.uk/sms',
+    link: 'https://s.ilil.uk/sms',
     rel: 'sponsored noreferrer'
   }
 ]
