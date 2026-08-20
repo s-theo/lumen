@@ -11,7 +11,7 @@
     "@mdit/plugin-figure": "^1.2.0",
     "@mdit/plugin-img-size": "^1.1.0",
     "@theojs/lumen": "workspace:*",
-    "vite": "^8.2.1",
+    "vite": "^8.2.2",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.7.6",
     "vitepress-plugin-llms": "^1.13.5",
