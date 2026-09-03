@@ -59,7 +59,7 @@ export default defineConfig({
           iconify: 'https://i.theojs.net/logo/iconify.svg'
         }
       }),
-      llmstxt({})
+      llmstxt({ stripHTML: false })
     ]
   },
 
