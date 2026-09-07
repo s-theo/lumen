@@ -8,8 +8,8 @@
     "preview": "vitepress preview"
   },
   "devDependencies": {
-    "@mdit/plugin-figure": "^1.2.0",
-    "@mdit/plugin-img-size": "^1.1.0",
+    "@mdit/plugin-figure": "^1.2.1",
+    "@mdit/plugin-img-size": "^1.1.1",
     "@theojs/lumen": "workspace:*",
     "vite": "^8.2.2",
     "vitepress": "catalog:",

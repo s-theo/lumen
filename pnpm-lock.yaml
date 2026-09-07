@@ -125,11 +125,11 @@ importers:
   docs:
     devDependencies:
       '@mdit/plugin-figure':
-        specifier: ^1.2.0
-        version: 1.2.0
+        specifier: ^1.2.1
+        version: 1.2.1
       '@mdit/plugin-img-size':
-        specifier: ^1.1.0
-        version: 1.1.0
+        specifier: ^1.1.1
+        version: 1.1.1
       '@theojs/lumen':
         specifier: workspace:*
         version: link:../src
@@ -286,29 +286,29 @@ packages:
   '@jridgewell/sourcemap-codec@1.6.0':
     resolution: {integrity: sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==}
 
-  '@mdit/helper@1.1.0':
-    resolution: {integrity: sha512-IWOUioaLobXA4ueulPfJopKaOHEGAH2pYDyK3u0cy4ItzxHXFssIJYksvdhUOC4JSHWfSjCArw41LBQdKOgFiw==}
+  '@mdit/helper@1.1.1':
+    resolution: {integrity: sha512-Rrl14ZjFerzfAqCt0zxAWbPgRpsumgm9iBLrCVE05WS8dM6v/LnF1ppPFVnRz1F7fAaxn0kTFOlYwzcY+kRsHQ==}
     engines: {node: '>=22'}
     peerDependencies:
-      markdown-it: ^15.0.0
+      markdown-it: ^15.0.1
     peerDependenciesMeta:
       markdown-it:
         optional: true
 
-  '@mdit/plugin-figure@1.2.0':
-    resolution: {integrity: sha512-seNlrG9p1czrGFfid9lXt0+YZSen+Mrdjjo+UpHUKEXme0Ha27XN7kCCxXHmigU1Zmj24UJ0mXWSBIMDmjesgA==}
+  '@mdit/plugin-figure@1.2.1':
+    resolution: {integrity: sha512-a+MlxebF5oD5yI8lS+5wwRVfWFOsDVZaIJoQm7f+QSsMzH6glnH7E9E0DuYqhTJM7AnvyfofXkWuW+I0YbhfSg==}
     engines: {node: '>=22'}
     peerDependencies:
-      markdown-it: ^15.0.0
+      markdown-it: ^15.0.1
     peerDependenciesMeta:
       markdown-it:
         optional: true
 
-  '@mdit/plugin-img-size@1.1.0':
-    resolution: {integrity: sha512-eq+J1iUH5bpg76tA/DNoqY9/5/5QhbERRX41RNQxiQ/6wS/PJPNtGKB0Q1yaSTTcGlbCzO9s4fwkBivniRafhQ==}
+  '@mdit/plugin-img-size@1.1.1':
+    resolution: {integrity: sha512-zl4Y+PCyahym3s0CyxTFa6X83yPWwALBh6SLtrx7rgaSZsKgsM3OqNlCLpOkVyUuYFgxoSkIoro0R01YGe7NXw==}
     engines: {node: '>=22'}
     peerDependencies:
-      markdown-it: ^15.0.0
+      markdown-it: ^15.0.1
     peerDependenciesMeta:
       markdown-it:
         optional: true
@@ -1448,15 +1448,15 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.6.0': {}
 
-  '@mdit/helper@1.1.0': {}
+  '@mdit/helper@1.1.1': {}
 
-  '@mdit/plugin-figure@1.2.0':
+  '@mdit/plugin-figure@1.2.1':
     dependencies:
-      '@mdit/helper': 1.1.0
+      '@mdit/helper': 1.1.1
 
-  '@mdit/plugin-img-size@1.1.0':
+  '@mdit/plugin-img-size@1.1.1':
     dependencies:
-      '@mdit/helper': 1.1.0
+      '@mdit/helper': 1.1.1
 
   '@oxc-project/types@0.148.0': {}
 
@@ -1645,7 +1645,7 @@ snapshots:
 
   '@ungap/structured-clone@1.4.0': {}
 
-  '@vitejs/plugin-vue@6.0.8(vite@8.2.2)(vue@3.5.42(typescript@7.0.2))':
+  '@vitejs/plugin-vue@6.0.8(vite@8.2.2(jiti@2.7.0)(yaml@2.9.0))(vue@3.5.42(typescript@7.0.2))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
       vite: 8.2.2(jiti@2.7.0)(yaml@2.9.0)
@@ -2469,7 +2469,7 @@ snapshots:
       '@iconify-json/simple-icons': 1.2.94
       '@shikijs/transformers': 4.4.3
       '@types/markdown-it': 14.2.0
-      '@vitejs/plugin-vue': 6.0.8(vite@8.2.2)(vue@3.5.42(typescript@7.0.2))
+      '@vitejs/plugin-vue': 6.0.8(vite@8.2.2(jiti@2.7.0)(yaml@2.9.0))(vue@3.5.42(typescript@7.0.2))
       '@vue/devtools-api': 8.2.1
       '@vue/shared': 3.5.42
       '@vueuse/core': 14.4.0(vue@3.5.42(typescript@7.0.2))
