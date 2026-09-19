@@ -165,7 +165,7 @@ settings:
 catalogs:
   default:
     vitepress:
-      specifier: 2.0.0-alpha.20
+      specifier: ^2.0.0-alpha.20
       version: 2.0.0-alpha.20
     vue:
       specifier: ^3.5.43

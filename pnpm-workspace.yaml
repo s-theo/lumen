@@ -3,7 +3,7 @@ packages:
   - docs
 
 catalog:
-  vitepress: 2.0.0-alpha.20
+  vitepress: ^2.0.0-alpha.20
   vue: ^3.5.43
 
 shellEmulator: true
