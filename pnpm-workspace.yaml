@@ -4,7 +4,7 @@ packages:
 
 catalog:
   vitepress: ^2.0.0-alpha.20
-  vue: ^3.5.43
+  vue: ^3.5.44
 
 shellEmulator: true
 autoInstallPeers: false
