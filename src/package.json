@@ -108,8 +108,8 @@
     "release": "bumpp"
   },
   "dependencies": {
-    "@iconify/vue": "^5.0.3",
-    "iconify-icon": "^3.0.3"
+    "@iconify/vue": "^5.0.4",
+    "iconify-icon": "^3.0.4"
   },
   "peerDependencies": {
     "vitepress": "^1.6.4 || >=2.0.0-alpha.18 <3.0.0",
@@ -121,5 +121,5 @@
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@12.11.2"
+  "packageManager": "pnpm@12.15.0"
 }
