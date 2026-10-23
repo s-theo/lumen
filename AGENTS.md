@@ -1,102 +1,75 @@
-# AGENTS.md - Lumen
+# Lumen
 
-Scope: this file applies to the entire repository. There are no nested `AGENTS.md` files.
+Repository-wide; no nested `AGENTS.md`.
 
-## Project
+## Ownership and contracts
 
-Lumen is a pnpm workspace: `src/` is the published ESM package `@theojs/lumen`, while `docs/` is its VitePress
-documentation site and integration consumer through `workspace:*`.
+- `src/` ships unbundled TS/Vue/CSS/declarations as ESM package `@theojs/lumen`. Components
+  (`src/components/index.ts`), composables, types and styles are public; `src/components/common/` is internal.
+  Names, props, exports, CSS variables, paths, `files` and `sideEffects` require compatibility or explicit breaking-change scope.
+- `docs/` is the VitePress site and `workspace:*` integration consumer. `docs/public/` is copied to build output;
+  root `readme.md` is a symlink to `src/readme.md`.
+- Read pins from `.nvmrc`/root `package.json`, constraints from manifests/`pnpm-workspace.yaml`, resolutions from
+  `pnpm-lock.yaml`, and tool versions from config/schema metadata; do not duplicate version snapshots here.
+- Read relevant source/config before editing. Preserve pinned inputs; no incidental content refresh or hand-edited generated
+  files. Registry credentials stay outside the repo; `.npmrc` is intentionally absent.
 
-The stack is Vue, VitePress, Vite, TypeScript, CSS, and Biome. Read the package-manager pin from the root
-`package.json`; read dependency and peer constraints from the applicable package manifests and
-`pnpm-workspace.yaml`; read resolved versions from `pnpm-lock.yaml`; and read tool versions from config or schema
-metadata. Do not copy version snapshots into this file. Cloudflare Pages builds the documentation site from `main`.
+## Working safely
 
-The npm package is not bundled before publication. It ships `.ts`, `.vue`, CSS, and declaration files directly, so
-source paths and package metadata are part of the consumer contract.
+- Check cwd/origin, branch/upstream, head/base, ahead/behind, worktree/index/untracked, stash and Git operations once.
+  Preserve existing edits: no stash/reset/clean/overwrite. If clean and behind the intended upstream, `git pull --ff-only`;
+  report divergence/unknown edits. Recheck remote/candidate guards before delivery.
+- Reuse installed tools/dependencies. When needed, `pnpm install --frozen-lockfile`; authorized dependency edits use pnpm
+  with a matching lockfile. Never validate with `pnpm clean` or its subcommands: they delete dependencies/output/lockfile.
+- Keep logs/tools outside build-cleaned caches. Validate the final candidate once; reuse only with unchanged head/base,
+  diff, pinned inputs, lock/config, toolchain and relevant environment. Concrete failures invalidate affected evidence;
+  do not suppress them or collapse distinct assertions.
 
-## Repository map
+## Checks
 
-| Path | Responsibility |
+Run from the root. `pnpm run dev` / `pnpm run preview` serve docs, not validation.
+
+| Check | Command and coverage |
 | --- | --- |
-| `src/components/` | Public Vue components exported by `src/components/index.ts`; `common/` contains internal helpers. |
-| `src/composables/` | Public analytics helpers and VitePress utilities. |
-| `src/types/` | Package root entry, public types, and generated declaration shims. |
-| `src/style/` | Public CSS and the CSS subpath exports declared in `src/package.json`. |
-| `docs/` | User guides plus VitePress configuration, theme integration, and workspace-package consumer. |
-| `.github/workflows/` | Package previews, tag release notes, and the scheduled npm download report. |
-| `docs/public/`; `readme.md` | Static documentation assets copied into the build output; root README symlink to `src/readme.md`. |
+| Format | `pnpm run format:check`: read-only Biome format/lint/import checks; `pnpm run format` writes fixes. |
+| Types | `pnpm -C src exec tsc --noEmit -p tsconfig.json`: source TS, not full Vue template type checking. |
+| Build | `pnpm run build` -> `pnpm -F=docs build` -> `vitepress build`: integration, not Format/Types/Pack. |
+| Pack | `npm_config_cache=/tmp/lumen-npm-cache npm pack --dry-run --json ./src`: review the full publish file list. |
+| Diff | `git diff --check`. |
 
-## Safe workflow
+Shared-host Build: `flock -w 60 -E 75 /tmp/workspace-content-build-0902.lock pnpm run build`.
+Exit 75 means lock contention; retry within task limits, never bypass/kill the holder. No separate test suite exists.
+Docs exercise package root/styles/components/analytics/public types. Retain change-specific independent artifact checks.
 
-1. Confirm the repository, branch, upstream, ahead/behind state, worktree, index, untracked files, and in-progress Git
-   operations. Preserve existing work; do not stash, reset, clean, or overwrite it.
-2. Read the relevant manifests, configuration, source entry points, and this file before editing.
-3. When the worktree is clean and the current branch tracks the intended remote, synchronize with
-   `git pull --ff-only`. Otherwise report the state instead of forcing synchronization.
-4. Keep changes scoped. Dependency changes must use pnpm and include the matching `pnpm-lock.yaml` update.
-5. Use `pnpm install --frozen-lockfile` to reproduce an already-aligned manifest and lockfile.
-
-Do not use `pnpm clean` or its subcommands as routine validation; they delete dependencies, output, and the lockfile.
-Keep registry credentials outside the repository; `.npmrc` is absent by design, and publish authentication belongs in
-user or CI configuration.
-
-## Commands
-
-```bash
-pnpm install --frozen-lockfile
-pnpm run dev
-pnpm run preview
-pnpm run format:check
-pnpm -C src exec tsc --noEmit -p tsconfig.json
-pnpm run build
-npm_config_cache=/tmp/lumen-npm-cache npm pack --dry-run --json ./src
-git diff --check
-```
-
-Run commands from the repository root. `pnpm run format` writes safe Biome formatting, lint, and import-order fixes;
-`format:check` checks the formatter, recommended linter rules, and assist actions without writing files.
-
-## Package and code constraints
-
-- Treat component names and props, exported functions and types, CSS variables, package export paths, the `files`
-  allowlist, and `sideEffects` as public compatibility surfaces. Do not make breaking changes without explicit scope.
-- `src/types/index.ts` is the runtime package entry. Its `components-var.css` and `iconify-icon` imports are intentional
-  side effects, not dead imports.
-- Keep top-level Vue `defineProps` runtime keys in an inline object shape. Imported types may be used as property value
-  types, but direct `defineProps<ImportedInterface>()` can fail during SFC runtime prop extraction; `pnpm run build` is
-  the authoritative integration check.
-- `pnpm run generate:dts` rewrites `src/types/index.d.ts`, `src/types/shims.d.ts`, and `src/types/style.d.ts`. Run it
-  when changing their generator or intended output and before every release; review all three tracked files and commit
-  any resulting diff before invoking `pnpm run release`.
-- Keep VitePress sidebar links absolute (for example, `/guide/getting-started`). Do not combine a sidebar section
-  `base` with relative links; `vitepress-plugin-llms` may fail to match those pages.
-- The docs build generates `llms.txt` and `llms-full.txt` at the output root. Production redirects `/llms.md` and
-  `/llms-full.md` to those files through Cloudflare; the `.md` paths are aliases, not build artifacts.
-- The docs theme imports the package root, styles, components, analytics, and public data types. A docs build is the
-  primary integration check; the repository has no separate test suite.
-- `minimumReleaseAge: 0` is an intentional install policy override. Changing or removing it can alter dependency
-  resolution; verify its current semantics against the pinned pnpm version and `pnpm-workspace.yaml` before editing.
-  Keep `allowBuilds` limited to installed dependencies that actually run lifecycle scripts.
-
-## Validation by change type
-
-| Change | Required checks |
+| Changed surface | Required validation |
 | --- | --- |
-| `AGENTS.md` only | `git diff --check`; verify every documented command/path; confirm only `AGENTS.md` changed. |
-| Docs or VitePress/Cloudflare Pages config | `pnpm run format:check`, `pnpm run build`, `git diff --check`. |
-| Components, composables, or public types | Format check, source TypeScript check, docs build, package dry-run, diff check. |
-| CSS | Format check, docs build, package dry-run, diff check. |
-| Dependencies, exports, package files, or release config | Frozen install after manifests/lockfile align, then the full checks above and review the dry-run file list. |
+| Only `AGENTS.md` | Diff; verify documented paths/commands and that no other file changed. |
+| Docs or VitePress/Cloudflare config | Format, Build, Diff. |
+| Components, composables or public types | Format, Types, Build, Pack, Diff. |
+| CSS | Format, Build, Pack, Diff. |
+| Dependencies, exports, package files or release config | Aligned frozen install; Format, Types, Build, Pack, Diff. |
+| Build/CI/tooling behavior | Regression tests plus affected full checks, including Build where applicable. |
 
-## CI, release, and delivery
+## Non-obvious constraints
 
-- `Publish Commit` runs `pkg-pr-new` for `src/**` changes. It previews the package but does not run Biome, TypeScript,
-  or the docs build; do not treat it as full CI.
-- Cloudflare Pages tracks `s-theo/lumen` on `main`, runs `pnpm run build`, and publishes `docs/.vitepress/dist`.
-- CodeQL default setup, SonarCloud, and Cloudflare Pages checks are external integrations, not local workflow files.
-- `pnpm run release` runs `bumpp` and creates/pushes a signed release commit/tag. The `v*` tag workflow publishes
-  `src/` to npm through trusted publishing and then creates GitHub release notes. Run release commands only with
-  explicit release authorization.
-- Do not commit, push, create or mutate a PR, merge, publish, deploy, or delete branches unless Theo explicitly
-  authorizes it. Before handoff, inspect the diff/status and report validations, warnings, Git state, and blockers.
+- `src/types/index.ts` intentionally imports `components-var.css` and `iconify-icon` for side effects.
+- Keep Vue `defineProps` runtime keys inline; imported property-value types are fine, but
+  `defineProps<ImportedInterface>()` can fail SFC extraction. Build is the integration gate.
+- `pnpm run generate:dts` owns `src/types/index.d.ts`, `src/types/shims.d.ts` and `src/types/style.d.ts`.
+  Run it for generator/output changes and before every release; review all three and commit resulting diffs before release.
+- Keep sidebar links absolute (e.g. `/guide/getting-started`), not section `base` + relative links: the LLM plugin can miss
+  pages. Build emits `llms.txt`/`llms-full.txt`; Cloudflare's `/llms.md`/`llms-full.md` are redirect aliases.
+- `minimumReleaseAge: 0` is intentional; verify pinned pnpm/config semantics before changing it.
+  `allowBuilds` is only for installed packages with lifecycle scripts.
+
+## CI and release
+
+- `.github/workflows/cr.yml` (`Publish Commit`) only previews `src/**` with `pkg-pr-new`, not Format/Types/Build.
+  The scheduled npm download report is not validation either.
+- Cloudflare Pages builds `s-theo/lumen` main with `pnpm run build`, publishing `docs/.vitepress/dist`.
+  Pages, CodeQL default setup and SonarCloud are external integrations, not local workflow definitions.
+- Explicit release authorization only: `pnpm run release` invokes bumpp to create/push a signed commit/tag;
+  the `v*` workflow publishes `src/` to npm via trusted publishing and creates GitHub release notes.
+- Commit/push/PR mutation/merge/publish/deploy/branch deletion require Theo's explicit authorization. Stage exact reviewed
+  paths, push normally, verify remote SHA/checks, and report warnings, Git state and blockers. Distinguish pending/failed/success;
+  do not rebuild unchanged validated inputs after delivery.
