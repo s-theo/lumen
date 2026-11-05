@@ -1,0 +1,12 @@
+/*.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://lumen.theojs.net/:splat>; rel="canonical"
+
+/404
+  X-Robots-Tag: noindex
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
