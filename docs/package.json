@@ -11,11 +11,11 @@
     "@mdit/plugin-figure": "^1.2.4",
     "@mdit/plugin-img-size": "^1.2.0",
     "@theojs/lumen": "workspace:*",
-    "vite": "^8.3.5",
+    "vite": "^8.3.6",
     "vitepress": "catalog:",
     "vitepress-plugin-group-icons": "^1.8.1",
     "vitepress-plugin-llms": "^1.14.0",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@12.16.1"
+  "packageManager": "pnpm@12.18.0"
 }
