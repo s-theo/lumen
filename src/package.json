@@ -113,7 +113,7 @@
   },
   "peerDependencies": {
     "vitepress": "^1.6.4 || >=2.0.0-alpha.18 <3.0.0",
-    "vue": "^3.5.44"
+    "vue": "^3.5.45"
   },
   "devDependencies": {
     "bumpp": "^12.3.0",
@@ -121,5 +121,5 @@
     "vitepress": "catalog:",
     "vue": "catalog:"
   },
-  "packageManager": "pnpm@12.16.1"
+  "packageManager": "pnpm@12.18.0"
 }
