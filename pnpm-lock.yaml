@@ -177,7 +177,7 @@ catalogs:
       specifier: ^2.0.0-alpha.21
       version: 2.0.0-alpha.21
     vue:
-      specifier: ^3.5.45
+      specifier: ^3.5.46
       version: 3.5.46
 
 importers:
